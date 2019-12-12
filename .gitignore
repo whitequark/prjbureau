@@ -1,0 +1,7 @@
+vendor/*
+*.edif
+*.tt3
+*.pin
+*.io
+*.jed
+*.fit
