@@ -148,12 +148,24 @@ module XNOR2(input A, input B, output Q);
   assign Q = ~(A ^ B);
 endmodule
 
-// TODO: DFFEARS
+(* blackbox *)
+module DFF(input CLK, input D, output reg Q);
+  always @(posedge CLK)
+    Q <= D;
+endmodule
+
+(* blackbox *)
+module DFFE(input CLK, input CE, input D, output reg Q);
+  always @(posedge CLK)
+    if(CE) Q <= D;
+endmodule
+
 // TODO: DFF
 // TODO: DFFE
 // TODO: DFFAR
 // TODO: DFFAS
 // TODO: DFFARS
+// TODO: DFFEARS
 // TODO: LATCH
 // TODO: JKFFEARS
 // TODO: TFF

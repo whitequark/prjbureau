@@ -1,7 +1,9 @@
 vendor/*
+work/*
+htmldoc/*
 *.edif
-*.tt3
 *.pin
+*.tt3
 *.io
-*.jed
 *.fit
+*.jed

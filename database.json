@@ -1,0 +1,278 @@
+{
+  "ATF1502AS": {
+    "blocks": {
+      "A": {
+        "macrocell_fuses": [
+          15360,
+          15840
+        ],
+        "macrocells": [
+          "MC1",
+          "MC2",
+          "MC3",
+          "MC4",
+          "MC5",
+          "MC6",
+          "MC7",
+          "MC8",
+          "MC9",
+          "MC10",
+          "MC11",
+          "MC12",
+          "MC13",
+          "MC14",
+          "MC15",
+          "MC16"
+        ]
+      },
+      "B": {
+        "macrocell_fuses": [
+          15840,
+          16320
+        ],
+        "macrocells": [
+          "MC17",
+          "MC18",
+          "MC19",
+          "MC20",
+          "MC21",
+          "MC22",
+          "MC23",
+          "MC24",
+          "MC25",
+          "MC26",
+          "MC27",
+          "MC28",
+          "MC29",
+          "MC30",
+          "MC31",
+          "MC32"
+        ]
+      }
+    },
+    "macrocells": {
+      "MC1": {
+        "pad": "M1",
+        "slow_fuse": 15648,
+        "open_collector_fuse": 15567
+      },
+      "MC2": {
+        "pad": "M2",
+        "slow_fuse": 15651,
+        "open_collector_fuse": 15564
+      },
+      "MC3": {
+        "pad": "M3",
+        "slow_fuse": 15652,
+        "open_collector_fuse": 15563
+      },
+      "MC4": {
+        "pad": "M4",
+        "slow_fuse": 15655,
+        "open_collector_fuse": 15560
+      },
+      "MC5": {
+        "pad": "M5",
+        "slow_fuse": 15656,
+        "open_collector_fuse": 15559
+      },
+      "MC6": {
+        "pad": "M6",
+        "slow_fuse": 15659,
+        "open_collector_fuse": 15556
+      },
+      "MC7": {
+        "pad": "M7",
+        "slow_fuse": 15660,
+        "open_collector_fuse": 15555
+      },
+      "MC8": {
+        "pad": "M8",
+        "slow_fuse": 15663,
+        "open_collector_fuse": 15552
+      },
+      "MC9": {
+        "pad": "M9",
+        "slow_fuse": 15664,
+        "open_collector_fuse": 15551
+      },
+      "MC10": {
+        "pad": "M10",
+        "slow_fuse": 15667,
+        "open_collector_fuse": 15548
+      },
+      "MC11": {
+        "pad": "M11",
+        "slow_fuse": 15668,
+        "open_collector_fuse": 15547
+      },
+      "MC12": {
+        "pad": "M12",
+        "slow_fuse": 15671,
+        "open_collector_fuse": 15544
+      },
+      "MC13": {
+        "pad": "M13",
+        "slow_fuse": 15672,
+        "open_collector_fuse": 15543
+      },
+      "MC14": {
+        "pad": "M14",
+        "slow_fuse": 15675,
+        "open_collector_fuse": 15540
+      },
+      "MC15": {
+        "pad": "M15",
+        "slow_fuse": 15676,
+        "open_collector_fuse": 15539
+      },
+      "MC16": {
+        "pad": "M16",
+        "slow_fuse": 15679,
+        "open_collector_fuse": 15536
+      },
+      "MC17": {
+        "pad": "M17",
+        "slow_fuse": 16128,
+        "open_collector_fuse": 16047
+      },
+      "MC18": {
+        "pad": "M18",
+        "slow_fuse": 16131,
+        "open_collector_fuse": 16044
+      },
+      "MC19": {
+        "pad": "M19",
+        "slow_fuse": 16132,
+        "open_collector_fuse": 16043
+      },
+      "MC20": {
+        "pad": "M20",
+        "slow_fuse": 16135,
+        "open_collector_fuse": 16040
+      },
+      "MC21": {
+        "pad": "M21",
+        "slow_fuse": 16136,
+        "open_collector_fuse": 16039
+      },
+      "MC22": {
+        "pad": "M22",
+        "slow_fuse": 16139,
+        "open_collector_fuse": 16036
+      },
+      "MC23": {
+        "pad": "M23",
+        "slow_fuse": 16140,
+        "open_collector_fuse": 16035
+      },
+      "MC24": {
+        "pad": "M24",
+        "slow_fuse": 16143,
+        "open_collector_fuse": 16032
+      },
+      "MC25": {
+        "pad": "M25",
+        "slow_fuse": 16144,
+        "open_collector_fuse": 16031
+      },
+      "MC26": {
+        "pad": "M26",
+        "slow_fuse": 16147,
+        "open_collector_fuse": 16028
+      },
+      "MC27": {
+        "pad": "M27",
+        "slow_fuse": 16148,
+        "open_collector_fuse": 16027
+      },
+      "MC28": {
+        "pad": "M28",
+        "slow_fuse": 16151,
+        "open_collector_fuse": 16024
+      },
+      "MC29": {
+        "pad": "M29",
+        "slow_fuse": 16152,
+        "open_collector_fuse": 16023
+      },
+      "MC30": {
+        "pad": "M30",
+        "slow_fuse": 16155,
+        "open_collector_fuse": 16020
+      },
+      "MC31": {
+        "pad": "M31",
+        "slow_fuse": 16156,
+        "open_collector_fuse": 16019
+      },
+      "MC32": {
+        "pad": "M32",
+        "slow_fuse": 16159,
+        "open_collector_fuse": 16016
+      }
+    },
+    "clocks": {
+      "1": {
+        "pad": "C1"
+      },
+      "2": {
+        "pad": "C2"
+      },
+      "3": {
+        "pad": "M17"
+      }
+    },
+    "enables": {
+      "1": {
+        "pad": "E1"
+      },
+      "2": {
+        "pad": "C2"
+      }
+    },
+    "clear": {
+      "pad": "R"
+    },
+    "pins": {
+      "TQFP44": {
+        "M1": "42",
+        "M2": "43",
+        "M3": "44",
+        "M4": "1",
+        "M5": "2",
+        "M6": "3",
+        "M7": "5",
+        "M8": "6",
+        "M9": "7",
+        "M10": "8",
+        "M11": "10",
+        "M12": "11",
+        "M13": "12",
+        "M14": "13",
+        "M15": "14",
+        "M16": "15",
+        "M17": "35",
+        "M18": "34",
+        "M19": "33",
+        "M20": "32",
+        "M21": "31",
+        "M22": "30",
+        "M23": "28",
+        "M24": "27",
+        "M25": "26",
+        "M26": "25",
+        "M27": "23",
+        "M28": "22",
+        "M29": "21",
+        "M30": "20",
+        "M31": "19",
+        "M32": "18",
+        "C1": "37",
+        "C2": "40",
+        "E1": "38",
+        "R": "39"
+      }
+    }
+  }
+}
