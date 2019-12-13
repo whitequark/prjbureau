@@ -90,6 +90,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15729
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC2": {
@@ -130,6 +139,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15730
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -172,6 +190,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15733
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC4": {
@@ -212,6 +239,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -254,6 +290,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15737
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC6": {
@@ -294,6 +339,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15738
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -336,6 +390,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15741
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC8": {
@@ -376,6 +439,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15742
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -418,6 +490,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15745
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC10": {
@@ -458,6 +539,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15746
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -500,6 +590,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15749
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC12": {
@@ -540,6 +639,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15750
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -582,6 +690,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15753
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC14": {
@@ -622,6 +739,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15754
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -664,6 +790,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15757
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC16": {
@@ -704,6 +839,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15758
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -746,6 +890,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16209
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC18": {
@@ -786,6 +939,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16210
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -828,6 +990,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16213
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC20": {
@@ -868,6 +1039,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -910,6 +1090,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16217
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC22": {
@@ -950,6 +1139,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16218
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -992,6 +1190,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16221
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC24": {
@@ -1032,6 +1239,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16222
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1074,6 +1290,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16225
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC26": {
@@ -1114,6 +1339,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16226
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1156,6 +1390,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16229
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC28": {
@@ -1196,6 +1439,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16230
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1238,6 +1490,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16233
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC30": {
@@ -1278,6 +1539,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16234
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1320,6 +1590,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16237
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC32": {
@@ -1360,6 +1639,15 @@
             "dff": 2,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16238
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       }
@@ -1536,6 +1824,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15779
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC2": {
@@ -1594,6 +1891,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15752
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1654,6 +1960,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15725
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC4": {
@@ -1712,6 +2027,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15698
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1772,6 +2096,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15671
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC6": {
@@ -1830,6 +2163,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15644
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -1890,6 +2232,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15617
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC8": {
@@ -1948,6 +2299,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15590
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2008,6 +2368,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15563
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC10": {
@@ -2066,6 +2435,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15536
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2126,6 +2504,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15509
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC12": {
@@ -2184,6 +2571,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15482
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2244,6 +2640,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15455
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC14": {
@@ -2302,6 +2707,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15428
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2362,6 +2776,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15401
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC16": {
@@ -2420,6 +2843,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15374
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2480,6 +2912,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16259
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC18": {
@@ -2538,6 +2979,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16232
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2598,6 +3048,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16205
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC20": {
@@ -2656,6 +3115,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16178
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2716,6 +3184,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16151
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC22": {
@@ -2774,6 +3251,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16124
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2834,6 +3320,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16097
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC24": {
@@ -2892,6 +3387,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16070
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -2952,6 +3456,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            16043
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC26": {
@@ -3010,6 +3523,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16016
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -3070,6 +3592,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15989
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC28": {
@@ -3128,6 +3659,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15962
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -3188,6 +3728,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15935
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC30": {
@@ -3246,6 +3795,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15908
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       },
@@ -3306,6 +3864,15 @@
             "tff": 3,
             "latch": 0
           }
+        },
+        "async_reset": {
+          "fuses": [
+            15881
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
+          }
         }
       },
       "MC32": {
@@ -3364,6 +3931,15 @@
             "dff": 1,
             "tff": 3,
             "latch": 0
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15854
+          ],
+          "values": {
+            "pt": 1,
+            "gclear": 0
           }
         }
       }

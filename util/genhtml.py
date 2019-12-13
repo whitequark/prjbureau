@@ -81,6 +81,7 @@ macrocell_options = {
     "schmitt_trigger": "IO",
     "bus_keeper": "IO",
     "ff_type": "FF",
+    "async_reset": "FF",
 }
 
 
