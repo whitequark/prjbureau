@@ -415,4 +415,8 @@ module TRI(input A, ENA, output Q);
   assign Q = ENA ? A : 1'bz;
 endmodule
 
-// TODO: BI_BUF
+(* blackbox *)
+module BIBUF(input A, EN, output Q, inout PAD);
+  assign PAD = EN ? A : 1'bz;
+  assign Q = PAD;
+endmodule

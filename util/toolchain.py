@@ -17,7 +17,7 @@ fitter_env["FITTERDIR"] = subprocess.check_output([
 ], env=fitter_env, text=True).strip()
 
 
-def run(verilog, pins, device, options=[], name="work"):
+def run(verilog, pins, device, *, strategy={}, options=[], name="work"):
     series, package = device.split("-") # eg ATF1502AS-TQFP44
 
     with open(os.path.join(work_dir, f"{name}.v"), "w") as f:
@@ -36,6 +36,16 @@ def run(verilog, pins, device, options=[], name="work"):
         "-p", f"write_edif -attrprop {name}.edif",
     ], cwd=work_dir)
 
+    strategy = {
+        "ifmt": "edif",
+        "optimize": "off",
+        "DEBUG": "on",
+        "JTAG": "off",
+        **strategy
+    }
+    strategy_options = []
+    for strategy_option in strategy.items():
+        strategy_options += ["-strategy", *strategy_option]
     subprocess.check_call([
         "wine", ntpath.join(fitter_env["FITTERDIR"], f"fit{series[3:7]}.exe"),
         "-silent",
@@ -44,11 +54,8 @@ def run(verilog, pins, device, options=[], name="work"):
         "-tech", series,
         "-device", package,
         "-preassign", "keep",
-        "-strategy", "DEBUG", "on",
-        "-strategy", "ifmt", "edif",
-        "-strategy", "optimize", "off",
-        "-strategy", "JTAG", "off",
-        *options
+        *options,
+        *strategy_options,
     ], cwd=work_dir, env=fitter_env)
 
     with open(os.path.join(work_dir, f"{name}.jed")) as f:

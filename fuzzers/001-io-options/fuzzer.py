@@ -5,18 +5,12 @@ with database.transact() as db:
     for device_name, device in db.items():
         package, pinout = next(iter(device["pins"].items()))
         for macrocell_name, macrocell in device["macrocells"].items():
-            def options(default, **kwargs):
-                result = []
-                for name, value in {**default, **kwargs}.items():
-                    result += ["-strategy", name, value]
-                return result
-
             def run(default, **kwargs):
                 return toolchain.run(
                     f"module top(output O); assign O = 1'b0; endmodule",
                     {"O": pinout[macrocell["pad"]]},
                     f"{device_name}-{package}",
-                    options(default, **kwargs))
+                    strategy={**default, **kwargs})
 
             default = {"output_fast": "off"}
             f_out  = run(default)

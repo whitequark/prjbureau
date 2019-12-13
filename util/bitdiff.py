@@ -10,10 +10,10 @@ def describe(expected, variants):
     fuses = pairwise_xor.search(bitarray.bitarray([1]))
     assert pairwise_xor.count(1) == expected, \
            f"{pairwise_xor.count(1)} bits differ ({expected} expected): {fuses}"
-    return {
-        "fuses": fuses,
-        "values": {
-            key: sum(variant[fuse] << n for n, fuse in enumerate(fuses))
-            for key, variant in variants.items()
-        }
+    values = {
+        key: sum(variant[fuse] << n for n, fuse in enumerate(fuses))
+        for key, variant in variants.items()
     }
+    assert len(set(values.values())) == len(values.values()), \
+           f"values not unique: {values}"
+    return {"fuses": fuses, "values": values}

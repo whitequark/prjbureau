@@ -41,6 +41,7 @@ def write_bitmap(f, columns, rows, bitmap, base):
                     "-": ("#aaa", "#fff"), # out of scope
                     "IO": ("#666", "#faa"),
                     "FF": ("#666", "#aaf"),
+                    "M":  ("#666", "#afa"),
                 }[sigil]
                 f.write(f"<td align='center' width='15' "
                         f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
@@ -74,14 +75,15 @@ def write_option(f, option_name, option, base):
 
 
 macrocell_options = {
-    "slew_rate": "IO",
-    "open_collector": "IO",
-    "low_power": "IO",
-    "pull_up": "IO",
-    "schmitt_trigger": "IO",
-    "bus_keeper": "IO",
-    "ff_type": "FF",
-    "async_reset": "FF",
+    "slew_rate":        "IO",
+    "open_collector":   "IO",
+    "low_power":        "IO",
+    "pull_up":          "IO",
+    "schmitt_trigger":  "IO",
+    "bus_keeper":       "IO",
+    "ff_type":          "FF",
+    "async_reset":      "M",
+    "clock":            "M",
 }
 
 
