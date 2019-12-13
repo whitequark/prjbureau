@@ -44,8 +44,9 @@ with database.transact() as db:
             f_clk1 = run("CLK1")
             f_clk2 = run("CLK2")
             f_clk3 = run("CLK3")
-            f_pt   = run("OE")
+            # 1 unused fuse combination
 
             macrocell.update({
-                "clock": bitdiff.describe(2, {"gclk1": f_clk1, "gclk2": f_clk2, "gclk3": f_clk3})
+                "global_clock":
+                    bitdiff.describe(2, {"gclk1": f_clk1, "gclk2": f_clk2, "gclk3": f_clk3})
             })

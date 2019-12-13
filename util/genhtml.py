@@ -37,6 +37,7 @@ def write_bitmap(f, columns, rows, bitmap, base):
                 sigil = bitmap.get(offset, "1" if not row_name else "?")
                 fgcolor, bgcolor = {
                     "?": ("#666", "#aaa"), # unfuzzed
+                    "!": ("#fff", "#f00"), # conflict
                     "1": ("#aaa", "#fff"), # always 1
                     "-": ("#aaa", "#fff"), # out of scope
                     "IO": ("#666", "#faa"),
@@ -75,15 +76,15 @@ def write_option(f, option_name, option, base):
 
 
 macrocell_options = {
+    "ff_type":          "FF",
+    "async_reset":      "M",
+    "global_clock":     "M",
     "slew_rate":        "IO",
     "open_collector":   "IO",
-    "low_power":        "IO",
     "pull_up":          "IO",
     "schmitt_trigger":  "IO",
     "bus_keeper":       "IO",
-    "ff_type":          "FF",
-    "async_reset":      "M",
-    "clock":            "M",
+    "low_power":        "IO",
 }
 
 
@@ -112,7 +113,10 @@ def update_macrocell_bitmap(bitmap, macrocell, override=None):
         if option_name not in macrocell:
             continue
         for fuse in macrocell[option_name]["fuses"]:
-            bitmap[fuse] = override or sigil
+            if fuse in bitmap:
+                bitmap[fuse] = "!"
+            else:
+                bitmap[fuse] = override or sigil
 
 
 def write_block(f, device_name, device, block_name):

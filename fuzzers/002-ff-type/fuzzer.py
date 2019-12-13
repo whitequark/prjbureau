@@ -19,5 +19,6 @@ with database.transact() as db:
             f_latch = run("LATCH x(.EN(CLK),  .D(1'b0), .Q(Q))")
 
             macrocell.update({
-                "ff_type": bitdiff.describe(2, {"dff": f_dff, "tff": f_tff, "latch": f_latch})
+                "ff_type":
+                    bitdiff.describe(2, {"dff": f_dff, "tff": f_tff, "latch": f_latch})
             })

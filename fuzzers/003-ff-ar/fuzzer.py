@@ -19,5 +19,6 @@ with database.transact() as db:
             f_dffar = run("DFFAR x(.CLK(CLK), .AR(AR), .D(1'b0), .Q(Q))")
 
             macrocell.update({
-                "async_reset": bitdiff.describe(1, {"pt": f_dff, "gclear": f_dffar})
+                "async_reset":
+                    bitdiff.describe(1, {"pt": f_dff, "gclear": f_dffar})
             })

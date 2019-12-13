@@ -100,7 +100,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15646,
             15647
@@ -161,7 +161,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15644,
             15645
@@ -222,7 +222,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15642,
             15643
@@ -283,7 +283,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15640,
             15641
@@ -344,7 +344,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15638,
             15639
@@ -405,7 +405,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15636,
             15637
@@ -466,7 +466,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15634,
             15635
@@ -527,7 +527,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15632,
             15633
@@ -588,7 +588,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15630,
             15631
@@ -649,7 +649,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15628,
             15629
@@ -710,7 +710,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15626,
             15627
@@ -771,7 +771,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15624,
             15625
@@ -832,7 +832,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15622,
             15623
@@ -893,7 +893,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15620,
             15621
@@ -954,7 +954,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15618,
             15619
@@ -1015,7 +1015,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15616,
             15617
@@ -1076,7 +1076,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16126,
             16127
@@ -1137,7 +1137,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16124,
             16125
@@ -1198,7 +1198,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16122,
             16123
@@ -1259,7 +1259,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16120,
             16121
@@ -1320,7 +1320,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16118,
             16119
@@ -1381,7 +1381,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16116,
             16117
@@ -1442,7 +1442,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16114,
             16115
@@ -1503,7 +1503,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16112,
             16113
@@ -1564,7 +1564,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16110,
             16111
@@ -1625,7 +1625,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16108,
             16109
@@ -1686,7 +1686,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16106,
             16107
@@ -1747,7 +1747,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16104,
             16105
@@ -1808,7 +1808,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16102,
             16103
@@ -1869,7 +1869,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16100,
             16101
@@ -1930,7 +1930,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16098,
             16099
@@ -1991,7 +1991,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16096,
             16097
@@ -2186,7 +2186,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15776,
             15780
@@ -2265,7 +2265,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15749,
             15753
@@ -2344,7 +2344,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15722,
             15726
@@ -2423,7 +2423,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15695,
             15699
@@ -2502,7 +2502,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15668,
             15672
@@ -2581,7 +2581,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15641,
             15645
@@ -2660,7 +2660,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15614,
             15618
@@ -2739,7 +2739,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15587,
             15591
@@ -2818,7 +2818,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15560,
             15564
@@ -2897,7 +2897,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15533,
             15537
@@ -2976,7 +2976,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15506,
             15510
@@ -3055,7 +3055,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15479,
             15483
@@ -3134,7 +3134,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15452,
             15456
@@ -3213,7 +3213,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15425,
             15429
@@ -3292,7 +3292,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15398,
             15402
@@ -3371,7 +3371,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15371,
             15375
@@ -3450,7 +3450,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16256,
             16260
@@ -3529,7 +3529,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16229,
             16233
@@ -3608,7 +3608,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16202,
             16206
@@ -3687,7 +3687,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16175,
             16179
@@ -3766,7 +3766,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16148,
             16152
@@ -3845,7 +3845,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16121,
             16125
@@ -3924,7 +3924,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16094,
             16098
@@ -4003,7 +4003,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16067,
             16071
@@ -4082,7 +4082,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16040,
             16044
@@ -4161,7 +4161,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             16013,
             16017
@@ -4240,7 +4240,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15986,
             15990
@@ -4319,7 +4319,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15959,
             15963
@@ -4398,7 +4398,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15932,
             15936
@@ -4477,7 +4477,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15905,
             15909
@@ -4556,7 +4556,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15878,
             15882
@@ -4635,7 +4635,7 @@
             "gclear": 0
           }
         },
-        "clock": {
+        "global_clock": {
           "fuses": [
             15851,
             15855

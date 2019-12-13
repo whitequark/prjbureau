@@ -40,6 +40,7 @@ def run(verilog, pins, device, *, strategy={}, options=[], name="work"):
         "ifmt": "edif",
         "optimize": "off",
         "DEBUG": "on",
+        "output_fast": "off",
         "JTAG": "off",
         **strategy
     }
