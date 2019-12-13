@@ -7,3 +7,4 @@ htmldoc/*
 *.io
 *.fit
 *.jed
+/*.py

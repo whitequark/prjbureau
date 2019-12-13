@@ -32,7 +32,8 @@ def run(verilog, pins, device, options=[], name="work"):
         "-q",
         "-p", f"read_verilog -lib {os.path.join(root_dir, 'cells.v')}",
         "-p", f"read_verilog {name}.v",
-        "-o", f"{name}.edif",
+        "-p", f"hierarchy",
+        "-p", f"write_edif -attrprop {name}.edif",
     ], cwd=work_dir)
 
     subprocess.check_call([
@@ -43,6 +44,7 @@ def run(verilog, pins, device, options=[], name="work"):
         "-tech", series,
         "-device", package,
         "-preassign", "keep",
+        "-strategy", "DEBUG", "on",
         "-strategy", "ifmt", "edif",
         "-strategy", "optimize", "off",
         "-strategy", "JTAG", "off",

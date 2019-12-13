@@ -32,14 +32,16 @@ def write_bitmap(f, columns, rows, start, bitmap):
         for row_name, width in row:
             f.write(f"<td align='right'>{row_name}</td>\n")
             for _ in range(width):
-                sigil = bitmap.get(offset, "?")
-                bgcolor, fgcolor = {
-                    "?": ("#aaa", "#666"),
-                    "IO": ("#faa", "#666"),
+                sigil = bitmap.get(offset, "1" if not row_name else "?")
+                fgcolor, bgcolor = {
+                    "1": ("#aaa", "#fff"),
+                    "?": ("#666", "#aaa"),
+                    "IO": ("#666", "#faa"),
+                    "FF": ("#666", "#aaf"),
                 }[sigil]
                 f.write(f"<td align='center' bgcolor='{bgcolor}' style='color:{fgcolor};'>")
                 f.write(f"<abbr title='+{offset - start}' style='text-decoration:none'>")
-                if sigil != "?":
+                if sigil not in "?1":
                     f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
                             f"href='#L{offset}'>{sigil}</a>")
                 else:
@@ -91,7 +93,7 @@ def write_block(f, device, block_name, bitmap):
         f"{macrocell_fuses.start}.")
 
     write_options(f, {name[2:]: device["macrocells"][name] for name in block["macrocells"]},
-        names=["slow", "open_collector"],
+        names=["slow", "open_collector", "toggle", "latch"],
         offset=macrocell_fuses.start)
 
 
@@ -104,6 +106,8 @@ for device_name, device in db.items():
     for macrocell_name, macrocell in device["macrocells"].items():
         bitmap[macrocell["slow_fuse"]] = "IO"
         bitmap[macrocell["open_collector_fuse"]] = "IO"
+        bitmap[macrocell["toggle_fuse"]] = "FF"
+        bitmap[macrocell["latch_fuse"]] = "FF"
 
     for block_name in device["blocks"]:
         with open(os.path.join(html_dir, f"block{block_name}.html"), "w") as f:
