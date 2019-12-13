@@ -1,19 +1,18 @@
 from util import database
 
 
-database.save({
-    "ATF1502AS": {
-        "blocks": {
-            bn: {
-                "macrocell_fuses": [15360+480*bi, 15360+480*(bi+1)],
-                "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
-            } for bi, bn in enumerate("AB")
-        },
+def macrocells(count):
+    return {
         "macrocells": {
             f"MC{1+mi}": {
                 "pad": f"M{1+mi}"
             } for mi in range(32)
-        },
+        }
+    }
+
+
+def globals(gclk3):
+    return {
         "clocks": {
             "1": {"pad": "C1"},
             "2": {"pad": "C2"},
@@ -24,46 +23,47 @@ database.save({
             "2": {"pad": "C2"},
         },
         "clear": {"pad": "R"},
+    }
 
-        "pins": {
-            "TQFP44": {
-                "M1": "42",
-                "M2": "43",
-                "M3": "44",
-                "M4": "1",
-                "M5": "2",
-                "M6": "3",
-                "M7": "5",
-                "M8": "6",
-                "M9": "7",
-                "M10": "8",
-                "M11": "10",
-                "M12": "11",
-                "M13": "12",
-                "M14": "13",
-                "M15": "14",
-                "M16": "15",
-                "M17": "35",
-                "M18": "34",
-                "M19": "33",
-                "M20": "32",
-                "M21": "31",
-                "M22": "30",
-                "M23": "28",
-                "M24": "27",
-                "M25": "26",
-                "M26": "25",
-                "M27": "23",
-                "M28": "22",
-                "M29": "21",
-                "M30": "20",
-                "M31": "19",
-                "M32": "18",
-                "C1": "37",
-                "C2": "40",
-                "E1": "38",
-                "R": "39",
-            }
+
+def pins(Mn, C1, E1, R, C2):
+    return {
+        **{
+            f"M{1+mi}": pin
+            for mi, pin in enumerate(Mn.split())
+        },
+        **{
+            "C1": "37",
+            "E1": "38",
+            "R":  "39",
+            "C2": "40",
         }
-    },
+    }
+
+
+def atf1502():
+    return {
+        "blocks": {
+            bn: {
+                "macrocell_fuses": [15360+480*bi, 15360+480*(bi+1)],
+                "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
+            } for bi, bn in enumerate("AB")
+        },
+        **macrocells(32),
+        **globals(gclk3="M17"),
+        "pins": {
+            "TQFP44": pins(
+                Mn="42 43 44  1  2  3  5  6  7  8 10 11 12 13 14 15 "
+                   "35 34 33 32 31 30 28 27 26 25 23 22 21 20 19 18 ",
+                C1="37",
+                E1="38",
+                R ="39",
+                C2="40"),
+        }
+    }
+
+
+database.save({
+    "ATF1502AS": atf1502(),
+    "ATF1502BE": atf1502(),
 })

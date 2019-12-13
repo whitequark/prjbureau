@@ -71,6 +71,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15568
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15489,
@@ -97,6 +106,15 @@
         "open_collector": {
           "fuses": [
             15564
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15571
           ],
           "values": {
             "on": 1,
@@ -135,6 +153,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15572
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15493,
@@ -161,6 +188,15 @@
         "open_collector": {
           "fuses": [
             15560
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15575
           ],
           "values": {
             "on": 1,
@@ -199,6 +235,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15576
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15497,
@@ -225,6 +270,15 @@
         "open_collector": {
           "fuses": [
             15556
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15579
           ],
           "values": {
             "on": 1,
@@ -263,6 +317,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15580
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15501,
@@ -289,6 +352,15 @@
         "open_collector": {
           "fuses": [
             15552
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15583
           ],
           "values": {
             "on": 1,
@@ -327,6 +399,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15584
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15505,
@@ -353,6 +434,15 @@
         "open_collector": {
           "fuses": [
             15548
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15587
           ],
           "values": {
             "on": 1,
@@ -391,6 +481,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15588
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15509,
@@ -417,6 +516,15 @@
         "open_collector": {
           "fuses": [
             15544
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15591
           ],
           "values": {
             "on": 1,
@@ -455,6 +563,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15592
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15513,
@@ -481,6 +598,15 @@
         "open_collector": {
           "fuses": [
             15540
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15595
           ],
           "values": {
             "on": 1,
@@ -519,6 +645,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            15596
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15517,
@@ -545,6 +680,15 @@
         "open_collector": {
           "fuses": [
             15536
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            15599
           ],
           "values": {
             "on": 1,
@@ -583,6 +727,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16048
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15969,
@@ -609,6 +762,15 @@
         "open_collector": {
           "fuses": [
             16044
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16051
           ],
           "values": {
             "on": 1,
@@ -647,6 +809,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16052
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15973,
@@ -673,6 +844,15 @@
         "open_collector": {
           "fuses": [
             16040
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16055
           ],
           "values": {
             "on": 1,
@@ -711,6 +891,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16056
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15977,
@@ -737,6 +926,15 @@
         "open_collector": {
           "fuses": [
             16036
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16059
           ],
           "values": {
             "on": 1,
@@ -775,6 +973,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16060
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15981,
@@ -801,6 +1008,15 @@
         "open_collector": {
           "fuses": [
             16032
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16063
           ],
           "values": {
             "on": 1,
@@ -839,6 +1055,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16064
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15985,
@@ -865,6 +1090,15 @@
         "open_collector": {
           "fuses": [
             16028
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16067
           ],
           "values": {
             "on": 1,
@@ -903,6 +1137,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16068
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15989,
@@ -929,6 +1172,15 @@
         "open_collector": {
           "fuses": [
             16024
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16071
           ],
           "values": {
             "on": 1,
@@ -967,6 +1219,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16072
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15993,
@@ -993,6 +1254,15 @@
         "open_collector": {
           "fuses": [
             16020
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16075
           ],
           "values": {
             "on": 1,
@@ -1031,6 +1301,15 @@
             "off": 0
           }
         },
+        "low_power": {
+          "fuses": [
+            16076
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
         "ff_type": {
           "fuses": [
             15997,
@@ -1057,6 +1336,15 @@
         "open_collector": {
           "fuses": [
             16016
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "low_power": {
+          "fuses": [
+            16079
           ],
           "values": {
             "on": 1,
@@ -1133,9 +1421,2013 @@
         "M31": "19",
         "M32": "18",
         "C1": "37",
-        "C2": "40",
         "E1": "38",
-        "R": "39"
+        "R": "39",
+        "C2": "40"
+      }
+    }
+  },
+  "ATF1502BE": {
+    "blocks": {
+      "A": {
+        "macrocell_fuses": [
+          15360,
+          15840
+        ],
+        "macrocells": [
+          "MC1",
+          "MC2",
+          "MC3",
+          "MC4",
+          "MC5",
+          "MC6",
+          "MC7",
+          "MC8",
+          "MC9",
+          "MC10",
+          "MC11",
+          "MC12",
+          "MC13",
+          "MC14",
+          "MC15",
+          "MC16"
+        ]
+      },
+      "B": {
+        "macrocell_fuses": [
+          15840,
+          16320
+        ],
+        "macrocells": [
+          "MC17",
+          "MC18",
+          "MC19",
+          "MC20",
+          "MC21",
+          "MC22",
+          "MC23",
+          "MC24",
+          "MC25",
+          "MC26",
+          "MC27",
+          "MC28",
+          "MC29",
+          "MC30",
+          "MC31",
+          "MC32"
+        ]
+      }
+    },
+    "macrocells": {
+      "MC1": {
+        "pad": "M1",
+        "slew_rate": {
+          "fuses": [
+            15767
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15768
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15765
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15769
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15766
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15774,
+            15789
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC2": {
+        "pad": "M2",
+        "slew_rate": {
+          "fuses": [
+            15740
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15741
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15738
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15742
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15739
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15747,
+            15762
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC3": {
+        "pad": "M3",
+        "slew_rate": {
+          "fuses": [
+            15713
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15714
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15711
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15715
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15712
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15720,
+            15735
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC4": {
+        "pad": "M4",
+        "slew_rate": {
+          "fuses": [
+            15686
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15687
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15684
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15688
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15685
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15693,
+            15708
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC5": {
+        "pad": "M5",
+        "slew_rate": {
+          "fuses": [
+            15659
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15660
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15657
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15661
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15658
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15666,
+            15681
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC6": {
+        "pad": "M6",
+        "slew_rate": {
+          "fuses": [
+            15632
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15633
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15630
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15634
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15631
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15639,
+            15654
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC7": {
+        "pad": "M7",
+        "slew_rate": {
+          "fuses": [
+            15605
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15606
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15603
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15607
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15604
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15612,
+            15627
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC8": {
+        "pad": "M8",
+        "slew_rate": {
+          "fuses": [
+            15578
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15579
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15576
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15580
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15577
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15585,
+            15600
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC9": {
+        "pad": "M9",
+        "slew_rate": {
+          "fuses": [
+            15551
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15552
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15549
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15553
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15550
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15558,
+            15573
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC10": {
+        "pad": "M10",
+        "slew_rate": {
+          "fuses": [
+            15524
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15525
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15522
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15526
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15523
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15531,
+            15546
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC11": {
+        "pad": "M11",
+        "slew_rate": {
+          "fuses": [
+            15497
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15498
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15495
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15499
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15496
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15504,
+            15519
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC12": {
+        "pad": "M12",
+        "slew_rate": {
+          "fuses": [
+            15470
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15471
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15468
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15472
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15469
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15477,
+            15492
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC13": {
+        "pad": "M13",
+        "slew_rate": {
+          "fuses": [
+            15443
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15444
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15441
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15445
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15442
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15450,
+            15465
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC14": {
+        "pad": "M14",
+        "slew_rate": {
+          "fuses": [
+            15416
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15417
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15414
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15418
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15415
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15423,
+            15438
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC15": {
+        "pad": "M15",
+        "slew_rate": {
+          "fuses": [
+            15389
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15390
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15387
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15391
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15388
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15396,
+            15411
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC16": {
+        "pad": "M16",
+        "slew_rate": {
+          "fuses": [
+            15362
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15363
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15360
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15364
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15361
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15369,
+            15384
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC17": {
+        "pad": "M17",
+        "slew_rate": {
+          "fuses": [
+            16247
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16248
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16245
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16249
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16246
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16254,
+            16269
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC18": {
+        "pad": "M18",
+        "slew_rate": {
+          "fuses": [
+            16220
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16221
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16218
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16222
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16219
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16227,
+            16242
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC19": {
+        "pad": "M19",
+        "slew_rate": {
+          "fuses": [
+            16193
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16194
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16191
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16195
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16192
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16200,
+            16215
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC20": {
+        "pad": "M20",
+        "slew_rate": {
+          "fuses": [
+            16166
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16167
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16164
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16168
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16165
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16173,
+            16188
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC21": {
+        "pad": "M21",
+        "slew_rate": {
+          "fuses": [
+            16139
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16140
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16137
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16141
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16138
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16146,
+            16161
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC22": {
+        "pad": "M22",
+        "slew_rate": {
+          "fuses": [
+            16112
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16113
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16110
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16114
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16111
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16119,
+            16134
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC23": {
+        "pad": "M23",
+        "slew_rate": {
+          "fuses": [
+            16085
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16086
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16083
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16087
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16084
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16092,
+            16107
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC24": {
+        "pad": "M24",
+        "slew_rate": {
+          "fuses": [
+            16058
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16059
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16056
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16060
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16057
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16065,
+            16080
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC25": {
+        "pad": "M25",
+        "slew_rate": {
+          "fuses": [
+            16031
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16032
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16029
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16033
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16030
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16038,
+            16053
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC26": {
+        "pad": "M26",
+        "slew_rate": {
+          "fuses": [
+            16004
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            16005
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            16002
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            16006
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16003
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            16011,
+            16026
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC27": {
+        "pad": "M27",
+        "slew_rate": {
+          "fuses": [
+            15977
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15978
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15975
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15979
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15976
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15984,
+            15999
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC28": {
+        "pad": "M28",
+        "slew_rate": {
+          "fuses": [
+            15950
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15951
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15948
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15952
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15949
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15957,
+            15972
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC29": {
+        "pad": "M29",
+        "slew_rate": {
+          "fuses": [
+            15923
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15924
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15921
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15925
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15922
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15930,
+            15945
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC30": {
+        "pad": "M30",
+        "slew_rate": {
+          "fuses": [
+            15896
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15897
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15894
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15898
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15895
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15903,
+            15918
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC31": {
+        "pad": "M31",
+        "slew_rate": {
+          "fuses": [
+            15869
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15870
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15867
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15871
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15868
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15876,
+            15891
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      },
+      "MC32": {
+        "pad": "M32",
+        "slew_rate": {
+          "fuses": [
+            15842
+          ],
+          "values": {
+            "fast": 0,
+            "slow": 1
+          }
+        },
+        "open_collector": {
+          "fuses": [
+            15843
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "pull_up": {
+          "fuses": [
+            15840
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "schmitt_trigger": {
+          "fuses": [
+            15844
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            15841
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
+        },
+        "ff_type": {
+          "fuses": [
+            15849,
+            15864
+          ],
+          "values": {
+            "dff": 1,
+            "tff": 3,
+            "latch": 0
+          }
+        }
+      }
+    },
+    "clocks": {
+      "1": {
+        "pad": "C1"
+      },
+      "2": {
+        "pad": "C2"
+      },
+      "3": {
+        "pad": "M17"
+      }
+    },
+    "enables": {
+      "1": {
+        "pad": "E1"
+      },
+      "2": {
+        "pad": "C2"
+      }
+    },
+    "clear": {
+      "pad": "R"
+    },
+    "pins": {
+      "TQFP44": {
+        "M1": "42",
+        "M2": "43",
+        "M3": "44",
+        "M4": "1",
+        "M5": "2",
+        "M6": "3",
+        "M7": "5",
+        "M8": "6",
+        "M9": "7",
+        "M10": "8",
+        "M11": "10",
+        "M12": "11",
+        "M13": "12",
+        "M14": "13",
+        "M15": "14",
+        "M16": "15",
+        "M17": "35",
+        "M18": "34",
+        "M19": "33",
+        "M20": "32",
+        "M21": "31",
+        "M22": "30",
+        "M23": "28",
+        "M24": "27",
+        "M25": "26",
+        "M26": "25",
+        "M27": "23",
+        "M28": "22",
+        "M29": "21",
+        "M30": "20",
+        "M31": "19",
+        "M32": "18",
+        "C1": "37",
+        "E1": "38",
+        "R": "39",
+        "C2": "40"
       }
     }
   }
