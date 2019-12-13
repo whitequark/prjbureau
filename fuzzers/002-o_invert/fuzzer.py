@@ -23,5 +23,5 @@ with database.transact() as db:
             # http://ww1.microchip.com/downloads/en/Appnotes/DOC0424.PDF
             macrocell.update({
                 "invert_output":
-                    bitdiff.describe(1, {"on": f_n, "off": f_p})
+                    bitdiff.describe(1, {"off": f_p, "on": f_n})
             })

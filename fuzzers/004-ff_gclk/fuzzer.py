@@ -42,11 +42,12 @@ with database.transact() as db:
                     return run_normal(clk)
 
             f_clk1 = run("CLK1")
-            f_clk2 = run("CLK2")
+            f_clk2 = run("CLK2") # also happens to be 00
             f_clk3 = run("CLK3")
             # 1 unused fuse combination
 
+            # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
             macrocell.update({
                 "global_clock":
-                    bitdiff.describe(2, {"gclk1": f_clk1, "gclk2": f_clk2, "gclk3": f_clk3})
+                    bitdiff.describe(2, {"gclk2": f_clk2, "gclk3": f_clk3, "gclk1": f_clk1})
             })

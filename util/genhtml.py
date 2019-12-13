@@ -76,10 +76,12 @@ def write_option(f, option_name, option, base):
 
 
 macrocell_options = {
-    "pt5_func":         "M",
     "ff_type":          "FF",
-    "async_reset":      "M",
     "global_clock":     "M",
+    "pt4_gate":         "M",
+    "pt4_func":         "M",
+    "async_reset":      "M",
+    "pt5_func":         "M",
     "invert_output":    "M",
     "slew_rate":        "IO",
     "open_collector":   "IO",

@@ -53,13 +53,13 @@
     "macrocells": {
       "MC1": {
         "pad": "M1",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15648
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -67,8 +67,8 @@
             15567
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -76,8 +76,17 @@
             15568
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15409
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -86,18 +95,9 @@
             15727
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15729
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -106,18 +106,36 @@
             15647
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15409
+            15406
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15649
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15729
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -125,20 +143,20 @@
             15808
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC2": {
         "pad": "M2",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15651
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -146,8 +164,8 @@
             15564
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -155,8 +173,17 @@
             15571
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -165,18 +192,9 @@
             15724
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15730
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -185,18 +203,36 @@
             15645
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15410
+            15405
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15650
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15730
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -204,20 +240,20 @@
             15811
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC3": {
         "pad": "M3",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15652
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -225,8 +261,8 @@
             15563
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -234,8 +270,17 @@
             15572
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15413
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -244,18 +289,9 @@
             15723
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15733
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -264,18 +300,36 @@
             15643
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15413
+            15402
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15653
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15733
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -283,20 +337,20 @@
             15812
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC4": {
         "pad": "M4",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15655
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -304,8 +358,8 @@
             15560
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -313,8 +367,17 @@
             15575
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15414
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -323,18 +386,9 @@
             15720
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15734
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -343,18 +397,36 @@
             15641
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15414
+            15401
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15654
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -362,20 +434,20 @@
             15815
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC5": {
         "pad": "M5",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15656
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -383,8 +455,8 @@
             15559
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -392,8 +464,17 @@
             15576
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15417
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -402,18 +483,9 @@
             15719
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15737
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -422,18 +494,36 @@
             15639
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15417
+            15398
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15657
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15737
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -441,20 +531,20 @@
             15816
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC6": {
         "pad": "M6",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15659
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -462,8 +552,8 @@
             15556
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -471,8 +561,17 @@
             15579
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15418
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -481,18 +580,9 @@
             15716
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15738
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -501,18 +591,36 @@
             15637
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15418
+            15397
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15658
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15738
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -520,20 +628,20 @@
             15819
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC7": {
         "pad": "M7",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15660
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -541,8 +649,8 @@
             15555
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -550,8 +658,17 @@
             15580
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15421
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -560,18 +677,9 @@
             15715
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15741
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -580,18 +688,36 @@
             15635
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15421
+            15394
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15661
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15741
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -599,20 +725,20 @@
             15820
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC8": {
         "pad": "M8",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15663
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -620,8 +746,8 @@
             15552
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -629,8 +755,17 @@
             15583
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15422
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -639,18 +774,9 @@
             15712
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15742
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -659,18 +785,36 @@
             15633
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15422
+            15393
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15662
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15742
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -678,20 +822,20 @@
             15823
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC9": {
         "pad": "M9",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15664
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -699,8 +843,8 @@
             15551
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -708,8 +852,17 @@
             15584
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15425
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -718,18 +871,9 @@
             15711
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15745
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -738,18 +882,36 @@
             15631
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15425
+            15390
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15665
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15745
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -757,20 +919,20 @@
             15824
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC10": {
         "pad": "M10",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15667
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -778,8 +940,8 @@
             15548
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -787,8 +949,17 @@
             15587
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15426
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -797,18 +968,9 @@
             15708
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15746
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -817,18 +979,36 @@
             15629
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15426
+            15389
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15666
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15746
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -836,20 +1016,20 @@
             15827
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC11": {
         "pad": "M11",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15668
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -857,8 +1037,8 @@
             15547
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -866,8 +1046,17 @@
             15588
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15429
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -876,18 +1065,9 @@
             15707
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15749
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -896,18 +1076,36 @@
             15627
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15429
+            15386
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15669
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15749
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -915,20 +1113,20 @@
             15828
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC12": {
         "pad": "M12",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15671
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -936,8 +1134,8 @@
             15544
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -945,8 +1143,17 @@
             15591
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15430
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -955,18 +1162,9 @@
             15704
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15750
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -975,18 +1173,36 @@
             15625
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15430
+            15385
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15670
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15750
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -994,20 +1210,20 @@
             15831
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC13": {
         "pad": "M13",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15672
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1015,8 +1231,8 @@
             15543
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1024,8 +1240,17 @@
             15592
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15433
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1034,18 +1259,9 @@
             15703
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15753
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1054,18 +1270,36 @@
             15623
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15433
+            15382
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15673
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15753
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1073,20 +1307,20 @@
             15832
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC14": {
         "pad": "M14",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15675
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1094,8 +1328,8 @@
             15540
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1103,8 +1337,17 @@
             15595
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15434
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1113,18 +1356,9 @@
             15700
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15754
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1133,18 +1367,36 @@
             15621
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15434
+            15381
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15674
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15754
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1152,20 +1404,20 @@
             15835
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC15": {
         "pad": "M15",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15676
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1173,8 +1425,8 @@
             15539
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1182,8 +1434,17 @@
             15596
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1192,18 +1453,9 @@
             15699
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15757
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1212,18 +1464,36 @@
             15619
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15437
+            15378
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15677
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15757
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1231,20 +1501,20 @@
             15836
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC16": {
         "pad": "M16",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15679
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1252,8 +1522,8 @@
             15536
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1261,8 +1531,17 @@
             15599
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15438
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1271,18 +1550,9 @@
             15696
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15758
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1291,18 +1561,36 @@
             15617
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15438
+            15377
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15678
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15758
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1310,20 +1598,20 @@
             15839
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC17": {
         "pad": "M17",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16128
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1331,8 +1619,8 @@
             16047
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1340,8 +1628,17 @@
             16048
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15889
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1350,18 +1647,9 @@
             16207
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16209
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1370,18 +1658,36 @@
             16127
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15889
+            15886
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16129
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16209
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1389,20 +1695,20 @@
             16288
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC18": {
         "pad": "M18",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16131
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1410,8 +1716,8 @@
             16044
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1419,8 +1725,17 @@
             16051
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1429,18 +1744,9 @@
             16204
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16210
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1449,18 +1755,36 @@
             16125
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15890
+            15885
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16130
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16210
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1468,20 +1792,20 @@
             16291
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC19": {
         "pad": "M19",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16132
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1489,8 +1813,8 @@
             16043
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1498,8 +1822,17 @@
             16052
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15893
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1508,18 +1841,9 @@
             16203
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16213
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1528,18 +1852,36 @@
             16123
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15893
+            15882
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16133
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16213
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1547,20 +1889,20 @@
             16292
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC20": {
         "pad": "M20",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16135
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1568,8 +1910,8 @@
             16040
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1577,8 +1919,17 @@
             16055
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15894
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1587,18 +1938,9 @@
             16200
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16214
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1607,18 +1949,36 @@
             16121
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15894
+            15881
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16134
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1626,20 +1986,20 @@
             16295
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC21": {
         "pad": "M21",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16136
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1647,8 +2007,8 @@
             16039
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1656,8 +2016,17 @@
             16056
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15897
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1666,18 +2035,9 @@
             16199
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16217
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1686,18 +2046,36 @@
             16119
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15897
+            15878
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16137
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16217
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1705,20 +2083,20 @@
             16296
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC22": {
         "pad": "M22",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16139
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1726,8 +2104,8 @@
             16036
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1735,8 +2113,17 @@
             16059
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15898
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1745,18 +2132,9 @@
             16196
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16218
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1765,18 +2143,36 @@
             16117
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15898
+            15877
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16138
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16218
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1784,20 +2180,20 @@
             16299
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC23": {
         "pad": "M23",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16140
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1805,8 +2201,8 @@
             16035
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1814,8 +2210,17 @@
             16060
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15901
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1824,18 +2229,9 @@
             16195
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16221
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1844,18 +2240,36 @@
             16115
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15901
+            15874
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16141
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16221
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1863,20 +2277,20 @@
             16300
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC24": {
         "pad": "M24",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16143
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1884,8 +2298,8 @@
             16032
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1893,8 +2307,17 @@
             16063
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15902
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1903,18 +2326,9 @@
             16192
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16222
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -1923,18 +2337,36 @@
             16113
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15902
+            15873
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16142
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16222
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -1942,20 +2374,20 @@
             16303
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC25": {
         "pad": "M25",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16144
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -1963,8 +2395,8 @@
             16031
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -1972,8 +2404,17 @@
             16064
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15905
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -1982,18 +2423,9 @@
             16191
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16225
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2002,18 +2434,36 @@
             16111
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15905
+            15870
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16145
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16225
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2021,20 +2471,20 @@
             16304
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC26": {
         "pad": "M26",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16147
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2042,8 +2492,8 @@
             16028
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2051,8 +2501,17 @@
             16067
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15906
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2061,18 +2520,9 @@
             16188
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16226
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2081,18 +2531,36 @@
             16109
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15906
+            15869
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16146
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16226
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2100,20 +2568,20 @@
             16307
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC27": {
         "pad": "M27",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16148
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2121,8 +2589,8 @@
             16027
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2130,8 +2598,17 @@
             16068
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15909
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2140,18 +2617,9 @@
             16187
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16229
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2160,18 +2628,36 @@
             16107
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15909
+            15866
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16149
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16229
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2179,20 +2665,20 @@
             16308
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC28": {
         "pad": "M28",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16151
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2200,8 +2686,8 @@
             16024
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2209,8 +2695,17 @@
             16071
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15910
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2219,18 +2714,9 @@
             16184
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16230
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2239,18 +2725,36 @@
             16105
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15910
+            15865
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16150
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16230
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2258,20 +2762,20 @@
             16311
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC29": {
         "pad": "M29",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16152
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2279,8 +2783,8 @@
             16023
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2288,8 +2792,17 @@
             16072
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15913
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2298,18 +2811,9 @@
             16183
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16233
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2318,18 +2822,36 @@
             16103
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15913
+            15862
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16153
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16233
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2337,20 +2859,20 @@
             16312
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC30": {
         "pad": "M30",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16155
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2358,8 +2880,8 @@
             16020
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2367,8 +2889,17 @@
             16075
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15914
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2377,18 +2908,9 @@
             16180
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16234
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2397,18 +2919,36 @@
             16101
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15914
+            15861
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16154
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16234
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2416,20 +2956,20 @@
             16315
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC31": {
         "pad": "M31",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16156
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2437,8 +2977,8 @@
             16019
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2446,8 +2986,17 @@
             16076
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2456,18 +3005,9 @@
             16179
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16237
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2476,18 +3016,36 @@
             16099
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15917
+            15858
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16157
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16237
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2495,20 +3053,20 @@
             16316
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC32": {
         "pad": "M32",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16159
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2516,8 +3074,8 @@
             16016
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "low_power": {
@@ -2525,8 +3083,17 @@
             16079
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15918
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2535,18 +3102,9 @@
             16176
           ],
           "values": {
+            "latch": 0,
             "dff": 2,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16238
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2555,18 +3113,36 @@
             16097
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 2
+            "gclk3": 2,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15918
+            15857
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16158
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16238
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2574,8 +3150,8 @@
             16319
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       }
@@ -2697,13 +3273,13 @@
     "macrocells": {
       "MC1": {
         "pad": "M1",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15767
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2711,8 +3287,8 @@
             15768
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -2720,8 +3296,8 @@
             15765
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -2729,8 +3305,8 @@
             15769
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -2738,8 +3314,17 @@
             15766
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15788
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2748,18 +3333,9 @@
             15789
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15779
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2768,18 +3344,36 @@
             15780
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15788
+            15787
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15781
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15779
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2787,20 +3381,20 @@
             15778
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC2": {
         "pad": "M2",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15740
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2808,8 +3402,8 @@
             15741
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -2817,8 +3411,8 @@
             15738
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -2826,8 +3420,8 @@
             15742
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -2835,8 +3429,17 @@
             15739
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15761
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2845,18 +3448,9 @@
             15762
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15752
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2865,18 +3459,36 @@
             15753
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15761
+            15760
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15754
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15752
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2884,20 +3496,20 @@
             15751
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC3": {
         "pad": "M3",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15713
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -2905,8 +3517,8 @@
             15714
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -2914,8 +3526,8 @@
             15711
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -2923,8 +3535,8 @@
             15715
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -2932,8 +3544,17 @@
             15712
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -2942,18 +3563,9 @@
             15735
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15725
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -2962,18 +3574,36 @@
             15726
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15734
+            15733
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15727
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15725
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -2981,20 +3611,20 @@
             15724
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC4": {
         "pad": "M4",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15686
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3002,8 +3632,8 @@
             15687
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3011,8 +3641,8 @@
             15684
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3020,8 +3650,8 @@
             15688
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3029,8 +3659,17 @@
             15685
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15707
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3039,18 +3678,9 @@
             15708
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15698
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3059,18 +3689,36 @@
             15699
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15707
+            15706
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15700
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15698
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3078,20 +3726,20 @@
             15697
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC5": {
         "pad": "M5",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15659
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3099,8 +3747,8 @@
             15660
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3108,8 +3756,8 @@
             15657
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3117,8 +3765,8 @@
             15661
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3126,8 +3774,17 @@
             15658
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15680
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3136,18 +3793,9 @@
             15681
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15671
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3156,18 +3804,36 @@
             15672
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15680
+            15679
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15673
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15671
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3175,20 +3841,20 @@
             15670
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC6": {
         "pad": "M6",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15632
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3196,8 +3862,8 @@
             15633
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3205,8 +3871,8 @@
             15630
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3214,8 +3880,8 @@
             15634
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3223,8 +3889,17 @@
             15631
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15653
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3233,18 +3908,9 @@
             15654
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15644
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3253,18 +3919,36 @@
             15645
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15653
+            15652
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15646
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15644
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3272,20 +3956,20 @@
             15643
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC7": {
         "pad": "M7",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15605
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3293,8 +3977,8 @@
             15606
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3302,8 +3986,8 @@
             15603
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3311,8 +3995,8 @@
             15607
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3320,8 +4004,17 @@
             15604
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15626
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3330,18 +4023,9 @@
             15627
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15617
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3350,18 +4034,36 @@
             15618
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15626
+            15625
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15619
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15617
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3369,20 +4071,20 @@
             15616
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC8": {
         "pad": "M8",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15578
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3390,8 +4092,8 @@
             15579
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3399,8 +4101,8 @@
             15576
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3408,8 +4110,8 @@
             15580
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3417,8 +4119,17 @@
             15577
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15599
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3427,18 +4138,9 @@
             15600
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15590
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3447,18 +4149,36 @@
             15591
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15599
+            15598
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15592
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15590
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3466,20 +4186,20 @@
             15589
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC9": {
         "pad": "M9",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15551
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3487,8 +4207,8 @@
             15552
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3496,8 +4216,8 @@
             15549
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3505,8 +4225,8 @@
             15553
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3514,8 +4234,17 @@
             15550
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15572
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3524,18 +4253,9 @@
             15573
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15563
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3544,18 +4264,36 @@
             15564
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15572
+            15571
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15565
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15563
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3563,20 +4301,20 @@
             15562
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC10": {
         "pad": "M10",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15524
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3584,8 +4322,8 @@
             15525
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3593,8 +4331,8 @@
             15522
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3602,8 +4340,8 @@
             15526
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3611,8 +4349,17 @@
             15523
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15545
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3621,18 +4368,9 @@
             15546
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15536
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3641,18 +4379,36 @@
             15537
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15545
+            15544
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15538
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15536
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3660,20 +4416,20 @@
             15535
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC11": {
         "pad": "M11",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15497
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3681,8 +4437,8 @@
             15498
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3690,8 +4446,8 @@
             15495
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3699,8 +4455,8 @@
             15499
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3708,8 +4464,17 @@
             15496
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15518
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3718,18 +4483,9 @@
             15519
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15509
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3738,18 +4494,36 @@
             15510
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15518
+            15517
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15511
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15509
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3757,20 +4531,20 @@
             15508
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC12": {
         "pad": "M12",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15470
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3778,8 +4552,8 @@
             15471
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3787,8 +4561,8 @@
             15468
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3796,8 +4570,8 @@
             15472
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3805,8 +4579,17 @@
             15469
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15491
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3815,18 +4598,9 @@
             15492
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15482
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3835,18 +4609,36 @@
             15483
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15491
+            15490
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15484
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15482
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3854,20 +4646,20 @@
             15481
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC13": {
         "pad": "M13",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15443
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3875,8 +4667,8 @@
             15444
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3884,8 +4676,8 @@
             15441
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3893,8 +4685,8 @@
             15445
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3902,8 +4694,17 @@
             15442
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15464
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -3912,18 +4713,9 @@
             15465
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15455
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -3932,18 +4724,36 @@
             15456
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15464
+            15463
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15457
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15455
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -3951,20 +4761,20 @@
             15454
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC14": {
         "pad": "M14",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15416
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -3972,8 +4782,8 @@
             15417
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -3981,8 +4791,8 @@
             15414
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -3990,8 +4800,8 @@
             15418
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -3999,8 +4809,17 @@
             15415
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4009,18 +4828,9 @@
             15438
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15428
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4029,18 +4839,36 @@
             15429
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15437
+            15436
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15430
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15428
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4048,20 +4876,20 @@
             15427
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC15": {
         "pad": "M15",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15389
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4069,8 +4897,8 @@
             15390
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4078,8 +4906,8 @@
             15387
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4087,8 +4915,8 @@
             15391
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4096,8 +4924,17 @@
             15388
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4106,18 +4943,9 @@
             15411
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15401
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4126,18 +4954,36 @@
             15402
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15410
+            15409
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15403
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15401
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4145,20 +4991,20 @@
             15400
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC16": {
         "pad": "M16",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15362
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4166,8 +5012,8 @@
             15363
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4175,8 +5021,8 @@
             15360
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4184,8 +5030,8 @@
             15364
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4193,8 +5039,17 @@
             15361
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15383
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4203,18 +5058,9 @@
             15384
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15374
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4223,18 +5069,36 @@
             15375
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15383
+            15382
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15376
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15374
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4242,20 +5106,20 @@
             15373
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC17": {
         "pad": "M17",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16247
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4263,8 +5127,8 @@
             16248
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4272,8 +5136,8 @@
             16245
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4281,8 +5145,8 @@
             16249
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4290,8 +5154,17 @@
             16246
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16268
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4300,18 +5173,9 @@
             16269
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16259
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4320,18 +5184,36 @@
             16260
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16268
+            16267
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16261
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16259
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4339,20 +5221,20 @@
             16258
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC18": {
         "pad": "M18",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16220
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4360,8 +5242,8 @@
             16221
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4369,8 +5251,8 @@
             16218
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4378,8 +5260,8 @@
             16222
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4387,8 +5269,17 @@
             16219
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16241
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4397,18 +5288,9 @@
             16242
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16232
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4417,18 +5299,36 @@
             16233
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16241
+            16240
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16234
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16232
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4436,20 +5336,20 @@
             16231
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC19": {
         "pad": "M19",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16193
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4457,8 +5357,8 @@
             16194
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4466,8 +5366,8 @@
             16191
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4475,8 +5375,8 @@
             16195
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4484,8 +5384,17 @@
             16192
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4494,18 +5403,9 @@
             16215
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16205
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4514,18 +5414,36 @@
             16206
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16214
+            16213
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16207
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16205
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4533,20 +5451,20 @@
             16204
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC20": {
         "pad": "M20",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16166
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4554,8 +5472,8 @@
             16167
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4563,8 +5481,8 @@
             16164
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4572,8 +5490,8 @@
             16168
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4581,8 +5499,17 @@
             16165
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16187
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4591,18 +5518,9 @@
             16188
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16178
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4611,18 +5529,36 @@
             16179
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16187
+            16186
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16180
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16178
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4630,20 +5566,20 @@
             16177
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC21": {
         "pad": "M21",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16139
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4651,8 +5587,8 @@
             16140
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4660,8 +5596,8 @@
             16137
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4669,8 +5605,8 @@
             16141
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4678,8 +5614,17 @@
             16138
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16160
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4688,18 +5633,9 @@
             16161
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16151
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4708,18 +5644,36 @@
             16152
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16160
+            16159
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16153
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16151
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4727,20 +5681,20 @@
             16150
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC22": {
         "pad": "M22",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16112
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4748,8 +5702,8 @@
             16113
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4757,8 +5711,8 @@
             16110
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4766,8 +5720,8 @@
             16114
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4775,8 +5729,17 @@
             16111
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16133
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4785,18 +5748,9 @@
             16134
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16124
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4805,18 +5759,36 @@
             16125
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16133
+            16132
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16126
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16124
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4824,20 +5796,20 @@
             16123
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC23": {
         "pad": "M23",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16085
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4845,8 +5817,8 @@
             16086
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4854,8 +5826,8 @@
             16083
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4863,8 +5835,8 @@
             16087
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4872,8 +5844,17 @@
             16084
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16106
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4882,18 +5863,9 @@
             16107
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16097
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4902,18 +5874,36 @@
             16098
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16106
+            16105
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16099
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16097
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -4921,20 +5911,20 @@
             16096
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC24": {
         "pad": "M24",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16058
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -4942,8 +5932,8 @@
             16059
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -4951,8 +5941,8 @@
             16056
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -4960,8 +5950,8 @@
             16060
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -4969,8 +5959,17 @@
             16057
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16079
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -4979,18 +5978,9 @@
             16080
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16070
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -4999,18 +5989,36 @@
             16071
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16079
+            16078
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16072
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16070
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5018,20 +6026,20 @@
             16069
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC25": {
         "pad": "M25",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16031
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5039,8 +6047,8 @@
             16032
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5048,8 +6056,8 @@
             16029
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5057,8 +6065,8 @@
             16033
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5066,8 +6074,17 @@
             16030
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16052
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5076,18 +6093,9 @@
             16053
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16043
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5096,18 +6104,36 @@
             16044
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16052
+            16051
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16045
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16043
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5115,20 +6141,20 @@
             16042
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC26": {
         "pad": "M26",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             16004
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5136,8 +6162,8 @@
             16005
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5145,8 +6171,8 @@
             16002
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5154,8 +6180,8 @@
             16006
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5163,8 +6189,17 @@
             16003
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16025
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5173,18 +6208,9 @@
             16026
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            16016
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5193,18 +6219,36 @@
             16017
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            16025
+            16024
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            16018
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            16016
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5212,20 +6256,20 @@
             16015
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC27": {
         "pad": "M27",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15977
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5233,8 +6277,8 @@
             15978
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5242,8 +6286,8 @@
             15975
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5251,8 +6295,8 @@
             15979
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5260,8 +6304,17 @@
             15976
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15998
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5270,18 +6323,9 @@
             15999
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15989
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5290,18 +6334,36 @@
             15990
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15998
+            15997
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15991
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15989
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5309,20 +6371,20 @@
             15988
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC28": {
         "pad": "M28",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15950
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5330,8 +6392,8 @@
             15951
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5339,8 +6401,8 @@
             15948
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5348,8 +6410,8 @@
             15952
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5357,8 +6419,17 @@
             15949
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15971
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5367,18 +6438,9 @@
             15972
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15962
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5387,18 +6449,36 @@
             15963
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15971
+            15970
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15964
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15962
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5406,20 +6486,20 @@
             15961
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC29": {
         "pad": "M29",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15923
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5427,8 +6507,8 @@
             15924
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5436,8 +6516,8 @@
             15921
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5445,8 +6525,8 @@
             15925
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5454,8 +6534,17 @@
             15922
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15944
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5464,18 +6553,9 @@
             15945
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15935
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5484,18 +6564,36 @@
             15936
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15944
+            15943
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15937
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15935
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5503,20 +6601,20 @@
             15934
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC30": {
         "pad": "M30",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15896
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5524,8 +6622,8 @@
             15897
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5533,8 +6631,8 @@
             15894
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5542,8 +6640,8 @@
             15898
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5551,8 +6649,17 @@
             15895
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5561,18 +6668,9 @@
             15918
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15908
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5581,18 +6679,36 @@
             15909
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15917
+            15916
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15910
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15908
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5600,20 +6716,20 @@
             15907
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC31": {
         "pad": "M31",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15869
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5621,8 +6737,8 @@
             15870
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5630,8 +6746,8 @@
             15867
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5639,8 +6755,8 @@
             15871
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5648,8 +6764,17 @@
             15868
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5658,18 +6783,9 @@
             15891
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15881
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5678,18 +6794,36 @@
             15882
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15890
+            15889
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15883
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15881
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5697,20 +6831,20 @@
             15880
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       },
       "MC32": {
         "pad": "M32",
-        "slew_rate": {
+        "fast_output": {
           "fuses": [
             15842
           ],
           "values": {
-            "fast": 0,
-            "slow": 1
+            "on": 0,
+            "off": 1
           }
         },
         "open_collector": {
@@ -5718,8 +6852,8 @@
             15843
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "pull_up": {
@@ -5727,8 +6861,8 @@
             15840
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "schmitt_trigger": {
@@ -5736,8 +6870,8 @@
             15844
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
           }
         },
         "bus_keeper": {
@@ -5745,8 +6879,17 @@
             15841
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15863
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "ff_type": {
@@ -5755,18 +6898,9 @@
             15864
           ],
           "values": {
+            "latch": 0,
             "dff": 1,
-            "tff": 3,
-            "latch": 0
-          }
-        },
-        "async_reset": {
-          "fuses": [
-            15854
-          ],
-          "values": {
-            "pt": 1,
-            "gclear": 0
+            "tff": 3
           }
         },
         "global_clock": {
@@ -5775,18 +6909,36 @@
             15855
           ],
           "values": {
-            "gclk1": 3,
             "gclk2": 0,
-            "gclk3": 1
+            "gclk3": 1,
+            "gclk1": 3
           }
         },
-        "invert_output": {
+        "pt4_gate": {
           "fuses": [
-            15863
+            15862
           ],
           "values": {
-            "on": 1,
-            "off": 0
+            "off": 0,
+            "on": 1
+          }
+        },
+        "pt4_func": {
+          "fuses": [
+            15856
+          ],
+          "values": {
+            "clock_enable": 0,
+            "clock": 1
+          }
+        },
+        "async_reset": {
+          "fuses": [
+            15854
+          ],
+          "values": {
+            "gclr": 0,
+            "pt3": 1
           }
         },
         "pt5_func": {
@@ -5794,8 +6946,8 @@
             15853
           ],
           "values": {
-            "async_set": 1,
-            "output_enable": 0
+            "output_enable": 0,
+            "async_set": 1
           }
         }
       }

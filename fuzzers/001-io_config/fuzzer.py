@@ -23,22 +23,22 @@ with database.transact() as db:
                 f_pk   = run(pin_keep="O")
 
             macrocell.update({
-                "slew_rate":
-                    bitdiff.describe(1, {"fast": f_fast, "slow": f_out}),
+                "fast_output":
+                    bitdiff.describe(1, {"on": f_fast, "off": f_out}),
                 "open_collector":
-                    bitdiff.describe(1, {"on": f_oc, "off": f_out}),
+                    bitdiff.describe(1, {"off": f_out, "on": f_oc}),
             })
             if device_name.endswith("AS"):
                 macrocell.update({
                     "low_power":
-                        bitdiff.describe(1, {"on": f_lp, "off": f_out}),
+                        bitdiff.describe(1, {"off": f_out, "on": f_lp}),
                 })
             if device_name.endswith("BE"):
                 macrocell.update({
                     "pull_up":
-                        bitdiff.describe(1, {"on": f_pu, "off": f_out}),
+                        bitdiff.describe(1, {"off": f_out, "on": f_pu}),
                     "schmitt_trigger":
-                        bitdiff.describe(1, {"on": f_hyst, "off": f_out}),
+                        bitdiff.describe(1, {"off": f_out, "on": f_hyst}),
                     "bus_keeper":
-                        bitdiff.describe(1, {"on": f_pk, "off": f_pu}), # pk implies pu
+                        bitdiff.describe(1, {"off": f_pu, "on": f_pk}), # pk implies pu
                 })

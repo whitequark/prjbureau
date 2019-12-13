@@ -20,5 +20,5 @@ with database.transact() as db:
 
             macrocell.update({
                 "async_reset":
-                    bitdiff.describe(1, {"pt": f_dff, "gclear": f_dffar})
+                    bitdiff.describe(1, {"gclr": f_dffar, "pt3": f_dff})
             })
