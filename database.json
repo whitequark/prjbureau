@@ -119,6 +119,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15808
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC2": {
@@ -188,6 +197,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15811
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -259,6 +277,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15812
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC4": {
@@ -328,6 +355,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15815
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -399,6 +435,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15816
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC6": {
@@ -468,6 +513,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15819
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -539,6 +593,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15820
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC8": {
@@ -608,6 +671,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15823
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -679,6 +751,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15824
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC10": {
@@ -748,6 +829,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15827
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -819,6 +909,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15828
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC12": {
@@ -888,6 +987,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15831
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -959,6 +1067,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15832
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC14": {
@@ -1028,6 +1145,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15835
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1099,6 +1225,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15836
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC16": {
@@ -1168,6 +1303,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15839
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1239,6 +1383,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16288
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC18": {
@@ -1308,6 +1461,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16291
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1379,6 +1541,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16292
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC20": {
@@ -1448,6 +1619,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16295
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1519,6 +1699,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16296
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC22": {
@@ -1588,6 +1777,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16299
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1659,6 +1857,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16300
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC24": {
@@ -1728,6 +1935,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16303
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1799,6 +2015,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16304
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC26": {
@@ -1868,6 +2093,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16307
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -1939,6 +2173,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16308
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC28": {
@@ -2008,6 +2251,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16311
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -2079,6 +2331,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16312
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC30": {
@@ -2148,6 +2409,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16315
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -2219,6 +2489,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16316
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC32": {
@@ -2288,6 +2567,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16319
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       }
@@ -2493,6 +2781,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15778
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC2": {
@@ -2580,6 +2877,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15751
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -2669,6 +2975,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15724
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC4": {
@@ -2756,6 +3071,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15697
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -2845,6 +3169,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15670
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC6": {
@@ -2932,6 +3265,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15643
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3021,6 +3363,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15616
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC8": {
@@ -3108,6 +3459,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15589
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3197,6 +3557,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15562
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC10": {
@@ -3284,6 +3653,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15535
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3373,6 +3751,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15508
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC12": {
@@ -3460,6 +3847,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15481
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3549,6 +3945,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15454
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC14": {
@@ -3636,6 +4041,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15427
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3725,6 +4139,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15400
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC16": {
@@ -3812,6 +4235,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15373
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -3901,6 +4333,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16258
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC18": {
@@ -3988,6 +4429,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16231
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4077,6 +4527,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16204
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC20": {
@@ -4164,6 +4623,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16177
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4253,6 +4721,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16150
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC22": {
@@ -4340,6 +4817,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16123
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4429,6 +4915,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16096
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC24": {
@@ -4516,6 +5011,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16069
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4605,6 +5109,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            16042
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC26": {
@@ -4692,6 +5205,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            16015
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4781,6 +5303,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15988
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC28": {
@@ -4868,6 +5399,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15961
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -4957,6 +5497,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15934
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC30": {
@@ -5044,6 +5593,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15907
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       },
@@ -5133,6 +5691,15 @@
             "on": 1,
             "off": 0
           }
+        },
+        "pt5_func": {
+          "fuses": [
+            15880
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
+          }
         }
       },
       "MC32": {
@@ -5220,6 +5787,15 @@
           "values": {
             "on": 1,
             "off": 0
+          }
+        },
+        "pt5_func": {
+          "fuses": [
+            15853
+          ],
+          "values": {
+            "async_set": 1,
+            "output_enable": 0
           }
         }
       }
