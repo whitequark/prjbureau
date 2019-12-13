@@ -323,17 +323,45 @@ module DFFE(input CLK, CE, D, output reg Q);
     if(CE) Q <= D;
 endmodule
 
-// TODO: DFFAR
-// TODO: DFFAS
-// TODO: DFFARS
-// TODO: DFFEARS
+(* blackbox *)
+module DFFAR(input CLK, AR, D, output reg Q);
+  always @(posedge CLK, posedge AR)
+    if(AR) Q <= 1'b0;
+    else Q <= D;
+endmodule
+
+(* blackbox *)
+module DFFAS(input CLK, AS, D, output reg Q);
+  always @(posedge CLK, posedge AS)
+    if(AS) Q <= 1'b1;
+    else Q <= D;
+endmodule
+
+(* blackbox *)
+module DFFARS(input CLK, AR, AS, D, output reg Q);
+  always @(posedge CLK, posedge AR, posedge AS)
+    if(AR) Q <= 1'b0;
+    else if(AS) Q <= 1'b1;
+    else Q <= D;
+endmodule
+
+(* blackbox *)
+module DFFEARS(input CLK, AR, AS, CE, D, output reg Q);
+  always @(posedge CLK, posedge AR, posedge AS)
+    if(AR) Q <= 1'b0;
+    else if(AS) Q <= 1'b1;
+    else if(CE) Q <= D;
+endmodule
 
 (* blackbox *)
 module LATCH(input EN, AR, AS, CE, D, output reg Q);
   // TODO: LATCH
 endmodule
 
-// TODO: JKFFEARS
+(* blackbox *)
+module JKFFEARS(input CLK, /*!*/AR, /*!*/AS, CE, J, K, output reg Q);
+  // TODO: JKFFEARS
+endmodule
 
 (* blackbox *)
 module TFF(input CLK, T, output reg Q);
@@ -347,10 +375,35 @@ module TFFE(input CLK, CE, T, output reg Q);
     if(CE) Q <= Q ^ T;
 endmodule
 
-// TODO: TFFAR
-// TODO: TFFAS
-// TODO: TFFARS
-// TODO: TFFEARS
+(* blackbox *)
+module TFFAR(input CLK, AR, T, output reg Q);
+  always @(posedge CLK, posedge AR)
+    if(AR) Q <= 1'b0;
+    else Q <= Q ^ T;
+endmodule
+
+(* blackbox *)
+module TFFAS(input CLK, AS, T, output reg Q);
+  always @(posedge CLK, posedge AS)
+    if(AS) Q <= 1'b1;
+    else Q <= Q ^ T;
+endmodule
+
+(* blackbox *)
+module TFFARS(input CLK, AR, AS, T, output reg Q);
+  always @(posedge CLK, posedge AR, posedge AS)
+    if(AR) Q <= 1'b0;
+    else if(AS) Q <= 1'b1;
+    else Q <= Q ^ T;
+endmodule
+
+(* blackbox *)
+module TFFEARS(input CLK, AR, AS, CE, T, output reg Q);
+  always @(posedge CLK, posedge AR, posedge AS)
+    if(AR) Q <= 1'b0;
+    else if(AS) Q <= 1'b1;
+    else if(CE) Q <= Q ^ T;
+endmodule
 
 (* blackbox *)
 module BUFTH(input A, ENA, output Q);
