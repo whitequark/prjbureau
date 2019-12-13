@@ -1,6 +1,5 @@
 vendor/*
 work/*
-htmldoc/*
 *.edif
 *.pin
 *.tt3

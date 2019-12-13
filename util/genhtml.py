@@ -129,7 +129,7 @@ def write_block(f, device, block_name):
 
 db = database.load()
 for device_name, device in db.items():
-    html_dir = os.path.join(root_dir, "htmldoc", device_name)
+    html_dir = os.path.join(root_dir, "docs", device_name)
     os.makedirs(html_dir, exist_ok=True)
 
     for block_name in device["blocks"]:
