@@ -79,6 +79,7 @@ macrocell_options = {
     "ff_type":          "FF",
     "async_reset":      "M",
     "global_clock":     "M",
+    "invert_output":    "M",
     "slew_rate":        "IO",
     "open_collector":   "IO",
     "pull_up":          "IO",

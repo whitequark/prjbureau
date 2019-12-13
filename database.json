@@ -110,6 +110,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15409
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC2": {
@@ -170,6 +179,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -232,6 +250,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15413
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC4": {
@@ -292,6 +319,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15414
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -354,6 +390,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15417
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC6": {
@@ -414,6 +459,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15418
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -476,6 +530,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15421
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC8": {
@@ -536,6 +599,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15422
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -598,6 +670,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15425
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC10": {
@@ -658,6 +739,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15426
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -720,6 +810,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15429
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC12": {
@@ -780,6 +879,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15430
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -842,6 +950,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15433
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC14": {
@@ -902,6 +1019,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15434
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -964,6 +1090,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC16": {
@@ -1024,6 +1159,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15438
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1086,6 +1230,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15889
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC18": {
@@ -1146,6 +1299,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1208,6 +1370,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15893
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC20": {
@@ -1268,6 +1439,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15894
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1330,6 +1510,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15897
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC22": {
@@ -1390,6 +1579,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15898
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1452,6 +1650,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15901
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC24": {
@@ -1512,6 +1719,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15902
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1574,6 +1790,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15905
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC26": {
@@ -1634,6 +1859,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15906
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1696,6 +1930,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15909
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC28": {
@@ -1756,6 +1999,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15910
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1818,6 +2070,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15913
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC30": {
@@ -1878,6 +2139,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15914
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -1940,6 +2210,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC32": {
@@ -2000,6 +2279,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 2
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15918
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       }
@@ -2196,6 +2484,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15788
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC2": {
@@ -2274,6 +2571,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15761
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -2354,6 +2660,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC4": {
@@ -2432,6 +2747,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15707
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -2512,6 +2836,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15680
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC6": {
@@ -2590,6 +2923,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15653
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -2670,6 +3012,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15626
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC8": {
@@ -2748,6 +3099,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15599
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -2828,6 +3188,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15572
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC10": {
@@ -2906,6 +3275,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15545
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -2986,6 +3364,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15518
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC12": {
@@ -3064,6 +3451,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15491
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3144,6 +3540,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15464
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC14": {
@@ -3222,6 +3627,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3302,6 +3716,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC16": {
@@ -3380,6 +3803,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15383
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3460,6 +3892,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            16268
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC18": {
@@ -3538,6 +3979,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16241
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3618,6 +4068,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC20": {
@@ -3696,6 +4155,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16187
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3776,6 +4244,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            16160
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC22": {
@@ -3854,6 +4331,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16133
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -3934,6 +4420,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            16106
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC24": {
@@ -4012,6 +4507,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16079
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -4092,6 +4596,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            16052
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC26": {
@@ -4170,6 +4683,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            16025
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -4250,6 +4772,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15998
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC28": {
@@ -4328,6 +4859,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15971
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -4408,6 +4948,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15944
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC30": {
@@ -4486,6 +5035,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       },
@@ -4566,6 +5124,15 @@
             "gclk2": 0,
             "gclk3": 1
           }
+        },
+        "invert_output": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
+          }
         }
       },
       "MC32": {
@@ -4644,6 +5211,15 @@
             "gclk1": 3,
             "gclk2": 0,
             "gclk3": 1
+          }
+        },
+        "invert_output": {
+          "fuses": [
+            15863
+          ],
+          "values": {
+            "on": 1,
+            "off": 0
           }
         }
       }

@@ -1,343 +1,401 @@
-(* blackbox *)
 module BUF(input A, output Q);
   assign Q = A;
 endmodule
 
-(* blackbox *)
 module OUTBUF(input A, output Q);
   assign Q = A;
 endmodule
 
-(* blackbox *)
 module INBUF(input A, output Q);
   assign Q = A;
 endmodule
 
-(* blackbox *)
 module IBUF(input A, output Q);
   assign Q = A;
 endmodule
 
-// (* blackbox *)
 // module NOT(input A, output QN);
 //   assign QN = A;
 // endmodule
 
-(* blackbox *)
 module INV(input A, output QN);
   assign QN = A;
 endmodule
 
-(* blackbox *)
 module XOR(input A, B, output Q);
   assign Q = A ^ B;
 endmodule
 
-(* blackbox *)
 module XOR2(input A, B, output Q);
   assign Q = A ^ B;
 endmodule
 
-(* blackbox *)
 module AND2(input A, B, output Q);
   assign Q = A & B;
 endmodule
 
-(* blackbox *)
 module AND3(input A, B, C, output Q);
   assign Q = A & B & C;
 endmodule
 
-(* blackbox *)
 module AND4(input A, B, C, D, output Q);
   assign Q = A & B & C & D;
 endmodule
 
-(* blackbox *)
 module AND5(input A, B, C, D, E, output Q);
   assign Q = A & B & C & D & E;
 endmodule
 
-(* blackbox *)
 module AND6(input A, B, C, D, E, F, output Q);
   assign Q = A & B & C & D & E & F;
 endmodule
 
-(* blackbox *)
 module AND7(input A, B, C, D, E, F, G, output Q);
   assign Q = A & B & C & D & E & F & G;
 endmodule
 
-(* blackbox *)
 module AND8(input A, B, C, D, E, F, G, H, output Q);
   assign Q = A & B & C & D & E & F & G & H;
 endmodule
 
-(* blackbox *)
 module AND9(input A, B, C, D, E, F, G, H, I, output Q);
   assign Q = A & B & C & D & E & F & G & H & I;
 endmodule
 
-(* blackbox *)
 module AND10(input A, B, C, D, E, F, G, H, I, J, output Q);
   assign Q = A & B & C & D & E & F & G & H & I & J;
 endmodule
 
-(* blackbox *)
 module AND11(input A, B, C, D, E, F, G, H, I, J, K, output Q);
   assign Q = A & B & C & D & E & F & G & H & I & J & K;
 endmodule
 
-(* blackbox *)
 module AND12(input A, B, C, D, E, F, G, H, I, J, K, L, output Q);
   assign Q = A & B & C & D & E & F & G & H & I & J & K & L;
 endmodule
 
-// TODO: AND2I1
-// TODO: AND2I2
-// TODO: AND3I1
-// TODO: AND3I2
-// TODO: AND3I3
-// TODO: AND4I1
-// TODO: AND4I2
-// TODO: AND4I3
-// TODO: AND4I4
-
-(* blackbox *)
-module NAND2(input A, B, output Q);
-  assign Q = ~(A & B);
+module AND2I1(input A, BN, output Q);
+  assign Q = A & ~BN;
 endmodule
 
-(* blackbox *)
-module NAND3(input A, B, C, output Q);
-  assign Q = ~(A & B & C);
+module AND2I2(input AN, BN, output Q);
+  assign Q = ~AN & ~BN;
 endmodule
 
-(* blackbox *)
-module NAND4(input A, B, C, D, output Q);
-  assign Q = ~(A & B & C & D);
+module AND3I1(input A, B, CN, output Q);
+  assign Q = A & B & ~CN;
 endmodule
 
-(* blackbox *)
-module NAND5(input A, B, C, D, E, output Q);
-  assign Q = ~(A & B & C & D & E);
+module AND3I2(input A, BN, CN, output Q);
+  assign Q = A & ~BN & ~CN;
 endmodule
 
-(* blackbox *)
-module NAND6(input A, B, C, D, E, F, output Q);
-  assign Q = ~(A & B & C & D & E & F);
+module AND3I3(input AN, BN, CN, output Q);
+  assign Q = ~AN & ~BN & ~CN;
 endmodule
 
-(* blackbox *)
-module NAND7(input A, B, C, D, E, F, G, output Q);
-  assign Q = ~(A & B & C & D & E & F & G);
+module AND4I1(input A, B, C, DN, output Q);
+  assign Q = A & B & C & ~DN;
 endmodule
 
-(* blackbox *)
-module NAND8(input A, B, C, D, E, F, G, H, output Q);
-  assign Q = ~(A & B & C & D & E & F & G & H);
+module AND4I2(input A, B, CN, DN, output Q);
+  assign Q = A & B & ~CN & ~DN;
 endmodule
 
-(* blackbox *)
-module NAND9(input A, B, C, D, E, F, G, H, I, output Q);
-  assign Q = ~(A & B & C & D & E & F & G & H & I);
+module AND4I3(input A, BN, CN, DN, output Q);
+  assign Q = A & ~BN & ~CN & ~DN;
 endmodule
 
-(* blackbox *)
-module NAND10(input A, B, C, D, E, F, G, H, I, J, output Q);
-  assign Q = ~(A & B & C & D & E & F & G & H & I & J);
+module AND4I4(input AN, BN, CN, DN, output Q);
+  assign Q = ~AN & ~BN & ~CN & ~DN;
 endmodule
 
-(* blackbox *)
-module NAND11(input A, B, C, D, E, F, G, H, I, J, K, output Q);
-  assign Q = ~(A & B & C & D & E & F & G & H & I & J & K);
+module NAND2(input A, B, output QN);
+  assign QN = ~(A & B);
 endmodule
 
-(* blackbox *)
-module NAND12(input A, B, C, D, E, F, G, H, I, J, K, L, output Q);
-  assign Q = ~(A & B & C & D & E & F & G & H & I & J & K & L);
+module NAND3(input A, B, C, output QN);
+  assign QN = ~(A & B & C);
 endmodule
 
-// TODO: NAND2I1
-// TODO: NAND2I2
-// TODO: NAND3I1
-// TODO: NAND3I2
-// TODO: NAND3I3
-// TODO: NAND4I1
-// TODO: NAND4I2
-// TODO: NAND4I3
-// TODO: NAND4I4
+module NAND4(input A, B, C, D, output QN);
+  assign QN = ~(A & B & C & D);
+endmodule
 
-(* blackbox *)
+module NAND5(input A, B, C, D, E, output QN);
+  assign QN = ~(A & B & C & D & E);
+endmodule
+
+module NAND6(input A, B, C, D, E, F, output QN);
+  assign QN = ~(A & B & C & D & E & F);
+endmodule
+
+module NAND7(input A, B, C, D, E, F, G, output QN);
+  assign QN = ~(A & B & C & D & E & F & G);
+endmodule
+
+module NAND8(input A, B, C, D, E, F, G, H, output QN);
+  assign QN = ~(A & B & C & D & E & F & G & H);
+endmodule
+
+module NAND9(input A, B, C, D, E, F, G, H, I, output QN);
+  assign QN = ~(A & B & C & D & E & F & G & H & I);
+endmodule
+
+module NAND10(input A, B, C, D, E, F, G, H, I, J, output QN);
+  assign QN = ~(A & B & C & D & E & F & G & H & I & J);
+endmodule
+
+module NAND11(input A, B, C, D, E, F, G, H, I, J, K, output QN);
+  assign QN = ~(A & B & C & D & E & F & G & H & I & J & K);
+endmodule
+
+module NAND12(input A, B, C, D, E, F, G, H, I, J, K, L, output QN);
+  assign QN = ~(A & B & C & D & E & F & G & H & I & J & K & L);
+endmodule
+
+module NAND2I1(input A, BN, output QN);
+  assign QN = ~(A & ~BN);
+endmodule
+
+module NAND2I2(input AN, BN, output QN);
+  assign QN = ~(~AN & ~BN);
+endmodule
+
+module NAND3I1(input A, B, CN, output QN);
+  assign QN = ~(A & B & ~CN);
+endmodule
+
+module NAND3I2(input A, BN, CN, output QN);
+  assign QN = ~(A & ~BN & ~CN);
+endmodule
+
+module NAND3I3(input AN, BN, CN, output QN);
+  assign QN = ~(~AN & ~BN & ~CN);
+endmodule
+
+module NAND4I1(input A, B, C, DN, output QN);
+  assign QN = ~(A & B & C & ~DN);
+endmodule
+
+module NAND4I2(input A, B, CN, DN, output QN);
+  assign QN = ~(A & B & ~CN & ~DN);
+endmodule
+
+module NAND4I3(input A, BN, CN, DN, output QN);
+  assign QN = ~(A & ~BN & ~CN & ~DN);
+endmodule
+
+module NAND4I4(input AN, BN, CN, DN, output QN);
+  assign QN = ~(~AN & ~BN & ~CN & ~DN);
+endmodule
+
 module OR2(input A, B, output Q);
   assign Q = A | B;
 endmodule
 
-(* blackbox *)
 module OR3(input A, B, C, output Q);
   assign Q = A | B | C;
 endmodule
 
-(* blackbox *)
 module OR4(input A, B, C, D, output Q);
   assign Q = A | B | C | D;
 endmodule
 
-(* blackbox *)
 module OR5(input A, B, C, D, E, output Q);
   assign Q = A | B | C | D | E;
 endmodule
 
-(* blackbox *)
 module OR6(input A, B, C, D, E, F, output Q);
   assign Q = A | B | C | D | E | F;
 endmodule
 
-(* blackbox *)
 module OR7(input A, B, C, D, E, F, G, output Q);
   assign Q = A | B | C | D | E | F | G;
 endmodule
 
-(* blackbox *)
 module OR8(input A, B, C, D, E, F, G, H, output Q);
   assign Q = A | B | C | D | E | F | G | H;
 endmodule
 
-(* blackbox *)
 module OR9(input A, B, C, D, E, F, G, H, I, output Q);
   assign Q = A | B | C | D | E | F | G | H | I;
 endmodule
 
-(* blackbox *)
 module OR10(input A, B, C, D, E, F, G, H, I, J, output Q);
   assign Q = A | B | C | D | E | F | G | H | I | J;
 endmodule
 
-(* blackbox *)
 module OR11(input A, B, C, D, E, F, G, H, I, J, K, output Q);
   assign Q = A | B | C | D | E | F | G | H | I | J | K;
 endmodule
 
-(* blackbox *)
 module OR12(input A, B, C, D, E, F, G, H, I, J, K, L, output Q);
   assign Q = A | B | C | D | E | F | G | H | I | J | K | L;
 endmodule
 
-// TODO: OR2I1
-// TODO: OR2I2
-// TODO: OR3I1
-// TODO: OR3I2
-// TODO: OR3I3
-// TODO: OR4I1
-// TODO: OR4I2
-// TODO: OR4I3
-// TODO: OR4I4
-
-(* blackbox *)
-module NOR2(input A, B, output Q);
-  assign Q = ~(A | B);
+module OR2I1(input A, BN, output Q);
+  assign Q = A | ~BN;
 endmodule
 
-(* blackbox *)
-module NOR3(input A, B, C, output Q);
-  assign Q = ~(A | B | C);
+module OR2I2(input AN, BN, output Q);
+  assign Q = ~AN | ~BN;
 endmodule
 
-(* blackbox *)
-module NOR4(input A, B, C, D, output Q);
-  assign Q = ~(A | B | C | D);
+module OR3I1(input A, B, CN, output Q);
+  assign Q = A | B | ~CN;
 endmodule
 
-(* blackbox *)
-module NOR5(input A, B, C, D, E, output Q);
-  assign Q = ~(A | B | C | D | E);
+module OR3I2(input A, BN, CN, output Q);
+  assign Q = A | ~BN | ~CN;
 endmodule
 
-(* blackbox *)
-module NOR6(input A, B, C, D, E, F, output Q);
-  assign Q = ~(A | B | C | D | E | F);
+module OR3I3(input AN, BN, CN, output Q);
+  assign Q = ~AN | ~BN | ~CN;
 endmodule
 
-(* blackbox *)
-module NOR7(input A, B, C, D, E, F, G, output Q);
-  assign Q = ~(A | B | C | D | E | F | G);
+module OR4I1(input A, B, C, DN, output Q);
+  assign Q = A | B | C | ~DN;
 endmodule
 
-(* blackbox *)
-module NOR8(input A, B, C, D, E, F, G, H, output Q);
-  assign Q = ~(A | B | C | D | E | F | G | H);
+module OR4I2(input A, B, CN, DN, output Q);
+  assign Q = A | B | ~CN | ~DN;
 endmodule
 
-(* blackbox *)
-module NOR9(input A, B, C, D, E, F, G, H, I, output Q);
-  assign Q = ~(A | B | C | D | E | F | G | H | I);
+module OR4I3(input A, BN, CN, DN, output Q);
+  assign Q = A | ~BN | ~CN | ~DN;
 endmodule
 
-(* blackbox *)
-module NOR10(input A, B, C, D, E, F, G, H, I, J, output Q);
-  assign Q = ~(A | B | C | D | E | F | G | H | I | J);
+module OR4I4(input AN, BN, CN, DN, output Q);
+  assign Q = ~AN | ~BN | ~CN | ~DN;
 endmodule
 
-(* blackbox *)
-module NOR11(input A, B, C, D, E, F, G, H, I, J, K, output Q);
-  assign Q = ~(A | B | C | D | E | F | G | H | I | J | K);
+module NOR2(input A, B, output QN);
+  assign NQ = ~(A | B);
 endmodule
 
-(* blackbox *)
-module NOR12(input A, B, C, D, E, F, G, H, I, J, K, L, output Q);
-  assign Q = ~(A | B | C | D | E | F | G | H | I | J | K | L);
+module NOR3(input A, B, C, output QN);
+  assign NQ = ~(A | B | C);
 endmodule
 
-// TODO: NOR2I1
-// TODO: NOR2I2
-// TODO: NOR3I1
-// TODO: NOR3I2
-// TODO: NOR3I3
-// TODO: NOR4I1
-// TODO: NOR4I2
-// TODO: NOR4I3
-// TODO: NOR4I4
+module NOR4(input A, B, C, D, output QN);
+  assign NQ = ~(A | B | C | D);
+endmodule
 
-(* blackbox *)
+module NOR5(input A, B, C, D, E, output QN);
+  assign NQ = ~(A | B | C | D | E);
+endmodule
+
+module NOR6(input A, B, C, D, E, F, output QN);
+  assign NQ = ~(A | B | C | D | E | F);
+endmodule
+
+module NOR7(input A, B, C, D, E, F, G, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G);
+endmodule
+
+module NOR8(input A, B, C, D, E, F, G, H, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G | H);
+endmodule
+
+module NOR9(input A, B, C, D, E, F, G, H, I, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G | H | I);
+endmodule
+
+module NOR10(input A, B, C, D, E, F, G, H, I, J, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G | H | I | J);
+endmodule
+
+module NOR11(input A, B, C, D, E, F, G, H, I, J, K, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G | H | I | J | K);
+endmodule
+
+module NOR12(input A, B, C, D, E, F, G, H, I, J, K, L, output QN);
+  assign NQ = ~(A | B | C | D | E | F | G | H | I | J | K | L);
+endmodule
+
+module NOR2I1(input A, BN, output Q);
+  assign Q = ~(A | ~BN);
+endmodule
+
+module NOR2I2(input AN, BN, output Q);
+  assign Q = ~(~AN | ~BN);
+endmodule
+
+module NOR3I1(input A, B, CN, output Q);
+  assign Q = ~(A | B | ~CN);
+endmodule
+
+module NOR3I2(input A, BN, CN, output Q);
+  assign Q = ~(A | ~BN | ~CN);
+endmodule
+
+module NOR3I3(input AN, BN, CN, output Q);
+  assign Q = ~(~AN | ~BN | ~CN);
+endmodule
+
+module NOR4I1(input A, B, C, DN, output Q);
+  assign Q = ~(A | B | C | ~DN);
+endmodule
+
+module NOR4I2(input A, B, CN, DN, output Q);
+  assign Q = ~(A | B | ~CN | ~DN);
+endmodule
+
+module NOR4I3(input A, BN, CN, DN, output Q);
+  assign Q = ~(A | ~BN | ~CN | ~DN);
+endmodule
+
+module NOR4I4(input AN, BN, CN, DN, output Q);
+  assign Q = ~(~AN | ~BN | ~CN | ~DN);
+endmodule
+
 module MUX2(input S0, M0, M1, output Q);
   assign Q = S0 ? M1 : M0;
 endmodule
 
-// TODO: MUX4
-// TODO: MUX8
+module MUX4(input S0, S1, M0, M1, M2, M3, output Q);
+  wire M10 = S0 ? M1 : M0;
+  wire M32 = S0 ? M3 : M2;
+  assign Q = S1 ? M32 : M10;
+endmodule
 
-(* blackbox *)
+module MUX8(input S0, S1, S2, M0, M1, M2, M3, M4, M5, M6, M7, output Q);
+  wire M10 = S0 ? M1 : M0;
+  wire M32 = S0 ? M3 : M2;
+  wire M54 = S0 ? M5 : M4;
+  wire M76 = S0 ? M7 : M6;
+  wire M3210 = S1 ? M32 : M10;
+  wire M7654 = S1 ? M76 : M54;
+  assign Q = S2 ? M7654 : M3210;
+endmodule
+
 module XNOR2(input A, B, output Q);
   assign Q = ~(A ^ B);
 endmodule
 
-(* blackbox *)
 module DFF(input CLK, D, output reg Q);
   always @(posedge CLK)
     Q <= D;
 endmodule
 
-(* blackbox *)
 module DFFE(input CLK, CE, D, output reg Q);
   always @(posedge CLK)
     if(CE) Q <= D;
 endmodule
 
-(* blackbox *)
 module DFFAR(input CLK, AR, D, output reg Q);
   always @(posedge CLK, posedge AR)
     if(AR) Q <= 1'b0;
     else Q <= D;
 endmodule
 
-(* blackbox *)
 module DFFAS(input CLK, AS, D, output reg Q);
   always @(posedge CLK, posedge AS)
     if(AS) Q <= 1'b1;
     else Q <= D;
 endmodule
 
-(* blackbox *)
 module DFFARS(input CLK, AR, AS, D, output reg Q);
   always @(posedge CLK, posedge AR, posedge AS)
     if(AR) Q <= 1'b0;
@@ -345,7 +403,6 @@ module DFFARS(input CLK, AR, AS, D, output reg Q);
     else Q <= D;
 endmodule
 
-(* blackbox *)
 module DFFEARS(input CLK, AR, AS, CE, D, output reg Q);
   always @(posedge CLK, posedge AR, posedge AS)
     if(AR) Q <= 1'b0;
@@ -353,43 +410,36 @@ module DFFEARS(input CLK, AR, AS, CE, D, output reg Q);
     else if(CE) Q <= D;
 endmodule
 
-(* blackbox *)
 module LATCH(input EN, AR, AS, CE, D, output reg Q);
   // TODO: LATCH
 endmodule
 
-(* blackbox *)
 module JKFFEARS(input CLK, /*!*/AR, /*!*/AS, CE, J, K, output reg Q);
   // TODO: JKFFEARS
 endmodule
 
-(* blackbox *)
 module TFF(input CLK, T, output reg Q);
   always @(posedge CLK)
     Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module TFFE(input CLK, CE, T, output reg Q);
   always @(posedge CLK)
     if(CE) Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module TFFAR(input CLK, AR, T, output reg Q);
   always @(posedge CLK, posedge AR)
     if(AR) Q <= 1'b0;
     else Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module TFFAS(input CLK, AS, T, output reg Q);
   always @(posedge CLK, posedge AS)
     if(AS) Q <= 1'b1;
     else Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module TFFARS(input CLK, AR, AS, T, output reg Q);
   always @(posedge CLK, posedge AR, posedge AS)
     if(AR) Q <= 1'b0;
@@ -397,7 +447,6 @@ module TFFARS(input CLK, AR, AS, T, output reg Q);
     else Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module TFFEARS(input CLK, AR, AS, CE, T, output reg Q);
   always @(posedge CLK, posedge AR, posedge AS)
     if(AR) Q <= 1'b0;
@@ -405,17 +454,14 @@ module TFFEARS(input CLK, AR, AS, CE, T, output reg Q);
     else if(CE) Q <= Q ^ T;
 endmodule
 
-(* blackbox *)
 module BUFTH(input A, ENA, output Q);
   assign Q = ENA ? A : 1'bz;
 endmodule
 
-(* blackbox *)
 module TRI(input A, ENA, output Q);
   assign Q = ENA ? A : 1'bz;
 endmodule
 
-(* blackbox *)
 module BIBUF(input A, EN, output Q, inout PAD);
   assign PAD = EN ? A : 1'bz;
   assign Q = PAD;

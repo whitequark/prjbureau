@@ -22,10 +22,11 @@ def run(verilog, pins, device, *, strategy={}, options=[], name="work"):
 
     with open(os.path.join(work_dir, f"{name}.v"), "w") as f:
         f.write(verilog)
-    with open(os.path.join(work_dir, f"{name}.pin"), "w") as f:
-        f.write(f"CHIP \"{name}\" ASSIGNED TO AN {package}\n")
-        for net, pin in pins.items():
-            f.write(f"{net} : {pin}\n")
+    if pins is not None:
+        with open(os.path.join(work_dir, f"{name}.pin"), "w") as f:
+            f.write(f"CHIP \"{name}\" ASSIGNED TO AN {package}\n")
+            for net, pin in pins.items():
+                f.write(f"{net} : {pin}\n")
 
     subprocess.check_call([
         "yosys",
