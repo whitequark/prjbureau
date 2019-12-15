@@ -15,10 +15,9 @@ with database.transact() as db:
                     f"{device_name}-{package}")
 
             f_dff   = run("DFF   x(.CLK(CLK), .D(1'b0), .Q(Q))")
-            f_tff   = run("TFF   x(.CLK(CLK), .T(1'b0), .Q(Q))")
             f_latch = run("LATCH x(.EN(CLK),  .D(1'b0), .Q(Q))")
 
             macrocell.update({
-                "ff_type":
-                    bitdiff.describe(2, {"latch": f_latch, "dff": f_dff, "tff": f_tff})
+                "storage":
+                    bitdiff.describe(1, {"latch": f_latch, "ff": f_dff})
             })

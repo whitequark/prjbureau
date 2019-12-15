@@ -31,10 +31,14 @@ def write_bitmap(f, columns, rows, bitmap, base):
     offset = base
     for row in rows:
         f.write(f"<tr>\n")
-        for row_name, width in row:
-            f.write(f"<td align='right'>{row_name}</td>\n")
+        for chunk_index, (chunk_name, width) in enumerate(row):
+            if chunk_index == 0:
+                name_align = "right"
+            else:
+                name_align = "center"
+            f.write(f"<td align='{name_align}'>{chunk_name}</td>\n")
             for _ in range(width):
-                sigil = bitmap.get(offset, "1" if not row_name else "?")
+                sigil = bitmap.get(offset, "1" if not chunk_name else "?")
                 fgcolor, bgcolor = {
                     "?": ("#666", "#aaa"), # unfuzzed
                     "!": ("#fff", "#f00"), # conflict
@@ -76,7 +80,9 @@ def write_option(f, option_name, option, base):
 
 
 macrocell_options = {
-    "ff_type":          "FF",
+    "xor_a_func":       "M",
+    "xor_a_invert":     "M",
+    "storage":          "FF",
     "global_clock":     "M",
     "pt4_gate":         "M",
     "pt4_func":         "M",
@@ -94,17 +100,34 @@ macrocell_options = {
 
 macrocell_bitmap_layout = {
     "ATF1502AS": (
-        (16,16), [
-            [("",16)],[("S16",16),("S12",16)],[("S14",16),("S11",16)],
-            [("",16)],[("S9", 16),("S6", 16)],[("S13",16),("S10",16)],
-            [("",16)],[("S20",16),("S18",16)],[("S8", 16),("S21",16)],
-            [("",16)],[("S7", 16),("S19",16)],[("S22",16),("S5", 16)],
-            [("",16)],[("S23",16),("S4", 16)],[("S3", 16),("S15",16)],
-            [("",16)],[("S0", 16),("S1", 16)],[("S17",16),("S2", 16)],
+        (32,), [
+            # The configuration bits come in pairs, and every other pair is mirrored. The entire
+            # configuration array is also a pair of halves, which are also mirrored; every
+            # macrocell's configuration bits come from alternate halves on alternate rows.
+            # Using `-str debug on` option makes the fitter print bits S0..S23 in order.
+            [("",16)],
+            [("S16/S12",32)],
+            [("S14/S11",32)],
+            [("",16)],
+            [("S9/S6",  32)],
+            [("S13/S10",32)],
+            [("",16)],
+            [("S20/S18",32)],
+            [("S8/S21", 32)],
+            [("",16)],
+            [("S7/S19", 32)],
+            [("S22/S5", 32)],
+            [("",16)],
+            [("S23/S4", 32)],
+            [("S3/S15", 32)],
+            [("",16)],
+            [("S0/S1",  32)],
+            [("S17/S2", 32)],
         ]
     ),
     "ATF1502BE": (
         (27,), [
+            # The configuration bits are arranged in a straightforward array.
             *[[(f"MC+{1+n}",27)] for n in range(16)[::-1]],
             [("",48)],
         ]
