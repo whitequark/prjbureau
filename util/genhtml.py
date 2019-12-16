@@ -89,7 +89,7 @@ macrocell_options = {
     "async_reset":      "M",
     "pt5_func":         "M",
     "invert_output":    "M",
-    "slew_rate":        "IO",
+    "fast_output":      "IO",
     "open_collector":   "IO",
     "pull_up":          "IO",
     "schmitt_trigger":  "IO",
