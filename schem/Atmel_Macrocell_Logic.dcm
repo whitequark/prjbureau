@@ -1,0 +1,97 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 6OR
+D 6 Input OR
+$ENDCMP
+#
+$CMP AND1
+D 1 Input AND
+$ENDCMP
+#
+$CMP Arrow
+D Signal direction guide
+$ENDCMP
+#
+$CMP BUF
+D Non-Inverting Buffer
+$ENDCMP
+#
+$CMP BUF_Schmitt
+D Schmitt Trigger Buffer
+$ENDCMP
+#
+$CMP BUF_Tristate
+D Tristate Non-Inverting Buffer
+$ENDCMP
+#
+$CMP BUF_Tristate_Config
+D Tristate Non-Inverting Buffer, EEPROM Configurable
+$ENDCMP
+#
+$CMP CBUF
+D Complementary Buffer
+$ENDCMP
+#
+$CMP DEMUX2_Config
+D 2:1 Demultiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP DFF_DLatch_Config
+D D Flip Flop/D Latch with Enable and Asynchronous Set and Reset, EEPROM Configurable
+$ENDCMP
+#
+$CMP Dummy
+D Wire terminator
+$ENDCMP
+#
+$CMP GND
+D Power symbol creates a global label with name "GNDD" , digital ground
+K power-flag
+$ENDCMP
+#
+$CMP Junction_Config
+D Junction, EEPROM Configurable
+$ENDCMP
+#
+$CMP MUX2_Config
+D 2:1 Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP MUX3_Config
+D 3:1 Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP MUX4_Config
+D 4:1 Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP MUX5_Config
+D 5:1 Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP MUX6_Config
+D 6:1 Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP NBUF
+D Inverting Buffer
+$ENDCMP
+#
+$CMP OR2
+D 2 Input OR
+$ENDCMP
+#
+$CMP PNMUX2_Config
+D Polarity Multiplexer, EEPROM Configurable
+$ENDCMP
+#
+$CMP VCC
+D Power symbol creates a global label with name "VBUS"
+K power-flag
+$ENDCMP
+#
+$CMP XOR2
+D 2 Input XOR
+$ENDCMP
+#
+#End Doc Library

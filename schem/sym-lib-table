@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Atmel_Macrocell_Logic")(type "Legacy")(uri "${KIPRJMOD}/Atmel_Macrocell_Logic.lib")(options "")(descr ""))
+)
