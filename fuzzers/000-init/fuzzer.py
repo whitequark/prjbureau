@@ -33,10 +33,10 @@ def pins(Mn, C1, E1, R, C2):
             for mi, pin in enumerate(Mn.split())
         },
         **{
-            "C1": "37",
-            "E1": "38",
-            "R":  "39",
-            "C2": "40",
+            "C1": C1,
+            "E1": E1,
+            "R":  R,
+            "C2": C2,
         }
     }
 
