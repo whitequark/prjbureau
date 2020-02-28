@@ -23,7 +23,7 @@ with database.transact() as db:
 
             # This case is a bit complicated: the hardware implements a function like:
             #
-            #     case (S22, S12)
+            #     case (S5, S12)
             #         0, 0: CLK = GCLKn; CE  = 1;
             #         0, 1: CLK = GCLKn; CE  = PT4;
             #         1, 0: CLK = 1;     CE  = 1;
@@ -35,7 +35,7 @@ with database.transact() as db:
             #     case (S12)
             #         0: pt4mux = 1;
             #         1: pt4mux = PT4;
-            #     case (S22)
+            #     case (S5)
             #         0: CLK = GCLKn;  CE = pt4mux;
             #         1: CLK = pt4mux; CE = 1;
             #
