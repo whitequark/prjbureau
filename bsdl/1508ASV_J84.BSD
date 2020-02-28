@@ -1,0 +1,907 @@
+-- File Name            : 1508ASV_J84.BSD
+-- Created by           : Atmel Corporation
+-- Documentation        : ATF15xx Family BSDL
+-- BSDL Revision        : 1.0
+--
+-- Note                 : Some lines in this BSDL file are 
+--                        longer than 80 characters. Adjust to
+--                        word wrap width on your text editor
+--                        accordingly to prevent possible 
+--                        compile errors.
+--
+-- BSDL Status          : Preliminary
+-- Date created         : 07/02/02
+-- Device               : ATF1508ASV/ASVL
+-- Package              : 84-pin Plastic J-Leaded Chip Carrier (PLCC)
+--
+-- *********************************************************************
+-- *                         IMPORTANT NOTICE                          *
+-- *                                                                   *
+-- *   Copyright 2001,2002 Atmel Corporation. All Rights Reserved.     *
+-- *                                                                   *
+-- *   Atmel assumes no responsibility or liability arising out of     *
+-- *   this application or use of any information described herein     *
+-- *   except as expressly agreed to in writing by Atmel Corporation.  *
+-- *                                                                   *
+-- *********************************************************************
+--
+-- Revision History	:
+-- 
+-- Rev 1.0 (07/02/02) 	- Initial version.
+-- 
+entity F1508ASV_J84 is
+generic (PHYSICAL_PIN_MAP : string := "PLCC84");
+
+port (
+--I/O Pins
+IO4    , IO5    , IO6    , IO8    , IO9    , IO10   , IO11   , 
+IO12   , IO15   , IO16   , IO17   , IO18   , IO20   , IO21   , 
+IO22   , IO24   , IO25   , IO27   , IO28   , IO29   , IO30   , 
+IO31   , IO33   , IO34   , IO35   , IO36   , IO37   , IO39   , 
+IO40   , IO41   , IO44   , IO45   , IO46   , IO48   , IO49   , 
+IO50   , IO51   , IO52   , IO54   , IO55   , IO56   , IO57   , 
+IO58   , IO60   , IO61   , IO63   , IO64   , IO65   , IO67   , 
+IO68   , IO69   , IO70   , IO73   , IO74   , IO75   , IO76   , 
+IO77   , IO79   , IO80   , IO81   : inout bit;
+--Dedicated Input Pins
+IN1    , IN2    , IN83   , IN84   : in bit;
+--JTAG Ports
+TCK    , TMS    , TDI    : in bit;
+TDO    : out bit;
+--Power Pins
+VCC    : linkage bit_vector (1 to 8);
+--Ground Pins
+GND    : linkage bit_vector (1 to 8)
+);
+
+use STD_1149_1_1994.all;
+attribute COMPONENT_CONFORMANCE of F1508ASV_J84 :
+	entity is "STD_1149_1_1993";
+
+attribute PIN_MAP of F1508ASV_J84 : entity is PHYSICAL_PIN_MAP;
+constant PLCC84 : PIN_MAP_STRING :=
+--I/O Pins
+"IO4    : 4   , IO5    : 5   , IO6    : 6   , IO8    : 8   , "&
+"IO9    : 9   , IO10   : 10  , IO11   : 11  , IO12   : 12  , "&
+"IO15   : 15  , IO16   : 16  , IO17   : 17  , IO18   : 18  , "&
+"IO20   : 20  , IO21   : 21  , IO22   : 22  , IO24   : 24  , "&
+"IO25   : 25  , IO27   : 27  , IO28   : 28  , IO29   : 29  , "&
+"IO30   : 30  , IO31   : 31  , IO33   : 33  , IO34   : 34  , "&
+"IO35   : 35  , IO36   : 36  , IO37   : 37  , IO39   : 39  , "&
+"IO40   : 40  , IO41   : 41  , IO44   : 44  , IO45   : 45  , "&
+"IO46   : 46  , IO48   : 48  , IO49   : 49  , IO50   : 50  , "&
+"IO51   : 51  , IO52   : 52  , IO54   : 54  , IO55   : 55  , "&
+"IO56   : 56  , IO57   : 57  , IO58   : 58  , IO60   : 60  , "&
+"IO61   : 61  , IO63   : 63  , IO64   : 64  , IO65   : 65  , "&
+"IO67   : 67  , IO68   : 68  , IO69   : 69  , IO70   : 70  , "&
+"IO73   : 73  , IO74   : 74  , IO75   : 75  , IO76   : 76  , "&
+"IO77   : 77  , IO79   : 79  , IO80   : 80  , IO81   : 81  , "&
+--Dedicated Input Pins
+"IN1    : 1   , IN2    : 2   , IN83   : 83  , IN84   : 84  , "&
+--JTAG ports
+"TCK    : 62  , TMS    : 23  , TDI    : 14  , TDO    : 71  , "&
+--Power Pins
+"VCC    : (3   , 13  , 26  , 38  , 43  , 53  , 66  , 78  ), "&
+--Ground Pins
+"GND    : (7   , 19  , 32  , 42  , 47  , 59  , 72  , 82  )";
+
+attribute TAP_SCAN_IN of TDI    :signal is true;
+attribute TAP_SCAN_MODE of TMS  :signal is true;
+attribute TAP_SCAN_OUT of TDO   :signal is true;
+attribute TAP_SCAN_CLOCK of TCK :signal is (10.00e6,BOTH);
+
+attribute INSTRUCTION_LENGTH of F1508ASV_J84  :entity is 10;
+attribute INSTRUCTION_OPCODE of F1508ASV_J84  :entity is
+"EXTEST (0000000000),"&
+"BYPASS (1111111111),"&
+"SAMPLE (0001010101),"&
+"IDCODE (0001011001)";
+
+attribute INSTRUCTION_CAPTURE of F1508ASV_J84 :entity is "0001011001";
+
+attribute IDCODE_REGISTER of F1508ASV_J84       :entity is
+"0000000101010001100X000000111111";  -- 0151803F or 0151903F
+
+attribute BOUNDARY_LENGTH of F1508ASV_J84 :entity is 352;
+attribute BOUNDARY_REGISTER of F1508ASV_J84 :entity is
+--Input, GOE1
+"0    (BC_4,IN84,input,X),"&
+ 
+--Input, GCLK1
+"1    (BC_4,IN83,input,X),"&
+
+--Input, pin81 MC128
+"2    (BC_4,IO81,input,X),"&
+
+--Input, pin80 MC126
+"3    (BC_4,IO80,input,X),"&
+
+--Input, pin79 MC125
+"4    (BC_4,IO79,input,X),"&
+
+--Internal, MC124
+"5    (BC_4, * ,internal, X),"&
+
+--Input, pin77 MC123
+"6    (BC_4,IO77,input,X),"&
+
+--Internal, MC121
+"7    (BC_4, * ,internal, X),"&
+
+--Input, pin76, MC120
+"8    (BC_4,IO76,input,X),"&
+
+--Input, pin75, MC118
+"9    (BC_4,IO75,input,X),"&
+
+--Input, pin74 MC117
+"10   (BC_4,IO74,input,X),"&
+
+--Internal, MC116
+"11   (BC_4, * ,internal,X),"&
+
+--Input, pin73, MC115
+"12   (BC_4,IO73,input,X),"&
+
+--Internal, MC113
+"13   (BC_4, * ,internal,X),"&
+
+--Internal, MC110
+"14   (BC_4, * ,internal,X),"&
+
+--Input, pin70 MC109
+"15   (BC_4,IO70,input,X),"&
+
+--Internal, MC108
+"16   (BC_4, * ,internal,X),"&
+
+--Input, pin69 MC107
+"17   (BC_4,IO69,input,X),"&
+
+--Input, pin68 MC105
+"18   (BC_4,IO68,input,X),"&
+
+--Input, pin67 MC104
+"19   (BC_4,IO67,input,X),"&
+
+--Internal, MC102
+"20   (BC_4, * ,internal,X),"&
+
+--Input, pin65 MC101
+"21   (BC_4,IO65,input,X),"&
+
+--Internal, MC100
+"22   (BC_4, * ,internal,X),"&
+
+--Input, pin64 MC99
+"23   (BC_4,IO64,input,X),"&
+
+--Input, pin63 MC97
+"24   (BC_4,IO63,input,X),"&
+
+--Input, pin61 MC94
+"25   (BC_4,IO61,input,X),"&
+
+--Input, pin60 MC93
+"26   (BC_4,IO60,input,X),"&
+
+--Internal, MC92
+"27   (BC_4, * ,internal,X),"&
+
+--Input, pin58 MC91
+"28   (BC_4,IO58,input,X),"&
+
+--Internal, MC89
+"29   (BC_4, * ,internal,X),"&
+
+--Input, pin57 MC88
+"30   (BC_4,IO57,input,X),"&
+
+--Input, pin56 MC86
+"31   (BC_4,IO56,input,X),"&
+
+--Input, pin55 MC85
+"32   (BC_4,IO55,input,X),"&
+
+--Internal, MC84
+"33   (BC_4, * ,internal,X),"&
+
+--Input, pin54 MC83
+"34   (BC_4,IO54,input,X),"&
+
+--Internal, MC81
+"35   (BC_4, * ,internal,X),"&
+
+--Input, pin52 MC80
+"36   (BC_4,IO52,input,X),"&
+
+--Internal, MC78
+"37   (BC_4, * ,internal,X),"&
+
+--Input, pin51 MC77
+"38   (BC_4,IO51,input,X),"&
+
+--Internal, MC76
+"39   (BC_4, * ,internal,X),"&
+                                          
+--Input, pin50 MC75
+"40   (BC_4,IO50,input,X),"&
+
+--Input, pin49 MC73
+"41   (BC_4,IO49,input,X),"&
+
+--Input, pin48 MC72
+"42   (BC_4,IO48,input,X),"&
+
+--Internal, MC70
+"43   (BC_4, * ,internal,X),"&
+
+--Input, pin46 MC69
+"44   (BC_4,IO46,input,X),"&
+
+--Internal, MC68
+"45   (BC_4, * ,internal,X),"&
+
+--Input, pin45 MC67
+"46   (BC_4,IO45,input,X),"&
+
+--Input, pin44 MC65
+"47   (BC_4,IO44,input,X),"&
+
+--Input, pin41 MC49
+"48   (BC_4,IO41,input,X),"&
+
+--Input, pin40 MC51
+"49   (BC_4,IO40,input,X),"&
+
+--Internal, MC52
+"50   (BC_4, * ,internal,X),"&
+
+--Input, pin39 MC53
+"51   (BC_4,IO39,input,X),"&
+
+--Internal, MC54
+"52   (BC_4, * ,internal,X),"&
+
+--Input, pin37 MC56
+"53   (BC_4,IO37,input,X),"&
+
+--Input, pin36 MC57
+"54   (BC_4,IO36,input,X),"&
+
+--Input, pin35 MC59
+"55   (BC_4,IO35,input,X),"&
+
+--Internal, MC60
+"56   (BC_4, * ,internal,X),"&
+
+--Input, pin34 MC61
+"57   (BC_4,IO34,input,X),"&
+
+--Internal, MC62
+"58   (BC_4, * ,internal,X),"&
+ 
+--Input, pin33 MC64
+"59   (BC_4,IO33,input,X),"&
+
+--Internal, MC33
+"60   (BC_4, * ,internal,X),"&
+
+--Input, pin31 MC35
+"61   (BC_4,IO31,input,X),"&
+
+--Internal, MC36
+"62   (BC_4, * ,internal,X),"&
+
+--Input, pin30 MC37
+"63   (BC_4,IO30,input,X),"&
+
+--Input, pin29 MC38
+"64   (BC_4,IO29,input,X),"&
+
+--Input, pin28 MC40
+"65   (BC_4,IO28,input,X),"&
+
+--Internal, MC41
+"66   (BC_4, * ,internal,X),"&
+
+--Input, pin27 MC43
+"67   (BC_4,IO27,input,X),"&
+
+--Internal, MC44
+"68   (BC_4, * ,internal,X),"&
+ 
+--Input, pin25 MC45
+"69   (BC_4,IO25,input,X),"&
+
+--Input, pin24 MC46
+"70   (BC_4,IO24,input,X),"&
+
+--Input, pin22 MC17
+"71   (BC_4,IO22,input,X),"&
+
+--Input, pin21 MC19
+"72   (BC_4,IO21,input,X),"&
+
+--Internal, MC20
+"73   (BC_4, * ,internal,X),"&
+
+--Input, pin20 MC21
+"74   (BC_4,IO20,input,X),"&
+
+--Internal, MC22
+"75   (BC_4, * ,internal,X),"&
+
+--Input, pin18 MC24
+"76   (BC_4,IO18,input,X),"&
+
+--Input, pin17 MC25
+"77   (BC_4,IO17,input,X),"&
+
+--Input, pin16 MC27
+"78   (BC_4,IO16,input,X),"&
+ 
+--Internal, MC28
+"79   (BC_4, * ,internal,X),"&
+
+--Input, pin15 MC29
+"80   (BC_4,IO15,input,X),"&
+
+--Internal, MC30
+"81   (BC_4, * ,internal,X),"&
+
+--Internal, MC1
+"82   (BC_4, * ,internal,X),"&
+
+--Input, pin12 MC3
+"83   (BC_4,IO12,input,X),"&
+
+--Internal, MC4
+"84   (BC_4, * ,internal,X),"&
+
+--Input, pin11 MC5
+"85   (BC_4,IO11,input,X),"&
+
+--Input, pin10 MC6
+"86   (BC_4,IO10,input,X),"&
+
+--Input, pin9 MC8
+"87   (BC_4,IO9,input,X),"&
+
+--Internal, MC9
+"88   (BC_4, * ,internal,X),"&
+ 
+--Input, pin8 MC11
+"89   (BC_4,IO8,input,X),"&
+
+--Internal, MC12
+"90   (BC_4, * ,internal,X),"&
+
+--Input, pin6 MC13
+"91   (BC_4,IO6,input,X),"&
+
+--Input, pin5 MC14
+"92   (BC_4,IO5,input,X),"&
+
+--Input, pin4 MC16
+"93   (BC_4,IO4,input,X),"&
+
+--Input, GCLK2
+"94   (BC_4,IN2,input,X),"&
+
+--Input, GCLR
+"95   (BC_4,IN1,input,X),"&
+
+--I/O, pin81 MC128
+"96   (BC_1, * ,control, 0),"&
+"97   (BC_1, IO81,output3,1,96,0,Z),"&
+
+--Internal, MC127
+"98   (BC_1, * ,internal, 0),"&
+"99   (BC_1, * ,internal, X),"&
+
+--I/O, pin80 MC126
+"100  (BC_1, * ,control, 0),"&
+"101  (BC_1, IO80,output3,1,100,0,Z),"&
+
+--I/O, pin79 MC125
+"102  (BC_1, * ,control, 0),"&
+"103  (BC_1, IO79,output3,1,102,0,Z),"&
+
+--Internal, MC124
+"104  (BC_1, * ,internal, 0),"&
+"105  (BC_1, * ,internal, X),"&
+
+--I/O, pin77 MC123
+"106  (BC_1, * ,control, 0),"&
+"107  (BC_1, IO77,output3,1,106,0,Z),"&
+
+--Internal, MC122
+"108  (BC_1, * ,internal, 0),"&
+"109  (BC_1, * ,internal, X),"&
+
+--Internal, MC121
+"110  (BC_1, * ,internal, 0),"&
+"111  (BC_1, * ,internal, X),"&
+
+--I/O, pin76 MC120
+"112  (BC_1, * ,control, 0),"&
+"113  (BC_1, IO76,output3,1,112,0,Z),"&
+
+--Internal, MC119
+"114  (BC_1, * ,internal, 0),"&
+"115  (BC_1, * ,internal, X),"&
+
+--I/O, pin75 MC118
+"116  (BC_1, * ,control, 0),"&
+"117  (BC_1, IO75,output3,1,116,0,Z),"&
+
+--I/O, pin74 MC117
+"118  (BC_1, * ,control, 0),"&
+"119  (BC_1, IO74,output3,1,118,0,Z),"&
+
+--Internal, MC116
+"120  (BC_1, * ,internal, 0),"&
+"121  (BC_1, * ,internal, X),"&
+
+--I/O, pin 73 MC115
+"122  (BC_1, * ,control, 0),"&
+"123  (BC_1, IO73,output3,1,122,0,Z),"&
+
+--Internal, MC114
+"124  (BC_1, * ,internal, 0),"&
+"125  (BC_1, * ,internal, X),"&
+
+--Internal, MC113
+"126  (BC_1, * ,internal, 0),"&
+"127  (BC_1, * ,internal, X),"&
+
+--Internal, MC112 TDO
+"128  (BC_1, * ,internal, 0),"&
+"129  (BC_1, * ,internal, X),"&
+
+--Internal, MC111
+"130  (BC_1, * ,internal, 0),"&
+"131  (BC_1, * ,internal, X),"&
+
+--Internal, MC110
+"132  (BC_1, * ,internal, 0),"&
+"133  (BC_1, * ,internal, X),"&
+
+--I/O, pin70 MC109
+"134  (BC_1, * ,control, 0),"&
+"135  (BC_1, IO70,output3,1,134,0,Z),"&
+
+--Internal, MC108
+"136  (BC_1, * ,internal, 0),"&
+"137  (BC_1, * ,internal, X),"&
+
+--I/O, pin69 MC107
+"138  (BC_1, * ,control, 0),"&
+"139  (BC_1, IO69,output3,1,138,0,Z),"&
+
+--Internal, MC106
+"140  (BC_1, * ,internal, 0),"&
+"141  (BC_1, * ,internal, X),"&
+
+--I/O, pin68 MC105
+"142  (BC_1, * ,control, 0),"&
+"143  (BC_1, IO68,output3,1,142,0,Z),"&
+
+--I/O, pin67 MC104
+"144  (BC_1, * ,control, 0),"&
+"145  (BC_1, IO67,output3,1,144,0,Z),"&
+
+--Internal, MC103
+"146  (BC_1, * ,internal, 0),"&
+"147  (BC_1, * ,internal, X),"&
+
+--Internal, MC102
+"148  (BC_1, * ,internal, 0),"&
+"149  (BC_1, * ,internal, X),"&
+
+--I/O, pin65 MC101
+"150  (BC_1, * ,control, 0),"&
+"151  (BC_1, IO65,output3,1,150,0,Z),"&
+
+--Internal, MC100
+"152  (BC_1, * ,internal, 0),"&
+"153  (BC_1, * ,internal, X),"&
+
+--I/O, pin64 MC99
+"154  (BC_1, * ,control, 0),"&
+"155  (BC_1, IO64,output3,1,154,0,Z),"&
+
+--Internal, MC98
+"156  (BC_1, * ,internal, 0),"&
+"157  (BC_1, * ,internal, X),"&
+
+--I/O, pin63 MC97
+"158  (BC_1, * ,control, 0),"&
+"159  (BC_1, IO63,output3,1,158,0,Z),"&
+
+--Internal, MC96 TCK
+"160  (BC_1, * ,internal, 0),"&
+"161  (BC_1, * ,internal, X),"&
+
+--Internal, MC95
+"162  (BC_1, * ,internal, 0),"&
+"163  (BC_1, * ,internal, X),"&
+
+--I/O, pin61 MC94
+"164  (BC_1, * ,control, 0),"&
+"165  (BC_1, IO61,output3,1,164,0,Z),"&
+
+--I/O, pin60 MC93
+"166  (BC_1, * ,control, 0),"&
+"167  (BC_1, IO60,output3,1,166,0,Z),"&
+
+--Internal, MC92
+"168  (BC_1, * ,internal, 0),"&
+"169  (BC_1, * ,internal, X),"&
+
+--I/O, pin58 MC91
+"170  (BC_1, * ,control, 0),"&
+"171  (BC_1, IO58,output3,1,170,0,Z),"&
+
+--Internal, MC90
+"172  (BC_1, * ,internal, 0),"&
+"173  (BC_1, * ,internal, X),"&
+
+--Internal, MC89
+"174  (BC_1, * ,internal, 0),"&
+"175  (BC_1, * ,internal, X),"&
+
+--I/O, pin57 MC88
+"176  (BC_1, * ,control, 0),"&
+"177  (BC_1, IO57,output3,1,176,0,Z),"&
+
+--Internal, MC87
+"178  (BC_1, * ,internal, 0),"&
+"179  (BC_1, * ,internal, X),"&
+
+--I/O, pin56 MC86
+"180  (BC_1, * ,control, 0),"&
+"181  (BC_1, IO56,output3,1,180,0,Z),"&
+
+--I/O, pin55 MC85
+"182  (BC_1, * ,control, 0),"&
+"183  (BC_1, IO55,output3,1,182,0,Z),"&
+
+--Internal, MC84
+"184  (BC_1, * ,internal, 0),"&
+"185  (BC_1, * ,internal, X),"&
+
+--I/O, pin54 MC83
+"186  (BC_1, * ,control, 0),"&
+"187  (BC_1, IO54,output3,1,186,0,Z),"&
+
+--Internal, MC82
+"188  (BC_1, * ,internal, 0),"&
+"189  (BC_1, * ,internal, X),"&
+
+--Internal, MC81
+"190  (BC_1, * ,internal, 0),"&
+"191  (BC_1, * ,internal, X),"&
+
+--I/O, pin52 MC80
+"192  (BC_1, * ,control, 0),"&
+"193  (BC_1, IO52,output3,1,192,0,Z),"&
+
+--Internal, MC79
+"194  (BC_1, * ,internal, 0),"&
+"195  (BC_1, * ,internal, X),"&
+
+--Internal, MC78
+"196  (BC_1, * ,internal, 0),"&
+"197  (BC_1, * ,internal, X),"&
+
+--I/O, pin51 MC77
+"198  (BC_1, * ,control, 0),"&
+"199  (BC_1, IO51,output3,1,198,0,Z),"&
+
+--Internal, MC76
+"200  (BC_1, * ,internal, 0),"&
+"201  (BC_1, * ,internal, X),"&
+
+--I/O, pin50 MC75
+"202  (BC_1, * ,control, 0),"&
+"203  (BC_1, IO50,output3,1,202,0,Z),"&
+
+--Internal, MC74
+"204  (BC_1, * ,internal, 0),"&
+"205  (BC_1, * ,internal, X),"&
+
+--I/O, pin49 MC73
+"206  (BC_1, * ,control, 0),"&
+"207  (BC_1, IO49,output3,1,206,0,Z),"&
+
+--I/O, pin48 MC72
+"208  (BC_1, * ,control, 0),"&
+"209  (BC_1, IO48,output3,1,208,0,Z),"&
+
+--Internal, MC71
+"210  (BC_1, * ,internal, 0),"&
+"211  (BC_1, * ,internal, X),"&
+
+--Internal, MC70
+"212  (BC_1, * ,internal, 0),"&
+"213  (BC_1, * ,internal, X),"&
+
+--I/O, pin46 MC69
+"214  (BC_1, * ,control, 0),"&
+"215  (BC_1, IO46,output3,1,214,0,Z),"&
+
+--Internal, MC68
+"216  (BC_1, * ,internal, 0),"&
+"217  (BC_1, * ,internal, X),"&
+
+--I/O, pin45 MC67
+"218  (BC_1, * ,control, 0),"&
+"219  (BC_1, IO45,output3,1,218,0,Z),"&
+
+--Internal, MC66
+"220  (BC_1, * ,internal, 0),"&
+"221  (BC_1, * ,internal, X),"&
+
+--I/O, pin44 MC65
+"222  (BC_1, * ,control, 0),"&
+"223  (BC_1, IO44,output3,1,222,0,Z),"&
+
+--I/O, pin41 MC49
+"224  (BC_1, * ,control, 0),"&
+"225  (BC_1, IO41,output3,1,224,0,Z),"&
+
+--Internal, MC50
+"226  (BC_1, * ,internal, 0),"&
+"227  (BC_1, * ,internal, X),"&
+
+--I/O, pin40 MC51
+"228  (BC_1, * ,control, 0),"&
+"229  (BC_1, IO40,output3,1,228,0,Z),"&
+
+--Internal, MC52
+"230  (BC_1, * ,internal, 0),"&
+"231  (BC_1, * ,internal, X),"&
+
+--I/O, pin39 MC53
+"232  (BC_1, * ,control, 0),"&
+"233  (BC_1, IO39,output3,1,232,0,Z),"&
+
+--Internal, MC54
+"234  (BC_1, * ,internal, 0),"&
+"235  (BC_1, * ,internal, X),"&
+
+--Internal, MC55
+"236  (BC_1, * ,internal, 0),"&
+"237  (BC_1, * ,internal, X),"&
+
+--I/O, pin37 MC56
+"238  (BC_1, * ,control, 0),"&
+"239  (BC_1, IO37,output3,1,238,0,Z),"&
+
+--I/O, pin36 MC57
+"240  (BC_1, * ,control, 0),"&
+"241  (BC_1, IO36,output3,1,240,0,Z),"&
+
+--Internal, MC58
+"242  (BC_1, * ,internal, 0),"&
+"243  (BC_1, * ,internal, X),"&
+
+--I/O, pin35 MC59
+"244  (BC_1, * ,control, 0),"&
+"245  (BC_1, IO35,output3,1,244,0,Z),"&
+
+--Internal, MC60
+"246  (BC_1, * ,internal, 0),"&
+"247  (BC_1, * ,internal, X),"&
+
+--I/O, pin34 MC61
+"248  (BC_1, * ,control, 0),"&
+"249  (BC_1, IO34,output3,1,248,0,Z),"&
+
+--Internal, MC62
+"250  (BC_1, * ,internal, 0),"&
+"251  (BC_1, * ,internal, X),"&
+
+--Internal, MC63
+"252  (BC_1, * ,internal, 0),"&
+"253  (BC_1, * ,internal, X),"&
+
+--I/O, pin33 MC64
+"254  (BC_1, * ,control, 0),"&
+"255  (BC_1, IO33,output3,1,254,0,Z),"&
+
+--Internal, MC33
+"256  (BC_1, * ,internal, 0),"&
+"257  (BC_1, * ,internal, X),"&
+
+--Internal, MC34
+"258  (BC_1, * ,internal, 0),"&
+"259  (BC_1, * ,internal, X),"&
+
+--I/O, pin31 MC35
+"260  (BC_1, * ,control, 0),"&
+"261  (BC_1, IO31,output3,1,260,0,Z),"&
+
+--Internal, MC36
+"262  (BC_1, * ,internal, 0),"&
+"263  (BC_1, * ,internal, X),"&
+
+--I/O, pin30 MC37
+"264  (BC_1, * ,control, 0),"&
+"265  (BC_1, IO30,output3,1,264,0,Z),"&
+
+--I/O, pin29 MC38
+"266  (BC_1, * ,control, 0),"&
+"267  (BC_1, IO29,output3,1,266,0,Z),"&
+
+--Internal, MC39
+"268  (BC_1, * ,internal, 0),"&
+"269  (BC_1, * ,internal, X),"&
+
+--I/O, pin28 MC40
+"270  (BC_1, * ,control, 0),"&
+"271  (BC_1, IO28,output3,1,270,0,Z),"&
+
+--Internal, MC41
+"272  (BC_1, * ,internal, 0),"&
+"273  (BC_1, * ,internal, X),"&
+
+--Internal, MC42
+"274  (BC_1, * ,internal, 0),"&
+"275  (BC_1, * ,internal, X),"&
+
+--I/O, pin27 MC43
+"276  (BC_1, * ,control, 0),"&
+"277  (BC_1, IO27,output3,1,276,0,Z),"&
+
+--Internal, MC44
+"278  (BC_1, * ,internal, 0),"&
+"279  (BC_1, * ,internal, X),"&
+
+--I/O, pin25 MC45
+"280  (BC_1, * ,control, 0),"&
+"281  (BC_1, IO25,output3,1,280,0,Z),"&
+
+--I/O, pin24 MC46
+"282  (BC_1, * ,control, 0),"&
+"283  (BC_1, IO24,output3,1,282,0,Z),"&
+
+--Internal, MC47
+"284  (BC_1, * ,internal, 0),"&
+"285  (BC_1, * ,internal, X),"&
+
+--Internal, MC48 TMS
+"286  (BC_1, * ,internal, 0),"&
+"287  (BC_1, * ,internal, X),"&
+
+--I/O, pin22 MC17
+"288  (BC_1, * ,control, 0),"&
+"289  (BC_1, IO22,output3,1,288,0,Z),"&
+
+--Internal, MC18
+"290  (BC_1, * ,internal, 0),"&
+"291  (BC_1, * ,internal, X),"&
+
+--I/O, pin21 MC19
+"292  (BC_1, * ,control, 0),"&
+"293  (BC_1, IO21,output3,1,292,0,Z),"&
+
+--Internal, MC20
+"294  (BC_1, * ,internal, 0),"&
+"295  (BC_1, * ,internal, X),"&
+
+--I/O, pin20 MC21
+"296  (BC_1, * ,control, 0),"&
+"297  (BC_1, IO20,output3,1,296,0,Z),"&
+
+--Internal, MC22
+"298  (BC_1, * ,internal, 0),"&
+"299  (BC_1, * ,internal, X),"&
+
+--Internal, MC23
+"300  (BC_1, * ,internal, 0),"&
+"301  (BC_1, * ,internal, X),"&
+
+--I/O, pin18 MC24
+"302  (BC_1, * ,control, 0),"&
+"303  (BC_1, IO18,output3,1,302,0,Z),"&
+
+--I/O, pin17 MC25
+"304  (BC_1, * ,control, 0),"&
+"305  (BC_1, IO17,output3,1,304,0,Z),"&
+
+--Internal, MC26
+"306  (BC_1, * ,internal, 0),"&
+"307  (BC_1, * ,internal, X),"&
+
+--I/O, pin16 MC27
+"308  (BC_1, * ,control, 0),"&
+"309  (BC_1, IO16,output3,1,308,0,Z),"&
+
+--Internal, MC28
+"310  (BC_1, * ,internal, 0),"&
+"311  (BC_1, * ,internal, X),"&
+
+--I/O, pin15 MC29
+"312  (BC_1, * ,control, 0),"&
+"313  (BC_1, IO15,output3,1,312,0,Z),"&
+
+--Internal, MC30
+"314  (BC_1, * ,internal, 0),"&
+"315  (BC_1, * ,internal, X),"&
+
+--Internal, MC31
+"316  (BC_1, * ,internal, 0),"&
+"317  (BC_1, * ,internal, X),"&
+
+--Internal, MC32 TDI
+"318  (BC_1, * ,internal, 0),"&
+"319  (BC_1, * ,internal, X),"&
+
+--Internal, MC1
+"320  (BC_1, * ,internal, 0),"&
+"321  (BC_1, * ,internal, X),"&
+
+--Internal, MC2
+"322  (BC_1, * ,internal, 0),"&
+"323  (BC_1, * ,internal, X),"&
+
+--I/O, pin12 MC3
+"324  (BC_1, * ,control, 0),"&
+"325  (BC_1, IO12,output3,1,324,0,Z),"&
+
+--Internal, MC4
+"326  (BC_1, * ,internal, 0),"&
+"327  (BC_1, * ,internal, X),"&
+
+--I/O, pin11 MC5
+"328  (BC_1, * ,control, 0),"&
+"329  (BC_1, IO11,output3,1,328,0,Z),"&
+
+--I/O, pin10 MC6
+"330  (BC_1, * ,control, 0),"&
+"331  (BC_1, IO10,output3,1,330,0,Z),"&
+
+--Internal, MC7
+"332  (BC_1, * ,internal, 0),"&
+"333  (BC_1, * ,internal, X),"&
+
+--I/O, pin9 MC8
+"334  (BC_1, * ,control, 0),"&
+"335  (BC_1, IO9,output3,1,334,0,Z),"&
+
+--Internal, MC9
+"336  (BC_1, * ,internal, 0),"&
+"337  (BC_1, * ,internal, X),"&
+
+--Internal, MC10
+"338  (BC_1, * ,internal, 0),"&
+"339  (BC_1, * ,internal, X),"&
+
+--I/O, pin8 MC11
+"340  (BC_1, * ,control, 0),"&
+"341  (BC_1, IO8,output3,1,340,0,Z),"&
+
+--Internal, MC12
+"342  (BC_1, * ,internal, 0),"&
+"343  (BC_1, * ,internal, X),"&
+
+--I/O, pin6 MC13
+"344  (BC_1, * ,control, 0),"&
+"345  (BC_1, IO6,output3,1,344,0,Z),"&
+
+--I/O, pin5 MC14
+"346  (BC_1, * ,control, 0),"&
+"347  (BC_1, IO5,output3,1,346,0,Z),"&
+
+--Internal, MC15
+"348  (BC_1, * ,internal, 0),"&
+"349  (BC_1, * ,internal, X),"&
+
+--I/O, pin4 MC16
+"350  (BC_1, * ,control, 0),"&
+"351  (BC_1, IO4,output3,1,350,0,Z)";
+
+end F1508ASV_J84;

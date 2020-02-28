@@ -1,0 +1,651 @@
+-- File Name            : 1504ASV_Q100.BSD
+-- Created by           : Atmel Corporation
+-- Documentation        : ATF15xx Family BSDL
+-- BSDL Revision        : 1.0
+--
+-- Note                 : Some lines in this BSDL file are 
+--                        longer than 80 characters. Adjust to
+--                        word wrap width on your text editor
+--                        accordingly to prevent possible 
+--                        compile errors.
+--
+-- BSDL Status          : Preliminary
+-- Date created         : 07/02/02
+-- Device               : ATF1504ASV/ASVL
+-- Package              : 100-Lead Plastic Quad Flat Pack (PQFP)
+--
+-- *********************************************************************
+-- *                         IMPORTANT NOTICE                          *
+-- *                                                                   *
+-- *   Copyright 2001,2002 Atmel Corporation. All Rights Reserved.     *
+-- *                                                                   *
+-- *   Atmel assumes no responsibility or liability arising out of     *
+-- *   this application or use of any information described herein     *
+-- *   except as expressly agreed to in writing by Atmel Corporation.  *
+-- *                                                                   *
+-- *********************************************************************
+--
+-- Revision History	:
+-- 
+-- Rev 1.0 (07/02/02) 	- Initial version.
+-- 
+entity F1504ASV_Q100 is
+generic (PHYSICAL_PIN_MAP : string := "PQFP100");
+
+port (
+--I/O Pins
+IO94   :inout bit;
+IO95   :inout bit;
+IO96   :inout bit;
+IO98   :inout bit;
+IO99   :inout bit;
+IO100  :inout bit;
+IO3    :inout bit;
+IO4    :inout bit;
+IO8    :inout bit;
+IO10   :inout bit;
+IO11   :inout bit;
+IO12   :inout bit;
+IO14   :inout bit;
+IO15   :inout bit;
+IO16   :inout bit;
+IO18   :inout bit;
+IO19   :inout bit;
+IO21   :inout bit;
+IO22   :inout bit;
+IO23   :inout bit;
+IO25   :inout bit;
+IO27   :inout bit;
+IO31   :inout bit;
+IO32   :inout bit;
+IO33   :inout bit;
+IO34   :inout bit;
+IO35   :inout bit;
+IO37   :inout bit;
+IO38   :inout bit;
+IO39   :inout bit;
+IO42   :inout bit;
+IO43   :inout bit;
+IO44   :inout bit;
+IO46   :inout bit;
+IO47   :inout bit;
+IO48   :inout bit;
+IO49   :inout bit;
+IO50   :inout bit;
+IO54   :inout bit;
+IO56   :inout bit;
+IO58   :inout bit;
+IO59   :inout bit;
+IO60   :inout bit;
+IO62   :inout bit;
+IO63   :inout bit;
+IO65   :inout bit;
+IO66   :inout bit;
+IO67   :inout bit;
+IO69   :inout bit;
+IO70   :inout bit;
+IO71   :inout bit;
+IO73   :inout bit;
+IO77   :inout bit;
+IO78   :inout bit;
+IO81   :inout bit;
+IO82   :inout bit;
+IO83   :inout bit;
+IO85   :inout bit;
+IO86   :inout bit;
+IO87   :inout bit;
+--JTAG Port Pins
+TCK     :in bit;
+TDI     :in bit;
+TDO     :out bit;
+TMS     :in bit;
+--Dedicated Input Pins
+DIN     :in bit_vector(1 to 4);
+--Power Pins
+VCC     :linkage bit_vector(1 to 8);
+--Ground Pins
+GND     :linkage bit_vector(1 to 8)
+);
+
+use STD_1149_1_1994.all;
+attribute COMPONENT_CONFORMANCE of F1504ASV_Q100 :
+	entity is "STD_1149_1_1993";
+
+attribute PIN_MAP of F1504ASV_Q100 : entity is PHYSICAL_PIN_MAP;
+constant PQFP100 : PIN_MAP_STRING :=
+"IO94 :94,"&
+"IO95 :95,"&
+"IO96 :96,"&
+"IO98 :98,"&
+"IO99 :99,"&
+"IO100:100,"&
+"IO3  :3 ,"&
+"IO4  :4 ,"&
+"IO8  :8 ,"&
+"IO10 :10,"&
+"IO11 :11,"&
+"IO12 :12,"&
+"IO14 :14,"&
+"IO15 :15,"&
+"IO16 :16,"&
+"IO18 :18,"&
+"IO19 :19,"&
+"IO21 :21,"&
+"IO22 :22,"&
+"IO23 :23,"&
+"IO25 :25,"&
+"IO27 :27,"&
+"IO31 :31,"&
+"IO32 :32,"&
+"IO33 :33,"&
+"IO34 :34,"&
+"IO35 :35,"&
+"IO37 :37,"&
+"IO38 :38,"&
+"IO39 :39,"&
+"IO42 :42,"&
+"IO43 :43,"&
+"IO44 :44,"&
+"IO46 :46,"&
+"IO47 :47,"&
+"IO48 :48,"&
+"IO49 :49,"&
+"IO50 :50,"&
+"IO54 :54,"&
+"IO56 :56,"&
+"IO58 :58,"&
+"IO59 :59,"&
+"IO60 :60,"&
+"IO62 :62,"&
+"IO63 :63,"&
+"IO65 :65,"&
+"IO66 :66,"&
+"IO67 :67,"&
+"IO69 :69,"&
+"IO70 :70,"&
+"IO71 :71,"&
+"IO73 :73,"&
+"IO77 :77,"&
+"IO78 :78,"&
+"IO81 :81,"&
+"IO82 :82,"&
+"IO83 :83,"&
+"IO85 :85,"&
+"IO86 :86,"&
+"IO87 :87,"&
+"TCK  :64,"&
+"TDI  :6,"&
+"TDO  :75,"&
+"TMS  :17,"&
+"DIN  :(91,92,89,90),"&
+"VCC  :(41,93,5,20,36,53,68,84),"&
+"GND  :(13,28,40,45,61,76,88,97)";
+
+attribute TAP_SCAN_IN of TDI    :signal is true;
+attribute TAP_SCAN_MODE of TMS  :signal is true;
+attribute TAP_SCAN_OUT of TDO   :signal is true;
+attribute TAP_SCAN_CLOCK of TCK :signal is (10.00e6,BOTH);
+
+attribute INSTRUCTION_LENGTH of F1504ASV_Q100  :entity is 10;
+attribute INSTRUCTION_OPCODE of F1504ASV_Q100  :entity is
+"EXTEST (0000000000),"&
+"BYPASS (1111111111),"&
+"SAMPLE (0001010101),"&
+"IDCODE (0001011001)";
+
+attribute INSTRUCTION_CAPTURE of F1504ASV_Q100 :entity is "0001011001";
+
+attribute IDCODE_REGISTER of F1504ASV_Q100 :entity is 
+"0000000101010001010X000000111111";  -- 0151403F or 0151503F
+
+attribute BOUNDARY_LENGTH of F1504ASV_Q100 :entity is 192;
+attribute BOUNDARY_REGISTER of F1504ASV_Q100 :entity is
+--Input Scan Cell 1, GOE1
+"0    (BC_4,DIN(4),input,X),"&
+ 
+--Input Scan Cell 2, GCLK1
+"1    (BC_4,DIN(3),input,X),"&
+
+--Input Scan cell 3, MC64
+"2    (BC_4,IO87,input,X),"&
+
+--Input Scan cell 4, MC63
+"3    (BC_4,IO86,input,X),"&
+
+--Input Scan cell 5, MC62
+"4    (BC_4,IO85,input,X),"&
+
+--Input Scan cell 6, MC61
+"5    (BC_4,IO83,input,X),"&
+
+--Input Scan cell 7, MC60
+"6    (BC_4,IO82,input,X),"&
+
+--Input Scan cell 8, MC59
+"7    (BC_4,IO81,input,X),"&
+
+--Input Scan cell 9, MC58
+"8    (BC_4,IO78,input,X),"&
+
+--Input Scan cell 10, MC57
+"9    (BC_4,IO77,input,X),"&
+
+--Input Scan cell 11, MC55
+"10   (BC_4,IO73,input,X),"&
+
+--Input Scan cell 12, MC54
+"11   (BC_4,IO71,input,X),"&
+
+--Input Scan cell 13, MC53
+"12   (BC_4,IO70,input,X),"&
+
+--Input Scan cell 14, MC52
+"13   (BC_4,IO69,input,X),"&
+
+--Input Scan cell 15, MC51
+"14   (BC_4,IO67,input,X),"&
+
+--Input Scan cell 16, MC50
+"15   (BC_4,IO66,input,X),"&
+
+--Input Scan cell 17, MC49
+"16   (BC_4,IO65,input,X),"&
+
+--Input Scan cell 18, MC47
+"17   (BC_4,IO63,input,X),"&
+
+--Input Scan cell 19, MC46
+"18   (BC_4,IO62,input,X),"&
+
+--Input Scan cell 20, MC45
+"19   (BC_4,IO60,input,X),"&
+
+--Input Scan cell 21, MC44
+"20   (BC_4,IO59,input,X),"&
+
+--Input Scan cell 22, MC43
+"21   (BC_4,IO58,input,X),"&
+
+--Input Scan cell 23, MC42
+"22   (BC_4,IO56,input,X),"&
+
+--Input Scan cell 24, MC41
+"23   (BC_4,IO54,input,X),"&
+
+--Input Scan cell 25, MC40
+"24   (BC_4,IO50,input,X),"&
+
+--Input Scan cell 26, MC39
+"25   (BC_4,IO49,input,X),"&
+
+--Input Scan cell 27, MC38
+"26   (BC_4,IO48,input,X),"&
+
+--Input Scan cell 28, MC37
+"27   (BC_4,IO47,input,X),"&
+
+--Input Scan cell 29, MC36
+"28   (BC_4,IO46,input,X),"&
+
+--Input Scan cell 30, MC35
+"29   (BC_4,IO44,input,X),"&
+
+--Input Scan cell 31, MC34
+"30   (BC_4,IO43,input,X),"&
+
+--Input Scan cell 32, MC33
+"31   (BC_4,IO42,input,X),"&
+
+--Input Scan cell 33, MC17
+"32   (BC_4,IO39,input,X),"&
+
+--Input Scan cell 34, MC18
+"33   (BC_4,IO38,input,X),"&
+
+--Input Scan cell 35, MC19
+"34   (BC_4,IO37,input,X),"&
+
+--Input Scan cell 36, MC20
+"35   (BC_4,IO35,input,X),"&
+
+--Input Scan cell 37, MC21
+"36   (BC_4,IO34,input,X),"&
+
+--Input Scan cell 38, MC22
+"37   (BC_4,IO33,input,X),"&
+
+--Input Scan cell 39, MC23
+"38   (BC_4,IO32,input,X),"&
+
+--Input Scan cell 40, MC24
+"39   (BC_4,IO31,input,X),"&
+
+--Input Scan cell 41, MC25
+"40   (BC_4,IO27,input,X),"&
+
+--Input Scan cell 42, MC26
+"41   (BC_4,IO25,input,X),"&
+                                          
+--Input Scan cell 43, MC27
+"42   (BC_4,IO23,input,X),"&
+
+--Input Scan cell 44, MC28
+"43   (BC_4,IO22,input,X),"&
+
+--Input Scan cell 45, MC29
+"44   (BC_4,IO21,input,X),"&
+
+--Input Scan cell 46, MC30
+"45   (BC_4,IO19,input,X),"&
+
+--Input Scan cell 47, MC31
+"46   (BC_4,IO18,input,X),"&
+
+--Input Scan cell 48, MC1
+"47   (BC_4,IO16,input,X),"&
+
+--Input Scan cell 49, MC2
+"48   (BC_4,IO15,input,X),"&
+
+--Input Scan cell 50, MC3
+"49   (BC_4,IO14,input,X),"&
+
+--Input Scan cell 51, MC4
+"50   (BC_4,IO12,input,X),"&
+
+--Input Scan cell 52, MC5
+"51   (BC_4,IO11,input,X),"&
+
+--Input Scan cell 53, MC6
+"52   (BC_4,IO10,input,X),"&
+
+--Input Scan cell 54, MC7
+"53   (BC_4,IO8,input,X),"&
+
+--Input Scan cell 55, MC9
+"54   (BC_4,IO4,input,X),"&
+
+--Input Scan cell 56, MC10
+"55   (BC_4,IO3,input,X),"&
+
+--Input Scan cell 57, MC11
+"56   (BC_4,IO100,input,X),"&
+
+--Input Scan cell 58, MC12
+"57   (BC_4,IO99,input,X),"&
+
+--Input Scan cell 59, MC13
+"58   (BC_4,IO98,input,X),"&
+
+--Input Scan cell 60, MC14
+"59   (BC_4,IO96,input,X),"&
+
+--Input Scan cell 61, MC15
+"60   (BC_4,IO95,input,X),"&
+ 
+--Input Scan cell 62, MC16
+"61   (BC_4,IO94,input,X),"&
+
+--Input Scan cell 63, GCLK2
+"62   (BC_4,DIN(2),input,X),"&
+
+--Input Scan cell 64, GCLR
+"63   (BC_4,DIN(1),input,X),"&
+
+--Scan Cell 65, MC64
+"64   (BC_1, * ,control, 0),"&
+"65   (BC_1, IO87,output3,1,64,0,Z),"&
+
+--Scan Cell 66, MC63
+"66   (BC_1, * ,control, 0),"&
+"67   (BC_1, IO86,output3,1,66,0,Z),"&
+
+--Scan Cell 67, MC62
+"68   (BC_1, * ,control, 0),"&
+"69   (BC_1, IO85,output3,1,68,0,Z),"&
+
+--Scan Cell 68, MC61
+"70   (BC_1, * ,control, 0),"&
+"71   (BC_1, IO83,output3,1,70,0,Z),"&
+
+--Scan Cell 69, MC60
+"72   (BC_1, * ,control, 0),"&
+"73   (BC_1, IO82,output3,1,72,0,Z),"&
+
+--Scan Cell 70, MC59
+"74   (BC_1, * ,control, 0),"&
+"75   (BC_1, IO81,output3,1,74,0,Z),"&
+
+--Scan Cell 71, MC58
+"76   (BC_1, * ,control, 0),"&
+"77   (BC_1, IO78,output3,1,76,0,Z),"&
+
+--Scan Cell 72, MC57
+"78   (BC_1, * ,control, 0),"&
+"79   (BC_1, IO77,output3,1,78,0,Z),"&
+
+--Scan Cell 73, MC56
+"80   (BC_1, * ,internal, 0),"&
+"81   (BC_1, * ,internal, X),"&
+
+--Scan Cell 74, MC55
+"82   (BC_1, * ,control, 0),"&
+"83   (BC_1, IO73,output3,1,82,0,Z),"&
+
+--Scan Cell 75, MC54
+"84   (BC_1, * ,control, 0),"&
+"85   (BC_1, IO71,output3,1,84,0,Z),"&
+
+--Scan Cell 76, MC53
+"86   (BC_1, * ,control, 0),"&
+"87   (BC_1, IO70,output3,1,86,0,Z),"&
+
+--Scan Cell 77, MC52
+"88   (BC_1, * ,control, 0),"&
+"89   (BC_1, IO69,output3,1,88,0,Z),"&
+
+--Scan Cell 78, MC51
+"90   (BC_1, * ,control, 0),"&
+"91   (BC_1, IO67,output3,1,90,0,Z),"&
+
+--Scan Cell 79, MC50
+"92   (BC_1, * ,control, 0),"&
+"93   (BC_1, IO66,output3,1,92,0,Z),"&
+
+--Scan Cell 80, MC49
+"94   (BC_1, * ,control, 0),"&
+"95   (BC_1, IO65,output3,1,94,0,Z),"&
+
+--Scan Cell 81, MC48
+"96   (BC_1, * ,internal, 0),"&
+"97   (BC_1, * ,internal, X),"&
+
+--Scan Cell 82, MC47
+"98   (BC_1, * ,control, 0),"&
+"99   (BC_1, IO63,output3,1,98,0,Z),"&
+
+--Scan Cell 83, MC46
+"100  (BC_1, * ,control, 0),"&
+"101  (BC_1, IO62,output3,1,100,0,Z),"&
+
+--Scan Cell 84, MC45
+"102  (BC_1, * ,control, 0),"&
+"103  (BC_1, IO60,output3,1,102,0,Z),"&
+
+--Scan Cell 85, MC44
+"104  (BC_1, * ,control, 0),"&
+"105  (BC_1, IO59,output3,1,104,0,Z),"&
+
+--Scan Cell 86, MC43
+"106  (BC_1, * ,control, 0),"&
+"107  (BC_1, IO58,output3,1,106,0,Z),"&
+
+--Scan Cell 87, MC42
+"108  (BC_1, * ,control, 0),"&
+"109  (BC_1, IO56,output3,1,108,0,Z),"&
+
+--Scan Cell 88, MC41
+"110  (BC_1, * ,control, 0),"&
+"111  (BC_1, IO54,output3,1,110,0,Z),"&
+
+--Scan Cell 89, MC40
+"112  (BC_1, * ,control, 0),"&
+"113  (BC_1, IO50,output3,1,112,0,Z),"&
+
+--Scan Cell 90, MC39
+"114  (BC_1, * ,control, 0),"&
+"115  (BC_1, IO49,output3,1,114,0,Z),"&
+
+--Scan Cell 91, MC38
+"116  (BC_1, * ,control, 0),"&
+"117  (BC_1, IO48,output3,1,116,0,Z),"&
+
+--Scan Cell 92, MC37
+"118  (BC_1, * ,control, 0),"&
+"119  (BC_1, IO47,output3,1,118,0,Z),"&
+
+--Scan Cell 93, MC36
+"120  (BC_1, * ,control, 0),"&
+"121  (BC_1, IO46,output3,1,120,0,Z),"&
+
+--Scan Cell 94, MC35
+"122  (BC_1, * ,control, 0),"&
+"123  (BC_1, IO44,output3,1,122,0,Z),"&
+
+--Scan Cell 95, MC34
+"124  (BC_1, * ,control, 0),"&
+"125  (BC_1, IO43,output3,1,124,0,Z),"&
+
+--Scan Cell 96, MC33
+"126  (BC_1, * ,control, 0),"&
+"127  (BC_1, IO42,output3,1,126,0,Z),"&
+
+--Scan Cell 97, MC17
+"128  (BC_1, * ,control, 0),"&
+"129  (BC_1, IO39,output3,1,128,0,Z),"&
+
+--Scan Cell 98, MC18
+"130  (BC_1, * ,control, 0),"&
+"131  (BC_1, IO38,output3,1,130,0,Z),"&
+
+--Scan Cell 99, MC19
+"132  (BC_1, * ,control, 0),"&
+"133  (BC_1, IO37,output3,1,132,0,Z),"&
+
+--Scan Cell 100, MC20
+"134  (BC_1, * ,control, 0),"&
+"135  (BC_1, IO35,output3,1,134,0,Z),"&
+
+--Scan Cell 101, MC21
+"136  (BC_1, * ,control, 0),"&
+"137  (BC_1, IO34,output3,1,136,0,Z),"&
+
+--Scan Cell 102, MC22
+"138  (BC_1, * ,control, 0),"&
+"139  (BC_1, IO33,output3,1,138,0,Z),"&
+
+--Scan Cell 103, MC23
+"140  (BC_1, * ,control, 0),"&
+"141  (BC_1, IO32,output3,1,140,0,Z),"&
+
+--Scan Cell 104, MC24
+"142  (BC_1, * ,control, 0),"&
+"143  (BC_1, IO31,output3,1,142,0,Z),"&
+
+--Scan Cell 105, MC25
+"144  (BC_1, * ,control, 0),"&
+"145  (BC_1, IO27,output3,1,144,0,Z),"&
+
+--Scan Cell 106, MC26
+"146  (BC_1, * ,control, 0),"&
+"147  (BC_1, IO25,output3,1,146,0,Z),"&
+
+--Scan Cell 107, MC27
+"148  (BC_1, * ,control, 0),"&
+"149  (BC_1, IO23,output3,1,148,0,Z),"&
+
+--Scan Cell 108, MC28
+"150  (BC_1, * ,control, 0),"&
+"151  (BC_1, IO22,output3,1,150,0,Z),"&
+
+--Scan Cell 109, MC29
+"152  (BC_1, * ,control, 0),"&
+"153  (BC_1, IO21,output3,1,152,0,Z),"&
+
+--Scan Cell 110, MC30
+"154  (BC_1, * ,control, 0),"&
+"155  (BC_1, IO19,output3,1,154,0,Z),"&
+
+--Scan Cell 111, MC31
+"156  (BC_1, * ,control, 0),"&
+"157  (BC_1, IO18,output3,1,156,0,Z),"&
+
+--Scan Cell 112, MC32
+"158  (BC_1, * ,internal, 0),"&
+"159  (BC_1, * ,internal, X),"&
+
+--Scan Cell 113, MC1
+"160  (BC_1, * ,control, 0),"&
+"161  (BC_1, IO16,output3,1,160,0,Z),"&
+
+--Scan Cell 114, MC2
+"162  (BC_1, * ,control, 0),"&
+"163  (BC_1, IO15,output3,1,162,0,Z),"&
+
+--Scan Cell 115, MC3
+"164  (BC_1, * ,control, 0),"&
+"165  (BC_1, IO14,output3,1,164,0,Z),"&
+
+--Scan Cell 116, MC4
+"166  (BC_1, * ,control, 0),"&
+"167  (BC_1, IO12,output3,1,166,0,Z),"&
+
+--Scan Cell 117, MC5
+"168  (BC_1, * ,control, 0),"&
+"169  (BC_1, IO11,output3,1,168,0,Z),"&
+
+--Scan Cell 118, MC6
+"170  (BC_1, * ,control, 0),"&
+"171  (BC_1, IO10,output3,1,170,0,Z),"&
+
+--Scan Cell 119, MC7
+"172  (BC_1, * ,control, 0),"&
+"173  (BC_1, IO8,output3,1,172,0,Z),"&
+
+--Scan Cell 120, MC8
+"174  (BC_1, * ,internal, 0),"&
+"175  (BC_1, * ,internal, X),"&
+
+--Scan Cell 121, MC9
+"176  (BC_1, * ,control, 0),"&
+"177  (BC_1, IO4,output3,1,176,0,Z),"&
+
+--Scan Cell 122, MC10
+"178  (BC_1, * ,control, 0),"&
+"179  (BC_1, IO3,output3,1,178,0,Z),"&
+
+--Scan Cell 123, MC11
+"180  (BC_1, * ,control, 0),"&
+"181  (BC_1, IO100,output3,1,180,0,Z),"&
+
+--Scan Cell 124, MC12
+"182  (BC_1, * ,control, 0),"&
+"183  (BC_1, IO99,output3,1,182,0,Z),"&
+
+--Scan Cell 125, MC13
+"184  (BC_1, * ,control, 0),"&
+"185  (BC_1, IO98,output3,1,184,0,Z),"&
+
+--Scan Cell 126, MC14
+"186  (BC_1, * ,control, 0),"&
+"187  (BC_1, IO96,output3,1,186,0,Z),"&
+
+--Scan Cell 127, MC15
+"188  (BC_1, * ,control, 0),"&
+"189  (BC_1, IO95,output3,1,188,0,Z),"&
+
+--Scan Cell 128, MC16
+"190  (BC_1, * ,control, 0),"&
+"191  (BC_1, IO94,output3,1,190,0,Z)";
+
+end F1504ASV_Q100;
