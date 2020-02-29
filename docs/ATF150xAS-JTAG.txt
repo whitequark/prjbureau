@@ -29,3 +29,50 @@ Based on BSDL information, it can be attributed as:
   * ...
   * 1010000111 (287): UNKNOWN3.7
   * 1010100001 (2a1): UNKNOWN4
+
+Looking at erase SVF, it performs the following actions:
+
+  * IR=280 DR[10]=1b9
+  * IR=059 DR[32]==0150203f ; IDCODE check
+  * IR=2b3
+  * IR=29e RTI=210ms ; erase
+  * IR=2bf RTI=50ms
+  * (reset)
+  * IR=280 DR[10]=000
+  * (bunch of resets)
+  * IR=280 DR[10]=1b9
+  * repeated for adr=[00c..06b,080..0df,000..00b,0e0..0e4]:
+    * IR=2a1 DR[11]=adr IR=28c RTI=20ms IR=290 DR[86]=3fffffffffffffffffffff
+  * IR=2a1 DR[11]=200 IR=28c RTI=20ms IR=290 DR[4]=f
+  * IR=2a1 DR[11]=300 IR=28c RTI=20ms IR=290 DR[16]=ffff
+  * IR=2a1 DR[11]=100 IR=28c RTI=20ms IR=290 DR[32]=ffffffff
+
+It looks like the flash memory uses IRs in the 280..2ff range, assigned as:
+  * IR=280 DR[10]: flash unlock key (?)
+  * IR=2b3 DR[1]:  unknown
+  * IR=29e DR[1]:  flash erase command (?)
+  * IR=2a1 DR[11]: flash index
+  * IR=28c DR[1]:  flash read command
+  * IR=290 DR[n]:  flash read data (?)
+
+It is likely that the flash indexes are assigned as:
+  * 200: JTAG configuration (4 bits)
+  * 300: user electronic signature (16 bits)
+  * 100: device configuration (32 bits)
+  * 00c..06b, 080..0df: product term config? (86×96×2 bits)
+  * 000..00b: macrocell config? (86×12 bits)
+  * 0e0..0e4: switch matrix config? (86×5 bits)
+
+To recap, the JED file is organized as follows:
+  * 96(16 padding, 40+40 term bits)×5(product terms)×16(macrocells)×2(blocks):
+    product term config
+  * 80(16 padding, 32+32 config bits)×6(config blocks)×2(blocks):
+    macrocell config
+  * 86(5(mux bits)×40(muxes)×2(blocks), 5(mux bits)×6(global OEs)):
+    switch matrix config
+
+It looks like the switch matrix is transposed: in the JED file it is written
+in row-major order (5x86) and in the SVF file it is written in column-major
+order (86x5). It seems likely that the rest of the flash is also transposed,
+but it is not clear yet what function the padding bits have or how are product
+terms laid out exactly.
