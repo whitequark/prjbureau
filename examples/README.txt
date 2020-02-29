@@ -1,1 +1,1 @@
-Run: ../v2jed.sh invert -device TQFP144
+Run: ../v2jed.sh <example>

@@ -6,4 +6,5 @@ work/*
 *.io
 *.fit
 *.jed
+*.svf
 /*.py
