@@ -79,23 +79,6 @@ def write_svf(file, svf_bits, comment):
     raise NotImplementedError
 
 
-def jed_to_svf(jed_bits, device):
-    raise NotImplementedError
-
-
-def svf_to_jed(svf_bits, device):
-    if device == 'ATF1502':
-        fuses = bitarray(16808)
-        fuses.setall(0)
-        for svf_row, svf_word in svf_bits.items():
-            for svf_col, svf_bit in enumerate(svf_word):
-                jed_index = svf_to_jed_atf1502(svf_row, svf_col)
-                if jed_index is None: continue
-                fuses[jed_index] = svf_bit
-        return fuses
-    assert False
-
-
 class ATFFileType(argparse.FileType):
     def __call__(self, value):
         file = super().__call__(value)
@@ -118,6 +101,11 @@ def main():
         help='output file')
     args = parser.parse_args()
 
+    if args.device == 'ATF1502':
+        bitmap = ATF1502Bitmap
+    else:
+        assert False
+
     jed_bits = svf_bits = None
     if args.input.name.lower().endswith('.jed'):
         jed_bits, comment = read_jed(args.input)
@@ -128,11 +116,11 @@ def main():
 
     if args.output.name.lower().endswith('.jed'):
         if jed_bits is None:
-            jed_bits = svf_to_jed(svf_bits, args.device)
+            jed_bits = bitmap.svf_to_jed(svf_bits)
         write_jed(args.output, jed_bits, comment)
     elif args.output.name.lower().endswith('.svf'):
         if svf_bits is None:
-            svf_bits = jed_to_svf(jed_bits, args.device)
+            svf_bits = bitmap.jed_to_svf(jed_bits)
         write_svf(args.output, svf_bits, comment)
     else:
         assert False
