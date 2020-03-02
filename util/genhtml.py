@@ -9,7 +9,7 @@ def write_header(f, title=""):
     f.write(f"<title>Project Bureau{title}</title>\n")
     f.write(f"<h1>Project Bureau{title}</h1>\n")
     f.write(f"<i><a href='https://github.com/whitequark/prjbureau'>Project Bureau</a> "
-            f"aims at documenting the bitstream format of Microchip ATF150x CPLDs. "
+            f"aims at documenting the bitstream format of Microchip ATF15xx CPLDs. "
             f"This is a work in progress.</i>\n")
 
 
