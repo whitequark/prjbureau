@@ -3,6 +3,7 @@ from bitarray import bitarray
 
 from .jesd3 import JESD3Parser
 from .svf import SVFParser, SVFEventHandler
+from .bitmap import *
 
 
 def read_jed(file):
@@ -78,12 +79,21 @@ def write_svf(file, svf_bits, comment):
     raise NotImplementedError
 
 
-def jed_to_svf(jed_bits):
+def jed_to_svf(jed_bits, device):
     raise NotImplementedError
 
 
-def svf_to_jed(svf_bits):
-    raise NotImplementedError
+def svf_to_jed(svf_bits, device):
+    if device == 'ATF1502':
+        fuses = bitarray(16808)
+        fuses.setall(0)
+        for svf_row, svf_word in svf_bits.items():
+            for svf_col, svf_bit in enumerate(svf_word):
+                jed_index = svf_to_jed_atf1502(svf_row, svf_col)
+                if jed_index is None: continue
+                fuses[jed_index] = svf_bit
+        return fuses
+    assert False
 
 
 class ATFFileType(argparse.FileType):
@@ -97,6 +107,9 @@ class ATFFileType(argparse.FileType):
 
 def main():
     parser = argparse.ArgumentParser(description='Convert between ATF15xx JED and SVF files.')
+    parser.add_argument(
+        '-d', '--device', metavar='DEVICE', choices=('ATF1502',), default='ATF1502',
+        help='device (one of: %(choices)s)')
     parser.add_argument(
         'input', metavar='INPUT', type=ATFFileType('r'),
         help='input file')
@@ -115,11 +128,11 @@ def main():
 
     if args.output.name.lower().endswith('.jed'):
         if jed_bits is None:
-            jed_bits = svf_to_jed(svf_bits)
+            jed_bits = svf_to_jed(svf_bits, args.device)
         write_jed(args.output, jed_bits, comment)
     elif args.output.name.lower().endswith('.svf'):
         if svf_bits is None:
-            svf_bits = jed_to_svf(jed_bits)
+            svf_bits = jed_to_svf(jed_bits, args.device)
         write_svf(args.output, svf_bits, comment)
     else:
         assert False
