@@ -71,8 +71,7 @@ def read_svf(file):
     handler = ATFSVFEventHandler()
     parser = SVFParser(file.read(), handler)
     parser.parse_file()
-    print(handler.writes)
-    return bitarray(), ""
+    return handler.writes, ""
 
 
 def write_svf(file, svf_bits, comment):
