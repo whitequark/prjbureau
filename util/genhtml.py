@@ -183,7 +183,7 @@ def write_block(f, device_name, device, block_name):
             write_option(f, option_name, macrocell[option_name], base=macrocell_fuses.start)
 
 
-docs_dir = os.path.join(root_dir, "docs")
+docs_dir = os.path.join(root_dir, "docs", "genhtml")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
     fi.write(f"<p>Device index:</p>\n")
