@@ -12,7 +12,8 @@ with database.transact() as db:
                         "CLK2": pinout[device["clocks"]["2"]["pad"]],
                         "CLR": pinout[device["clear"]["pad"]],
                         "Q": pinout[macrocell["pad"]],
-                    }, f"{device_name}-{package}")
+                    },
+                    f"{device_name}-{package}")
 
             f_as = run(f"DFFAS x(.CLK(CLK2), .AS(CLR), .D(CLR), .Q(Q));")
             f_oe = run(f"wire X; DFF x(.CLK(CLK2), .D(CLR), .Q(X)); "

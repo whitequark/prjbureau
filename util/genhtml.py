@@ -84,6 +84,7 @@ macrocell_options = {
     "xor_a_invert":     "M",
     "storage":          "FF",
     "global_clock":     "M",
+    "pt2_mux":          "M",
     "pt4_gate":         "M",
     "pt4_func":         "M",
     "async_reset":      "M",

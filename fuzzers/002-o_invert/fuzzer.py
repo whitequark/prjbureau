@@ -15,7 +15,8 @@ with database.transact() as db:
                         "CLK2": pinout[device["clocks"]["2"]["pad"]],
                         "OE1": pinout[device["enables"]["1"]["pad"]],
                         "Q": pinout[macrocell["pad"]],
-                    }, f"{device_name}-{package}")
+                    },
+                    f"{device_name}-{package}")
 
             f_n = run("OR3")
             f_p = run("AND3I3")
