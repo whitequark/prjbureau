@@ -82,12 +82,11 @@ def write_option(f, option_name, option, base):
 macrocell_options = {
     "pt2_mux":          "M",
     "pt4_mux":          "M",
-    "xor_a_func":       "M",
-    "xor_a_invert":     "M",
     "pt4_func":         "M",
     "global_clock":     "M",
     "pt5_func":         "M",
     "async_reset":      "M",
+    "xor_a_input":      "M",
     "storage":          "FF",
     "output_invert":    "M",
     "fast_output":      "IO",

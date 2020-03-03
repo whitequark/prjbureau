@@ -136,22 +136,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15486,
             15489
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15486
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -258,22 +252,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15485,
             15490
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15485
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -380,22 +368,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15482,
             15493
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15482
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -502,22 +484,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15481,
             15494
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15481
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -624,22 +600,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15478,
             15497
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15478
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -746,22 +716,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15477,
             15498
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15477
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -868,22 +832,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15474,
             15501
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15474
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -990,22 +948,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15473,
             15502
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15473
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1112,22 +1064,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15470,
             15505
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15470
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1234,22 +1180,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15469,
             15506
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15469
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1356,22 +1296,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15466,
             15509
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15466
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1478,22 +1412,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15465,
             15510
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15465
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1600,22 +1528,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15462,
             15513
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15462
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1722,22 +1644,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15461,
             15514
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15461
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1844,22 +1760,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15458,
             15517
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15458
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -1966,22 +1876,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15457,
             15518
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15457
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2088,22 +1992,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15966,
             15969
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15966
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2210,22 +2108,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15965,
             15970
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15965
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2332,22 +2224,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15962,
             15973
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15962
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2454,22 +2340,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15961,
             15974
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15961
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2576,22 +2456,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15958,
             15977
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15958
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2698,22 +2572,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15957,
             15978
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15957
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2820,22 +2688,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15954,
             15981
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15954
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -2942,22 +2804,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15953,
             15982
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15953
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3064,22 +2920,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15950,
             15985
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15950
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3186,22 +3036,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15949,
             15986
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15949
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3308,22 +3152,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15946,
             15989
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15946
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3430,22 +3268,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15945,
             15990
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15945
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3552,22 +3384,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15942,
             15993
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15942
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3674,22 +3500,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15941,
             15994
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15941
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3796,22 +3616,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15938,
             15997
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15938
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -3918,22 +3732,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
+            15937,
             15998
           ],
           "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
-            15937
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 2,
+            "ff_qn": 3,
+            "vcc": 1
           }
         },
         "pt2_mux": {
@@ -4174,22 +3982,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15789
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15789,
             15791
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -4314,22 +4116,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15762
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15762,
             15764
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -4454,22 +4250,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15735
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15735,
             15737
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -4594,22 +4384,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15708
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15708,
             15710
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -4734,22 +4518,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15681
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15681,
             15683
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -4874,22 +4652,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15654
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15654,
             15656
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5014,22 +4786,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15627
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15627,
             15629
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5154,22 +4920,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15600
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15600,
             15602
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5294,22 +5054,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15573
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15573,
             15575
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5434,22 +5188,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15546
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15546,
             15548
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5574,22 +5322,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15519
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15519,
             15521
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5714,22 +5456,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15492
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15492,
             15494
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5854,22 +5590,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15465
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15465,
             15467
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -5994,22 +5724,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15438
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15438,
             15440
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6134,22 +5858,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15411
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15411,
             15413
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6274,22 +5992,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15384
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15384,
             15386
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6414,22 +6126,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16269
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16269,
             16271
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6554,22 +6260,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16242
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16242,
             16244
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6694,22 +6394,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16215
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16215,
             16217
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6834,22 +6528,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16188
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16188,
             16190
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -6974,22 +6662,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16161
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16161,
             16163
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7114,22 +6796,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16134
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16134,
             16136
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7254,22 +6930,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16107
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16107,
             16109
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7394,22 +7064,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16080
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16080,
             16082
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7534,22 +7198,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16053
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16053,
             16055
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7674,22 +7332,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            16026
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            16026,
             16028
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7814,22 +7466,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15999
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15999,
             16001
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -7954,22 +7600,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15972
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15972,
             15974
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -8094,22 +7734,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15945
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15945,
             15947
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -8234,22 +7868,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15918
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15918,
             15920
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -8374,22 +8002,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15891
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15891,
             15893
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
@@ -8514,22 +8136,16 @@
             "as": 1
           }
         },
-        "xor_a_func": {
+        "xor_a_input": {
           "fuses": [
-            15864
-          ],
-          "values": {
-            "zero": 0,
-            "ff_q": 1
-          }
-        },
-        "xor_a_invert": {
-          "fuses": [
+            15864,
             15866
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "gnd": 0,
+            "ff_q": 1,
+            "ff_qn": 3,
+            "vcc": 2
           }
         },
         "pt2_mux": {
