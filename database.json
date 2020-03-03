@@ -118,13 +118,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15729
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -243,13 +243,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15730
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -368,13 +368,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15733
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -493,13 +493,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15734
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -618,13 +618,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15737
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -743,13 +743,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15738
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -868,13 +868,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15741
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -993,13 +993,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15742
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1118,13 +1118,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15745
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1243,13 +1243,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15746
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1368,13 +1368,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15749
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1493,13 +1493,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15750
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1618,13 +1618,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15753
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1743,13 +1743,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15754
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1868,13 +1868,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15757
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -1993,13 +1993,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15758
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2118,13 +2118,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16209
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2243,13 +2243,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16210
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2368,13 +2368,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16213
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2493,13 +2493,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16214
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2618,13 +2618,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16217
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2743,13 +2743,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16218
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2868,13 +2868,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16221
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -2993,13 +2993,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16222
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3118,13 +3118,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16225
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3243,13 +3243,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16226
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3368,13 +3368,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16229
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3493,13 +3493,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16230
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3618,13 +3618,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16233
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3743,13 +3743,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16234
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3868,13 +3868,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16237
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -3993,13 +3993,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16238
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4252,13 +4252,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15779
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4395,13 +4395,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15752
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4538,13 +4538,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15725
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4681,13 +4681,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15698
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4824,13 +4824,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15671
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -4967,13 +4967,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15644
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5110,13 +5110,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15617
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5253,13 +5253,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15590
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5396,13 +5396,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15563
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5539,13 +5539,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15536
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5682,13 +5682,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15509
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5825,13 +5825,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15482
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -5968,13 +5968,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15455
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6111,13 +6111,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15428
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6254,13 +6254,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15401
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6397,13 +6397,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15374
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6540,13 +6540,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16259
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6683,13 +6683,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16232
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6826,13 +6826,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16205
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -6969,13 +6969,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16178
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7112,13 +7112,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16151
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7255,13 +7255,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16124
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7398,13 +7398,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16097
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7541,13 +7541,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16070
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7684,13 +7684,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16043
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7827,13 +7827,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             16016
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -7970,13 +7970,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15989
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -8113,13 +8113,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15962
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -8256,13 +8256,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15935
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -8399,13 +8399,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15908
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -8542,13 +8542,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15881
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
@@ -8685,13 +8685,13 @@
             "ce": 0
           }
         },
-        "async_reset": {
+        "global_reset": {
           "fuses": [
             15854
           ],
           "values": {
-            "gclr": 0,
-            "pt3": 1
+            "off": 1,
+            "on": 0
           }
         },
         "pt5_func": {
