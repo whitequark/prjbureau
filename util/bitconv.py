@@ -3,7 +3,7 @@ from bitarray import bitarray
 
 from .jesd3 import JESD3Parser
 from .svf import SVFParser, SVFEventHandler
-from .bitmap import *
+from .device import *
 
 
 def read_jed(file):
@@ -12,7 +12,7 @@ def read_jed(file):
     return parser.fuse, parser.design_spec
 
 
-def write_jed(file, jed_bits, comment):
+def write_jed(file, jed_bits, *, comment):
     assert '*' not in comment
     file.write("\x02{}*\n".format(comment))
     file.write("QF{}* F0*\n".format(len(jed_bits)))
@@ -41,42 +41,111 @@ class ATFSVFEventHandler(SVFEventHandler):
     svf_pio = ignored
 
     def __init__(self):
-        self.instr  = None
-        self.addr   = 0
-        self.data   = b''
-        self.writes = {}
+        self.ir = None
+        self.erase = False
+        self.addr = 0
+        self.data = b''
+        self.bits = {}
 
     def svf_sir(self, tdi, smask, tdo, mask):
-        instr = int.from_bytes(tdi.tobytes(), "little")
-        if instr == 0x2a1: # index
-            self.instr = 'index'
-        elif instr in (0x290, 0x291, 0x292, 0x293): # data
-            self.instr = 'data'
-        elif instr == 0x29e: # write
-            self.instr = 'write'
-        else:
-            self.instr = None
+        self.ir = int.from_bytes(tdi.tobytes(), 'little')
+        if self.ir == ATF15xxInstr.ISC_LATCH_ERASE:
+            self.erase = True
+        if self.ir == ATF15xxInstr.ISC_DATA:
+            self.erase = False
 
     def svf_sdr(self, tdi, smask, tdo, mask):
-        if self.instr == 'index':
-            self.addr = int.from_bytes(tdi.tobytes(), "little")
-        elif self.instr == 'data':
+        if self.ir == ATF15xxInstr.ISC_ADDRESS:
+            self.addr = int.from_bytes(tdi.tobytes(), 'little')
+        if (self.ir & ~0x3) == ATF15xxInstr.ISC_DATA:
             self.data = tdi
 
     def svf_runtest(self, run_state, run_count, run_clock, min_time, max_time, end_state):
-        if self.instr == 'write':
-            self.writes[self.addr] = self.data
+        if not self.erase and self.ir == ATF15xxInstr.ISC_PROGRAM_ERASE:
+            self.bits[self.addr] = self.data
 
 
 def read_svf(file):
     handler = ATFSVFEventHandler()
     parser = SVFParser(file.read(), handler)
     parser.parse_file()
-    return handler.writes, ""
+    return handler.bits, ''
 
 
-def write_svf(file, svf_bits, comment):
-    raise NotImplementedError
+def _bitarray_to_hex(input_bits):
+    bits = bitarray(input_bits, endian="little")
+    bits.bytereverse()
+    bits.reverse()
+    return bits.tobytes().hex()
+
+
+def write_svf(file, svf_bits, device, *, comment):
+    # This code is kind of awful.
+    def emit_header():
+        for comment_line in comment.splitlines():
+            file.write("// {}\n".format(comment_line))
+        file.write("TRST ABSENT;\n")
+        file.write("ENDIR IDLE;\n")
+        file.write("ENDDR IDLE;\n")
+        file.write("HDR 0;\n")
+        file.write("HIR 0;\n")
+        file.write("TDR 0;\n")
+        file.write("TIR 0;\n")
+        file.write("STATE RESET;\n")
+    def emit_check_idcode(idcode):
+        file.write("// Check IDCODE\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.IDCODE))
+        file.write("SDR 32 TDI (ffffffff)\n\tTDO ({:08x})\n\tMASK (ffffffff);\n".format(idcode))
+    def emit_enable():
+        file.write("// ISC enable\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_CONFIG))
+        file.write("SDR 10 TDI ({:03x});\n".format(0x1b9)) # magic constant?
+        file.write("STATE IDLE;\n")
+    def emit_disable():
+        file.write("// ISC disable\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_CONFIG))
+        file.write("SDR 10 TDI ({:03x});\n".format(0x000))
+        file.write("STATE IDLE;\n")
+    def emit_status():
+        file.write("// ISC check status\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_STATUS))
+        # actually check the status? ATMISP doesn't #yolo
+    def emit_erase():
+        file.write("// ISC erase\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_LATCH_ERASE))
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
+        file.write("RUNTEST IDLE 210E-3 SEC;\n")
+        emit_status()
+    def emit_program(address, data):
+        file.write("// ISC program word\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
+        file.write("SDR {} TDI ({:0{}x});\n".format(device.addr_width,
+            address, (device.addr_width + 3) // 4))
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))
+        file.write("SDR {} TDI ({:x});\n".format(len(data), int(data.to01()[::-1], 2)))
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
+        file.write("RUNTEST IDLE 30E-3 SEC;\n")
+        emit_status()
+    def emit_verify(address, data):
+        file.write("// ISC verify word\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
+        file.write("SDR {} TDI ({:0{}x});\n".format(device.addr_width,
+            address, (device.addr_width + 3) // 4))
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_READ))
+        file.write("RUNTEST IDLE 20E-3 SEC;\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))
+        file.write("SDR {} TDI ({:x})\n\tTDO ({:x})\n\tMASK ({:x});\n".format(len(data),
+            int(data.to01()[::-1], 2), int(data.to01()[::-1], 2), (1 << len(data)) - 1))
+
+    emit_header()
+    emit_check_idcode(device.idcode)
+    emit_enable()
+    emit_erase()
+    for svf_row in svf_bits:
+        emit_program(svf_row, svf_bits[svf_row])
+    for svf_row in svf_bits:
+        emit_verify(svf_row, svf_bits[svf_row])
+    emit_disable()
 
 
 class ATFFileType(argparse.FileType):
@@ -102,7 +171,7 @@ def main():
     args = parser.parse_args()
 
     if args.device == 'ATF1502':
-        bitmap = ATF1502Bitmap
+        device = ATF1502Device
     else:
         assert False
 
@@ -116,15 +185,15 @@ def main():
 
     if args.output.name.lower().endswith('.jed'):
         if jed_bits is None:
-            jed_bits = bitmap.svf_to_jed(svf_bits)
-        write_jed(args.output, jed_bits, comment)
+            jed_bits = device.svf_to_jed(svf_bits)
+        write_jed(args.output, jed_bits, comment=comment)
     elif args.output.name.lower().endswith('.svf'):
         if svf_bits is None:
-            svf_bits = bitmap.jed_to_svf(jed_bits)
-        write_svf(args.output, svf_bits, comment)
+            svf_bits = device.jed_to_svf(jed_bits)
+        write_svf(args.output, svf_bits, device, comment=comment)
     else:
         assert False
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

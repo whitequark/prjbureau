@@ -1,3 +1,8 @@
+This document is organized as a research log, so don't expect early entries to
+be complete or correct. (Or late ones.)
+
+-------------------------------------------------------------------------------
+
 Enumerating IR values produces the following list:
 
 TAP #0: IR[10]
@@ -76,3 +81,96 @@ in row-major order (5x86) and in the SVF file it is written in column-major
 order (86x5). It seems likely that the rest of the flash is also transposed,
 but it is not clear yet what function the padding bits have or how are product
 terms laid out exactly.
+
+-------------------------------------------------------------------------------
+
+At this point I decided to map out JED<>SVF permutation first, since it didn't
+look like it was something simple. See util/patgen.py and util/patmatch.py as
+well as docs/bitmap/ for details.
+
+-------------------------------------------------------------------------------
+
+A discussion with a very good dog, and a careful reading of ATF15xxAE datasheet
+yielded a sentence where it claimed to support IEEE 1532 and have 7 ISP JTAG
+instructions. This has been scrubbed from later documents, but the die I have
+has masks dated 1999, so it very likely has those same ISP instructions.
+
+The SVF file has the following unique SIR commands:
+
+  SIR 10 TDI (059);
+  SIR 10 TDI (280);
+  SIR 10 TDI (28c);
+  SIR 10 TDI (290);
+  SIR 10 TDI (291);
+  SIR 10 TDI (292);
+  SIR 10 TDI (293);
+  SIR 10 TDI (29e);
+  SIR 10 TDI (2a1);
+  SIR 10 TDI (2b3);
+  SIR 10 TDI (2bf);
+
+By noticing that 059 is IDCODE and grouping 290..293 into one instruction
+(these are all used to program different areas of flash), we arrive at a list
+of, indeed, 7 instructions:
+
+  1. 280
+  2. 28c
+  3. 290(..293)
+  4. 29e
+  5. 2a1
+  6. 2b3
+  7. 2bf
+
+Register 280 is loaded with 1b9 before ISC operations and with 000 after them.
+Register 2a1 contains a flash word address. Register 290 is used to shift data
+in and out. Register 28c is used to read a word. Register 29e is used to both
+program a word or erase the entire flash. Register 2b3 is used to specify
+an erase operation. Register 2bf has unclear use, but likely is a status
+register. I propose the following register map:
+
+  1. 280: ATF_CONFIG
+  2. 28c: ATF_READ
+  3. 290(..293): ATF_DATA
+  4. 29e: ATF_PROGRAM_ERASE
+  5. 2a1: ATF_ADDRESS
+  6. 2b3: ATF_LATCH_ERASE
+  7. 2bf: ATF_STATUS
+
+There is also an instruction for reading UES:
+
+  0. 270: ATF_READ_UES
+
+The programming flow for ATF1502 is as follows:
+
+  1. Enable:
+      SIR ATF_CONFIG
+      SDR 10'1b9
+  2. Disable:
+      SIR ATF_CONFIG
+      SDR 10'000
+  3. Erase:
+      SIR ATF_LATCH_ERASE
+      SIR ATF_PROGRAM_ERASE
+      RTI 210ms
+      SIR ATF_STATUS
+      SDR ?
+  4. Program word:
+      SIR ATF_ADDRESS
+      SDR $addr
+      SIR ATF_DATA|($addr>>8)
+      SDR $data
+      SIR ATF_PROGRAM_ERASE
+      RTI 30ms
+      SIR ATF_STATUS
+      SDR ?
+  5. Read word:
+      SIR ATF_ADDRESS
+      SDR $addr
+      SIR ATF_READ
+      RTI 20ms
+      SIR ATF_DATA|($addr>>8)
+      SDR =$data
+  6. Read UES:
+      SIR ATF_READ_UES
+      RTI 20ms
+      SDR $ues

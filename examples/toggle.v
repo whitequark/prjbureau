@@ -1,4 +1,5 @@
 //OPT: -device TQFP44
+//OPT: -strategy pin_keep on
 //PIN: CHIP "top" ASSIGNED TO TQFP44
 //PIN: CLK : 2
 //PIN: O : 22

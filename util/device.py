@@ -1,16 +1,36 @@
+import enum
 from bitarray import bitarray
 
 
-__all__ = ['ATF1502Bitmap']
+
+__all__ = ['ATF15xxInstr', 'ATF1502Device']
 
 
-class ATF15xxBitmap:
-    count  = None # int
-    layout = None # dict(range/tuple,range)
+class ATF15xxInstr(enum.IntEnum):
+    EXTEST              = 0x000
+    SAMPLE              = 0x055
+    IDCODE              = 0x059
+    ISC_READ_UES        = 0x270
+    ISC_CONFIG          = 0x280
+    ISC_READ            = 0x28c
+    ISC_DATA            = 0x290
+    ISC_PROGRAM_ERASE   = 0x29e
+    ISC_ADDRESS         = 0x2a1
+    ISC_LATCH_ERASE     = 0x2b3
+    ISC_STATUS          = 0x2bf
+    BYPASS              = 0xfff
+
+
+class ATF15xxDevice:
+    idcode = None # int
+
+    fuse_count = None # int
+    addr_width = None # int
+    data_width = None # dict(range/tuple,range)
 
     @classmethod
     def word_size(cls, svf_row):
-        for svf_rows, svf_cols in cls.layout:
+        for svf_rows, svf_cols in cls.data_width.items():
             if svf_row in svf_rows:
                 return len(svf_cols)
         assert False
@@ -38,7 +58,7 @@ class ATF15xxBitmap:
 
     @classmethod
     def svf_to_jed(cls, svf_bits):
-        jed_bits = bitarray(cls.count)
+        jed_bits = bitarray(cls.fuse_count)
         jed_bits.setall(0)
         for svf_row, svf_word in svf_bits.items():
             for svf_col, svf_bit in enumerate(svf_word):
@@ -48,9 +68,12 @@ class ATF15xxBitmap:
         return jed_bits
 
 
-class ATF1502Bitmap(ATF15xxBitmap):
-    count  = 16808
-    layout = {
+class ATF1502Device(ATF15xxDevice):
+    idcode = 0x0150203f
+
+    fuse_count = 16808
+    addr_width = 11
+    data_width = {
         range(  0, 108): range(86),
         range(128, 229): range(86),
         (256,): range(32),
@@ -114,16 +137,16 @@ class ATF1502Bitmap(ATF15xxBitmap):
 if __name__ == '__main__':
     with open('atf1502as_svf2jed.csv', 'w') as f:
         f.write('SVF ROW,SVF COL,JED\n')
-        for svf_rows, svf_cols in ATF1502Bitmap.layout.items():
+        for svf_rows, svf_cols in ATF1502Device.data_width.items():
             for svf_row in svf_rows:
                 for svf_col in svf_cols:
-                    jed_index = ATF1502Bitmap.svf_to_jed(svf_row, svf_col)
+                    jed_index = ATF1502Device.svf_to_jed(svf_row, svf_col)
                     if jed_index is None: jed_index = 0x7fff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
 
     with open('atf1502as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
-        for jed_index in range(ATF1502Bitmap.count):
-            svf_index = ATF1502Bitmap.jed_to_svf(jed_index)
+        for jed_index in range(ATF1502Device.fuse_count):
+            svf_index = ATF1502Device.jed_to_svf(jed_index)
             if svf_index is None: continue
             f.write('{},{},{}\n'.format(jed_index, *svf_index))

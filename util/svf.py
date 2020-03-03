@@ -263,7 +263,7 @@ class SVFParser:
             residue = value[length:]
             residue.reverse()
             self._parse_error("scan data length %d exceeds command length %d"
-                              % (length + residue.index(1), length))
+                              % (len(value), length))
 
         if length > len(value):
             padding = bitarray(length - len(value), endian="little")

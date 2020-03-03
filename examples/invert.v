@@ -1,5 +1,5 @@
 //OPT: -device TQFP44
-//OPT: -strategy JTAG=on
+//OPT: -strategy pin_keep on
 //PIN: CHIP "top" ASSIGNED TO TQFP44
 //PIN: I : 2
 //PIN: O : 22
