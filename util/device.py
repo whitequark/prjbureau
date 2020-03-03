@@ -18,7 +18,7 @@ class ATF15xxInstr(enum.IntEnum):
     ISC_ADDRESS         = 0x2a1
     ISC_LATCH_ERASE     = 0x2b3
     ISC_UNKNOWN         = 0x2bf
-    BYPASS              = 0xfff
+    BYPASS              = 0x3ff
 
 
 class ATF15xxDevice:
