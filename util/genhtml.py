@@ -83,6 +83,7 @@ macrocell_options = {
     "pt2_mux":          "M",
     "pt3_mux":          "M",
     "pt4_mux":          "M",
+    "pt5_mux":          "M",
     "global_reset":     "M",
     "pt4_func":         "M",
     "global_clock":     "M",

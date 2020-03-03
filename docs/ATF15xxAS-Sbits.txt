@@ -1,0 +1,26 @@
+S0  ? global_oe.0
+S1  ? global_oe.1
+S2  ? global_oe.2
+S3  ?
+S4  ?
+S5  = pt4_func
+S6  = xor_a_input.0
+S7  = global_clock.0
+S8  = low_power
+S9  ?
+S10 = xor_a_input.1
+S11 = invert_output
+S12 = pt4_mux
+S13 = pt2_mux
+S14 = pt5_mux
+S15 = global_reset
+S16 = pt3_mux
+S17 = pt5_func
+S18 ?
+S19 = global_clock.1
+S20 = open_collector
+S21 ?
+S22 = fast_output
+S23 = storage
+
+# ?????====?========?==?==
