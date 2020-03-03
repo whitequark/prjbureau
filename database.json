@@ -80,7 +80,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15409
           ],
@@ -109,22 +109,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15406
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15649
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -141,8 +132,8 @@
             15808
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -150,7 +141,7 @@
             15489
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -170,6 +161,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15406
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -202,7 +202,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15410
           ],
@@ -231,22 +231,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15405
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15650
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -263,8 +254,8 @@
             15811
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -272,7 +263,7 @@
             15490
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -292,6 +283,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15405
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -324,7 +324,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15413
           ],
@@ -353,22 +353,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15402
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15653
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -385,8 +376,8 @@
             15812
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -394,7 +385,7 @@
             15493
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -414,6 +405,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15402
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -446,7 +446,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15414
           ],
@@ -475,22 +475,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15401
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15654
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -507,8 +498,8 @@
             15815
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -516,7 +507,7 @@
             15494
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -536,6 +527,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15401
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -568,7 +568,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15417
           ],
@@ -597,22 +597,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15398
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15657
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -629,8 +620,8 @@
             15816
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -638,7 +629,7 @@
             15497
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -658,6 +649,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15398
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -690,7 +690,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15418
           ],
@@ -719,22 +719,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15397
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15658
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -751,8 +742,8 @@
             15819
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -760,7 +751,7 @@
             15498
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -780,6 +771,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15397
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -812,7 +812,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15421
           ],
@@ -841,22 +841,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15394
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15661
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -873,8 +864,8 @@
             15820
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -882,7 +873,7 @@
             15501
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -902,6 +893,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15394
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -934,7 +934,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15422
           ],
@@ -963,22 +963,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15393
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15662
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -995,8 +986,8 @@
             15823
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1004,7 +995,7 @@
             15502
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1024,6 +1015,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15393
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1056,7 +1056,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15425
           ],
@@ -1085,22 +1085,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15390
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15665
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1117,8 +1108,8 @@
             15824
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1126,7 +1117,7 @@
             15505
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1146,6 +1137,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15390
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1178,7 +1178,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15426
           ],
@@ -1207,22 +1207,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15389
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15666
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1239,8 +1230,8 @@
             15827
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1248,7 +1239,7 @@
             15506
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1268,6 +1259,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15389
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1300,7 +1300,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15429
           ],
@@ -1329,22 +1329,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15386
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15669
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1361,8 +1352,8 @@
             15828
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1370,7 +1361,7 @@
             15509
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1390,6 +1381,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15386
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1422,7 +1422,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15430
           ],
@@ -1451,22 +1451,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15385
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15670
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1483,8 +1474,8 @@
             15831
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1492,7 +1483,7 @@
             15510
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1512,6 +1503,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15385
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1544,7 +1544,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15433
           ],
@@ -1573,22 +1573,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15382
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15673
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1605,8 +1596,8 @@
             15832
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1614,7 +1605,7 @@
             15513
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1634,6 +1625,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15382
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1666,7 +1666,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15434
           ],
@@ -1695,22 +1695,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15381
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15674
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1727,8 +1718,8 @@
             15835
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1736,7 +1727,7 @@
             15514
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1756,6 +1747,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15381
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1788,7 +1788,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15437
           ],
@@ -1817,22 +1817,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15378
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15677
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1849,8 +1840,8 @@
             15836
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1858,7 +1849,7 @@
             15517
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -1878,6 +1869,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15378
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -1910,7 +1910,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15438
           ],
@@ -1939,22 +1939,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15377
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15678
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -1971,8 +1962,8 @@
             15839
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -1980,7 +1971,7 @@
             15518
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2000,6 +1991,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15377
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2032,7 +2032,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15889
           ],
@@ -2061,22 +2061,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15886
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16129
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2093,8 +2084,8 @@
             16288
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2102,7 +2093,7 @@
             15969
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2122,6 +2113,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15886
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2154,7 +2154,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15890
           ],
@@ -2183,22 +2183,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15885
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16130
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2215,8 +2206,8 @@
             16291
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2224,7 +2215,7 @@
             15970
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2244,6 +2235,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15885
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2276,7 +2276,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15893
           ],
@@ -2305,22 +2305,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15882
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16133
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2337,8 +2328,8 @@
             16292
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2346,7 +2337,7 @@
             15973
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2366,6 +2357,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15882
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2398,7 +2398,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15894
           ],
@@ -2427,22 +2427,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15881
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16134
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2459,8 +2450,8 @@
             16295
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2468,7 +2459,7 @@
             15974
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2488,6 +2479,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15881
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2520,7 +2520,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15897
           ],
@@ -2549,22 +2549,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15878
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16137
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2581,8 +2572,8 @@
             16296
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2590,7 +2581,7 @@
             15977
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2610,6 +2601,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15878
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2642,7 +2642,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15898
           ],
@@ -2671,22 +2671,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15877
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16138
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2703,8 +2694,8 @@
             16299
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2712,7 +2703,7 @@
             15978
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2732,6 +2723,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15877
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2764,7 +2764,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15901
           ],
@@ -2793,22 +2793,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15874
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16141
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2825,8 +2816,8 @@
             16300
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2834,7 +2825,7 @@
             15981
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2854,6 +2845,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15874
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -2886,7 +2886,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15902
           ],
@@ -2915,22 +2915,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15873
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16142
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -2947,8 +2938,8 @@
             16303
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -2956,7 +2947,7 @@
             15982
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -2976,6 +2967,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15873
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3008,7 +3008,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15905
           ],
@@ -3037,22 +3037,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15870
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16145
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3069,8 +3060,8 @@
             16304
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3078,7 +3069,7 @@
             15985
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3098,6 +3089,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15870
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3130,7 +3130,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15906
           ],
@@ -3159,22 +3159,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15869
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16146
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3191,8 +3182,8 @@
             16307
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3200,7 +3191,7 @@
             15986
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3220,6 +3211,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15869
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3252,7 +3252,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15909
           ],
@@ -3281,22 +3281,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15866
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16149
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3313,8 +3304,8 @@
             16308
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3322,7 +3313,7 @@
             15989
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3342,6 +3333,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15866
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3374,7 +3374,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15910
           ],
@@ -3403,22 +3403,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15865
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16150
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3435,8 +3426,8 @@
             16311
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3444,7 +3435,7 @@
             15990
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3464,6 +3455,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15865
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3496,7 +3496,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15913
           ],
@@ -3525,22 +3525,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15862
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16153
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3557,8 +3548,8 @@
             16312
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3566,7 +3557,7 @@
             15993
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3586,6 +3577,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15862
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3618,7 +3618,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15914
           ],
@@ -3647,22 +3647,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15861
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16154
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3679,8 +3670,8 @@
             16315
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3688,7 +3679,7 @@
             15994
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3708,6 +3699,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15861
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3740,7 +3740,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15917
           ],
@@ -3769,22 +3769,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15858
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16157
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3801,8 +3792,8 @@
             16316
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3810,7 +3801,7 @@
             15997
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3830,6 +3821,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15858
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -3862,7 +3862,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15918
           ],
@@ -3891,22 +3891,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15857
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16158
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -3923,8 +3914,8 @@
             16319
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -3932,7 +3923,7 @@
             15998
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -3952,6 +3943,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15857
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       }
@@ -4118,7 +4118,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15788
           ],
@@ -4147,22 +4147,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15787
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15781
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4179,8 +4170,8 @@
             15778
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4188,7 +4179,7 @@
             15789
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4208,6 +4199,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15787
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4258,7 +4258,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15761
           ],
@@ -4287,22 +4287,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15760
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15754
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4319,8 +4310,8 @@
             15751
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4328,7 +4319,7 @@
             15762
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4348,6 +4339,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15760
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4398,7 +4398,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15734
           ],
@@ -4427,22 +4427,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15733
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15727
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4459,8 +4450,8 @@
             15724
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4468,7 +4459,7 @@
             15735
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4488,6 +4479,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15733
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4538,7 +4538,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15707
           ],
@@ -4567,22 +4567,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15706
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15700
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4599,8 +4590,8 @@
             15697
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4608,7 +4599,7 @@
             15708
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4628,6 +4619,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15706
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4678,7 +4678,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15680
           ],
@@ -4707,22 +4707,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15679
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15673
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4739,8 +4730,8 @@
             15670
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4748,7 +4739,7 @@
             15681
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4768,6 +4759,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15679
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4818,7 +4818,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15653
           ],
@@ -4847,22 +4847,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15652
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15646
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -4879,8 +4870,8 @@
             15643
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -4888,7 +4879,7 @@
             15654
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -4908,6 +4899,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15652
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -4958,7 +4958,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15626
           ],
@@ -4987,22 +4987,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15625
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15619
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5019,8 +5010,8 @@
             15616
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5028,7 +5019,7 @@
             15627
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5048,6 +5039,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15625
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5098,7 +5098,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15599
           ],
@@ -5127,22 +5127,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15598
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15592
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5159,8 +5150,8 @@
             15589
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5168,7 +5159,7 @@
             15600
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5188,6 +5179,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15598
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5238,7 +5238,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15572
           ],
@@ -5267,22 +5267,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15571
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15565
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5299,8 +5290,8 @@
             15562
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5308,7 +5299,7 @@
             15573
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5328,6 +5319,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15571
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5378,7 +5378,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15545
           ],
@@ -5407,22 +5407,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15544
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15538
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5439,8 +5430,8 @@
             15535
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5448,7 +5439,7 @@
             15546
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5468,6 +5459,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15544
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5518,7 +5518,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15518
           ],
@@ -5547,22 +5547,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15517
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15511
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5579,8 +5570,8 @@
             15508
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5588,7 +5579,7 @@
             15519
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5608,6 +5599,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15517
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5658,7 +5658,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15491
           ],
@@ -5687,22 +5687,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15490
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15484
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5719,8 +5710,8 @@
             15481
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5728,7 +5719,7 @@
             15492
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5748,6 +5739,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15490
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5798,7 +5798,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15464
           ],
@@ -5827,22 +5827,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15463
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15457
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5859,8 +5850,8 @@
             15454
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -5868,7 +5859,7 @@
             15465
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -5888,6 +5879,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15463
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -5938,7 +5938,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15437
           ],
@@ -5967,22 +5967,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15436
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15430
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -5999,8 +5990,8 @@
             15427
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6008,7 +5999,7 @@
             15438
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6028,6 +6019,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15436
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6078,7 +6078,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15410
           ],
@@ -6107,22 +6107,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15409
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15403
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6139,8 +6130,8 @@
             15400
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6148,7 +6139,7 @@
             15411
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6168,6 +6159,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15409
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6218,7 +6218,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15383
           ],
@@ -6247,22 +6247,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15382
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15376
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6279,8 +6270,8 @@
             15373
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6288,7 +6279,7 @@
             15384
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6308,6 +6299,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15382
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6358,7 +6358,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16268
           ],
@@ -6387,22 +6387,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16267
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16261
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6419,8 +6410,8 @@
             16258
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6428,7 +6419,7 @@
             16269
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6448,6 +6439,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16267
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6498,7 +6498,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16241
           ],
@@ -6527,22 +6527,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16240
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16234
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6559,8 +6550,8 @@
             16231
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6568,7 +6559,7 @@
             16242
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6588,6 +6579,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16240
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6638,7 +6638,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16214
           ],
@@ -6667,22 +6667,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16213
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16207
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6699,8 +6690,8 @@
             16204
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6708,7 +6699,7 @@
             16215
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6728,6 +6719,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16213
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6778,7 +6778,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16187
           ],
@@ -6807,22 +6807,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16186
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16180
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6839,8 +6830,8 @@
             16177
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6848,7 +6839,7 @@
             16188
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -6868,6 +6859,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16186
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -6918,7 +6918,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16160
           ],
@@ -6947,22 +6947,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16159
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16153
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -6979,8 +6970,8 @@
             16150
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -6988,7 +6979,7 @@
             16161
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7008,6 +6999,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16159
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7058,7 +7058,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16133
           ],
@@ -7087,22 +7087,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16132
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16126
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7119,8 +7110,8 @@
             16123
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7128,7 +7119,7 @@
             16134
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7148,6 +7139,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16132
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7198,7 +7198,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16106
           ],
@@ -7227,22 +7227,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16105
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16099
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7259,8 +7250,8 @@
             16096
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7268,7 +7259,7 @@
             16107
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7288,6 +7279,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16105
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7338,7 +7338,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16079
           ],
@@ -7367,22 +7367,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16078
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16072
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7399,8 +7390,8 @@
             16069
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7408,7 +7399,7 @@
             16080
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7428,6 +7419,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16078
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7478,7 +7478,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16052
           ],
@@ -7507,22 +7507,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16051
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16045
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7539,8 +7530,8 @@
             16042
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7548,7 +7539,7 @@
             16053
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7568,6 +7559,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16051
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7618,7 +7618,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             16025
           ],
@@ -7647,22 +7647,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            16024
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             16018
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7679,8 +7670,8 @@
             16015
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7688,7 +7679,7 @@
             16026
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7708,6 +7699,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            16024
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7758,7 +7758,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15998
           ],
@@ -7787,22 +7787,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15997
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15991
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7819,8 +7810,8 @@
             15988
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7828,7 +7819,7 @@
             15999
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7848,6 +7839,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15997
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -7898,7 +7898,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15971
           ],
@@ -7927,22 +7927,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15970
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15964
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -7959,8 +7950,8 @@
             15961
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -7968,7 +7959,7 @@
             15972
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -7988,6 +7979,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15970
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -8038,7 +8038,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15944
           ],
@@ -8067,22 +8067,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15943
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15937
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -8099,8 +8090,8 @@
             15934
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -8108,7 +8099,7 @@
             15945
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -8128,6 +8119,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15943
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -8178,7 +8178,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15917
           ],
@@ -8207,22 +8207,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15916
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15910
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -8239,8 +8230,8 @@
             15907
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -8248,7 +8239,7 @@
             15918
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -8268,6 +8259,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15916
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -8318,7 +8318,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15890
           ],
@@ -8347,22 +8347,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15889
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15883
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -8379,8 +8370,8 @@
             15880
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -8388,7 +8379,7 @@
             15891
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -8408,6 +8399,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15889
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       },
@@ -8458,7 +8458,7 @@
             "on": 1
           }
         },
-        "invert_output": {
+        "output_invert": {
           "fuses": [
             15863
           ],
@@ -8487,22 +8487,13 @@
             "gclk1": 3
           }
         },
-        "pt4_gate": {
-          "fuses": [
-            15862
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "pt4_func": {
           "fuses": [
             15856
           ],
           "values": {
-            "clock_enable": 0,
-            "clock": 1
+            "clk": 1,
+            "ce": 0
           }
         },
         "async_reset": {
@@ -8519,8 +8510,8 @@
             15853
           ],
           "values": {
-            "output_enable": 0,
-            "async_set": 1
+            "oe": 0,
+            "as": 1
           }
         },
         "xor_a_func": {
@@ -8528,7 +8519,7 @@
             15864
           ],
           "values": {
-            "const": 0,
+            "zero": 0,
             "ff_q": 1
           }
         },
@@ -8548,6 +8539,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt4_mux": {
+          "fuses": [
+            15862
+          ],
+          "values": {
+            "sum": 0,
+            "clk_ce": 1
           }
         }
       }

@@ -30,7 +30,7 @@ with database.transact() as db:
             # https://www.dataman.com/media/datasheet/Atmel/ATF15xxSE_doc2401.pdf
             macrocell.update({
                 "xor_a_func":
-                    bitdiff.describe(1, {"const": f_dff0, "ff_q": f_tff0}),
+                    bitdiff.describe(1, {"zero": f_dff0, "ff_q": f_tff0}),
                 "xor_a_invert":
                     bitdiff.describe(1, {"off": f_dff0, "on": f_dff1})
             })

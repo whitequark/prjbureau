@@ -1147,9 +1147,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15968'></a>+128</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15886'></a>+46</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15969'></a>+129</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -1157,10 +1167,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16207'></a>+367</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16129'></a>+289</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16126'></a>+286</th><th width='40' style='font-size: 13px'><a name='L16127'></a>+287</th></tr>
@@ -1168,32 +1178,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15968'></a>+128</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15886'></a>+46</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16129'></a>+289</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16288'></a>+448</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16209'></a>+369</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16288'></a>+448</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16207'></a>+367</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15889'></a>+49</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -1786,9 +1786,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15971'></a>+131</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15885'></a>+45</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15970'></a>+130</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -1796,10 +1806,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16204'></a>+364</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16130'></a>+290</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16124'></a>+284</th><th width='40' style='font-size: 13px'><a name='L16125'></a>+285</th></tr>
@@ -1807,32 +1817,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15971'></a>+131</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15885'></a>+45</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16130'></a>+290</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16291'></a>+451</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16210'></a>+370</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16291'></a>+451</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16204'></a>+364</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15890'></a>+50</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -2425,9 +2425,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15972'></a>+132</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15882'></a>+42</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15973'></a>+133</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -2435,10 +2445,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16203'></a>+363</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16133'></a>+293</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16122'></a>+282</th><th width='40' style='font-size: 13px'><a name='L16123'></a>+283</th></tr>
@@ -2446,32 +2456,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15972'></a>+132</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15882'></a>+42</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16133'></a>+293</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16292'></a>+452</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16213'></a>+373</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16292'></a>+452</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16203'></a>+363</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15893'></a>+53</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -3064,9 +3064,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15975'></a>+135</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15881'></a>+41</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15974'></a>+134</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -3074,10 +3084,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16200'></a>+360</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16134'></a>+294</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16120'></a>+280</th><th width='40' style='font-size: 13px'><a name='L16121'></a>+281</th></tr>
@@ -3085,32 +3095,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15975'></a>+135</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15881'></a>+41</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16134'></a>+294</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16295'></a>+455</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16214'></a>+374</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16295'></a>+455</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16200'></a>+360</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15894'></a>+54</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -3703,9 +3703,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15976'></a>+136</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15878'></a>+38</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15977'></a>+137</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -3713,10 +3723,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16199'></a>+359</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16137'></a>+297</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16118'></a>+278</th><th width='40' style='font-size: 13px'><a name='L16119'></a>+279</th></tr>
@@ -3724,32 +3734,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15976'></a>+136</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15878'></a>+38</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16137'></a>+297</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16296'></a>+456</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16217'></a>+377</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16296'></a>+456</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16199'></a>+359</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15897'></a>+57</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -4342,9 +4342,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15979'></a>+139</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15877'></a>+37</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15978'></a>+138</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -4352,10 +4362,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16196'></a>+356</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16138'></a>+298</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16116'></a>+276</th><th width='40' style='font-size: 13px'><a name='L16117'></a>+277</th></tr>
@@ -4363,32 +4373,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15979'></a>+139</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15877'></a>+37</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16138'></a>+298</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16299'></a>+459</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16218'></a>+378</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16299'></a>+459</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16196'></a>+356</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15898'></a>+58</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -4981,9 +4981,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15980'></a>+140</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15874'></a>+34</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15981'></a>+141</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -4991,10 +5001,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16195'></a>+355</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16141'></a>+301</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16114'></a>+274</th><th width='40' style='font-size: 13px'><a name='L16115'></a>+275</th></tr>
@@ -5002,32 +5012,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15980'></a>+140</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15874'></a>+34</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16141'></a>+301</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16300'></a>+460</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16221'></a>+381</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16300'></a>+460</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16195'></a>+355</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15901'></a>+61</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -5620,9 +5620,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15983'></a>+143</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15873'></a>+33</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15982'></a>+142</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -5630,10 +5640,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16192'></a>+352</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16142'></a>+302</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16112'></a>+272</th><th width='40' style='font-size: 13px'><a name='L16113'></a>+273</th></tr>
@@ -5641,32 +5651,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15983'></a>+143</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15873'></a>+33</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16142'></a>+302</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16303'></a>+463</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16222'></a>+382</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16303'></a>+463</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16192'></a>+352</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15902'></a>+62</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -6259,9 +6259,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15984'></a>+144</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15870'></a>+30</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15985'></a>+145</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -6269,10 +6279,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16191'></a>+351</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16145'></a>+305</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16110'></a>+270</th><th width='40' style='font-size: 13px'><a name='L16111'></a>+271</th></tr>
@@ -6280,32 +6290,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15984'></a>+144</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15870'></a>+30</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16145'></a>+305</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16304'></a>+464</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16225'></a>+385</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16304'></a>+464</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16191'></a>+351</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15905'></a>+65</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -6898,9 +6898,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15987'></a>+147</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15869'></a>+29</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15986'></a>+146</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -6908,10 +6918,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16188'></a>+348</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16146'></a>+306</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16108'></a>+268</th><th width='40' style='font-size: 13px'><a name='L16109'></a>+269</th></tr>
@@ -6919,32 +6929,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15987'></a>+147</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15869'></a>+29</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16146'></a>+306</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16307'></a>+467</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16226'></a>+386</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16307'></a>+467</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16188'></a>+348</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15906'></a>+66</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -7537,9 +7537,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15988'></a>+148</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15866'></a>+26</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15989'></a>+149</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -7547,10 +7557,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16187'></a>+347</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16149'></a>+309</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16106'></a>+266</th><th width='40' style='font-size: 13px'><a name='L16107'></a>+267</th></tr>
@@ -7558,32 +7568,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15988'></a>+148</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15866'></a>+26</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16149'></a>+309</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16308'></a>+468</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16229'></a>+389</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16308'></a>+468</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16187'></a>+347</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15909'></a>+69</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -8176,9 +8176,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15991'></a>+151</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15865'></a>+25</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15990'></a>+150</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -8186,10 +8196,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16184'></a>+344</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16150'></a>+310</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16104'></a>+264</th><th width='40' style='font-size: 13px'><a name='L16105'></a>+265</th></tr>
@@ -8197,32 +8207,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15991'></a>+151</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15865'></a>+25</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16150'></a>+310</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16311'></a>+471</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16230'></a>+390</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16311'></a>+471</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16184'></a>+344</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15910'></a>+70</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -8815,9 +8815,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15992'></a>+152</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15862'></a>+22</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15993'></a>+153</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -8825,10 +8835,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16183'></a>+343</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16153'></a>+313</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16102'></a>+262</th><th width='40' style='font-size: 13px'><a name='L16103'></a>+263</th></tr>
@@ -8836,32 +8846,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15992'></a>+152</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15862'></a>+22</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16153'></a>+313</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16312'></a>+472</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16233'></a>+393</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16312'></a>+472</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16183'></a>+343</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15913'></a>+73</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -9454,9 +9454,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15995'></a>+155</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15861'></a>+21</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15994'></a>+154</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -9464,10 +9474,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16180'></a>+340</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16154'></a>+314</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16100'></a>+260</th><th width='40' style='font-size: 13px'><a name='L16101'></a>+261</th></tr>
@@ -9475,32 +9485,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15995'></a>+155</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15861'></a>+21</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16154'></a>+314</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16315'></a>+475</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16234'></a>+394</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16315'></a>+475</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16180'></a>+340</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15914'></a>+74</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -10093,9 +10093,19 @@
 <td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='+479' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L16319'>-</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15996'></a>+156</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15858'></a>+18</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15997'></a>+157</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -10103,10 +10113,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16179'></a>+339</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16157'></a>+317</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16098'></a>+258</th><th width='40' style='font-size: 13px'><a name='L16099'></a>+259</th></tr>
@@ -10114,32 +10124,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>1</td><td align='center'>0</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15996'></a>+156</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15858'></a>+18</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16157'></a>+317</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16316'></a>+476</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16237'></a>+397</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16316'></a>+476</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16179'></a>+339</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15917'></a>+77</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
@@ -10732,9 +10732,19 @@
 <td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='+479' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16319'>M</a></abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15999'></a>+159</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>xor</td><td align='center'>1</td></tr>
+</table>
+<p>Fuse combinations for option "pt4_mux":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15857'></a>+17</th></tr>
+<tr><td align='right'>sum</td><td align='center'>0</td></tr>
+<tr><td align='right'>clk_ce</td><td align='center'>1</td></tr>
+</table>
 <p>Fuse combinations for option "xor_a_func":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15998'></a>+158</th></tr>
-<tr><td align='right'>const</td><td align='center'>0</td></tr>
+<tr><td align='right'>zero</td><td align='center'>0</td></tr>
 <tr><td align='right'>ff_q</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_a_invert":</p><table border='1'>
@@ -10742,10 +10752,10 @@
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "storage":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16176'></a>+336</th></tr>
-<tr><td align='right'>latch</td><td align='center'>0</td></tr>
-<tr><td align='right'>ff</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt4_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16158'></a>+318</th></tr>
+<tr><td align='right'>clk</td><td align='center'>1</td></tr>
+<tr><td align='right'>ce</td><td align='center'>0</td></tr>
 </table>
 <p>Fuse combinations for option "global_clock":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16096'></a>+256</th><th width='40' style='font-size: 13px'><a name='L16097'></a>+257</th></tr>
@@ -10753,32 +10763,22 @@
 <tr><td align='right'>gclk3</td><td align='center'>0</td><td align='center'>1</td></tr>
 <tr><td align='right'>gclk1</td><td align='center'>1</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt2_mux":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15999'></a>+159</th></tr>
-<tr><td align='right'>sum</td><td align='center'>0</td></tr>
-<tr><td align='right'>xor</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_gate":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15857'></a>+17</th></tr>
-<tr><td align='right'>off</td><td align='center'>0</td></tr>
-<tr><td align='right'>on</td><td align='center'>1</td></tr>
-</table>
-<p>Fuse combinations for option "pt4_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16158'></a>+318</th></tr>
-<tr><td align='right'>clock_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>clock</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "pt5_func":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16319'></a>+479</th></tr>
+<tr><td align='right'>oe</td><td align='center'>0</td></tr>
+<tr><td align='right'>as</td><td align='center'>1</td></tr>
 </table>
 <p>Fuse combinations for option "async_reset":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16238'></a>+398</th></tr>
 <tr><td align='right'>gclr</td><td align='center'>0</td></tr>
 <tr><td align='right'>pt3</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "pt5_func":</p><table border='1'>
-<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16319'></a>+479</th></tr>
-<tr><td align='right'>output_enable</td><td align='center'>0</td></tr>
-<tr><td align='right'>async_set</td><td align='center'>1</td></tr>
+<p>Fuse combinations for option "storage":</p><table border='1'>
+<tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L16176'></a>+336</th></tr>
+<tr><td align='right'>latch</td><td align='center'>0</td></tr>
+<tr><td align='right'>ff</td><td align='center'>1</td></tr>
 </table>
-<p>Fuse combinations for option "invert_output":</p><table border='1'>
+<p>Fuse combinations for option "output_invert":</p><table border='1'>
 <tr><td width='60'></td><th width='40' style='font-size: 13px'><a name='L15918'></a>+78</th></tr>
 <tr><td align='right'>off</td><td align='center'>0</td></tr>
 <tr><td align='right'>on</td><td align='center'>1</td></tr>

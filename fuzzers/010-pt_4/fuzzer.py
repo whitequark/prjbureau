@@ -7,20 +7,19 @@ with database.transact() as db:
         for macrocell_name, macrocell in device["macrocells"].items():
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK2, CLR, output Q); {code} endmodule",
+                    f"module top(input CLK2, OE1, output Q); {code}; endmodule",
                     {
                         "CLK2": pinout[device["clocks"]["2"]["pad"]],
-                        "CLR": pinout[device["clear"]["pad"]],
+                        "OE1": pinout[device["enables"]["1"]["pad"]],
                         "Q": pinout[macrocell["pad"]],
                     },
                     f"{device_name}-{package}")
 
-            f_as = run(f"DFFAS x(.CLK(CLK2), .AS(CLR), .D(CLR), .Q(Q));")
-            f_oe = run(f"wire X; DFF x(.CLK(CLK2), .D(CLR), .Q(X)); "
-                       f"BUFTH t(.A(X), .ENA(CLR), .Q(Q));")
+            f_mux_1   = run("DFF x(.CLK(1'b1), .D(1'b0), .Q(Q))")
+            f_mux_pt4 = run("DFF x(.CLK(1'b0), .D(1'b0), .Q(Q))")
 
-            # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
+            # PT4 can be either a part of the sum term, or serve as clock/clock enable.
             macrocell.update({
-                "pt5_func":
-                    bitdiff.describe(1, {"output_enable": f_oe, "async_set": f_as})
+                "pt4_mux":
+                    bitdiff.describe(1, {"sum": f_mux_1, "clk_ce": f_mux_pt4}),
             })
