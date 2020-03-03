@@ -174,3 +174,8 @@ The programming flow for ATF1502 is as follows:
       SIR ATF_READ_UES
       RTI 20ms
       SDR $ues
+
+-------------------------------------------------------------------------------
+
+Whatever the fuck register 2bf is doing, it doesn't act like a status register.
+Seems to be just BYPASS: always captured as 0.

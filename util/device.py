@@ -17,7 +17,7 @@ class ATF15xxInstr(enum.IntEnum):
     ISC_PROGRAM_ERASE   = 0x29e
     ISC_ADDRESS         = 0x2a1
     ISC_LATCH_ERASE     = 0x2b3
-    ISC_STATUS          = 0x2bf
+    ISC_UNKNOWN         = 0x2bf
     BYPASS              = 0xfff
 
 

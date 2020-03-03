@@ -106,16 +106,19 @@ def write_svf(file, svf_bits, device, *, comment):
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_CONFIG))
         file.write("SDR 10 TDI ({:03x});\n".format(0x000))
         file.write("STATE IDLE;\n")
-    def emit_status():
-        file.write("// ISC check status\n")
-        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_STATUS))
-        # actually check the status? ATMISP doesn't #yolo
+    def emit_unknown():
+        # ATMISP does this for unknown reasons. DR seems to be just BYPASS. Removing this
+        # doesn't do anything (and shouldn't do anything, since ATMISP doesn't go through RTI
+        # or capture/update DR), but let's keep it for now. Vendor tools wouldn't emit SIR
+        # without any reason whatsoever, right? Right??
+        file.write("// ISC unknown\n")
+        file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_UNKNOWN))
     def emit_erase():
         file.write("// ISC erase\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_LATCH_ERASE))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
         file.write("RUNTEST IDLE 210E-3 SEC;\n")
-        emit_status()
+        emit_unknown()
     def emit_program(address, data):
         file.write("// ISC program word\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
@@ -125,7 +128,7 @@ def write_svf(file, svf_bits, device, *, comment):
         file.write("SDR {} TDI ({:x});\n".format(len(data), int(data.to01()[::-1], 2)))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
         file.write("RUNTEST IDLE 30E-3 SEC;\n")
-        emit_status()
+        emit_unknown()
     def emit_verify(address, data):
         file.write("// ISC verify word\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
