@@ -157,6 +157,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15407
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15406
@@ -271,6 +280,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15404
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -389,6 +407,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15403
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15402
@@ -503,6 +530,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15400
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -621,6 +657,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15399
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15398
@@ -735,6 +780,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15396
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -853,6 +907,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15395
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15394
@@ -967,6 +1030,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15392
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -1085,6 +1157,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15391
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15390
@@ -1199,6 +1280,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15388
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -1317,6 +1407,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15387
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15386
@@ -1431,6 +1530,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15384
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -1549,6 +1657,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15383
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15382
@@ -1663,6 +1780,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15380
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -1781,6 +1907,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15379
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15378
@@ -1895,6 +2030,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15376
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -2013,6 +2157,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15887
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15886
@@ -2127,6 +2280,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15884
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -2245,6 +2407,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15883
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15882
@@ -2359,6 +2530,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15880
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -2477,6 +2657,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15879
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15878
@@ -2591,6 +2780,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15876
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -2709,6 +2907,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15875
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15874
@@ -2823,6 +3030,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15872
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -2941,6 +3157,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15871
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15870
@@ -3055,6 +3280,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15868
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -3173,6 +3407,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15867
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15866
@@ -3287,6 +3530,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15864
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -3405,6 +3657,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15863
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15862
@@ -3519,6 +3780,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15860
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -3637,6 +3907,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15859
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15858
@@ -3751,6 +4030,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15856
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -4003,6 +4291,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15784
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15787
@@ -4135,6 +4432,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15757
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -4271,6 +4577,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15730
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15733
@@ -4403,6 +4718,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15703
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -4539,6 +4863,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15676
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15679
@@ -4671,6 +5004,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15649
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -4807,6 +5149,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15622
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15625
@@ -4939,6 +5290,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15595
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -5075,6 +5435,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15568
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15571
@@ -5207,6 +5576,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15541
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -5343,6 +5721,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15514
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15517
@@ -5475,6 +5862,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15487
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -5611,6 +6007,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15460
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15463
@@ -5743,6 +6148,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15433
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -5879,6 +6293,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15406
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15409
@@ -6011,6 +6434,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15379
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -6147,6 +6579,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            16264
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             16267
@@ -6279,6 +6720,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            16237
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -6415,6 +6865,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            16210
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             16213
@@ -6547,6 +7006,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            16183
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -6683,6 +7151,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            16156
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             16159
@@ -6815,6 +7292,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            16129
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -6951,6 +7437,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            16102
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             16105
@@ -7083,6 +7578,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            16075
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -7219,6 +7723,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            16048
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             16051
@@ -7351,6 +7864,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            16021
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -7487,6 +8009,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15994
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15997
@@ -7619,6 +8150,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15967
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -7755,6 +8295,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15940
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15943
@@ -7887,6 +8436,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15913
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {
@@ -8023,6 +8581,15 @@
             "xor": 1
           }
         },
+        "pt3_mux": {
+          "fuses": [
+            15886
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
+          }
+        },
         "pt4_mux": {
           "fuses": [
             15889
@@ -8155,6 +8722,15 @@
           "values": {
             "sum": 0,
             "xor": 1
+          }
+        },
+        "pt3_mux": {
+          "fuses": [
+            15859
+          ],
+          "values": {
+            "sum": 0,
+            "ar": 1
           }
         },
         "pt4_mux": {

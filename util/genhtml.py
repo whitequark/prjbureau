@@ -81,6 +81,7 @@ def write_option(f, option_name, option, base):
 
 macrocell_options = {
     "pt2_mux":          "M",
+    "pt3_mux":          "M",
     "pt4_mux":          "M",
     "pt4_func":         "M",
     "global_clock":     "M",
