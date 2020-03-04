@@ -1,4 +1,3 @@
-import re
 import os, os.path, ntpath
 import subprocess
 
@@ -37,16 +36,6 @@ def run(verilog, pins, device, *, strategy={}, options=[], name="work"):
         "-p", f"hierarchy",
         "-p", f"write_edif -attrprop {name}.edif",
     ], cwd=work_dir)
-
-    # Post-process EDIF. There is no apparent way (either documented or not) to express
-    # a buried node (like PINNODE in CUPL) in EDIF for some reason. However it turns out
-    # that unresolved references in portRef work exactly like we want.
-    with open(os.path.join(work_dir, f"{name}.edif"), "r+") as f:
-        edif = f.read()
-        f.seek(0)
-        f.truncate()
-        edif = re.sub(r"\(port FB_[a-zA-Z0-9_]+ \(direction (INPUT|OUTPUT|INOUT)\)\)", "", edif)
-        f.write(edif)
 
     strategy = {
         "ifmt": "edif",
