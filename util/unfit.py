@@ -56,10 +56,6 @@ def main():
             pads.add(f"PAD_{node['pad']}")
     pads = list(sorted(pads, key=natural_sort_key))
 
-    feedbacks = []
-    for mc_name, macrocell in device['macrocells'].items():
-        feedbacks.append(f"FB_{mc_name}")
-
     output.write(f"module {basename}({', '.join(pads)});\n\n")
     output.write(f"    // Global inputs\n")
     # TOO: missing programmable inverters
@@ -67,8 +63,24 @@ def main():
     for gclk_name in ("1", "2", "3"):
         output.write(f"    assign GCLK{gclk_name} = PAD_{device['clocks'][gclk_name]['pad']};\n")
     output.write(f"\n")
+
+    feedbacks = []
+    for mc_name, macrocell in device['macrocells'].items():
+        feedbacks.append(f"FB_{mc_name}")
+
     output.write(f"    // Macrocell feedbacks\n")
     output.write(f"    wire {', '.join(feedbacks)};\n")
+    output.write(f"\n")
+
+    output.write(f"    // Global OE muxes\n")
+    for mux_name, mux in device['goe_muxes'].items():
+        choice = extract(fuses, mux)
+        if choice == 'GND':
+            mux_wire = "1'b0"
+        else:
+            # TODO: figure out what is happening with PAD choices vs FB choices
+            mux_wire = choice
+        output.write(f"    wire {mux_name} = {mux_wire};\n")
     output.write(f"\n")
 
     for mc_name, macrocell in device['macrocells'].items():

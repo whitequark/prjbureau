@@ -18,6 +18,35 @@ def write_section(f, title, description):
     f.write(f"<p>{description}</p>\n")
 
 
+def write_mux(f, mux_name, mux):
+    base = mux['fuses'][0]
+    f.write(f"<p>Fuse combinations for mux \"{mux_name}\", relative to offset {base}:</p>")
+    f.write(f"<table border='1'>\n")
+    f.write(f"<tr><td width='60'></td>")
+    for fuse in mux["fuses"]:
+        f.write(f"<th width='20' style='font-size: 13px'>"
+                f"<a name='L{fuse}'></a>"
+                f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
+    f.write(f"</tr>\n")
+    for name, value in sorted(mux["values"].items(), key=lambda i: -i[1]):
+        f.write(f"<tr><td align='right'>{name}</td>")
+        for n_fuse in range(len(mux["fuses"])):
+            bgcolor = "#ccc" if (value >> n_fuse) & 1 else "#afa"
+            f.write(f"<td align='center' bgcolor='{bgcolor}'>{(value >> n_fuse) & 1}</td>")
+        f.write(f"</tr>\n")
+    f.write(f"</table>\n")
+
+
+def write_globals(f, device_name, device):
+    write_header(f, f"{device_name} Globals")
+
+    write_section(f, "Global OE Muxes",
+        f"Device uses {sum(len(mux['fuses']) for mux in device['goe_muxes'].values())} fuses "
+        f"for global OE muxes.")
+    for mux_name, mux in device['goe_muxes'].items():
+        write_mux(f, mux_name, mux)
+
+
 def write_bitmap(f, columns, rows, bitmap, base):
     f.write(f"<table style='font-size:11px'>\n")
     f.write(f"<tr>\n")
@@ -155,24 +184,25 @@ def write_block(f, device_name, device, block_name):
     write_header(f, f"{device_name} Logic Block {block_name}")
 
     block = device["blocks"][block_name]
-    macrocell_fuses = range(*block["macrocell_fuses"])
+    macrocell_fuse_range = range(*block["macrocell_fuse_range"])
 
     macrocell_links = [f"<a href='#{name}'>{name}</a>" for name in block["macrocells"]]
     write_section(f, "Macrocell Configuration Bitmap",
-        f"Logic block {block_name} uses {len(macrocell_fuses)} fuses at "
-        f"{macrocell_fuses.start}..{macrocell_fuses.stop} for macrocells "
+        f"Logic block {block_name} uses {len(macrocell_fuse_range)} fuses at "
+        f"{macrocell_fuse_range.start}..{macrocell_fuse_range.stop} for macrocells "
         f"{', '.join(macrocell_links)}.")
 
     macrocells = {name: device["macrocells"][name] for name in block["macrocells"]}
     bitmap = {}
     for macrocell in macrocells.values():
         update_macrocell_bitmap(bitmap, macrocell)
-    write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap, base=macrocell_fuses.start)
+    write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap,
+                 base=macrocell_fuse_range.start)
 
     for macrocell_name, macrocell in macrocells.items():
         write_section(f, f"<a name='{macrocell_name}'></a>Macrocell {macrocell_name} Fuses",
             f"Macrocell {macrocell_name} uses the following fuses for configuration, "
-            f"relative to offset {macrocell_fuses.start}.")
+            f"relative to offset {macrocell_fuse_range.start}.")
 
         bitmap = {}
         update_macrocell_bitmap(bitmap, macrocell)
@@ -180,12 +210,14 @@ def write_block(f, device_name, device, block_name):
             if macrocell_name == other_macrocell_name:
                 continue
             update_macrocell_bitmap(bitmap, other_macrocell, override="-")
-        write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap, base=macrocell_fuses.start)
+        write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap,
+                     base=macrocell_fuse_range.start)
 
         for option_name in macrocell_options:
             if option_name not in macrocell:
                 continue
-            write_option(f, option_name, macrocell[option_name], base=macrocell_fuses.start)
+            write_option(f, option_name, macrocell[option_name],
+                         base=macrocell_fuse_range.start)
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
@@ -205,6 +237,11 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
             write_header(fd, f"{device_name}")
             fd.write(f"<p>Device {device_name} documentation index:</p>\n")
             fd.write(f"<ul>\n")
+
+            fd.write(f"<li><a href='globals.html'>Globals</a></li>\n")
+
+            with open(os.path.join(dev_docs_dir, f"globals.html"), "w") as fb:
+                write_globals(fb, device_name, device)
 
             for block_name in device["blocks"]:
                 fd.write(f"<li><a href='block{block_name}.html'>"

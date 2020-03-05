@@ -45,11 +45,18 @@ def atf1502():
     return {
         "blocks": {
             bn: {
-                "macrocell_fuses": [15360+480*bi, 15360+480*(bi+1)],
+                "macrocell_fuse_range": [15360+480*bi, 15360+480*(bi+1)],
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
             } for bi, bn in enumerate("AB")
         },
         **macrocells(32),
+        "goe_muxes": {
+            **{
+                f"GOE{6-n}": {
+                    "fuses": list(range(16720+5*n, 16720+5*(n+1)))
+                } for n in reversed(range(6))
+            }
+        },
         **globals(gclk3="M17"),
         "pins": {
             "TQFP44": pins(
