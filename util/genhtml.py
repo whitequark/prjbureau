@@ -28,7 +28,7 @@ def write_bitmap(f, columns, rows, bitmap, base):
             f.write(f"<td align='center' width='15'>{column}</td>\n")
             column += 1
     f.write(f"</tr>\n")
-    offset = base
+    fuse = base
     for row in rows:
         f.write(f"<tr>\n")
         for chunk_index, (chunk_name, width) in enumerate(row):
@@ -38,7 +38,7 @@ def write_bitmap(f, columns, rows, bitmap, base):
                 name_align = "center"
             f.write(f"<td align='{name_align}'>{chunk_name}</td>\n")
             for _ in range(width):
-                sigil = bitmap.get(offset, "1" if not chunk_name else "?")
+                sigil = bitmap.get(fuse, "1" if not chunk_name else "?")
                 fgcolor, bgcolor = {
                     "?": ("#666", "#aaa"), # unfuzzed
                     "!": ("#fff", "#f00"), # conflict
@@ -50,15 +50,16 @@ def write_bitmap(f, columns, rows, bitmap, base):
                 }[sigil]
                 f.write(f"<td align='center' width='15' "
                         f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
-                f.write(f"<abbr title='+{offset - base}' style='text-decoration:none'>")
+                f.write(f"<abbr title='{fuse} ({base}+{fuse - base})' "
+                        f"style='text-decoration:none'>")
                 if sigil not in "?1":
                     f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
-                            f"href='#L{offset}'>{sigil}</a>")
+                            f"href='#L{fuse}'>{sigil}</a>")
                 else:
                     f.write(f"{sigil}")
                 f.write(f"</abbr>")
                 f.write(f"</td>\n")
-                offset += 1
+                fuse += 1
         f.write(f"</tr>\n")
     f.write(f"</table>\n")
 
@@ -69,7 +70,8 @@ def write_option(f, option_name, option, base):
     f.write(f"<tr><td width='60'></td>")
     for fuse in option["fuses"]:
         f.write(f"<th width='40' style='font-size: 13px'>"
-                f"<a name='L{fuse}'></a>+{fuse - base}</th>")
+                f"<a name='L{fuse}'></a>"
+                f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
     f.write(f"</tr>\n")
     for name, value in option["values"].items():
         f.write(f"<tr><td align='right'>{name}</td>")
