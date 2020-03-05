@@ -183,6 +183,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15566
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC2": {
@@ -316,6 +325,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15565
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -451,6 +469,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15562
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC4": {
@@ -584,6 +611,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15561
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -719,6 +755,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15558
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC6": {
@@ -852,6 +897,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15557
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -987,6 +1041,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15554
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC8": {
@@ -1120,6 +1183,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15553
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -1255,6 +1327,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15550
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC10": {
@@ -1388,6 +1469,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15549
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -1523,6 +1613,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15546
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC12": {
@@ -1656,6 +1755,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15545
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -1791,6 +1899,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15542
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC14": {
@@ -1924,6 +2041,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15541
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -2059,6 +2185,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15538
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC16": {
@@ -2192,6 +2327,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15537
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -2327,6 +2471,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16046
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC18": {
@@ -2460,6 +2613,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16045
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -2595,6 +2757,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16042
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC20": {
@@ -2728,6 +2899,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16041
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -2863,6 +3043,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16038
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC22": {
@@ -2996,6 +3185,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16037
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -3131,6 +3329,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16034
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC24": {
@@ -3264,6 +3471,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16033
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -3399,6 +3615,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16030
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC26": {
@@ -3532,6 +3757,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16029
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -3667,6 +3901,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16026
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC28": {
@@ -3800,6 +4043,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16025
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -3935,6 +4187,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16022
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC30": {
@@ -4068,6 +4329,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16021
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -4203,6 +4473,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16018
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC32": {
@@ -4336,6 +4615,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16017
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       }
@@ -4605,6 +4893,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15777
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC2": {
@@ -4756,6 +5053,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15750
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -4909,6 +5215,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15723
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC4": {
@@ -5060,6 +5375,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15696
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -5213,6 +5537,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15669
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC6": {
@@ -5364,6 +5697,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15642
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -5517,6 +5859,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15615
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC8": {
@@ -5668,6 +6019,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15588
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -5821,6 +6181,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15561
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC10": {
@@ -5972,6 +6341,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15534
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -6125,6 +6503,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15507
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC12": {
@@ -6276,6 +6663,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15480
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -6429,6 +6825,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15453
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC14": {
@@ -6580,6 +6985,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15426
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -6733,6 +7147,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15399
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC16": {
@@ -6884,6 +7307,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15372
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -7037,6 +7469,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16257
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC18": {
@@ -7188,6 +7629,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16230
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -7341,6 +7791,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16203
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC20": {
@@ -7492,6 +7951,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16176
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -7645,6 +8113,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16149
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC22": {
@@ -7796,6 +8273,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16122
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -7949,6 +8435,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16095
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC24": {
@@ -8100,6 +8595,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16068
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -8253,6 +8757,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            16041
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC26": {
@@ -8404,6 +8917,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            16014
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -8557,6 +9079,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15987
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC28": {
@@ -8708,6 +9239,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15960
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -8861,6 +9401,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15933
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC30": {
@@ -9012,6 +9561,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15906
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       },
@@ -9165,6 +9723,15 @@
             "sum": 0,
             "as_oe": 1
           }
+        },
+        "fb_mux": {
+          "fuses": [
+            15879
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
         }
       },
       "MC32": {
@@ -9316,6 +9883,15 @@
           "values": {
             "sum": 0,
             "as_oe": 1
+          }
+        },
+        "fb_mux": {
+          "fuses": [
+            15852
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
           }
         }
       }

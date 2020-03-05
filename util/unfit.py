@@ -1,9 +1,14 @@
 import sys
 import os.path
+import re
 import argparse
 
 from . import database
 from .jesd3 import JESD3Parser
+
+
+def natural_sort_key(input):
+    return [int(tok) if tok.isdigit() else tok.lower() for tok in re.split(r'(\d+)', input)]
 
 
 db = database.load()
@@ -38,17 +43,35 @@ def main():
     jed_parser = JESD3Parser(args.input.read())
     jed_parser.parse()
     fuses = jed_parser.fuse
+    basename, _ = os.path.splitext(os.path.basename(args.input.name))
 
     output = args.output or sys.stdout
     output.write(f"// Decompiled from JED file {args.input.name}:\n")
     for comment_line in jed_parser.design_spec.splitlines():
         output.write(f"// {comment_line}\n")
 
-    basename, _ext = os.path.splitext(os.path.basename(args.input.name))
-    wires_pins = ', '.join(f"{mc_name}_PIN" for mc_name in device['macrocells'])
-    output.write(f"module {basename}(input CLR, CLK1, CLK2, OE1, inout {wires_pins});\n\n")
+    pads = set()
+    for node_type in ('clocks', 'enables', 'macrocells'):
+        for node_name, node in device[node_type].items():
+            pads.add(f"PAD_{node['pad']}")
+    pads = list(sorted(pads, key=natural_sort_key))
 
-    for mc_name, macrocell in device["macrocells"].items():
+    feedbacks = []
+    for mc_name, macrocell in device['macrocells'].items():
+        feedbacks.append(f"FB_{mc_name}")
+
+    output.write(f"module {basename}({', '.join(pads)});\n\n")
+    output.write(f"    // Global inputs\n")
+    # TOO: missing programmable inverters
+    output.write(f"    assign GCLR = PAD_{device['clear']['pad']};\n")
+    for gclk_name in ("1", "2", "3"):
+        output.write(f"    assign GCLK{gclk_name} = PAD_{device['clocks'][gclk_name]['pad']};\n")
+    output.write(f"\n")
+    output.write(f"    // Macrocell feedbacks\n")
+    output.write(f"    wire {', '.join(feedbacks)};\n")
+    output.write(f"\n")
+
+    for mc_name, macrocell in device['macrocells'].items():
         output.write(f"    // Macrocell {mc_name}\n")
         output.write(f"    reg {mc_name}_Q = 1'b0;\n")
         sum_term = []
@@ -123,8 +146,9 @@ def main():
             wire_x = wire_xa if wire_xb == "1'b0" else f"~{wire_xa}"
         else:
             assert False
+        output.write(f"    wire {mc_name}_X = {wire_x};\n");
         # TODO: missing mux
-        output.write(f"    wire {mc_name}_D = {wire_x};\n");
+        output.write(f"    wire {mc_name}_D = {mc_name}_X;\n");
         storage = extract(fuses, macrocell['storage'])
         if storage == 'ff':
             clk_name = "CLK"
@@ -204,6 +228,13 @@ def main():
                 output.write(f"            {mc_name}_Q <= {mc_name}_D;\n")
             else:
                 output.write(f"        {mc_name}_Q <= {mc_name}_D;\n")
+        fb_mux = extract(fuses, macrocell['fb_mux'])
+        if fb_mux == 'comb':
+            output.write(f"    assign FB_{mc_name} = {mc_name}_X;\n")
+        elif fb_mux == 'sync':
+            output.write(f"    assign FB_{mc_name} = {mc_name}_Q;\n")
+        else:
+            assert False
         # TODO: missing mux
         output_invert = extract(fuses, macrocell["output_invert"])
         if output_invert == 'off':
@@ -214,11 +245,12 @@ def main():
             assert False
         if args.verbose or wire_oe not in ("1'b0", "1'b1"): # inout
             output.write(f"    wire {mc_name}_OE = {wire_oe};\n")
-            output.write(f"    assign {mc_name}_PIN = {mc_name}_OE ? {mc_name}_O : 1'bz;\n")
+            output.write(f"    assign PAD_{macrocell['pad']} = "
+                                    f"{mc_name}_OE ? {mc_name}_O : 1'bz;\n")
         elif wire_oe == "1'b1": # output only
-            output.write(f"    assign {mc_name}_PIN = {mc_name}_O;\n")
+            output.write(f"    assign PAD_{macrocell['pad']} = {mc_name}_O;\n")
         elif wire_oe == "1'b0": # input only
-            pass
+            output.write(f"    assign PAD_{macrocell['pad']} = 1'bz;\n")
         else:
             assert False
         output.write(f"\n")

@@ -16,7 +16,7 @@ S14 = pt5_mux
 S15 = global_reset
 S16 = pt3_mux
 S17 = pt5_func
-S18 ?
+S18 = fb_mux
 S19 = global_clock.1
 S20 = open_collector
 S21 ?
