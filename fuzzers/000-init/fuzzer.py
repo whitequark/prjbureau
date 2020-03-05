@@ -26,7 +26,7 @@ def atf1502():
         },
         "pterms": {
             f"MC{1+mi}": {
-                f"PT{5-pi}": {
+                f"PT{pi+1 if mi & 1 else 5-pi}": {
                     "fuse_range": [0+96*5*mi+96*pi, 0+96*5*mi+96*(pi+1)]
                 } for pi in reversed(range(5))
             } for mi in range(32)

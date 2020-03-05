@@ -122,6 +122,7 @@ macrocell_options = {
     "xor_a_input":      "M",
     "storage":          "FF",
     "fb_mux":           "M",
+    "oe_mux":           "M",
     "output_invert":    "M",
     "fast_output":      "IO",
     "open_collector":   "IO",

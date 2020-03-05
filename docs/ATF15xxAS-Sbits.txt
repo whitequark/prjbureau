@@ -1,6 +1,6 @@
-S0  ? global_oe.0
-S1  ? global_oe.1
-S2  ? global_oe.2
+S0  = oe_mux.0
+S1  = oe_mux.1
+S2  = oe_mux.2
 S3  ?
 S4  ?
 S5  = pt4_func
@@ -23,4 +23,4 @@ S21 ?
 S22 = fast_output
 S23 = storage
 
-# ?????====?========?==?==
+# ===??====?===========?==

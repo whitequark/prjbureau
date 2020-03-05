@@ -15,11 +15,11 @@ db = database.load()
 
 
 def extract(fuses, field):
-    value = sum(fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(field["fuses"]))
-    for key, key_value in field["values"].items():
+    value = sum(fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(field['fuses']))
+    for key, key_value in field['values'].items():
         if value == key_value:
             return key
-    assert False
+    assert False, f"fuses {field['fuses']}: extracted {value}, known {field['values']}"
 
 
 def main():
@@ -76,11 +76,11 @@ def main():
     for mux_name, mux in device['goe_muxes'].items():
         choice = extract(fuses, mux)
         if choice == 'GND':
-            mux_wire = "1'b0"
+            if args.verbose:
+                output.write(f"    wire {mux_name} = 1'b0;\n")
         else:
             # TODO: figure out what is happening with PAD choices vs FB choices
-            mux_wire = choice
-        output.write(f"    wire {mux_name} = {mux_wire};\n")
+            output.write(f"    wire {mux_name} = {choice};\n")
     output.write(f"\n")
 
     for mc_name, macrocell in device['macrocells'].items():
@@ -146,8 +146,7 @@ def main():
         if args.verbose:
             output.write(f"    wire {mc_name}_XA = {wire_xa};\n")
             output.write(f"    wire {mc_name}_XB = {wire_xb};\n")
-            output.write(f"    wire {mc_name}_X = {mc_name}_XA ^ {mc_name}_XB;\n");
-            wire_x = f"{mc_name}_X"
+            wire_x = f"{mc_name}_XA ^ {mc_name}_XB"
         elif wire_xa not in ("1'b0", "1'b1") and wire_xb not in ("1'b0", "1'b1"):
             wire_x = f"{wire_xa} ^ ({wire_xb})"
         elif wire_xa in ("1'b0", "1'b1") and wire_xb in ("1'b0", "1'b1"):
@@ -188,11 +187,10 @@ def main():
         pt5_func = extract(fuses, macrocell['pt5_func'])
         if pt5_func == 'as':
             wire_as = wire_as_oe
-            # TODO: missing mux
-            wire_oe = "1'b0"
+            wire_pt_oe = "1'b1"
         elif pt5_func == 'oe':
             wire_as = "1'b0"
-            wire_oe = wire_as_oe
+            wire_pt_oe = wire_as_oe
         else:
             assert False
         events = []
@@ -253,6 +251,15 @@ def main():
             output.write(f"    wire {mc_name}_O = {mc_name}_Q;\n")
         elif output_invert == 'on':
             output.write(f"    wire {mc_name}_O = ~{mc_name}_Q;\n")
+        else:
+            assert False
+        oe_mux = extract(fuses, macrocell['oe_mux'])
+        if oe_mux == 'gnd':
+            wire_oe = "1'b0"
+        elif oe_mux == 'vcc_pt5':
+            wire_oe = wire_pt_oe
+        elif oe_mux in ('goe1', 'goe2', 'goe3', 'goe4', 'goe5'):
+            wire_oe = oe_mux.upper()
         else:
             assert False
         if args.verbose or wire_oe not in ("1'b0", "1'b1"): # inout
