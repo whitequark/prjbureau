@@ -102,7 +102,7 @@ def write_option(f, option_name, option, base):
                 f"<a name='L{fuse}'></a>"
                 f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
     f.write(f"</tr>\n")
-    for name, value in option["values"].items():
+    for name, value in sorted(option["values"].items(), key=lambda i: i[0]):
         f.write(f"<tr><td align='right'>{name}</td>")
         for n_fuse in range(len(option["fuses"])):
             f.write(f"<td align='center'>{(value >> n_fuse) & 1}</td>")

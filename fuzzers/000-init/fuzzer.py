@@ -1,31 +1,6 @@
 from util import database
 
 
-def macrocells(count):
-    return {
-        "macrocells": {
-            f"MC{1+mi}": {
-                "pad": f"M{1+mi}"
-            } for mi in range(32)
-        }
-    }
-
-
-def globals(gclk3):
-    return {
-        "clocks": {
-            "1": {"pad": "C1"},
-            "2": {"pad": "C2"},
-            "3": {"pad": "M17"},
-        },
-        "enables": {
-            "1": {"pad": "E1"},
-            "2": {"pad": "C2"},
-        },
-        "clear": {"pad": "R"},
-    }
-
-
 def pins(Mn, C1, E1, R, C2):
     return {
         **{
@@ -49,15 +24,35 @@ def atf1502():
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
             } for bi, bn in enumerate("AB")
         },
-        **macrocells(32),
+        "pterms": {
+            f"MC{1+mi}": {
+                f"PT{5-pi}": {
+                    "fuse_range": [0+96*5*mi+96*pi, 0+96*5*mi+96*(pi+1)]
+                } for pi in reversed(range(5))
+            } for mi in range(32)
+        },
+        "macrocells": {
+            f"MC{1+mi}": {
+                "pad": f"M{1+mi}",
+            } for mi in range(32)
+        },
         "goe_muxes": {
             **{
-                f"GOE{6-n}": {
-                    "fuses": list(range(16720+5*n, 16720+5*(n+1)))
-                } for n in reversed(range(6))
-            }
+                f"GOE{6-oei}": {
+                    "fuses": list(range(16720+5*oei, 16720+5*(oei+1)))
+                } for oei in reversed(range(6))
+            },
         },
-        **globals(gclk3="M17"),
+        "clocks": {
+            "1": {"pad": "C1"},
+            "2": {"pad": "C2"},
+            "3": {"pad": "M17"},
+        },
+        "enables": {
+            "1": {"pad": "E1"},
+            "2": {"pad": "C2"},
+        },
+        "clear": {"pad": "R"},
         "pins": {
             "TQFP44": pins(
                 Mn="42 43 44  1  2  3  5  6  7  8 10 11 12 13 14 15 "
