@@ -106,7 +106,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15409
           ],
@@ -235,6 +235,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15728
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15726
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC2": {
@@ -266,7 +284,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15410
           ],
@@ -395,6 +413,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15731
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15725
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC3": {
@@ -426,7 +462,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15413
           ],
@@ -555,6 +591,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15732
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15722
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC4": {
@@ -586,7 +640,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15414
           ],
@@ -715,6 +769,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15735
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15721
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC5": {
@@ -746,7 +818,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15417
           ],
@@ -875,6 +947,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15736
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15718
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC6": {
@@ -906,7 +996,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15418
           ],
@@ -1035,6 +1125,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15739
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15717
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC7": {
@@ -1066,7 +1174,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15421
           ],
@@ -1195,6 +1303,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15740
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15714
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC8": {
@@ -1226,7 +1352,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15422
           ],
@@ -1355,6 +1481,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15743
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15713
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC9": {
@@ -1386,7 +1530,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15425
           ],
@@ -1515,6 +1659,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15744
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15710
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC10": {
@@ -1546,7 +1708,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15426
           ],
@@ -1675,6 +1837,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15747
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15709
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC11": {
@@ -1706,7 +1886,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15429
           ],
@@ -1835,6 +2015,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15748
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15706
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC12": {
@@ -1866,7 +2064,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15430
           ],
@@ -1995,6 +2193,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15751
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15705
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC13": {
@@ -2026,7 +2242,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15433
           ],
@@ -2155,6 +2371,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15752
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15702
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC14": {
@@ -2186,7 +2420,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15434
           ],
@@ -2315,6 +2549,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15755
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15701
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC15": {
@@ -2346,7 +2598,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15437
           ],
@@ -2475,6 +2727,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15756
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15698
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC16": {
@@ -2506,7 +2776,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15438
           ],
@@ -2635,6 +2905,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15759
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15697
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC17": {
@@ -2666,7 +2954,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15889
           ],
@@ -2795,6 +3083,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16208
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16206
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC18": {
@@ -2826,7 +3132,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15890
           ],
@@ -2955,6 +3261,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16211
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16205
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC19": {
@@ -2986,7 +3310,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15893
           ],
@@ -3115,6 +3439,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16212
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16202
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC20": {
@@ -3146,7 +3488,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15894
           ],
@@ -3275,6 +3617,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16215
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16201
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC21": {
@@ -3306,7 +3666,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15897
           ],
@@ -3435,6 +3795,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16216
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16198
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC22": {
@@ -3466,7 +3844,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15898
           ],
@@ -3595,6 +3973,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16219
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16197
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC23": {
@@ -3626,7 +4022,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15901
           ],
@@ -3755,6 +4151,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16220
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16194
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC24": {
@@ -3786,7 +4200,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15902
           ],
@@ -3915,6 +4329,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16223
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16193
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC25": {
@@ -3946,7 +4378,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15905
           ],
@@ -4075,6 +4507,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16224
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16190
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC26": {
@@ -4106,7 +4556,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15906
           ],
@@ -4235,6 +4685,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16227
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16189
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC27": {
@@ -4266,7 +4734,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15909
           ],
@@ -4395,6 +4863,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16228
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16186
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC28": {
@@ -4426,7 +4912,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15910
           ],
@@ -4555,6 +5041,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16231
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16185
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC29": {
@@ -4586,7 +5090,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15913
           ],
@@ -4715,6 +5219,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16232
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16182
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC30": {
@@ -4746,7 +5268,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15914
           ],
@@ -4875,6 +5397,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16235
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16181
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC31": {
@@ -4906,7 +5446,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15917
           ],
@@ -5035,6 +5575,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16236
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16178
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC32": {
@@ -5066,7 +5624,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15918
           ],
@@ -5194,6 +5752,24 @@
             "goe6": 4,
             "gnd": 0,
             "vcc_pt5": 7
+          }
+        },
+        "o_mux": {
+          "fuses": [
+            16239
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16177
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
           }
         }
       }
@@ -6235,12 +6811,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M7": 27,
-          "PAD_M23": 30,
-          "FB_MC7": 27,
-          "FB_MC14": 23,
-          "FB_MC23": 30,
-          "FB_MC30": 29
+          "M7_PAD": 27,
+          "M23_PAD": 30,
+          "MC7_FB": 27,
+          "MC14_FB": 23,
+          "MC23_FB": 30,
+          "MC30_FB": 29
         }
       },
       "GOE2": {
@@ -6253,12 +6829,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_E1": 15,
-          "PAD_M2": 29,
-          "PAD_M18": 30,
-          "FB_MC2": 29,
-          "FB_MC10": 27,
-          "FB_MC18": 30
+          "E1_PAD": 15,
+          "M2_PAD": 29,
+          "M18_PAD": 30,
+          "MC2_FB": 29,
+          "MC10_FB": 27,
+          "MC18_FB": 30
         }
       },
       "GOE3": {
@@ -6271,12 +6847,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M15": 29,
-          "PAD_M31": 23,
-          "FB_MC6": 30,
-          "FB_MC15": 29,
-          "FB_MC22": 27,
-          "FB_MC31": 23
+          "M15_PAD": 29,
+          "M31_PAD": 23,
+          "MC6_FB": 30,
+          "MC15_FB": 29,
+          "MC22_FB": 27,
+          "MC31_FB": 23
         }
       },
       "GOE4": {
@@ -6289,12 +6865,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M13": 30,
-          "PAD_M29": 27,
-          "FB_MC8": 29,
-          "FB_MC13": 30,
-          "FB_MC24": 23,
-          "FB_MC29": 27
+          "M13_PAD": 30,
+          "M29_PAD": 27,
+          "MC8_FB": 29,
+          "MC13_FB": 30,
+          "MC24_FB": 23,
+          "MC29_FB": 27
         }
       },
       "GOE5": {
@@ -6307,12 +6883,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_C2": 15,
-          "PAD_M11": 30,
-          "PAD_M27": 29,
-          "FB_MC11": 30,
-          "FB_MC19": 27,
-          "FB_MC27": 29
+          "C2_PAD": 15,
+          "M11_PAD": 30,
+          "M27_PAD": 29,
+          "MC11_FB": 30,
+          "MC19_FB": 27,
+          "MC27_FB": 29
         }
       },
       "GOE6": {
@@ -6325,12 +6901,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M12": 29,
-          "PAD_M28": 23,
-          "FB_MC1": 30,
-          "FB_MC12": 29,
-          "FB_MC17": 27,
-          "FB_MC28": 23
+          "M12_PAD": 29,
+          "M28_PAD": 23,
+          "MC1_FB": 30,
+          "MC12_FB": 29,
+          "MC17_FB": 27,
+          "MC28_FB": 23
         }
       }
     },
@@ -6560,7 +7136,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15788
           ],
@@ -6689,6 +7265,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15783
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15782
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC2": {
@@ -6738,7 +7332,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15761
           ],
@@ -6867,6 +7461,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15756
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15755
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC3": {
@@ -6916,7 +7528,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15734
           ],
@@ -7045,6 +7657,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15729
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15728
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC4": {
@@ -7094,7 +7724,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15707
           ],
@@ -7223,6 +7853,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15702
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15701
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC5": {
@@ -7272,7 +7920,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15680
           ],
@@ -7401,6 +8049,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15675
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15674
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC6": {
@@ -7450,7 +8116,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15653
           ],
@@ -7579,6 +8245,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15648
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15647
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC7": {
@@ -7628,7 +8312,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15626
           ],
@@ -7757,6 +8441,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15621
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15620
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC8": {
@@ -7806,7 +8508,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15599
           ],
@@ -7935,6 +8637,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15594
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15593
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC9": {
@@ -7984,7 +8704,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15572
           ],
@@ -8113,6 +8833,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15567
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15566
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC10": {
@@ -8162,7 +8900,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15545
           ],
@@ -8291,6 +9029,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15540
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15539
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC11": {
@@ -8340,7 +9096,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15518
           ],
@@ -8469,6 +9225,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15513
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15512
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC12": {
@@ -8518,7 +9292,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15491
           ],
@@ -8647,6 +9421,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15486
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15485
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC13": {
@@ -8696,7 +9488,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15464
           ],
@@ -8825,6 +9617,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15459
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15458
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC14": {
@@ -8874,7 +9684,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15437
           ],
@@ -9003,6 +9813,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15432
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15431
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC15": {
@@ -9052,7 +9880,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15410
           ],
@@ -9181,6 +10009,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15405
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15404
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC16": {
@@ -9230,7 +10076,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15383
           ],
@@ -9359,6 +10205,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15378
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15377
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC17": {
@@ -9408,7 +10272,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16268
           ],
@@ -9537,6 +10401,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16263
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16262
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC18": {
@@ -9586,7 +10468,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16241
           ],
@@ -9715,6 +10597,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16236
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16235
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC19": {
@@ -9764,7 +10664,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16214
           ],
@@ -9893,6 +10793,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16209
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16208
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC20": {
@@ -9942,7 +10860,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16187
           ],
@@ -10071,6 +10989,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16182
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16181
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC21": {
@@ -10120,7 +11056,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16160
           ],
@@ -10249,6 +11185,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16155
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16154
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC22": {
@@ -10298,7 +11252,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16133
           ],
@@ -10427,6 +11381,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16128
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16127
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC23": {
@@ -10476,7 +11448,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16106
           ],
@@ -10605,6 +11577,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16101
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16100
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC24": {
@@ -10654,7 +11644,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16079
           ],
@@ -10783,6 +11773,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16074
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16073
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC25": {
@@ -10832,7 +11840,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16052
           ],
@@ -10961,6 +11969,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16047
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16046
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC26": {
@@ -11010,7 +12036,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             16025
           ],
@@ -11139,6 +12165,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            16020
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            16019
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC27": {
@@ -11188,7 +12232,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15998
           ],
@@ -11317,6 +12361,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15993
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15992
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC28": {
@@ -11366,7 +12428,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15971
           ],
@@ -11495,6 +12557,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15966
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15965
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC29": {
@@ -11544,7 +12624,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15944
           ],
@@ -11673,6 +12753,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15939
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15938
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC30": {
@@ -11722,7 +12820,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15917
           ],
@@ -11851,6 +12949,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15912
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15911
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC31": {
@@ -11900,7 +13016,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15890
           ],
@@ -12029,6 +13145,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            15885
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15884
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC32": {
@@ -12078,7 +13212,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             15863
           ],
@@ -12206,6 +13340,24 @@
             "goe6": 1,
             "gnd": 0,
             "vcc_pt5": 7
+          }
+        },
+        "o_mux": {
+          "fuses": [
+            15858
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            15857
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
           }
         }
       }
@@ -13247,12 +14399,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M7": 27,
-          "PAD_M23": 30,
-          "FB_MC7": 27,
-          "FB_MC14": 23,
-          "FB_MC23": 30,
-          "FB_MC30": 29
+          "M7_PAD": 27,
+          "M23_PAD": 30,
+          "MC7_FB": 27,
+          "MC14_FB": 23,
+          "MC23_FB": 30,
+          "MC30_FB": 29
         }
       },
       "GOE2": {
@@ -13265,12 +14417,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_E1": 15,
-          "PAD_M2": 29,
-          "PAD_M18": 30,
-          "FB_MC2": 29,
-          "FB_MC10": 27,
-          "FB_MC18": 30
+          "E1_PAD": 15,
+          "M2_PAD": 29,
+          "M18_PAD": 30,
+          "MC2_FB": 29,
+          "MC10_FB": 27,
+          "MC18_FB": 30
         }
       },
       "GOE3": {
@@ -13283,12 +14435,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M15": 29,
-          "PAD_M31": 23,
-          "FB_MC6": 30,
-          "FB_MC15": 29,
-          "FB_MC22": 27,
-          "FB_MC31": 23
+          "M15_PAD": 29,
+          "M31_PAD": 23,
+          "MC6_FB": 30,
+          "MC15_FB": 29,
+          "MC22_FB": 27,
+          "MC31_FB": 23
         }
       },
       "GOE4": {
@@ -13301,12 +14453,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M13": 30,
-          "PAD_M29": 27,
-          "FB_MC8": 29,
-          "FB_MC13": 30,
-          "FB_MC24": 23,
-          "FB_MC29": 27
+          "M13_PAD": 30,
+          "M29_PAD": 27,
+          "MC8_FB": 29,
+          "MC13_FB": 30,
+          "MC24_FB": 23,
+          "MC29_FB": 27
         }
       },
       "GOE5": {
@@ -13319,12 +14471,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_C2": 15,
-          "PAD_M11": 30,
-          "PAD_M27": 29,
-          "FB_MC11": 30,
-          "FB_MC19": 27,
-          "FB_MC27": 29
+          "C2_PAD": 15,
+          "M11_PAD": 30,
+          "M27_PAD": 29,
+          "MC11_FB": 30,
+          "MC19_FB": 27,
+          "MC27_FB": 29
         }
       },
       "GOE6": {
@@ -13337,12 +14489,12 @@
         ],
         "values": {
           "GND": 31,
-          "PAD_M12": 29,
-          "PAD_M28": 23,
-          "FB_MC1": 30,
-          "FB_MC12": 29,
-          "FB_MC17": 27,
-          "FB_MC28": 23
+          "M12_PAD": 29,
+          "M28_PAD": 23,
+          "MC1_FB": 30,
+          "MC12_FB": 29,
+          "MC17_FB": 27,
+          "MC28_FB": 23
         }
       }
     },
@@ -13594,7 +14746,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30798
           ],
@@ -13723,6 +14875,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31439
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31377
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC2": {
@@ -13754,7 +14924,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30797
           ],
@@ -13883,6 +15053,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31436
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31378
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC3": {
@@ -13914,7 +15102,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30794
           ],
@@ -14043,6 +15231,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31435
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31381
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC4": {
@@ -14074,7 +15280,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30793
           ],
@@ -14203,6 +15409,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31432
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31382
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC5": {
@@ -14234,7 +15458,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30790
           ],
@@ -14363,6 +15587,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31431
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31385
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC6": {
@@ -14394,7 +15636,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30789
           ],
@@ -14523,6 +15765,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31428
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31386
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC7": {
@@ -14554,7 +15814,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30786
           ],
@@ -14683,6 +15943,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31427
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31389
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC8": {
@@ -14714,7 +15992,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30785
           ],
@@ -14843,6 +16121,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31424
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31390
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC9": {
@@ -14874,7 +16170,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30782
           ],
@@ -15003,6 +16299,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31423
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31393
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC10": {
@@ -15034,7 +16348,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30781
           ],
@@ -15163,6 +16477,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31420
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31394
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC11": {
@@ -15194,7 +16526,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30778
           ],
@@ -15323,6 +16655,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31419
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31397
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC12": {
@@ -15354,7 +16704,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30777
           ],
@@ -15483,6 +16833,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31416
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31398
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC13": {
@@ -15514,7 +16882,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30774
           ],
@@ -15643,6 +17011,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31415
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31401
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC14": {
@@ -15674,7 +17060,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30773
           ],
@@ -15803,6 +17189,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31412
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31402
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC15": {
@@ -15834,7 +17238,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30770
           ],
@@ -15963,6 +17367,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31411
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31405
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC16": {
@@ -15994,7 +17416,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30769
           ],
@@ -16123,6 +17545,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31408
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31406
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC17": {
@@ -16154,7 +17594,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30878
           ],
@@ -16283,6 +17723,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31519
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31457
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC18": {
@@ -16314,7 +17772,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30877
           ],
@@ -16443,6 +17901,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31516
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31458
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC19": {
@@ -16474,7 +17950,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30874
           ],
@@ -16603,6 +18079,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31515
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31461
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC20": {
@@ -16634,7 +18128,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30873
           ],
@@ -16763,6 +18257,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31512
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31462
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC21": {
@@ -16794,7 +18306,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30870
           ],
@@ -16923,6 +18435,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31511
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31465
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC22": {
@@ -16954,7 +18484,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30869
           ],
@@ -17083,6 +18613,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31508
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31466
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC23": {
@@ -17114,7 +18662,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30866
           ],
@@ -17243,6 +18791,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31507
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31469
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC24": {
@@ -17274,7 +18840,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30865
           ],
@@ -17403,6 +18969,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31504
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31470
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC25": {
@@ -17434,7 +19018,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30862
           ],
@@ -17563,6 +19147,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31503
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31473
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC26": {
@@ -17594,7 +19196,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30861
           ],
@@ -17723,6 +19325,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31500
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31474
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC27": {
@@ -17754,7 +19374,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30858
           ],
@@ -17883,6 +19503,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31499
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31477
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC28": {
@@ -17914,7 +19552,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30857
           ],
@@ -18043,6 +19681,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31496
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31478
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC29": {
@@ -18074,7 +19730,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30854
           ],
@@ -18203,6 +19859,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31495
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31481
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC30": {
@@ -18234,7 +19908,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30853
           ],
@@ -18363,6 +20037,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31492
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31482
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC31": {
@@ -18394,7 +20086,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30850
           ],
@@ -18523,6 +20215,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31491
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31485
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC32": {
@@ -18554,7 +20264,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30849
           ],
@@ -18683,6 +20393,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31488
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31486
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC33": {
@@ -18714,7 +20442,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31838
           ],
@@ -18843,6 +20571,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32479
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32417
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC34": {
@@ -18874,7 +20620,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31837
           ],
@@ -19003,6 +20749,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32476
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32418
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC35": {
@@ -19034,7 +20798,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31834
           ],
@@ -19163,6 +20927,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32475
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32421
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC36": {
@@ -19194,7 +20976,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31833
           ],
@@ -19323,6 +21105,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32472
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32422
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC37": {
@@ -19354,7 +21154,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31830
           ],
@@ -19483,6 +21283,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32471
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32425
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC38": {
@@ -19514,7 +21332,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31829
           ],
@@ -19643,6 +21461,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32468
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32426
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC39": {
@@ -19674,7 +21510,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31826
           ],
@@ -19803,6 +21639,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32467
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32429
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC40": {
@@ -19834,7 +21688,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31825
           ],
@@ -19963,6 +21817,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32464
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32430
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC41": {
@@ -19994,7 +21866,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31822
           ],
@@ -20123,6 +21995,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32463
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32433
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC42": {
@@ -20154,7 +22044,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31821
           ],
@@ -20283,6 +22173,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32460
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32434
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC43": {
@@ -20314,7 +22222,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31818
           ],
@@ -20443,6 +22351,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32459
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32437
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC44": {
@@ -20474,7 +22400,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31817
           ],
@@ -20603,6 +22529,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32456
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32438
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC45": {
@@ -20634,7 +22578,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31814
           ],
@@ -20763,6 +22707,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32455
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32441
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC46": {
@@ -20794,7 +22756,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31813
           ],
@@ -20937,7 +22899,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31810
           ],
@@ -21066,6 +23028,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32451
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32445
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC48": {
@@ -21097,7 +23077,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31809
           ],
@@ -21226,6 +23206,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32448
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32446
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC49": {
@@ -21257,7 +23255,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31758
           ],
@@ -21386,6 +23384,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32399
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32337
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC50": {
@@ -21417,7 +23433,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31757
           ],
@@ -21546,6 +23562,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32396
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32338
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC51": {
@@ -21577,7 +23611,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31754
           ],
@@ -21706,6 +23740,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32395
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32341
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC52": {
@@ -21737,7 +23789,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31753
           ],
@@ -21866,6 +23918,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32392
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32342
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC53": {
@@ -21897,7 +23967,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31750
           ],
@@ -22026,6 +24096,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32391
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32345
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC54": {
@@ -22057,7 +24145,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31749
           ],
@@ -22186,6 +24274,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32388
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32346
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC55": {
@@ -22217,7 +24323,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31746
           ],
@@ -22346,6 +24452,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32387
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32349
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC56": {
@@ -22377,7 +24501,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31745
           ],
@@ -22506,6 +24630,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32384
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32350
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC57": {
@@ -22537,7 +24679,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31742
           ],
@@ -22666,6 +24808,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32383
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32353
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC58": {
@@ -22697,7 +24857,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31741
           ],
@@ -22826,6 +24986,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32380
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32354
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC59": {
@@ -22857,7 +25035,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31738
           ],
@@ -22986,6 +25164,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32379
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32357
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC60": {
@@ -23017,7 +25213,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31737
           ],
@@ -23146,6 +25342,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32376
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32358
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC61": {
@@ -23177,7 +25391,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31734
           ],
@@ -23306,6 +25520,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32375
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32361
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC62": {
@@ -23337,7 +25569,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31733
           ],
@@ -23466,6 +25698,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32372
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32362
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC63": {
@@ -23497,7 +25747,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31730
           ],
@@ -23626,6 +25876,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32371
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32365
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC64": {
@@ -23657,7 +25925,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31729
           ],
@@ -23785,6 +26053,24 @@
             "goe6": 3,
             "gnd": 0,
             "vcc_pt5": 7
+          }
+        },
+        "o_mux": {
+          "fuses": [
+            32368
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32366
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
           }
         }
       }
@@ -25854,14 +28140,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_E1": 255,
-          "PAD_M3": 447,
-          "PAD_M24": 495,
-          "PAD_M40": 507,
-          "PAD_M51": 509,
-          "FB_MC11": 383,
-          "FB_MC30": 479,
-          "FB_MC46": 503
+          "E1_PAD": 255,
+          "M3_PAD": 447,
+          "M24_PAD": 495,
+          "M40_PAD": 507,
+          "M51_PAD": 509,
+          "MC11_FB": 383,
+          "MC30_FB": 479,
+          "MC46_FB": 503
         }
       },
       "GOE2": {
@@ -25878,15 +28164,15 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_C2": 255,
-          "PAD_M11": 507,
-          "PAD_M30": 495,
-          "PAD_M57": 510,
-          "FB_MC4": 509,
-          "FB_MC24": 503,
-          "FB_MC40": 479,
-          "FB_MC52": 383,
-          "FB_MC57": 510
+          "C2_PAD": 255,
+          "M11_PAD": 507,
+          "M30_PAD": 495,
+          "M57_PAD": 510,
+          "MC4_FB": 509,
+          "MC24_FB": 503,
+          "MC40_FB": 479,
+          "MC52_FB": 383,
+          "MC57_FB": 510
         }
       },
       "GOE3": {
@@ -25903,12 +28189,12 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M46": 510,
-          "FB_MC1": 509,
-          "FB_MC3": 507,
-          "FB_MC21": 495,
-          "FB_MC49": 383,
-          "FB_MC51": 255
+          "M46_PAD": 510,
+          "MC1_FB": 509,
+          "MC3_FB": 507,
+          "MC21_FB": 495,
+          "MC49_FB": 383,
+          "MC51_FB": 255
         }
       },
       "GOE4": {
@@ -25925,15 +28211,15 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M14": 510,
-          "PAD_M25": 509,
-          "PAD_M41": 495,
-          "PAD_M62": 383,
-          "FB_MC14": 510,
-          "FB_MC17": 507,
-          "FB_MC20": 503,
-          "FB_MC33": 479,
-          "FB_MC36": 447
+          "M14_PAD": 510,
+          "M25_PAD": 509,
+          "M41_PAD": 495,
+          "M62_PAD": 383,
+          "MC14_FB": 510,
+          "MC17_FB": 507,
+          "MC20_FB": 503,
+          "MC33_FB": 479,
+          "MC36_FB": 447
         }
       },
       "GOE5": {
@@ -25950,14 +28236,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M64": 447,
-          "PAD_M16": 509,
-          "FB_MC5": 510,
-          "FB_MC16": 509,
-          "FB_MC19": 503,
-          "FB_MC35": 479,
-          "FB_MC53": 383,
-          "FB_MC64": 447
+          "M64_PAD": 447,
+          "M16_PAD": 509,
+          "MC5_FB": 510,
+          "MC16_FB": 509,
+          "MC19_FB": 503,
+          "MC35_FB": 479,
+          "MC53_FB": 383,
+          "MC64_FB": 447
         }
       },
       "GOE6": {
@@ -25974,14 +28260,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M5": 383,
-          "PAD_M17": 447,
-          "PAD_M19": 510,
-          "PAD_M35": 495,
-          "PAD_M53": 507,
-          "FB_MC25": 479,
-          "FB_MC41": 503,
-          "FB_MC62": 509
+          "M5_PAD": 383,
+          "M17_PAD": 447,
+          "M19_PAD": 510,
+          "M35_PAD": 495,
+          "M53_PAD": 507,
+          "MC25_FB": 479,
+          "MC41_FB": 503,
+          "MC62_FB": 509
         }
       }
     },
@@ -26515,7 +28801,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32588
           ],
@@ -26644,6 +28930,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32583
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32582
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC2": {
@@ -26693,7 +28997,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32561
           ],
@@ -26822,6 +29126,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32556
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32555
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC3": {
@@ -26871,7 +29193,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32534
           ],
@@ -27000,6 +29322,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32529
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32528
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC4": {
@@ -27049,7 +29389,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32507
           ],
@@ -27178,6 +29518,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32502
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32501
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC5": {
@@ -27227,7 +29585,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32480
           ],
@@ -27356,6 +29714,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32475
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32474
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC6": {
@@ -27405,7 +29781,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32453
           ],
@@ -27534,6 +29910,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32448
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32447
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC7": {
@@ -27583,7 +29977,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32426
           ],
@@ -27712,6 +30106,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32421
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32420
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC8": {
@@ -27761,7 +30173,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32399
           ],
@@ -27890,6 +30302,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32394
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32393
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC9": {
@@ -27939,7 +30369,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32372
           ],
@@ -28068,6 +30498,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32367
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32366
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC10": {
@@ -28117,7 +30565,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32345
           ],
@@ -28246,6 +30694,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32340
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32339
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC11": {
@@ -28295,7 +30761,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32318
           ],
@@ -28424,6 +30890,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32313
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32312
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC12": {
@@ -28473,7 +30957,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32291
           ],
@@ -28602,6 +31086,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32286
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32285
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC13": {
@@ -28651,7 +31153,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32264
           ],
@@ -28780,6 +31282,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32259
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32258
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC14": {
@@ -28829,7 +31349,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32237
           ],
@@ -28958,6 +31478,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32232
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32231
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC15": {
@@ -29007,7 +31545,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32210
           ],
@@ -29136,6 +31674,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32205
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32204
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC16": {
@@ -29185,7 +31741,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32183
           ],
@@ -29314,6 +31870,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32178
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32177
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC17": {
@@ -29363,7 +31937,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31148
           ],
@@ -29492,6 +32066,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31143
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31142
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC18": {
@@ -29541,7 +32133,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31121
           ],
@@ -29670,6 +32262,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31116
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31115
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC19": {
@@ -29719,7 +32329,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31094
           ],
@@ -29848,6 +32458,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31089
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31088
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC20": {
@@ -29897,7 +32525,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31067
           ],
@@ -30026,6 +32654,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31062
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31061
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC21": {
@@ -30075,7 +32721,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31040
           ],
@@ -30204,6 +32850,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31035
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31034
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC22": {
@@ -30253,7 +32917,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31013
           ],
@@ -30382,6 +33046,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31008
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31007
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC23": {
@@ -30431,7 +33113,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30986
           ],
@@ -30560,6 +33242,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30981
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30980
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC24": {
@@ -30609,7 +33309,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30959
           ],
@@ -30738,6 +33438,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30954
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30953
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC25": {
@@ -30787,7 +33505,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30932
           ],
@@ -30916,6 +33634,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30927
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30926
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC26": {
@@ -30965,7 +33701,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30905
           ],
@@ -31094,6 +33830,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30900
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30899
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC27": {
@@ -31143,7 +33897,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30878
           ],
@@ -31272,6 +34026,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30873
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30872
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC28": {
@@ -31321,7 +34093,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30851
           ],
@@ -31450,6 +34222,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30846
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30845
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC29": {
@@ -31499,7 +34289,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30824
           ],
@@ -31628,6 +34418,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30819
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30818
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC30": {
@@ -31677,7 +34485,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30797
           ],
@@ -31806,6 +34614,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30792
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30791
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC31": {
@@ -31855,7 +34681,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30770
           ],
@@ -31984,6 +34810,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30765
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30764
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC32": {
@@ -32033,7 +34877,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             30743
           ],
@@ -32162,6 +35006,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            30738
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            30737
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC33": {
@@ -32211,7 +35073,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31223
           ],
@@ -32340,6 +35202,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31218
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31217
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC34": {
@@ -32389,7 +35269,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31250
           ],
@@ -32518,6 +35398,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31245
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31244
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC35": {
@@ -32567,7 +35465,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31277
           ],
@@ -32696,6 +35594,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31272
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31271
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC36": {
@@ -32745,7 +35661,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31304
           ],
@@ -32874,6 +35790,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31299
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31298
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC37": {
@@ -32923,7 +35857,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31331
           ],
@@ -33052,6 +35986,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31326
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31325
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC38": {
@@ -33101,7 +36053,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31358
           ],
@@ -33230,6 +36182,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31353
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31352
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC39": {
@@ -33279,7 +36249,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31385
           ],
@@ -33408,6 +36378,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31380
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31379
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC40": {
@@ -33457,7 +36445,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31412
           ],
@@ -33586,6 +36574,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31407
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31406
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC41": {
@@ -33635,7 +36641,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31439
           ],
@@ -33764,6 +36770,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31434
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31433
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC42": {
@@ -33813,7 +36837,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31466
           ],
@@ -33942,6 +36966,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31461
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31460
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC43": {
@@ -33991,7 +37033,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31493
           ],
@@ -34120,6 +37162,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31488
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31487
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC44": {
@@ -34169,7 +37229,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31520
           ],
@@ -34298,6 +37358,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31515
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31514
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC45": {
@@ -34347,7 +37425,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31547
           ],
@@ -34476,6 +37554,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31542
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31541
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC46": {
@@ -34525,7 +37621,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31574
           ],
@@ -34686,7 +37782,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31601
           ],
@@ -34815,6 +37911,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31596
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31595
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC48": {
@@ -34864,7 +37978,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31628
           ],
@@ -34993,6 +38107,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31623
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31622
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC49": {
@@ -35042,7 +38174,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31703
           ],
@@ -35171,6 +38303,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31698
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31697
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC50": {
@@ -35220,7 +38370,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31730
           ],
@@ -35349,6 +38499,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31725
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31724
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC51": {
@@ -35398,7 +38566,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31757
           ],
@@ -35527,6 +38695,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31752
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31751
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC52": {
@@ -35576,7 +38762,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31784
           ],
@@ -35705,6 +38891,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31779
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31778
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC53": {
@@ -35754,7 +38958,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31811
           ],
@@ -35883,6 +39087,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31806
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31805
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC54": {
@@ -35932,7 +39154,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31838
           ],
@@ -36061,6 +39283,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31833
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31832
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC55": {
@@ -36110,7 +39350,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31865
           ],
@@ -36239,6 +39479,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31860
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31859
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC56": {
@@ -36288,7 +39546,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31892
           ],
@@ -36417,6 +39675,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31887
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31886
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC57": {
@@ -36466,7 +39742,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31919
           ],
@@ -36595,6 +39871,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31914
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31913
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC58": {
@@ -36644,7 +39938,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31946
           ],
@@ -36773,6 +40067,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31941
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31940
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC59": {
@@ -36822,7 +40134,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             31973
           ],
@@ -36951,6 +40263,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31968
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31967
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC60": {
@@ -37000,7 +40330,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32000
           ],
@@ -37129,6 +40459,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            31995
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            31994
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC61": {
@@ -37178,7 +40526,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32027
           ],
@@ -37307,6 +40655,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32022
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32021
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC62": {
@@ -37356,7 +40722,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32054
           ],
@@ -37485,6 +40851,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32049
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32048
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC63": {
@@ -37534,7 +40918,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32081
           ],
@@ -37663,6 +41047,24 @@
             "gnd": 0,
             "vcc_pt5": 7
           }
+        },
+        "o_mux": {
+          "fuses": [
+            32076
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32075
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
+          }
         }
       },
       "MC64": {
@@ -37712,7 +41114,7 @@
             "on": 1
           }
         },
-        "output_invert": {
+        "o_inv": {
           "fuses": [
             32108
           ],
@@ -37840,6 +41242,24 @@
             "goe6": 6,
             "gnd": 0,
             "vcc_pt5": 7
+          }
+        },
+        "o_mux": {
+          "fuses": [
+            32103
+          ],
+          "values": {
+            "comb": 1,
+            "sync": 0
+          }
+        },
+        "d_mux": {
+          "fuses": [
+            32102
+          ],
+          "values": {
+            "comb": 1,
+            "fast": 0
           }
         }
       }
@@ -39909,14 +43329,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_E1": 255,
-          "PAD_M3": 447,
-          "PAD_M24": 495,
-          "PAD_M40": 507,
-          "PAD_M51": 509,
-          "FB_MC11": 383,
-          "FB_MC30": 479,
-          "FB_MC46": 503
+          "E1_PAD": 255,
+          "M3_PAD": 447,
+          "M24_PAD": 495,
+          "M40_PAD": 507,
+          "M51_PAD": 509,
+          "MC11_FB": 383,
+          "MC30_FB": 479,
+          "MC46_FB": 503
         }
       },
       "GOE2": {
@@ -39933,15 +43353,15 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_C2": 255,
-          "PAD_M11": 507,
-          "PAD_M30": 495,
-          "PAD_M57": 510,
-          "FB_MC4": 509,
-          "FB_MC24": 503,
-          "FB_MC40": 479,
-          "FB_MC52": 383,
-          "FB_MC57": 510
+          "C2_PAD": 255,
+          "M11_PAD": 507,
+          "M30_PAD": 495,
+          "M57_PAD": 510,
+          "MC4_FB": 509,
+          "MC24_FB": 503,
+          "MC40_FB": 479,
+          "MC52_FB": 383,
+          "MC57_FB": 510
         }
       },
       "GOE3": {
@@ -39958,12 +43378,12 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M46": 510,
-          "FB_MC1": 509,
-          "FB_MC3": 507,
-          "FB_MC21": 495,
-          "FB_MC49": 383,
-          "FB_MC51": 255
+          "M46_PAD": 510,
+          "MC1_FB": 509,
+          "MC3_FB": 507,
+          "MC21_FB": 495,
+          "MC49_FB": 383,
+          "MC51_FB": 255
         }
       },
       "GOE4": {
@@ -39980,15 +43400,15 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M14": 510,
-          "PAD_M25": 509,
-          "PAD_M41": 495,
-          "PAD_M62": 383,
-          "FB_MC14": 510,
-          "FB_MC17": 507,
-          "FB_MC20": 503,
-          "FB_MC33": 479,
-          "FB_MC36": 447
+          "M14_PAD": 510,
+          "M25_PAD": 509,
+          "M41_PAD": 495,
+          "M62_PAD": 383,
+          "MC14_FB": 510,
+          "MC17_FB": 507,
+          "MC20_FB": 503,
+          "MC33_FB": 479,
+          "MC36_FB": 447
         }
       },
       "GOE5": {
@@ -40005,14 +43425,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M64": 447,
-          "PAD_M16": 509,
-          "FB_MC5": 510,
-          "FB_MC16": 509,
-          "FB_MC19": 503,
-          "FB_MC35": 479,
-          "FB_MC53": 383,
-          "FB_MC64": 447
+          "M64_PAD": 447,
+          "M16_PAD": 509,
+          "MC5_FB": 510,
+          "MC16_FB": 509,
+          "MC19_FB": 503,
+          "MC35_FB": 479,
+          "MC53_FB": 383,
+          "MC64_FB": 447
         }
       },
       "GOE6": {
@@ -40029,14 +43449,14 @@
         ],
         "values": {
           "GND": 511,
-          "PAD_M5": 383,
-          "PAD_M17": 447,
-          "PAD_M19": 510,
-          "PAD_M35": 495,
-          "PAD_M53": 507,
-          "FB_MC25": 479,
-          "FB_MC41": 503,
-          "FB_MC62": 509
+          "M5_PAD": 383,
+          "M17_PAD": 447,
+          "M19_PAD": 510,
+          "M35_PAD": 495,
+          "M53_PAD": 507,
+          "MC25_FB": 479,
+          "MC41_FB": 503,
+          "MC62_FB": 509
         }
       }
     },

@@ -18,7 +18,7 @@ with database.transact() as db:
             else:
                 assert False
 
-            def run(code):
+            def run(code, **kwargs):
                 return toolchain.run(
                     f"module top(input CLK1, CLK2, output O1, O2); "
                     f"{code} "
@@ -33,18 +33,20 @@ with database.transact() as db:
                         # netlist/constraint sets I came up were even less reliable.
                         'Com_Ctrl_13': str(601 + macrocell_idx),
                     },
-                    f"{device_name}-{package}")
+                    f"{device_name}-{package}", **kwargs)
 
             f_sync = run(
                 f"wire Y1; XOR2 x1(CLK1, CLK2, Y1); "
                 f"wire Q1; DFF dff1(1'b0, Y1, Q1); "
                 f"TRI t1(1'b0, Q1, O1); "
-                f"TRI t2(1'b0, Q1, O2); "
+                f"TRI t2(1'b0, Q1, O2); ",
+                name="work-sync"
             )
             f_comb = run(
                 f"wire Y1; XOR2 x1(CLK1, CLK2, Y1); "
                 f"TRI t1(1'b0, Y1, O1); "
-                f"TRI t2(1'b0, Y1, O2); "
+                f"TRI t2(1'b0, Y1, O2); ",
+                name="work-comb"
             )
 
             # Feedback can be taken from either XOR term or FF/latch output.

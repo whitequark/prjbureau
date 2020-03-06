@@ -113,7 +113,7 @@ with database.transact() as db:
                         raise
                     # Design constrained so that inability to use GOE is a total failure.
                     continue
-                nodes[f"PAD_{node['pad']}"] = fuses
+                nodes[f"{node['pad']}_PAD"] = fuses
 
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
             fuses = run_fb(macrocell_idx, macrocell_name)
@@ -137,7 +137,7 @@ with database.transact() as db:
                 # Is there some weird sharing going on? In any case, for now record both as
                 # valid values.
                 pass
-            nodes[f"FB_{macrocell_name}"] = fuses
+            nodes[f"{macrocell_name}_FB"] = fuses
 
         # The code above discovers 80% of choices on ATF1502. Where did 5 more go? I don't know.
         # It does not look like the fitter can route OE1 and OE2 anywhere other than GOE5 and GOE2,

@@ -160,10 +160,12 @@ macrocell_options = {
     "global_clock":     "M",
     "pt5_func":         "M",
     "xor_a_input":      "M",
+    "d_mux":            "M",
     "storage":          "FF",
     "fb_mux":           "M",
+    "o_mux":            "M",
+    "o_inv":            "M",
     "oe_mux":           "M",
-    "output_invert":    "M",
     "slow_output":      "IO",
     "open_collector":   "IO",
     "pull_up":          "IO",
@@ -221,7 +223,11 @@ def update_fuse(bitmap, fuse, sigil, *, owner=None):
 
 def update_option_bitmap(bitmap, option, sigil, *, owner=None):
     count = 0
-    for fuse in option['fuses']:
+    for n_fuse, fuse in enumerate(option['fuses']):
+        if len(option['fuses']) > 1:
+            fuse_owner = f"{owner}.{n_fuse}"
+        else:
+            fuse_owner = owner
         count += update_fuse(bitmap, fuse, sigil, owner=owner)
     return count
 
@@ -364,11 +370,11 @@ def write_global_oe(f, device_name, device):
         return net_name != 'GND'
 
     def sort_fn(net_name):
-        if net_name.startswith("FB_MC"): # gross.
-            return int(net_name[5:])
-        if net_name.startswith("PAD_M"):
-            return int(net_name[5:])
-        return {"GND": 0, "PAD_C1":512,"PAD_E1":513,"PAD_C2":514}[net_name]
+        if net_name.endswith("_FB"): # gross.
+            return int(net_name[2:-3])
+        if net_name.endswith("_PAD"):
+            return int(net_name[1:-4])
+        return {"GND": 0, "C1_PAD":512,"E1_PAD":513,"C2_PAD":514}[net_name]
 
     write_section(f, "Global OE Mux Connectivity",
         f"Global OE muxes provide the following possible (known) connection points.")

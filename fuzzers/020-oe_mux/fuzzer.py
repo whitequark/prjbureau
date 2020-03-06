@@ -3,24 +3,24 @@ from util import database, toolchain, bitdiff
 
 with database.transact() as db:
     for device_name, device in db.items():
-        package, pinout = next(iter(device["pins"].items()))
-        for macrocell_name, macrocell in device["macrocells"].items():
+        package, pinout = next(iter(device['pins'].items()))
+        for macrocell_name, macrocell in device['macrocells'].items():
             if macrocell['pad'] not in pinout:
                 print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
                 continue
 
             goe_pads = []
-            for goe_name, goe_mux in device["goe_muxes"].items():
-                for goe_choice in goe_mux["values"]:
-                    if not goe_choice.startswith("PAD_"): continue
-                    if goe_choice[4:] == macrocell["pad"]: continue
+            for goe_name, goe_mux in device['goe_muxes'].items():
+                for goe_choice in goe_mux['values']:
+                    if not goe_choice.endswith('_PAD'): continue
+                    if goe_choice[:-4] == macrocell['pad']: continue
                     goe_pads.append(goe_choice)
                     break
                 else:
                     print(f"GOE mux {goe_name} is only connected to pad {macrocell['pad']}!")
 
             if len(goe_pads) < len(device['goe_muxes']):
-                print(f"Skipping OE mux fuzzing for {macrocell_name} on device {device_name}!")
+                print(f"Skipping OE mux fuzzing for {macrocell_name} on {device_name}!")
                 continue
 
             def run(code, **kwargs):
@@ -30,10 +30,10 @@ with database.transact() as db:
                     f"{code} "
                     f"endmodule",
                     {
-                        "O": pinout[macrocell["pad"]],
-                        "CLK1": pinout[device["clocks"]["1"]["pad"]],
+                        'O': pinout[macrocell['pad']],
+                        'CLK1': pinout[device['clocks']['1']['pad']],
                         **{
-                            goe_pad: pinout[goe_pad[4:]]
+                            goe_pad: pinout[goe_pad[:-4]]
                             for goe_pad in goe_pads
                         },
                     },

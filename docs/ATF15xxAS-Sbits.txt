@@ -1,15 +1,15 @@
 S0  = oe_mux.0
 S1  = oe_mux.1
 S2  = oe_mux.2
-S3  ?
-S4  ?
+S3  = o_mux
+S4  = d_mux
 S5  = pt4_func
 S6  = xor_a_input.0
 S7  = global_clock.0
 S8  = low_power
 S9  ?
 S10 = xor_a_input.1
-S11 = invert_output
+S11 = o_inv
 S12 = pt4_mux
 S13 = pt2_mux
 S14 = pt5_mux
@@ -23,4 +23,4 @@ S21 ?
 S22 = fast_output
 S23 = storage
 
-# ===??====?===========?==
+# =========?===========?==

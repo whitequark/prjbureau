@@ -53,20 +53,20 @@ def main():
     pads = set()
     for node_type in ('clocks', 'enables', 'macrocells'):
         for node_name, node in device[node_type].items():
-            pads.add(f"PAD_{node['pad']}")
+            pads.add(f"{node['pad']}_PAD")
     pads = list(sorted(pads, key=natural_sort_key))
 
     output.write(f"module {basename}({', '.join(pads)});\n\n")
     output.write(f"    // Global inputs\n")
     # TOO: missing programmable inverters
-    output.write(f"    assign GCLR = PAD_{device['clear']['pad']};\n")
+    output.write(f"    assign GCLR = {device['clear']['pad']}_PAD;\n")
     for gclk_name in ("1", "2", "3"):
-        output.write(f"    assign GCLK{gclk_name} = PAD_{device['clocks'][gclk_name]['pad']};\n")
+        output.write(f"    assign GCLK{gclk_name} = {device['clocks'][gclk_name]['pad']}_PAD;\n")
     output.write(f"\n")
 
     feedbacks = []
     for mc_name, macrocell in device['macrocells'].items():
-        feedbacks.append(f"FB_{mc_name}")
+        feedbacks.append(f"{mc_name}_FB")
 
     output.write(f"    // Macrocell feedbacks\n")
     output.write(f"    wire {', '.join(feedbacks)};\n")
@@ -86,11 +86,9 @@ def main():
     for mc_name, macrocell in device['macrocells'].items():
         output.write(f"    // Macrocell {mc_name}\n")
         output.write(f"    reg {mc_name}_Q = 1'b0;\n")
-        sum_term = []
-        sum_term.append(f"{mc_name}_PT1")
+        sum_term = set(f"{mc_name}_PT{1+n}" for n in range(5))
         pt2_mux = extract(fuses, macrocell['pt2_mux'])
         if pt2_mux == 'sum':
-            sum_term.append(f"{mc_name}_PT2")
             xor_a_input = extract(fuses, macrocell['xor_a_input'])
             if xor_a_input == 'gnd':
                 wire_xa = "1'b0"
@@ -103,6 +101,7 @@ def main():
             else:
                 assert False
         elif pt2_mux == 'xor':
+            sum_term.remove(f"{mc_name}_PT2")
             wire_xa = "{mc_name}_PT2"
             # TODO: xor_a_input bits mean something else here
         else:
@@ -110,7 +109,6 @@ def main():
         pt3_mux = extract(fuses, macrocell['pt3_mux'])
         global_reset = extract(fuses, macrocell['global_reset'])
         if pt3_mux == 'sum':
-            sum_term.append(f"{mc_name}_PT3")
             if global_reset == 'off':
                 wire_ar = f"1'b0"
             elif global_reset == 'on':
@@ -118,6 +116,7 @@ def main():
             else:
                 assert False
         elif pt3_mux == 'ar':
+            sum_term.remove(f"{mc_name}_PT3")
             if global_reset == 'off':
                 wire_ar = f"{mc_name}_PT3"
             elif global_reset == 'on':
@@ -128,38 +127,52 @@ def main():
             assert False
         pt4_mux = extract(fuses, macrocell['pt4_mux'])
         if pt4_mux == 'sum':
-            sum_term.append(f"{mc_name}_PT4")
             wire_clk_ce = f"1'b1"
         elif pt4_mux == 'clk_ce':
+            sum_term.remove(f"{mc_name}_PT4")
             wire_clk_ce = f"{mc_name}_PT4"
         else:
             assert False
         pt5_mux = extract(fuses, macrocell['pt5_mux'])
         if pt5_mux == 'sum':
-            sum_term.append(f"{mc_name}_PT5")
             wire_as_oe = f"1'b0"
         elif pt5_mux == 'as_oe':
+            sum_term.remove(f"{mc_name}_PT5")
             wire_as_oe = f"{mc_name}_PT5"
         else:
             assert False
-        wire_xb = ' | '.join(sum_term) or "1'b0"
-        if args.verbose:
-            output.write(f"    wire {mc_name}_XA = {wire_xa};\n")
-            output.write(f"    wire {mc_name}_XB = {wire_xb};\n")
-            wire_x = f"{mc_name}_XA ^ {mc_name}_XB"
-        elif wire_xa not in ("1'b0", "1'b1") and wire_xb not in ("1'b0", "1'b1"):
-            wire_x = f"{wire_xa} ^ ({wire_xb})"
-        elif wire_xa in ("1'b0", "1'b1") and wire_xb in ("1'b0", "1'b1"):
-            wire_x = f"1'b{int(wire_xa[-1]) ^ int(wire_xb[-1])}"
-        elif wire_xa in ("1'b0", "1'b1"):
-            wire_x = wire_xb if wire_xa == "1'b0" else f"~({wire_xb})"
-        elif wire_xb in ("1'b0", "1'b1"):
-            wire_x = wire_xa if wire_xb == "1'b0" else f"~{wire_xa}"
+        d_mux = extract(fuses, macrocell['d_mux'])
+        o_mux = extract(fuses, macrocell['o_mux'])
+        if d_mux == 'comb':
+            d_wire = f"{mc_name}_XT"
+        elif d_mux == 'fast':
+            if o_mux == 'comb':
+                # TODO: figure out what happens if PT2 is also used in XOR A input (pa2_mux == xor)
+                sum_term.remove(f"{mc_name}_PT2")
+                d_wire = f"{mc_name}_PT2"
+            elif o_mux == 'sync':
+                d_wire = f"{macrocell['pad']}_PAD"
+            else:
+                assert False
         else:
             assert False
-        output.write(f"    wire {mc_name}_X = {wire_x};\n");
+        # TODO: missing cascade mux
+        wire_st = ' | '.join(sum_term) or "1'b0"
+        output.write(f"    wire {mc_name}_ST = {wire_st};\n")
         # TODO: missing mux
-        output.write(f"    wire {mc_name}_D = {mc_name}_X;\n");
+        wire_xb = f"{mc_name}_ST"
+        if args.verbose or wire_xa not in ("1'b0", "1'b1") and wire_xb not in ("1'b0", "1'b1"):
+            wire_xt = f"({wire_xa}) ^ ({wire_xb})"
+        elif wire_xa in ("1'b0", "1'b1") and wire_xb in ("1'b0", "1'b1"):
+            wire_xt = f"1'b{int(wire_xa[-1]) ^ int(wire_xb[-1])}"
+        elif wire_xa in ("1'b0", "1'b1"):
+            wire_xt = wire_xb if wire_xa == "1'b0" else f"~({wire_xb})"
+        elif wire_xb in ("1'b0", "1'b1"):
+            wire_xt = wire_xa if wire_xb == "1'b0" else f"~({wire_xa})"
+        else:
+            assert False
+        output.write(f"    wire {mc_name}_XT = {wire_xt};\n");
+        output.write(f"    wire {mc_name}_D = {d_wire};\n");
         storage = extract(fuses, macrocell['storage'])
         if storage == 'ff':
             clk_name = "CLK"
@@ -236,19 +249,23 @@ def main():
                 output.write(f"        {mc_name}_Q <= {mc_name}_D;\n")
         fb_mux = extract(fuses, macrocell['fb_mux'])
         if fb_mux == 'comb':
-            output.write(f"    assign FB_{mc_name} = {mc_name}_X;\n")
+            output.write(f"    assign {mc_name}_FB = {mc_name}_XT;\n")
         elif fb_mux == 'sync':
-            output.write(f"    assign FB_{mc_name} = {mc_name}_Q;\n")
+            output.write(f"    assign {mc_name}_FB = {mc_name}_Q;\n")
         else:
             assert False
-        # TODO: missing mux
-        output_invert = extract(fuses, macrocell["output_invert"])
-        if output_invert == 'off':
-            output.write(f"    wire {mc_name}_O = {mc_name}_Q;\n")
-        elif output_invert == 'on':
-            output.write(f"    wire {mc_name}_O = ~{mc_name}_Q;\n")
+        if o_mux == 'comb':
+            o_wire = f"{mc_name}_XT"
+        elif o_mux == 'sync':
+            o_wire = f"{mc_name}_Q"
+        o_inv = extract(fuses, macrocell['o_inv'])
+        if o_inv == 'off':
+            o_wire = f"{o_wire}"
+        elif o_inv == 'on':
+            o_wire = f"~{o_wire}"
         else:
             assert False
+        output.write(f"    wire {mc_name}_O = {o_wire};\n")
         oe_mux = extract(fuses, macrocell['oe_mux'])
         if oe_mux == 'gnd':
             wire_oe = "1'b0"
@@ -260,12 +277,12 @@ def main():
             assert False
         if args.verbose or wire_oe not in ("1'b0", "1'b1"): # inout
             output.write(f"    wire {mc_name}_OE = {wire_oe};\n")
-            output.write(f"    assign PAD_{macrocell['pad']} = "
+            output.write(f"    assign {macrocell['pad']}_PAD = "
                                     f"{mc_name}_OE ? {mc_name}_O : 1'bz;\n")
         elif wire_oe == "1'b1": # output only
-            output.write(f"    assign PAD_{macrocell['pad']} = {mc_name}_O;\n")
+            output.write(f"    assign {macrocell['pad']}_PAD = {mc_name}_O;\n")
         elif wire_oe == "1'b0": # input only
-            output.write(f"    assign PAD_{macrocell['pad']} = 1'bz;\n")
+            output.write(f"    assign {macrocell['pad']}_PAD = 1'bz;\n")
         else:
             assert False
         output.write(f"\n")

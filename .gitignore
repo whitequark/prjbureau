@@ -7,4 +7,5 @@ work/*
 *.fit
 *.jed
 *.svf
+*.bak
 /*.py
