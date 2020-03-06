@@ -7,6 +7,10 @@ with database.transact() as db:
     for device_name, device in db.items():
         package, pinout = next(iter(device['pins'].items()))
         for macrocell_name, macrocell in device['macrocells'].items():
+            if macrocell['pad'] not in pinout:
+                print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
+                continue
+
             def run(code):
                 return toolchain.run(
                     f"module top(input CLK1, CLK2, output O); "

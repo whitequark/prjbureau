@@ -3,10 +3,18 @@ from util import database, toolchain, bitdiff
 
 with database.transact() as db:
     for device_name, device in db.items():
-        package, pinout = next(iter(device["pins"].items()))
-        for macrocell_name, macrocell in device["macrocells"].items():
-            for other_macrocell_name, other_macrocell in device["macrocells"].items():
-                if other_macrocell_name != macrocell_name:
+        if device_name.startswith('ATF1508'):
+            print(f"Skipping {device_name} because the fuzzer is broken on it")
+            continue
+
+        package, pinout = next(iter(device['pins'].items()))
+        for macrocell_name, macrocell in device['macrocells'].items():
+            if macrocell['pad'] not in pinout:
+                print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
+                continue
+
+            for other_macrocell_name, other_macrocell in device['macrocells'].items():
+                if other_macrocell_name != macrocell_name and other_macrocell['pad'] in pinout:
                     break
             else:
                 assert False
@@ -17,15 +25,15 @@ with database.transact() as db:
                     f"{code} "
                     f"endmodule",
                     {
-                        "CLK1": pinout[device["clocks"]["1"]["pad"]],
-                        "CLK2": pinout[device["clocks"]["2"]["pad"]],
-                        "OE1": pinout[device["enables"]["1"]["pad"]],
-                        "CLR": pinout[device["clear"]["pad"]],
-                        "I": pinout[other_macrocell["pad"]],
-                        "Q": pinout[macrocell["pad"]],
+                        'CLK1': pinout[device['clocks']['1']['pad']],
+                        'CLK2': pinout[device['clocks']['2']['pad']],
+                        'OE1': pinout[device['enables']['1']['pad']],
+                        'CLR': pinout[device['clear']['pad']],
+                        'I': pinout[other_macrocell['pad']],
+                        'Q': pinout[macrocell['pad']],
                     },
                     f"{device_name}-{package}",
-                    strategy={"xor_synthesis": "on"})
+                    strategy={'xor_synthesis': 'on'})
 
             # Took me a long time to find a netlist this pathological.
             f_sum = run(
@@ -46,6 +54,6 @@ with database.transact() as db:
 
             # PT5 can be either a part of the sum term, or serve as async set/output enable.
             macrocell.update({
-                "pt5_mux":
-                    bitdiff.describe(1, {"as_oe": f_as, "sum": f_sum}),
+                'pt5_mux':
+                    bitdiff.describe(1, {'as_oe': f_as, 'sum': f_sum}),
             })

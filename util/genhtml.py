@@ -94,7 +94,7 @@ def write_mux(f, mux_name, mux):
     f.write(f"<table border='1'>\n")
     f.write(f"<tr><td width='60'></td>")
     for fuse in mux["fuses"]:
-        f.write(f"<th width='20' style='font-size: 13px'>"
+        f.write(f"<th width='30' style='font-size: 13px'>"
                 f"<a name='L{fuse}'></a>"
                 f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
     f.write(f"</tr>\n")
@@ -151,6 +151,16 @@ bitmap_layout = {
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "goe_mux":   (9,  [(True, 9)]),
     },
+    "ATF1508AS": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "goe_mux":   (27, [(True, 27)]),
+    },
+    "ATF1508BE": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "goe_mux":   (27, [(True, 27)]),
+    },
 }
 
 
@@ -185,6 +195,8 @@ def update_macrocell_bitmap(bitmap, macrocell_name, macrocell, *, override=None)
 
 def update_onehot_bitmap(bitmap, option_name, option, sigil):
     count = 0
+    if 'fuses' not in option:
+        return 0
     for n_fuse, fuse in enumerate(option['fuses']):
         for key, value in option['values'].items():
             if ~value & (1 << n_fuse):
@@ -194,6 +206,8 @@ def update_onehot_bitmap(bitmap, option_name, option, sigil):
 
 def update_pterm_bitmap(bitmap, pterm_name, pterm):
     count = 0
+    if 'fuse_range' not in pterm:
+        return 0
     for fuse in range(*pterm['fuse_range']):
         count += update_fuse(bitmap, fuse, 'R', owner=pterm_name) # stub
     return count
@@ -296,6 +310,8 @@ def write_global_oe(f, device_name, device):
     write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range)
 
     for mux_name, mux in device['goe_muxes'].items():
+        if 'fuses' not in mux:
+            continue
         bitmap = {}
         mux_fuse_count = update_onehot_bitmap(bitmap, mux_name, mux, 'R')
         write_section(f, f"<a name='{mux_name}'></a>Global OE Mux {mux_name} Fuses",
