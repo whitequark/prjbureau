@@ -78,19 +78,24 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
 
 def write_option(f, option_name, option):
     f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
-    f.write(f"<table border='1'>\n")
-    f.write(f"<tr><td width='60'></td>")
+    f.write(f"<table>\n")
+    f.write(f"<tr><td width='60' height='40'></td>")
     for fuse in option["fuses"]:
-        f.write(f"<th width='40' style='font-size: 13px'>"
-                f"<a name='L{fuse}'></a>{fuse}</th>")
+        f.write(f"<th width='21'>"
+                f"<a name='L{fuse}'></a>"
+                f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
+                f"<span style='font-size: 11px'>{fuse}</span>"
+                f"</div></th>")
     f.write(f"</tr>\n")
     values = option["values"].items()
     if len(option["fuses"]) > 1:
         values = sorted(values, key=lambda i: i[0])
     for name, value in values:
-        f.write(f"<tr><td align='right'>{name}</td>")
+        f.write(f"<tr><td align='right' height='18'>{name}</td>")
         for n_fuse in range(len(option["fuses"])):
-            f.write(f"<td align='center'>{(value >> n_fuse) & 1}</td>")
+            f.write(f"<td align='center' bgcolor='#e8e8e8'>"
+                    f"{(value >> n_fuse) & 1}"
+                    f"</td>")
         f.write(f"</tr>\n")
     f.write(f"</table>\n")
 
@@ -131,9 +136,8 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     for mux_name in muxes:
         f.write(f"<th width='16'>"
                 f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
-                f"<span style='font-size: 11px'>"
-                f"{mux_name}"
-                f"</span></div></th>")
+                f"<span style='font-size: 11px'>{mux_name}</span>"
+                f"</div></th>")
     f.write(f"</tr>\n")
     for net_name, xpoint_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
