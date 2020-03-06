@@ -47,5 +47,5 @@ with database.transact() as db:
             # PT5 can be either a part of the sum term, or serve as async set/output enable.
             macrocell.update({
                 "pt5_mux":
-                    bitdiff.describe(1, {"sum": f_sum, "as_oe": f_as}),
+                    bitdiff.describe(1, {"as_oe": f_as, "sum": f_sum}),
             })

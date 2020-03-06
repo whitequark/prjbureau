@@ -41,5 +41,5 @@ with database.transact() as db:
             # https://www.dataman.com/media/datasheet/Atmel/ATF15xxAE_doc2398.pdf
             macrocell.update({
                 "pt2_mux":
-                    bitdiff.describe(1, {"sum": f_nor, "xor": f_xnor}),
+                    bitdiff.describe(1, {"xor": f_xnor, "sum": f_nor}),
             })

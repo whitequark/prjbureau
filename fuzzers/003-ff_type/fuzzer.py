@@ -19,5 +19,5 @@ with database.transact() as db:
 
             macrocell.update({
                 "storage":
-                    bitdiff.describe(1, {"latch": f_latch, "ff": f_dff})
+                    bitdiff.describe(1, {"ff": f_dff, "latch": f_latch})
             })

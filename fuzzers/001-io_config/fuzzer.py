@@ -23,8 +23,8 @@ with database.transact() as db:
                 f_pk   = run(pin_keep="O")
 
             macrocell.update({
-                "fast_output":
-                    bitdiff.describe(1, {"on": f_fast, "off": f_out}),
+                "slow_output":
+                    bitdiff.describe(1, {"off": f_fast, "on": f_out}),
                 "open_collector":
                     bitdiff.describe(1, {"off": f_out, "on": f_oc}),
             })

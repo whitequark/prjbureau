@@ -22,5 +22,5 @@ with database.transact() as db:
             # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
             macrocell.update({
                 "pt5_func":
-                    bitdiff.describe(1, {"oe": f_oe, "as": f_as})
+                    bitdiff.describe(1, {"as": f_as, "oe": f_oe})
             })

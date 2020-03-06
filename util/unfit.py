@@ -173,12 +173,8 @@ def main():
             wire_ce = "1'b1"
         elif pt4_func == 'ce':
             global_clock = extract(fuses, macrocell['global_clock'])
-            if global_clock == 'gclk1':
-                wire_clk = 'GCLK1'
-            elif global_clock == 'gclk2':
-                wire_clk = 'GCLK2'
-            elif global_clock == 'gclk3':
-                wire_clk = 'GCLK3'
+            if global_clock in ('gclk1', 'gclk2', 'gclk3'):
+                wire_clk = global_clock.upper()
             else:
                 assert False
             wire_ce = wire_clk_ce

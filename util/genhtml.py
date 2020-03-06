@@ -102,7 +102,10 @@ def write_option(f, option_name, option, base):
                 f"<a name='L{fuse}'></a>"
                 f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
     f.write(f"</tr>\n")
-    for name, value in sorted(option["values"].items(), key=lambda i: i[0]):
+    values = option["values"].items()
+    if len(option["fuses"]) > 1:
+        values = sorted(values, key=lambda i: i[0])
+    for name, value in values:
         f.write(f"<tr><td align='right'>{name}</td>")
         for n_fuse in range(len(option["fuses"])):
             f.write(f"<td align='center'>{(value >> n_fuse) & 1}</td>")
@@ -124,7 +127,7 @@ macrocell_options = {
     "fb_mux":           "M",
     "oe_mux":           "M",
     "output_invert":    "M",
-    "fast_output":      "IO",
+    "slow_output":      "IO",
     "open_collector":   "IO",
     "pull_up":          "IO",
     "schmitt_trigger":  "IO",

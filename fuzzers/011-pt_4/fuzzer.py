@@ -21,5 +21,5 @@ with database.transact() as db:
             # PT4 can be either a part of the sum term, or serve as clock/clock enable.
             macrocell.update({
                 "pt4_mux":
-                    bitdiff.describe(1, {"sum": f_mux_1, "clk_ce": f_mux_pt4}),
+                    bitdiff.describe(1, {"clk_ce": f_mux_pt4, "sum": f_mux_1}),
             })

@@ -30,5 +30,5 @@ with database.transact() as db:
             # PT3 can be either a part of the sum term, or serve as async reset.
             macrocell.update({
                 "pt3_mux":
-                    bitdiff.describe(1, {"sum": f_sum, "ar": f_ar}),
+                    bitdiff.describe(1, {"ar": f_ar, "sum": f_sum}),
             })
