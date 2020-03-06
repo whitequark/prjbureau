@@ -3,51 +3,29 @@ from util import database, toolchain, bitdiff
 
 with database.transact() as db:
     for device_name, device in db.items():
-        package, pinout = next(iter(device["pins"].items()))
-        for macrocell_name, macrocell in device["macrocells"].items():
-            def run_normal(clk):
+        package, pinout = next(iter(device['pins'].items()))
+        for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
+            def run(code):
                 return toolchain.run(
-                    # using GCLK3 always configures an MC as input, so always use it
-                    f"module top(input OE, CLK1, CLK2, CLK3, output Q);"
-                    f"    DFF x(.CLK({clk}), .D(CLK3), .Q(Q));"
+                    f"module top(input OE, CLK1, CLK2, CLK3, output O);"
+                    f"wire Q; TRI tri(Q, 1'b0, O); "
+                    f"{code} "
                     f"endmodule",
                     {
-                        "CLK1": pinout[device["clocks"]["1"]["pad"]],
-                        "CLK2": pinout[device["clocks"]["2"]["pad"]],
-                        "CLK3": pinout[device["clocks"]["3"]["pad"]],
-                        "OE": pinout[device["clear"]["pad"]],
-                        "Q": pinout[macrocell["pad"]],
+                        'CLK1': pinout[device['clocks']['1']['pad']],
+                        'CLK2': pinout[device['clocks']['2']['pad']],
+                        'CLK3': pinout[device['clocks']['3']['pad']],
+                        'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}")
 
-            def run_gclk3_mc(clk):
-                return toolchain.run(
-                    f"module top(input OE, CLK1, CLK2, inout PAD);"
-                    f"    wire Q, CLK3;"
-                    f"    BIBUF b(.A(Q), .Q(CLK3), .EN(1'b0), .PAD(PAD));"
-                    f"    DFF f(.CLK({clk}), .D(CLK3), .Q(Q));"
-                    f"endmodule",
-                    {
-                        "CLK1": pinout[device["clocks"]["1"]["pad"]],
-                        "CLK2": pinout[device["clocks"]["2"]["pad"]],
-                        "PAD": pinout[device["clocks"]["3"]["pad"]],
-                        "OE": pinout[device["clear"]["pad"]],
-                    },
-                    f"{device_name}-{package}")
-
-            def run(clk):
-                if device["clocks"]["3"]["pad"] == macrocell["pad"]:
-                    return run_gclk3_mc(clk)
-                else:
-                    return run_normal(clk)
-
-            f_clk1 = run("CLK1")
-            f_clk2 = run("CLK2") # also happens to be 00
-            f_clk3 = run("CLK3")
+            f_clk1 = run("DFF ff(.CLK(CLK1), .D(CLK3), .Q(Q));")
+            f_clk2 = run("DFF ff(.CLK(CLK2), .D(CLK3), .Q(Q));") # also happens to be 00
+            f_clk3 = run("DFF ff(.CLK(CLK3), .D(CLK3), .Q(Q));")
             # 1 unused fuse combination
 
             # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
             macrocell.update({
-                "global_clock":
-                    bitdiff.describe(2, {"gclk2": f_clk2, "gclk3": f_clk3, "gclk1": f_clk1})
+                'global_clock':
+                    bitdiff.describe(2, {'gclk2': f_clk2, 'gclk3': f_clk3, 'gclk1': f_clk1})
             })

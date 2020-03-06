@@ -5,18 +5,18 @@ from util import database, toolchain, bitdiff
 
 with database.transact() as db:
     for device_name, device in db.items():
-        package, pinout = next(iter(device["pins"].items()))
+        package, pinout = next(iter(device['pins'].items()))
 
-        goe_mux_range = range(*device["ranges"]["goe_muxes"])
-        assert len(goe_mux_range) % len(device["goe_muxes"]) == 0
-        goe_mux_size  = len(goe_mux_range) // len(device["goe_muxes"])
-        for goe_index, (goe_name, goe_mux) in enumerate(device["goe_muxes"].items()):
+        goe_mux_range = range(*device['ranges']['goe_muxes'])
+        assert len(goe_mux_range) % len(device['goe_muxes']) == 0
+        goe_mux_size  = len(goe_mux_range) // len(device['goe_muxes'])
+        for goe_index, (goe_name, goe_mux) in enumerate(device['goe_muxes'].items()):
             goe_mux['fuses'] = list(range(goe_mux_range.start + goe_mux_size * goe_index,
                                           goe_mux_range.start + goe_mux_size * (goe_index + 1)))
 
         def run_pad(pad_name):
-            for other_macrocell_name, other_macrocell in device["macrocells"].items():
-                if other_macrocell["pad"] != pad_name:
+            for other_macrocell_name, other_macrocell in device['macrocells'].items():
+                if other_macrocell['pad'] != pad_name and other_macrocell['pad'] in pinout:
                     break
             else:
                 assert False
@@ -25,8 +25,8 @@ with database.transact() as db:
                 f"wire Q; DFFAS dff(1'b0, O, 1'b0, Q); TRI t(Q, OE, O); "
                 f"endmodule",
                 {
-                    "O": pinout[other_macrocell["pad"]],
-                    "OE": pinout[pad_name],
+                    'O': pinout[other_macrocell['pad']],
+                    'OE': pinout[pad_name],
                 },
                 f"{device_name}-{package}")
 
@@ -63,12 +63,12 @@ with database.transact() as db:
         # it's useless. Whether this latch is present or not in the EDIF, EDIF input will never
         # cause buried nodes to be used for GOE.
         def run_fb(macrocell_idx, macrocell_name):
-            for other1_macrocell_name, other1_macrocell in device["macrocells"].items():
+            for other1_macrocell_name, other1_macrocell in device['macrocells'].items():
                 if other1_macrocell_name != macrocell_name:
                     break
             else:
                 assert False
-            for other2_macrocell_name, other2_macrocell in device["macrocells"].items():
+            for other2_macrocell_name, other2_macrocell in device['macrocells'].items():
                 if (other2_macrocell_name != macrocell_name and
                         other2_macrocell_name != other1_macrocell_name):
                     break
@@ -97,13 +97,15 @@ with database.transact() as db:
                 """,
                 None,
                 f"{device_name}-{package}",
-                strategy={"logic_doubling":"on"},
-                format="tt")
+                strategy={'logic_doubling':'on'},
+                format='tt')
 
         nodes = {}
 
         for node_type in ('clocks', 'enables', 'macrocells'):
             for node_name, node in device[node_type].items():
+                if node['pad'] not in pinout:
+                    continue
                 try:
                     fuses = run_pad(node['pad'])
                 except subprocess.CalledProcessError as err:
