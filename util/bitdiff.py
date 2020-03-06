@@ -1,4 +1,4 @@
-import bitarray, bitarray.util
+import bitarray
 
 
 def describe(expected, variants):

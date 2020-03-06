@@ -1,7 +1,8 @@
 #!/bin/sh -ex
 
-export PYTHONPATH=$(dirname $0)
-for fuzzer in $(dirname $0)/fuzzers/*/fuzzer.py; do
+root=$(dirname $0)
+export PYTHONPATH=${root}
+for fuzzer in ${root}/fuzzers/*/fuzzer.py; do
   python3 ${fuzzer}
 done
 python3 -m util.genhtml

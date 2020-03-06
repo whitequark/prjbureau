@@ -18,8 +18,78 @@ def write_section(f, title, description):
     f.write(f"<p>{description}</p>\n")
 
 
+def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
+    f.write(f"<table style='font-size:11px'>\n")
+    f.write(f"<tr><td></td>\n")
+    for column in range(columns):
+        f.write(f"<td align='center' width='15'>{column}</td>\n")
+    f.write(f"</tr>\n")
+    fuse = fuse_range.start
+    while fuse < fuse_range.stop:
+        for row_active, row_width in rows:
+            if compact:
+                for offset in range(row_width):
+                    if row_active:
+                        sigil, _ = bitmap.get(fuse + offset, ("?", None))
+                        if sigil not in "1?-":
+                            break
+                else:
+                    fuse += row_width
+                    continue
+
+            f.write(f"<tr>\n")
+            f.write(f"<td align='right'>{fuse}</td>\n")
+            for _ in range(row_width):
+                sigil, owner = bitmap.get(fuse, ("?" if row_active else "1", None))
+                fgcolor, bgcolor = {
+                    "?": ("#666", "#aaa"), # unfuzzed
+                    "!": ("#fff", "#f00"), # conflict
+                    "1": ("#aaa", "#fff"), # always 1
+                    "-": ("#aaa", "#fff"), # out of scope
+                    "IO": ("#666", "#faa"),
+                    "FF": ("#666", "#aaf"),
+                    "M":  ("#666", "#afa"),
+                    "R":  ("#666", "#faa"),
+                }[sigil]
+                f.write(f"<td align='center' width='15' "
+                        f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
+                if owner is None:
+                    f.write(f"<abbr title='{fuse}' style='text-decoration:none'>")
+                else:
+                    f.write(f"<abbr title='{fuse} ({owner})' style='text-decoration:none'>")
+                if sigil not in "?1":
+                    f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
+                            f"href='#L{fuse}'>{sigil}</a>")
+                else:
+                    f.write(f"{sigil}")
+                f.write(f"</abbr>")
+                f.write(f"</td>\n")
+                fuse += 1
+            f.write(f"</tr>\n")
+    f.write(f"</table>\n")
+
+
+def write_option(f, option_name, option):
+    f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
+    f.write(f"<table border='1'>\n")
+    f.write(f"<tr><td width='60'></td>")
+    for fuse in option["fuses"]:
+        f.write(f"<th width='40' style='font-size: 13px'>"
+                f"<a name='L{fuse}'></a>{fuse}</th>")
+    f.write(f"</tr>\n")
+    values = option["values"].items()
+    if len(option["fuses"]) > 1:
+        values = sorted(values, key=lambda i: i[0])
+    for name, value in values:
+        f.write(f"<tr><td align='right'>{name}</td>")
+        for n_fuse in range(len(option["fuses"])):
+            f.write(f"<td align='center'>{(value >> n_fuse) & 1}</td>")
+        f.write(f"</tr>\n")
+    f.write(f"</table>\n")
+
+
 def write_mux(f, mux_name, mux):
-    base = mux['fuses'][0]
+    base = min(mux['fuses'])
     f.write(f"<p>Fuse combinations for mux \"{mux_name}\", relative to offset {base}:</p>")
     f.write(f"<table border='1'>\n")
     f.write(f"<tr><td width='60'></td>")
@@ -33,82 +103,6 @@ def write_mux(f, mux_name, mux):
         for n_fuse in range(len(mux["fuses"])):
             bgcolor = "#ccc" if (value >> n_fuse) & 1 else "#afa"
             f.write(f"<td align='center' bgcolor='{bgcolor}'>{(value >> n_fuse) & 1}</td>")
-        f.write(f"</tr>\n")
-    f.write(f"</table>\n")
-
-
-def write_globals(f, device_name, device):
-    write_header(f, f"{device_name} Globals")
-
-    write_section(f, "Global OE Muxes",
-        f"Device uses {sum(len(mux['fuses']) for mux in device['goe_muxes'].values())} fuses "
-        f"for global OE muxes.")
-    for mux_name, mux in device['goe_muxes'].items():
-        write_mux(f, mux_name, mux)
-
-
-def write_bitmap(f, columns, rows, bitmap, base):
-    f.write(f"<table style='font-size:11px'>\n")
-    f.write(f"<tr>\n")
-    column = 0
-    for width in columns:
-        f.write(f"<td></td>\n")
-        for _ in range(width):
-            f.write(f"<td align='center' width='15'>{column}</td>\n")
-            column += 1
-    f.write(f"</tr>\n")
-    fuse = base
-    for row in rows:
-        f.write(f"<tr>\n")
-        for chunk_index, (chunk_name, width) in enumerate(row):
-            if chunk_index == 0:
-                name_align = "right"
-            else:
-                name_align = "center"
-            f.write(f"<td align='{name_align}'>{chunk_name}</td>\n")
-            for _ in range(width):
-                sigil = bitmap.get(fuse, "1" if not chunk_name else "?")
-                fgcolor, bgcolor = {
-                    "?": ("#666", "#aaa"), # unfuzzed
-                    "!": ("#fff", "#f00"), # conflict
-                    "1": ("#aaa", "#fff"), # always 1
-                    "-": ("#aaa", "#fff"), # out of scope
-                    "IO": ("#666", "#faa"),
-                    "FF": ("#666", "#aaf"),
-                    "M":  ("#666", "#afa"),
-                }[sigil]
-                f.write(f"<td align='center' width='15' "
-                        f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
-                f.write(f"<abbr title='{fuse} ({base}+{fuse - base})' "
-                        f"style='text-decoration:none'>")
-                if sigil not in "?1":
-                    f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
-                            f"href='#L{fuse}'>{sigil}</a>")
-                else:
-                    f.write(f"{sigil}")
-                f.write(f"</abbr>")
-                f.write(f"</td>\n")
-                fuse += 1
-        f.write(f"</tr>\n")
-    f.write(f"</table>\n")
-
-
-def write_option(f, option_name, option, base):
-    f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
-    f.write(f"<table border='1'>\n")
-    f.write(f"<tr><td width='60'></td>")
-    for fuse in option["fuses"]:
-        f.write(f"<th width='40' style='font-size: 13px'>"
-                f"<a name='L{fuse}'></a>"
-                f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
-    f.write(f"</tr>\n")
-    values = option["values"].items()
-    if len(option["fuses"]) > 1:
-        values = sorted(values, key=lambda i: i[0])
-    for name, value in values:
-        f.write(f"<tr><td align='right'>{name}</td>")
-        for n_fuse in range(len(option["fuses"])):
-            f.write(f"<td align='center'>{(value >> n_fuse) & 1}</td>")
         f.write(f"</tr>\n")
     f.write(f"</table>\n")
 
@@ -136,92 +130,180 @@ macrocell_options = {
 }
 
 
-macrocell_bitmap_layout = {
-    "ATF1502AS": (
-        (32,), [
-            # The configuration bits come in pairs, and every other pair is mirrored. The entire
-            # configuration array is also a pair of halves, which are also mirrored; every
-            # macrocell's configuration bits come from alternate halves on alternate rows.
-            # Using `-str debug on` option makes the fitter print bits S0..S23 in order.
-            [("",16)],
-            [("S16/S12",32)],
-            [("S14/S11",32)],
-            [("",16)],
-            [("S9/S6",  32)],
-            [("S13/S10",32)],
-            [("",16)],
-            [("S20/S18",32)],
-            [("S8/S21", 32)],
-            [("",16)],
-            [("S7/S19", 32)],
-            [("S22/S5", 32)],
-            [("",16)],
-            [("S23/S4", 32)],
-            [("S3/S15", 32)],
-            [("",16)],
-            [("S0/S1",  32)],
-            [("S17/S2", 32)],
-        ]
-    ),
-    "ATF1502BE": (
-        (27,), [
-            # The configuration bits are arranged in a straightforward array.
-            *[[(f"MC+{1+n}",27)] for n in range(16)[::-1]],
-            [("",48)],
-        ]
-    ),
+bitmap_layout = {
+    "ATF1502AS": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "goe_mux":   (5,  [(True,  5)]),
+    },
+    "ATF1502BE": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "goe_mux":   (5,  [(True,  5)]),
+    },
+    "ATF1504AS": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "goe_mux":   (9,  [(True,  9)]),
+    },
+    "ATF1504BE": {
+        "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
+        "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "goe_mux":   (9,  [(True, 9)]),
+    },
 }
 
 
-def update_macrocell_bitmap(bitmap, macrocell, override=None):
+def update_fuse(bitmap, fuse, sigil, *, owner=None):
+    if fuse in bitmap:
+        old_sigil, old_owner = bitmap[fuse]
+        if owner and old_owner:
+            bitmap[fuse] = ('!', ', '.join((owner, old_owner)))
+        else:
+            bitmap[fuse] = ('!', None)
+        return 0
+    bitmap[fuse] = (sigil, owner)
+    return 1
+
+
+def update_option_bitmap(bitmap, option, sigil, *, owner=None):
+    count = 0
+    for fuse in option['fuses']:
+        count += update_fuse(bitmap, fuse, sigil, owner=owner)
+    return count
+
+
+def update_macrocell_bitmap(bitmap, macrocell_name, macrocell, *, override=None):
+    count = 0
     for option_name, sigil in macrocell_options.items():
         if option_name not in macrocell:
             continue
-        for fuse in macrocell[option_name]["fuses"]:
-            if fuse in bitmap:
-                bitmap[fuse] = "!"
-            else:
-                bitmap[fuse] = override or sigil
+        count += update_option_bitmap(bitmap,
+            macrocell[option_name], override or sigil, owner=f"{macrocell_name}.{option_name}")
+    return count
 
 
-def write_block(f, device_name, device, block_name):
-    write_header(f, f"{device_name} Logic Block {block_name}")
+def update_onehot_bitmap(bitmap, option_name, option, sigil):
+    count = 0
+    for n_fuse, fuse in enumerate(option['fuses']):
+        for key, value in option['values'].items():
+            if ~value & (1 << n_fuse):
+                count += update_fuse(bitmap, fuse, sigil, owner=f"{option_name}.{key}")
+    return count
+
+
+def update_pterm_bitmap(bitmap, pterm_name, pterm):
+    count = 0
+    for fuse in range(*pterm['fuse_range']):
+        count += update_fuse(bitmap, fuse, 'R', owner=pterm_name) # stub
+    return count
+
+
+def write_macrocells(f, device_name, device, block_name):
+    write_header(f, f"{device_name} Logic Block {block_name} Macrocells")
 
     block = device["blocks"][block_name]
-    macrocell_fuse_range = range(*block["macrocell_fuse_range"])
+    macrocell_fuse_range = range(*device["ranges"]["macrocells"])
+    macrocells = {name: device["macrocells"][name] for name in block["macrocells"]}
+
+    bitmap = {}
+    total_fuse_count = 0
+    for macrocell_name, macrocell in macrocells.items():
+        total_fuse_count += update_macrocell_bitmap(bitmap, macrocell_name, macrocell)
+    for other_block_name, other_block in device["blocks"].items():
+        if block_name == other_block_name:
+            continue
+        other_macrocells = {name: device["macrocells"][name] for name in other_block["macrocells"]}
+        for other_macrocell_name, other_macrocell in other_macrocells.items():
+            update_macrocell_bitmap(bitmap, other_macrocell_name, other_macrocell, override="-")
 
     macrocell_links = [f"<a href='#{name}'>{name}</a>" for name in block["macrocells"]]
     write_section(f, "Macrocell Configuration Bitmap",
-        f"Logic block {block_name} uses {len(macrocell_fuse_range)} fuses at "
+        f"Logic block {block_name} uses {total_fuse_count} (known) fuses within range "
         f"{macrocell_fuse_range.start}..{macrocell_fuse_range.stop} for macrocells "
         f"{', '.join(macrocell_links)}.")
-
-    macrocells = {name: device["macrocells"][name] for name in block["macrocells"]}
-    bitmap = {}
-    for macrocell in macrocells.values():
-        update_macrocell_bitmap(bitmap, macrocell)
-    write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap,
-                 base=macrocell_fuse_range.start)
+    write_bitmap(f, *bitmap_layout[device_name]['macrocell'], bitmap, macrocell_fuse_range)
 
     for macrocell_name, macrocell in macrocells.items():
-        write_section(f, f"<a name='{macrocell_name}'></a>Macrocell {macrocell_name} Fuses",
-            f"Macrocell {macrocell_name} uses the following fuses for configuration, "
-            f"relative to offset {macrocell_fuse_range.start}.")
-
         bitmap = {}
-        update_macrocell_bitmap(bitmap, macrocell)
+        macrocell_fuse_count = update_macrocell_bitmap(bitmap, macrocell_name, macrocell)
         for other_macrocell_name, other_macrocell in macrocells.items():
             if macrocell_name == other_macrocell_name:
                 continue
-            update_macrocell_bitmap(bitmap, other_macrocell, override="-")
-        write_bitmap(f, *macrocell_bitmap_layout[device_name], bitmap,
-                     base=macrocell_fuse_range.start)
+            update_macrocell_bitmap(bitmap, other_macrocell_name, other_macrocell, override="-")
+
+        write_section(f, f"<a name='{macrocell_name}'></a>Macrocell {macrocell_name} Fuses",
+            f"Macrocell {macrocell_name} uses the following {macrocell_fuse_count} (known) fuses "
+            f"for configuration.")
+        write_bitmap(f, *bitmap_layout[device_name]['macrocell'], bitmap, macrocell_fuse_range,
+                     compact=True)
 
         for option_name in macrocell_options:
             if option_name not in macrocell:
                 continue
-            write_option(f, option_name, macrocell[option_name],
-                         base=macrocell_fuse_range.start)
+            write_option(f, option_name, macrocell[option_name])
+
+
+def write_pterms(f, device_name, device, block_name):
+    write_header(f, f"{device_name} Logic Block {block_name} Product Terms")
+
+    pterm_fuse_range = range(*device['ranges']['pterms'])
+    macrocell_names = device['blocks'][block_name]['macrocells']
+    pterms = device['pterms']
+
+    bitmap = {}
+    total_fuse_count = 0
+    for macrocell_name in macrocell_names:
+        for pterm_name, pterm in pterms[macrocell_name].items():
+            update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}", pterm)
+
+    pterm_links = [f"<a href='#{macrocell_name}.{pterm_name}'>{macrocell_name}.{pterm_name}</a>"
+                   for macrocell_name in macrocell_names
+                   for pterm_name in device['pterms'][macrocell_name]]
+    write_section(f, "Product Term Configuration Bitmap",
+        f"Logic block {block_name} uses {total_fuse_count} (known) fuses within range "
+        f"{pterm_fuse_range.start}..{pterm_fuse_range.stop} for product terms "
+        f"{', '.join(pterm_links)}.")
+    write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, pterm_fuse_range)
+
+    for macrocell_name in macrocell_names:
+        for pterm_name, pterm in pterms[macrocell_name].items():
+            bitmap = {}
+            pterm_fuse_count = update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}", pterm)
+            write_section(f, f"<a name='{macrocell_name}.{pterm_name}'></a>"
+                             f"Macrocell {macrocell_name} Product Term {pterm_name} Fuses",
+                f"Macrocell {macrocell_name} product term {pterm_name} uses the following "
+                f"{pterm_fuse_count} (known) fuses for configuration.")
+            write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, pterm_fuse_range,
+                         compact=True)
+
+
+def write_global_oe(f, device_name, device):
+    write_header(f, f"{device_name} Globals")
+
+    goe_fuse_range = range(*device['ranges']['goe_muxes'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for mux_name, mux in device['goe_muxes'].items():
+        total_fuse_count += update_onehot_bitmap(bitmap, mux_name, mux, 'R')
+
+    mux_links = [f"<a href='#{name}'>{name}</a>" for name in device['goe_muxes']]
+    write_section(f, "Global OE Mux Configuration Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within range "
+        f"{goe_fuse_range.start}..{goe_fuse_range.stop} for global OE muxes "
+        f"{', '.join(mux_links)}.")
+    write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range)
+
+    for mux_name, mux in device['goe_muxes'].items():
+        bitmap = {}
+        mux_fuse_count = update_onehot_bitmap(bitmap, mux_name, mux, 'R')
+        write_section(f, f"<a name='{mux_name}'></a>Global OE Mux {mux_name} Fuses",
+            f"Global OE mux {mux_name} uses the following {mux_fuse_count} (known) fuses "
+            f"for configuration.")
+        write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range,
+                     compact=True)
+        write_mux(f, mux_name, mux)
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
@@ -242,17 +324,20 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
             fd.write(f"<p>Device {device_name} documentation index:</p>\n")
             fd.write(f"<ul>\n")
 
-            fd.write(f"<li><a href='globals.html'>Globals</a></li>\n")
-
-            with open(os.path.join(dev_docs_dir, f"globals.html"), "w") as fb:
-                write_globals(fb, device_name, device)
-
             for block_name in device["blocks"]:
-                fd.write(f"<li><a href='block{block_name}.html'>"
-                         f"Logic Block {block_name}</a></li>\n")
+                fd.write(f"<li><a href='mc{block_name}.html'>"
+                         f"Logic Block {block_name} Macrocells</a></li>\n")
+                with open(os.path.join(dev_docs_dir, f"mc{block_name}.html"), "w") as fb:
+                    write_macrocells(fb, device_name, device, block_name)
 
-                with open(os.path.join(dev_docs_dir, f"block{block_name}.html"), "w") as fb:
-                    write_block(fb, device_name, device, block_name)
+                fd.write(f"<li><a href='pt{block_name}.html'>"
+                         f"Logic Block {block_name} Product Terms</a></li>\n")
+                with open(os.path.join(dev_docs_dir, f"pt{block_name}.html"), "w") as fb:
+                    write_pterms(fb, device_name, device, block_name)
+
+            fd.write(f"<li><a href='goe.html'>Global OE Muxes</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"goe.html"), "w") as fg:
+                write_global_oe(fg, device_name, device)
 
             fd.write(f"</ul>\n")
 

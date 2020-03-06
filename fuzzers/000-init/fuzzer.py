@@ -16,43 +16,48 @@ def pins(Mn, C1, E1, R, C2):
     }
 
 
-def atf1502():
+def atf15xx(*, ranges, blocks, gclk3_pad, pins):
     return {
+        "ranges": ranges,
         "blocks": {
             bn: {
-                "macrocell_fuse_range": [15360+480*bi, 15360+480*(bi+1)],
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
-            } for bi, bn in enumerate("AB")
-        },
-        "pterms": {
-            f"MC{1+mi}": {
-                f"PT{pi+1 if mi & 1 else 5-pi}": {
-                    "fuse_range": [0+96*5*mi+96*pi, 0+96*5*mi+96*(pi+1)]
-                } for pi in reversed(range(5))
-            } for mi in range(32)
+            } for bi, bn in enumerate(blocks)
         },
         "macrocells": {
             f"MC{1+mi}": {
                 "pad": f"M{1+mi}",
-            } for mi in range(32)
+            } for mi in range(len(blocks) * 16)
+        },
+        "pterms": {
+            f"MC{1+mi}": {
+                f"PT{1+pi}": {
+                } for pi in range(5)
+            } for mi in range(len(blocks) * 16)
         },
         "goe_muxes": {
-            **{
-                f"GOE{6-oei}": {
-                    "fuses": list(range(16720+5*oei, 16720+5*(oei+1)))
-                } for oei in reversed(range(6))
-            },
+            f"GOE{1+xi}": {
+            } for xi in range(6)
         },
         "clocks": {
             "1": {"pad": "C1"},
             "2": {"pad": "C2"},
-            "3": {"pad": "M17"},
+            "3": {"pad": gclk3_pad},
         },
         "enables": {
             "1": {"pad": "E1"},
             "2": {"pad": "C2"},
         },
         "clear": {"pad": "R"},
+        "pins": pins
+    }
+
+
+def atf1502xx(*, ranges):
+    return atf15xx(**{
+        "ranges": ranges,
+        "blocks": "AB",
+        "gclk3_pad": "M17",
         "pins": {
             "TQFP44": pins(
                 Mn="42 43 44  1  2  3  5  6  7  8 10 11 12 13 14 15 "
@@ -69,10 +74,116 @@ def atf1502():
                 R ="1",
                 C2="2"),
         }
-    }
+    })
+
+
+def atf1504xx(*, ranges):
+    return atf15xx(**{
+        "ranges": ranges,
+        "blocks": "ABCD",
+        "gclk3_pad": "M64",
+        "pins": {
+            "TQFP100": pins(
+                Mn=" 14  13  12  10   9   8   6   4 100  99  98  97  96 "
+                   " 94  93  92  37  36  35  33  32  31  30  29  25  23 "
+                   " 21  20  19  17  16  15  40  41  42  44  45  46  47 "
+                   " 48  52  54  56  57  58  60  61  62  63  64  65  67 "
+                   " 68  69  71  73  75  76  79  80  81  83  84  85",
+                C1="87",
+                E1="88",
+                R ="89",
+                C2="90"),
+            "TQFP44": pins(
+                Mn="  6   0   5   3   2   0   0   1   0   0  44   0   0 "
+                   " 43   0  42  15   0  14  13  12   0   0  11  10   0 "
+                   "  0   0   0   8   0   7  18   0  19  20  21   0   0 "
+                   " 22  23   0   0   0   0  25   0  26  27   0  28  30 "
+                   " 31   0   0  32  33   0   0   0   0  34   0  35",
+                C1="37",
+                E1="38",
+                R ="39",
+                C2="40"),
+            "PLCC44": pins(
+                Mn=" 12   0  11   9   8   0   0   7   0   0   6   0   0 "
+                   "  5   0   4  21   0  20  19  18   0   0  17  16   0 "
+                   "  0   0   0  14   0  13  24   0  25  26  27   0   0 "
+                   " 28  29   0   0   0   0  31   0  32  33   0  34  36 "
+                   " 37   0   0  38  39   0   0   0   0  40   0  41",
+                C1="43",
+                E1="44",
+                R ="1",
+                C2="2"),
+            "PLCC68": pins(
+                Mn=" 18   0  17  15  14  13   0  12  10   0   9   8   7 "
+                   "  5   0   4  33   0  32  30  29  28   0  27  25   0 "
+                   " 24  23  22  20   0  19  36   0  37  39  40  41   0 "
+                   " 42  44   0  45  46  47  49   0  50  51   0  52  54 "
+                   " 55  56   0  57  59   0  60  61  62  64   0  65",
+                C1="67",
+                E1="68",
+                R ="1",
+                C2="2"),
+            "PLCC84": pins(
+                Mn=" 22  21  20  18  17  16  15  14  12  11  10   9   8 "
+                   "  6   5   4  41  40  39  37  36  35  34  33  31  30 "
+                   " 29  28  27  25  24  23  44  45  46  48  49  50  51 "
+                   " 52  54  55  56  57  58  60  61  62  63  64  65  67 "
+                   " 68  69  70  71  73  74  75  76  77  79  80  81",
+                C1="83",
+                E1="84",
+                R ="1",
+                C2="2"),
+        }
+    })
 
 
 database.save({
-    "ATF1502AS": atf1502(),
-    "ATF1502BE": atf1502(),
+    "ATF1502AS": atf1502xx(**{
+        "ranges": {
+            "pterms":     [    0, 15360],
+            "macrocells": [15360, 16320],
+            "uim_muxes":  [16320, 16720],
+            "goe_muxes":  [16720, 16750],
+            "device":     [16750, 16782],
+            "jtag":       [16782, 16786],
+            "user":       [16786, 16802],
+            "reserved":   [16802, 16808],
+        },
+    }),
+    "ATF1502BE": atf1502xx(**{
+        "ranges": {
+            "pterms":     [    0, 15360],
+            "macrocells": [15360, 16320],
+            "uim_muxes":  [16320, 16720],
+            "goe_muxes":  [16720, 16750],
+            "device":     [16750, 16782],
+            "jtag":       [16782, 16790],
+            "user":       [16790, 16806],
+            "reserved":   [16806, 16814],
+        },
+    }),
+    "ATF1504AS": atf1504xx(**{
+        "ranges": {
+            "pterms":     [    0, 30720],
+            "macrocells": [30720, 32640],
+            "uim_muxes":  [32640, 34080],
+            "goe_muxes":  [34080, 34134],
+            "device":     [34134, 34166],
+            "jtag":       [34166, 34170],
+            "user":       [34170, 34186],
+            "reserved":   [34186, 34192],
+        },
+    }),
+    "ATF1504BE": atf1504xx(**{
+        "ranges": {
+            "pterms":     [    0, 30720],
+            "macrocells": [30720, 32640],
+            "uim_muxes":  [32640, 34080],
+            "goe_muxes":  [34080, 34134],
+            "device":     [34134, 34166],
+            "jtag":       [34166, 34174],
+            "user":       [34174, 34190],
+            "reserved":   [34190, 34198],
+        },
+    }),
 })
