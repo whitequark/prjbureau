@@ -1,16 +1,23 @@
+import re
 import os, os.path
 
 from . import root_dir, database
 
 
-def write_header(f, title=""):
-    if title:
-        title = f" — {title}"
-    f.write(f"<title>Project Bureau{title}</title>\n")
-    f.write(f"<h1>Project Bureau{title}</h1>\n")
-    f.write(f"<i><a href='https://github.com/whitequark/prjbureau'>Project Bureau</a> "
-            f"aims at documenting the bitstream format of Microchip ATF15xx CPLDs. "
-            f"This is a work in progress.</i>\n")
+def write_header(f, device_name="", category="", *, index=False):
+    if not (device_name or category):
+        f.write(f"<title>Project Bureau</title>\n")
+        f.write(f"<h1>Project Bureau</h1>\n")
+    elif not category:
+        f.write(f"<title>Project Bureau — {device_name}</title>\n")
+        f.write(f"<h1><a href='../index.html'>Project Bureau</a> — {device_name}</h1>\n")
+    else:
+        f.write(f"<title>Project Bureau — {device_name} {category}</title>\n")
+        f.write(f"<h1><a href='../index.html'>Project Bureau</a> — "
+                f"<a href='index.html'>{device_name}</a> {category}</h1>\n")
+    f.write(f"<i>Project Bureau aims at documenting the bitstream format of "
+            f"Microchip ATF15xx CPLDs. This is a work in progress. See more "
+            f"in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>\n")
 
 
 def write_section(f, title, description):
@@ -19,10 +26,10 @@ def write_section(f, title, description):
 
 
 def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
-    f.write(f"<table style='font-size:11px'>\n")
-    f.write(f"<tr><td></td>\n")
+    f.write(f"<table style='font-size:12px'>\n")
+    f.write(f"<tr><td width='60'></td>\n")
     for column in range(columns):
-        f.write(f"<td align='center' width='15'>{column}</td>\n")
+        f.write(f"<td align='center' width='16'>{column}</td>\n")
     f.write(f"</tr>\n")
     fuse = fuse_range.start
     while fuse < fuse_range.stop:
@@ -38,11 +45,11 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
                     continue
 
             f.write(f"<tr>\n")
-            f.write(f"<td align='right'>{fuse}</td>\n")
+            f.write(f"<td align='right' height='18'>{fuse}</td>\n")
             for _ in range(row_width):
                 sigil, owner = bitmap.get(fuse, ("?" if row_active else "1", None))
                 fgcolor, bgcolor = {
-                    "?": ("#666", "#aaa"), # unfuzzed
+                    "?": ("#666", "#ccc"), # unfuzzed
                     "!": ("#fff", "#f00"), # conflict
                     "1": ("#aaa", "#fff"), # always 1
                     "-": ("#aaa", "#fff"), # out of scope
@@ -88,21 +95,53 @@ def write_option(f, option_name, option):
     f.write(f"</table>\n")
 
 
-def write_mux(f, mux_name, mux):
+def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x):
     base = min(mux['fuses'])
     f.write(f"<p>Fuse combinations for mux \"{mux_name}\", relative to offset {base}:</p>")
-    f.write(f"<table border='1'>\n")
+    f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='60'></td>")
     for fuse in mux["fuses"]:
-        f.write(f"<th width='30' style='font-size: 13px'>"
+        f.write(f"<th width='16'>"
                 f"<a name='L{fuse}'></a>"
-                f"<abbr title='{fuse} ({base}+{fuse - base})'>+{fuse - base}</abbr></th>")
+                f"<abbr title='{fuse}'>{fuse - base}</abbr></th>")
     f.write(f"</tr>\n")
-    for name, value in sorted(mux["values"].items(), key=lambda i: -i[1]):
-        f.write(f"<tr><td align='right'>{name}</td>")
-        for n_fuse in range(len(mux["fuses"])):
-            bgcolor = "#ccc" if (value >> n_fuse) & 1 else "#afa"
-            f.write(f"<td align='center' bgcolor='{bgcolor}'>{(value >> n_fuse) & 1}</td>")
+    for name, value in sorted(mux['values'].items(), key=lambda item: sort_fn(item[0])):
+        f.write(f"<tr><td align='right' height='18'>{name}</td>")
+        for n_fuse in range(len(mux['fuses'])):
+            bgcolor = '#ccc' if (value >> n_fuse) & 1 else '#afa'
+            fgcolor = '#666' if (value >> n_fuse) & 1 else '#666'
+            f.write(f"<td align='center' bgcolor='{bgcolor}' style='color:{fgcolor};'>"
+                    f"{(value >> n_fuse) & 1}"
+                    f"</td>")
+        f.write(f"</tr>\n")
+    f.write(f"</table>\n")
+
+
+def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
+    matrix = {}
+    for mux_name, mux in muxes.items():
+        for net_name, value in mux['values'].items():
+            if not filter_fn(mux_name, net_name):
+                continue
+            if net_name not in matrix:
+                matrix[net_name] = set()
+            matrix[net_name].add(mux_name)
+    f.write(f"<table style='font-size:12px'>\n")
+    f.write(f"<tr><td width='60' height='40'></td>")
+    for mux_name in muxes:
+        f.write(f"<th width='16'>"
+                f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
+                f"<span style='font-size: 11px'>"
+                f"{mux_name}"
+                f"</span></div></th>")
+    f.write(f"</tr>\n")
+    for net_name, xpoint_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
+        f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
+        for mux_name in muxes:
+            if mux_name in xpoint_names:
+                f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>R</td>")
+            else:
+                f.write(f"<td align='center' bgcolor='#ccc' style='color:#666'>-</td>")
         f.write(f"</tr>\n")
     f.write(f"</table>\n")
 
@@ -204,17 +243,17 @@ def update_onehot_bitmap(bitmap, option_name, option, sigil):
     return count
 
 
-def update_pterm_bitmap(bitmap, pterm_name, pterm):
+def update_pterm_bitmap(bitmap, pterm_name, pterm, *, override=None):
     count = 0
     if 'fuse_range' not in pterm:
         return 0
     for fuse in range(*pterm['fuse_range']):
-        count += update_fuse(bitmap, fuse, 'R', owner=pterm_name) # stub
+        count += update_fuse(bitmap, fuse, override or 'R', owner=pterm_name) # stub
     return count
 
 
 def write_macrocells(f, device_name, device, block_name):
-    write_header(f, f"{device_name} Logic Block {block_name} Macrocells")
+    write_header(f, device_name, f"Logic Block {block_name} Macrocells")
 
     block = device["blocks"][block_name]
     macrocell_fuse_range = range(*device["ranges"]["macrocells"])
@@ -259,7 +298,7 @@ def write_macrocells(f, device_name, device, block_name):
 
 
 def write_pterms(f, device_name, device, block_name):
-    write_header(f, f"{device_name} Logic Block {block_name} Product Terms")
+    write_header(f, device_name, f"Logic Block {block_name} Product Terms")
 
     pterm_fuse_range = range(*device['ranges']['pterms'])
     macrocell_names = device['blocks'][block_name]['macrocells']
@@ -270,6 +309,14 @@ def write_pterms(f, device_name, device, block_name):
     for macrocell_name in macrocell_names:
         for pterm_name, pterm in pterms[macrocell_name].items():
             update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}", pterm)
+    for other_block_name, other_block in device["blocks"].items():
+        if block_name == other_block_name:
+            continue
+        other_macrocell_names = device['blocks'][other_block_name]['macrocells']
+        for other_macrocell_name in other_macrocell_names:
+            for other_pterm_name, other_pterm in pterms[other_macrocell_name].items():
+                update_pterm_bitmap(bitmap, f"{other_macrocell_name}.{other_pterm_name}",
+                                    other_pterm, override='-')
 
     pterm_links = [f"<a href='#{macrocell_name}.{pterm_name}'>{macrocell_name}.{pterm_name}</a>"
                    for macrocell_name in macrocell_names
@@ -293,7 +340,7 @@ def write_pterms(f, device_name, device, block_name):
 
 
 def write_global_oe(f, device_name, device):
-    write_header(f, f"{device_name} Globals")
+    write_header(f, device_name, f"Global OE Muxes")
 
     goe_fuse_range = range(*device['ranges']['goe_muxes'])
 
@@ -309,6 +356,20 @@ def write_global_oe(f, device_name, device):
         f"{', '.join(mux_links)}.")
     write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range)
 
+    def filter_fn(mux_name, net_name):
+        return net_name != 'GND'
+
+    def sort_fn(net_name):
+        if net_name.startswith("FB_MC"): # gross.
+            return int(net_name[5:])
+        if net_name.startswith("PAD_M"):
+            return int(net_name[5:])
+        return {"GND": 0, "PAD_C1":512,"PAD_E1":513,"PAD_C2":514}[net_name]
+
+    write_section(f, "Global OE Mux Connectivity",
+        f"Global OE muxes provide the following possible (known) connection points.")
+    write_matrix(f, device['goe_muxes'], filter_fn=filter_fn, sort_fn=sort_fn)
+
     for mux_name, mux in device['goe_muxes'].items():
         if 'fuses' not in mux:
             continue
@@ -319,7 +380,7 @@ def write_global_oe(f, device_name, device):
             f"for configuration.")
         write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range,
                      compact=True)
-        write_mux(f, mux_name, mux)
+        write_mux(f, mux_name, mux, sort_fn=sort_fn)
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
