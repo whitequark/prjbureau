@@ -96,4 +96,6 @@ with database.transact() as db:
                     bitdiff.describe(1, {'comb': f_o_comb_d_comb, 'sync': f_o_sync_d_comb}),
                 'd_mux':
                     bitdiff.describe(1, {'comb': f_o_comb_d_comb, 'fast': f_o_comb_d_pt2 }),
+                'dfast_mux':
+                    bitdiff.describe(1, {'pt2':  f_o_comb_d_pt2,  'pad':  f_o_sync_d_fast}),
             })

@@ -111,7 +111,7 @@ def main():
                 assert False
         elif pt2_mux == 'xor':
             sum_term.remove(f"{mc_name}_PT2")
-            wire_xa = "{mc_name}_PT2"
+            wire_xa = f"{mc_name}_PT2"
             # TODO: xor_a_input bits mean something else here
         else:
             assert False
@@ -151,15 +151,15 @@ def main():
         else:
             assert False
         d_mux = extract(fuses, macrocell['d_mux'])
-        o_mux = extract(fuses, macrocell['o_mux'])
         if d_mux == 'comb':
             d_wire = f"{mc_name}_XT"
         elif d_mux == 'fast':
-            if o_mux == 'comb':
-                # TODO: figure out what happens if PT2 is also used in XOR A input (pa2_mux == xor)
+            dfast_mux = extract(fuses, macrocell['dfast_mux'])
+            if dfast_mux == 'pt2':
+                # TODO: figure out what happens if PT2 is also used in XOR A input (pt2_mux == xor)
                 sum_term.remove(f"{mc_name}_PT2")
                 d_wire = f"{mc_name}_PT2"
-            elif o_mux == 'sync':
+            elif dfast_mux == 'pad':
                 d_wire = f"{macrocell['pad']}_PAD"
             else:
                 assert False
@@ -263,6 +263,7 @@ def main():
             output.write(f"    assign {mc_name}_FB = {mc_name}_Q;\n")
         else:
             assert False
+        o_mux = extract(fuses, macrocell['o_mux'])
         if o_mux == 'comb':
             o_wire = f"{mc_name}_XT"
         elif o_mux == 'sync':

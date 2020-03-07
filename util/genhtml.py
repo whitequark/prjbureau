@@ -30,7 +30,7 @@ def write_section(f, title, description):
 
 
 def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
-                 compact=False, link_fn=lambda fuse: f"L#{fuse}"):
+                 compact=False, link_fn=lambda fuse: f"#L{fuse}"):
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70'></td>\n")
     for column in range(columns):
@@ -65,10 +65,11 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
                 }[sigil]
                 f.write(f"<td align='center' width='15' "
                         f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
-                if owner is None:
+                if not owner:
                     f.write(f"<abbr title='{fuse}' style='text-decoration:none'>")
                 else:
-                    f.write(f"<abbr title='{fuse} ({owner})' style='text-decoration:none'>")
+                    f.write(f"<abbr title='{fuse} ({', '.join(owner)})' "
+                            f"style='text-decoration:none'>")
                 link = link_fn(fuse)
                 if link and sigil not in "?1":
                     f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
@@ -82,14 +83,15 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
     f.write(f"</table>\n")
 
 
-def write_option(f, option_name, option):
+def write_option(f, option_name, option, *, anchor=True):
     f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
     f.write(f"<table>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
     for fuse in option["fuses"]:
-        f.write(f"<th width='21'>"
-                f"<a name='L{fuse}'></a>"
-                f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
+        f.write(f"<th width='21'>")
+        if anchor:
+            f.write(f"<a name='L{fuse}'></a>")
+        f.write(f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
                 f"<span style='font-size: 11px'>{fuse}</span>"
                 f"</div></th>")
     f.write(f"</tr>\n")
@@ -191,6 +193,7 @@ macrocell_options = {
     "pt5_func":         "M",
     "xor_a_input":      "M",
     "d_mux":            "M",
+    "dfast_mux":        "M",
     "storage":          "FF",
     "fb_mux":           "M",
     "o_mux":            "M",
@@ -202,6 +205,11 @@ macrocell_options = {
     "schmitt_trigger":  "IO",
     "bus_keeper":       "IO",
     "low_power":        "IO",
+}
+
+
+macrocell_shared_options = {
+    "dfast_mux",
 }
 
 
@@ -239,36 +247,46 @@ bitmap_layout = {
 }
 
 
-def update_fuse(bitmap, fuse, sigil, *, owner=None):
+def update_fuse(bitmap, fuse, sigil, *, owner=None, conflict=True):
     if fuse in bitmap:
-        old_sigil, old_owner = bitmap[fuse]
-        if owner and old_owner:
-            bitmap[fuse] = ('!', ', '.join((owner, old_owner)))
+        old_sigil, old_owners = bitmap[fuse]
+        if owner and old_owners:
+            if conflict:
+                bitmap[fuse] = ('!', (*old_owners, owner))
+            else:
+                assert old_sigil == sigil
+                bitmap[fuse] = (old_sigil, (*old_owners, owner))
         else:
             bitmap[fuse] = ('!', None)
         return 0
-    bitmap[fuse] = (sigil, owner)
+    bitmap[fuse] = (sigil, (owner,))
     return 1
 
 
-def update_option_bitmap(bitmap, option, sigil, *, owner=None):
+def update_option_bitmap(bitmap, option, sigil, *, owner=None, conflict=True):
     count = 0
     for n_fuse, fuse in enumerate(option['fuses']):
         if len(option['fuses']) > 1:
             fuse_owner = f"{owner}.{n_fuse}"
         else:
             fuse_owner = owner
-        count += update_fuse(bitmap, fuse, sigil, owner=owner)
+        count += update_fuse(bitmap, fuse, sigil, owner=owner, conflict=conflict)
     return count
 
 
 def update_macrocell_bitmap(bitmap, macrocell_name, macrocell, *, override=None):
     count = 0
     for option_name, sigil in macrocell_options.items():
-        if option_name not in macrocell:
+        if option_name in macrocell_shared_options or option_name not in macrocell:
             continue
-        count += update_option_bitmap(bitmap,
-            macrocell[option_name], override or sigil, owner=f"{macrocell_name}.{option_name}")
+        count += update_option_bitmap(bitmap, macrocell[option_name], override or sigil,
+            owner=f"{macrocell_name}.{option_name}")
+    for option_name, sigil in macrocell_options.items():
+        if option_name not in macrocell_shared_options or option_name not in macrocell:
+            continue
+        count += update_option_bitmap(bitmap, macrocell[option_name], override or sigil,
+            owner=f"{macrocell_name}.{option_name}",
+            conflict=False)
     return count
 
 
@@ -341,7 +359,8 @@ def write_macrocells(f, device_name, device, block_name):
         for option_name in macrocell_options:
             if option_name not in macrocell:
                 continue
-            write_option(f, option_name, macrocell[option_name])
+            write_option(f, option_name, macrocell[option_name],
+                         anchor=option_name not in macrocell_shared_options)
 
 
 def write_pterms(f, device_name, device, block_name):
