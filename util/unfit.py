@@ -90,10 +90,10 @@ def main():
         sum_term = set(f"{mc_name}_PT{1+n}" for n in range(5))
         pt1_mux = extract(fuses, macrocell['pt1_mux'])
         if pt1_mux == 'sum':
-            output.write(f"    assign {mc_name}_FLB = 1'b0;\n")
+            output.write(f"    assign {mc_name}_FLB = ~1'b0;\n")
         elif pt1_mux == 'flb':
             sum_term.remove(f"{mc_name}_PT1")
-            output.write(f"    assign {mc_name}_FLB = {mc_name}_PT1;\n")
+            output.write(f"    assign {mc_name}_FLB = ~{mc_name}_PT1;\n")
         else:
             assert False
         pt2_mux = extract(fuses, macrocell['pt2_mux'])

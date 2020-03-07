@@ -101,6 +101,11 @@ with database.transact() as db:
                 new_pt1, = new_pt1s
 
                 # Now we know which macrocell to attribute the S9 flip to.
+                #
+                # One might wonder, what happens to the foldback net when PT1 is a part of the sum
+                # ter? Based on hardware testing, pt1_mux routes PT1 to either foldback or sum
+                # term, whichever is selected, and routes 0 to the other net. (This happens before
+                # the inverter.)
                 device['macrocells'][new_pt1].update({
                     'pt1_mux':
                         bitdiff.describe(1, {'flb': f_curr, 'sum': f_prev},
