@@ -67,8 +67,9 @@ def main():
     feedbacks = []
     for mc_name, macrocell in device['macrocells'].items():
         feedbacks.append(f"{mc_name}_FB")
+        feedbacks.append(f"{mc_name}_FLB")
 
-    output.write(f"    // Macrocell feedbacks\n")
+    output.write(f"    // Macrocell feedbacks and foldbacks\n")
     output.write(f"    wire {', '.join(feedbacks)};\n")
     output.write(f"\n")
 
@@ -87,6 +88,14 @@ def main():
         output.write(f"    // Macrocell {mc_name}\n")
         output.write(f"    reg {mc_name}_Q = 1'b0;\n")
         sum_term = set(f"{mc_name}_PT{1+n}" for n in range(5))
+        pt1_mux = extract(fuses, macrocell['pt1_mux'])
+        if pt1_mux == 'sum':
+            output.write(f"    assign {mc_name}_FLB = 1'b0;\n")
+        elif pt1_mux == 'flb':
+            sum_term.remove(f"{mc_name}_PT1")
+            output.write(f"    assign {mc_name}_FLB = {mc_name}_PT1;\n")
+        else:
+            assert False
         pt2_mux = extract(fuses, macrocell['pt2_mux'])
         if pt2_mux == 'sum':
             xor_a_input = extract(fuses, macrocell['xor_a_input'])
@@ -157,7 +166,7 @@ def main():
         else:
             assert False
         # TODO: missing cascade mux
-        wire_st = ' | '.join(sum_term) or "1'b0"
+        wire_st = ' | '.join(sorted(sum_term)) or "1'b0"
         output.write(f"    wire {mc_name}_ST = {wire_st};\n")
         # TODO: missing mux
         wire_xb = f"{mc_name}_ST"

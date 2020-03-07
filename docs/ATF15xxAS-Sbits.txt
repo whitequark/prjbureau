@@ -7,7 +7,7 @@ S5  = pt4_func
 S6  = xor_a_input.0
 S7  = global_clock.0
 S8  = low_power
-S9  ?
+S9  = foldback
 S10 = xor_a_input.1
 S11 = o_inv
 S12 = pt4_mux
@@ -23,4 +23,4 @@ S21 ?
 S22 = fast_output
 S23 = storage
 
-# =========?===========?==
+# =====================?==

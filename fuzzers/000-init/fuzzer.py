@@ -23,6 +23,7 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins):
         "blocks": {
             bn: {
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
+                "pterm_points": {},
             } for bi, bn in enumerate(blocks)
         },
         "macrocells": {

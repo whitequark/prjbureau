@@ -4,6 +4,10 @@ import os, os.path
 from . import root_dir, database
 
 
+def natural_sort_key(input):
+    return [int(tok) if tok.isdigit() else tok.lower() for tok in re.split(r'(\d+)', input)]
+
+
 def write_header(f, device_name="", category="", *, index=False):
     if not (device_name or category):
         f.write(f"<title>Project Bureau</title>\n")
@@ -25,9 +29,10 @@ def write_section(f, title, description):
     f.write(f"<p>{description}</p>\n")
 
 
-def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
+def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
+                 compact=False, link_fn=lambda fuse: f"L#{fuse}"):
     f.write(f"<table style='font-size:12px'>\n")
-    f.write(f"<tr><td width='60'></td>\n")
+    f.write(f"<tr><td width='70'></td>\n")
     for column in range(columns):
         f.write(f"<td align='center' width='16'>{column}</td>\n")
     f.write(f"</tr>\n")
@@ -64,9 +69,10 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
                     f.write(f"<abbr title='{fuse}' style='text-decoration:none'>")
                 else:
                     f.write(f"<abbr title='{fuse} ({owner})' style='text-decoration:none'>")
-                if sigil not in "?1":
+                link = link_fn(fuse)
+                if link and sigil not in "?1":
                     f.write(f"<a style='color:{fgcolor}; text-decoration:none' "
-                            f"href='#L{fuse}'>{sigil}</a>")
+                            f"href='{link}'>{sigil}</a>")
                 else:
                     f.write(f"{sigil}")
                 f.write(f"</abbr>")
@@ -79,7 +85,7 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *, compact=False):
 def write_option(f, option_name, option):
     f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
     f.write(f"<table>\n")
-    f.write(f"<tr><td width='60' height='40'></td>")
+    f.write(f"<tr><td width='70' height='40'></td>")
     for fuse in option["fuses"]:
         f.write(f"<th width='21'>"
                 f"<a name='L{fuse}'></a>"
@@ -104,7 +110,7 @@ def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x):
     base = min(mux['fuses'])
     f.write(f"<p>Fuse combinations for mux \"{mux_name}\", relative to offset {base}:</p>")
     f.write(f"<table style='font-size:12px'>\n")
-    f.write(f"<tr><td width='60'></td>")
+    f.write(f"<tr><td width='70'></td>")
     for fuse in mux["fuses"]:
         f.write(f"<th width='16'>"
                 f"<a name='L{fuse}'></a>"
@@ -132,17 +138,17 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
                 matrix[net_name] = set()
             matrix[net_name].add(mux_name)
     f.write(f"<table style='font-size:12px'>\n")
-    f.write(f"<tr><td width='60' height='40'></td>")
+    f.write(f"<tr><td width='70' height='40'></td>")
     for mux_name in muxes:
         f.write(f"<th width='16'>"
                 f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
                 f"<span style='font-size: 11px'>{mux_name}</span>"
                 f"</div></th>")
     f.write(f"</tr>\n")
-    for net_name, xpoint_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
+    for net_name, cross_mux_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
         for mux_name in muxes:
-            if mux_name in xpoint_names:
+            if mux_name in cross_mux_names:
                 f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>R</td>")
             else:
                 f.write(f"<td align='center' bgcolor='#ccc' style='color:#666'>-</td>")
@@ -150,7 +156,31 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     f.write(f"</table>\n")
 
 
+def write_points(f, points, *, sort_fn=lambda x: x):
+    f.write(f"<table style='font-size:12px'>\n")
+    f.write(f"<tr><td width='70' height='40'></td>")
+    fuse_offsets = list(sorted(points.values()))
+    for fuse_offset in fuse_offsets:
+        f.write(f"<th width='16'>"
+                f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
+                f"<span style='font-size: 11px'>{fuse_offset}</span>"
+                f"</div></th>")
+    f.write(f"</tr>\n")
+    for net_name, cross_fuse_offset in sorted(points.items(), key=lambda item: sort_fn(item[0])):
+        f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
+        for fuse_offset in fuse_offsets:
+            if fuse_offset == cross_fuse_offset:
+                f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>"
+                        f"<a name='PTL{fuse_offset}'></a>R"
+                        f"</td>")
+            else:
+                f.write(f"<td align='center' bgcolor='#ccc' style='color:#666'>-</td>")
+        f.write(f"</tr>\n")
+    f.write(f"</table>\n")
+
+
 macrocell_options = {
+    "pt1_mux":          "M",
     "pt2_mux":          "M",
     "pt3_mux":          "M",
     "pt4_mux":          "M",
@@ -253,12 +283,19 @@ def update_onehot_bitmap(bitmap, option_name, option, sigil):
     return count
 
 
-def update_pterm_bitmap(bitmap, pterm_name, pterm, *, override=None):
+def update_pterm_bitmap(bitmap, pterm_name, pterm, xpoints, *, override=None):
     count = 0
     if 'fuse_range' not in pterm:
         return 0
-    for fuse in range(*pterm['fuse_range']):
-        count += update_fuse(bitmap, fuse, override or 'R', owner=pterm_name) # stub
+    fuse_range = range(*pterm['fuse_range'])
+    for fuse in fuse_range:
+        fuse_offset = fuse - fuse_range.start
+        if override or fuse_offset in xpoints:
+            if fuse_offset in xpoints:
+                fuse_owner = f"{pterm_name}.{xpoints[fuse_offset]}"
+            else:
+                fuse_owner = f"{pterm_name}"
+            count += update_fuse(bitmap, fuse, override or 'R', owner=fuse_owner)
     return count
 
 
@@ -310,43 +347,71 @@ def write_macrocells(f, device_name, device, block_name):
 def write_pterms(f, device_name, device, block_name):
     write_header(f, device_name, f"Logic Block {block_name} Product Terms")
 
-    pterm_fuse_range = range(*device['ranges']['pterms'])
-    macrocell_names = device['blocks'][block_name]['macrocells']
+    blocks = device['blocks']
     pterms = device['pterms']
+    pterms_fuse_range = range(*device['ranges']['pterms'])
+
+    xpoints = {}
+    for point_net, point_fuse in blocks[block_name]['pterm_points'].items():
+        assert point_fuse not in xpoints
+        xpoints[point_fuse] = point_net
 
     bitmap = {}
+
     total_fuse_count = 0
-    for macrocell_name in macrocell_names:
+    for macrocell_name in blocks[block_name]['macrocells']:
         for pterm_name, pterm in pterms[macrocell_name].items():
-            update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}", pterm)
-    for other_block_name, other_block in device["blocks"].items():
+            total_fuse_count += update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}",
+                                                    pterm, xpoints)
+
+    for other_block_name, other_block in blocks.items():
         if block_name == other_block_name:
             continue
-        other_macrocell_names = device['blocks'][other_block_name]['macrocells']
+
+        other_xpoints = {}
+        for point_net, point_fuse in blocks[other_block_name]['pterm_points'].items():
+            assert point_fuse not in other_xpoints
+            other_xpoints[point_fuse] = point_net
+
+        other_macrocell_names = blocks[other_block_name]['macrocells']
         for other_macrocell_name in other_macrocell_names:
             for other_pterm_name, other_pterm in pterms[other_macrocell_name].items():
                 update_pterm_bitmap(bitmap, f"{other_macrocell_name}.{other_pterm_name}",
-                                    other_pterm, override='-')
+                                    other_pterm, other_xpoints, override='-')
 
     pterm_links = [f"<a href='#{macrocell_name}.{pterm_name}'>{macrocell_name}.{pterm_name}</a>"
-                   for macrocell_name in macrocell_names
-                   for pterm_name in device['pterms'][macrocell_name]]
-    write_section(f, "Product Term Configuration Bitmap",
+                   for macrocell_name in blocks[block_name]['macrocells']
+                   for pterm_name in pterms[macrocell_name]]
+    write_section(f, "Product Term Array Configuration Bitmap",
         f"Logic block {block_name} uses {total_fuse_count} (known) fuses within range "
-        f"{pterm_fuse_range.start}..{pterm_fuse_range.stop} for product terms "
+        f"{pterms_fuse_range.start}..{pterms_fuse_range.stop} for product terms "
         f"{', '.join(pterm_links)}.")
-    write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, pterm_fuse_range)
+    f.write(f"<p>They have a <a href='#PT'>common configuration bitmap</a>.</p>")
+    pterm_size = sum(size for _, size in bitmap_layout[device_name]['pterm'][1])
+    write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, pterms_fuse_range,
+                 link_fn=lambda fuse: f"#PTL{fuse % pterm_size}")
 
-    for macrocell_name in macrocell_names:
+    bitmap = {}
+    pterm_fuse_count = 0
+    for point_net, point_fuse in blocks[block_name]['pterm_points'].items():
+        pterm_fuse_count += update_fuse(bitmap, point_fuse, 'R', owner=f"PTn.{point_net}")
+    write_section(f, f"<a name='PT'></a>"
+                     f"Product Term Configuration Bitmap",
+        f"Logic block {block_name} product terms use the following {pterm_fuse_count} (known) "
+        f"fuses for specifying inputs, relative to product term specific offset. All product "
+        f"terms share the following fuse layout.")
+    write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, range(pterm_fuse_count),
+                 link_fn=lambda fuse: f"#PTL{fuse}")
+    write_points(f, blocks[block_name]['pterm_points'], sort_fn=natural_sort_key)
+
+    for macrocell_name in blocks[block_name]['macrocells']:
         for pterm_name, pterm in pterms[macrocell_name].items():
-            bitmap = {}
-            pterm_fuse_count = update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}", pterm)
+            pterm_fuse_range = range(*pterm['fuse_range'])
             write_section(f, f"<a name='{macrocell_name}.{pterm_name}'></a>"
                              f"Macrocell {macrocell_name} Product Term {pterm_name} Fuses",
-                f"Macrocell {macrocell_name} product term {pterm_name} uses the following "
-                f"{pterm_fuse_count} (known) fuses for configuration.")
-            write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, pterm_fuse_range,
-                         compact=True)
+                f"Macrocell {macrocell_name} product term {pterm_name} uses fuses within range "
+                f"{pterm_fuse_range.start}..{pterm_fuse_range.stop}. "
+                f"See the <a href='#PT'>common configuration bitmap</a> for details.")
 
 
 def write_global_oe(f, device_name, device):
