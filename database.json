@@ -114,6 +114,7 @@
     },
     "macrocells": {
       "MC1": {
+        "block": "A",
         "pad": "M1",
         "slow_output": {
           "fuses": [
@@ -310,6 +311,7 @@
         }
       },
       "MC2": {
+        "block": "A",
         "pad": "M2",
         "slow_output": {
           "fuses": [
@@ -506,6 +508,7 @@
         }
       },
       "MC3": {
+        "block": "A",
         "pad": "M3",
         "slow_output": {
           "fuses": [
@@ -702,6 +705,7 @@
         }
       },
       "MC4": {
+        "block": "A",
         "pad": "M4",
         "slow_output": {
           "fuses": [
@@ -898,6 +902,7 @@
         }
       },
       "MC5": {
+        "block": "A",
         "pad": "M5",
         "slow_output": {
           "fuses": [
@@ -1094,6 +1099,7 @@
         }
       },
       "MC6": {
+        "block": "A",
         "pad": "M6",
         "slow_output": {
           "fuses": [
@@ -1290,6 +1296,7 @@
         }
       },
       "MC7": {
+        "block": "A",
         "pad": "M7",
         "slow_output": {
           "fuses": [
@@ -1486,6 +1493,7 @@
         }
       },
       "MC8": {
+        "block": "A",
         "pad": "M8",
         "slow_output": {
           "fuses": [
@@ -1682,6 +1690,7 @@
         }
       },
       "MC9": {
+        "block": "A",
         "pad": "M9",
         "slow_output": {
           "fuses": [
@@ -1878,6 +1887,7 @@
         }
       },
       "MC10": {
+        "block": "A",
         "pad": "M10",
         "slow_output": {
           "fuses": [
@@ -2074,6 +2084,7 @@
         }
       },
       "MC11": {
+        "block": "A",
         "pad": "M11",
         "slow_output": {
           "fuses": [
@@ -2270,6 +2281,7 @@
         }
       },
       "MC12": {
+        "block": "A",
         "pad": "M12",
         "slow_output": {
           "fuses": [
@@ -2466,6 +2478,7 @@
         }
       },
       "MC13": {
+        "block": "A",
         "pad": "M13",
         "slow_output": {
           "fuses": [
@@ -2662,6 +2675,7 @@
         }
       },
       "MC14": {
+        "block": "A",
         "pad": "M14",
         "slow_output": {
           "fuses": [
@@ -2858,6 +2872,7 @@
         }
       },
       "MC15": {
+        "block": "A",
         "pad": "M15",
         "slow_output": {
           "fuses": [
@@ -3054,6 +3069,7 @@
         }
       },
       "MC16": {
+        "block": "A",
         "pad": "M16",
         "slow_output": {
           "fuses": [
@@ -3250,6 +3266,7 @@
         }
       },
       "MC17": {
+        "block": "B",
         "pad": "M17",
         "slow_output": {
           "fuses": [
@@ -3446,6 +3463,7 @@
         }
       },
       "MC18": {
+        "block": "B",
         "pad": "M18",
         "slow_output": {
           "fuses": [
@@ -3642,6 +3660,7 @@
         }
       },
       "MC19": {
+        "block": "B",
         "pad": "M19",
         "slow_output": {
           "fuses": [
@@ -3838,6 +3857,7 @@
         }
       },
       "MC20": {
+        "block": "B",
         "pad": "M20",
         "slow_output": {
           "fuses": [
@@ -4034,6 +4054,7 @@
         }
       },
       "MC21": {
+        "block": "B",
         "pad": "M21",
         "slow_output": {
           "fuses": [
@@ -4230,6 +4251,7 @@
         }
       },
       "MC22": {
+        "block": "B",
         "pad": "M22",
         "slow_output": {
           "fuses": [
@@ -4426,6 +4448,7 @@
         }
       },
       "MC23": {
+        "block": "B",
         "pad": "M23",
         "slow_output": {
           "fuses": [
@@ -4622,6 +4645,7 @@
         }
       },
       "MC24": {
+        "block": "B",
         "pad": "M24",
         "slow_output": {
           "fuses": [
@@ -4818,6 +4842,7 @@
         }
       },
       "MC25": {
+        "block": "B",
         "pad": "M25",
         "slow_output": {
           "fuses": [
@@ -5014,6 +5039,7 @@
         }
       },
       "MC26": {
+        "block": "B",
         "pad": "M26",
         "slow_output": {
           "fuses": [
@@ -5210,6 +5236,7 @@
         }
       },
       "MC27": {
+        "block": "B",
         "pad": "M27",
         "slow_output": {
           "fuses": [
@@ -5406,6 +5433,7 @@
         }
       },
       "MC28": {
+        "block": "B",
         "pad": "M28",
         "slow_output": {
           "fuses": [
@@ -5602,6 +5630,7 @@
         }
       },
       "MC29": {
+        "block": "B",
         "pad": "M29",
         "slow_output": {
           "fuses": [
@@ -5798,6 +5827,7 @@
         }
       },
       "MC30": {
+        "block": "B",
         "pad": "M30",
         "slow_output": {
           "fuses": [
@@ -5994,6 +6024,7 @@
         }
       },
       "MC31": {
+        "block": "B",
         "pad": "M31",
         "slow_output": {
           "fuses": [
@@ -6190,6 +6221,7 @@
         }
       },
       "MC32": {
+        "block": "B",
         "pad": "M32",
         "slow_output": {
           "fuses": [
@@ -7738,6 +7770,7 @@
     },
     "macrocells": {
       "MC1": {
+        "block": "A",
         "pad": "M1",
         "slow_output": {
           "fuses": [
@@ -7952,6 +7985,7 @@
         }
       },
       "MC2": {
+        "block": "A",
         "pad": "M2",
         "slow_output": {
           "fuses": [
@@ -8166,6 +8200,7 @@
         }
       },
       "MC3": {
+        "block": "A",
         "pad": "M3",
         "slow_output": {
           "fuses": [
@@ -8380,6 +8415,7 @@
         }
       },
       "MC4": {
+        "block": "A",
         "pad": "M4",
         "slow_output": {
           "fuses": [
@@ -8594,6 +8630,7 @@
         }
       },
       "MC5": {
+        "block": "A",
         "pad": "M5",
         "slow_output": {
           "fuses": [
@@ -8808,6 +8845,7 @@
         }
       },
       "MC6": {
+        "block": "A",
         "pad": "M6",
         "slow_output": {
           "fuses": [
@@ -9022,6 +9060,7 @@
         }
       },
       "MC7": {
+        "block": "A",
         "pad": "M7",
         "slow_output": {
           "fuses": [
@@ -9236,6 +9275,7 @@
         }
       },
       "MC8": {
+        "block": "A",
         "pad": "M8",
         "slow_output": {
           "fuses": [
@@ -9450,6 +9490,7 @@
         }
       },
       "MC9": {
+        "block": "A",
         "pad": "M9",
         "slow_output": {
           "fuses": [
@@ -9664,6 +9705,7 @@
         }
       },
       "MC10": {
+        "block": "A",
         "pad": "M10",
         "slow_output": {
           "fuses": [
@@ -9878,6 +9920,7 @@
         }
       },
       "MC11": {
+        "block": "A",
         "pad": "M11",
         "slow_output": {
           "fuses": [
@@ -10092,6 +10135,7 @@
         }
       },
       "MC12": {
+        "block": "A",
         "pad": "M12",
         "slow_output": {
           "fuses": [
@@ -10306,6 +10350,7 @@
         }
       },
       "MC13": {
+        "block": "A",
         "pad": "M13",
         "slow_output": {
           "fuses": [
@@ -10520,6 +10565,7 @@
         }
       },
       "MC14": {
+        "block": "A",
         "pad": "M14",
         "slow_output": {
           "fuses": [
@@ -10734,6 +10780,7 @@
         }
       },
       "MC15": {
+        "block": "A",
         "pad": "M15",
         "slow_output": {
           "fuses": [
@@ -10948,6 +10995,7 @@
         }
       },
       "MC16": {
+        "block": "A",
         "pad": "M16",
         "slow_output": {
           "fuses": [
@@ -11162,6 +11210,7 @@
         }
       },
       "MC17": {
+        "block": "B",
         "pad": "M17",
         "slow_output": {
           "fuses": [
@@ -11376,6 +11425,7 @@
         }
       },
       "MC18": {
+        "block": "B",
         "pad": "M18",
         "slow_output": {
           "fuses": [
@@ -11590,6 +11640,7 @@
         }
       },
       "MC19": {
+        "block": "B",
         "pad": "M19",
         "slow_output": {
           "fuses": [
@@ -11804,6 +11855,7 @@
         }
       },
       "MC20": {
+        "block": "B",
         "pad": "M20",
         "slow_output": {
           "fuses": [
@@ -12018,6 +12070,7 @@
         }
       },
       "MC21": {
+        "block": "B",
         "pad": "M21",
         "slow_output": {
           "fuses": [
@@ -12232,6 +12285,7 @@
         }
       },
       "MC22": {
+        "block": "B",
         "pad": "M22",
         "slow_output": {
           "fuses": [
@@ -12446,6 +12500,7 @@
         }
       },
       "MC23": {
+        "block": "B",
         "pad": "M23",
         "slow_output": {
           "fuses": [
@@ -12660,6 +12715,7 @@
         }
       },
       "MC24": {
+        "block": "B",
         "pad": "M24",
         "slow_output": {
           "fuses": [
@@ -12874,6 +12930,7 @@
         }
       },
       "MC25": {
+        "block": "B",
         "pad": "M25",
         "slow_output": {
           "fuses": [
@@ -13088,6 +13145,7 @@
         }
       },
       "MC26": {
+        "block": "B",
         "pad": "M26",
         "slow_output": {
           "fuses": [
@@ -13302,6 +13360,7 @@
         }
       },
       "MC27": {
+        "block": "B",
         "pad": "M27",
         "slow_output": {
           "fuses": [
@@ -13516,6 +13575,7 @@
         }
       },
       "MC28": {
+        "block": "B",
         "pad": "M28",
         "slow_output": {
           "fuses": [
@@ -13730,6 +13790,7 @@
         }
       },
       "MC29": {
+        "block": "B",
         "pad": "M29",
         "slow_output": {
           "fuses": [
@@ -13944,6 +14005,7 @@
         }
       },
       "MC30": {
+        "block": "B",
         "pad": "M30",
         "slow_output": {
           "fuses": [
@@ -14158,6 +14220,7 @@
         }
       },
       "MC31": {
+        "block": "B",
         "pad": "M31",
         "slow_output": {
           "fuses": [
@@ -14372,6 +14435,7 @@
         }
       },
       "MC32": {
+        "block": "B",
         "pad": "M32",
         "slow_output": {
           "fuses": [
@@ -16014,6 +16078,7 @@
     },
     "macrocells": {
       "MC1": {
+        "block": "A",
         "pad": "M1",
         "slow_output": {
           "fuses": [
@@ -16210,6 +16275,7 @@
         }
       },
       "MC2": {
+        "block": "A",
         "pad": "M2",
         "slow_output": {
           "fuses": [
@@ -16406,6 +16472,7 @@
         }
       },
       "MC3": {
+        "block": "A",
         "pad": "M3",
         "slow_output": {
           "fuses": [
@@ -16602,6 +16669,7 @@
         }
       },
       "MC4": {
+        "block": "A",
         "pad": "M4",
         "slow_output": {
           "fuses": [
@@ -16798,6 +16866,7 @@
         }
       },
       "MC5": {
+        "block": "A",
         "pad": "M5",
         "slow_output": {
           "fuses": [
@@ -16994,6 +17063,7 @@
         }
       },
       "MC6": {
+        "block": "A",
         "pad": "M6",
         "slow_output": {
           "fuses": [
@@ -17190,6 +17260,7 @@
         }
       },
       "MC7": {
+        "block": "A",
         "pad": "M7",
         "slow_output": {
           "fuses": [
@@ -17386,6 +17457,7 @@
         }
       },
       "MC8": {
+        "block": "A",
         "pad": "M8",
         "slow_output": {
           "fuses": [
@@ -17582,6 +17654,7 @@
         }
       },
       "MC9": {
+        "block": "A",
         "pad": "M9",
         "slow_output": {
           "fuses": [
@@ -17778,6 +17851,7 @@
         }
       },
       "MC10": {
+        "block": "A",
         "pad": "M10",
         "slow_output": {
           "fuses": [
@@ -17974,6 +18048,7 @@
         }
       },
       "MC11": {
+        "block": "A",
         "pad": "M11",
         "slow_output": {
           "fuses": [
@@ -18170,6 +18245,7 @@
         }
       },
       "MC12": {
+        "block": "A",
         "pad": "M12",
         "slow_output": {
           "fuses": [
@@ -18366,6 +18442,7 @@
         }
       },
       "MC13": {
+        "block": "A",
         "pad": "M13",
         "slow_output": {
           "fuses": [
@@ -18562,6 +18639,7 @@
         }
       },
       "MC14": {
+        "block": "A",
         "pad": "M14",
         "slow_output": {
           "fuses": [
@@ -18758,6 +18836,7 @@
         }
       },
       "MC15": {
+        "block": "A",
         "pad": "M15",
         "slow_output": {
           "fuses": [
@@ -18954,6 +19033,7 @@
         }
       },
       "MC16": {
+        "block": "A",
         "pad": "M16",
         "slow_output": {
           "fuses": [
@@ -19150,6 +19230,7 @@
         }
       },
       "MC17": {
+        "block": "B",
         "pad": "M17",
         "slow_output": {
           "fuses": [
@@ -19346,6 +19427,7 @@
         }
       },
       "MC18": {
+        "block": "B",
         "pad": "M18",
         "slow_output": {
           "fuses": [
@@ -19542,6 +19624,7 @@
         }
       },
       "MC19": {
+        "block": "B",
         "pad": "M19",
         "slow_output": {
           "fuses": [
@@ -19738,6 +19821,7 @@
         }
       },
       "MC20": {
+        "block": "B",
         "pad": "M20",
         "slow_output": {
           "fuses": [
@@ -19934,6 +20018,7 @@
         }
       },
       "MC21": {
+        "block": "B",
         "pad": "M21",
         "slow_output": {
           "fuses": [
@@ -20130,6 +20215,7 @@
         }
       },
       "MC22": {
+        "block": "B",
         "pad": "M22",
         "slow_output": {
           "fuses": [
@@ -20326,6 +20412,7 @@
         }
       },
       "MC23": {
+        "block": "B",
         "pad": "M23",
         "slow_output": {
           "fuses": [
@@ -20522,6 +20609,7 @@
         }
       },
       "MC24": {
+        "block": "B",
         "pad": "M24",
         "slow_output": {
           "fuses": [
@@ -20718,6 +20806,7 @@
         }
       },
       "MC25": {
+        "block": "B",
         "pad": "M25",
         "slow_output": {
           "fuses": [
@@ -20914,6 +21003,7 @@
         }
       },
       "MC26": {
+        "block": "B",
         "pad": "M26",
         "slow_output": {
           "fuses": [
@@ -21110,6 +21200,7 @@
         }
       },
       "MC27": {
+        "block": "B",
         "pad": "M27",
         "slow_output": {
           "fuses": [
@@ -21306,6 +21397,7 @@
         }
       },
       "MC28": {
+        "block": "B",
         "pad": "M28",
         "slow_output": {
           "fuses": [
@@ -21502,6 +21594,7 @@
         }
       },
       "MC29": {
+        "block": "B",
         "pad": "M29",
         "slow_output": {
           "fuses": [
@@ -21698,6 +21791,7 @@
         }
       },
       "MC30": {
+        "block": "B",
         "pad": "M30",
         "slow_output": {
           "fuses": [
@@ -21894,6 +21988,7 @@
         }
       },
       "MC31": {
+        "block": "B",
         "pad": "M31",
         "slow_output": {
           "fuses": [
@@ -22090,6 +22185,7 @@
         }
       },
       "MC32": {
+        "block": "B",
         "pad": "M32",
         "slow_output": {
           "fuses": [
@@ -22286,6 +22382,7 @@
         }
       },
       "MC33": {
+        "block": "C",
         "pad": "M33",
         "slow_output": {
           "fuses": [
@@ -22482,6 +22579,7 @@
         }
       },
       "MC34": {
+        "block": "C",
         "pad": "M34",
         "slow_output": {
           "fuses": [
@@ -22678,6 +22776,7 @@
         }
       },
       "MC35": {
+        "block": "C",
         "pad": "M35",
         "slow_output": {
           "fuses": [
@@ -22874,6 +22973,7 @@
         }
       },
       "MC36": {
+        "block": "C",
         "pad": "M36",
         "slow_output": {
           "fuses": [
@@ -23070,6 +23170,7 @@
         }
       },
       "MC37": {
+        "block": "C",
         "pad": "M37",
         "slow_output": {
           "fuses": [
@@ -23266,6 +23367,7 @@
         }
       },
       "MC38": {
+        "block": "C",
         "pad": "M38",
         "slow_output": {
           "fuses": [
@@ -23462,6 +23564,7 @@
         }
       },
       "MC39": {
+        "block": "C",
         "pad": "M39",
         "slow_output": {
           "fuses": [
@@ -23658,6 +23761,7 @@
         }
       },
       "MC40": {
+        "block": "C",
         "pad": "M40",
         "slow_output": {
           "fuses": [
@@ -23854,6 +23958,7 @@
         }
       },
       "MC41": {
+        "block": "C",
         "pad": "M41",
         "slow_output": {
           "fuses": [
@@ -24050,6 +24155,7 @@
         }
       },
       "MC42": {
+        "block": "C",
         "pad": "M42",
         "slow_output": {
           "fuses": [
@@ -24246,6 +24352,7 @@
         }
       },
       "MC43": {
+        "block": "C",
         "pad": "M43",
         "slow_output": {
           "fuses": [
@@ -24442,6 +24549,7 @@
         }
       },
       "MC44": {
+        "block": "C",
         "pad": "M44",
         "slow_output": {
           "fuses": [
@@ -24638,6 +24746,7 @@
         }
       },
       "MC45": {
+        "block": "C",
         "pad": "M45",
         "slow_output": {
           "fuses": [
@@ -24834,6 +24943,7 @@
         }
       },
       "MC46": {
+        "block": "C",
         "pad": "M46",
         "slow_output": {
           "fuses": [
@@ -24986,6 +25096,7 @@
         }
       },
       "MC47": {
+        "block": "C",
         "pad": "M47",
         "slow_output": {
           "fuses": [
@@ -25182,6 +25293,7 @@
         }
       },
       "MC48": {
+        "block": "C",
         "pad": "M48",
         "slow_output": {
           "fuses": [
@@ -25378,6 +25490,7 @@
         }
       },
       "MC49": {
+        "block": "D",
         "pad": "M49",
         "slow_output": {
           "fuses": [
@@ -25574,6 +25687,7 @@
         }
       },
       "MC50": {
+        "block": "D",
         "pad": "M50",
         "slow_output": {
           "fuses": [
@@ -25770,6 +25884,7 @@
         }
       },
       "MC51": {
+        "block": "D",
         "pad": "M51",
         "slow_output": {
           "fuses": [
@@ -25966,6 +26081,7 @@
         }
       },
       "MC52": {
+        "block": "D",
         "pad": "M52",
         "slow_output": {
           "fuses": [
@@ -26162,6 +26278,7 @@
         }
       },
       "MC53": {
+        "block": "D",
         "pad": "M53",
         "slow_output": {
           "fuses": [
@@ -26358,6 +26475,7 @@
         }
       },
       "MC54": {
+        "block": "D",
         "pad": "M54",
         "slow_output": {
           "fuses": [
@@ -26554,6 +26672,7 @@
         }
       },
       "MC55": {
+        "block": "D",
         "pad": "M55",
         "slow_output": {
           "fuses": [
@@ -26750,6 +26869,7 @@
         }
       },
       "MC56": {
+        "block": "D",
         "pad": "M56",
         "slow_output": {
           "fuses": [
@@ -26946,6 +27066,7 @@
         }
       },
       "MC57": {
+        "block": "D",
         "pad": "M57",
         "slow_output": {
           "fuses": [
@@ -27142,6 +27263,7 @@
         }
       },
       "MC58": {
+        "block": "D",
         "pad": "M58",
         "slow_output": {
           "fuses": [
@@ -27338,6 +27460,7 @@
         }
       },
       "MC59": {
+        "block": "D",
         "pad": "M59",
         "slow_output": {
           "fuses": [
@@ -27534,6 +27657,7 @@
         }
       },
       "MC60": {
+        "block": "D",
         "pad": "M60",
         "slow_output": {
           "fuses": [
@@ -27730,6 +27854,7 @@
         }
       },
       "MC61": {
+        "block": "D",
         "pad": "M61",
         "slow_output": {
           "fuses": [
@@ -27926,6 +28051,7 @@
         }
       },
       "MC62": {
+        "block": "D",
         "pad": "M62",
         "slow_output": {
           "fuses": [
@@ -28122,6 +28248,7 @@
         }
       },
       "MC63": {
+        "block": "D",
         "pad": "M63",
         "slow_output": {
           "fuses": [
@@ -28318,6 +28445,7 @@
         }
       },
       "MC64": {
+        "block": "D",
         "pad": "M64",
         "slow_output": {
           "fuses": [
@@ -31266,6 +31394,7 @@
     },
     "macrocells": {
       "MC1": {
+        "block": "A",
         "pad": "M1",
         "slow_output": {
           "fuses": [
@@ -31480,6 +31609,7 @@
         }
       },
       "MC2": {
+        "block": "A",
         "pad": "M2",
         "slow_output": {
           "fuses": [
@@ -31694,6 +31824,7 @@
         }
       },
       "MC3": {
+        "block": "A",
         "pad": "M3",
         "slow_output": {
           "fuses": [
@@ -31908,6 +32039,7 @@
         }
       },
       "MC4": {
+        "block": "A",
         "pad": "M4",
         "slow_output": {
           "fuses": [
@@ -32122,6 +32254,7 @@
         }
       },
       "MC5": {
+        "block": "A",
         "pad": "M5",
         "slow_output": {
           "fuses": [
@@ -32336,6 +32469,7 @@
         }
       },
       "MC6": {
+        "block": "A",
         "pad": "M6",
         "slow_output": {
           "fuses": [
@@ -32550,6 +32684,7 @@
         }
       },
       "MC7": {
+        "block": "A",
         "pad": "M7",
         "slow_output": {
           "fuses": [
@@ -32764,6 +32899,7 @@
         }
       },
       "MC8": {
+        "block": "A",
         "pad": "M8",
         "slow_output": {
           "fuses": [
@@ -32978,6 +33114,7 @@
         }
       },
       "MC9": {
+        "block": "A",
         "pad": "M9",
         "slow_output": {
           "fuses": [
@@ -33192,6 +33329,7 @@
         }
       },
       "MC10": {
+        "block": "A",
         "pad": "M10",
         "slow_output": {
           "fuses": [
@@ -33406,6 +33544,7 @@
         }
       },
       "MC11": {
+        "block": "A",
         "pad": "M11",
         "slow_output": {
           "fuses": [
@@ -33620,6 +33759,7 @@
         }
       },
       "MC12": {
+        "block": "A",
         "pad": "M12",
         "slow_output": {
           "fuses": [
@@ -33834,6 +33974,7 @@
         }
       },
       "MC13": {
+        "block": "A",
         "pad": "M13",
         "slow_output": {
           "fuses": [
@@ -34048,6 +34189,7 @@
         }
       },
       "MC14": {
+        "block": "A",
         "pad": "M14",
         "slow_output": {
           "fuses": [
@@ -34262,6 +34404,7 @@
         }
       },
       "MC15": {
+        "block": "A",
         "pad": "M15",
         "slow_output": {
           "fuses": [
@@ -34476,6 +34619,7 @@
         }
       },
       "MC16": {
+        "block": "A",
         "pad": "M16",
         "slow_output": {
           "fuses": [
@@ -34690,6 +34834,7 @@
         }
       },
       "MC17": {
+        "block": "B",
         "pad": "M17",
         "slow_output": {
           "fuses": [
@@ -34904,6 +35049,7 @@
         }
       },
       "MC18": {
+        "block": "B",
         "pad": "M18",
         "slow_output": {
           "fuses": [
@@ -35118,6 +35264,7 @@
         }
       },
       "MC19": {
+        "block": "B",
         "pad": "M19",
         "slow_output": {
           "fuses": [
@@ -35332,6 +35479,7 @@
         }
       },
       "MC20": {
+        "block": "B",
         "pad": "M20",
         "slow_output": {
           "fuses": [
@@ -35546,6 +35694,7 @@
         }
       },
       "MC21": {
+        "block": "B",
         "pad": "M21",
         "slow_output": {
           "fuses": [
@@ -35760,6 +35909,7 @@
         }
       },
       "MC22": {
+        "block": "B",
         "pad": "M22",
         "slow_output": {
           "fuses": [
@@ -35974,6 +36124,7 @@
         }
       },
       "MC23": {
+        "block": "B",
         "pad": "M23",
         "slow_output": {
           "fuses": [
@@ -36188,6 +36339,7 @@
         }
       },
       "MC24": {
+        "block": "B",
         "pad": "M24",
         "slow_output": {
           "fuses": [
@@ -36402,6 +36554,7 @@
         }
       },
       "MC25": {
+        "block": "B",
         "pad": "M25",
         "slow_output": {
           "fuses": [
@@ -36616,6 +36769,7 @@
         }
       },
       "MC26": {
+        "block": "B",
         "pad": "M26",
         "slow_output": {
           "fuses": [
@@ -36830,6 +36984,7 @@
         }
       },
       "MC27": {
+        "block": "B",
         "pad": "M27",
         "slow_output": {
           "fuses": [
@@ -37044,6 +37199,7 @@
         }
       },
       "MC28": {
+        "block": "B",
         "pad": "M28",
         "slow_output": {
           "fuses": [
@@ -37258,6 +37414,7 @@
         }
       },
       "MC29": {
+        "block": "B",
         "pad": "M29",
         "slow_output": {
           "fuses": [
@@ -37472,6 +37629,7 @@
         }
       },
       "MC30": {
+        "block": "B",
         "pad": "M30",
         "slow_output": {
           "fuses": [
@@ -37686,6 +37844,7 @@
         }
       },
       "MC31": {
+        "block": "B",
         "pad": "M31",
         "slow_output": {
           "fuses": [
@@ -37900,6 +38059,7 @@
         }
       },
       "MC32": {
+        "block": "B",
         "pad": "M32",
         "slow_output": {
           "fuses": [
@@ -38114,6 +38274,7 @@
         }
       },
       "MC33": {
+        "block": "C",
         "pad": "M33",
         "slow_output": {
           "fuses": [
@@ -38328,6 +38489,7 @@
         }
       },
       "MC34": {
+        "block": "C",
         "pad": "M34",
         "slow_output": {
           "fuses": [
@@ -38542,6 +38704,7 @@
         }
       },
       "MC35": {
+        "block": "C",
         "pad": "M35",
         "slow_output": {
           "fuses": [
@@ -38756,6 +38919,7 @@
         }
       },
       "MC36": {
+        "block": "C",
         "pad": "M36",
         "slow_output": {
           "fuses": [
@@ -38970,6 +39134,7 @@
         }
       },
       "MC37": {
+        "block": "C",
         "pad": "M37",
         "slow_output": {
           "fuses": [
@@ -39184,6 +39349,7 @@
         }
       },
       "MC38": {
+        "block": "C",
         "pad": "M38",
         "slow_output": {
           "fuses": [
@@ -39398,6 +39564,7 @@
         }
       },
       "MC39": {
+        "block": "C",
         "pad": "M39",
         "slow_output": {
           "fuses": [
@@ -39612,6 +39779,7 @@
         }
       },
       "MC40": {
+        "block": "C",
         "pad": "M40",
         "slow_output": {
           "fuses": [
@@ -39826,6 +39994,7 @@
         }
       },
       "MC41": {
+        "block": "C",
         "pad": "M41",
         "slow_output": {
           "fuses": [
@@ -40040,6 +40209,7 @@
         }
       },
       "MC42": {
+        "block": "C",
         "pad": "M42",
         "slow_output": {
           "fuses": [
@@ -40254,6 +40424,7 @@
         }
       },
       "MC43": {
+        "block": "C",
         "pad": "M43",
         "slow_output": {
           "fuses": [
@@ -40468,6 +40639,7 @@
         }
       },
       "MC44": {
+        "block": "C",
         "pad": "M44",
         "slow_output": {
           "fuses": [
@@ -40682,6 +40854,7 @@
         }
       },
       "MC45": {
+        "block": "C",
         "pad": "M45",
         "slow_output": {
           "fuses": [
@@ -40896,6 +41069,7 @@
         }
       },
       "MC46": {
+        "block": "C",
         "pad": "M46",
         "slow_output": {
           "fuses": [
@@ -41066,6 +41240,7 @@
         }
       },
       "MC47": {
+        "block": "C",
         "pad": "M47",
         "slow_output": {
           "fuses": [
@@ -41280,6 +41455,7 @@
         }
       },
       "MC48": {
+        "block": "C",
         "pad": "M48",
         "slow_output": {
           "fuses": [
@@ -41494,6 +41670,7 @@
         }
       },
       "MC49": {
+        "block": "D",
         "pad": "M49",
         "slow_output": {
           "fuses": [
@@ -41708,6 +41885,7 @@
         }
       },
       "MC50": {
+        "block": "D",
         "pad": "M50",
         "slow_output": {
           "fuses": [
@@ -41922,6 +42100,7 @@
         }
       },
       "MC51": {
+        "block": "D",
         "pad": "M51",
         "slow_output": {
           "fuses": [
@@ -42136,6 +42315,7 @@
         }
       },
       "MC52": {
+        "block": "D",
         "pad": "M52",
         "slow_output": {
           "fuses": [
@@ -42350,6 +42530,7 @@
         }
       },
       "MC53": {
+        "block": "D",
         "pad": "M53",
         "slow_output": {
           "fuses": [
@@ -42564,6 +42745,7 @@
         }
       },
       "MC54": {
+        "block": "D",
         "pad": "M54",
         "slow_output": {
           "fuses": [
@@ -42778,6 +42960,7 @@
         }
       },
       "MC55": {
+        "block": "D",
         "pad": "M55",
         "slow_output": {
           "fuses": [
@@ -42992,6 +43175,7 @@
         }
       },
       "MC56": {
+        "block": "D",
         "pad": "M56",
         "slow_output": {
           "fuses": [
@@ -43206,6 +43390,7 @@
         }
       },
       "MC57": {
+        "block": "D",
         "pad": "M57",
         "slow_output": {
           "fuses": [
@@ -43420,6 +43605,7 @@
         }
       },
       "MC58": {
+        "block": "D",
         "pad": "M58",
         "slow_output": {
           "fuses": [
@@ -43634,6 +43820,7 @@
         }
       },
       "MC59": {
+        "block": "D",
         "pad": "M59",
         "slow_output": {
           "fuses": [
@@ -43848,6 +44035,7 @@
         }
       },
       "MC60": {
+        "block": "D",
         "pad": "M60",
         "slow_output": {
           "fuses": [
@@ -44062,6 +44250,7 @@
         }
       },
       "MC61": {
+        "block": "D",
         "pad": "M61",
         "slow_output": {
           "fuses": [
@@ -44276,6 +44465,7 @@
         }
       },
       "MC62": {
+        "block": "D",
         "pad": "M62",
         "slow_output": {
           "fuses": [
@@ -44490,6 +44680,7 @@
         }
       },
       "MC63": {
+        "block": "D",
         "pad": "M63",
         "slow_output": {
           "fuses": [
@@ -44704,6 +44895,7 @@
         }
       },
       "MC64": {
+        "block": "D",
         "pad": "M64",
         "slow_output": {
           "fuses": [

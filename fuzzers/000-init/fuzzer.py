@@ -28,6 +28,7 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins):
         },
         "macrocells": {
             f"MC{1+mi}": {
+                "block": blocks[mi // 16],
                 "pad": f"M{1+mi}",
             } for mi in range(len(blocks) * 16)
         },
