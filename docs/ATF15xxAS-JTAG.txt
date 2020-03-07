@@ -86,7 +86,7 @@ terms laid out exactly.
 
 At this point I decided to map out JED<>SVF permutation first, since it didn't
 look like it was something simple. See util/patgen.py and util/patmatch.py as
-well as docs/bitmap/ for details.
+well as docs/fusemap/ for details.
 
 -------------------------------------------------------------------------------
 

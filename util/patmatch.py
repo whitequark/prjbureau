@@ -3,7 +3,7 @@
 import math
 import argparse
 
-from .bitconv import read_svf
+from .fuseconv import read_svf
 
 
 def main():

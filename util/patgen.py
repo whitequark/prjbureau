@@ -13,7 +13,7 @@ import math
 import argparse
 from bitarray import bitarray
 
-from .bitconv import write_jed
+from .fuseconv import write_jed
 
 
 def main():
