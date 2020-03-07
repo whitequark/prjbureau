@@ -143,13 +143,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15409
+            15569
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -256,6 +256,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15409
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15806,
@@ -340,13 +349,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15410
+            15570
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -453,6 +462,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15804,
@@ -537,13 +555,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15413
+            15573
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -650,6 +668,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15413
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15802,
@@ -734,13 +761,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15414
+            15574
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -847,6 +874,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15414
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15800,
@@ -931,13 +967,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15417
+            15577
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -1044,6 +1080,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15417
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15798,
@@ -1128,13 +1173,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15418
+            15578
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -1241,6 +1286,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15418
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15796,
@@ -1325,13 +1379,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15421
+            15581
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -1438,6 +1492,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15421
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15794,
@@ -1522,13 +1585,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15422
+            15582
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -1635,6 +1698,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15422
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15792,
@@ -1719,13 +1791,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15425
+            15585
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -1832,6 +1904,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15425
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15790,
@@ -1916,13 +1997,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15426
+            15586
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -2029,6 +2110,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15426
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15788,
@@ -2113,13 +2203,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15429
+            15589
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -2226,6 +2316,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15429
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15786,
@@ -2310,13 +2409,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15430
+            15590
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -2423,6 +2522,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15430
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15784,
@@ -2507,13 +2615,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15433
+            15593
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -2620,6 +2728,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15433
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15782,
@@ -2704,13 +2821,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15434
+            15594
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -2817,6 +2934,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15434
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15780,
@@ -2901,13 +3027,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15437
+            15597
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3014,6 +3140,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15778,
@@ -3098,13 +3233,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15438
+            15598
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3211,6 +3346,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15438
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15776,
@@ -3295,13 +3439,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15889
+            16049
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3408,6 +3552,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15889
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16286,
@@ -3492,13 +3645,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15890
+            16050
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3605,6 +3758,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16284,
@@ -3689,13 +3851,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15893
+            16053
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3802,6 +3964,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15893
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16282,
@@ -3886,13 +4057,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15894
+            16054
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -3999,6 +4170,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15894
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16280,
@@ -4083,13 +4263,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15897
+            16057
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -4196,6 +4376,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15897
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16278,
@@ -4280,13 +4469,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15898
+            16058
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -4393,6 +4582,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15898
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16276,
@@ -4477,13 +4675,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15901
+            16061
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -4590,6 +4788,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15901
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16274,
@@ -4674,13 +4881,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15902
+            16062
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -4787,6 +4994,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15902
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16272,
@@ -4871,13 +5087,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15905
+            16065
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -4984,6 +5200,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15905
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16270,
@@ -5068,13 +5293,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15906
+            16066
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -5181,6 +5406,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15906
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16268,
@@ -5265,13 +5499,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15909
+            16069
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -5378,6 +5612,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15909
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16266,
@@ -5462,13 +5705,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15910
+            16070
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -5575,6 +5818,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15910
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16264,
@@ -5659,13 +5911,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15913
+            16073
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -5772,6 +6024,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15913
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16262,
@@ -5856,13 +6117,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15914
+            16074
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -5969,6 +6230,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15914
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16260,
@@ -6053,13 +6323,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15917
+            16077
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -6166,6 +6436,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16258,
@@ -6250,13 +6529,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            15918
+            16078
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -6361,6 +6640,15 @@
           "values": {
             "comb": 1,
             "sync": 0
+          }
+        },
+        "o_inv": {
+          "fuses": [
+            15918
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "oe_mux": {
@@ -7817,15 +8105,6 @@
             "on": 1
           }
         },
-        "o_inv": {
-          "fuses": [
-            15788
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "storage": {
           "fuses": [
             15774
@@ -7930,6 +8209,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15788
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15770,
@@ -8026,15 +8314,6 @@
         "bus_keeper": {
           "fuses": [
             15739
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15761
           ],
           "values": {
             "off": 0,
@@ -8145,6 +8424,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15761
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15743,
@@ -8241,15 +8529,6 @@
         "bus_keeper": {
           "fuses": [
             15712
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15734
           ],
           "values": {
             "off": 0,
@@ -8360,6 +8639,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15716,
@@ -8456,15 +8744,6 @@
         "bus_keeper": {
           "fuses": [
             15685
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15707
           ],
           "values": {
             "off": 0,
@@ -8575,6 +8854,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15707
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15689,
@@ -8671,15 +8959,6 @@
         "bus_keeper": {
           "fuses": [
             15658
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15680
           ],
           "values": {
             "off": 0,
@@ -8790,6 +9069,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15680
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15662,
@@ -8886,15 +9174,6 @@
         "bus_keeper": {
           "fuses": [
             15631
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15653
           ],
           "values": {
             "off": 0,
@@ -9005,6 +9284,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15653
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15635,
@@ -9101,15 +9389,6 @@
         "bus_keeper": {
           "fuses": [
             15604
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15626
           ],
           "values": {
             "off": 0,
@@ -9220,6 +9499,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15626
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15608,
@@ -9316,15 +9604,6 @@
         "bus_keeper": {
           "fuses": [
             15577
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15599
           ],
           "values": {
             "off": 0,
@@ -9435,6 +9714,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15599
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15581,
@@ -9531,15 +9819,6 @@
         "bus_keeper": {
           "fuses": [
             15550
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15572
           ],
           "values": {
             "off": 0,
@@ -9650,6 +9929,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15572
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15554,
@@ -9746,15 +10034,6 @@
         "bus_keeper": {
           "fuses": [
             15523
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15545
           ],
           "values": {
             "off": 0,
@@ -9865,6 +10144,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15545
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15527,
@@ -9961,15 +10249,6 @@
         "bus_keeper": {
           "fuses": [
             15496
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15518
           ],
           "values": {
             "off": 0,
@@ -10080,6 +10359,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15518
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15500,
@@ -10176,15 +10464,6 @@
         "bus_keeper": {
           "fuses": [
             15469
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15491
           ],
           "values": {
             "off": 0,
@@ -10295,6 +10574,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15491
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15473,
@@ -10391,15 +10679,6 @@
         "bus_keeper": {
           "fuses": [
             15442
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15464
           ],
           "values": {
             "off": 0,
@@ -10510,6 +10789,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15464
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15446,
@@ -10606,15 +10894,6 @@
         "bus_keeper": {
           "fuses": [
             15415
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15437
           ],
           "values": {
             "off": 0,
@@ -10725,6 +11004,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15419,
@@ -10821,15 +11109,6 @@
         "bus_keeper": {
           "fuses": [
             15388
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15410
           ],
           "values": {
             "off": 0,
@@ -10940,6 +11219,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15392,
@@ -11036,15 +11324,6 @@
         "bus_keeper": {
           "fuses": [
             15361
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15383
           ],
           "values": {
             "off": 0,
@@ -11155,6 +11434,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15383
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15365,
@@ -11251,15 +11539,6 @@
         "bus_keeper": {
           "fuses": [
             16246
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16268
           ],
           "values": {
             "off": 0,
@@ -11370,6 +11649,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16268
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16250,
@@ -11466,15 +11754,6 @@
         "bus_keeper": {
           "fuses": [
             16219
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16241
           ],
           "values": {
             "off": 0,
@@ -11585,6 +11864,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16241
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16223,
@@ -11681,15 +11969,6 @@
         "bus_keeper": {
           "fuses": [
             16192
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16214
           ],
           "values": {
             "off": 0,
@@ -11800,6 +12079,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16196,
@@ -11896,15 +12184,6 @@
         "bus_keeper": {
           "fuses": [
             16165
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16187
           ],
           "values": {
             "off": 0,
@@ -12015,6 +12294,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16187
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16169,
@@ -12111,15 +12399,6 @@
         "bus_keeper": {
           "fuses": [
             16138
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16160
           ],
           "values": {
             "off": 0,
@@ -12230,6 +12509,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16160
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16142,
@@ -12326,15 +12614,6 @@
         "bus_keeper": {
           "fuses": [
             16111
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16133
           ],
           "values": {
             "off": 0,
@@ -12445,6 +12724,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16133
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16115,
@@ -12541,15 +12829,6 @@
         "bus_keeper": {
           "fuses": [
             16084
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16106
           ],
           "values": {
             "off": 0,
@@ -12660,6 +12939,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16106
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16088,
@@ -12756,15 +13044,6 @@
         "bus_keeper": {
           "fuses": [
             16057
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16079
           ],
           "values": {
             "off": 0,
@@ -12875,6 +13154,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16079
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16061,
@@ -12971,15 +13259,6 @@
         "bus_keeper": {
           "fuses": [
             16030
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16052
           ],
           "values": {
             "off": 0,
@@ -13090,6 +13369,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16052
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16034,
@@ -13186,15 +13474,6 @@
         "bus_keeper": {
           "fuses": [
             16003
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            16025
           ],
           "values": {
             "off": 0,
@@ -13305,6 +13584,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            16025
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             16007,
@@ -13401,15 +13689,6 @@
         "bus_keeper": {
           "fuses": [
             15976
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15998
           ],
           "values": {
             "off": 0,
@@ -13520,6 +13799,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15998
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15980,
@@ -13616,15 +13904,6 @@
         "bus_keeper": {
           "fuses": [
             15949
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15971
           ],
           "values": {
             "off": 0,
@@ -13735,6 +14014,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15971
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15953,
@@ -13831,15 +14119,6 @@
         "bus_keeper": {
           "fuses": [
             15922
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15944
           ],
           "values": {
             "off": 0,
@@ -13950,6 +14229,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15944
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15926,
@@ -14046,15 +14334,6 @@
         "bus_keeper": {
           "fuses": [
             15895
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15917
           ],
           "values": {
             "off": 0,
@@ -14165,6 +14444,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15899,
@@ -14261,15 +14549,6 @@
         "bus_keeper": {
           "fuses": [
             15868
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15890
           ],
           "values": {
             "off": 0,
@@ -14380,6 +14659,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             15872,
@@ -14476,15 +14764,6 @@
         "bus_keeper": {
           "fuses": [
             15841
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            15863
           ],
           "values": {
             "off": 0,
@@ -14593,6 +14872,15 @@
           "values": {
             "comb": 1,
             "sync": 0
+          }
+        },
+        "o_inv": {
+          "fuses": [
+            15863
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "oe_mux": {
@@ -16107,13 +16395,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30798
+            31118
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -16220,6 +16508,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30798
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31536,
@@ -16304,13 +16601,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30797
+            31117
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -16417,6 +16714,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30797
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31538,
@@ -16501,13 +16807,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30794
+            31114
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -16614,6 +16920,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30794
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31540,
@@ -16698,13 +17013,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30793
+            31113
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -16811,6 +17126,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30793
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31542,
@@ -16895,13 +17219,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30790
+            31110
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17008,6 +17332,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30790
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31544,
@@ -17092,13 +17425,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30789
+            31109
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17205,6 +17538,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30789
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31546,
@@ -17289,13 +17631,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30786
+            31106
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17402,6 +17744,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30786
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31548,
@@ -17486,13 +17837,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30785
+            31105
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17599,6 +17950,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30785
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31550,
@@ -17683,13 +18043,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30782
+            31102
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17796,6 +18156,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30782
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31552,
@@ -17880,13 +18249,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30781
+            31101
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -17993,6 +18362,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30781
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31554,
@@ -18077,13 +18455,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30778
+            31098
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -18190,6 +18568,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30778
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31556,
@@ -18274,13 +18661,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30777
+            31097
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -18387,6 +18774,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30777
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31558,
@@ -18471,13 +18867,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30774
+            31094
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -18584,6 +18980,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30774
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31560,
@@ -18668,13 +19073,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30773
+            31093
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -18781,6 +19186,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30773
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31562,
@@ -18865,13 +19279,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30770
+            31090
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -18978,6 +19392,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30770
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31564,
@@ -19062,13 +19485,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30769
+            31089
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -19175,6 +19598,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30769
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31566,
@@ -19259,13 +19691,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30878
+            31198
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -19372,6 +19804,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30878
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31616,
@@ -19456,13 +19897,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30877
+            31197
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -19569,6 +20010,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30877
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31618,
@@ -19653,13 +20103,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30874
+            31194
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -19766,6 +20216,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30874
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31620,
@@ -19850,13 +20309,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30873
+            31193
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -19963,6 +20422,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30873
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31622,
@@ -20047,13 +20515,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30870
+            31190
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -20160,6 +20628,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30870
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31624,
@@ -20244,13 +20721,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30869
+            31189
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -20357,6 +20834,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30869
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31626,
@@ -20441,13 +20927,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30866
+            31186
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -20554,6 +21040,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30866
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31628,
@@ -20638,13 +21133,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30865
+            31185
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -20751,6 +21246,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30865
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31630,
@@ -20835,13 +21339,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30862
+            31182
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -20948,6 +21452,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30862
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31632,
@@ -21032,13 +21545,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30861
+            31181
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -21145,6 +21658,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30861
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31634,
@@ -21229,13 +21751,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30858
+            31178
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -21342,6 +21864,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30858
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31636,
@@ -21426,13 +21957,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30857
+            31177
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -21539,6 +22070,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30857
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31638,
@@ -21623,13 +22163,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30854
+            31174
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -21736,6 +22276,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30854
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31640,
@@ -21820,13 +22369,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30853
+            31173
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -21933,6 +22482,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30853
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31642,
@@ -22017,13 +22575,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30850
+            31170
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -22130,6 +22688,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30850
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31644,
@@ -22214,13 +22781,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            30849
+            31169
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -22327,6 +22894,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30849
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31646,
@@ -22411,13 +22987,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31838
+            32158
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -22524,6 +23100,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31838
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32576,
@@ -22608,13 +23193,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31837
+            32157
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -22721,6 +23306,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31837
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32578,
@@ -22805,13 +23399,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31834
+            32154
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -22918,6 +23512,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31834
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32580,
@@ -23002,13 +23605,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31833
+            32153
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -23115,6 +23718,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31833
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32582,
@@ -23199,13 +23811,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31830
+            32150
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -23312,6 +23924,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31830
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32584,
@@ -23396,13 +24017,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31829
+            32149
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -23509,6 +24130,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31829
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32586,
@@ -23593,13 +24223,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31826
+            32146
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -23706,6 +24336,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31826
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32588,
@@ -23790,13 +24429,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31825
+            32145
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -23903,6 +24542,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31825
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32590,
@@ -23987,13 +24635,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31822
+            32142
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -24100,6 +24748,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31822
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32592,
@@ -24184,13 +24841,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31821
+            32141
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -24297,6 +24954,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31821
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32594,
@@ -24381,13 +25047,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31818
+            32138
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -24494,6 +25160,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31818
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32596,
@@ -24578,13 +25253,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31817
+            32137
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -24691,6 +25366,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31817
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32598,
@@ -24775,13 +25459,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31814
+            32134
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -24888,6 +25572,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31814
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32600,
@@ -24972,13 +25665,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31813
+            32133
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -25085,6 +25778,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31813
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "pt1_mux": {
           "fuses": [
             31963
@@ -25125,13 +25827,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31810
+            32130
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -25238,6 +25940,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31810
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32604,
@@ -25322,13 +26033,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31809
+            32129
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -25435,6 +26146,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31809
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32606,
@@ -25519,13 +26239,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31758
+            32078
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -25632,6 +26352,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31758
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32496,
@@ -25716,13 +26445,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31757
+            32077
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -25829,6 +26558,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31757
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32498,
@@ -25913,13 +26651,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31754
+            32074
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -26026,6 +26764,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31754
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32500,
@@ -26110,13 +26857,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31753
+            32073
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -26223,6 +26970,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31753
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32502,
@@ -26307,13 +27063,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31750
+            32070
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -26420,6 +27176,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31750
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32504,
@@ -26504,13 +27269,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31749
+            32069
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -26617,6 +27382,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31749
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32506,
@@ -26701,13 +27475,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31746
+            32066
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -26814,6 +27588,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31746
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32508,
@@ -26898,13 +27681,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31745
+            32065
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27011,6 +27794,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31745
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32510,
@@ -27095,13 +27887,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31742
+            32062
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27208,6 +28000,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31742
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32512,
@@ -27292,13 +28093,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31741
+            32061
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27405,6 +28206,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31741
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32514,
@@ -27489,13 +28299,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31738
+            32058
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27602,6 +28412,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31738
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32516,
@@ -27686,13 +28505,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31737
+            32057
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27799,6 +28618,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31737
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32518,
@@ -27883,13 +28711,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31734
+            32054
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -27996,6 +28824,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31734
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32520,
@@ -28080,13 +28917,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31733
+            32053
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -28193,6 +29030,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31733
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32522,
@@ -28277,13 +29123,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31730
+            32050
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -28390,6 +29236,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31730
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32524,
@@ -28474,13 +29329,13 @@
             "on": 1
           }
         },
-        "o_inv": {
+        "pt_power": {
           "fuses": [
-            31729
+            32049
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "off": 1,
+            "on": 0
           }
         },
         "storage": {
@@ -28585,6 +29440,15 @@
           "values": {
             "comb": 1,
             "sync": 0
+          }
+        },
+        "o_inv": {
+          "fuses": [
+            31729
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "oe_mux": {
@@ -31441,15 +32305,6 @@
             "on": 1
           }
         },
-        "o_inv": {
-          "fuses": [
-            32588
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
         "storage": {
           "fuses": [
             32574
@@ -31554,6 +32409,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32588
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32570,
@@ -31650,15 +32514,6 @@
         "bus_keeper": {
           "fuses": [
             32539
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32561
           ],
           "values": {
             "off": 0,
@@ -31769,6 +32624,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32561
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32543,
@@ -31865,15 +32729,6 @@
         "bus_keeper": {
           "fuses": [
             32512
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32534
           ],
           "values": {
             "off": 0,
@@ -31984,6 +32839,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32534
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32516,
@@ -32080,15 +32944,6 @@
         "bus_keeper": {
           "fuses": [
             32485
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32507
           ],
           "values": {
             "off": 0,
@@ -32199,6 +33054,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32507
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32489,
@@ -32295,15 +33159,6 @@
         "bus_keeper": {
           "fuses": [
             32458
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32480
           ],
           "values": {
             "off": 0,
@@ -32414,6 +33269,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32480
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32462,
@@ -32510,15 +33374,6 @@
         "bus_keeper": {
           "fuses": [
             32431
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32453
           ],
           "values": {
             "off": 0,
@@ -32629,6 +33484,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32453
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32435,
@@ -32725,15 +33589,6 @@
         "bus_keeper": {
           "fuses": [
             32404
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32426
           ],
           "values": {
             "off": 0,
@@ -32844,6 +33699,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32426
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32408,
@@ -32940,15 +33804,6 @@
         "bus_keeper": {
           "fuses": [
             32377
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32399
           ],
           "values": {
             "off": 0,
@@ -33059,6 +33914,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32399
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32381,
@@ -33155,15 +34019,6 @@
         "bus_keeper": {
           "fuses": [
             32350
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32372
           ],
           "values": {
             "off": 0,
@@ -33274,6 +34129,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32372
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32354,
@@ -33370,15 +34234,6 @@
         "bus_keeper": {
           "fuses": [
             32323
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32345
           ],
           "values": {
             "off": 0,
@@ -33489,6 +34344,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32345
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32327,
@@ -33585,15 +34449,6 @@
         "bus_keeper": {
           "fuses": [
             32296
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32318
           ],
           "values": {
             "off": 0,
@@ -33704,6 +34559,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32318
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32300,
@@ -33800,15 +34664,6 @@
         "bus_keeper": {
           "fuses": [
             32269
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32291
           ],
           "values": {
             "off": 0,
@@ -33919,6 +34774,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32291
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32273,
@@ -34015,15 +34879,6 @@
         "bus_keeper": {
           "fuses": [
             32242
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32264
           ],
           "values": {
             "off": 0,
@@ -34134,6 +34989,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32264
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32246,
@@ -34230,15 +35094,6 @@
         "bus_keeper": {
           "fuses": [
             32215
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32237
           ],
           "values": {
             "off": 0,
@@ -34349,6 +35204,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32237
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32219,
@@ -34445,15 +35309,6 @@
         "bus_keeper": {
           "fuses": [
             32188
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32210
           ],
           "values": {
             "off": 0,
@@ -34564,6 +35419,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32210
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32192,
@@ -34660,15 +35524,6 @@
         "bus_keeper": {
           "fuses": [
             32161
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32183
           ],
           "values": {
             "off": 0,
@@ -34779,6 +35634,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32183
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32165,
@@ -34875,15 +35739,6 @@
         "bus_keeper": {
           "fuses": [
             31126
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31148
           ],
           "values": {
             "off": 0,
@@ -34994,6 +35849,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31148
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31130,
@@ -35090,15 +35954,6 @@
         "bus_keeper": {
           "fuses": [
             31099
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31121
           ],
           "values": {
             "off": 0,
@@ -35209,6 +36064,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31121
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31103,
@@ -35305,15 +36169,6 @@
         "bus_keeper": {
           "fuses": [
             31072
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31094
           ],
           "values": {
             "off": 0,
@@ -35424,6 +36279,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31094
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31076,
@@ -35520,15 +36384,6 @@
         "bus_keeper": {
           "fuses": [
             31045
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31067
           ],
           "values": {
             "off": 0,
@@ -35639,6 +36494,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31067
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31049,
@@ -35735,15 +36599,6 @@
         "bus_keeper": {
           "fuses": [
             31018
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31040
           ],
           "values": {
             "off": 0,
@@ -35854,6 +36709,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31040
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31022,
@@ -35950,15 +36814,6 @@
         "bus_keeper": {
           "fuses": [
             30991
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31013
           ],
           "values": {
             "off": 0,
@@ -36069,6 +36924,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31013
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30995,
@@ -36165,15 +37029,6 @@
         "bus_keeper": {
           "fuses": [
             30964
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30986
           ],
           "values": {
             "off": 0,
@@ -36284,6 +37139,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30986
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30968,
@@ -36380,15 +37244,6 @@
         "bus_keeper": {
           "fuses": [
             30937
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30959
           ],
           "values": {
             "off": 0,
@@ -36499,6 +37354,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30959
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30941,
@@ -36595,15 +37459,6 @@
         "bus_keeper": {
           "fuses": [
             30910
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30932
           ],
           "values": {
             "off": 0,
@@ -36714,6 +37569,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30932
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30914,
@@ -36810,15 +37674,6 @@
         "bus_keeper": {
           "fuses": [
             30883
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30905
           ],
           "values": {
             "off": 0,
@@ -36929,6 +37784,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30905
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30887,
@@ -37025,15 +37889,6 @@
         "bus_keeper": {
           "fuses": [
             30856
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30878
           ],
           "values": {
             "off": 0,
@@ -37144,6 +37999,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30878
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30860,
@@ -37240,15 +38104,6 @@
         "bus_keeper": {
           "fuses": [
             30829
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30851
           ],
           "values": {
             "off": 0,
@@ -37359,6 +38214,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30851
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30833,
@@ -37455,15 +38319,6 @@
         "bus_keeper": {
           "fuses": [
             30802
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30824
           ],
           "values": {
             "off": 0,
@@ -37574,6 +38429,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30824
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30806,
@@ -37670,15 +38534,6 @@
         "bus_keeper": {
           "fuses": [
             30775
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30797
           ],
           "values": {
             "off": 0,
@@ -37789,6 +38644,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30797
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30779,
@@ -37885,15 +38749,6 @@
         "bus_keeper": {
           "fuses": [
             30748
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30770
           ],
           "values": {
             "off": 0,
@@ -38004,6 +38859,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30770
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30752,
@@ -38100,15 +38964,6 @@
         "bus_keeper": {
           "fuses": [
             30721
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            30743
           ],
           "values": {
             "off": 0,
@@ -38219,6 +39074,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            30743
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             30725,
@@ -38315,15 +39179,6 @@
         "bus_keeper": {
           "fuses": [
             31201
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31223
           ],
           "values": {
             "off": 0,
@@ -38434,6 +39289,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31223
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31205,
@@ -38530,15 +39394,6 @@
         "bus_keeper": {
           "fuses": [
             31228
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31250
           ],
           "values": {
             "off": 0,
@@ -38649,6 +39504,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31250
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31232,
@@ -38745,15 +39609,6 @@
         "bus_keeper": {
           "fuses": [
             31255
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31277
           ],
           "values": {
             "off": 0,
@@ -38864,6 +39719,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31277
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31259,
@@ -38960,15 +39824,6 @@
         "bus_keeper": {
           "fuses": [
             31282
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31304
           ],
           "values": {
             "off": 0,
@@ -39079,6 +39934,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31304
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31286,
@@ -39175,15 +40039,6 @@
         "bus_keeper": {
           "fuses": [
             31309
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31331
           ],
           "values": {
             "off": 0,
@@ -39294,6 +40149,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31331
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31313,
@@ -39390,15 +40254,6 @@
         "bus_keeper": {
           "fuses": [
             31336
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31358
           ],
           "values": {
             "off": 0,
@@ -39509,6 +40364,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31358
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31340,
@@ -39605,15 +40469,6 @@
         "bus_keeper": {
           "fuses": [
             31363
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31385
           ],
           "values": {
             "off": 0,
@@ -39724,6 +40579,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31385
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31367,
@@ -39820,15 +40684,6 @@
         "bus_keeper": {
           "fuses": [
             31390
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31412
           ],
           "values": {
             "off": 0,
@@ -39939,6 +40794,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31412
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31394,
@@ -40035,15 +40899,6 @@
         "bus_keeper": {
           "fuses": [
             31417
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31439
           ],
           "values": {
             "off": 0,
@@ -40154,6 +41009,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31439
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31421,
@@ -40250,15 +41114,6 @@
         "bus_keeper": {
           "fuses": [
             31444
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31466
           ],
           "values": {
             "off": 0,
@@ -40369,6 +41224,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31466
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31448,
@@ -40465,15 +41329,6 @@
         "bus_keeper": {
           "fuses": [
             31471
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31493
           ],
           "values": {
             "off": 0,
@@ -40584,6 +41439,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31493
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31475,
@@ -40680,15 +41544,6 @@
         "bus_keeper": {
           "fuses": [
             31498
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31520
           ],
           "values": {
             "off": 0,
@@ -40799,6 +41654,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31520
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31502,
@@ -40895,15 +41759,6 @@
         "bus_keeper": {
           "fuses": [
             31525
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31547
           ],
           "values": {
             "off": 0,
@@ -41014,6 +41869,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31547
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31529,
@@ -41110,15 +41974,6 @@
         "bus_keeper": {
           "fuses": [
             31552
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31574
           ],
           "values": {
             "off": 0,
@@ -41229,6 +42084,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31574
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "pt1_mux": {
           "fuses": [
             31576
@@ -41281,15 +42145,6 @@
         "bus_keeper": {
           "fuses": [
             31579
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31601
           ],
           "values": {
             "off": 0,
@@ -41400,6 +42255,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31601
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31583,
@@ -41496,15 +42360,6 @@
         "bus_keeper": {
           "fuses": [
             31606
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31628
           ],
           "values": {
             "off": 0,
@@ -41615,6 +42470,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31628
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31610,
@@ -41711,15 +42575,6 @@
         "bus_keeper": {
           "fuses": [
             31681
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31703
           ],
           "values": {
             "off": 0,
@@ -41830,6 +42685,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31703
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31685,
@@ -41926,15 +42790,6 @@
         "bus_keeper": {
           "fuses": [
             31708
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31730
           ],
           "values": {
             "off": 0,
@@ -42045,6 +42900,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31730
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31712,
@@ -42141,15 +43005,6 @@
         "bus_keeper": {
           "fuses": [
             31735
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31757
           ],
           "values": {
             "off": 0,
@@ -42260,6 +43115,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31757
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31739,
@@ -42356,15 +43220,6 @@
         "bus_keeper": {
           "fuses": [
             31762
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31784
           ],
           "values": {
             "off": 0,
@@ -42475,6 +43330,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31784
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31766,
@@ -42571,15 +43435,6 @@
         "bus_keeper": {
           "fuses": [
             31789
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31811
           ],
           "values": {
             "off": 0,
@@ -42690,6 +43545,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31811
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31793,
@@ -42786,15 +43650,6 @@
         "bus_keeper": {
           "fuses": [
             31816
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31838
           ],
           "values": {
             "off": 0,
@@ -42905,6 +43760,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31838
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31820,
@@ -43001,15 +43865,6 @@
         "bus_keeper": {
           "fuses": [
             31843
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31865
           ],
           "values": {
             "off": 0,
@@ -43120,6 +43975,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31865
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31847,
@@ -43216,15 +44080,6 @@
         "bus_keeper": {
           "fuses": [
             31870
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31892
           ],
           "values": {
             "off": 0,
@@ -43335,6 +44190,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31892
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31874,
@@ -43431,15 +44295,6 @@
         "bus_keeper": {
           "fuses": [
             31897
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31919
           ],
           "values": {
             "off": 0,
@@ -43550,6 +44405,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31919
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31901,
@@ -43646,15 +44510,6 @@
         "bus_keeper": {
           "fuses": [
             31924
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31946
           ],
           "values": {
             "off": 0,
@@ -43765,6 +44620,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31946
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31928,
@@ -43861,15 +44725,6 @@
         "bus_keeper": {
           "fuses": [
             31951
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            31973
           ],
           "values": {
             "off": 0,
@@ -43980,6 +44835,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            31973
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31955,
@@ -44076,15 +44940,6 @@
         "bus_keeper": {
           "fuses": [
             31978
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32000
           ],
           "values": {
             "off": 0,
@@ -44195,6 +45050,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32000
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             31982,
@@ -44291,15 +45155,6 @@
         "bus_keeper": {
           "fuses": [
             32005
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32027
           ],
           "values": {
             "off": 0,
@@ -44410,6 +45265,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32027
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32009,
@@ -44506,15 +45370,6 @@
         "bus_keeper": {
           "fuses": [
             32032
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32054
           ],
           "values": {
             "off": 0,
@@ -44625,6 +45480,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32054
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32036,
@@ -44721,15 +45585,6 @@
         "bus_keeper": {
           "fuses": [
             32059
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32081
           ],
           "values": {
             "off": 0,
@@ -44840,6 +45695,15 @@
             "sync": 0
           }
         },
+        "o_inv": {
+          "fuses": [
+            32081
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
         "oe_mux": {
           "fuses": [
             32063,
@@ -44936,15 +45800,6 @@
         "bus_keeper": {
           "fuses": [
             32086
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "o_inv": {
-          "fuses": [
-            32108
           ],
           "values": {
             "off": 0,
@@ -45053,6 +45908,15 @@
           "values": {
             "comb": 1,
             "sync": 0
+          }
+        },
+        "o_inv": {
+          "fuses": [
+            32108
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
           }
         },
         "oe_mux": {

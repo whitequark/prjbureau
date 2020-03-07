@@ -58,6 +58,7 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
                     "!": ("#fff", "#f00"), # conflict
                     "1": ("#aaa", "#fff"), # always 1
                     "-": ("#aaa", "#fff"), # out of scope
+                    "C":  ("#666", "#aaf"),
                     "IO": ("#666", "#faa"),
                     "FF": ("#666", "#aaf"),
                     "M":  ("#666", "#afa"),
@@ -182,6 +183,7 @@ def write_points(f, points, *, sort_fn=lambda x: x):
 
 
 macrocell_options = {
+    "pt_power":         "C",
     "pt1_mux":          "M",
     "pt2_mux":          "M",
     "pt3_mux":          "M",

@@ -10,6 +10,7 @@ db = database.load()
 
 
 macrocell_options = [
+    "pt_power",
     "pt1_mux",
     "pt2_mux",
     "pt3_mux",
