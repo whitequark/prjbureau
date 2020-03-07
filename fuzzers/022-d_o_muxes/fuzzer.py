@@ -41,9 +41,9 @@ with database.transact() as db:
             # It works as follows. If the FF input mux selects the normal source, that's what
             # always feeds the FF. If, however, the FF input mux selects the fast source,
             # the output buffer mux selection also controls the particular source: selecting
-            # combinatorial output on IO pad connects the PT2 term to FF input (and steals it
-            # from the sum term), selecting synchronous output on IO pad connects the IO pad
-            # to FF input directly.
+            # combinatorial output on IO pad connects the PT2 term to FF input directly (*without*
+            # affecting the sum term and independently of pt2_mux), selecting synchronous output
+            # on IO pad connects the IO pad to FF input directly.
             #
             # Although a bit odd at first, the choice of shared encoding is in fact the only one
             # that makes sense here. The problem is the fitter; three different issues with

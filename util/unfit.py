@@ -157,21 +157,6 @@ def main():
             wire_as_oe = f"{mc_name}_PT5"
         else:
             assert False
-        d_mux = extract(fuses, macrocell['d_mux'])
-        if d_mux == 'comb':
-            d_wire = f"{mc_name}_XT"
-        elif d_mux == 'fast':
-            dfast_mux = extract(fuses, macrocell['dfast_mux'])
-            if dfast_mux == 'pt2':
-                # TODO: figure out what happens if PT2 is also used in XOR A input (pt2_mux == xor)
-                sum_term.remove(f"{mc_name}_PT2")
-                d_wire = f"{mc_name}_PT2"
-            elif dfast_mux == 'pad':
-                d_wire = f"{macrocell['pad']}_PAD"
-            else:
-                assert False
-        else:
-            assert False
         # TODO: missing cascade mux
         wire_st = ' | '.join(sorted(sum_term)) or "1'b0"
         output.write(f"    wire {mc_name}_ST = {wire_st};\n")
@@ -197,6 +182,21 @@ def main():
         else:
             assert False
         output.write(f"    wire {mc_name}_XT = {wire_xt};\n");
+        d_mux = extract(fuses, macrocell['d_mux'])
+        if d_mux == 'comb':
+            d_wire = f"{mc_name}_XT"
+        elif d_mux == 'fast':
+            dfast_mux = extract(fuses, macrocell['dfast_mux'])
+            if dfast_mux == 'pt2':
+                # PT2 can be used for fast FF input path regardless of pt2_mux; it appears to be
+                # wired directly to the PT, bypassing the PTMUX.
+                d_wire = f"{mc_name}_PT2"
+            elif dfast_mux == 'pad':
+                d_wire = f"{macrocell['pad']}_PAD"
+            else:
+                assert False
+        else:
+            assert False
         output.write(f"    wire {mc_name}_D = {d_wire};\n");
         storage = extract(fuses, macrocell['storage'])
         if storage == 'ff':
