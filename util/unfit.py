@@ -86,7 +86,14 @@ def main():
 
     for mc_name, macrocell in device['macrocells'].items():
         output.write(f"    // Macrocell {mc_name}\n")
-        output.write(f"    reg {mc_name}_Q = 1'b0;\n")
+        o_inv = extract(fuses, macrocell['o_inv'])
+        if o_inv == 'off':
+            q_init = "1'b0"
+        elif o_inv == 'on':
+            q_init = "1'b1"
+        else:
+            assert False
+        output.write(f"    reg {mc_name}_Q = {q_init};\n")
         sum_term = set(f"{mc_name}_PT{1+n}" for n in range(5))
         pt1_mux = extract(fuses, macrocell['pt1_mux'])
         if pt1_mux == 'sum':
@@ -180,6 +187,15 @@ def main():
             wire_xt = wire_xa if wire_xb == "1'b0" else f"~({wire_xa})"
         else:
             assert False
+        # This bit is called called "output buffer polarity", but it doesn't affect AR/AS, fast
+        # FF input paths, and applies to buried FFs, so it should really be called "XOR term
+        # polarity and FF reset value" as it has nothing to do with the output buffer.
+        if o_inv == 'off':
+            wire_xt = f"{wire_xt}"
+        elif o_inv == 'on':
+            wire_xt = f"~({wire_xt})"
+        else:
+            assert False
         output.write(f"    wire {mc_name}_XT = {wire_xt};\n");
         output.write(f"    wire {mc_name}_D = {d_wire};\n");
         storage = extract(fuses, macrocell['storage'])
@@ -268,13 +284,6 @@ def main():
             o_wire = f"{mc_name}_XT"
         elif o_mux == 'sync':
             o_wire = f"{mc_name}_Q"
-        o_inv = extract(fuses, macrocell['o_inv'])
-        if o_inv == 'off':
-            o_wire = f"{o_wire}"
-        elif o_inv == 'on':
-            o_wire = f"~{o_wire}"
-        else:
-            assert False
         output.write(f"    wire {mc_name}_O = {o_wire};\n")
         oe_mux = extract(fuses, macrocell['oe_mux'])
         if oe_mux == 'gnd':
