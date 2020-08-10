@@ -17,7 +17,7 @@ def pins(Mn, C1, E1, R, C2):
     }
 
 
-def atf15xx(*, ranges, blocks, gclk3_pad, pins):
+def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_goe_muxes=False):
     return {
         "ranges": ranges,
         "blocks": {
@@ -40,7 +40,7 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins):
         },
         "goe_muxes": {
             f"GOE{1+xi}": {
-            } for xi in range(6)
+            } for xi in range(6)[::-1 if flip_goe_muxes else 1]
         },
         "clocks": {
             "1": {"pad": "C1"},
@@ -76,7 +76,8 @@ def atf1502xx(*, ranges):
                 E1="44",
                 R ="1",
                 C2="2"),
-        }
+        },
+        "flip_goe_muxes": True,
     })
 
 

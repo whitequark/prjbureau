@@ -142,7 +142,7 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
             matrix[net_name].add(mux_name)
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
-    for mux_name in muxes:
+    for mux_name in sorted(muxes):
         f.write(f"<th width='16'>"
                 f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
                 f"<span style='font-size: 11px'>{mux_name}</span>"
@@ -150,7 +150,7 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     f.write(f"</tr>\n")
     for net_name, cross_mux_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
-        for mux_name in muxes:
+        for mux_name in sorted(muxes):
             if mux_name in cross_mux_names:
                 f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>R</td>")
             else:
@@ -445,7 +445,7 @@ def write_global_oe(f, device_name, device):
     for mux_name, mux in device['goe_muxes'].items():
         total_fuse_count += update_onehot_bitmap(bitmap, mux_name, mux, 'R')
 
-    mux_links = [f"<a href='#{name}'>{name}</a>" for name in device['goe_muxes']]
+    mux_links = [f"<a href='#{name}'>{name}</a>" for name in sorted(device['goe_muxes'])]
     write_section(f, "Global OE Mux Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
         f"{goe_fuse_range.start}..{goe_fuse_range.stop} for global OE muxes "
@@ -466,7 +466,7 @@ def write_global_oe(f, device_name, device):
         f"Global OE muxes provide the following possible (known) connection points.")
     write_matrix(f, device['goe_muxes'], filter_fn=filter_fn, sort_fn=sort_fn)
 
-    for mux_name, mux in device['goe_muxes'].items():
+    for mux_name, mux in sorted(device['goe_muxes'].items()):
         if 'fuses' not in mux:
             continue
         bitmap = {}
