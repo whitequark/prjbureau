@@ -1,0 +1,498 @@
+The ATF15xxAS PT1/PT2/CASOUT/XOR/OUTINV config bits have proven quite elusive
+in that I could not find any straightforward logic function that would cover
+every known combination. Therefore I decided to test every possible combination
+and derive a function that conclusively matches the hardware.
+
+To do this, I first constructed a JED file. Macrocells MC27, MC28 and MC29
+are used as outputs to observe OUTPUT, CASOUT, and FOLDBACK nets in MC27.
+Macrocells MC11..MC15 are used as inputs to feed PT1, PT2, AS (PT3), PT4,
+AR (PT5). I have already confirmed that (a) OUTINV config bits affects FF state
+after power-on reset and (b) strobing AS and AR sets FF to 1 and 0 respectively
+without regard for OUTINV. Thus AS and AR can be used to put FF into a known
+state, which is important because there is an internal feedback path into XOR
+term from FF Q/QN.
+
+The MC27, MC28 and MC29 configuration is as follows:
+
+    MC27:
+      PT1: _84 ; MC11_PAD
+      PT2: _76 ; MC12_PAD
+      PT3: _83 ; MC13_PAD
+      PT4: _68 ; MC14_PAD
+      PT5: _64 ; MC15_PAD
+      CFG:
+        pt_power       = on
+        pt1_mux        = sum
+        pt2_mux        = sum
+        pt3_mux        = ar
+        global_reset   = off
+        pt4_mux        = sum
+        pt4_func       = clk
+        global_clock   = gclk2
+        pt5_mux        = as_oe
+        pt5_func       = as
+        xor_a_input    = gnd
+        d_mux          = comb
+        dfast_mux      = pt2
+        storage        = ff
+        fb_mux         = comb
+        o_mux          = comb
+        o_inv          = off
+        oe_mux         = vcc_pt5
+    MC28:
+      PT1: GND
+      PT2: GND
+      PT3: GND
+      PT4: GND
+      PT5: GND
+      CFG:
+        pt_power       = off ; turned off to ensure only CASIN affects ST
+        pt1_mux        = sum
+        pt2_mux        = sum
+        pt3_mux        = ar
+        global_reset   = off
+        pt4_mux        = clk_ce
+        pt4_func       = clk
+        global_clock   = gclk2
+        pt5_mux        = as_oe
+        pt5_func       = as
+        xor_a_input    = gnd
+        d_mux          = comb
+        dfast_mux      = pt2
+        storage        = ff
+        fb_mux         = comb
+        o_mux          = comb
+        o_inv          = off
+        oe_mux         = vcc_pt5
+    MC29:
+      PT1: MC27_FLB
+      PT2: GND
+      PT3: GND
+      PT4: GND
+      PT5: GND
+      CFG:
+        pt_power       = on
+        pt1_mux        = sum
+        pt2_mux        = sum
+        pt3_mux        = sum
+        global_reset   = off
+        pt4_mux        = sum
+        pt4_func       = clk
+        global_clock   = gclk2
+        pt5_mux        = sum
+        pt5_func       = as
+        xor_a_input    = gnd
+        d_mux          = comb
+        dfast_mux      = pt2
+        storage        = latch
+        fb_mux         = comb
+        o_mux          = comb
+        o_inv          = off
+        oe_mux         = vcc_pt5
+
+32 bitstreams with every combination of unknown bits were generated as follows:
+
+    for pt1_mux in sum flb; do
+      for pt2_mux in sum xor; do
+        for xor_a_input in gnd ff_q ff_qn vcc; do
+          for o_inv in off on; do
+            name="fuzz-pt1_mux-${pt1_mux}-pt2_mux-${pt2_mux}-xor_a_input"
+            name="${name}-${xor_a_input}-o_inv-${o_inv}.jed";
+            cp template.jed $name;
+            python3 -m util.fusecli -f $name set mc27.pt1_mux $pt1_mux \
+              .pt2_mux $pt2_mux .xor_a_input $xor_a_input .o_inv $o_inv
+            python3 -m util.fuseconv $name $(basename $name .jed).svf;
+          done;
+        done;
+      done;
+    done
+
+Bitstreams were flashed and truth tables were collected via BSCAN as follows:
+
+    import logging
+    import asyncio
+
+    from glasgow.support.bits import *
+    from glasgow.applet.interface.jtag_svf import SVFInterface, SVFParser
+
+
+    async def run_one(a,b,c,d):
+        bscan_out = bits(length=96)
+        bscan_out |= (1<<76)|(a<<77) # MC11
+        bscan_out |= (1<<74)|(b<<75) # MC12
+        bscan_out |= (1<<72)|(0<<73) # MC13
+        bscan_out |= (1<<70)|(c<<71) # MC14
+        bscan_out |= (1<<68)|(0<<69) # MC15
+        await iface.write_dr(bscan_out)
+        if not d:
+            await iface.write_dr(bscan_out|(1<<73)) # AR
+        if d:
+            await iface.write_dr(bscan_out|(1<<69)) # AS
+        await iface.write_dr(bscan_out)
+        bscan_in = await iface.exchange_dr(bscan_out)
+        return bscan_in[53], bscan_in[55], bscan_in[57] # MC27, MC28, MC29
+
+
+    async def flash_and_run(rkt_file, svf_filename):
+        print(f"\n{svf_filename}:\n")
+        svf_iface = SVFInterface(iface, logging.getLogger(__name__), 1e5)
+        with open(svf_filename) as svf_file:
+            svf_parser = SVFParser(svf_file.read(), svf_iface)
+        while True:
+            coro = svf_parser.parse_command()
+            if not coro: break
+            await coro
+
+        await iface.test_reset()
+        await iface.write_ir('1111111111')
+        await iface.test_reset()
+        await iface.write_ir('1111111111')
+        await iface.test_reset()
+        await iface.write_ir('0000000000')
+
+        print('pt1 pt2 pt4 ffq | out cas flb')
+        print('----------------+------------')
+        rkt_file.write(f'(expr-for-macrocell "{svf_filename}"\n')
+        rkt_file.write(f' (case (list pt1 pt2 pt4 ffq)')
+        for n in range(1<<4):
+            a,b,c,d = bits(n,length=4)
+            p,q,r = await run_one(a,b,c,d)
+            print(f" {a}   {b}   {c}   {d}  |  {p}   {q}   {r}")
+            rkt_file.write(f"\n  ['(#{'ft'[a]} #{'ft'[b]} #{'ft'[c]} #{'ft'[d]}) "
+                           f"'(#{'ft'[p]} #{'ft'[q]} #{'ft'[r]})]")
+        rkt_file.write(f'))\n\n')
+        rkt_file.flush()
+
+
+    async def flash_and_run_all():
+        with open('fuzz.rkt', 'w') as rkt_file:
+            rkt_file.write('#lang rosette/safe\n')
+            rkt_file.write('(require "minlogic.rkt")\n')
+            rkt_file.write('\n')
+            for svf_filename in [
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-gnd-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-gnd-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-ff_q-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-ff_q-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-ff_qn-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-ff_qn-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-vcc-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-sum-xor_a_input-vcc-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-gnd-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-gnd-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-ff_q-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-ff_q-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-ff_qn-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-ff_qn-o_inv-on.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-vcc-o_inv-off.svf',
+                'fuzz-pt1_mux-flb-pt2_mux-xor-xor_a_input-vcc-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-gnd-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-gnd-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-ff_q-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-ff_q-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-ff_qn-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-ff_qn-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-vcc-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-sum-xor_a_input-vcc-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-gnd-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-gnd-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-ff_q-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-ff_q-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-ff_qn-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-ff_qn-o_inv-on.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-vcc-o_inv-off.svf',
+                'fuzz-pt1_mux-sum-pt2_mux-xor-xor_a_input-vcc-o_inv-on.svf',
+            ]:
+                await flash_and_run(rkt_file, svf_filename)
+
+Canonical forms of functions driving outputs were computed using the following
+Rosette code and the data generated above:
+
+    #lang rosette/safe
+    (require rosette/lib/angelic
+             rosette/lib/match
+             (only-in rosette/base/core/term term<?)
+             (only-in racket string-append ~a))
+    (define (^^ x y) (|| (&& x (! y)) (&& (! x) y)))
+
+    (struct lnot (a)   #:transparent)
+    (struct land (a b) #:transparent)
+    (struct lor  (a b) #:transparent)
+    (struct lxor (a b) #:transparent)
+    (struct lvar (v)   #:transparent)
+    (struct llit (v)   #:transparent)
+
+    (define (lord e1 e2)
+      (match* (e1 e2)
+        [((lnot a) b) (lord a b)]
+        [(a (lnot b)) (lord a b)]
+        [((land a b) c) (or  (lord a c) (lord b c))]
+        [(a (land b c)) (and (lord a b) (lord a c))]
+        [((lor  a b) c) (or  (lord a c) (lord b c))]
+        [(a (lor  b c)) (and (lord a b) (lord a c))]
+        [((lxor a b) c) (or  (lord a c) (lord b c))]
+        [(a (lxor b c)) (and (lord a b) (lord a c))]
+        [((lvar a) (lvar b)) (term<? a b)]
+        [((llit a) (llit b)) (and (not a) b)]
+        [(_ _) #f]))
+    (define (lcanon e)
+      (match e
+        [(lnot a) (lnot (lcanon a))]
+        [(land a (land b c)) (match (map lcanon (sort (list a b c) lord))
+                              [(list a b c) (land a (land b c))])]
+        [(land a b) (apply land (map lcanon (sort (list a b) lord)))]
+        [(lor  a (lor  b c)) (match (map lcanon (sort (list a b c) lord))
+                              [(list a b c) (lor  a (lor  b c))])]
+        [(lor  a b) (apply lor  (map lcanon (sort (list a b) lord)))]
+        [(lxor a (lxor b c)) (match (map lcanon (sort (list a b c) lord))
+                              [(list a b c) (lxor a (lxor b c))])]
+        [(lxor a b) (apply lxor (map lcanon (sort (list a b) lord)))]
+        [_ e]))
+
+    (define (ldump e)
+      (match e
+        [(lnot a) (format "!~a" (ldump* a))]
+        [(land a b) (let ldump-and ([e e])
+                     (match e [(land a b) (format "~a&~a" (ldump-and a) (ldump-and b))]
+                              [_          (ldump* e)]))]
+        [(lor  a b) (let ldump-or  ([e e])
+                     (match e [(lor a b)  (format "~a|~a" (ldump-or  a) (ldump-or  b))]
+                              [_          (ldump* e)]))]
+        [(lxor a b) (let ldump-xor ([e e])
+                     (match e [(lxor a b) (format "~a^~a" (ldump-xor a) (ldump-xor b))]
+                              [_          (ldump* e)]))]
+        [_ (ldump* e)]))
+    (define (ldump* e)
+      (match e
+        [(lvar v) v]
+        [(llit #f) "0"]
+        [(llit #t) "1"]
+        [_ (format "(~a)" (ldump e))]))
+
+    (define (leval e)
+      (match e
+        [(lnot a)   (!  (leval a))]
+        [(land a b) (&& (leval a) (leval b))]
+        [(lor  a b) (|| (leval a) (leval b))]
+        [(lxor a b) (^^ (leval a) (leval b))]
+        [(lvar v) v]
+        [(llit v) v]))
+
+    (define (lcost e)
+      (match e
+        [(lnot a)   (+ 1 (lcost a))]
+        [(land a b) (+ 2 (lcost a) (lcost b))]
+        [(lor  a b) (+ 2 (lcost a) (lcost b))]
+        [(lxor a b) (+ 2 (lcost a) (lcost b))]
+        [(lvar v) 0]
+        [(llit v) 1]))
+
+    (define (??lexpr terminals #:depth depth)
+      (apply choose*
+        (if (<= depth 0) terminals
+        (let [(a (??lexpr terminals #:depth (- depth 1)))
+              (b (??lexpr terminals #:depth (- depth 1)))]
+          (append terminals
+            (list (lnot a) (land a b) (lor a b) (lxor a b)))))))
+
+    (provide expr-for-macrocell pt1 pt2 pt4 ffq)
+    (define-symbolic pt1 pt2 pt4 ffq out cas flb boolean?)
+    (define (expr-for-macrocell name truth-table)
+      (let [(??out (??lexpr (list (lvar pt1) (lvar pt2) (lvar pt4) (lvar ffq) (llit #f)) #:depth 3))
+            (??cas (??lexpr (list (lvar pt1) (lvar pt2) (lvar pt4) (lvar ffq) (llit #f)) #:depth 2))
+            (??flb (??lexpr (list (lvar pt1) (lvar pt2) (lvar pt4) (lvar ffq) (llit #f)) #:depth 1))]
+        (define model
+          (optimize
+            #:minimize
+              (list (lcost ??out) (lcost ??cas) (lcost ??flb))
+            #:guarantee
+              (assert
+                (forall (list pt1 pt2 pt4 ffq)
+                  (equal? truth-table
+                          (list (leval ??out) (leval ??cas) (leval ??flb)))))))
+        (if (unsat? model) model
+            (displayln
+             (string-append
+              (format "~a: " name)
+              "out = " (~a #:min-width 24 (ldump (lcanon (evaluate ??out model))))
+              "cas = " (~a #:min-width 15 (ldump (lcanon (evaluate ??cas model))))
+              "flb = " (~a #:min-width  0 (ldump (lcanon (evaluate ??flb model)))))))))
+
+This yields the following table (edited for clarity):
+
+    fuzz-1-0-00-0.svf: out = pt2|pt4                 cas = 0              flb = !pt1
+    fuzz-1-0-00-1.svf: out = !(pt2|pt4)              cas = 0              flb = !pt1
+    fuzz-1-0-01-0.svf: out = (pt2|pt4)^ffq           cas = 0              flb = !pt1
+    fuzz-1-0-01-1.svf: out = !((pt2|pt4)^ffq)        cas = 0              flb = !pt1
+    fuzz-1-0-11-0.svf: out = !ffq                    cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-11-1.svf: out = ffq                     cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-10-0.svf: out = !0                      cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-10-1.svf: out = !pt1                    cas = pt2|pt4        flb = !0
+
+    fuzz-1-1-00-0.svf: out = pt4                     cas = 0              flb = !pt1
+    fuzz-1-1-00-1.svf: out = pt2^pt4                 cas = 0              flb = !pt1
+    fuzz-1-1-01-0.svf: out = pt4^ffq                 cas = 0              flb = !pt1
+    fuzz-1-1-01-1.svf: out = pt4^(!ffq)              cas = 0              flb = !pt1
+    fuzz-1-1-11-0.svf: out = pt2^ffq                 cas = pt4            flb = !pt1
+    fuzz-1-1-11-1.svf: out = pt2^(!ffq)              cas = pt4            flb = !pt1
+    fuzz-1-1-10-0.svf: out = pt2                     cas = pt4            flb = !pt1
+    fuzz-1-1-10-1.svf: out = pt1^pt2                 cas = pt4            flb = !0
+
+    fuzz-0-0-00-0.svf: out = pt1|pt2|pt4             cas = 0              flb = !0
+    fuzz-0-0-00-1.svf: out = !(pt1|pt2|pt4)          cas = 0              flb = !0
+    fuzz-0-0-01-0.svf: out = (pt1|pt2|pt4)^ffq       cas = 0              flb = !0
+    fuzz-0-0-01-1.svf: out = (pt1|pt2|pt4)^(!ffq)    cas = 0              flb = !0
+    fuzz-0-0-11-0.svf: out = !ffq                    cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-11-1.svf: out = ffq                     cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-10-0.svf: out = !0                      cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-10-1.svf: out = 0                       cas = pt1|pt2|pt4    flb = !0
+
+    fuzz-0-1-00-0.svf: out = pt1|pt4                 cas = 0              flb = !0
+    fuzz-0-1-00-1.svf: out = (pt1|pt4)^pt2           cas = 0              flb = !0
+    fuzz-0-1-01-0.svf: out = (pt1|pt4)^ffq           cas = 0              flb = !0
+    fuzz-0-1-01-1.svf: out = (!(pt1|pt4))^ffq        cas = 0              flb = !0
+    fuzz-0-1-11-0.svf: out = pt2^ffq                 cas = pt1|pt4        flb = !0
+    fuzz-0-1-11-1.svf: out = !(pt2^ffq)              cas = pt1|pt4        flb = !0
+    fuzz-0-1-10-0.svf: out = pt2                     cas = pt1|pt4        flb = !0
+    fuzz-0-1-10-1.svf: out = !pt2                    cas = pt1|pt4        flb = !0
+
+By replacing the printing code with:
+
+    (begin
+      (printf "; ~a~n" name)
+      (printf "(and (equal? (leval ??out) ~v)~n"  (lcanon (evaluate ??out model)))
+      (printf "     (equal? (leval ??cas) ~v)~n"  (lcanon (evaluate ??cas model)))
+      (printf "     (equal? (leval ??flb) ~v))~n" (lcanon (evaluate ??flb model))))
+
+and some manual changes, a system of equations was obtained describing
+the macrocell behavior:
+
+    (case (list pt1_mux pt2_mux cas_mux xor_mux1 xor_mux2)
+     ['(#t #f #f #f #f)
+      (and (equal? (leval ??out) (lor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #f #f #t)
+      (and (equal? (leval ??out) (lnot (lor (lvar pt2) (lvar pt4)))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #f #t #f)
+      (and (equal? (leval ??out) (lxor (lor (lvar pt2) (lvar pt4)) (lvar ffq))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #f #t #t)
+      (and (equal? (leval ??out) (lnot (lxor (lor (lvar pt2) (lvar pt4)) (lvar ffq)))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #t #t #f)
+      (and (equal? (leval ??out) (lnot (lvar ffq))))
+           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #t #t #t)
+      (and (equal? (leval ??out) (lvar ffq)))
+           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #t #f #f)
+      (and (equal? (leval ??out) (lnot (llit #f))))
+           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #f #t #f #t)
+      (and (equal? (leval ??out) (lnot (lvar pt1))))
+           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#t #t #f #f #f)
+      (and (equal? (leval ??out) (lvar pt4)))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #f #f #t)
+      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar pt4))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #f #t #f)
+      (and (equal? (leval ??out) (lxor (lvar pt4) (lvar ffq))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #f #t #t)
+      (and (equal? (leval ??out) (lxor (lvar pt4) (lnot (lvar ffq)))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #t #t #f)
+      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar ffq))))
+           (equal? (leval ??cas) (lvar pt4)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #t #t #t)
+      (and (equal? (leval ??out) (lxor (lvar pt2) (lnot (lvar ffq)))))
+           (equal? (leval ??cas) (lvar pt4)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #t #f #f)
+      (and (equal? (leval ??out) (lvar pt2)))
+           (equal? (leval ??cas) (lvar pt4)))
+           (equal? (leval ??flb) (lnot (lvar pt1))))]
+     ['(#t #t #t #f #t)
+      (and (equal? (leval ??out) (lxor (lvar pt1) (lvar pt2))))
+           (equal? (leval ??cas) (lvar pt4)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #f #f #f)
+      (and (equal? (leval ??out) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #f #f #t)
+      (and (equal? (leval ??out) (lnot (lor (lvar pt1) (lor (lvar pt2) (lvar pt4))))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #f #t #f)
+      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lor (lvar pt2) (lvar pt4))) (lvar ffq))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #f #t #t)
+      (and (equal? (leval ??out) (lxor (lor (lor (lvar pt1) (lvar pt2)) (lvar pt4))(leval  (??lnot) (lvar (leval ??ffq))))))
+           (equal? cas (llit #f)))
+           (equal? flb (lnot (llit #f))))]
+     ['(#f #f #t #t #f)
+      (and (equal? (leval ??out) (lnot (lvar ffq))))
+           (equal? (leval ??cas) (lor (lor (lvar pt1) (lvar pt2)) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #t #t #t)
+      (and (equal? (leval ??out) (lvar ffq)))
+           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #t #f #f)
+      (and (equal? (leval ??out) (lnot (llit #f))))
+           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #f #t #f #t)
+      (and (equal? (leval ??out) (llit #f)))
+           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #f #f #f)
+      (and (equal? (leval ??out) (lor (lvar pt1) (lvar pt4))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #f #f #t)
+      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lvar pt4)) (lvar pt2))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #f #t #f)
+      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lvar pt4)) (lvar ffq))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #f #t #t)
+      (and (equal? (leval ??out) (lxor (lnot (lor (lvar pt1) (lvar pt4))) (lvar ffq))))
+           (equal? (leval ??cas) (llit #f)))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #t #t #f)
+      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar ffq))))
+           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #t #t #t)
+      (and (equal? (leval ??out) (lnot (lxor (lvar pt2) (lvar ffq)))))
+           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #t #f #f)
+      (and (equal? (leval ??out) (lvar pt2)))
+           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))]
+     ['(#f #t #t #f #t)
+      (and (equal? (leval ??out) (lnot (lvar pt2))))
+           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
+           (equal? (leval ??flb) (lnot (llit #f))))])
