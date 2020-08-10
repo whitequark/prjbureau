@@ -77,8 +77,8 @@ with database.transact() as db:
             pins = [
                 f"OEA+:{pinout[device['clocks']['1']['pad']]}",
                 f"OEB+:{pinout[device['clocks']['2']['pad']]}",
-                f"Y0+",
-                f"Y1+"
+                f"Y0+:{pinout[device['macrocells'][other1_macrocell_name]['pad']]}",
+                f"Y1+:{pinout[device['macrocells'][other2_macrocell_name]['pad']]}"
             ]
             return toolchain.run(f"""
                 #$ PINS 4 {' '.join(pins)}
@@ -121,22 +121,20 @@ with database.transact() as db:
                 # Cannot constrain design by using AS with CUPL (fitter always rejects), so instead
                 # verify that the only cell that should have sync feedback, has it.
                 continue
-            if f"PAD_{macrocell['pad']}" in nodes:
-                # There's something really strange going on. Without logic doubling, both GOE mux
-                # pad inputs and GOE mux feedback inputs are constrained to 2 choices per GOE by
-                # fitter. These choices are the same for pad and feedback inputs. With logic
-                # doubling, the pad inputs are still constrained, but feedback inputs are extended
-                # by 2 more choices.
+            if f"{macrocell['pad']}_PAD" in nodes:
+                # Due to a fitter bug, if a combinatorial node that is not itself a legal GOE
+                # driver is constrained using OE_node, and the pad of the macrocell where the node
+                # is placed, conversely, is a legal GOE driver, a miscompilation happens:
+                # the fitter legalizes the node by inserting an always-transparent latch and
+                # setting fb_mux to sync.
                 #
-                # This is really surprising because (a) when a pad input is chosen, fb_mux is set
-                # to comb, but there are no pterms and S21 is set, and (b) when a feedback input
-                # is chosen, fb_mux is set to sync--even for choices that just duplicate pad input
-                # choices--and there is a latch added and a pterm. So the feedback input case
-                # works as one would expect, but it isn't clear how the pin input case works.
+                # Hardware testing and celestial rituals demonstrate that this is a miscompilation
+                # (i.e. the GOE driver is not affected by fb_mux setting); the legalized node is
+                # ignored, and GOE is driven simply by the pad.
                 #
-                # Is there some weird sharing going on? In any case, for now record both as
-                # valid values.
-                pass
+                # To account for this bug, ignore any FB mux drivers if a PAD mux driver exists
+                # that refers to the same macrocell.
+                continue
             nodes[f"{macrocell_name}_FB"] = fuses
 
         # The code above discovers 80% of choices on ATF1502. Where did 5 more go? I don't know.
