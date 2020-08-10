@@ -3,7 +3,7 @@ from bitarray import bitarray
 
 
 
-__all__ = ['ATF15xxInstr', 'ATF1502Device']
+__all__ = ['ATF15xxInstr', 'ATF1502Device', 'ATF1504Device', 'ATF1508Device']
 
 
 class ATF15xxInstr(enum.IntEnum):
@@ -134,19 +134,178 @@ class ATF1502Device(ATF15xxDevice):
         assert False
 
 
+class ATF1504Device(ATF15xxDevice):
+    idcode = 0x0150403f
+
+    fuse_count = 34192
+    addr_width = 12
+    data_width = {
+        range(  0, 108): range(166),
+        range(128, 233): range(166),
+        (256,): range(32),
+        (512,): range(4),
+        (768,): range(16),
+    }
+
+    @classmethod
+    def jed_to_svf_coords(cls, jed_index):
+        if jed_index in range(    0,   15360):
+            return  12 + (jed_index -      0)  % 96, 165 - (jed_index -     0) // 96
+        if jed_index in range(15360,   30720):
+            return 128 + (jed_index -  15360)  % 96,  165 - (jed_index - 15360) // 96
+        if jed_index in range(30720,   32640):
+            return   0 + (jed_index -  30720) // 160, 165 - (jed_index - 30720) % 160
+        if jed_index in range(32640,   34134):
+            return 224 + (jed_index -  32640)  %  9,  165 - (jed_index - 32640) // 9
+        if jed_index in range(34134, 34166):
+            return 256, 31 - (jed_index - 34134)
+        if jed_index in range(34166, 34170):
+            return 512,  3 - (jed_index - 34166)
+        if jed_index in range(34170, 34186):
+            return 768, 15 - (jed_index - 34170)
+        if jed_index in range(34186, 34192):
+            return # reserved
+        assert False
+
+    @classmethod
+    def svf_to_jed_coords(cls, svf_row, svf_col):
+        if svf_row in range(  0,  12):
+            if svf_col in range(6, 166):
+                return 30720 + (svf_row -   0) * 160 + (165 - svf_col)
+            else:
+                return # always 1
+        if svf_row in range( 12, 108):
+            if svf_col in range(6, 166):
+                return     0 + (svf_row -  12) + (165 - svf_col) * 96
+            else:
+                return # always 1
+        if svf_row in range(128, 224):
+            if svf_col in range(6, 166):
+                return  15360 + (svf_row - 128) + (165 - svf_col) * 96
+            else:
+                return # always 1
+        if svf_row in range(224, 233):
+            if svf_col in range(0, 166):
+                return 32640 + (svf_row - 224) + (165 - svf_col) * 9
+            else:
+                return # always 1
+        if svf_row == 256:
+            return 34134 + (31 - svf_col)
+        if svf_row == 512:
+            return 34166 + ( 3 - svf_col)
+        if svf_row == 768:
+            return 34170 + (15 - svf_col)
+        assert False
+
+
+class ATF1508Device(ATF15xxDevice):
+    idcode = 0x0150803f
+
+    fuse_count = 74136
+    addr_width = 13
+    data_width = {
+        range(  0, 108): range(326),
+        range(128, 251): range(326),
+        (256,): range(32),
+        (512,): range(4),
+        (768,): range(16),
+    }
+
+    @classmethod
+    def jed_to_svf_coords(cls, jed_index):
+        if jed_index in range(    0,  30720):
+            return  12 + (jed_index -      0)  % 96, 325 - (jed_index -     0) // 96
+        if jed_index in range( 30720, 61440):
+            return 128 + (jed_index -  30720)  % 96, 325 - (jed_index - 30720) // 96
+        if jed_index in range(61440, 65280):
+            return   0 + (jed_index - 61440) // 320, 325 - (jed_index - 61440)  % 320
+        if jed_index in range(65280, 74082):
+            return 224 + (jed_index - 65280)  %  27, 325 - (jed_index - 65280) // 27
+        if jed_index in range(74082, 74114):
+            return 256, 31 - (jed_index - 74082)
+        if jed_index in range(74114, 74118):
+            return 512,  3 - (jed_index - 74114)
+        if jed_index in range(74118, 74134):
+            return 768, 15 - (jed_index - 74118)
+        if jed_index in range(74134, 74136):
+            return # reserved
+        assert False
+
+    @classmethod
+    def svf_to_jed_coords(cls, svf_row, svf_col):
+        if svf_row in range(  0,  12):
+            if svf_col in range(6, 326):
+                return 61440 + (svf_row -   0) * 320 + (325 - svf_col)
+            else:
+                return # always 1
+        if svf_row in range( 12, 108):
+            if svf_col in range(6, 326):
+                return     0 + (svf_row -  12) + (325 - svf_col) * 96
+            else:
+                return # always 1
+        if svf_row in range(128, 224):
+            if svf_col in range(6, 326):
+                return  30720 + (svf_row - 128) + (325 - svf_col) * 96
+            else:
+                return # always 1
+        if svf_row in range(224, 251):
+            if svf_col in range(0, 326):
+                return 65280 + (svf_row - 224) + (325 - svf_col) * 27
+            else:
+                return # always 1
+        if svf_row == 256:
+            return 74082 + (31 - svf_col)
+        if svf_row == 512:
+            return 74114 + ( 3 - svf_col)
+        if svf_row == 768:
+            return 74118 + (15 - svf_col)
+        assert False
+
 if __name__ == '__main__':
     with open('atf1502as_svf2jed.csv', 'w') as f:
         f.write('SVF ROW,SVF COL,JED\n')
         for svf_rows, svf_cols in ATF1502Device.data_width.items():
             for svf_row in svf_rows:
                 for svf_col in svf_cols:
-                    jed_index = ATF1502Device.svf_to_jed(svf_row, svf_col)
+                    jed_index = ATF1502Device.svf_to_jed_coords(svf_row, svf_col)
                     if jed_index is None: jed_index = 0x7fff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
 
     with open('atf1502as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
         for jed_index in range(ATF1502Device.fuse_count):
-            svf_index = ATF1502Device.jed_to_svf(jed_index)
+            svf_index = ATF1502Device.jed_to_svf_coords(jed_index)
+            if svf_index is None: continue
+            f.write('{},{},{}\n'.format(jed_index, *svf_index))
+
+    with open('atf1504as_svf2jed.csv', 'w') as f:
+        f.write('SVF ROW,SVF COL,JED\n')
+        for svf_rows, svf_cols in ATF1504Device.data_width.items():
+            for svf_row in svf_rows:
+                for svf_col in svf_cols:
+                    jed_index = ATF1504Device.svf_to_jed_coords(svf_row, svf_col)
+                    if jed_index is None: jed_index = 0xffff
+                    f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
+					
+    with open('atf1504as_jed2svf.csv', 'w') as f:
+        f.write('JED,SVF ROW,SVF COL\n')
+        for jed_index in range(ATF1504Device.fuse_count):
+            svf_index = ATF1504Device.jed_to_svf_coords(jed_index)
+            if svf_index is None: continue
+            f.write('{},{},{}\n'.format(jed_index, *svf_index))
+
+    with open('atf1508as_svf2jed.csv', 'w') as f:
+        f.write('SVF ROW,SVF COL,JED\n')
+        for svf_rows, svf_cols in ATF1508Device.data_width.items():
+            for svf_row in svf_rows:
+                for svf_col in svf_cols:
+                    jed_index = ATF1508Device.svf_to_jed_coords(svf_row, svf_col)
+                    if jed_index is None: jed_index = 0x1ffff
+                    f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
+
+    with open('atf1508as_jed2svf.csv', 'w') as f:
+        f.write('JED,SVF ROW,SVF COL\n')
+        for jed_index in range(ATF1508Device.fuse_count):
+            svf_index = ATF1508Device.jed_to_svf_coords(jed_index)
             if svf_index is None: continue
             f.write('{},{},{}\n'.format(jed_index, *svf_index))
