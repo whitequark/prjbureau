@@ -98,7 +98,8 @@ with database.transact() as db:
                 None,
                 f"{device_name}-{package}",
                 strategy={'logic_doubling':'on'},
-                format='tt')
+                format='tt',
+                name=f"{macrocell_name}-fb")
 
         nodes = {}
 
@@ -115,13 +116,21 @@ with database.transact() as db:
                     continue
                 nodes[f"{node['pad']}_PAD"] = fuses
 
+        def same_goe_fuses(fuses1, fuses2):
+            for mux_name, mux in device['goe_muxes'].items():
+                for fuse in mux['fuses']:
+                    if fuses1[fuse] != fuses2[fuse]:
+                        return False
+            return True
+
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
             fuses = run_fb(macrocell_idx, macrocell_name)
             if fuses[macrocell['fb_mux']['fuses'][0]] != macrocell['fb_mux']['values']['sync']:
                 # Cannot constrain design by using AS with CUPL (fitter always rejects), so instead
                 # verify that the only cell that should have sync feedback, has it.
                 continue
-            if f"{macrocell['pad']}_PAD" in nodes:
+            if (f"{macrocell['pad']}_PAD" in nodes and
+                    same_goe_fuses(nodes[f"{macrocell['pad']}_PAD"], fuses)):
                 # Due to a fitter bug, if a combinatorial node that is not itself a legal GOE
                 # driver is constrained using OE_node, and the pad of the macrocell where the node
                 # is placed, conversely, is a legal GOE driver, a miscompilation happens:
@@ -148,7 +157,7 @@ with database.transact() as db:
             for node, fuses in nodes.items():
                 value = sum(fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(mux['fuses']))
                 if value == gnd_value: continue
-                # print(mux_name, node.ljust(8), "{:05b}".format(value))
+                # print(mux_name, node.ljust(8), "{:0{}b}".format(value, len(mux['fuses'])))
                 if value not in mux['values'].values():
                     found += 1
                 mux['values'][node] = value
