@@ -1,3 +1,8 @@
+This document is organized as a research log, so don't expect it to be complete
+and correct.
+
+-------------------------------------------------------------------------------
+
 The ATF15xxAS PT1/PT2/CASOUT/XOR/OUTINV config bits have proven quite elusive
 in that I could not find any straightforward logic function that would cover
 every known combination. Therefore I decided to test every possible combination
@@ -205,6 +210,620 @@ Bitstreams were flashed and truth tables were collected via BSCAN as follows:
             ]:
                 await flash_and_run(rkt_file, svf_filename)
 
+The bitstreams were renamed for clarity to follow the convention of:
+
+    fuzz-{S9}-{S13}-{S6}-{S10}-{S11}.svf
+
+This produced the following truth tables:
+
+    (expr-for-macrocell "fuzz-1-0-0-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #f)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #f)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-0-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #f)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #f)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #f)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #f)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-0-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #f)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #f)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #f)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-0-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #f)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #f)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #f)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-1-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#t #t #t)]
+      ['(#t #t #f #f) '(#t #t #f)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #f)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#f #t #t)]
+      ['(#t #t #f #t) '(#f #t #f)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #f)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-1-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#f #t #t)]
+      ['(#t #t #f #f) '(#f #t #f)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #f)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#t #t #t)]
+      ['(#t #t #f #t) '(#t #t #f)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #f)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-1-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#t #t #t)]
+      ['(#t #t #f #f) '(#t #t #f)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #f)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#t #t #t)]
+      ['(#t #t #f #t) '(#t #t #f)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #f)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-0-1-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#f #f #t)]
+      ['(#f #t #f #f) '(#t #t #t)]
+      ['(#t #t #f #f) '(#f #t #t)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#f #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#f #f #t)]
+      ['(#f #t #f #t) '(#t #t #t)]
+      ['(#t #t #f #t) '(#f #t #t)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#f #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
+    (expr-for-macrocell "fuzz-1-1-0-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #f)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #f)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #f)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #f)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-0-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #f)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #f)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-0-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #f)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #f)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #f)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-0-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #f)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #f)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #f)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-1-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #f)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #f)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #f #f)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #f)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #f)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-1-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #f #f)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #f)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #f)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #f)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-1-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #f #f)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #f)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #f)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #f)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #f #f)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #f)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #f)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #f)]))
+
+    (expr-for-macrocell "fuzz-1-1-1-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#f #f #t)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#t #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#f #f #t)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#t #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-0-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #t)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #t)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #t)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #t)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-0-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#f #f #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #t)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #t)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#f #f #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #t)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #t)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-0-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #f #t)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #t)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#f #f #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #f #t)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #t)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-0-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#f #f #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #f #t)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #t)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #f #t)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #t)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-1-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #t #t)]
+      ['(#f #t #f #f) '(#t #t #t)]
+      ['(#t #t #f #f) '(#t #t #t)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #t #t)]
+      ['(#f #t #f #t) '(#f #t #t)]
+      ['(#t #t #f #t) '(#f #t #t)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #t)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-1-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #t #t)]
+      ['(#f #t #f #f) '(#f #t #t)]
+      ['(#t #t #f #f) '(#f #t #t)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #t)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #t #t)]
+      ['(#f #t #f #t) '(#t #t #t)]
+      ['(#t #t #f #t) '(#t #t #t)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-1-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #t #t)]
+      ['(#f #t #f #f) '(#t #t #t)]
+      ['(#t #t #f #f) '(#t #t #t)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #t #t)]
+      ['(#f #t #f #t) '(#t #t #t)]
+      ['(#t #t #f #t) '(#t #t #t)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-0-1-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #t #t)]
+      ['(#f #t #f #f) '(#f #t #t)]
+      ['(#t #t #f #f) '(#f #t #t)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #t)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #t #t)]
+      ['(#f #t #f #t) '(#f #t #t)]
+      ['(#t #t #f #t) '(#f #t #t)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #t)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-0-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#t #f #t)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #t)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#t #f #t)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #t)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-0-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#f #f #t)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #t)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#f #f #t)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #t)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-0-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#t #f #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#t #f #t)]
+      ['(#f #f #t #f) '(#t #f #t)]
+      ['(#t #f #t #f) '(#t #f #t)]
+      ['(#f #t #t #f) '(#t #f #t)]
+      ['(#t #t #t #f) '(#t #f #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#f #f #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#f #f #t)]
+      ['(#f #f #t #t) '(#f #f #t)]
+      ['(#t #f #t #t) '(#f #f #t)]
+      ['(#f #t #t #t) '(#f #f #t)]
+      ['(#t #t #t #t) '(#f #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-0-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#f #f #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#f #f #t)]
+      ['(#f #f #t #f) '(#f #f #t)]
+      ['(#t #f #t #f) '(#f #f #t)]
+      ['(#f #t #t #f) '(#f #f #t)]
+      ['(#t #t #t #f) '(#f #f #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#t #f #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#t #f #t)]
+      ['(#f #f #t #t) '(#t #f #t)]
+      ['(#t #f #t #t) '(#t #f #t)]
+      ['(#f #t #t #t) '(#t #f #t)]
+      ['(#t #t #t #t) '(#t #f #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-1-1-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #t #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #t #t)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #t #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #t #t)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #t)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-1-1-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #t #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #t #t)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #t)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #t #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #t #t)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-1-0-0.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#f #f #t)]
+      ['(#t #f #f #f) '(#f #t #t)]
+      ['(#f #t #f #f) '(#t #f #t)]
+      ['(#t #t #f #f) '(#t #t #t)]
+      ['(#f #f #t #f) '(#f #t #t)]
+      ['(#t #f #t #f) '(#f #t #t)]
+      ['(#f #t #t #f) '(#t #t #t)]
+      ['(#t #t #t #f) '(#t #t #t)]
+      ['(#f #f #f #t) '(#f #f #t)]
+      ['(#t #f #f #t) '(#f #t #t)]
+      ['(#f #t #f #t) '(#t #f #t)]
+      ['(#t #t #f #t) '(#t #t #t)]
+      ['(#f #f #t #t) '(#f #t #t)]
+      ['(#t #f #t #t) '(#f #t #t)]
+      ['(#f #t #t #t) '(#t #t #t)]
+      ['(#t #t #t #t) '(#t #t #t)]))
+
+    (expr-for-macrocell "fuzz-0-1-1-0-1.svf"
+     (case (list pt1 pt2 pt4 ffq)
+      ['(#f #f #f #f) '(#t #f #t)]
+      ['(#t #f #f #f) '(#t #t #t)]
+      ['(#f #t #f #f) '(#f #f #t)]
+      ['(#t #t #f #f) '(#f #t #t)]
+      ['(#f #f #t #f) '(#t #t #t)]
+      ['(#t #f #t #f) '(#t #t #t)]
+      ['(#f #t #t #f) '(#f #t #t)]
+      ['(#t #t #t #f) '(#f #t #t)]
+      ['(#f #f #f #t) '(#t #f #t)]
+      ['(#t #f #f #t) '(#t #t #t)]
+      ['(#f #t #f #t) '(#f #f #t)]
+      ['(#t #t #f #t) '(#f #t #t)]
+      ['(#f #f #t #t) '(#t #t #t)]
+      ['(#t #f #t #t) '(#t #t #t)]
+      ['(#f #t #t #t) '(#f #t #t)]
+      ['(#t #t #t #t) '(#f #t #t)]))
+
 Canonical forms of functions driving outputs were computed using the following
 Rosette code and the data generated above:
 
@@ -318,181 +937,78 @@ Rosette code and the data generated above:
               "cas = " (~a #:min-width 15 (ldump (lcanon (evaluate ??cas model))))
               "flb = " (~a #:min-width  0 (ldump (lcanon (evaluate ??flb model)))))))))
 
-This yields the following table (edited for clarity):
+This yields the following table:
 
-    fuzz-1-0-00-0.svf: out = pt2|pt4                 cas = 0              flb = !pt1
-    fuzz-1-0-00-1.svf: out = !(pt2|pt4)              cas = 0              flb = !pt1
-    fuzz-1-0-01-0.svf: out = (pt2|pt4)^ffq           cas = 0              flb = !pt1
-    fuzz-1-0-01-1.svf: out = !((pt2|pt4)^ffq)        cas = 0              flb = !pt1
-    fuzz-1-0-11-0.svf: out = !ffq                    cas = pt2|pt4        flb = !pt1
-    fuzz-1-0-11-1.svf: out = ffq                     cas = pt2|pt4        flb = !pt1
-    fuzz-1-0-10-0.svf: out = !0                      cas = pt2|pt4        flb = !pt1
-    fuzz-1-0-10-1.svf: out = !pt1                    cas = pt2|pt4        flb = !0
+    fuzz-1-0-0-0-0.svf: out = pt2|pt4                 cas = 0              flb = !pt1
+    fuzz-1-0-0-0-1.svf: out = !(pt2|pt4)              cas = 0              flb = !pt1
+    fuzz-1-0-0-1-0.svf: out = (pt2|pt4)^ffq           cas = 0              flb = !pt1
+    fuzz-1-0-0-1-1.svf: out = !((pt2|pt4)^ffq)        cas = 0              flb = !pt1
+    fuzz-1-0-1-1-0.svf: out = !ffq                    cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-1-1-1.svf: out = ffq                     cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-1-0-0.svf: out = !0                      cas = pt2|pt4        flb = !pt1
+    fuzz-1-0-1-0-1.svf: out = !pt1                    cas = pt2|pt4        flb = !0
 
-    fuzz-1-1-00-0.svf: out = pt4                     cas = 0              flb = !pt1
-    fuzz-1-1-00-1.svf: out = pt2^pt4                 cas = 0              flb = !pt1
-    fuzz-1-1-01-0.svf: out = pt4^ffq                 cas = 0              flb = !pt1
-    fuzz-1-1-01-1.svf: out = pt4^(!ffq)              cas = 0              flb = !pt1
-    fuzz-1-1-11-0.svf: out = pt2^ffq                 cas = pt4            flb = !pt1
-    fuzz-1-1-11-1.svf: out = pt2^(!ffq)              cas = pt4            flb = !pt1
-    fuzz-1-1-10-0.svf: out = pt2                     cas = pt4            flb = !pt1
-    fuzz-1-1-10-1.svf: out = pt1^pt2                 cas = pt4            flb = !0
+    fuzz-1-1-0-0-0.svf: out = pt4                     cas = 0              flb = !pt1
+    fuzz-1-1-0-0-1.svf: out = pt2^pt4                 cas = 0              flb = !pt1
+    fuzz-1-1-0-1-0.svf: out = pt4^ffq                 cas = 0              flb = !pt1
+    fuzz-1-1-0-1-1.svf: out = pt4^(!ffq)              cas = 0              flb = !pt1
+    fuzz-1-1-1-1-0.svf: out = pt2^ffq                 cas = pt4            flb = !pt1
+    fuzz-1-1-1-1-1.svf: out = pt2^(!ffq)              cas = pt4            flb = !pt1
+    fuzz-1-1-1-0-0.svf: out = pt2                     cas = pt4            flb = !pt1
+    fuzz-1-1-1-0-1.svf: out = pt1^pt2                 cas = pt4            flb = !0
 
-    fuzz-0-0-00-0.svf: out = pt1|pt2|pt4             cas = 0              flb = !0
-    fuzz-0-0-00-1.svf: out = !(pt1|pt2|pt4)          cas = 0              flb = !0
-    fuzz-0-0-01-0.svf: out = (pt1|pt2|pt4)^ffq       cas = 0              flb = !0
-    fuzz-0-0-01-1.svf: out = (pt1|pt2|pt4)^(!ffq)    cas = 0              flb = !0
-    fuzz-0-0-11-0.svf: out = !ffq                    cas = pt1|pt2|pt4    flb = !0
-    fuzz-0-0-11-1.svf: out = ffq                     cas = pt1|pt2|pt4    flb = !0
-    fuzz-0-0-10-0.svf: out = !0                      cas = pt1|pt2|pt4    flb = !0
-    fuzz-0-0-10-1.svf: out = 0                       cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-0-0-0.svf: out = pt1|pt2|pt4             cas = 0              flb = !0
+    fuzz-0-0-0-0-1.svf: out = !(pt1|pt2|pt4)          cas = 0              flb = !0
+    fuzz-0-0-0-1-0.svf: out = (pt1|pt2|pt4)^ffq       cas = 0              flb = !0
+    fuzz-0-0-0-1-1.svf: out = (pt1|pt2|pt4)^(!ffq)    cas = 0              flb = !0
+    fuzz-0-0-1-1-0.svf: out = !ffq                    cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-1-1-1.svf: out = ffq                     cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-1-0-0.svf: out = !0                      cas = pt1|pt2|pt4    flb = !0
+    fuzz-0-0-1-0-1.svf: out = 0                       cas = pt1|pt2|pt4    flb = !0
 
-    fuzz-0-1-00-0.svf: out = pt1|pt4                 cas = 0              flb = !0
-    fuzz-0-1-00-1.svf: out = (pt1|pt4)^pt2           cas = 0              flb = !0
-    fuzz-0-1-01-0.svf: out = (pt1|pt4)^ffq           cas = 0              flb = !0
-    fuzz-0-1-01-1.svf: out = (!(pt1|pt4))^ffq        cas = 0              flb = !0
-    fuzz-0-1-11-0.svf: out = pt2^ffq                 cas = pt1|pt4        flb = !0
-    fuzz-0-1-11-1.svf: out = !(pt2^ffq)              cas = pt1|pt4        flb = !0
-    fuzz-0-1-10-0.svf: out = pt2                     cas = pt1|pt4        flb = !0
-    fuzz-0-1-10-1.svf: out = !pt2                    cas = pt1|pt4        flb = !0
+    fuzz-0-1-0-0-0.svf: out = pt1|pt4                 cas = 0              flb = !0
+    fuzz-0-1-0-0-1.svf: out = (pt1|pt4)^pt2           cas = 0              flb = !0
+    fuzz-0-1-0-1-0.svf: out = (pt1|pt4)^ffq           cas = 0              flb = !0
+    fuzz-0-1-0-1-1.svf: out = (!(pt1|pt4))^ffq        cas = 0              flb = !0
+    fuzz-0-1-1-1-0.svf: out = pt2^ffq                 cas = pt1|pt4        flb = !0
+    fuzz-0-1-1-1-1.svf: out = !(pt2^ffq)              cas = pt1|pt4        flb = !0
+    fuzz-0-1-1-0-0.svf: out = pt2                     cas = pt1|pt4        flb = !0
+    fuzz-0-1-1-0-1.svf: out = !pt2                    cas = pt1|pt4        flb = !0
 
-By replacing the printing code with:
+By manually rewriting it to factor out gates such that the netlist implementing them would be minimal, we arrive at the following table:
 
-    (begin
-      (printf "; ~a~n" name)
-      (printf "(and (equal? (leval ??out) ~v)~n"  (lcanon (evaluate ??out model)))
-      (printf "     (equal? (leval ??cas) ~v)~n"  (lcanon (evaluate ??cas model)))
-      (printf "     (equal? (leval ??flb) ~v))~n" (lcanon (evaluate ??flb model))))
+    fuzz-0-0-0-0-0.svf: sum = pt1|pt2|pt4   out =  (sum^ 0 )   cas = 0     flb = !0
+    fuzz-0-0-0-0-1.svf: sum = pt1|pt2|pt4   out = !(sum^ 0 )   cas = 0     flb = !0
+    fuzz-0-0-0-1-0.svf: sum = pt1|pt2|pt4   out =  (sum^ffq)   cas = 0     flb = !0
+    fuzz-0-0-0-1-1.svf: sum = pt1|pt2|pt4   out = !(sum^ffq)   cas = 0     flb = !0
+    fuzz-0-0-1-1-0.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ffq)   cas = sum   flb = !0
+    fuzz-0-0-1-1-1.svf: sum = pt1|pt2|pt4   out = !( 1 ^ffq)   cas = sum   flb = !0
+    fuzz-0-0-1-0-0.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ 0 )   cas = sum   flb = !0
+    fuzz-0-0-1-0-1.svf: sum = pt1|pt2|pt4   out = !( 1 ^ 0 )   cas = sum   flb = !0
 
-and some manual changes, a system of equations was obtained describing
-the macrocell behavior:
+    fuzz-0-1-0-0-0.svf: sum = pt1|    pt4   out =  (sum^ 0 )   cas = 0     flb = !0
+    fuzz-0-1-0-0-1.svf: sum = pt1|    pt4   out = !(sum^!pt2)  cas = 0     flb = !0
+    fuzz-0-1-0-1-0.svf: sum = pt1|    pt4   out =  (sum^ffq)   cas = 0     flb = !0
+    fuzz-0-1-0-1-1.svf: sum = pt1|    pt4   out = !(sum^ffq)   cas = 0     flb = !0
+    fuzz-0-1-1-1-0.svf: sum = pt1|    pt4   out =  (pt2^ffq)   cas = sum   flb = !0
+    fuzz-0-1-1-1-1.svf: sum = pt1|    pt4   out = !(pt2^ffq)   cas = sum   flb = !0
+    fuzz-0-1-1-0-0.svf: sum = pt1|    pt4   out =  (pt2^ 0 )   cas = sum   flb = !0
+    fuzz-0-1-1-0-1.svf: sum = pt1|    pt4   out = !(pt2^ 0 )   cas = sum   flb = !0
 
-    (case (list pt1_mux pt2_mux cas_mux xor_mux1 xor_mux2)
-     ['(#t #f #f #f #f)
-      (and (equal? (leval ??out) (lor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #f #f #t)
-      (and (equal? (leval ??out) (lnot (lor (lvar pt2) (lvar pt4)))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #f #t #f)
-      (and (equal? (leval ??out) (lxor (lor (lvar pt2) (lvar pt4)) (lvar ffq))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #f #t #t)
-      (and (equal? (leval ??out) (lnot (lxor (lor (lvar pt2) (lvar pt4)) (lvar ffq)))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #t #t #f)
-      (and (equal? (leval ??out) (lnot (lvar ffq))))
-           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #t #t #t)
-      (and (equal? (leval ??out) (lvar ffq)))
-           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #t #f #f)
-      (and (equal? (leval ??out) (lnot (llit #f))))
-           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #f #t #f #t)
-      (and (equal? (leval ??out) (lnot (lvar pt1))))
-           (equal? (leval ??cas) (lor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#t #t #f #f #f)
-      (and (equal? (leval ??out) (lvar pt4)))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #f #f #t)
-      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar pt4))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #f #t #f)
-      (and (equal? (leval ??out) (lxor (lvar pt4) (lvar ffq))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #f #t #t)
-      (and (equal? (leval ??out) (lxor (lvar pt4) (lnot (lvar ffq)))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #t #t #f)
-      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar ffq))))
-           (equal? (leval ??cas) (lvar pt4)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #t #t #t)
-      (and (equal? (leval ??out) (lxor (lvar pt2) (lnot (lvar ffq)))))
-           (equal? (leval ??cas) (lvar pt4)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #t #f #f)
-      (and (equal? (leval ??out) (lvar pt2)))
-           (equal? (leval ??cas) (lvar pt4)))
-           (equal? (leval ??flb) (lnot (lvar pt1))))]
-     ['(#t #t #t #f #t)
-      (and (equal? (leval ??out) (lxor (lvar pt1) (lvar pt2))))
-           (equal? (leval ??cas) (lvar pt4)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #f #f #f)
-      (and (equal? (leval ??out) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #f #f #t)
-      (and (equal? (leval ??out) (lnot (lor (lvar pt1) (lor (lvar pt2) (lvar pt4))))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #f #t #f)
-      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lor (lvar pt2) (lvar pt4))) (lvar ffq))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #f #t #t)
-      (and (equal? (leval ??out) (lxor (lor (lor (lvar pt1) (lvar pt2)) (lvar pt4))(leval  (??lnot) (lvar (leval ??ffq))))))
-           (equal? cas (llit #f)))
-           (equal? flb (lnot (llit #f))))]
-     ['(#f #f #t #t #f)
-      (and (equal? (leval ??out) (lnot (lvar ffq))))
-           (equal? (leval ??cas) (lor (lor (lvar pt1) (lvar pt2)) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #t #t #t)
-      (and (equal? (leval ??out) (lvar ffq)))
-           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #t #f #f)
-      (and (equal? (leval ??out) (lnot (llit #f))))
-           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #f #t #f #t)
-      (and (equal? (leval ??out) (llit #f)))
-           (equal? (leval ??cas) (lor (lvar pt1) (lor (lvar pt2) (lvar pt4)))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #f #f #f)
-      (and (equal? (leval ??out) (lor (lvar pt1) (lvar pt4))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #f #f #t)
-      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lvar pt4)) (lvar pt2))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #f #t #f)
-      (and (equal? (leval ??out) (lxor (lor (lvar pt1) (lvar pt4)) (lvar ffq))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #f #t #t)
-      (and (equal? (leval ??out) (lxor (lnot (lor (lvar pt1) (lvar pt4))) (lvar ffq))))
-           (equal? (leval ??cas) (llit #f)))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #t #t #f)
-      (and (equal? (leval ??out) (lxor (lvar pt2) (lvar ffq))))
-           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #t #t #t)
-      (and (equal? (leval ??out) (lnot (lxor (lvar pt2) (lvar ffq)))))
-           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #t #f #f)
-      (and (equal? (leval ??out) (lvar pt2)))
-           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))]
-     ['(#f #t #t #f #t)
-      (and (equal? (leval ??out) (lnot (lvar pt2))))
-           (equal? (leval ??cas) (lor (lvar pt1) (lvar pt4))))
-           (equal? (leval ??flb) (lnot (llit #f))))])
+    fuzz-1-0-0-0-0.svf: sum =     pt2|pt4   out =  (sum^ 0 )   cas = 0     flb = !pt1
+    fuzz-1-0-0-0-1.svf: sum =     pt2|pt4   out = !(sum^ 0 )   cas = 0     flb = !pt1
+    fuzz-1-0-0-1-0.svf: sum =     pt2|pt4   out =  (sum^ffq)   cas = 0     flb = !pt1
+    fuzz-1-0-0-1-1.svf: sum =     pt2|pt4   out = !(sum^ffq)   cas = 0     flb = !pt1
+    fuzz-1-0-1-1-0.svf: sum =     pt2|pt4   out =  ( 1 ^ffq)   cas = sum   flb = !pt1
+    fuzz-1-0-1-1-1.svf: sum =     pt2|pt4   out = !( 1 ^ffq)   cas = sum   flb = !pt1
+    fuzz-1-0-1-0-0.svf: sum =     pt2|pt4   out =  ( 1 ^ 0 )   cas = sum   flb = !pt1
+    fuzz-1-0-1-0-1.svf: sum =     pt2|pt4   out = !( 1 ^!pt1)  cas = sum   flb = !0
+
+    fuzz-1-1-0-0-0.svf: sum =         pt4   out =  (sum^ 0 )   cas = 0     flb = !pt1
+    fuzz-1-1-0-0-1.svf: sum =         pt4   out = !(sum^!pt2)  cas = 0     flb = !pt1
+    fuzz-1-1-0-1-0.svf: sum =         pt4   out =  (sum^ffq)   cas = 0     flb = !pt1
+    fuzz-1-1-0-1-1.svf: sum =         pt4   out = !(sum^ffq)   cas = 0     flb = !pt1
+    fuzz-1-1-1-1-0.svf: sum =         pt4   out =  (pt2^ffq)   cas = sum   flb = !pt1
+    fuzz-1-1-1-1-1.svf: sum =         pt4   out = !(pt2^ffq)   cas = sum   flb = !pt1
+    fuzz-1-1-1-0-0.svf: sum =         pt4   out =  (pt2^ 0 )   cas = sum   flb = !pt1
+    fuzz-1-1-1-0-1.svf: sum =         pt4   out = !(pt2^!pt1)  cas = sum   flb = !0
