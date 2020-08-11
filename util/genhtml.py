@@ -84,8 +84,13 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
     f.write(f"</table>\n")
 
 
-def write_option(f, option_name, option, *, anchor=True):
-    f.write(f"<p>Fuse combinations for option \"{option_name}\":</p>")
+def write_option(f, option_name, option, *, anchor=True, shared_with=()):
+    f.write(f"<p>Fuse combinations for option \"{option_name}\"")
+    if shared_with:
+        f.write(f" (shared with ")
+        f.write(", ".join(f"\"{shared_option_name}\"" for shared_option_name in shared_with))
+        f.write(f")")
+    f.write(f":</p>")
     f.write(f"<table>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
     for fuse in option["fuses"]:
@@ -96,8 +101,8 @@ def write_option(f, option_name, option, *, anchor=True):
                 f"<span style='font-size: 11px'>{fuse}</span>"
                 f"</div></th>")
     f.write(f"</tr>\n")
-    values = option["values"].items()
-    if len(option["fuses"]) > 1:
+    values = option['values'].items()
+    if len(option['fuses']) > 1:
         values = sorted(values, key=lambda i: i[0])
     for name, value in values:
         f.write(f"<tr><td align='right' height='18'>{name}</td>")
@@ -361,8 +366,16 @@ def write_macrocells(f, device_name, device, block_name):
         for option_name in macrocell_options:
             if option_name not in macrocell:
                 continue
+            shared_with = []
+            for other_option_name in macrocell_options:
+                if other_option_name not in macrocell or other_option_name == option_name:
+                    continue
+                if (set(macrocell[option_name]['fuses']) &
+                        set(macrocell[other_option_name]['fuses'])):
+                    shared_with.append(other_option_name)
             write_option(f, option_name, macrocell[option_name],
-                         anchor=option_name not in macrocell_shared_options)
+                         anchor=option_name not in macrocell_shared_options,
+                         shared_with=shared_with)
 
 
 def write_pterms(f, device_name, device, block_name):
