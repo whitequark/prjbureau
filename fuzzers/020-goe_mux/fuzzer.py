@@ -218,8 +218,11 @@ with database.transact() as db:
             # and celestial rituals demonstrate that this fuse drives the GOE network low.
             assert len(mux['values']) == len(mux['fuses']) - 1, \
                    f"GOE mux {mux_name} should have exactly one unused value"
+            # Setting the mux to all-ones (erased state) has the exact same result, so call the GND
+            # with all-ones "GND1" and the GND with one fuse set to 0 "GND0".
             erased_value = (1 << len(mux['fuses'])) - 1
+            mux['values']['GND1'] = erased_value
             for n_fuse in range(len(mux['fuses'])):
                 value = erased_value ^ (1 << n_fuse)
                 if value not in mux['values'].values():
-                    mux['values']['GND'] = value
+                    mux['values']['GND0'] = value

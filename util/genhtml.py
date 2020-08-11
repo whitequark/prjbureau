@@ -453,14 +453,14 @@ def write_global_oe(f, device_name, device):
     write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range)
 
     def filter_fn(mux_name, net_name):
-        return net_name != 'GND'
+        return net_name not in ('GND', 'GND1', 'GND0')
 
     def sort_fn(net_name):
         if net_name.endswith("_FB"): # gross.
             return int(net_name[2:-3])
         if net_name.endswith("_PAD"):
             return int(net_name[1:-4])
-        return {"GND": 0, "C1_PAD":512,"E1_PAD":513,"C2_PAD":514}[net_name]
+        return {"GND":0,"GND0":0,"GND1":0,"C1_PAD":512,"E1_PAD":513,"C2_PAD":514}[net_name]
 
     write_section(f, "Global OE Mux Connectivity",
         f"Global OE muxes provide the following possible (known) connection points.")
