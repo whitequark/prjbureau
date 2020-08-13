@@ -147,7 +147,7 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
             matrix[net_name].add(mux_name)
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
-    for mux_name in sorted(muxes):
+    for mux_name in sorted(muxes, key=natural_sort_key):
         f.write(f"<th width='16'>"
                 f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
                 f"<span style='font-size: 11px'>{mux_name}</span>"
@@ -164,9 +164,11 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     f.write(f"</table>\n")
 
 
-def write_points(f, points, *, sort_fn=lambda x: x):
+def write_points(f, points, *, filter_fn=lambda x: True, sort_fn=lambda x: x,
+                 link_fn=lambda x: None):
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
+    points = {name: offset for name, offset in points.items() if filter_fn(name)}
     fuse_offsets = list(sorted(points.values()))
     for fuse_offset in fuse_offsets:
         f.write(f"<th width='16'>"
@@ -175,7 +177,13 @@ def write_points(f, points, *, sort_fn=lambda x: x):
                 f"</div></th>")
     f.write(f"</tr>\n")
     for net_name, cross_fuse_offset in sorted(points.items(), key=lambda item: sort_fn(item[0])):
-        f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
+        f.write(f"<tr><td align='right' height='18'>")
+        link = link_fn(net_name)
+        if link is None:
+            f.write(f"{net_name}")
+        else:
+            f.write(f"<a href='{link}'>{net_name}</a>")
+        f.write(f"</td>")
         for fuse_offset in fuse_offsets:
             if fuse_offset == cross_fuse_offset:
                 f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>"
@@ -227,31 +235,37 @@ bitmap_layout = {
     "ATF1502AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "uim_mux":   (5,  [(True,  5)]),
         "goe_mux":   (5,  [(True,  5)]),
     },
     "ATF1502BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "uim_mux":   (5,  [(True,  5)]),
         "goe_mux":   (5,  [(True,  5)]),
     },
     "ATF1504AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "uim_mux":   (9,  [(True,  9)]),
         "goe_mux":   (9,  [(True,  9)]),
     },
     "ATF1504BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "uim_mux":   (9,  [(True, 9)]),
         "goe_mux":   (9,  [(True, 9)]),
     },
     "ATF1508AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
+        "uim_mux":   (27, [(True, 27)]),
         "goe_mux":   (27, [(True, 27)]),
     },
     "ATF1508BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
+        "uim_mux":   (27, [(True, 27)]),
         "goe_mux":   (27, [(True, 27)]),
     },
 }
@@ -439,7 +453,14 @@ def write_pterms(f, device_name, device, block_name):
         f"terms share the following fuse layout.")
     write_bitmap(f, *bitmap_layout[device_name]['pterm'], bitmap, range(pterm_fuse_count),
                  link_fn=lambda fuse: f"#PTL{fuse}")
-    write_points(f, blocks[block_name]['pterm_points'], sort_fn=natural_sort_key)
+    write_points(f, blocks[block_name]['pterm_points'],
+                 filter_fn=lambda name: name.endswith("_FLB"), sort_fn=natural_sort_key)
+    write_points(f, blocks[block_name]['pterm_points'],
+                 filter_fn=lambda name: name.endswith("_P"), sort_fn=natural_sort_key,
+                 link_fn=lambda name: f"uim{block_name}.html#{name[:-2]}")
+    write_points(f, blocks[block_name]['pterm_points'],
+                 filter_fn=lambda name: name.endswith("_N"), sort_fn=natural_sort_key,
+                 link_fn=lambda name: f"uim{block_name}.html#{name[:-2]}")
 
     for macrocell_name in blocks[block_name]['macrocells']:
         for pterm_name, pterm in pterms[macrocell_name].items():
@@ -451,7 +472,64 @@ def write_pterms(f, device_name, device, block_name):
                 f"See the <a href='#PT'>common configuration bitmap</a> for details.")
 
 
-def write_global_oe(f, device_name, device):
+def write_uim(f, device_name, device, block_name):
+    write_header(f, device_name, f"Logic Block {block_name} Interconnect Muxes")
+
+    blocks = device['blocks']
+    block_uim_muxes = {uim_name: device['uim_muxes'][uim_name]
+                       for uim_name in blocks[block_name]['uim_muxes']}
+    uim_fuse_range = range(*device['ranges']['uim_muxes'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for mux_name, mux in block_uim_muxes.items():
+        total_fuse_count += update_onehot_bitmap(bitmap, mux_name, mux, 'R')
+
+    for other_block_name, other_block in blocks.items():
+        if block_name == other_block_name:
+            continue
+
+        other_mux_names = blocks[other_block_name]['uim_muxes']
+        for other_mux_name in other_mux_names:
+            update_onehot_bitmap(bitmap, other_mux_names, device['uim_muxes'][other_mux_name], '-')
+
+    mux_links = [f"<a href='#{name}'>{name}</a>"
+                 for name in sorted(block_uim_muxes, key=natural_sort_key)]
+    write_section(f, "Interconnect Mux Configuration Bitmap",
+        f"Logic block {block_name} uses {total_fuse_count} (known) fuses within range "
+        f"{uim_fuse_range.start}..{uim_fuse_range.stop} for interconnect muxes "
+        f"{', '.join(mux_links)}.")
+    write_bitmap(f, *bitmap_layout[device_name]['uim_mux'], bitmap, uim_fuse_range)
+
+    def filter_fn(mux_name, net_name):
+        return net_name not in ('GND1', 'GND0')
+
+    def sort_fn(net_name):
+        if net_name.endswith('_FB'): # gross.
+            return int(net_name[2:-3])
+        if net_name.startswith('M') and net_name.endswith('_PAD'):
+            return int(net_name[1:-4])
+        return {'GND1':-5,'GND0':-4,'R_PAD':-3,'C1_PAD':-2,'C2_PAD':-1,'E1_PAD':0}[net_name]
+
+    write_section(f, "Interconnect Mux Connectivity",
+        f"Interconnect muxes provide the following possible (known) connection points.")
+    write_matrix(f, block_uim_muxes, filter_fn=filter_fn, sort_fn=sort_fn)
+
+    for mux_name, mux in sorted(block_uim_muxes.items(),
+                                key=lambda x: natural_sort_key(x[0])):
+        if 'fuses' not in mux:
+            continue
+        bitmap = {}
+        mux_fuse_count = update_onehot_bitmap(bitmap, mux_name, mux, 'R')
+        write_section(f, f"<a name='{mux_name}'></a>Interconnect Mux {mux_name} Fuses",
+            f"Interconnect mux {mux_name} uses the following {mux_fuse_count} (known) fuses "
+            f"for configuration.")
+        write_bitmap(f, *bitmap_layout[device_name]['uim_mux'], bitmap, uim_fuse_range,
+                     compact=True)
+        write_mux(f, mux_name, mux, sort_fn=sort_fn)
+
+
+def write_goe(f, device_name, device):
     write_header(f, device_name, f"Global OE Muxes")
 
     goe_fuse_range = range(*device['ranges']['goe_muxes'])
@@ -461,7 +539,8 @@ def write_global_oe(f, device_name, device):
     for mux_name, mux in device['goe_muxes'].items():
         total_fuse_count += update_onehot_bitmap(bitmap, mux_name, mux, 'R')
 
-    mux_links = [f"<a href='#{name}'>{name}</a>" for name in sorted(device['goe_muxes'])]
+    mux_links = [f"<a href='#{name}'>{name}</a>"
+                 for name in sorted(device['goe_muxes'], key=natural_sort_key)]
     write_section(f, "Global OE Mux Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
         f"{goe_fuse_range.start}..{goe_fuse_range.stop} for global OE muxes "
@@ -469,20 +548,21 @@ def write_global_oe(f, device_name, device):
     write_bitmap(f, *bitmap_layout[device_name]['goe_mux'], bitmap, goe_fuse_range)
 
     def filter_fn(mux_name, net_name):
-        return net_name not in ('GND', 'GND1', 'GND0')
+        return net_name not in ('GND1', 'GND0')
 
     def sort_fn(net_name):
-        if net_name.endswith("_FB"): # gross.
+        if net_name.endswith('_FB'): # gross.
             return int(net_name[2:-3])
-        if net_name.endswith("_PAD"):
+        if net_name.startswith('M') and net_name.endswith('_PAD'):
             return int(net_name[1:-4])
-        return {"GND":0,"GND0":0,"GND1":0,"C1_PAD":512,"E1_PAD":513,"C2_PAD":514}[net_name]
+        return {'GND1':-5,'GND0':-4,'R_PAD':-3,'C1_PAD':-2,'C2_PAD':-1,'E1_PAD':0}[net_name]
 
     write_section(f, "Global OE Mux Connectivity",
         f"Global OE muxes provide the following possible (known) connection points.")
     write_matrix(f, device['goe_muxes'], filter_fn=filter_fn, sort_fn=sort_fn)
 
-    for mux_name, mux in sorted(device['goe_muxes'].items()):
+    for mux_name, mux in sorted(device['goe_muxes'].items(),
+                                key=lambda x: natural_sort_key(x[0])):
         if 'fuses' not in mux:
             continue
         bitmap = {}
@@ -524,9 +604,14 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
                 with open(os.path.join(dev_docs_dir, f"pt{block_name}.html"), "w") as fb:
                     write_pterms(fb, device_name, device, block_name)
 
+                fd.write(f"<li><a href='uim{block_name}.html'>"
+                         f"Logic Block {block_name} Interconnect Muxes</a></li>\n")
+                with open(os.path.join(dev_docs_dir, f"uim{block_name}.html"), "w") as fb:
+                    write_uim(fb, device_name, device, block_name)
+
             fd.write(f"<li><a href='goe.html'>Global OE Muxes</a></li>\n")
             with open(os.path.join(dev_docs_dir, f"goe.html"), "w") as fg:
-                write_global_oe(fg, device_name, device)
+                write_goe(fg, device_name, device)
 
             fd.write(f"</ul>\n")
 

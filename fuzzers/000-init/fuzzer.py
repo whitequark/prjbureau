@@ -17,12 +17,13 @@ def pins(Mn, C1, E1, R, C2):
     }
 
 
-def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_goe_muxes=False):
+def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_muxes=False):
     return {
         "ranges": ranges,
         "blocks": {
             bn: {
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
+                "uim_muxes": [],
                 "pterm_points": {},
             } for bi, bn in enumerate(blocks)
         },
@@ -38,9 +39,13 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_goe_muxes=False):
                 } for pi in range(5)
             } for mi in range(len(blocks) * 16)
         },
+        "uim_muxes": {
+            f"UIM{1+xi}": {
+            } for xi in range(len(blocks) * 40)[::-1 if flip_muxes else 1]
+        },
         "goe_muxes": {
             f"GOE{1+xi}": {
-            } for xi in range(6)[::-1 if flip_goe_muxes else 1]
+            } for xi in range(6)[::-1 if flip_muxes else 1]
         },
         "clocks": {
             "1": {"pad": "C1"},
@@ -77,7 +82,7 @@ def atf1502xx(*, ranges):
                 R ="1",
                 C2="2"),
         },
-        "flip_goe_muxes": True,
+        "flip_muxes": True,
     })
 
 
