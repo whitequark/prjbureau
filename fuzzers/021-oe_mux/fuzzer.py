@@ -4,6 +4,17 @@ from util import database, toolchain, bitdiff
 with database.transact() as db:
     for device_name, device in db.items():
         package, pinout = next(iter(device['pins'].items()))
+
+        all_goe_choices = set()
+        unique_goe_choices = set()
+        for goe_name, goe_mux in device['goe_muxes'].items():
+            for goe_choice in goe_mux['values']:
+                if goe_choice in unique_goe_choices:
+                    unique_goe_choices.remove(goe_choice)
+                elif goe_choice not in all_goe_choices:
+                    unique_goe_choices.add(goe_choice)
+                all_goe_choices.add(goe_choice)
+
         for macrocell_name, macrocell in device['macrocells'].items():
             if macrocell['pad'] not in pinout:
                 print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
@@ -14,6 +25,7 @@ with database.transact() as db:
                 for goe_choice in goe_mux['values']:
                     if not goe_choice.endswith('_PAD'): continue
                     if goe_choice[:-4] == macrocell['pad']: continue
+                    if goe_choice not in unique_goe_choices: continue
                     goe_pads.append(goe_choice)
                     break
                 else:
