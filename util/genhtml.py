@@ -198,7 +198,9 @@ macrocell_options = {
     "global_clock":     "M",
     "pt5_mux":          "M",
     "pt5_func":         "M",
-    "xor_a_input":      "M",
+    "xor_a_mux":        "M",
+    "xor_b_mux":        "M",
+    "cas_mux":          "M",
     "d_mux":            "M",
     "dfast_mux":        "M",
     "storage":          "FF",
@@ -217,6 +219,7 @@ macrocell_options = {
 
 macrocell_shared_options = {
     "dfast_mux",
+    "cas_mux",
 }
 
 

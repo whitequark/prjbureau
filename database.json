@@ -199,16 +199,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15486,
-            15489
+            15486
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15486
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15489
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -405,16 +420,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15485,
-            15490
+            15485
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15485
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15490
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -611,16 +641,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15482,
-            15493
+            15482
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15482
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15493
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -817,16 +862,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15481,
-            15494
+            15481
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15481
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15494
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -1023,16 +1083,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15478,
-            15497
+            15478
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15478
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15497
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -1229,16 +1304,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15477,
-            15498
+            15477
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15477
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15498
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -1435,16 +1525,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15474,
-            15501
+            15474
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15474
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15501
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -1641,16 +1746,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15473,
-            15502
+            15473
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15473
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15502
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -1847,16 +1967,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15470,
-            15505
+            15470
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15470
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15505
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -2053,16 +2188,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15469,
-            15506
+            15469
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15469
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15506
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -2259,16 +2409,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15466,
-            15509
+            15466
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15466
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15509
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -2465,16 +2630,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15465,
-            15510
+            15465
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15465
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15510
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -2671,16 +2851,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15462,
-            15513
+            15462
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15462
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15513
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -2877,16 +3072,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15461,
-            15514
+            15461
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15461
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15514
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -3083,16 +3293,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15458,
-            15517
+            15458
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15458
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15517
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -3289,16 +3514,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15457,
-            15518
+            15457
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15457
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15518
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -3495,16 +3735,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15966,
-            15969
+            15966
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15966
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15969
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -3701,16 +3956,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15965,
-            15970
+            15965
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15965
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15970
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -3907,16 +4177,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15962,
-            15973
+            15962
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15962
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15973
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -4113,16 +4398,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15961,
-            15974
+            15961
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15961
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15974
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -4319,16 +4619,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15958,
-            15977
+            15958
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15958
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15977
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -4525,16 +4840,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15957,
-            15978
+            15957
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15957
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15978
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -4731,16 +5061,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15954,
-            15981
+            15954
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15954
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15981
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -4937,16 +5282,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15953,
-            15982
+            15953
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15953
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15982
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -5143,16 +5503,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15950,
-            15985
+            15950
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15950
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15985
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -5349,16 +5724,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15949,
-            15986
+            15949
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15949
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15986
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -5555,16 +5945,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15946,
-            15989
+            15946
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15946
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15989
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -5761,16 +6166,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15945,
-            15990
+            15945
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15945
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15990
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -5967,16 +6387,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15942,
-            15993
+            15942
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15942
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15993
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -6173,16 +6608,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15941,
-            15994
+            15941
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15941
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15994
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -6379,16 +6829,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15938,
-            15997
+            15938
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15938
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15997
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -6585,16 +7050,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15937,
-            15998
+            15937
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            15937
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15998
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -7759,9 +8239,9 @@
           16729
         ],
         "values": {
-          "M2_PAD": 29,
           "E1_PAD": 15,
           "M18_PAD": 30,
+          "M2_PAD": 29,
           "MC10_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -7776,8 +8256,8 @@
           16734
         ],
         "values": {
-          "M31_PAD": 23,
           "M15_PAD": 29,
+          "M31_PAD": 23,
           "MC6_FB": 30,
           "MC22_FB": 27,
           "GND1": 31,
@@ -7793,8 +8273,8 @@
           16739
         ],
         "values": {
-          "M13_PAD": 30,
           "M29_PAD": 27,
+          "M13_PAD": 30,
           "MC8_FB": 29,
           "MC24_FB": 23,
           "GND1": 31,
@@ -7811,8 +8291,8 @@
         ],
         "values": {
           "M11_PAD": 30,
-          "C2_PAD": 15,
           "M27_PAD": 29,
+          "C2_PAD": 15,
           "MC19_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -8146,16 +8626,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15789,
+            15791
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15791
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15789
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -8361,16 +8856,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15762,
+            15764
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15764
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15762
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -8576,16 +9086,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15735,
+            15737
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15737
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15735
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -8791,16 +9316,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15708,
+            15710
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15710
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15708
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -9006,16 +9546,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15681,
+            15683
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15683
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15681
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -9221,16 +9776,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15654,
+            15656
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15656
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15654
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -9436,16 +10006,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15627,
+            15629
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15629
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15627
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -9651,16 +10236,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15600,
+            15602
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15602
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15600
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -9866,16 +10466,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15573,
+            15575
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15575
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15573
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -10081,16 +10696,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15546,
+            15548
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15548
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15546
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -10296,16 +10926,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15519,
+            15521
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15521
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15519
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -10511,16 +11156,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15492,
+            15494
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15494
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15492
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -10726,16 +11386,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15465,
+            15467
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15467
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15465
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -10941,16 +11616,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15438,
+            15440
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15440
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15438
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -11156,16 +11846,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15411,
+            15413
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15413
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15411
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -11371,16 +12076,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15384,
+            15386
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15386
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15384
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -11586,16 +12306,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16269,
+            16271
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16271
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16269
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -11801,16 +12536,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16242,
+            16244
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16244
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16242
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -12016,16 +12766,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16215,
+            16217
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16217
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16215
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -12231,16 +12996,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16188,
+            16190
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16190
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16188
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -12446,16 +13226,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16161,
+            16163
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16163
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16161
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -12661,16 +13456,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16134,
+            16136
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16136
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16134
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -12876,16 +13686,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16107,
+            16109
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16109
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16107
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -13091,16 +13916,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16080,
+            16082
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16082
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16080
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -13306,16 +14146,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16053,
+            16055
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16055
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16053
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -13521,16 +14376,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            16026,
+            16028
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16028
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            16026
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -13736,16 +14606,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15999,
+            16001
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             16001
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15999
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -13951,16 +14836,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15972,
+            15974
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15974
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15972
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -14166,16 +15066,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15945,
+            15947
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15947
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15945
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -14381,16 +15296,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15918,
+            15920
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15920
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15918
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -14596,16 +15526,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15891,
+            15893
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15893
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15891
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -14811,16 +15756,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            15864,
+            15866
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             15866
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            15864
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -15985,9 +16945,9 @@
           16729
         ],
         "values": {
-          "M2_PAD": 29,
           "E1_PAD": 15,
           "M18_PAD": 30,
+          "M2_PAD": 29,
           "MC10_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -16002,8 +16962,8 @@
           16734
         ],
         "values": {
-          "M31_PAD": 23,
           "M15_PAD": 29,
+          "M31_PAD": 23,
           "MC6_FB": 30,
           "MC22_FB": 27,
           "GND1": 31,
@@ -16019,8 +16979,8 @@
           16739
         ],
         "values": {
-          "M13_PAD": 30,
           "M29_PAD": 27,
+          "M13_PAD": 30,
           "MC8_FB": 29,
           "MC24_FB": 23,
           "GND1": 31,
@@ -16037,8 +16997,8 @@
         ],
         "values": {
           "M11_PAD": 30,
-          "C2_PAD": 15,
           "M27_PAD": 29,
+          "C2_PAD": 15,
           "MC19_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -16439,16 +17399,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30897,
-            30958
+            30897
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30897
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30958
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -16645,16 +17620,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30898,
-            30957
+            30898
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30898
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30957
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -16851,16 +17841,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30901,
-            30954
+            30901
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30901
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30954
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -17057,16 +18062,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30902,
-            30953
+            30902
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30902
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30953
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -17263,16 +18283,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30905,
-            30950
+            30905
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30905
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30950
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -17469,16 +18504,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30906,
-            30949
+            30906
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30906
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30949
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -17675,16 +18725,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30909,
-            30946
+            30909
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30909
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30946
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -17881,16 +18946,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30910,
-            30945
+            30910
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30910
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30945
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -18087,16 +19167,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30913,
-            30942
+            30913
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30913
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30942
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -18293,16 +19388,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30914,
-            30941
+            30914
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30914
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30941
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -18499,16 +19609,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30917,
-            30938
+            30917
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30917
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30938
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -18705,16 +19830,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30918,
-            30937
+            30918
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30918
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30937
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -18911,16 +20051,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30921,
-            30934
+            30921
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30921
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30934
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -19117,16 +20272,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30922,
-            30933
+            30922
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30922
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30933
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -19323,16 +20493,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30925,
-            30930
+            30925
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30925
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30930
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -19529,16 +20714,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30926,
-            30929
+            30926
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30926
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30929
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -19735,16 +20935,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30977,
-            31038
+            30977
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30977
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31038
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -19941,16 +21156,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30978,
-            31037
+            30978
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30978
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31037
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -20147,16 +21377,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30981,
-            31034
+            30981
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30981
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31034
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -20353,16 +21598,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30982,
-            31033
+            30982
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30982
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31033
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -20559,16 +21819,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30985,
-            31030
+            30985
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30985
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31030
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -20765,16 +22040,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30986,
-            31029
+            30986
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30986
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31029
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -20971,16 +22261,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30989,
-            31026
+            30989
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30989
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31026
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -21177,16 +22482,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30990,
-            31025
+            30990
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30990
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31025
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -21383,16 +22703,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30993,
-            31022
+            30993
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30993
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31022
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -21589,16 +22924,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30994,
-            31021
+            30994
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30994
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31021
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -21795,16 +23145,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30997,
-            31018
+            30997
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30997
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31018
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -22001,16 +23366,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30998,
-            31017
+            30998
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            30998
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31017
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -22207,16 +23587,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31001,
-            31014
+            31001
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31001
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31014
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -22413,16 +23808,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31002,
-            31013
+            31002
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31002
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31013
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -22619,16 +24029,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31005,
-            31010
+            31005
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31005
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31010
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -22825,16 +24250,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31006,
-            31009
+            31006
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31006
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31009
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -23031,16 +24471,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31937,
-            31998
+            31937
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31937
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31998
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -23237,16 +24692,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31938,
-            31997
+            31938
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31938
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31997
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -23443,16 +24913,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31941,
-            31994
+            31941
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31941
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31994
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -23649,16 +25134,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31942,
-            31993
+            31942
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31942
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31993
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -23855,16 +25355,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31945,
-            31990
+            31945
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31945
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31990
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -24061,16 +25576,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31946,
-            31989
+            31946
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31946
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31989
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -24267,16 +25797,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31949,
-            31986
+            31949
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31949
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31986
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -24473,16 +26018,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31950,
-            31985
+            31950
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31950
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31985
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -24679,16 +26239,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31953,
-            31982
+            31953
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31953
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31982
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -24885,16 +26460,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31954,
-            31981
+            31954
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31954
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31981
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -25091,16 +26681,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31957,
-            31978
+            31957
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31957
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31978
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -25297,16 +26902,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31958,
-            31977
+            31958
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31958
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31977
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -25503,16 +27123,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31961,
-            31974
+            31961
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31961
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31974
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -25709,16 +27344,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31962,
-            31973
+            31962
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31962
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31973
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -25871,16 +27521,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31965,
-            31970
+            31965
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31965
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31970
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -26077,16 +27742,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31966,
-            31969
+            31966
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31966
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31969
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -26283,16 +27963,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31857,
-            31918
+            31857
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31857
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31918
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -26489,16 +28184,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31858,
-            31917
+            31858
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31858
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31917
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -26695,16 +28405,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31861,
-            31914
+            31861
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31861
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31914
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -26901,16 +28626,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31862,
-            31913
+            31862
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31862
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31913
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -27107,16 +28847,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31865,
-            31910
+            31865
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31865
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31910
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -27313,16 +29068,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31866,
-            31909
+            31866
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31866
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31909
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -27519,16 +29289,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31869,
-            31906
+            31869
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31869
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31906
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -27725,16 +29510,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31870,
-            31905
+            31870
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31870
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31905
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -27931,16 +29731,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31873,
-            31902
+            31873
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31873
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31902
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -28137,16 +29952,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31874,
-            31901
+            31874
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31874
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31901
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -28343,16 +30173,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31877,
-            31898
+            31877
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31877
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31898
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -28549,16 +30394,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31878,
-            31897
+            31878
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31878
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31897
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -28755,16 +30615,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31881,
-            31894
+            31881
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31881
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31894
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -28961,16 +30836,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31882,
-            31893
+            31882
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31882
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31893
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -29167,16 +31057,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31885,
-            31890
+            31885
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31885
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31890
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -29373,16 +31278,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31886,
-            31889
+            31886
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
+            31886
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 2,
-            "ff_qn": 3,
-            "vcc": 1
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31889
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -31559,10 +33479,10 @@
         ],
         "values": {
           "E1_PAD": 255,
-          "M3_PAD": 447,
-          "M24_PAD": 495,
-          "M40_PAD": 507,
           "M51_PAD": 509,
+          "M3_PAD": 447,
+          "M40_PAD": 507,
+          "M24_PAD": 495,
           "MC11_FB": 383,
           "MC30_FB": 479,
           "MC46_FB": 503,
@@ -31583,10 +33503,10 @@
           34097
         ],
         "values": {
-          "M11_PAD": 507,
           "M30_PAD": 495,
-          "M57_PAD": 510,
+          "M11_PAD": 507,
           "C2_PAD": 255,
+          "M57_PAD": 510,
           "MC4_FB": 509,
           "MC24_FB": 503,
           "MC40_FB": 479,
@@ -31609,8 +33529,8 @@
         ],
         "values": {
           "M46_PAD": 510,
-          "M11_PAD": 503,
           "M30_PAD": 479,
+          "M11_PAD": 503,
           "MC1_FB": 509,
           "MC3_FB": 507,
           "MC21_FB": 495,
@@ -31633,10 +33553,10 @@
           34115
         ],
         "values": {
-          "M41_PAD": 495,
+          "M62_PAD": 383,
           "M25_PAD": 509,
           "M14_PAD": 510,
-          "M62_PAD": 383,
+          "M41_PAD": 495,
           "MC17_FB": 507,
           "MC20_FB": 503,
           "MC33_FB": 479,
@@ -31660,8 +33580,8 @@
         "values": {
           "M16_PAD": 509,
           "M64_PAD": 447,
-          "M41_PAD": 495,
           "M25_PAD": 507,
+          "M41_PAD": 495,
           "MC5_FB": 510,
           "MC19_FB": 503,
           "MC35_FB": 479,
@@ -31684,10 +33604,10 @@
         ],
         "values": {
           "M19_PAD": 510,
-          "M53_PAD": 507,
-          "M5_PAD": 383,
           "M35_PAD": 495,
+          "M53_PAD": 507,
           "M17_PAD": 447,
+          "M5_PAD": 383,
           "MC25_FB": 479,
           "MC41_FB": 503,
           "MC62_FB": 509,
@@ -32346,16 +34266,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32589,
+            32591
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32591
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32589
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -32561,16 +34496,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32562,
+            32564
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32564
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32562
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -32776,16 +34726,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32535,
+            32537
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32537
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32535
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -32991,16 +34956,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32508,
+            32510
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32510
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32508
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -33206,16 +35186,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32481,
+            32483
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32483
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32481
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -33421,16 +35416,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32454,
+            32456
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32456
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32454
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -33636,16 +35646,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32427,
+            32429
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32429
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32427
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -33851,16 +35876,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32400,
+            32402
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32402
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32400
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -34066,16 +36106,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32373,
+            32375
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32375
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32373
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -34281,16 +36336,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32346,
+            32348
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32348
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32346
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -34496,16 +36566,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32319,
+            32321
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32321
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32319
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -34711,16 +36796,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32292,
+            32294
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32294
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32292
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -34926,16 +37026,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32265,
+            32267
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32267
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32265
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -35141,16 +37256,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32238,
+            32240
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32240
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32238
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -35356,16 +37486,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32211,
+            32213
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32213
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32211
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -35571,16 +37716,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32184,
+            32186
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32186
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32184
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -35786,16 +37946,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31149,
+            31151
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31151
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31149
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -36001,16 +38176,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31122,
+            31124
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31124
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31122
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -36216,16 +38406,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31095,
+            31097
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31097
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31095
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -36431,16 +38636,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31068,
+            31070
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31070
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31068
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -36646,16 +38866,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31041,
+            31043
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31043
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31041
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -36861,16 +39096,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31014,
+            31016
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31016
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31014
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -37076,16 +39326,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30987,
+            30989
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30989
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30987
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -37291,16 +39556,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30960,
+            30962
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30962
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30960
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -37506,16 +39786,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30933,
+            30935
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30935
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30933
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -37721,16 +40016,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30906,
+            30908
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30908
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30906
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -37936,16 +40246,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30879,
+            30881
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30881
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30879
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -38151,16 +40476,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30852,
+            30854
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30854
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30852
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -38366,16 +40706,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30825,
+            30827
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30827
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30825
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -38581,16 +40936,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30798,
+            30800
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30800
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30798
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -38796,16 +41166,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30771,
+            30773
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30773
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30771
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -39011,16 +41396,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            30744,
+            30746
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             30746
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            30744
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -39226,16 +41626,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31224,
+            31226
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31226
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31224
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -39441,16 +41856,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31251,
+            31253
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31253
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31251
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -39656,16 +42086,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31278,
+            31280
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31280
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31278
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -39871,16 +42316,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31305,
+            31307
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31307
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31305
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -40086,16 +42546,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31332,
+            31334
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31334
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31332
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -40301,16 +42776,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31359,
+            31361
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31361
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31359
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -40516,16 +43006,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31386,
+            31388
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31388
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31386
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -40731,16 +43236,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31413,
+            31415
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31415
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31413
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -40946,16 +43466,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31440,
+            31442
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31442
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31440
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -41161,16 +43696,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31467,
+            31469
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31469
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31467
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -41376,16 +43926,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31494,
+            31496
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31496
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31494
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -41591,16 +44156,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31521,
+            31523
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31523
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31521
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -41806,16 +44386,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31548,
+            31550
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31550
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31548
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -42021,16 +44616,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31575,
+            31577
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31577
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31575
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -42192,16 +44802,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31602,
+            31604
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31604
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31602
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -42407,16 +45032,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31629,
+            31631
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31631
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31629
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -42622,16 +45262,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31704,
+            31706
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31706
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31704
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -42837,16 +45492,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31731,
+            31733
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31733
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31731
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -43052,16 +45722,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31758,
+            31760
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31760
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31758
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -43267,16 +45952,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31785,
+            31787
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31787
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31785
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -43482,16 +46182,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31812,
+            31814
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31814
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31812
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -43697,16 +46412,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31839,
+            31841
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31841
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31839
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -43912,16 +46642,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31866,
+            31868
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31868
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31866
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -44127,16 +46872,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31893,
+            31895
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31895
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31893
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -44342,16 +47102,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31920,
+            31922
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31922
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31920
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -44557,16 +47332,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31947,
+            31949
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31949
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31947
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -44772,16 +47562,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            31974,
+            31976
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             31976
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            31974
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -44987,16 +47792,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32001,
+            32003
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32003
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32001
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -45202,16 +48022,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32028,
+            32030
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32030
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32028
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -45417,16 +48252,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32055,
+            32057
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32057
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32055
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -45632,16 +48482,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32082,
+            32084
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32084
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32082
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -45847,16 +48712,31 @@
             "oe": 0
           }
         },
-        "xor_a_input": {
+        "xor_a_mux": {
           "fuses": [
-            32109,
+            32111
+          ],
+          "values": {
+            "sum": 0,
+            "vcc_pt2": 1
+          }
+        },
+        "cas_mux": {
+          "fuses": [
             32111
           ],
           "values": {
             "gnd": 0,
-            "ff_q": 1,
-            "ff_qn": 3,
-            "vcc": 2
+            "sum": 1
+          }
+        },
+        "xor_b_mux": {
+          "fuses": [
+            32109
+          ],
+          "values": {
+            "gnd_npt12": 0,
+            "ff_q": 1
           }
         },
         "pt2_mux": {
@@ -48033,10 +50913,10 @@
         ],
         "values": {
           "E1_PAD": 255,
-          "M3_PAD": 447,
-          "M24_PAD": 495,
-          "M40_PAD": 507,
           "M51_PAD": 509,
+          "M3_PAD": 447,
+          "M40_PAD": 507,
+          "M24_PAD": 495,
           "MC11_FB": 383,
           "MC30_FB": 479,
           "MC46_FB": 503,
@@ -48057,10 +50937,10 @@
           34097
         ],
         "values": {
-          "M11_PAD": 507,
           "M30_PAD": 495,
-          "M57_PAD": 510,
+          "M11_PAD": 507,
           "C2_PAD": 255,
+          "M57_PAD": 510,
           "MC4_FB": 509,
           "MC24_FB": 503,
           "MC40_FB": 479,
@@ -48083,8 +50963,8 @@
         ],
         "values": {
           "M46_PAD": 510,
-          "M11_PAD": 503,
           "M30_PAD": 479,
+          "M11_PAD": 503,
           "MC1_FB": 509,
           "MC3_FB": 507,
           "MC21_FB": 495,
@@ -48107,10 +50987,10 @@
           34115
         ],
         "values": {
-          "M41_PAD": 495,
+          "M62_PAD": 383,
           "M25_PAD": 509,
           "M14_PAD": 510,
-          "M62_PAD": 383,
+          "M41_PAD": 495,
           "MC17_FB": 507,
           "MC20_FB": 503,
           "MC33_FB": 479,
@@ -48134,8 +51014,8 @@
         "values": {
           "M16_PAD": 509,
           "M64_PAD": 447,
-          "M41_PAD": 495,
           "M25_PAD": 507,
+          "M41_PAD": 495,
           "MC5_FB": 510,
           "MC19_FB": 503,
           "MC35_FB": 479,
@@ -48158,10 +51038,10 @@
         ],
         "values": {
           "M19_PAD": 510,
-          "M53_PAD": 507,
-          "M5_PAD": 383,
           "M35_PAD": 495,
+          "M53_PAD": 507,
           "M17_PAD": 447,
+          "M5_PAD": 383,
           "MC25_FB": 479,
           "MC41_FB": 503,
           "MC62_FB": 509,
