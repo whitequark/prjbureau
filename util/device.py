@@ -150,11 +150,11 @@ class ATF1504Device(ATF15xxDevice):
     @classmethod
     def jed_to_svf_coords(cls, jed_index):
         if jed_index in range(    0,   15360):
-            return  12 + (jed_index -      0)  % 96, 165 - (jed_index -     0) // 96
+            return  12 + (jed_index -      0)  % 96,  165 - (jed_index -     0) // 96
         if jed_index in range(15360,   30720):
             return 128 + (jed_index -  15360)  % 96,  165 - (jed_index - 15360) // 96
         if jed_index in range(30720,   32640):
-            return   0 + (jed_index -  30720) // 160, 165 - (jed_index - 30720) % 160
+            return   0 + (jed_index -  30720) // 160, 165 - (jed_index - 30720)  % 160
         if jed_index in range(32640,   34134):
             return 224 + (jed_index -  32640)  %  9,  165 - (jed_index - 32640) // 9
         if jed_index in range(34134, 34166):
@@ -181,7 +181,7 @@ class ATF1504Device(ATF15xxDevice):
                 return # always 1
         if svf_row in range(128, 224):
             if svf_col in range(6, 166):
-                return  15360 + (svf_row - 128) + (165 - svf_col) * 96
+                return 15360 + (svf_row - 128) + (165 - svf_col) * 96
             else:
                 return # always 1
         if svf_row in range(224, 233):
@@ -214,9 +214,9 @@ class ATF1508Device(ATF15xxDevice):
     @classmethod
     def jed_to_svf_coords(cls, jed_index):
         if jed_index in range(    0,  30720):
-            return  12 + (jed_index -      0)  % 96, 325 - (jed_index -     0) // 96
+            return  12 + (jed_index -     0)  %  96, 325 - (jed_index -     0) // 96
         if jed_index in range( 30720, 61440):
-            return 128 + (jed_index -  30720)  % 96, 325 - (jed_index - 30720) // 96
+            return 128 + (jed_index - 30720)  %  96, 325 - (jed_index - 30720) // 96
         if jed_index in range(61440, 65280):
             return   0 + (jed_index - 61440) // 320, 325 - (jed_index - 61440)  % 320
         if jed_index in range(65280, 74082):
@@ -245,7 +245,7 @@ class ATF1508Device(ATF15xxDevice):
                 return # always 1
         if svf_row in range(128, 224):
             if svf_col in range(6, 326):
-                return  30720 + (svf_row - 128) + (325 - svf_col) * 96
+                return 30720 + (svf_row - 128) + (325 - svf_col) * 96
             else:
                 return # always 1
         if svf_row in range(224, 251):
@@ -286,7 +286,7 @@ if __name__ == '__main__':
                     jed_index = ATF1504Device.svf_to_jed_coords(svf_row, svf_col)
                     if jed_index is None: jed_index = 0xffff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
-					
+
     with open('atf1504as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
         for jed_index in range(ATF1504Device.fuse_count):
