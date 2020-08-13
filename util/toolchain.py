@@ -1,7 +1,7 @@
 import os, os.path, ntpath
 import subprocess
 
-from . import root_dir
+from . import root_dir, progress
 from .jesd3 import JESD3Parser
 
 
@@ -21,6 +21,8 @@ fitter_env["FITTERDIR"] = subprocess.check_output([
 
 
 def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"):
+    progress(0)
+
     assert format in ("v", "tt", "edif")
     series, package = device.split("-") # eg ATF1502AS-TQFP44
 

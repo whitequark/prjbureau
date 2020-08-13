@@ -1,13 +1,17 @@
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
         if not device_name.endswith('AS'):
             continue # only in AS
+        else:
+            progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
+            progress(1)
+
             def run(code):
                 return toolchain.run(
                     f"module top(input CLK1); "

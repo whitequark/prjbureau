@@ -1,17 +1,23 @@
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
         if device_name.startswith('ATF1508'):
+            progress()
             print(f"Skipping {device_name} because the fuzzer is broken on it")
             continue
+        else:
+            progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
         for macrocell_name, macrocell in device['macrocells'].items():
             if macrocell['pad'] not in pinout:
+                progress()
                 print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
                 continue
+            else:
+                progress(1)
 
             for other_macrocell_name, other_macrocell in device['macrocells'].items():
                 if other_macrocell_name != macrocell_name and other_macrocell['pad'] in pinout:

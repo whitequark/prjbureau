@@ -1,19 +1,24 @@
 from bitarray import bitarray
 
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
             if macrocell['pad'] not in pinout:
+                progress()
                 print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
                 continue
-
-            if 'oe_mux' not in macrocell:
+            elif 'oe_mux' not in macrocell:
+                progress()
                 print(f"Skipping {macrocell_name} on {device_name} because it lacks OE mux fuses")
                 continue
+            else:
+                progress(1)
 
             def run(code):
                 return toolchain.run(

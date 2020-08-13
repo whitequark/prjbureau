@@ -1,8 +1,10 @@
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
 
         all_goe_choices = set()
@@ -17,8 +19,11 @@ with database.transact() as db:
 
         for macrocell_name, macrocell in device['macrocells'].items():
             if macrocell['pad'] not in pinout:
+                progress()
                 print(f"Skipping {macrocell_name} on {device_name} because it is not bonded out")
                 continue
+            else:
+                progress(1)
 
             goe_pads = []
             for goe_name, goe_mux in device['goe_muxes'].items():
@@ -29,6 +34,7 @@ with database.transact() as db:
                     goe_pads.append(goe_choice)
                     break
                 else:
+                    progress()
                     print(f"GOE mux {goe_name} is only connected to pad {macrocell['pad']}!")
 
             if len(goe_pads) < len(device['goe_muxes']):

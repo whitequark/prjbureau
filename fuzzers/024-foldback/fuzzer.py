@@ -1,6 +1,6 @@
 from bitarray import bitarray
 
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 # For incomprehensible reasons, the fitter will apparently never derive foldback nodes from EDIF
@@ -57,9 +57,13 @@ def foldback_tt2(src_nodes, dst_nodes):
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
 
         for block_name, block in device['blocks'].items():
+            progress(1)
+
             for other_block_name, other_block in device['blocks'].items():
                 if other_block_name != block_name:
                     break

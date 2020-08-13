@@ -1,11 +1,13 @@
 import subprocess
 from collections import defaultdict
 
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
 
         goe_mux_range = range(*device['ranges']['goe_muxes'])
@@ -153,10 +155,13 @@ with database.transact() as db:
         pad_muxes = defaultdict(lambda: set())
         mux_pads = defaultdict(lambda: set())
         while worklist:
+            progress(3)
+
             updates = []
             for pad in worklist:
                 if pad not in pinout:
                     continue
+                progress(2)
 
                 reserved_muxes = []
                 reserved_pads = []
@@ -192,6 +197,8 @@ with database.transact() as db:
             depth += 1
 
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
+            progress(1)
+
             fuses = run_fb(macrocell_idx, macrocell_name)
             if fuses[macrocell['fb_mux']['fuses'][0]] != macrocell['fb_mux']['values']['sync']:
                 # Cannot constrain design by using AS with CUPL (fitter always rejects), so instead

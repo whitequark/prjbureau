@@ -1,10 +1,14 @@
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
+            progress(1)
+
             for other1_macrocell_name, other1_macrocell in device['macrocells'].items():
                 if other1_macrocell_name != macrocell_name and other1_macrocell['pad'] in pinout:
                     break

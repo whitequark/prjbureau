@@ -1,11 +1,13 @@
 # UIM muxes are fuzzed in three stages. This first stage is a seed fuzzer: it discovers one
 # UIM mux for every signal on the global bus, and that's it.
 
-from util import database, toolchain, bitdiff
+from util import database, toolchain, bitdiff, progress
 
 
 with database.transact() as db:
     for device_name, device in db.items():
+        progress(device_name)
+
         package, pinout = next(iter(device['pins'].items()))
 
         uim_mux_range = range(*device['ranges']['uim_muxes'])
@@ -100,9 +102,13 @@ with database.transact() as db:
                 block['pterm_points'][xpoint_name] = pt1_zero_index
 
         for block_name, block in device['blocks'].items():
+            progress(2)
+
             block['uim_muxes'].clear()
 
             for macrocell_name, macrocell in device['macrocells'].items():
+                progress(1)
+
                 for probe_macrocell_name, probe_macrocell in device['macrocells'].items():
                     if probe_macrocell['block'] != block_name: continue
                     if probe_macrocell['pad'] not in pinout: continue
@@ -138,3 +144,5 @@ with database.transact() as db:
                 run_task(node, probe_macrocell, probe_macrocell_name,
                          f"{node['pad']}_PAD", 'N', run_pad_neg)
 
+            progress((sum(len(mux['values']) - 1 for mux in device['uim_muxes'].values()),
+                      len(uim_mux_range)))
