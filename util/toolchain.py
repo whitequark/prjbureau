@@ -12,6 +12,9 @@ fitter_env = {
     **os.environ,
     "WINEPREFIX": f"{os.getenv('HOME')}/.wine_atf"
 }
+subprocess.call([
+    "wineserver", "-p"
+], env=fitter_env)
 fitter_env["FITTERDIR"] = subprocess.check_output([
     "winepath", "-w", vendor_dir
 ], env=fitter_env, text=True).strip()
