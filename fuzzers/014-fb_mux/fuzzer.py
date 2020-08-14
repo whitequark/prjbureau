@@ -43,14 +43,12 @@ with database.transact() as db:
                 f"wire Y1; XOR2 x1(CLK1, CLK2, Y1); "
                 f"wire Q1; DFF dff1(1'b0, Y1, Q1); "
                 f"TRI t1(1'b0, Q1, O1); "
-                f"TRI t2(1'b0, Q1, O2); ",
-                name="work-sync"
+                f"TRI t2(1'b0, Q1, O2); "
             )
             f_comb = run(
                 f"wire Y1; XOR2 x1(CLK1, CLK2, Y1); "
                 f"TRI t1(1'b0, Y1, O1); "
-                f"TRI t2(1'b0, Y1, O2); ",
-                name="work-comb"
+                f"TRI t2(1'b0, Y1, O2); "
             )
 
             # Feedback can be taken from either XOR term or FF/latch output.
