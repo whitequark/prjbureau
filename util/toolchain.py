@@ -20,6 +20,10 @@ fitter_env["FITTERDIR"] = subprocess.check_output([
 ], env=fitter_env, text=True).strip()
 
 
+class FitterError(Exception):
+    pass
+
+
 def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"):
     progress(0)
 
@@ -46,6 +50,13 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
             for net, pin in pins.items():
                 f.write(f"{net} : {pin}\n")
 
+    # When the fitter fails (e.g. due to routing congestion), it does not produce a JED file.
+    # Make sure there isn't a stale one.
+    try:
+        os.unlink(os.path.join(work_dir, f"{name}.jed"))
+    except FileNotFoundError:
+        pass
+
     strategy = {
         "ifmt": format,
         "optimize": "off",
@@ -70,6 +81,10 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
         *options,
         *strategy_options,
     ], cwd=work_dir, env=fitter_env)
+
+    with open(os.path.join(work_dir, f"{name}.fit")) as f:
+        if "Warning : Routing fail" in f.read():
+            raise FitterError("Routing fail")
 
     with open(os.path.join(work_dir, f"{name}.jed")) as f:
         parser = JESD3Parser(f.read())
