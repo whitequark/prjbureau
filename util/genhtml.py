@@ -155,7 +155,7 @@ def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     f.write(f"</tr>\n")
     for net_name, cross_mux_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
-        for mux_name in sorted(muxes):
+        for mux_name in sorted(muxes, key=natural_sort_key):
             if mux_name in cross_mux_names:
                 f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>R</td>")
             else:
