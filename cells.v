@@ -15,11 +15,11 @@ module IBUF(input A, output Q);
 endmodule
 
 // module NOT(input A, output QN);
-//   assign QN = A;
+//   assign QN = ~A;
 // endmodule
 
 module INV(input A, output QN);
-  assign QN = A;
+  assign QN = ~A;
 endmodule
 
 module XOR(input A, B, output Q);
