@@ -114,9 +114,9 @@ def write_option(f, option_name, option, *, anchor=True, shared_with=()):
     f.write(f"</table>\n")
 
 
-def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x):
+def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x, active_low=True, descr="mux"):
     base = min(mux['fuses'])
-    f.write(f"<p>Fuse combinations for mux \"{mux_name}\", relative to offset {base}:</p>")
+    f.write(f"<p>Fuse combinations for {descr} \"{mux_name}\", relative to offset {base}:</p>")
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70'></td>")
     for fuse in mux["fuses"]:
@@ -127,8 +127,8 @@ def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x):
     for name, value in sorted(mux['values'].items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{name}</td>")
         for n_fuse in range(len(mux['fuses'])):
-            bgcolor = '#ccc' if (value >> n_fuse) & 1 else '#afa'
-            fgcolor = '#666' if (value >> n_fuse) & 1 else '#666'
+            bgcolor = '#ccc' if (value >> n_fuse) & 1 == active_low else '#afa'
+            fgcolor = '#666' if (value >> n_fuse) & 1 == active_low else '#666'
             f.write(f"<td align='center' bgcolor='{bgcolor}' style='color:{fgcolor};'>"
                     f"{(value >> n_fuse) & 1}"
                     f"</td>")
@@ -315,13 +315,13 @@ def update_macrocell_bitmap(bitmap, macrocell_name, macrocell, *, override=None)
     return count
 
 
-def update_onehot_bitmap(bitmap, option_name, option, sigil):
+def update_onehot_bitmap(bitmap, option_name, option, sigil, *, active_low=True):
     count = 0
     if 'fuses' not in option:
         return 0
     for n_fuse, fuse in enumerate(option['fuses']):
         for key, value in option['values'].items():
-            if ~value & (1 << n_fuse):
+            if (~value if active_low else value) & (1 << n_fuse):
                 count += update_fuse(bitmap, fuse, sigil, owner=f"{option_name}.{key}")
     return count
 
@@ -606,12 +606,32 @@ def write_cfg(f, device_name, device):
 
     user_bitmap = {}
     total_user_fuse_count = 0
+    for sig_index, sig in enumerate(device['global']['sig']):
+        total_user_fuse_count += update_onehot_bitmap(
+            user_bitmap, f"sig{sig_index}", sig, 'C', active_low=False)
 
     write_section(f, "User Signature Bitmap",
         f"Device uses {total_user_fuse_count} (known) fuses within range "
         f"{user_fuse_range.start}..{user_fuse_range.stop} for user signature.")
     write_bitmap(f, len(user_fuse_range), [(True, len(user_fuse_range))],
                  user_bitmap, user_fuse_range)
+
+    for sig_index, sig in enumerate(device['global']['sig']):
+        bitmap = {}
+        fuse_count = update_onehot_bitmap(
+            bitmap, f"sig{sig_index}", sig, 'C', active_low=False)
+
+        for other_sig_index, other_sig in enumerate(device['global']['sig']):
+            if sig_index != other_sig_index:
+                update_onehot_bitmap(
+                    bitmap, f"sig{other_sig_index}", other_sig, '-', active_low=False)
+
+        write_section(f, f"<a name='sig{sig_index}'></a>User Signature Byte {sig_index} Fuses",
+            f"User signature byte {sig_index} uses the following {fuse_count} (known) fuses "
+            f"for configuration.")
+        write_bitmap(f, len(user_fuse_range), [(True, len(user_fuse_range))],
+                     bitmap, user_fuse_range, compact=True)
+        write_mux(f, f"{sig_index}", sig, active_low=False, descr="byte")
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")

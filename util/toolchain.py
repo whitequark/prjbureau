@@ -82,7 +82,7 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
         *strategy_options,
     ], cwd=work_dir, env=fitter_env)
 
-    with open(os.path.join(work_dir, f"{name}.fit")) as f:
+    with open(os.path.join(work_dir, f"{name}.fit"), encoding='windows-1252') as f:
         if "Warning : Routing fail" in f.read():
             raise FitterError("Routing fail")
 
