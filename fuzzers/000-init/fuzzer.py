@@ -47,6 +47,11 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_muxes=False):
             f"GOE{1+xi}": {
             } for xi in range(6)[::-1 if flip_muxes else 1]
         },
+        "global": {
+            "config": {},
+            "jtag": {},
+            "sig": [],
+        },
         "clocks": {
             "1": {"pad": "C1"},
             "2": {"pad": "C2"},

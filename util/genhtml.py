@@ -139,6 +139,7 @@ def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x):
 def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
     matrix = {}
     for mux_name, mux in muxes.items():
+        if 'values' not in mux: continue
         for net_name, value in mux['values'].items():
             if not filter_fn(mux_name, net_name):
                 continue
@@ -464,6 +465,7 @@ def write_pterms(f, device_name, device, block_name):
 
     for macrocell_name in blocks[block_name]['macrocells']:
         for pterm_name, pterm in pterms[macrocell_name].items():
+            if 'fuse_range' not in pterm: continue
             pterm_fuse_range = range(*pterm['fuse_range'])
             write_section(f, f"<a name='{macrocell_name}.{pterm_name}'></a>"
                              f"Macrocell {macrocell_name} Product Term {pterm_name} Fuses",
@@ -575,6 +577,43 @@ def write_goe(f, device_name, device):
         write_mux(f, mux_name, mux, sort_fn=sort_fn)
 
 
+def write_cfg(f, device_name, device):
+    write_header(f, device_name, f"Global Configuration")
+
+    device_fuse_range = range(*device['ranges']['device'])
+
+    device_bitmap = {}
+    total_device_fuse_count = 0
+
+    write_section(f, "Device Configuration Bitmap",
+        f"Device uses {total_device_fuse_count} (known) fuses within range "
+        f"{device_fuse_range.start}..{device_fuse_range.stop} for global configuration.")
+    write_bitmap(f, len(device_fuse_range), [(True, len(device_fuse_range))],
+                 device_bitmap, device_fuse_range)
+
+    jtag_fuse_range = range(*device['ranges']['jtag'])
+
+    jtag_bitmap = {}
+    total_jtag_fuse_count = 0
+
+    write_section(f, "JTAG Configuration Bitmap",
+        f"Device uses {total_jtag_fuse_count} (known) fuses within range "
+        f"{jtag_fuse_range.start}..{jtag_fuse_range.stop} for JTAG configuration.")
+    write_bitmap(f, len(jtag_fuse_range), [(True, len(jtag_fuse_range))],
+                 jtag_bitmap, jtag_fuse_range)
+
+    user_fuse_range = range(*device['ranges']['user'])
+
+    user_bitmap = {}
+    total_user_fuse_count = 0
+
+    write_section(f, "User Signature Bitmap",
+        f"Device uses {total_user_fuse_count} (known) fuses within range "
+        f"{user_fuse_range.start}..{user_fuse_range.stop} for user signature.")
+    write_bitmap(f, len(user_fuse_range), [(True, len(user_fuse_range))],
+                 user_bitmap, user_fuse_range)
+
+
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
@@ -612,6 +651,10 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
             fd.write(f"<li><a href='goe.html'>Global OE Muxes</a></li>\n")
             with open(os.path.join(dev_docs_dir, f"goe.html"), "w") as fg:
                 write_goe(fg, device_name, device)
+
+            fd.write(f"<li><a href='cfg.html'>Global Configuration</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"cfg.html"), "w") as fg:
+                write_cfg(fg, device_name, device)
 
             fd.write(f"</ul>\n")
 
