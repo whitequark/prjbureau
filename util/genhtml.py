@@ -577,61 +577,83 @@ def write_goe(f, device_name, device):
         write_mux(f, mux_name, mux, sort_fn=sort_fn)
 
 
+def write_cfg_device(f, device_name, device):
+    fuse_range = range(*device['ranges']['device'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for option_name, option in device['global']['config'].items():
+        total_fuse_count += update_option_bitmap(bitmap, option, 'C',
+                                                 owner=f"CONFIG.{option_name}")
+
+    write_section(f, "Device Configuration Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within range "
+        f"{fuse_range.start}..{fuse_range.stop} for global configuration.")
+    write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
+                 bitmap, fuse_range)
+
+    for option_name, option in device['global']['config'].items():
+        write_option(f, option_name, option)
+
+
+def write_cfg_jtag(f, device_name, device):
+    fuse_range = range(*device['ranges']['jtag'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for option_name, option in device['global']['jtag'].items():
+        total_fuse_count += update_option_bitmap(bitmap, option, 'C',
+                                                 owner=f"JTAG.{option_name}")
+
+    write_section(f, "JTAG Configuration Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within range "
+        f"{fuse_range.start}..{fuse_range.stop} for JTAG configuration.")
+    write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
+                 bitmap, fuse_range)
+
+    for option_name, option in device['global']['jtag'].items():
+        write_option(f, option_name, option)
+
+
+def write_cfg_user(f, device_name, device):
+    fuse_range = range(*device['ranges']['user'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for sig_index, sig in enumerate(device['global']['sig']):
+        total_fuse_count += update_onehot_bitmap(
+            bitmap, f"SIG{sig_index}", sig, 'C', active_low=False)
+
+    write_section(f, "User Signature Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within range "
+        f"{fuse_range.start}..{fuse_range.stop} for user signature.")
+    write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
+                 bitmap, fuse_range)
+
+    for byte_index, sig_byte in enumerate(device['global']['sig']):
+        bitmap = {}
+        fuse_count = update_onehot_bitmap(
+            bitmap, f"SIG{byte_index}", sig_byte, 'C', active_low=False)
+
+        for other_byte_index, other_sig in enumerate(device['global']['sig']):
+            if byte_index != other_byte_index:
+                update_onehot_bitmap(
+                    bitmap, f"SIG{other_byte_index}", other_sig, '-', active_low=False)
+
+        write_section(f, f"<a name='SIG{byte_index}'></a>User Signature Byte {byte_index} Fuses",
+            f"User signature byte {byte_index} uses the following {fuse_count} (known) fuses "
+            f"for configuration.")
+        write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
+                     bitmap, fuse_range, compact=True)
+        write_mux(f, f"{byte_index}", sig_byte, active_low=False, descr="byte")
+
+
 def write_cfg(f, device_name, device):
     write_header(f, device_name, f"Global Configuration")
 
-    device_fuse_range = range(*device['ranges']['device'])
-
-    device_bitmap = {}
-    total_device_fuse_count = 0
-
-    write_section(f, "Device Configuration Bitmap",
-        f"Device uses {total_device_fuse_count} (known) fuses within range "
-        f"{device_fuse_range.start}..{device_fuse_range.stop} for global configuration.")
-    write_bitmap(f, len(device_fuse_range), [(True, len(device_fuse_range))],
-                 device_bitmap, device_fuse_range)
-
-    jtag_fuse_range = range(*device['ranges']['jtag'])
-
-    jtag_bitmap = {}
-    total_jtag_fuse_count = 0
-
-    write_section(f, "JTAG Configuration Bitmap",
-        f"Device uses {total_jtag_fuse_count} (known) fuses within range "
-        f"{jtag_fuse_range.start}..{jtag_fuse_range.stop} for JTAG configuration.")
-    write_bitmap(f, len(jtag_fuse_range), [(True, len(jtag_fuse_range))],
-                 jtag_bitmap, jtag_fuse_range)
-
-    user_fuse_range = range(*device['ranges']['user'])
-
-    user_bitmap = {}
-    total_user_fuse_count = 0
-    for sig_index, sig in enumerate(device['global']['sig']):
-        total_user_fuse_count += update_onehot_bitmap(
-            user_bitmap, f"sig{sig_index}", sig, 'C', active_low=False)
-
-    write_section(f, "User Signature Bitmap",
-        f"Device uses {total_user_fuse_count} (known) fuses within range "
-        f"{user_fuse_range.start}..{user_fuse_range.stop} for user signature.")
-    write_bitmap(f, len(user_fuse_range), [(True, len(user_fuse_range))],
-                 user_bitmap, user_fuse_range)
-
-    for sig_index, sig in enumerate(device['global']['sig']):
-        bitmap = {}
-        fuse_count = update_onehot_bitmap(
-            bitmap, f"sig{sig_index}", sig, 'C', active_low=False)
-
-        for other_sig_index, other_sig in enumerate(device['global']['sig']):
-            if sig_index != other_sig_index:
-                update_onehot_bitmap(
-                    bitmap, f"sig{other_sig_index}", other_sig, '-', active_low=False)
-
-        write_section(f, f"<a name='sig{sig_index}'></a>User Signature Byte {sig_index} Fuses",
-            f"User signature byte {sig_index} uses the following {fuse_count} (known) fuses "
-            f"for configuration.")
-        write_bitmap(f, len(user_fuse_range), [(True, len(user_fuse_range))],
-                     bitmap, user_fuse_range, compact=True)
-        write_mux(f, f"{sig_index}", sig, active_low=False, descr="byte")
+    write_cfg_device(f, device_name, device)
+    write_cfg_jtag(f, device_name, device)
+    write_cfg_user(f, device_name, device)
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
