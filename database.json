@@ -9924,7 +9924,17 @@
     },
     "global": {
       "config": {},
-      "jtag": {},
+      "jtag": {
+        "pin_func": {
+          "fuses": [
+            16783
+          ],
+          "values": {
+            "jtag": 1,
+            "user": 0
+          }
+        }
+      },
       "sig": [
         {
           "fuses": [
@@ -20286,7 +20296,17 @@
     },
     "global": {
       "config": {},
-      "jtag": {},
+      "jtag": {
+        "pin_func": {
+          "fuses": [
+            16783
+          ],
+          "values": {
+            "jtag": 1,
+            "user": 0
+          }
+        }
+      },
       "sig": [
         {
           "fuses": [
@@ -41420,7 +41440,17 @@
     },
     "global": {
       "config": {},
-      "jtag": {},
+      "jtag": {
+        "pin_func": {
+          "fuses": [
+            34167
+          ],
+          "values": {
+            "jtag": 1,
+            "user": 0
+          }
+        }
+      },
       "sig": [
         {
           "fuses": [
@@ -63394,7 +63424,17 @@
     },
     "global": {
       "config": {},
-      "jtag": {},
+      "jtag": {
+        "pin_func": {
+          "fuses": [
+            34167
+          ],
+          "values": {
+            "jtag": 1,
+            "user": 0
+          }
+        }
+      },
       "sig": [
         {
           "fuses": [
