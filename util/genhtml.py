@@ -222,7 +222,7 @@ macrocell_options = {
     "pull_up":          "IO",
     "schmitt_trigger":  "IO",
     "bus_keeper":       "IO",
-    "low_power":        "IO",
+    "low_power":        "C",
 }
 
 
@@ -232,42 +232,65 @@ macrocell_shared_options = {
 }
 
 
+global_options = {
+    "bus_keeper":       "IO",
+    "power_down_1":     "C",
+    "power_down_2":     "C",
+    "gclk1_itd":        "C",
+    "gclk2_itd":        "C",
+    "gclk3_itd":        "C",
+    "tdi_pull_up":      "IO",
+    "tms_pull_up":      "IO",
+    "power_reset":      "C",
+    "jtag_pin_func":    "M",
+    "gclk1_invert":     "M",
+    "gclk2_invert":     "M",
+    "gclk3_invert":     "M",
+}
+
+
 bitmap_layout = {
     "ATF1502AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "uim_mux":   (5,  [(True,  5)]),
         "goe_mux":   (5,  [(True,  5)]),
+        "device":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1502BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "uim_mux":   (5,  [(True,  5)]),
         "goe_mux":   (5,  [(True,  5)]),
+        "device":    (32, [(True, 32), (True,  8)]),
     },
     "ATF1504AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "uim_mux":   (9,  [(True,  9)]),
         "goe_mux":   (9,  [(True,  9)]),
+        "device":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1504BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "uim_mux":   (9,  [(True, 9)]),
         "goe_mux":   (9,  [(True, 9)]),
+        "device":    (32, [(True, 32), (True,  8)]),
     },
     "ATF1508AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "uim_mux":   (27, [(True, 27)]),
         "goe_mux":   (27, [(True, 27)]),
+        "device":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1508BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "uim_mux":   (27, [(True, 27)]),
         "goe_mux":   (27, [(True, 27)]),
+        "device":    (32, [(True, 32), (True,  8)]),
     },
 }
 
@@ -583,35 +606,16 @@ def write_cfg_device(f, device_name, device):
     bitmap = {}
     total_fuse_count = 0
     for option_name, option in device['global']['config'].items():
-        total_fuse_count += update_option_bitmap(bitmap, option, 'C',
+        total_fuse_count += update_option_bitmap(bitmap, option, global_options[option_name],
                                                  owner=f"CONFIG.{option_name}")
 
     write_section(f, "Device Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
-        f"{fuse_range.start}..{fuse_range.stop} for global configuration.")
-    write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
+        f"{fuse_range.start}..{fuse_range.stop} for global feature and JTAG configuration.")
+    write_bitmap(f, *bitmap_layout[device_name]['device'],
                  bitmap, fuse_range)
 
     for option_name, option in device['global']['config'].items():
-        write_option(f, option_name, option)
-
-
-def write_cfg_jtag(f, device_name, device):
-    fuse_range = range(*device['ranges']['jtag'])
-
-    bitmap = {}
-    total_fuse_count = 0
-    for option_name, option in device['global']['jtag'].items():
-        total_fuse_count += update_option_bitmap(bitmap, option, 'C',
-                                                 owner=f"JTAG.{option_name}")
-
-    write_section(f, "JTAG Configuration Bitmap",
-        f"Device uses {total_fuse_count} (known) fuses within range "
-        f"{fuse_range.start}..{fuse_range.stop} for JTAG configuration.")
-    write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
-                 bitmap, fuse_range)
-
-    for option_name, option in device['global']['jtag'].items():
         write_option(f, option_name, option)
 
 
@@ -620,9 +624,9 @@ def write_cfg_user(f, device_name, device):
 
     bitmap = {}
     total_fuse_count = 0
-    for sig_index, sig in enumerate(device['global']['sig']):
+    for byte_index, user_byte in enumerate(device['global']['user']):
         total_fuse_count += update_onehot_bitmap(
-            bitmap, f"SIG{sig_index}", sig, 'C', active_low=False)
+            bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
 
     write_section(f, "User Signature Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
@@ -630,29 +634,28 @@ def write_cfg_user(f, device_name, device):
     write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
                  bitmap, fuse_range)
 
-    for byte_index, sig_byte in enumerate(device['global']['sig']):
+    for byte_index, user_byte in enumerate(device['global']['user']):
         bitmap = {}
         fuse_count = update_onehot_bitmap(
-            bitmap, f"SIG{byte_index}", sig_byte, 'C', active_low=False)
+            bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
 
-        for other_byte_index, other_sig in enumerate(device['global']['sig']):
+        for other_byte_index, other_sig in enumerate(device['global']['user']):
             if byte_index != other_byte_index:
                 update_onehot_bitmap(
-                    bitmap, f"SIG{other_byte_index}", other_sig, '-', active_low=False)
+                    bitmap, f"USER{other_byte_index}", other_sig, '-', active_low=False)
 
-        write_section(f, f"<a name='SIG{byte_index}'></a>User Signature Byte {byte_index} Fuses",
+        write_section(f, f"<a name='USER{byte_index}'></a>User Signature Byte {byte_index} Fuses",
             f"User signature byte {byte_index} uses the following {fuse_count} (known) fuses "
             f"for configuration.")
         write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
                      bitmap, fuse_range, compact=True)
-        write_mux(f, f"{byte_index}", sig_byte, active_low=False, descr="byte")
+        write_mux(f, f"{byte_index}", user_byte, active_low=False, descr="byte")
 
 
 def write_cfg(f, device_name, device):
     write_header(f, device_name, f"Global Configuration")
 
     write_cfg_device(f, device_name, device)
-    write_cfg_jtag(f, device_name, device)
     write_cfg_user(f, device_name, device)
 
 

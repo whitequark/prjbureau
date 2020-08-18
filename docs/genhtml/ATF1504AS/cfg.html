@@ -2,7 +2,7 @@
 <h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504AS</a> Global Configuration</h1>
 <i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
 <h2>Device Configuration Bitmap</h2>
-<p>Device uses 0 (known) fuses within range 34134..34166 for global configuration.</p>
+<p>Device uses 13 (known) fuses within range 34134..34170 for global feature and JTAG configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
 <td align='center' width='16'>0</td>
@@ -41,9 +41,9 @@
 <tr>
 <td align='right' height='18'>34134</td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34134' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34135' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34136' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34137' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34135 (CONFIG.bus_keeper)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34135'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34136 (CONFIG.power_down_1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34136'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34137 (CONFIG.power_down_2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34137'>C</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34138' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34139' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34140' style='text-decoration:none'>?</abbr></td>
@@ -51,21 +51,21 @@
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34142' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34143' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34144' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34145' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34145 (CONFIG.gclk1_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34145'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34146' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34147' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34148' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34148 (CONFIG.gclk2_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34148'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34149' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34150' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34151' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34151 (CONFIG.gclk3_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34151'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34152' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34153' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34154' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34155' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34156' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34157' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34158' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34159' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34154 (CONFIG.gclk1_itd)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34154'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34155 (CONFIG.gclk2_itd)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34155'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34156 (CONFIG.gclk3_itd)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34156'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34157 (CONFIG.tms_pull_up)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34157'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34158 (CONFIG.tdi_pull_up)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34158'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34159 (CONFIG.power_reset)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34159'>C</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
@@ -73,28 +73,78 @@
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
 </tr>
-</table>
-<h2>JTAG Configuration Bitmap</h2>
-<p>Device uses 1 (known) fuses within range 34166..34170 for JTAG configuration.</p>
-<table style='font-size:12px'>
-<tr><td width='70'></td>
-<td align='center' width='16'>0</td>
-<td align='center' width='16'>1</td>
-<td align='center' width='16'>2</td>
-<td align='center' width='16'>3</td>
-</tr>
 <tr>
 <td align='right' height='18'>34166</td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34166' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34167 (JTAG.pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34167'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34167 (CONFIG.jtag_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34167'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34168' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34169' style='text-decoration:none'>?</abbr></td>
 </tr>
 </table>
-<p>Fuse combinations for option "pin_func":</p><table>
+<p>Fuse combinations for option "power_down_1":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34136'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34136</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "power_down_2":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34137'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34137</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "gclk1_itd":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34154'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34154</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "gclk2_itd":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34155'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34155</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "gclk3_itd":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34156'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34156</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "tdi_pull_up":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34158'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34158</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "tms_pull_up":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34157'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34157</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "power_reset":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34159'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34159</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "gclk1_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34145'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34145</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "gclk2_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34148'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34148</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "gclk3_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34151'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34151</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "bus_keeper":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34135'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34135</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "jtag_pin_func":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34167'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34167</span></div></th></tr>
-<tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 <tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <h2>User Signature Bitmap</h2>
 <p>Device uses 16 (known) fuses within range 34170..34186 for user signature.</p>
@@ -119,25 +169,25 @@
 </tr>
 <tr>
 <td align='right' height='18'>34170</td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34170 (SIG0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34170'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34171 (SIG0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34171'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34172 (SIG0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34172'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34173 (SIG0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34173'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (SIG0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (SIG0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (SIG0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (SIG0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (SIG1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (SIG1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (SIG1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (SIG1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (SIG1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (SIG1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (SIG1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (SIG1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34170 (USER0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34170'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34171 (USER0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34171'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34172 (USER0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34172'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34173 (USER0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34173'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (USER0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (USER0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (USER0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (USER0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (USER1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (USER1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (USER1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (USER1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (USER1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (USER1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (USER1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (USER1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
 </tr>
 </table>
-<h2><a name='SIG0'></a>User Signature Byte 0 Fuses</h2>
+<h2><a name='USER0'></a>User Signature Byte 0 Fuses</h2>
 <p>User signature byte 0 uses the following 8 (known) fuses for configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
@@ -160,22 +210,22 @@
 </tr>
 <tr>
 <td align='right' height='18'>34170</td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34170 (SIG0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34170'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34171 (SIG0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34171'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34172 (SIG0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34172'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34173 (SIG0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34173'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (SIG0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (SIG0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (SIG0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (SIG0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34178 (SIG1.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34178'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34179 (SIG1.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34179'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34180 (SIG1.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34180'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34181 (SIG1.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34181'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34182 (SIG1.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34182'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34183 (SIG1.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34183'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34184 (SIG1.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34184'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34185 (SIG1.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34185'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34170 (USER0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34170'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34171 (USER0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34171'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34172 (USER0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34172'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34173 (USER0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34173'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (USER0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (USER0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (USER0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (USER0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34178 (USER1.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34178'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34179 (USER1.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34179'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34180 (USER1.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34180'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34181 (USER1.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34181'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34182 (USER1.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34182'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34183 (USER1.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34183'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34184 (USER1.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34184'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34185 (USER1.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34185'>-</a></abbr></td>
 </tr>
 </table>
 <p>Fuse combinations for byte "0", relative to offset 34170:</p><table style='font-size:12px'>
@@ -189,7 +239,7 @@
 <tr><td align='right' height='18'>bit6</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
 <tr><td align='right' height='18'>bit7</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
 </table>
-<h2><a name='SIG1'></a>User Signature Byte 1 Fuses</h2>
+<h2><a name='USER1'></a>User Signature Byte 1 Fuses</h2>
 <p>User signature byte 1 uses the following 8 (known) fuses for configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
@@ -212,22 +262,22 @@
 </tr>
 <tr>
 <td align='right' height='18'>34170</td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34170 (SIG0.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34170'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34171 (SIG0.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34171'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34172 (SIG0.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34172'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34173 (SIG0.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34173'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34174 (SIG0.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34174'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34175 (SIG0.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34175'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34176 (SIG0.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34176'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34177 (SIG0.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34177'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (SIG1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (SIG1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (SIG1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (SIG1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (SIG1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (SIG1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (SIG1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (SIG1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34170 (USER0.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34170'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34171 (USER0.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34171'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34172 (USER0.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34172'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34173 (USER0.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34173'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34174 (USER0.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34174'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34175 (USER0.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34175'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34176 (USER0.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34176'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34177 (USER0.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34177'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (USER1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (USER1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (USER1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (USER1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (USER1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (USER1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (USER1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (USER1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
 </tr>
 </table>
 <p>Fuse combinations for byte "1", relative to offset 34178:</p><table style='font-size:12px'>

@@ -42,27 +42,25 @@ with database.transact() as db:
         f_ff40 = run(strategy={'ues': b'\xff\x40'.decode('windows-1252')})
         f_ff80 = run(strategy={'ues': b'\xff\x80'.decode('windows-1252')})
 
-        device['global'].update({
-            'sig': [
-                bitdiff.describe(8, {
-                    'bit0': f_0100,
-                    'bit1': f_0200,
-                    'bit2': f_0400,
-                    'bit3': f_0800,
-                    'bit4': f_1000,
-                    'bit5': f_2000,
-                    'bit6': f_4000,
-                    'bit7': f_8000,
-                }),
-                bitdiff.describe(8, {
-                    'bit0': f_ff01,
-                    'bit1': f_ff02,
-                    'bit2': f_ff04,
-                    'bit3': f_ff08,
-                    'bit4': f_ff10,
-                    'bit5': f_ff20,
-                    'bit6': f_ff40,
-                    'bit7': f_ff80,
-                }),
-            ]
-        })
+        device['global']['user'] = [
+            bitdiff.describe(8, {
+                'bit0': f_0100,
+                'bit1': f_0200,
+                'bit2': f_0400,
+                'bit3': f_0800,
+                'bit4': f_1000,
+                'bit5': f_2000,
+                'bit6': f_4000,
+                'bit7': f_8000,
+            }),
+            bitdiff.describe(8, {
+                'bit0': f_ff01,
+                'bit1': f_ff02,
+                'bit2': f_ff04,
+                'bit3': f_ff08,
+                'bit4': f_ff10,
+                'bit5': f_ff20,
+                'bit6': f_ff40,
+                'bit7': f_ff80,
+            }),
+        ]
