@@ -222,6 +222,7 @@ macrocell_options = {
     "pull_up":          "IO",
     "schmitt_trigger":  "IO",
     "bus_keeper":       "IO",
+    "io_standard":      "IO",
     "low_power":        "C",
 }
 
