@@ -64,6 +64,7 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
                     "FF": ("#666", "#aaf"),
                     "M":  ("#666", "#afa"),
                     "R":  ("#666", "#faa"),
+                    "A":  ("#666", "#fd0"),
                 }[sigil]
                 f.write(f"<td align='center' width='15' "
                         f"bgcolor='{bgcolor}' style='color:{fgcolor};'>")
@@ -266,6 +267,7 @@ global_options = {
     "e1_pad_schmitt_trigger": "IO",
     "power_reset":      "C",
     "jtag_pin_func":    "M",
+    "arming_switch":    "A",
 }
 
 

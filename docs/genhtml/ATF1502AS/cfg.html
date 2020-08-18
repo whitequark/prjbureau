@@ -2,7 +2,7 @@
 <h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1502AS</a> Global Configuration</h1>
 <i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
 <h2>Device Configuration Bitmap</h2>
-<p>Device uses 26 (known) fuses within range 16750..16786 for global feature and JTAG configuration.</p>
+<p>Device uses 27 (known) fuses within range 16750..16786 for global feature and JTAG configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
 <td align='center' width='16'>0</td>
@@ -40,7 +40,7 @@
 </tr>
 <tr>
 <td align='right' height='18'>16750</td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16750' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#fd0' style='color:#666;'><abbr title='16750 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16750'>A</a></abbr></td>
 <td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='16751 (CFG.bus_keeper)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16751'>IO</a></abbr></td>
 <td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='16752 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16752'>C</a></abbr></td>
 <td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='16753 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16753'>C</a></abbr></td>
@@ -198,6 +198,11 @@
 <tr><td width='70' height='40'></td><th width='21'><a name='L16783'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16783</span></div></th></tr>
 <tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "arming_switch":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16750'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16750</span></div></th></tr>
+<tr><td align='right' height='18'>safe</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>armed</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <h2>User Signature Bitmap</h2>
 <p>Device uses 16 (known) fuses within range 16786..16802 for user signature.</p>

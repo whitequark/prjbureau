@@ -10131,6 +10131,15 @@
           "user": 0,
           "jtag": 1
         }
+      },
+      "arming_switch": {
+        "fuses": [
+          16750
+        ],
+        "values": {
+          "safe": 1,
+          "armed": 0
+        }
       }
     },
     "user": [
@@ -20747,6 +20756,15 @@
           "pull_up": 2,
           "pull_down": 1,
           "bus_keeper": 3
+        }
+      },
+      "arming_switch": {
+        "fuses": [
+          16750
+        ],
+        "values": {
+          "safe": 1,
+          "armed": 0
         }
       }
     },
@@ -42097,6 +42115,15 @@
         "values": {
           "user": 0,
           "jtag": 1
+        }
+      },
+      "arming_switch": {
+        "fuses": [
+          34134
+        ],
+        "values": {
+          "safe": 1,
+          "armed": 0
         }
       }
     },
@@ -65012,6 +65039,15 @@
           "pull_up": 2,
           "pull_down": 1,
           "bus_keeper": 3
+        }
+      },
+      "arming_switch": {
+        "fuses": [
+          34134
+        ],
+        "values": {
+          "safe": 1,
+          "armed": 0
         }
       }
     },
