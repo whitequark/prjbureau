@@ -742,7 +742,7 @@ def write_pins(f, device_name, device):
             f"The name of the special function merely illustrates the typical application.</p>")
 
 
-docs_dir = os.path.join(root_dir, "docs", "genhtml")
+docs_dir = os.path.join(root_dir, "docs", "database")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
     fi.write(f"<p>Device index:</p>\n")
