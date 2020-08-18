@@ -65,8 +65,8 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
         "JTAG": "off",
         **strategy
     }
-    if series == 'ATF1504BE':
-        strategy["no_tff"] = "on"
+    if series == 'ATF1504BE' and 'no_tff' not in strategy:
+        strategy['no_tff'] = 'on'
     strategy_options = []
     for strategy_option in strategy.items():
         strategy_options += ["-strategy", *strategy_option]
