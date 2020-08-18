@@ -6,7 +6,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config = device['global']['config']
+        config = device['config']
 
         jtag_macrocell_names  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
         pwrdn_macrocell_names = [device['specials'][net] for net in ('PD1', 'PD2')]

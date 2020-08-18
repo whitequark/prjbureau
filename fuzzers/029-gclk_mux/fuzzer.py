@@ -12,8 +12,8 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config_range = range(*device['ranges']['device'])
-        config = device['global']['config']
+        config_range = range(*device['ranges']['config'])
+        config = device['config']
 
         def run(clocks, **kwargs):
             code = []
@@ -65,7 +65,7 @@ with database.transact() as db:
                     assert False
                 mapping[f"{global_clock_net}_mux"] = f"c{pad_n}"
 
-                gclk_invert_option = device['global']['config'][f"{global_clock_net}_invert"]
+                gclk_invert_option = device['config'][f"{global_clock_net}_invert"]
                 for n_fuse, fuse in enumerate(gclk_invert_option['fuses']):
                     assert fuses[fuse] == negedge
                     known_fuses.append(fuse)

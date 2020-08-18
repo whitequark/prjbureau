@@ -42,7 +42,7 @@ with database.transact() as db:
         f_ff40 = run(strategy={'ues': b'\xff\x40'.decode('windows-1252')})
         f_ff80 = run(strategy={'ues': b'\xff\x80'.decode('windows-1252')})
 
-        device['global']['user'] = [
+        device['user'] = [
             bitdiff.describe(8, {
                 'bit0': f_0100,
                 'bit1': f_0200,

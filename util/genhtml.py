@@ -619,12 +619,12 @@ def write_goe(f, device_name, device):
         write_mux(f, mux_name, mux, sort_fn=sort_fn)
 
 
-def write_cfg_device(f, device_name, device):
-    fuse_range = range(*device['ranges']['device'])
+def write_config(f, device_name, device):
+    fuse_range = range(*device['ranges']['config'])
 
     bitmap = {}
     total_fuse_count = 0
-    for option_name, option in device['global']['config'].items():
+    for option_name, option in device['config'].items():
         total_fuse_count += update_option_bitmap(bitmap, option, global_options[option_name],
                                                  owner=f"CONFIG.{option_name}")
 
@@ -634,16 +634,16 @@ def write_cfg_device(f, device_name, device):
     write_bitmap(f, *bitmap_layout[device_name]['device'],
                  bitmap, fuse_range)
 
-    for option_name, option in device['global']['config'].items():
+    for option_name, option in device['config'].items():
         write_option(f, option_name, option)
 
 
-def write_cfg_user(f, device_name, device):
+def write_user(f, device_name, device):
     fuse_range = range(*device['ranges']['user'])
 
     bitmap = {}
     total_fuse_count = 0
-    for byte_index, user_byte in enumerate(device['global']['user']):
+    for byte_index, user_byte in enumerate(device['user']):
         total_fuse_count += update_onehot_bitmap(
             bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
 
@@ -653,12 +653,12 @@ def write_cfg_user(f, device_name, device):
     write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
                  bitmap, fuse_range)
 
-    for byte_index, user_byte in enumerate(device['global']['user']):
+    for byte_index, user_byte in enumerate(device['user']):
         bitmap = {}
         fuse_count = update_onehot_bitmap(
             bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
 
-        for other_byte_index, other_sig in enumerate(device['global']['user']):
+        for other_byte_index, other_sig in enumerate(device['user']):
             if byte_index != other_byte_index:
                 update_onehot_bitmap(
                     bitmap, f"USER{other_byte_index}", other_sig, '-', active_low=False)
@@ -669,13 +669,6 @@ def write_cfg_user(f, device_name, device):
         write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
                      bitmap, fuse_range, compact=True)
         write_mux(f, f"{byte_index}", user_byte, active_low=False, descr="byte")
-
-
-def write_cfg(f, device_name, device):
-    write_header(f, device_name, f"Global Configuration")
-
-    write_cfg_device(f, device_name, device)
-    write_cfg_user(f, device_name, device)
 
 
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
@@ -718,7 +711,10 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
 
             fd.write(f"<li><a href='cfg.html'>Global Configuration</a></li>\n")
             with open(os.path.join(dev_docs_dir, f"cfg.html"), "w") as fg:
-                write_cfg(fg, device_name, device)
+                write_header(fg, device_name, f"Global Configuration")
+
+                write_config(fg, device_name, device)
+                write_user(fg, device_name, device)
 
             fd.write(f"</ul>\n")
 

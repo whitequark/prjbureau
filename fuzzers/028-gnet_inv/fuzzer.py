@@ -6,7 +6,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config = device['global']['config']
+        config = device['config']
 
         all_goe_choices = set()
         unique_goe_choices = set()

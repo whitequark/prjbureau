@@ -47,10 +47,8 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
             f"GOE{1+xi}": {
             } for xi in range(6)[::-1 if flip_muxes else 1]
         },
-        "global": {
-            "config": {},
-            "user": [],
-        },
+        "config": {},
+        "user": [],
         "clear": {"pad": "R"},
         "clocks": {
             "1": {"pad": "C1"},
@@ -253,7 +251,7 @@ database.save({
             "macrocells": [15360, 16320],
             "uim_muxes":  [16320, 16720],
             "goe_muxes":  [16720, 16750],
-            "device":     [16750, 16786],
+            "config":     [16750, 16786],
             "user":       [16786, 16802],
             "reserved":   [16802, 16808],
         },
@@ -264,7 +262,7 @@ database.save({
             "macrocells": [15360, 16320],
             "uim_muxes":  [16320, 16720],
             "goe_muxes":  [16720, 16750],
-            "device":     [16750, 16790],
+            "config":     [16750, 16790],
             "user":       [16790, 16806],
             "reserved":   [16806, 16814],
         }
@@ -275,7 +273,7 @@ database.save({
             "macrocells": [30720, 32640],
             "uim_muxes":  [32640, 34080],
             "goe_muxes":  [34080, 34134],
-            "device":     [34134, 34170],
+            "config":     [34134, 34170],
             "user":       [34170, 34186],
             "reserved":   [34186, 34192],
         }
@@ -286,7 +284,7 @@ database.save({
             "macrocells": [30720, 32640],
             "uim_muxes":  [32640, 34080],
             "goe_muxes":  [34080, 34134],
-            "device":     [34134, 34174],
+            "config":     [34134, 34174],
             "user":       [34174, 34190],
             "reserved":   [34190, 34198],
         },
@@ -301,7 +299,7 @@ database.save({
     #         "macrocells": [61440, 65280],
     #         "uim_muxes":  [65280, 73920],
     #         "goe_muxes":  [73920, 74082],
-    #         "device":     [74082, 74118],
+    #         "config":     [74082, 74118],
     #         "user":       [74118, 74134],
     #         "reserved":   [74134, 74136],
     #     },
@@ -312,7 +310,7 @@ database.save({
     #         "macrocells": [61440, 65280],
     #         "uim_muxes":  [65280, 73920],
     #         "goe_muxes":  [73920, 74082],
-    #         "device":     [74082, 74122],
+    #         "config":     [74082, 74122],
     #         "user":       [74122, 74138],
     #         "reserved":   [74138, 74146],
     #     },

@@ -8,7 +8,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config = device['global']['config']
+        config = device['config']
 
         def run_used(pad, **kwargs):
             return toolchain.run(
