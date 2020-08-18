@@ -2,7 +2,7 @@
 <h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504BE</a> Global Configuration</h1>
 <i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
 <h2>Device Configuration Bitmap</h2>
-<p>Device uses 21 (known) fuses within range 34134..34174 for global feature and JTAG configuration.</p>
+<p>Device uses 29 (known) fuses within range 34134..34174 for global feature and JTAG configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
 <td align='center' width='16'>0</td>
@@ -63,14 +63,14 @@
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34154' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34155' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34156' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34157' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34158' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34159' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34157 (CONFIG.c1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34157'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34158 (CONFIG.c1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34158'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34159 (CONFIG.c2_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34159'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34160 (CONFIG.c2_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34160'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34161 (CONFIG.e1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34161'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34162 (CONFIG.e1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34162'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34163 (CONFIG.r_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34163'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34164 (CONFIG.r_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34164'>IO</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
 </tr>
 <tr>
@@ -177,6 +177,34 @@
 <tr><td width='70' height='40'></td><th width='21'><a name='L34167'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34167</span></div></th></tr>
 <tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "r_pad_term":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34163'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34163</span></div></th><th width='21'><a name='L34164'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34164</span></div></th></tr>
+<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "c1_pad_term":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34157'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34157</span></div></th><th width='21'><a name='L34158'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34158</span></div></th></tr>
+<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "c2_pad_term":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34159'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34159</span></div></th><th width='21'><a name='L34160'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34160</span></div></th></tr>
+<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "e1_pad_term":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34161'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34161</span></div></th><th width='21'><a name='L34162'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34162</span></div></th></tr>
+<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <h2>User Signature Bitmap</h2>
 <p>Device uses 16 (known) fuses within range 34174..34190 for user signature.</p>

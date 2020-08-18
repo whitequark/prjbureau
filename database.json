@@ -20658,6 +20658,54 @@
             "user": 0,
             "jtag": 1
           }
+        },
+        "r_pad_term": {
+          "fuses": [
+            16779,
+            16780
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "c1_pad_term": {
+          "fuses": [
+            16773,
+            16774
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "c2_pad_term": {
+          "fuses": [
+            16775,
+            16776
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "e1_pad_term": {
+          "fuses": [
+            16777,
+            16778
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
         }
       },
       "user": [
@@ -64138,6 +64186,54 @@
           "values": {
             "user": 0,
             "jtag": 1
+          }
+        },
+        "r_pad_term": {
+          "fuses": [
+            34163,
+            34164
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "c1_pad_term": {
+          "fuses": [
+            34157,
+            34158
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "c2_pad_term": {
+          "fuses": [
+            34159,
+            34160
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
+          }
+        },
+        "e1_pad_term": {
+          "fuses": [
+            34161,
+            34162
+          ],
+          "values": {
+            "high_z": 0,
+            "pull_up": 2,
+            "pull_down": 1,
+            "bus_keeper": 3
           }
         }
       },

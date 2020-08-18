@@ -254,6 +254,10 @@ global_options = {
     "gclk3_itd":        "C",
     "tdi_pull_up":      "IO",
     "tms_pull_up":      "IO",
+    "r_pad_term":       "IO",
+    "c1_pad_term":      "IO",
+    "c2_pad_term":      "IO",
+    "e1_pad_term":      "IO",
     "power_reset":      "C",
     "jtag_pin_func":    "M",
 }
