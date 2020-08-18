@@ -52,20 +52,20 @@ with database.transact() as db:
             known_fuses = []
             for index, (pad_n, negedge) in enumerate(clocks):
                 macrocell = list(device['macrocells'].values())[index]
-                global_clock_option = macrocell['global_clock']
-                global_clock_value = 0
-                for n_fuse, fuse in enumerate(global_clock_option['fuses']):
-                    global_clock_value += fuses[fuse] << n_fuse
+                gclk_mux_option = macrocell['gclk_mux']
+                gclk_mux_value = 0
+                for n_fuse, fuse in enumerate(gclk_mux_option['fuses']):
+                    gclk_mux_value += fuses[fuse] << n_fuse
                     known_fuses.append(fuse)
-                for global_clock_net, global_clock_net_value in \
-                        global_clock_option['values'].items():
-                    if global_clock_value == global_clock_net_value:
+                for gclk_mux_net, gclk_mux_net_value in \
+                        gclk_mux_option['values'].items():
+                    if gclk_mux_value == gclk_mux_net_value:
                         break
                 else:
                     assert False
-                mapping[f"{global_clock_net}_mux"] = f"c{pad_n}"
+                mapping[f"{gclk_mux_net}_mux"] = f"C{pad_n}_PAD"
 
-                gclk_invert_option = device['config'][f"{global_clock_net}_invert"]
+                gclk_invert_option = device['config'][f"{gclk_mux_net}_invert"]
                 for n_fuse, fuse in enumerate(gclk_invert_option['fuses']):
                     assert fuses[fuse] == negedge
                     known_fuses.append(fuse)

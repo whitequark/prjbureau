@@ -34,6 +34,6 @@ with database.transact() as db:
 
             # https://www.dataman.com/media/datasheet/Atmel/ATF15xxAE_doc2398.pdf
             macrocell.update({
-                "global_reset":
-                    bitdiff.describe(1, {"off": f_dff, "on": f_dffar})
+                "gclr_mux":
+                    bitdiff.describe(1, {"gnd": f_dff, "gclr": f_dffar})
             })

@@ -14,10 +14,10 @@ macrocell_options = [
     "pt1_mux",
     "pt2_mux",
     "pt3_mux",
-    "global_reset",
+    "gclr_mux",
     "pt4_mux",
     "pt4_func",
-    "global_clock",
+    "gclk_mux",
     "pt5_mux",
     "pt5_func",
     "xor_a_mux",
@@ -35,6 +35,7 @@ macrocell_options = [
     "pull_up",
     "schmitt_trigger",
     "bus_keeper",
+    "io_standard",
     "low_power",
 ]
 
