@@ -43,6 +43,7 @@ with database.transact() as db:
                         f"GOE{1+n}": pinout[pad[:-4]]
                         for n, pad in enumerate(goe_pads)
                     },
+                    'Q': pinout[device['macrocells']['MC1']['pad']],
                 },
                 f"{device_name}-{package}", **kwargs)
 
@@ -60,6 +61,19 @@ with database.transact() as db:
             f_gclk_pos = run(f"DFF ff(.CLK({gclk_pin}), .D(1'b0), .Q(Q));")
             f_gclk_neg = run(f"wire Cn; INV in({gclk_pin}, Cn); "
                              f"DFF ff(.CLK(Cn), .D(1'b0), .Q(Q));")
+
+            macrocell = device['macrocells']['MC1']
+            global_clock_option = macrocell['global_clock']
+            global_clock_value = 0
+            for n_fuse, fuse in enumerate(global_clock_option['fuses']):
+                global_clock_value += f_gclk_pos[fuse] << n_fuse
+            for global_clock_net, global_clock_net_value in global_clock_option['values'].items():
+                if global_clock_value == global_clock_net_value:
+                    break
+            else:
+                assert False
+            assert global_clock_net == gclk
+
             config.update({
                 f"{gclk}_invert": bitdiff.describe(1, {
                     'off': f_gclk_pos,

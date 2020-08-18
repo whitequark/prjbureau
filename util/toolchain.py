@@ -83,8 +83,11 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
     ], cwd=work_dir, env=fitter_env)
 
     with open(os.path.join(work_dir, f"{name}.fit"), encoding='windows-1252') as f:
-        if "Warning : Routing fail" in f.read():
+        fitter_log = f.read()
+        if "Warning : Routing fail" in fitter_log:
             raise FitterError("Routing fail")
+        if "Warning : Conflict" in fitter_log:
+            raise FitterError("Conflict")
 
     with open(os.path.join(work_dir, f"{name}.jed")) as f:
         parser = JESD3Parser(f.read())
