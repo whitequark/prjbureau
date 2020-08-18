@@ -8,17 +8,8 @@ with database.transact() as db:
         package, pinout = next(iter(device['pins'].items()))
         config = device['global']['config']
 
-        if device_name.startswith('ATF1502'):
-            pwrdn_macrocells = {1:'MC7', 2:'MC31'}
-            jtag_macrocells  = {'TCK':'MC25', 'TMS':'MC9', 'TDI':'MC4', 'TDO':'MC20'}
-        elif device_name.startswith('ATF1504'):
-            pwrdn_macrocells = {1:'MC3', 2:'MC35'}
-            jtag_macrocells  = {'TCK':'MC48', 'TMS':'MC32', 'TDI':'MC8', 'TDO':'MC56'}
-        elif device_name.startswith('ATF1508'):
-            pwrdn_macrocells = {1:'MC3', 2:'MC67'}
-            jtag_macrocells  = {'TCK':'MC96', 'TMS':'MC48', 'TDI':'MC32', 'TDO':'MC112'}
-        else:
-            assert False
+        jtag_macrocell_names  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
+        pwrdn_macrocell_names = [device['specials'][net] for net in ('PD1', 'PD2')]
 
         def set_mc_option(fuses, macrocell_name, option_name, value_name):
             option = device['macrocells'][macrocell_name][option_name]
@@ -60,14 +51,14 @@ with database.transact() as db:
                 }),
             })
 
-        for index in (1, 2):
-            f_pwrdn_n_off = run(strategy={f"pd{index}":'off'})
-            f_pwrdn_n_on  = run(strategy={f"pd{index}":'on'})
-            set_mc_input(f_pwrdn_n_on, pwrdn_macrocells[index])
+        for index, pin in enumerate(('pd1', 'pd2')):
+            f_pwrdn_n_off = run(strategy={pin:'off'})
+            f_pwrdn_n_on  = run(strategy={pin:'on'})
+            set_mc_input(f_pwrdn_n_on, pwrdn_macrocell_names[index])
             config.update({
-                f"power_down_{index}": bitdiff.describe(1, {
-                    'off': f_pwrdn_n_off,
-                    'on':  f_pwrdn_n_on,
+                f"{pin}_pin_func": bitdiff.describe(1, {
+                    'user': f_pwrdn_n_off,
+                    'pd':   f_pwrdn_n_on,
                 }),
             })
 
@@ -75,7 +66,6 @@ with database.transact() as db:
             f_gclk_itd_off = run(strategy={'gclk_itd':'off'})
             for gclk in ('gclk1', 'gclk2', 'gclk3'):
                 f_gclk_itd_gclk_n = run(strategy={'gclk_itd':gclk})
-                set_mc_input(f_pwrdn_n_on, pwrdn_macrocells[index])
                 config.update({
                     f"{gclk}_itd": bitdiff.describe(1, {
                         'off': f_gclk_itd_off,
@@ -105,7 +95,7 @@ with database.transact() as db:
 
         f_jtag_off = run(strategy={'JTAG':'off'})
         f_jtag_on  = run(strategy={'JTAG':'on'})
-        for jtag_macrocell_name in jtag_macrocells.values():
+        for jtag_macrocell_name in jtag_macrocell_names:
             set_mc_input(f_jtag_on, jtag_macrocell_name)
         config.update({
             'jtag_pin_func': bitdiff.describe(1, {

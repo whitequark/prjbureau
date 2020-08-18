@@ -17,7 +17,7 @@ def pins(Mn, C1, E1, R, C2):
     }
 
 
-def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_muxes=False):
+def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
     return {
         "ranges": ranges,
         "blocks": {
@@ -51,25 +51,35 @@ def atf15xx(*, ranges, blocks, gclk3_pad, pins, flip_muxes=False):
             "config": {},
             "user": [],
         },
+        "clear": {"pad": "R"},
         "clocks": {
             "1": {"pad": "C1"},
             "2": {"pad": "C2"},
-            "3": {"pad": gclk3_pad},
+            "3": {"pad": specials["GCLK3"].replace("MC", "M")},
         },
         "enables": {
             "1": {"pad": "E1"},
             "2": {"pad": "C2"},
         },
-        "clear": {"pad": "R"},
+        "specials": specials,
         "pins": pins
     }
 
 
-def atf1502xx(*, ranges):
+def atf1502xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "AB",
-        "gclk3_pad": "M17",
+        "specials": {
+            "TDI":   "MC4",
+            "PD1":   "MC7",
+            "TMS":   "MC9",
+            "GCLK3": "MC17",
+            "TDO":   "MC20",
+            "TCK":   "MC25",
+            "PD2":   "MC31",
+            **specials
+        },
         "pins": {
             "TQFP44": pins(
                 Mn="42 43 44  1  2  3  5  6  7  8 10 11 12 13 14 15 "
@@ -90,11 +100,20 @@ def atf1502xx(*, ranges):
     })
 
 
-def atf1504xx(*, ranges):
+def atf1504xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "ABCD",
-        "gclk3_pad": "M64",
+        "specials": {
+            "PD1":   "MC3",
+            "TDI":   "MC8",
+            "TMS":   "MC32",
+            "PD2":   "MC35",
+            "TCK":   "MC48",
+            "TDO":   "MC56",
+            "GCLK3": "MC64",
+            **specials
+        },
         "pins": {
             "TQFP100": pins(
                 Mn=" 14  13  12  10   9   8   6   4 100  99  98  97  96 "
@@ -160,11 +179,20 @@ def atf1504xx(*, ranges):
     })
 
 
-def atf1508xx(*, ranges):
+def atf1508xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "ABCDEFGH",
-        "gclk3_pad": "M128",
+        "specials": {
+            "PD1":   "MC3",
+            "TDI":   "MC32",
+            "TMS":   "MC48",
+            "PD2":   "MC67",
+            "TCK":   "MC96",
+            "TDO":   "MC112",
+            "GCLK3": "MC128",
+            **specials
+        },
         "pins": {
             "PQFP160": pins(
                 Mn="160   0 159 158 153 152   0 151 150   0 149 147 146 145   0 144  21   0  20 "
@@ -239,7 +267,7 @@ database.save({
             "device":     [16750, 16790],
             "user":       [16790, 16806],
             "reserved":   [16806, 16814],
-        },
+        }
     }),
     "ATF1504AS": atf1504xx(**{
         "ranges": {
@@ -250,7 +278,7 @@ database.save({
             "device":     [34134, 34170],
             "user":       [34170, 34186],
             "reserved":   [34186, 34192],
-        },
+        }
     }),
     "ATF1504BE": atf1504xx(**{
         "ranges": {
@@ -262,6 +290,10 @@ database.save({
             "user":       [34174, 34190],
             "reserved":   [34190, 34198],
         },
+        "specials": {
+            "VREFA": "MC3",
+            "VREFB": "MC46",
+        }
     }),
     # "ATF1508AS": atf1508xx(**{
     #     "ranges": {
@@ -284,5 +316,9 @@ database.save({
     #         "user":       [74122, 74138],
     #         "reserved":   [74138, 74146],
     #     },
+    #     "specials": {
+    #         "VREFA": "MC21",
+    #         "VREFB": "MC93",
+    #     }
     # }),
 })
