@@ -1,6 +1,8 @@
+from collections import defaultdict
 import re
 import os, os.path
-from collections import defaultdict
+import gzip
+import json
 
 from . import root_dir, database
 
@@ -742,13 +744,20 @@ def write_pins(f, device_name, device):
             f"The name of the special function merely illustrates the typical application.</p>")
 
 
+devices = database.load()
 docs_dir = os.path.join(root_dir, "docs", "database")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
+
+    with gzip.open(os.path.join(docs_dir, "database.json.gz"), "wt") as fj:
+        json.dump(devices, fj, indent=2)
+    fi.write(f"<p>This HTML documentation has been automatically generated from a structured chip "
+             f"database. The complete chip database can be "
+             f"<a href='database.json.gz'>downloaded as a JSON file</a>.</p>")
+
     fi.write(f"<p>Device index:</p>\n")
     fi.write(f"<ul>\n")
-
-    for device_name, device in database.load().items():
+    for device_name, device in devices.items():
         dev_docs_dir = os.path.join(docs_dir, device_name)
         os.makedirs(dev_docs_dir, exist_ok=True)
 
@@ -757,6 +766,16 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
 
         with open(os.path.join(dev_docs_dir, f"index.html"), "w") as fd:
             write_header(fd, f"{device_name}")
+
+            with gzip.open(os.path.join(dev_docs_dir,
+                                        f"database-{device_name}.json.gz"), "wt") as fj:
+                json.dump({device_name: device}, fj, indent=2)
+            fd.write(f"<p>This HTML documentation has been automatically generated from "
+                     f"a structured chip database. A subset of the chip database that describes "
+                     f"only {device_name} can be "
+                     f"<a href='database-{device_name}.json.gz'>downloaded as a JSON file</a>."
+                     f"</p>")
+
             fd.write(f"<p>Device {device_name} documentation index:</p>\n")
             fd.write(f"<ul>\n")
 
