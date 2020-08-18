@@ -207,6 +207,18 @@ class FuseTool:
                 if match_filters_last(filters, (config_name,)):
                     self.get_option(config_name, self.device['config'][config_name])
 
+    def get_user(self, index):
+        field = self.device['user'][index]
+        value = sum(self.fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(field['fuses']))
+        if self.verbose:
+            self.print("USR{}: ({}) {:02x} [{:5}..{:5}]".format(
+                index,
+                ''.join(str(self.fuses[n]&1) for n in field['fuses']),
+                value,
+                min(field['fuses']), max(field['fuses'])))
+        else:
+            self.print("USR{}: {:02x}".format(index, value))
+
     def get_device(self, filters):
         for macrocell_name in self.device['macrocells']:
             matched, subfilters = match_filters(filters, ('MC', macrocell_name))
@@ -226,6 +238,10 @@ class FuseTool:
         matched, subfilters = match_filters(filters, ('CFG',))
         if matched:
             self.get_config(subfilters)
+
+        for index, user_byte in enumerate(self.device['user']):
+            if match_filters_last(filters, ('USR', f"USR{index}")):
+                self.get_user(index)
 
     def set_option(self, option_name, option, value):
         value = value.lower()
@@ -350,6 +366,21 @@ class FuseTool:
 
         return changed
 
+    def set_user(self, index, value):
+        self.print(f"USR{index}: {value}")
+
+        field = self.device['user'][index]
+        try:
+            value = int(value, 16)
+        except ValueError:
+            raise SystemExit(f"'{value}' is not a hexadecimal number")
+        if value not in range(256):
+            raise SystemExit(f"'{value}' is not in 0..256 range")
+
+        for n_fuse, fuse in enumerate(field['fuses']):
+            self.fuses[fuse] = (value >> n_fuse) & 1
+        return 1
+
     def set_device(self, filters, value):
         changed = 0
 
@@ -371,6 +402,10 @@ class FuseTool:
         matched, subfilters = match_filters(filters, ('CFG',))
         if matched:
             changed += self.set_config(subfilters, value)
+
+        for index, user_byte in enumerate(self.device['user']):
+            if match_filters_last(filters, ('USR', f"USR{index}")):
+                changed += self.set_user(index, value)
 
         return changed
 

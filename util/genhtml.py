@@ -646,7 +646,7 @@ def write_user(f, device_name, device):
     total_fuse_count = 0
     for byte_index, user_byte in enumerate(device['user']):
         total_fuse_count += update_onehot_bitmap(
-            bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
+            bitmap, f"USR{byte_index}", user_byte, 'C', active_low=False)
 
     write_section(f, "User Signature Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
@@ -657,14 +657,14 @@ def write_user(f, device_name, device):
     for byte_index, user_byte in enumerate(device['user']):
         bitmap = {}
         fuse_count = update_onehot_bitmap(
-            bitmap, f"USER{byte_index}", user_byte, 'C', active_low=False)
+            bitmap, f"USR{byte_index}", user_byte, 'C', active_low=False)
 
         for other_byte_index, other_sig in enumerate(device['user']):
             if byte_index != other_byte_index:
                 update_onehot_bitmap(
-                    bitmap, f"USER{other_byte_index}", other_sig, '-', active_low=False)
+                    bitmap, f"USR{other_byte_index}", other_sig, '-', active_low=False)
 
-        write_section(f, f"<a name='USER{byte_index}'></a>User Signature Byte {byte_index} Fuses",
+        write_section(f, f"<a name='USR{byte_index}'></a>User Signature Byte {byte_index} Fuses",
             f"User signature byte {byte_index} uses the following {fuse_count} (known) fuses "
             f"for configuration.")
         write_bitmap(f, len(fuse_range), [(True, len(fuse_range))],
