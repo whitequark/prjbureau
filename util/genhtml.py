@@ -627,7 +627,7 @@ def write_config(f, device_name, device):
     total_fuse_count = 0
     for option_name, option in device['config'].items():
         total_fuse_count += update_option_bitmap(bitmap, option, global_options[option_name],
-                                                 owner=f"CONFIG.{option_name}")
+                                                 owner=f"CFG.{option_name}")
 
     write_section(f, "Device Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "

@@ -201,6 +201,12 @@ class FuseTool:
         else:
             self.print("{}: {}".format(goe_mux_name, cross_mux_net))
 
+    def get_config(self, filters):
+        with self.hierarchy('CFG'):
+            for config_name in self.device['config']:
+                if match_filters_last(filters, (config_name,)):
+                    self.get_option(config_name, self.device['config'][config_name])
+
     def get_device(self, filters):
         for macrocell_name in self.device['macrocells']:
             matched, subfilters = match_filters(filters, ('MC', macrocell_name))
@@ -216,6 +222,10 @@ class FuseTool:
             matched, subfilters = match_filters(filters, ('GOE', goe_mux_name))
             if matched:
                 self.get_goe_mux(goe_mux_name, subfilters)
+
+        matched, subfilters = match_filters(filters, ('CFG',))
+        if matched:
+            self.get_config(subfilters)
 
     def set_option(self, option_name, option, value):
         value = value.lower()
@@ -329,6 +339,17 @@ class FuseTool:
         replace_fuses(self.fuses, goe_mux, value)
         return 1
 
+    def set_config(self, filters, value):
+        changed = 0
+
+        with self.hierarchy('CFG'):
+            for config_name in self.device['config']:
+                if match_filters_last(filters.get('CFG', filters), (config_name,)):
+                    changed += self.set_option(config_name, self.device['config'][config_name],
+                                               value)
+
+        return changed
+
     def set_device(self, filters, value):
         changed = 0
 
@@ -346,6 +367,10 @@ class FuseTool:
             matched, subfilters = match_filters(filters, ('GOE', goe_mux_name))
             if matched:
                 changed += self.set_goe_mux(goe_mux_name, subfilters, value)
+
+        matched, subfilters = match_filters(filters, ('CFG',))
+        if matched:
+            changed += self.set_config(subfilters, value)
 
         return changed
 
