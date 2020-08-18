@@ -1,6 +1,7 @@
 docs/database/*
 vendor/*
 work/*
+cache/
 *.edif
 *.pin
 *.tt3

@@ -13,6 +13,8 @@ with database.transact() as db:
     for device_name, device in db.items():
         progress(device_name)
 
+        det_random = random.Random(0)
+
         package, pinout = next(iter(device['pins'].items()))
         blocks = device['blocks']
 
@@ -153,7 +155,7 @@ with database.transact() as db:
                     else: # found > 1
                         progress(1)
 
-                        for net_name in random.sample(net_set, len(net_set)):
+                        for net_name in det_random.sample(net_set, len(net_set)):
                             if dull_reduces > 10:
                                 break
 
@@ -171,7 +173,7 @@ with database.transact() as db:
                         return False
 
                     if len(uims) == 0 or len(nets) == 0:
-                        net_set = net_set.union(random.sample(block_uim_nets - net_set, extra))
+                        net_set = net_set.union(det_random.sample(block_uim_nets - net_set, extra))
                         while len(net_set) > 35:
                             net_set.pop()
 
@@ -187,10 +189,10 @@ with database.transact() as db:
                                 dead_branches += 1
                                 return False
 
-                    uim_name  = random.choice(list(uims))
+                    uim_name  = det_random.choice(list(uims))
                     net_names = [name for name in uim_muxes[uim_name]['values']
                                  if name in nets]
-                    for net_name in random.sample(net_names, len(net_names)):
+                    for net_name in det_random.sample(net_names, len(net_names)):
                         removed_uims = set(uim_name for uim_name in block_uim_muxes
                                            if net_name in uim_muxes[uim_name]['values'])
                         removed_nets = set(sum((list(uim_muxes[uim_name]['values'])

@@ -1,5 +1,10 @@
 import os, os.path, ntpath
 import subprocess
+import hashlib
+import struct
+import pickle
+import json
+from bitarray import bitarray
 
 from . import root_dir, progress
 from .jesd3 import JESD3Parser
@@ -7,6 +12,8 @@ from .jesd3 import JESD3Parser
 
 vendor_dir = os.path.join(root_dir, "vendor")
 work_dir   = os.path.join(root_dir, "work")
+cache_dir  = os.path.join(root_dir, "cache")
+has_cache  = os.path.exists(cache_dir)
 
 fitter_env = {
     **os.environ,
@@ -24,7 +31,7 @@ class FitterError(Exception):
     pass
 
 
-def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"):
+def run_uncached(input, pins, device, *, strategy={}, options=[], name="work", format="v"):
     progress(0)
 
     assert format in ("v", "tt", "edif")
@@ -93,3 +100,49 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
         parser = JESD3Parser(f.read())
         parser.parse()
         return parser.fuse
+
+
+def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"):
+    if not has_cache:
+        return run_uncached(input, pins, device, strategy=strategy, options=options,
+                            name=name, format=format)
+
+    cache_key = hashlib.sha1(json.dumps({
+        'input': input,
+        'format': format,
+        'pins': pins,
+        'device': device,
+        'strategy': strategy,
+        'options': options,
+    }).encode('ascii')).hexdigest()
+
+    # quick and dirty caching code; i didn't bother making this properly portable because bitarray
+    # will screw it up anyway
+    try:
+        with open(os.path.join(cache_dir, cache_key), 'rb') as f:
+            length, = struct.unpack('i', f.read(struct.calcsize('i')))
+            if length != 0:
+                fuses = bitarray(endian='little')
+                fuses.fromfile(f)
+                del fuses[length:]
+                return fuses
+            else:
+                raise pickle.load(f)
+    except FileNotFoundError:
+        try:
+            fuses = run_uncached(input, pins, device, strategy=strategy, options=options,
+                                 name=name, format=format)
+            with open(os.path.join(cache_dir, cache_key + '.new'), 'wb') as f:
+                f.write(struct.pack('i', len(fuses)))
+                fuses.tofile(f)
+            os.rename(os.path.join(cache_dir, cache_key + '.new'),
+                      os.path.join(cache_dir, cache_key))
+            return fuses
+        except (subprocess.CalledProcessError, FitterError) as exn:
+            with open(os.path.join(cache_dir, cache_key + '.new'), 'wb') as f:
+                f.write(struct.pack('i', 0))
+                pickle.dump(exn, f)
+            os.rename(os.path.join(cache_dir, cache_key + '.new'),
+                      os.path.join(cache_dir, cache_key))
+            raise
+
