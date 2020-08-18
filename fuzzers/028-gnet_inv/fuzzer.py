@@ -17,6 +17,13 @@ with database.transact() as db:
                 elif goe_choice not in all_goe_choices:
                     unique_goe_choices.add(goe_choice)
                 all_goe_choices.add(goe_choice)
+        unique_goe_choices.difference_update({
+            f"{device['clear']['pad']}_PAD",
+            f"{device['clocks']['1']['pad']}_PAD",
+            f"{device['clocks']['2']['pad']}_PAD",
+            f"{device['clocks']['3']['pad']}_PAD",
+            f"{device['enables']['1']['pad']}_PAD",
+        })
 
         goe_pads = []
         for goe_name, goe_mux in device['goe_muxes'].items():

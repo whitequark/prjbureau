@@ -77,8 +77,8 @@
 <td align='right' height='18'>34166</td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34166' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34167 (CONFIG.jtag_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34167'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34168 (CONFIG.power_down_1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34168'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34169 (CONFIG.power_down_2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34169'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34168 (CONFIG.pd1_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34168'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34169 (CONFIG.pd2_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34169'>C</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34170' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34171' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34172' style='text-decoration:none'>?</abbr></td>
@@ -153,15 +153,15 @@
 <tr><td align='right' height='18'>c2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>c3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
-<p>Fuse combinations for option "power_down_1":</p><table>
+<p>Fuse combinations for option "pd1_pin_func":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34168'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34168</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>pd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
-<p>Fuse combinations for option "power_down_2":</p><table>
+<p>Fuse combinations for option "pd2_pin_func":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34169'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34169</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>pd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "tdi_pull_up":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34152'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34152</span></div></th></tr>
@@ -178,12 +178,22 @@
 <tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
+<p>Fuse combinations for option "r_pad_schmitt_trigger":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34156'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34156</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
 <p>Fuse combinations for option "r_pad_term":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34163'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34163</span></div></th><th width='21'><a name='L34164'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34164</span></div></th></tr>
 <tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 <tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "c1_pad_schmitt_trigger":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34153'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34153</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "c1_pad_term":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34157'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34157</span></div></th><th width='21'><a name='L34158'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34158</span></div></th></tr>
@@ -192,6 +202,11 @@
 <tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
+<p>Fuse combinations for option "c2_pad_schmitt_trigger":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34154'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34154</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
 <p>Fuse combinations for option "c2_pad_term":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34159'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34159</span></div></th><th width='21'><a name='L34160'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34160</span></div></th></tr>
 <tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
@@ -199,32 +214,17 @@
 <tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
+<p>Fuse combinations for option "e1_pad_schmitt_trigger":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34155'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34155</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
 <p>Fuse combinations for option "e1_pad_term":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34161'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34161</span></div></th><th width='21'><a name='L34162'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34162</span></div></th></tr>
 <tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 <tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "r_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34156'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34156</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "c1_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34153'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34153</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "c2_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34154'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34154</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "e1_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34155'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34155</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <h2>User Signature Bitmap</h2>
 <p>Device uses 16 (known) fuses within range 34174..34190 for user signature.</p>

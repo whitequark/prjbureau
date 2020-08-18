@@ -17,7 +17,7 @@
         16720,
         16750
       ],
-      "device": [
+      "config": [
         16750,
         16786
       ],
@@ -166,27 +166,27 @@
           "UIM14_P": 28,
           "UIM14_N": 29,
           "UIM38_P": 52,
-          "UIM16_P": 31,
-          "UIM76_P": 91,
-          "UIM36_P": 51,
           "UIM56_P": 71,
+          "UIM76_P": 91,
+          "UIM16_P": 31,
+          "UIM36_P": 51,
           "UIM18_P": 32,
-          "UIM58_P": 72,
           "UIM78_P": 92,
-          "UIM20_P": 35,
+          "UIM58_P": 72,
           "UIM80_P": 95,
+          "UIM20_P": 35,
           "UIM60_P": 75,
           "UIM40_P": 55,
           "UIM38_N": 53,
-          "UIM16_N": 30,
-          "UIM76_N": 90,
-          "UIM36_N": 50,
           "UIM56_N": 70,
+          "UIM76_N": 90,
+          "UIM16_N": 30,
+          "UIM36_N": 50,
           "UIM18_N": 33,
-          "UIM58_N": 73,
           "UIM78_N": 93,
-          "UIM20_N": 34,
+          "UIM58_N": 73,
           "UIM80_N": 94,
+          "UIM20_N": 34,
           "UIM60_N": 74,
           "UIM40_N": 54
         }
@@ -326,27 +326,27 @@
           "UIM13_P": 28,
           "UIM13_N": 29,
           "UIM37_P": 52,
-          "UIM15_P": 31,
-          "UIM75_P": 91,
-          "UIM35_P": 51,
           "UIM55_P": 71,
+          "UIM75_P": 91,
+          "UIM15_P": 31,
+          "UIM35_P": 51,
           "UIM17_P": 32,
-          "UIM57_P": 72,
           "UIM77_P": 92,
-          "UIM19_P": 35,
+          "UIM57_P": 72,
           "UIM79_P": 95,
+          "UIM19_P": 35,
           "UIM59_P": 75,
           "UIM39_P": 55,
           "UIM37_N": 53,
-          "UIM15_N": 30,
-          "UIM75_N": 90,
-          "UIM35_N": 50,
           "UIM55_N": 70,
+          "UIM75_N": 90,
+          "UIM15_N": 30,
+          "UIM35_N": 50,
           "UIM17_N": 33,
-          "UIM57_N": 73,
           "UIM77_N": 93,
-          "UIM19_N": 34,
+          "UIM57_N": 73,
           "UIM79_N": 94,
+          "UIM19_N": 34,
           "UIM59_N": 74,
           "UIM39_N": 54
         }
@@ -8497,11 +8497,11 @@
         ],
         "values": {
           "GND1": 31,
-          "C2_PAD": 15,
           "MC17_FB": 27,
+          "C2_PAD": 15,
           "M9_PAD": 30,
-          "M12_PAD": 29,
-          "MC18_FB": 23
+          "MC18_FB": 23,
+          "M12_PAD": 29
         }
       },
       "UIM77": {
@@ -8514,8 +8514,8 @@
         ],
         "values": {
           "GND1": 31,
-          "C2_PAD": 15,
           "MC17_FB": 27,
+          "C2_PAD": 15,
           "M9_PAD": 30,
           "M12_PAD": 29,
           "MC18_FB": 23
@@ -8531,8 +8531,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC3_FB": 29,
           "MC17_FB": 27,
+          "MC3_FB": 29,
           "M26_PAD": 23,
           "M11_PAD": 30,
           "GND0": 15
@@ -8548,10 +8548,10 @@
         ],
         "values": {
           "GND1": 31,
-          "MC3_FB": 29,
           "MC17_FB": 27,
-          "M11_PAD": 30,
+          "MC3_FB": 29,
           "M26_PAD": 23,
+          "M11_PAD": 30,
           "GND0": 15
         }
       },
@@ -8704,8 +8704,8 @@
           "MC1_FB": 30,
           "M25_PAD": 27,
           "M28_PAD": 23,
-          "MC2_FB": 29,
-          "MC20_FB": 15
+          "MC20_FB": 15,
+          "MC2_FB": 29
         }
       },
       "UIM65": {
@@ -8721,8 +8721,8 @@
           "MC1_FB": 30,
           "M25_PAD": 27,
           "M28_PAD": 23,
-          "MC2_FB": 29,
-          "MC20_FB": 15
+          "MC20_FB": 15,
+          "MC2_FB": 29
         }
       },
       "UIM64": {
@@ -8839,9 +8839,9 @@
           "GND1": 31,
           "MC21_FB": 27,
           "M13_PAD": 30,
-          "R_PAD": 15,
           "MC22_FB": 23,
-          "M16_PAD": 29
+          "M16_PAD": 29,
+          "R_PAD": 15
         }
       },
       "UIM57": {
@@ -8857,8 +8857,8 @@
           "MC21_FB": 27,
           "M13_PAD": 30,
           "MC22_FB": 23,
-          "M16_PAD": 29,
-          "R_PAD": 15
+          "R_PAD": 15,
+          "M16_PAD": 29
         }
       },
       "UIM56": {
@@ -8871,8 +8871,8 @@
         ],
         "values": {
           "GND1": 31,
-          "M15_PAD": 30,
           "MC21_FB": 27,
+          "M15_PAD": 30,
           "MC7_FB": 29,
           "M30_PAD": 23,
           "GND0": 15
@@ -8888,8 +8888,8 @@
         ],
         "values": {
           "GND1": 31,
-          "M15_PAD": 30,
           "MC21_FB": 27,
+          "M15_PAD": 30,
           "MC7_FB": 29,
           "M30_PAD": 23,
           "GND0": 15
@@ -8975,8 +8975,8 @@
           "GND1": 31,
           "M14_PAD": 29,
           "M30_PAD": 27,
-          "MC23_FB": 23,
           "MC5_FB": 30,
+          "MC23_FB": 23,
           "GND0": 15
         }
       },
@@ -8992,8 +8992,8 @@
           "GND1": 31,
           "M14_PAD": 29,
           "M30_PAD": 27,
-          "MC23_FB": 23,
           "MC5_FB": 30,
+          "MC23_FB": 23,
           "GND0": 15
         }
       },
@@ -9143,8 +9143,8 @@
         ],
         "values": {
           "GND1": 31,
-          "E1_PAD": 15,
           "MC28_FB": 30,
+          "E1_PAD": 15,
           "MC25_FB": 29,
           "MC10_FB": 27,
           "GND0": 23
@@ -9160,8 +9160,8 @@
         ],
         "values": {
           "GND1": 31,
-          "E1_PAD": 15,
           "MC28_FB": 30,
+          "E1_PAD": 15,
           "MC25_FB": 29,
           "MC10_FB": 27,
           "GND0": 23
@@ -9177,8 +9177,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC12_FB": 27,
           "E1_PAD": 15,
+          "MC12_FB": 27,
           "M20_PAD": 30,
           "M17_PAD": 29,
           "MC11_FB": 23
@@ -9194,8 +9194,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC12_FB": 27,
           "E1_PAD": 15,
+          "MC12_FB": 27,
           "M20_PAD": 30,
           "M17_PAD": 29,
           "MC11_FB": 23
@@ -9211,8 +9211,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC26_FB": 29,
           "MC12_FB": 27,
+          "MC26_FB": 29,
           "M18_PAD": 30,
           "M3_PAD": 23,
           "GND0": 15
@@ -9228,8 +9228,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC26_FB": 29,
           "MC12_FB": 27,
+          "MC26_FB": 29,
           "M18_PAD": 30,
           "M3_PAD": 23,
           "GND0": 15
@@ -9280,9 +9280,9 @@
         "values": {
           "GND1": 31,
           "MC11_FB": 27,
+          "M19_PAD": 30,
           "MC25_FB": 29,
           "M1_PAD": 23,
-          "M19_PAD": 30,
           "GND0": 15
         }
       },
@@ -9297,9 +9297,9 @@
         "values": {
           "GND1": 31,
           "MC11_FB": 27,
+          "M19_PAD": 30,
           "MC25_FB": 29,
           "M1_PAD": 23,
-          "M19_PAD": 30,
           "GND0": 15
         }
       },
@@ -9483,8 +9483,8 @@
         ],
         "values": {
           "GND1": 31,
-          "C1_PAD": 15,
           "MC32_FB": 30,
+          "C1_PAD": 15,
           "MC29_FB": 29,
           "MC14_FB": 27,
           "GND0": 23
@@ -9500,8 +9500,8 @@
         ],
         "values": {
           "GND1": 31,
-          "C1_PAD": 15,
           "MC32_FB": 30,
+          "C1_PAD": 15,
           "MC29_FB": 29,
           "MC14_FB": 27,
           "GND0": 23
@@ -9517,8 +9517,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC16_FB": 27,
           "C1_PAD": 15,
+          "MC16_FB": 27,
           "M24_PAD": 30,
           "M21_PAD": 29,
           "MC15_FB": 23
@@ -9534,8 +9534,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC16_FB": 27,
           "C1_PAD": 15,
+          "MC16_FB": 27,
           "M24_PAD": 30,
           "M21_PAD": 29,
           "MC15_FB": 23
@@ -9621,8 +9621,8 @@
           "GND1": 31,
           "MC15_FB": 27,
           "MC29_FB": 29,
-          "M23_PAD": 30,
           "M5_PAD": 23,
+          "M23_PAD": 30,
           "GND0": 15
         }
       },
@@ -9638,8 +9638,8 @@
           "GND1": 31,
           "MC15_FB": 27,
           "MC29_FB": 29,
-          "M23_PAD": 30,
           "M5_PAD": 23,
+          "M23_PAD": 30,
           "GND0": 15
         }
       },
@@ -9655,8 +9655,8 @@
           "GND1": 31,
           "M7_PAD": 27,
           "M23_PAD": 29,
-          "MC32_FB": 30,
           "MC14_FB": 23,
+          "MC32_FB": 30,
           "GND0": 15
         }
       },
@@ -9672,8 +9672,8 @@
           "GND1": 31,
           "M7_PAD": 27,
           "M23_PAD": 29,
-          "MC32_FB": 30,
           "MC14_FB": 23,
+          "MC32_FB": 30,
           "GND0": 15
         }
       },
@@ -9842,8 +9842,8 @@
         ],
         "values": {
           "M18_PAD": 30,
-          "E1_PAD": 15,
           "M2_PAD": 29,
+          "E1_PAD": 15,
           "MC10_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -9875,8 +9875,8 @@
           16739
         ],
         "values": {
-          "M29_PAD": 27,
           "M13_PAD": 30,
+          "M29_PAD": 27,
           "MC8_FB": 29,
           "MC24_FB": 23,
           "GND1": 31,
@@ -9892,9 +9892,9 @@
           16744
         ],
         "values": {
-          "M27_PAD": 29,
           "C2_PAD": 15,
           "M11_PAD": 30,
+          "M27_PAD": 29,
           "MC19_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -9909,8 +9909,8 @@
           16749
         ],
         "values": {
-          "M28_PAD": 23,
           "M12_PAD": 29,
+          "M28_PAD": 23,
           "MC1_FB": 30,
           "MC17_FB": 27,
           "GND1": 31,
@@ -9918,268 +9918,269 @@
         }
       }
     },
-    "global": {
-      "config": {
-        "gclr_invert": {
-          "fuses": [
-            16760
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            16761
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            16764
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            16767
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "goe1_invert": {
-          "fuses": [
-            16759
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe2_invert": {
-          "fuses": [
-            16758
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe3_invert": {
-          "fuses": [
-            16757
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe4_invert": {
-          "fuses": [
-            16756
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe5_invert": {
-          "fuses": [
-            16755
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe6_invert": {
-          "fuses": [
-            16754
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_mux": {
-          "fuses": [
-            16762,
-            16763
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk2_mux": {
-          "fuses": [
-            16765,
-            16766
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk3_mux": {
-          "fuses": [
-            16768,
-            16769
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16751
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_1": {
-          "fuses": [
-            16752
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_2": {
-          "fuses": [
-            16753
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_itd": {
-          "fuses": [
-            16770
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk2_itd": {
-          "fuses": [
-            16771
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk3_itd": {
-          "fuses": [
-            16772
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tdi_pull_up": {
-          "fuses": [
-            16774
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tms_pull_up": {
-          "fuses": [
-            16773
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_reset": {
-          "fuses": [
-            16775
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "jtag_pin_func": {
-          "fuses": [
-            16783
-          ],
-          "values": {
-            "user": 0,
-            "jtag": 1
-          }
+    "config": {
+      "gclr_invert": {
+        "fuses": [
+          16760
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
         }
       },
-      "user": [
-        {
-          "fuses": [
-            16786,
-            16787,
-            16788,
-            16789,
-            16790,
-            16791,
-            16792,
-            16793
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
-        },
-        {
-          "fuses": [
-            16794,
-            16795,
-            16796,
-            16797,
-            16798,
-            16799,
-            16800,
-            16801
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
+      "gclk1_invert": {
+        "fuses": [
+          16761
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
         }
-      ]
+      },
+      "gclk2_invert": {
+        "fuses": [
+          16764
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "gclk3_invert": {
+        "fuses": [
+          16767
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "goe1_invert": {
+        "fuses": [
+          16759
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe2_invert": {
+        "fuses": [
+          16758
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe3_invert": {
+        "fuses": [
+          16757
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe4_invert": {
+        "fuses": [
+          16756
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe5_invert": {
+        "fuses": [
+          16755
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe6_invert": {
+        "fuses": [
+          16754
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk1_mux": {
+        "fuses": [
+          16762,
+          16763
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk2_mux": {
+        "fuses": [
+          16765,
+          16766
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk3_mux": {
+        "fuses": [
+          16768,
+          16769
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "bus_keeper": {
+        "fuses": [
+          16751
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "pd1_pin_func": {
+        "fuses": [
+          16752
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "pd2_pin_func": {
+        "fuses": [
+          16753
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "gclk1_itd": {
+        "fuses": [
+          16770
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk2_itd": {
+        "fuses": [
+          16771
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk3_itd": {
+        "fuses": [
+          16772
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tdi_pull_up": {
+        "fuses": [
+          16774
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tms_pull_up": {
+        "fuses": [
+          16773
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "power_reset": {
+        "fuses": [
+          16775
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "jtag_pin_func": {
+        "fuses": [
+          16783
+        ],
+        "values": {
+          "user": 0,
+          "jtag": 1
+        }
+      }
+    },
+    "user": [
+      {
+        "fuses": [
+          16786,
+          16787,
+          16788,
+          16789,
+          16790,
+          16791,
+          16792,
+          16793
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      },
+      {
+        "fuses": [
+          16794,
+          16795,
+          16796,
+          16797,
+          16798,
+          16799,
+          16800,
+          16801
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      }
+    ],
+    "clear": {
+      "pad": "R"
     },
     "clocks": {
       "1": {
@@ -10200,8 +10201,14 @@
         "pad": "C2"
       }
     },
-    "clear": {
-      "pad": "R"
+    "specials": {
+      "TDI": "MC4",
+      "PD1": "MC7",
+      "TMS": "MC9",
+      "GCLK3": "MC17",
+      "TDO": "MC20",
+      "TCK": "MC25",
+      "PD2": "MC31"
     },
     "pins": {
       "TQFP44": {
@@ -10300,7 +10307,7 @@
         16720,
         16750
       ],
-      "device": [
+      "config": [
         16750,
         16790
       ],
@@ -10449,27 +10456,27 @@
           "UIM14_P": 28,
           "UIM14_N": 29,
           "UIM38_P": 52,
-          "UIM16_P": 31,
-          "UIM76_P": 91,
-          "UIM36_P": 51,
           "UIM56_P": 71,
+          "UIM76_P": 91,
+          "UIM16_P": 31,
+          "UIM36_P": 51,
           "UIM18_P": 32,
-          "UIM58_P": 72,
           "UIM78_P": 92,
-          "UIM20_P": 35,
+          "UIM58_P": 72,
           "UIM80_P": 95,
+          "UIM20_P": 35,
           "UIM60_P": 75,
           "UIM40_P": 55,
           "UIM38_N": 53,
-          "UIM16_N": 30,
-          "UIM76_N": 90,
-          "UIM36_N": 50,
           "UIM56_N": 70,
+          "UIM76_N": 90,
+          "UIM16_N": 30,
+          "UIM36_N": 50,
           "UIM18_N": 33,
-          "UIM58_N": 73,
           "UIM78_N": 93,
-          "UIM20_N": 34,
+          "UIM58_N": 73,
           "UIM80_N": 94,
+          "UIM20_N": 34,
           "UIM60_N": 74,
           "UIM40_N": 54
         }
@@ -10609,27 +10616,27 @@
           "UIM13_P": 28,
           "UIM13_N": 29,
           "UIM37_P": 52,
-          "UIM15_P": 31,
-          "UIM75_P": 91,
-          "UIM35_P": 51,
           "UIM55_P": 71,
+          "UIM75_P": 91,
+          "UIM15_P": 31,
+          "UIM35_P": 51,
           "UIM17_P": 32,
-          "UIM57_P": 72,
           "UIM77_P": 92,
-          "UIM19_P": 35,
+          "UIM57_P": 72,
           "UIM79_P": 95,
+          "UIM19_P": 35,
           "UIM59_P": 75,
           "UIM39_P": 55,
           "UIM37_N": 53,
-          "UIM15_N": 30,
-          "UIM75_N": 90,
-          "UIM35_N": 50,
           "UIM55_N": 70,
+          "UIM75_N": 90,
+          "UIM15_N": 30,
+          "UIM35_N": 50,
           "UIM17_N": 33,
-          "UIM57_N": 73,
           "UIM77_N": 93,
-          "UIM19_N": 34,
+          "UIM57_N": 73,
           "UIM79_N": 94,
+          "UIM19_N": 34,
           "UIM59_N": 74,
           "UIM39_N": 54
         }
@@ -19068,11 +19075,11 @@
         ],
         "values": {
           "GND1": 31,
-          "C2_PAD": 15,
           "MC17_FB": 27,
+          "C2_PAD": 15,
           "M9_PAD": 30,
-          "M12_PAD": 29,
-          "MC18_FB": 23
+          "MC18_FB": 23,
+          "M12_PAD": 29
         }
       },
       "UIM77": {
@@ -19085,8 +19092,8 @@
         ],
         "values": {
           "GND1": 31,
-          "C2_PAD": 15,
           "MC17_FB": 27,
+          "C2_PAD": 15,
           "M9_PAD": 30,
           "M12_PAD": 29,
           "MC18_FB": 23
@@ -19102,8 +19109,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC3_FB": 29,
           "MC17_FB": 27,
+          "MC3_FB": 29,
           "M26_PAD": 23,
           "M11_PAD": 30,
           "GND0": 15
@@ -19119,8 +19126,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC3_FB": 29,
           "MC17_FB": 27,
+          "MC3_FB": 29,
           "M26_PAD": 23,
           "M11_PAD": 30,
           "GND0": 15
@@ -19275,8 +19282,8 @@
           "MC1_FB": 30,
           "M25_PAD": 27,
           "M28_PAD": 23,
-          "MC2_FB": 29,
-          "MC20_FB": 15
+          "MC20_FB": 15,
+          "MC2_FB": 29
         }
       },
       "UIM65": {
@@ -19292,8 +19299,8 @@
           "MC1_FB": 30,
           "M25_PAD": 27,
           "M28_PAD": 23,
-          "MC2_FB": 29,
-          "MC20_FB": 15
+          "MC20_FB": 15,
+          "MC2_FB": 29
         }
       },
       "UIM64": {
@@ -19410,8 +19417,8 @@
           "GND1": 31,
           "MC21_FB": 27,
           "M13_PAD": 30,
-          "R_PAD": 15,
           "M16_PAD": 29,
+          "R_PAD": 15,
           "MC22_FB": 23
         }
       },
@@ -19427,9 +19434,9 @@
           "GND1": 31,
           "MC21_FB": 27,
           "M13_PAD": 30,
-          "R_PAD": 15,
+          "M16_PAD": 29,
           "MC22_FB": 23,
-          "M16_PAD": 29
+          "R_PAD": 15
         }
       },
       "UIM56": {
@@ -19442,8 +19449,8 @@
         ],
         "values": {
           "GND1": 31,
-          "M15_PAD": 30,
           "MC21_FB": 27,
+          "M15_PAD": 30,
           "MC7_FB": 29,
           "M30_PAD": 23,
           "GND0": 15
@@ -19459,8 +19466,8 @@
         ],
         "values": {
           "GND1": 31,
-          "M15_PAD": 30,
           "MC21_FB": 27,
+          "M15_PAD": 30,
           "MC7_FB": 29,
           "M30_PAD": 23,
           "GND0": 15
@@ -19546,8 +19553,8 @@
           "GND1": 31,
           "M14_PAD": 29,
           "M30_PAD": 27,
-          "MC23_FB": 23,
           "MC5_FB": 30,
+          "MC23_FB": 23,
           "GND0": 15
         }
       },
@@ -19563,8 +19570,8 @@
           "GND1": 31,
           "M14_PAD": 29,
           "M30_PAD": 27,
-          "MC23_FB": 23,
           "MC5_FB": 30,
+          "MC23_FB": 23,
           "GND0": 15
         }
       },
@@ -19714,8 +19721,8 @@
         ],
         "values": {
           "GND1": 31,
-          "E1_PAD": 15,
           "MC28_FB": 30,
+          "E1_PAD": 15,
           "MC25_FB": 29,
           "MC10_FB": 27,
           "GND0": 23
@@ -19731,8 +19738,8 @@
         ],
         "values": {
           "GND1": 31,
-          "E1_PAD": 15,
           "MC28_FB": 30,
+          "E1_PAD": 15,
           "MC25_FB": 29,
           "MC10_FB": 27,
           "GND0": 23
@@ -19748,8 +19755,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC12_FB": 27,
           "E1_PAD": 15,
+          "MC12_FB": 27,
           "M20_PAD": 30,
           "M17_PAD": 29,
           "MC11_FB": 23
@@ -19765,8 +19772,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC12_FB": 27,
           "E1_PAD": 15,
+          "MC12_FB": 27,
           "M20_PAD": 30,
           "M17_PAD": 29,
           "MC11_FB": 23
@@ -19782,8 +19789,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC26_FB": 29,
           "MC12_FB": 27,
+          "MC26_FB": 29,
           "M18_PAD": 30,
           "M3_PAD": 23,
           "GND0": 15
@@ -19799,8 +19806,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC26_FB": 29,
           "MC12_FB": 27,
+          "MC26_FB": 29,
           "M18_PAD": 30,
           "M3_PAD": 23,
           "GND0": 15
@@ -19851,9 +19858,9 @@
         "values": {
           "GND1": 31,
           "MC11_FB": 27,
+          "M19_PAD": 30,
           "MC25_FB": 29,
           "M1_PAD": 23,
-          "M19_PAD": 30,
           "GND0": 15
         }
       },
@@ -19868,9 +19875,9 @@
         "values": {
           "GND1": 31,
           "MC11_FB": 27,
+          "M19_PAD": 30,
           "MC25_FB": 29,
           "M1_PAD": 23,
-          "M19_PAD": 30,
           "GND0": 15
         }
       },
@@ -20054,8 +20061,8 @@
         ],
         "values": {
           "GND1": 31,
-          "C1_PAD": 15,
           "MC32_FB": 30,
+          "C1_PAD": 15,
           "MC29_FB": 29,
           "MC14_FB": 27,
           "GND0": 23
@@ -20071,10 +20078,10 @@
         ],
         "values": {
           "GND1": 31,
-          "C1_PAD": 15,
           "MC32_FB": 30,
-          "MC29_FB": 29,
+          "C1_PAD": 15,
           "MC14_FB": 27,
+          "MC29_FB": 29,
           "GND0": 23
         }
       },
@@ -20088,8 +20095,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC16_FB": 27,
           "C1_PAD": 15,
+          "MC16_FB": 27,
           "M24_PAD": 30,
           "M21_PAD": 29,
           "MC15_FB": 23
@@ -20105,8 +20112,8 @@
         ],
         "values": {
           "GND1": 31,
-          "MC16_FB": 27,
           "C1_PAD": 15,
+          "MC16_FB": 27,
           "M24_PAD": 30,
           "M21_PAD": 29,
           "MC15_FB": 23
@@ -20192,8 +20199,8 @@
           "GND1": 31,
           "MC15_FB": 27,
           "MC29_FB": 29,
-          "M23_PAD": 30,
           "M5_PAD": 23,
+          "M23_PAD": 30,
           "GND0": 15
         }
       },
@@ -20209,8 +20216,8 @@
           "GND1": 31,
           "MC15_FB": 27,
           "MC29_FB": 29,
-          "M23_PAD": 30,
           "M5_PAD": 23,
+          "M23_PAD": 30,
           "GND0": 15
         }
       },
@@ -20226,8 +20233,8 @@
           "GND1": 31,
           "M7_PAD": 27,
           "M23_PAD": 29,
-          "MC32_FB": 30,
           "MC14_FB": 23,
+          "MC32_FB": 30,
           "GND0": 15
         }
       },
@@ -20243,8 +20250,8 @@
           "GND1": 31,
           "M7_PAD": 27,
           "M23_PAD": 29,
-          "MC32_FB": 30,
           "MC14_FB": 23,
+          "MC32_FB": 30,
           "GND0": 15
         }
       },
@@ -20413,8 +20420,8 @@
         ],
         "values": {
           "M18_PAD": 30,
-          "E1_PAD": 15,
           "M2_PAD": 29,
+          "E1_PAD": 15,
           "MC10_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -20446,8 +20453,8 @@
           16739
         ],
         "values": {
-          "M29_PAD": 27,
           "M13_PAD": 30,
+          "M29_PAD": 27,
           "MC8_FB": 29,
           "MC24_FB": 23,
           "GND1": 31,
@@ -20463,9 +20470,9 @@
           16744
         ],
         "values": {
-          "M27_PAD": 29,
           "C2_PAD": 15,
           "M11_PAD": 30,
+          "M27_PAD": 29,
           "MC19_FB": 27,
           "GND1": 31,
           "GND0": 23
@@ -20480,8 +20487,8 @@
           16749
         ],
         "values": {
-          "M28_PAD": 23,
           "M12_PAD": 29,
+          "M28_PAD": 23,
           "MC1_FB": 30,
           "MC17_FB": 27,
           "GND1": 31,
@@ -20489,307 +20496,308 @@
         }
       }
     },
-    "global": {
-      "config": {
-        "gclr_invert": {
-          "fuses": [
-            16757
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            16758
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            16761
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            16764
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "goe1_invert": {
-          "fuses": [
-            16756
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe2_invert": {
-          "fuses": [
-            16755
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe3_invert": {
-          "fuses": [
-            16754
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe4_invert": {
-          "fuses": [
-            16753
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe5_invert": {
-          "fuses": [
-            16752
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe6_invert": {
-          "fuses": [
-            16751
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_mux": {
-          "fuses": [
-            16759,
-            16760
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk2_mux": {
-          "fuses": [
-            16762,
-            16763
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk3_mux": {
-          "fuses": [
-            16765,
-            16766
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "power_down_1": {
-          "fuses": [
-            16784
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_2": {
-          "fuses": [
-            16785
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tdi_pull_up": {
-          "fuses": [
-            16768
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tms_pull_up": {
-          "fuses": [
-            16767
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "jtag_pin_func": {
-          "fuses": [
-            16783
-          ],
-          "values": {
-            "user": 0,
-            "jtag": 1
-          }
-        },
-        "r_pad_term": {
-          "fuses": [
-            16779,
-            16780
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "c1_pad_term": {
-          "fuses": [
-            16773,
-            16774
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "c2_pad_term": {
-          "fuses": [
-            16775,
-            16776
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "e1_pad_term": {
-          "fuses": [
-            16777,
-            16778
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "r_pad_schmitt_trigger": {
-          "fuses": [
-            16772
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "c1_pad_schmitt_trigger": {
-          "fuses": [
-            16769
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "c2_pad_schmitt_trigger": {
-          "fuses": [
-            16770
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "e1_pad_schmitt_trigger": {
-          "fuses": [
-            16771
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
+    "config": {
+      "gclr_invert": {
+        "fuses": [
+          16757
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
         }
       },
-      "user": [
-        {
-          "fuses": [
-            16790,
-            16791,
-            16792,
-            16793,
-            16794,
-            16795,
-            16796,
-            16797
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
-        },
-        {
-          "fuses": [
-            16798,
-            16799,
-            16800,
-            16801,
-            16802,
-            16803,
-            16804,
-            16805
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
+      "gclk1_invert": {
+        "fuses": [
+          16758
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
         }
-      ]
+      },
+      "gclk2_invert": {
+        "fuses": [
+          16761
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "gclk3_invert": {
+        "fuses": [
+          16764
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "goe1_invert": {
+        "fuses": [
+          16756
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe2_invert": {
+        "fuses": [
+          16755
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe3_invert": {
+        "fuses": [
+          16754
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe4_invert": {
+        "fuses": [
+          16753
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe5_invert": {
+        "fuses": [
+          16752
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe6_invert": {
+        "fuses": [
+          16751
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk1_mux": {
+        "fuses": [
+          16759,
+          16760
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk2_mux": {
+        "fuses": [
+          16762,
+          16763
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk3_mux": {
+        "fuses": [
+          16765,
+          16766
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "pd1_pin_func": {
+        "fuses": [
+          16784
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "pd2_pin_func": {
+        "fuses": [
+          16785
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "tdi_pull_up": {
+        "fuses": [
+          16768
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tms_pull_up": {
+        "fuses": [
+          16767
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "jtag_pin_func": {
+        "fuses": [
+          16783
+        ],
+        "values": {
+          "user": 0,
+          "jtag": 1
+        }
+      },
+      "r_pad_schmitt_trigger": {
+        "fuses": [
+          16772
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "r_pad_term": {
+        "fuses": [
+          16779,
+          16780
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "c1_pad_schmitt_trigger": {
+        "fuses": [
+          16769
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "c1_pad_term": {
+        "fuses": [
+          16773,
+          16774
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "c2_pad_schmitt_trigger": {
+        "fuses": [
+          16770
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "c2_pad_term": {
+        "fuses": [
+          16775,
+          16776
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "e1_pad_schmitt_trigger": {
+        "fuses": [
+          16771
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "e1_pad_term": {
+        "fuses": [
+          16777,
+          16778
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      }
+    },
+    "user": [
+      {
+        "fuses": [
+          16790,
+          16791,
+          16792,
+          16793,
+          16794,
+          16795,
+          16796,
+          16797
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      },
+      {
+        "fuses": [
+          16798,
+          16799,
+          16800,
+          16801,
+          16802,
+          16803,
+          16804,
+          16805
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      }
+    ],
+    "clear": {
+      "pad": "R"
     },
     "clocks": {
       "1": {
@@ -20810,8 +20818,14 @@
         "pad": "C2"
       }
     },
-    "clear": {
-      "pad": "R"
+    "specials": {
+      "TDI": "MC4",
+      "PD1": "MC7",
+      "TMS": "MC9",
+      "GCLK3": "MC17",
+      "TDO": "MC20",
+      "TCK": "MC25",
+      "PD2": "MC31"
     },
     "pins": {
       "TQFP44": {
@@ -20910,7 +20924,7 @@
         34080,
         34134
       ],
-      "device": [
+      "config": [
         34134,
         34170
       ],
@@ -21058,30 +21072,30 @@
           "UIM65_N": 81,
           "UIM25_P": 40,
           "UIM25_N": 41,
-          "UIM33_P": 48,
-          "UIM73_P": 88,
-          "UIM29_P": 44,
-          "UIM37_P": 52,
-          "UIM69_P": 84,
-          "UIM72_P": 86,
-          "UIM32_P": 46,
           "UIM36_P": 50,
-          "UIM40_P": 54,
+          "UIM33_P": 48,
           "UIM76_P": 90,
-          "UIM77_P": 92,
+          "UIM73_P": 88,
+          "UIM69_P": 84,
+          "UIM32_P": 46,
+          "UIM72_P": 86,
           "UIM80_P": 94,
-          "UIM33_N": 49,
-          "UIM73_N": 89,
-          "UIM29_N": 45,
-          "UIM37_N": 53,
-          "UIM69_N": 85,
-          "UIM72_N": 87,
-          "UIM32_N": 47,
+          "UIM29_P": 44,
+          "UIM40_P": 54,
+          "UIM37_P": 52,
+          "UIM77_P": 92,
           "UIM36_N": 51,
-          "UIM40_N": 55,
+          "UIM33_N": 49,
           "UIM76_N": 91,
-          "UIM77_N": 93,
-          "UIM80_N": 95
+          "UIM73_N": 89,
+          "UIM69_N": 85,
+          "UIM32_N": 47,
+          "UIM72_N": 87,
+          "UIM80_N": 95,
+          "UIM29_N": 45,
+          "UIM40_N": 55,
+          "UIM37_N": 53,
+          "UIM77_N": 93
         }
       },
       "B": {
@@ -21218,30 +21232,30 @@
           "UIM145_N": 81,
           "UIM105_P": 40,
           "UIM105_N": 41,
-          "UIM113_P": 48,
-          "UIM153_P": 88,
-          "UIM109_P": 44,
-          "UIM117_P": 52,
-          "UIM149_P": 84,
-          "UIM152_P": 86,
-          "UIM112_P": 46,
           "UIM116_P": 50,
-          "UIM120_P": 54,
+          "UIM113_P": 48,
           "UIM156_P": 90,
-          "UIM157_P": 92,
+          "UIM153_P": 88,
+          "UIM149_P": 84,
+          "UIM112_P": 46,
+          "UIM152_P": 86,
           "UIM160_P": 94,
-          "UIM113_N": 49,
-          "UIM153_N": 89,
-          "UIM109_N": 45,
-          "UIM117_N": 53,
-          "UIM149_N": 85,
-          "UIM152_N": 87,
-          "UIM112_N": 47,
+          "UIM109_P": 44,
+          "UIM120_P": 54,
+          "UIM117_P": 52,
+          "UIM157_P": 92,
           "UIM116_N": 51,
-          "UIM120_N": 55,
+          "UIM113_N": 49,
           "UIM156_N": 91,
-          "UIM157_N": 93,
-          "UIM160_N": 95
+          "UIM153_N": 89,
+          "UIM149_N": 85,
+          "UIM112_N": 47,
+          "UIM152_N": 87,
+          "UIM160_N": 95,
+          "UIM109_N": 45,
+          "UIM120_N": 55,
+          "UIM117_N": 53,
+          "UIM157_N": 93
         }
       },
       "C": {
@@ -21378,30 +21392,30 @@
           "UIM147_N": 81,
           "UIM107_P": 40,
           "UIM107_N": 41,
-          "UIM115_P": 48,
-          "UIM155_P": 88,
-          "UIM111_P": 44,
-          "UIM119_P": 52,
-          "UIM151_P": 84,
-          "UIM150_P": 86,
-          "UIM110_P": 46,
           "UIM114_P": 50,
-          "UIM118_P": 54,
+          "UIM115_P": 48,
           "UIM154_P": 90,
-          "UIM159_P": 92,
+          "UIM155_P": 88,
+          "UIM151_P": 84,
+          "UIM110_P": 46,
+          "UIM150_P": 86,
           "UIM158_P": 94,
-          "UIM115_N": 49,
-          "UIM155_N": 89,
-          "UIM111_N": 45,
-          "UIM119_N": 53,
-          "UIM151_N": 85,
-          "UIM150_N": 87,
-          "UIM110_N": 47,
+          "UIM111_P": 44,
+          "UIM118_P": 54,
+          "UIM119_P": 52,
+          "UIM159_P": 92,
           "UIM114_N": 51,
-          "UIM118_N": 55,
+          "UIM115_N": 49,
           "UIM154_N": 91,
-          "UIM159_N": 93,
-          "UIM158_N": 95
+          "UIM155_N": 89,
+          "UIM151_N": 85,
+          "UIM110_N": 47,
+          "UIM150_N": 87,
+          "UIM158_N": 95,
+          "UIM111_N": 45,
+          "UIM118_N": 55,
+          "UIM119_N": 53,
+          "UIM159_N": 93
         }
       },
       "D": {
@@ -21538,30 +21552,30 @@
           "UIM67_N": 81,
           "UIM27_P": 40,
           "UIM27_N": 41,
-          "UIM35_P": 48,
-          "UIM75_P": 88,
-          "UIM31_P": 44,
-          "UIM39_P": 52,
-          "UIM71_P": 84,
-          "UIM70_P": 86,
-          "UIM30_P": 46,
           "UIM34_P": 50,
-          "UIM38_P": 54,
+          "UIM35_P": 48,
           "UIM74_P": 90,
-          "UIM79_P": 92,
+          "UIM75_P": 88,
+          "UIM71_P": 84,
+          "UIM30_P": 46,
+          "UIM70_P": 86,
           "UIM78_P": 94,
-          "UIM35_N": 49,
-          "UIM75_N": 89,
-          "UIM31_N": 45,
-          "UIM39_N": 53,
-          "UIM71_N": 85,
-          "UIM70_N": 87,
-          "UIM30_N": 47,
+          "UIM31_P": 44,
+          "UIM38_P": 54,
+          "UIM39_P": 52,
+          "UIM79_P": 92,
           "UIM34_N": 51,
-          "UIM38_N": 55,
+          "UIM35_N": 49,
           "UIM74_N": 91,
-          "UIM79_N": 93,
-          "UIM78_N": 95
+          "UIM75_N": 89,
+          "UIM71_N": 85,
+          "UIM30_N": 47,
+          "UIM70_N": 87,
+          "UIM78_N": 95,
+          "UIM31_N": 45,
+          "UIM38_N": 55,
+          "UIM39_N": 53,
+          "UIM79_N": 93
         }
       }
     },
@@ -38037,8 +38051,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "M11_PAD": 507,
           "MC51_FB": 255
         }
@@ -38061,8 +38075,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M50_PAD": 507,
           "M39_PAD": 495,
           "MC10_FB": 255
@@ -38087,8 +38101,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "MC51_FB": 255,
           "M11_PAD": 507
         }
@@ -38111,8 +38125,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M39_PAD": 495,
           "M50_PAD": 507,
           "MC10_FB": 255
@@ -38135,11 +38149,11 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
-          "MC51_FB": 255,
           "M31_PAD": 495,
+          "MC51_FB": 255,
           "GND0": 383
         }
       },
@@ -38161,8 +38175,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -38185,8 +38199,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "M31_PAD": 495,
           "MC51_FB": 255,
@@ -38211,8 +38225,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -38259,8 +38273,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -38309,8 +38323,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -38334,11 +38348,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -38359,9 +38373,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M51_PAD": 507,
@@ -38384,11 +38398,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -38409,13 +38423,13 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
-          "M51_PAD": 507,
-          "M52_PAD": 510
+          "M52_PAD": 510,
+          "M51_PAD": 507
         }
       },
       "UIM29": {
@@ -38433,12 +38447,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -38457,8 +38471,8 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
@@ -38483,12 +38497,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -38507,13 +38521,13 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
-          "MC59_FB": 509,
           "M24_PAD": 495,
+          "MC59_FB": 509,
           "MC9_FB": 383,
           "GND0": 255
         }
@@ -38535,8 +38549,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -38557,14 +38571,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
           "M49_PAD": 507,
-          "MC45_FB": 503,
           "MC58_FB": 509,
+          "MC45_FB": 503,
           "GND0": 383
         }
       },
@@ -38585,8 +38599,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -38607,14 +38621,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
+          "MC45_FB": 503,
           "MC58_FB": 509,
           "M49_PAD": 507,
-          "MC45_FB": 503,
           "GND0": 383
         }
       },
@@ -38659,11 +38673,11 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
-          "MC45_FB": 503,
           "MC59_FB": 510,
+          "MC45_FB": 503,
           "MC29_FB": 479,
           "GND0": 383
         }
@@ -38709,8 +38723,8 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
           "MC59_FB": 510,
           "MC45_FB": 503,
@@ -39061,9 +39075,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -39089,8 +39103,8 @@
           "MC7_FB": 509,
           "MC18_FB": 503,
           "M26_PAD": 495,
-          "MC55_FB": 255,
-          "M15_PAD": 507
+          "M15_PAD": 507,
+          "MC55_FB": 255
         }
       },
       "UIM56": {
@@ -39111,9 +39125,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -39135,11 +39149,11 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
-          "M27_PAD": 495,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "MC55_FB": 255,
+          "M27_PAD": 495,
           "GND0": 383
         }
       },
@@ -39160,9 +39174,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -39185,9 +39199,9 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "MC55_FB": 255,
           "M27_PAD": 495,
           "GND0": 383
@@ -39210,9 +39224,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -39234,8 +39248,8 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
           "MC36_FB": 479,
@@ -39259,11 +39273,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -39284,8 +39298,8 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
           "MC36_FB": 479,
@@ -39309,11 +39323,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -39334,11 +39348,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -39359,11 +39373,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -39384,11 +39398,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -39409,11 +39423,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -39433,12 +39447,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -39460,9 +39474,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -39483,12 +39497,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -39510,9 +39524,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -39534,8 +39548,8 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "M16_PAD": 507,
           "R_PAD": 255,
@@ -39557,9 +39571,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
@@ -39584,8 +39598,8 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "R_PAD": 255,
           "M16_PAD": 507,
@@ -39607,9 +39621,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
@@ -39633,12 +39647,12 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
-          "MC20_FB": 503,
           "MC36_FB": 479,
+          "MC20_FB": 503,
           "MC6_FB": 510,
           "GND0": 383
         }
@@ -39659,11 +39673,11 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
-          "MC63_FB": 510,
           "MC41_FB": 503,
+          "MC63_FB": 510,
           "MC25_FB": 479,
           "GND0": 383
         }
@@ -39683,9 +39697,9 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
           "MC20_FB": 503,
           "MC36_FB": 479,
@@ -39709,9 +39723,9 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
           "MC63_FB": 510,
           "MC41_FB": 503,
           "MC25_FB": 479,
@@ -40037,8 +40051,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "M11_PAD": 507,
           "MC51_FB": 255
         }
@@ -40061,8 +40075,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M39_PAD": 495,
           "M50_PAD": 507,
           "MC10_FB": 255
@@ -40087,10 +40101,10 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
-          "M11_PAD": 507,
-          "MC51_FB": 255
+          "MC3_FB": 509,
+          "MC51_FB": 255,
+          "M11_PAD": 507
         }
       },
       "UIM96": {
@@ -40111,10 +40125,10 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
-          "M39_PAD": 495,
+          "MC47_FB": 503,
           "M50_PAD": 507,
+          "M39_PAD": 495,
           "MC10_FB": 255
         }
       },
@@ -40135,11 +40149,11 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
-          "MC51_FB": 255,
           "M31_PAD": 495,
+          "MC51_FB": 255,
           "GND0": 383
         }
       },
@@ -40161,8 +40175,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -40185,8 +40199,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "M31_PAD": 495,
           "MC51_FB": 255,
@@ -40211,8 +40225,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -40259,8 +40273,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -40309,8 +40323,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -40334,11 +40348,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -40359,9 +40373,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M51_PAD": 507,
@@ -40384,11 +40398,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -40409,9 +40423,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M52_PAD": 510,
@@ -40433,12 +40447,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -40457,8 +40471,8 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
@@ -40483,12 +40497,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -40507,14 +40521,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
           "M24_PAD": 495,
-          "MC59_FB": 509,
           "MC9_FB": 383,
+          "MC59_FB": 509,
           "GND0": 255
         }
       },
@@ -40535,8 +40549,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -40557,9 +40571,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
           "M49_PAD": 507,
@@ -40585,8 +40599,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -40607,9 +40621,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
           "M49_PAD": 507,
@@ -40637,8 +40651,8 @@
           "C2_PAD": 255,
           "MC50_FB": 447,
           "MC22_FB": 507,
-          "MC40_FB": 479,
           "MC24_FB": 503,
+          "MC40_FB": 479,
           "MC2_FB": 510,
           "GND0": 383
         }
@@ -40659,8 +40673,8 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
           "MC59_FB": 510,
           "MC45_FB": 503,
@@ -40687,8 +40701,8 @@
           "C2_PAD": 255,
           "MC50_FB": 447,
           "MC22_FB": 507,
-          "MC24_FB": 503,
           "MC40_FB": 479,
+          "MC24_FB": 503,
           "MC2_FB": 510,
           "GND0": 383
         }
@@ -40709,11 +40723,11 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
-          "MC45_FB": 503,
           "MC59_FB": 510,
+          "MC45_FB": 503,
           "MC29_FB": 479,
           "GND0": 383
         }
@@ -41039,8 +41053,8 @@
           "MC7_FB": 509,
           "MC18_FB": 503,
           "M26_PAD": 495,
-          "M15_PAD": 507,
-          "MC55_FB": 255
+          "MC55_FB": 255,
+          "M15_PAD": 507
         }
       },
       "UIM134": {
@@ -41061,9 +41075,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -41111,9 +41125,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -41135,11 +41149,11 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
-          "MC55_FB": 255,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "M27_PAD": 495,
+          "MC55_FB": 255,
           "GND0": 383
         }
       },
@@ -41160,9 +41174,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -41185,11 +41199,11 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
-          "M27_PAD": 495,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "MC55_FB": 255,
+          "M27_PAD": 495,
           "GND0": 383
         }
       },
@@ -41210,9 +41224,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -41234,12 +41248,12 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
-          "MC5_FB": 509,
           "MC36_FB": 479,
+          "MC5_FB": 509,
           "GND0": 255
         }
       },
@@ -41259,11 +41273,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -41284,8 +41298,8 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
           "MC36_FB": 479,
@@ -41309,11 +41323,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -41334,11 +41348,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -41359,11 +41373,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -41384,11 +41398,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -41409,11 +41423,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -41433,12 +41447,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -41460,9 +41474,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -41483,12 +41497,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -41510,9 +41524,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -41534,11 +41548,11 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
-          "R_PAD": 255,
           "M16_PAD": 507,
+          "R_PAD": 255,
           "MC20_FB": 503,
           "GND0": 383
         }
@@ -41557,9 +41571,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
@@ -41584,12 +41598,12 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
-          "R_PAD": 255,
           "M16_PAD": 507,
           "MC20_FB": 503,
+          "R_PAD": 255,
           "GND0": 383
         }
       },
@@ -41607,14 +41621,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
-          "MC41_FB": 503,
           "MC62_FB": 509,
+          "MC41_FB": 503,
           "GND0": 383
         }
       },
@@ -41633,9 +41647,9 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
           "MC36_FB": 479,
           "MC20_FB": 503,
@@ -41659,9 +41673,9 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
           "MC41_FB": 503,
           "MC63_FB": 510,
           "MC25_FB": 479,
@@ -41683,9 +41697,9 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
           "MC36_FB": 479,
           "MC20_FB": 503,
@@ -41709,11 +41723,11 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
-          "MC63_FB": 510,
           "MC41_FB": 503,
+          "MC63_FB": 510,
           "MC25_FB": 479,
           "GND0": 383
         }
@@ -41733,11 +41747,11 @@
           34088
         ],
         "values": {
-          "M40_PAD": 507,
           "M24_PAD": 495,
           "E1_PAD": 255,
           "M51_PAD": 509,
           "M3_PAD": 447,
+          "M40_PAD": 507,
           "MC11_FB": 383,
           "MC30_FB": 479,
           "MC46_FB": 503,
@@ -41808,10 +41822,10 @@
           34115
         ],
         "values": {
-          "M62_PAD": 383,
-          "M41_PAD": 495,
           "M14_PAD": 510,
+          "M41_PAD": 495,
           "M25_PAD": 509,
+          "M62_PAD": 383,
           "MC17_FB": 507,
           "MC20_FB": 503,
           "MC33_FB": 479,
@@ -41833,8 +41847,8 @@
           34124
         ],
         "values": {
-          "M16_PAD": 509,
           "M64_PAD": 447,
+          "M16_PAD": 509,
           "M41_PAD": 495,
           "M25_PAD": 507,
           "MC5_FB": 510,
@@ -41858,11 +41872,11 @@
           34133
         ],
         "values": {
-          "M5_PAD": 383,
+          "M19_PAD": 510,
           "M53_PAD": 507,
           "M17_PAD": 447,
+          "M5_PAD": 383,
           "M35_PAD": 495,
-          "M19_PAD": 510,
           "MC25_FB": 479,
           "MC41_FB": 503,
           "MC62_FB": 509,
@@ -41871,268 +41885,269 @@
         }
       }
     },
-    "global": {
-      "config": {
-        "gclr_invert": {
-          "fuses": [
-            34144
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            34145
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            34148
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            34151
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "goe1_invert": {
-          "fuses": [
-            34138
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe2_invert": {
-          "fuses": [
-            34139
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe3_invert": {
-          "fuses": [
-            34140
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe4_invert": {
-          "fuses": [
-            34141
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe5_invert": {
-          "fuses": [
-            34142
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe6_invert": {
-          "fuses": [
-            34143
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_mux": {
-          "fuses": [
-            34146,
-            34147
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk2_mux": {
-          "fuses": [
-            34149,
-            34150
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk3_mux": {
-          "fuses": [
-            34152,
-            34153
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            34135
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_1": {
-          "fuses": [
-            34136
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_2": {
-          "fuses": [
-            34137
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_itd": {
-          "fuses": [
-            34154
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk2_itd": {
-          "fuses": [
-            34155
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk3_itd": {
-          "fuses": [
-            34156
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tdi_pull_up": {
-          "fuses": [
-            34158
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tms_pull_up": {
-          "fuses": [
-            34157
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_reset": {
-          "fuses": [
-            34159
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "jtag_pin_func": {
-          "fuses": [
-            34167
-          ],
-          "values": {
-            "user": 0,
-            "jtag": 1
-          }
+    "config": {
+      "gclr_invert": {
+        "fuses": [
+          34144
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
         }
       },
-      "user": [
-        {
-          "fuses": [
-            34170,
-            34171,
-            34172,
-            34173,
-            34174,
-            34175,
-            34176,
-            34177
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
-        },
-        {
-          "fuses": [
-            34178,
-            34179,
-            34180,
-            34181,
-            34182,
-            34183,
-            34184,
-            34185
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
+      "gclk1_invert": {
+        "fuses": [
+          34145
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
         }
-      ]
+      },
+      "gclk2_invert": {
+        "fuses": [
+          34148
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "gclk3_invert": {
+        "fuses": [
+          34151
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "goe1_invert": {
+        "fuses": [
+          34138
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe2_invert": {
+        "fuses": [
+          34139
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe3_invert": {
+        "fuses": [
+          34140
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe4_invert": {
+        "fuses": [
+          34141
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe5_invert": {
+        "fuses": [
+          34142
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe6_invert": {
+        "fuses": [
+          34143
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk1_mux": {
+        "fuses": [
+          34146,
+          34147
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk2_mux": {
+        "fuses": [
+          34149,
+          34150
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk3_mux": {
+        "fuses": [
+          34152,
+          34153
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "bus_keeper": {
+        "fuses": [
+          34135
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "pd1_pin_func": {
+        "fuses": [
+          34136
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "pd2_pin_func": {
+        "fuses": [
+          34137
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "gclk1_itd": {
+        "fuses": [
+          34154
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk2_itd": {
+        "fuses": [
+          34155
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk3_itd": {
+        "fuses": [
+          34156
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tdi_pull_up": {
+        "fuses": [
+          34158
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tms_pull_up": {
+        "fuses": [
+          34157
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "power_reset": {
+        "fuses": [
+          34159
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "jtag_pin_func": {
+        "fuses": [
+          34167
+        ],
+        "values": {
+          "user": 0,
+          "jtag": 1
+        }
+      }
+    },
+    "user": [
+      {
+        "fuses": [
+          34170,
+          34171,
+          34172,
+          34173,
+          34174,
+          34175,
+          34176,
+          34177
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      },
+      {
+        "fuses": [
+          34178,
+          34179,
+          34180,
+          34181,
+          34182,
+          34183,
+          34184,
+          34185
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      }
+    ],
+    "clear": {
+      "pad": "R"
     },
     "clocks": {
       "1": {
@@ -42153,8 +42168,14 @@
         "pad": "C2"
       }
     },
-    "clear": {
-      "pad": "R"
+    "specials": {
+      "PD1": "MC3",
+      "TDI": "MC8",
+      "TMS": "MC32",
+      "PD2": "MC35",
+      "TCK": "MC48",
+      "TDO": "MC56",
+      "GCLK3": "MC64"
     },
     "pins": {
       "TQFP100": {
@@ -42517,7 +42538,7 @@
         34080,
         34134
       ],
-      "device": [
+      "config": [
         34134,
         34174
       ],
@@ -42665,30 +42686,30 @@
           "UIM65_N": 81,
           "UIM25_P": 40,
           "UIM25_N": 41,
-          "UIM33_P": 48,
-          "UIM73_P": 88,
-          "UIM29_P": 44,
-          "UIM37_P": 52,
-          "UIM69_P": 84,
-          "UIM72_P": 86,
-          "UIM32_P": 46,
           "UIM36_P": 50,
-          "UIM40_P": 54,
+          "UIM33_P": 48,
           "UIM76_P": 90,
-          "UIM77_P": 92,
+          "UIM73_P": 88,
+          "UIM69_P": 84,
+          "UIM32_P": 46,
+          "UIM72_P": 86,
           "UIM80_P": 94,
-          "UIM33_N": 49,
-          "UIM73_N": 89,
-          "UIM29_N": 45,
-          "UIM37_N": 53,
-          "UIM69_N": 85,
-          "UIM72_N": 87,
-          "UIM32_N": 47,
+          "UIM29_P": 44,
+          "UIM40_P": 54,
+          "UIM37_P": 52,
+          "UIM77_P": 92,
           "UIM36_N": 51,
-          "UIM40_N": 55,
+          "UIM33_N": 49,
           "UIM76_N": 91,
-          "UIM77_N": 93,
-          "UIM80_N": 95
+          "UIM73_N": 89,
+          "UIM69_N": 85,
+          "UIM32_N": 47,
+          "UIM72_N": 87,
+          "UIM80_N": 95,
+          "UIM29_N": 45,
+          "UIM40_N": 55,
+          "UIM37_N": 53,
+          "UIM77_N": 93
         }
       },
       "B": {
@@ -42825,30 +42846,30 @@
           "UIM145_N": 81,
           "UIM105_P": 40,
           "UIM105_N": 41,
-          "UIM113_P": 48,
-          "UIM153_P": 88,
-          "UIM109_P": 44,
-          "UIM117_P": 52,
-          "UIM149_P": 84,
-          "UIM152_P": 86,
-          "UIM112_P": 46,
           "UIM116_P": 50,
-          "UIM120_P": 54,
+          "UIM113_P": 48,
           "UIM156_P": 90,
-          "UIM157_P": 92,
+          "UIM153_P": 88,
+          "UIM149_P": 84,
+          "UIM112_P": 46,
+          "UIM152_P": 86,
           "UIM160_P": 94,
-          "UIM113_N": 49,
-          "UIM153_N": 89,
-          "UIM109_N": 45,
-          "UIM117_N": 53,
-          "UIM149_N": 85,
-          "UIM152_N": 87,
-          "UIM112_N": 47,
+          "UIM109_P": 44,
+          "UIM120_P": 54,
+          "UIM117_P": 52,
+          "UIM157_P": 92,
           "UIM116_N": 51,
-          "UIM120_N": 55,
+          "UIM113_N": 49,
           "UIM156_N": 91,
-          "UIM157_N": 93,
-          "UIM160_N": 95
+          "UIM153_N": 89,
+          "UIM149_N": 85,
+          "UIM112_N": 47,
+          "UIM152_N": 87,
+          "UIM160_N": 95,
+          "UIM109_N": 45,
+          "UIM120_N": 55,
+          "UIM117_N": 53,
+          "UIM157_N": 93
         }
       },
       "C": {
@@ -42985,30 +43006,30 @@
           "UIM147_N": 81,
           "UIM107_P": 40,
           "UIM107_N": 41,
-          "UIM115_P": 48,
-          "UIM155_P": 88,
-          "UIM111_P": 44,
-          "UIM119_P": 52,
-          "UIM151_P": 84,
-          "UIM150_P": 86,
-          "UIM110_P": 46,
           "UIM114_P": 50,
-          "UIM118_P": 54,
+          "UIM115_P": 48,
           "UIM154_P": 90,
-          "UIM159_P": 92,
+          "UIM155_P": 88,
+          "UIM151_P": 84,
+          "UIM110_P": 46,
+          "UIM150_P": 86,
           "UIM158_P": 94,
-          "UIM115_N": 49,
-          "UIM155_N": 89,
-          "UIM111_N": 45,
-          "UIM119_N": 53,
-          "UIM151_N": 85,
-          "UIM150_N": 87,
-          "UIM110_N": 47,
+          "UIM111_P": 44,
+          "UIM118_P": 54,
+          "UIM119_P": 52,
+          "UIM159_P": 92,
           "UIM114_N": 51,
-          "UIM118_N": 55,
+          "UIM115_N": 49,
           "UIM154_N": 91,
-          "UIM159_N": 93,
-          "UIM158_N": 95
+          "UIM155_N": 89,
+          "UIM151_N": 85,
+          "UIM110_N": 47,
+          "UIM150_N": 87,
+          "UIM158_N": 95,
+          "UIM111_N": 45,
+          "UIM118_N": 55,
+          "UIM119_N": 53,
+          "UIM159_N": 93
         }
       },
       "D": {
@@ -43145,30 +43166,30 @@
           "UIM67_N": 81,
           "UIM27_P": 40,
           "UIM27_N": 41,
-          "UIM35_P": 48,
-          "UIM75_P": 88,
-          "UIM31_P": 44,
-          "UIM39_P": 52,
-          "UIM71_P": 84,
-          "UIM70_P": 86,
-          "UIM30_P": 46,
           "UIM34_P": 50,
-          "UIM38_P": 54,
+          "UIM35_P": 48,
           "UIM74_P": 90,
-          "UIM79_P": 92,
+          "UIM75_P": 88,
+          "UIM71_P": 84,
+          "UIM30_P": 46,
+          "UIM70_P": 86,
           "UIM78_P": 94,
-          "UIM35_N": 49,
-          "UIM75_N": 89,
-          "UIM31_N": 45,
-          "UIM39_N": 53,
-          "UIM71_N": 85,
-          "UIM70_N": 87,
-          "UIM30_N": 47,
+          "UIM31_P": 44,
+          "UIM38_P": 54,
+          "UIM39_P": 52,
+          "UIM79_P": 92,
           "UIM34_N": 51,
-          "UIM38_N": 55,
+          "UIM35_N": 49,
           "UIM74_N": 91,
-          "UIM79_N": 93,
-          "UIM78_N": 95
+          "UIM75_N": 89,
+          "UIM71_N": 85,
+          "UIM30_N": 47,
+          "UIM70_N": 87,
+          "UIM78_N": 95,
+          "UIM31_N": 45,
+          "UIM38_N": 55,
+          "UIM39_N": 53,
+          "UIM79_N": 93
         }
       }
     },
@@ -43219,6 +43240,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32575
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -43451,6 +43481,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32548
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -43917,6 +43956,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32494
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32492,
@@ -44147,6 +44195,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32467
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -44381,6 +44438,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32440
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32438,
@@ -44611,6 +44677,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32413
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -44845,6 +44920,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32386
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32384,
@@ -45075,6 +45159,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32359
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -45309,6 +45402,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32332
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32330,
@@ -45539,6 +45641,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32305
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -45773,6 +45884,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32278
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32276,
@@ -46003,6 +46123,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32251
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -46237,6 +46366,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32224
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32222,
@@ -46467,6 +46605,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32197
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -46701,6 +46848,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32170
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32168,
@@ -46931,6 +47087,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31135
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -47165,6 +47330,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31108
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31106,
@@ -47395,6 +47569,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31081
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -47629,6 +47812,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31054
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31052,
@@ -47859,6 +48051,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31027
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -48093,6 +48294,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31000
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30998,
@@ -48323,6 +48533,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            30973
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -48557,6 +48776,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            30946
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30944,
@@ -48787,6 +49015,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            30919
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -49021,6 +49258,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            30892
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30890,
@@ -49251,6 +49497,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            30865
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -49485,6 +49740,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            30838
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30836,
@@ -49715,6 +49979,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            30811
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -49949,6 +50222,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            30784
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30782,
@@ -50179,6 +50461,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            30757
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -50413,6 +50704,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            30730
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             30728,
@@ -50643,6 +50943,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31210
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -50877,6 +51186,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31237
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31235,
@@ -51107,6 +51425,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31264
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -51341,6 +51668,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31291
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31289,
@@ -51571,6 +51907,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31318
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -51805,6 +52150,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31345
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31343,
@@ -52035,6 +52389,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31372
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -52269,6 +52632,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31399
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31397,
@@ -52499,6 +52871,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31426
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -52733,6 +53114,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31453
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31451,
@@ -52963,6 +53353,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31480
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -53197,6 +53596,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31507
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31505,
@@ -53427,6 +53835,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31534
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -53849,6 +54266,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31588
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31586,
@@ -54079,6 +54505,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31615
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -54313,6 +54748,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31690
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31688,
@@ -54543,6 +54987,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31717
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -54777,6 +55230,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31744
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31742,
@@ -55007,6 +55469,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31771
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -55241,6 +55712,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31798
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31796,
@@ -55471,6 +55951,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31825
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -55705,6 +56194,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31852
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31850,
@@ -55935,6 +56433,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31879
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -56169,6 +56676,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31906
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31904,
@@ -56399,6 +56915,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31933
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -56633,6 +57158,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            31960
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             31958,
@@ -56863,6 +57397,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            31987
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -57097,6 +57640,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32014
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32012,
@@ -57327,6 +57879,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32041
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -57561,6 +58122,15 @@
             "on": 1
           }
         },
+        "io_standard": {
+          "fuses": [
+            32068
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
+          }
+        },
         "storage": {
           "fuses": [
             32066,
@@ -57791,6 +58361,15 @@
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "io_standard": {
+          "fuses": [
+            32095
+          ],
+          "values": {
+            "ttl": 0,
+            "sstl": 1
           }
         },
         "storage": {
@@ -60348,8 +60927,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "M11_PAD": 507,
           "MC51_FB": 255
         }
@@ -60372,8 +60951,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M39_PAD": 495,
           "M50_PAD": 507,
           "MC10_FB": 255
@@ -60398,8 +60977,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "M11_PAD": 507,
           "MC51_FB": 255
         }
@@ -60422,8 +61001,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M39_PAD": 495,
           "M50_PAD": 507,
           "MC10_FB": 255
@@ -60446,8 +61025,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "M31_PAD": 495,
           "MC51_FB": 255,
@@ -60472,8 +61051,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -60496,8 +61075,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "M31_PAD": 495,
           "MC51_FB": 255,
@@ -60522,8 +61101,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -60570,8 +61149,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -60620,8 +61199,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -60645,11 +61224,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -60670,13 +61249,13 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
-          "M51_PAD": 507,
-          "M52_PAD": 510
+          "M52_PAD": 510,
+          "M51_PAD": 507
         }
       },
       "UIM27": {
@@ -60695,11 +61274,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -60720,9 +61299,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M51_PAD": 507,
@@ -60744,12 +61323,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -60768,13 +61347,13 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
-          "M24_PAD": 495,
           "MC59_FB": 509,
+          "M24_PAD": 495,
           "MC9_FB": 383,
           "GND0": 255
         }
@@ -60794,12 +61373,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -60818,8 +61397,8 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
@@ -60846,8 +61425,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -60868,13 +61447,13 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
-          "MC58_FB": 509,
           "M49_PAD": 507,
+          "MC58_FB": 509,
           "MC45_FB": 503,
           "GND0": 383
         }
@@ -60896,8 +61475,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -60918,14 +61497,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
           "M49_PAD": 507,
-          "MC45_FB": 503,
           "MC58_FB": 509,
+          "MC45_FB": 503,
           "GND0": 383
         }
       },
@@ -60948,8 +61527,8 @@
           "C2_PAD": 255,
           "MC50_FB": 447,
           "MC22_FB": 507,
-          "MC40_FB": 479,
           "MC24_FB": 503,
+          "MC40_FB": 479,
           "MC2_FB": 510,
           "GND0": 383
         }
@@ -60970,8 +61549,8 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
           "MC59_FB": 510,
           "MC45_FB": 503,
@@ -61020,11 +61599,11 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
-          "MC45_FB": 503,
           "MC59_FB": 510,
+          "MC45_FB": 503,
           "MC29_FB": 479,
           "GND0": 383
         }
@@ -61372,9 +61951,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -61422,9 +62001,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -61446,11 +62025,11 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
-          "M27_PAD": 495,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "MC55_FB": 255,
+          "M27_PAD": 495,
           "GND0": 383
         }
       },
@@ -61471,9 +62050,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -61496,9 +62075,9 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "M27_PAD": 495,
           "MC55_FB": 255,
           "GND0": 383
@@ -61521,9 +62100,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -61545,8 +62124,8 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
           "MC36_FB": 479,
@@ -61570,11 +62149,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -61595,11 +62174,11 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
-          "M42_PAD": 510,
           "MC36_FB": 479,
+          "M42_PAD": 510,
           "MC5_FB": 509,
           "GND0": 255
         }
@@ -61620,11 +62199,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -61645,11 +62224,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -61670,11 +62249,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -61695,11 +62274,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -61720,11 +62299,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -61744,12 +62323,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -61771,9 +62350,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -61794,12 +62373,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -61821,9 +62400,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -61845,12 +62424,12 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "M16_PAD": 507,
-          "MC20_FB": 503,
           "R_PAD": 255,
+          "MC20_FB": 503,
           "GND0": 383
         }
       },
@@ -61868,14 +62447,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
+          "MC41_FB": 503,
           "M53_PAD": 507,
           "MC62_FB": 509,
-          "MC41_FB": 503,
           "GND0": 383
         }
       },
@@ -61895,8 +62474,8 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "M16_PAD": 507,
           "R_PAD": 255,
@@ -61918,14 +62497,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
-          "MC41_FB": 503,
           "MC62_FB": 509,
+          "MC41_FB": 503,
           "GND0": 383
         }
       },
@@ -61944,12 +62523,12 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
-          "MC36_FB": 479,
           "MC20_FB": 503,
+          "MC36_FB": 479,
           "MC6_FB": 510,
           "GND0": 383
         }
@@ -61970,11 +62549,11 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
-          "MC41_FB": 503,
           "MC63_FB": 510,
+          "MC41_FB": 503,
           "MC25_FB": 479,
           "GND0": 383
         }
@@ -61994,9 +62573,9 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
           "MC36_FB": 479,
           "MC20_FB": 503,
@@ -62020,11 +62599,11 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
-          "MC63_FB": 510,
           "MC41_FB": 503,
+          "MC63_FB": 510,
           "MC25_FB": 479,
           "GND0": 383
         }
@@ -62348,10 +62927,10 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
-          "M11_PAD": 507,
-          "MC51_FB": 255
+          "MC3_FB": 509,
+          "MC51_FB": 255,
+          "M11_PAD": 507
         }
       },
       "UIM94": {
@@ -62372,10 +62951,10 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
-          "M50_PAD": 507,
+          "MC47_FB": 503,
           "M39_PAD": 495,
+          "M50_PAD": 507,
           "MC10_FB": 255
         }
       },
@@ -62398,8 +62977,8 @@
           "M47_PAD": 383,
           "M58_PAD": 447,
           "MC22_FB": 503,
-          "MC3_FB": 509,
           "M30_PAD": 495,
+          "MC3_FB": 509,
           "M11_PAD": 507,
           "MC51_FB": 255
         }
@@ -62422,8 +63001,8 @@
           "M22_PAD": 383,
           "MC30_FB": 479,
           "MC60_FB": 510,
-          "MC47_FB": 503,
           "MC58_FB": 509,
+          "MC47_FB": 503,
           "M39_PAD": 495,
           "M50_PAD": 507,
           "MC10_FB": 255
@@ -62446,8 +63025,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "MC51_FB": 255,
           "M31_PAD": 495,
@@ -62472,8 +63051,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -62496,8 +63075,8 @@
           "M10_PAD": 507,
           "MC49_FB": 447,
           "M57_PAD": 510,
-          "MC21_FB": 503,
           "MC1_FB": 509,
+          "MC21_FB": 503,
           "MC37_FB": 479,
           "M31_PAD": 495,
           "MC51_FB": 255,
@@ -62522,8 +63101,8 @@
           "MC12_FB": 447,
           "M51_PAD": 507,
           "MC48_FB": 503,
-          "MC60_FB": 509,
           "MC32_FB": 479,
+          "MC60_FB": 509,
           "M38_PAD": 495,
           "MC10_FB": 255,
           "GND0": 383
@@ -62570,8 +63149,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -62620,8 +63199,8 @@
           "GND1": 511,
           "MC11_FB": 383,
           "M49_PAD": 507,
-          "MC46_FB": 503,
           "M23_PAD": 510,
+          "MC46_FB": 503,
           "MC30_FB": 495,
           "M3_PAD": 447,
           "MC60_FB": 509,
@@ -62645,11 +63224,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -62670,9 +63249,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M51_PAD": 507,
@@ -62695,11 +63274,11 @@
           "GND1": 511,
           "M45_PAD": 495,
           "C2_PAD": 255,
-          "MC38_FB": 479,
-          "MC4_FB": 509,
-          "M47_PAD": 447,
-          "M10_PAD": 507,
           "MC50_FB": 383,
+          "MC38_FB": 479,
+          "M10_PAD": 507,
+          "M47_PAD": 447,
+          "MC4_FB": 509,
           "MC23_FB": 503,
           "M9_PAD": 510
         }
@@ -62720,9 +63299,9 @@
           "GND1": 511,
           "M24_PAD": 495,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "M22_PAD": 447,
           "MC31_FB": 479,
-          "MC57_FB": 509,
           "MC11_FB": 383,
           "MC46_FB": 503,
           "M52_PAD": 510,
@@ -62744,12 +63323,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -62768,13 +63347,13 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
-          "MC59_FB": 509,
           "M24_PAD": 495,
+          "MC59_FB": 509,
           "MC9_FB": 383,
           "GND0": 255
         }
@@ -62794,12 +63373,12 @@
         "values": {
           "GND1": 511,
           "MC21_FB": 503,
-          "MC49_FB": 447,
-          "M29_PAD": 507,
           "MC39_FB": 479,
+          "M29_PAD": 507,
+          "MC49_FB": 447,
           "M45_PAD": 495,
-          "M59_PAD": 510,
           "MC52_FB": 383,
+          "M59_PAD": 510,
           "MC2_FB": 509,
           "GND0": 255
         }
@@ -62818,8 +63397,8 @@
         ],
         "values": {
           "GND1": 511,
-          "M2_PAD": 510,
           "MC12_FB": 447,
+          "M2_PAD": 510,
           "MC30_FB": 479,
           "MC48_FB": 503,
           "M40_PAD": 507,
@@ -62846,8 +63425,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -62868,14 +63447,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
+          "MC45_FB": 503,
           "M49_PAD": 507,
           "MC58_FB": 509,
-          "MC45_FB": 503,
           "GND0": 383
         }
       },
@@ -62896,8 +63475,8 @@
           "M32_PAD": 495,
           "MC3_FB": 509,
           "C2_PAD": 255,
-          "MC37_FB": 479,
           "M57_PAD": 510,
+          "MC37_FB": 479,
           "MC49_FB": 447,
           "M12_PAD": 507,
           "MC24_FB": 503,
@@ -62918,14 +63497,14 @@
         ],
         "values": {
           "GND1": 511,
-          "M4_PAD": 510,
           "MC32_FB": 479,
           "E1_PAD": 255,
+          "M4_PAD": 510,
           "M37_PAD": 495,
           "MC12_FB": 447,
           "M49_PAD": 507,
-          "MC45_FB": 503,
           "MC58_FB": 509,
+          "MC45_FB": 503,
           "GND0": 383
         }
       },
@@ -62948,8 +63527,8 @@
           "C2_PAD": 255,
           "MC50_FB": 447,
           "MC22_FB": 507,
-          "MC24_FB": 503,
           "MC40_FB": 479,
+          "MC24_FB": 503,
           "MC2_FB": 510,
           "GND0": 383
         }
@@ -62970,11 +63549,11 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
-          "MC45_FB": 503,
           "MC59_FB": 510,
+          "MC45_FB": 503,
           "MC29_FB": 479,
           "GND0": 383
         }
@@ -62998,8 +63577,8 @@
           "C2_PAD": 255,
           "MC50_FB": 447,
           "MC22_FB": 507,
-          "MC40_FB": 479,
           "MC24_FB": 503,
+          "MC40_FB": 479,
           "MC2_FB": 510,
           "GND0": 383
         }
@@ -63020,11 +63599,11 @@
           "GND1": 511,
           "MC47_FB": 507,
           "MC11_FB": 447,
-          "MC57_FB": 509,
           "E1_PAD": 255,
+          "MC57_FB": 509,
           "MC31_FB": 495,
-          "MC59_FB": 510,
           "MC45_FB": 503,
+          "MC59_FB": 510,
           "MC29_FB": 479,
           "GND0": 383
         }
@@ -63350,8 +63929,8 @@
           "MC7_FB": 509,
           "MC18_FB": 503,
           "M26_PAD": 495,
-          "M15_PAD": 507,
-          "MC55_FB": 255
+          "MC55_FB": 255,
+          "M15_PAD": 507
         }
       },
       "UIM134": {
@@ -63372,9 +63951,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -63422,9 +64001,9 @@
           "M18_PAD": 383,
           "MC26_FB": 479,
           "MC64_FB": 510,
+          "MC62_FB": 509,
           "MC43_FB": 503,
           "M35_PAD": 495,
-          "MC62_FB": 509,
           "M54_PAD": 507,
           "MC14_FB": 255
         }
@@ -63446,11 +64025,11 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
-          "M27_PAD": 495,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "MC55_FB": 255,
+          "M27_PAD": 495,
           "GND0": 383
         }
       },
@@ -63471,9 +64050,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -63496,9 +64075,9 @@
           "M14_PAD": 507,
           "MC53_FB": 447,
           "M61_PAD": 510,
-          "MC33_FB": 479,
-          "MC17_FB": 503,
           "MC5_FB": 509,
+          "MC17_FB": 503,
+          "MC33_FB": 479,
           "M27_PAD": 495,
           "MC55_FB": 255,
           "GND0": 383
@@ -63521,9 +64100,9 @@
           "M8_PAD": 510,
           "MC16_FB": 447,
           "M55_PAD": 507,
+          "MC64_FB": 509,
           "MC28_FB": 479,
           "MC44_FB": 503,
-          "MC64_FB": 509,
           "M34_PAD": 495,
           "MC14_FB": 255,
           "GND0": 383
@@ -63545,12 +64124,12 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
           "M42_PAD": 510,
-          "MC5_FB": 509,
           "MC36_FB": 479,
+          "MC5_FB": 509,
           "GND0": 255
         }
       },
@@ -63570,11 +64149,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -63595,11 +64174,11 @@
           "GND1": 511,
           "M16_PAD": 507,
           "MC54_FB": 383,
-          "MC35_FB": 495,
           "MC19_FB": 503,
+          "MC35_FB": 495,
           "M62_PAD": 447,
-          "MC36_FB": 479,
           "M42_PAD": 510,
+          "MC36_FB": 479,
           "MC5_FB": 509,
           "GND0": 255
         }
@@ -63620,11 +64199,11 @@
           "GND1": 511,
           "MC15_FB": 383,
           "M53_PAD": 507,
+          "MC26_FB": 495,
           "MC42_FB": 503,
           "M19_PAD": 510,
-          "MC26_FB": 495,
-          "MC64_FB": 509,
           "M7_PAD": 447,
+          "MC64_FB": 509,
           "MC25_FB": 479,
           "GND0": 255
         }
@@ -63645,11 +64224,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -63670,11 +64249,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -63695,11 +64274,11 @@
           "GND1": 511,
           "M41_PAD": 495,
           "R_PAD": 255,
+          "M14_PAD": 507,
+          "MC54_FB": 383,
           "MC34_FB": 479,
           "MC8_FB": 509,
           "M43_PAD": 447,
-          "MC54_FB": 383,
-          "M14_PAD": 507,
           "MC19_FB": 503,
           "M13_PAD": 510
         }
@@ -63720,11 +64299,11 @@
           "GND1": 511,
           "M20_PAD": 495,
           "C1_PAD": 255,
-          "MC61_FB": 509,
-          "MC15_FB": 383,
           "MC27_FB": 479,
+          "MC61_FB": 509,
           "M18_PAD": 447,
           "M55_PAD": 507,
+          "MC15_FB": 383,
           "MC42_FB": 503,
           "M56_PAD": 510
         }
@@ -63744,12 +64323,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -63771,11 +64350,11 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
-          "MC63_FB": 509,
           "MC13_FB": 383,
+          "MC63_FB": 509,
           "GND0": 255
         }
       },
@@ -63794,12 +64373,12 @@
         "values": {
           "GND1": 511,
           "MC53_FB": 447,
-          "M25_PAD": 507,
           "MC17_FB": 503,
-          "M41_PAD": 495,
+          "M25_PAD": 507,
           "MC35_FB": 479,
-          "MC56_FB": 383,
+          "M41_PAD": 495,
           "M63_PAD": 510,
+          "MC56_FB": 383,
           "MC6_FB": 509,
           "GND0": 255
         }
@@ -63821,9 +64400,9 @@
           "MC26_FB": 479,
           "MC16_FB": 447,
           "M20_PAD": 495,
+          "M36_PAD": 507,
           "MC44_FB": 503,
           "M6_PAD": 510,
-          "M36_PAD": 507,
           "MC63_FB": 509,
           "MC13_FB": 383,
           "GND0": 255
@@ -63845,8 +64424,8 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "M16_PAD": 507,
           "R_PAD": 255,
@@ -63868,13 +64447,13 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
-          "MC62_FB": 509,
           "M53_PAD": 507,
+          "MC62_FB": 509,
           "MC41_FB": 503,
           "GND0": 383
         }
@@ -63895,8 +64474,8 @@
           "GND1": 511,
           "MC7_FB": 509,
           "M28_PAD": 495,
-          "MC33_FB": 479,
           "M61_PAD": 510,
+          "MC33_FB": 479,
           "MC53_FB": 447,
           "R_PAD": 255,
           "M16_PAD": 507,
@@ -63918,9 +64497,9 @@
         ],
         "values": {
           "GND1": 511,
-          "M33_PAD": 495,
-          "MC28_FB": 479,
           "C1_PAD": 255,
+          "MC28_FB": 479,
+          "M33_PAD": 495,
           "MC16_FB": 447,
           "M8_PAD": 510,
           "M53_PAD": 507,
@@ -63944,12 +64523,12 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
-          "MC20_FB": 503,
           "MC36_FB": 479,
+          "MC20_FB": 503,
           "MC6_FB": 510,
           "GND0": 383
         }
@@ -63970,9 +64549,9 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
           "MC63_FB": 510,
           "MC41_FB": 503,
           "MC25_FB": 479,
@@ -63994,9 +64573,9 @@
         "values": {
           "GND1": 511,
           "MC8_FB": 509,
-          "MC34_FB": 495,
-          "MC54_FB": 447,
           "R_PAD": 255,
+          "MC54_FB": 447,
+          "MC34_FB": 495,
           "MC18_FB": 507,
           "MC20_FB": 503,
           "MC36_FB": 479,
@@ -64020,9 +64599,9 @@
           "GND1": 511,
           "MC43_FB": 507,
           "MC15_FB": 447,
+          "MC27_FB": 495,
           "C1_PAD": 255,
           "MC61_FB": 509,
-          "MC27_FB": 495,
           "MC63_FB": 510,
           "MC41_FB": 503,
           "MC25_FB": 479,
@@ -64044,11 +64623,11 @@
           34088
         ],
         "values": {
-          "M40_PAD": 507,
           "M24_PAD": 495,
           "E1_PAD": 255,
           "M51_PAD": 509,
           "M3_PAD": 447,
+          "M40_PAD": 507,
           "MC11_FB": 383,
           "MC30_FB": 479,
           "MC46_FB": 503,
@@ -64119,10 +64698,10 @@
           34115
         ],
         "values": {
-          "M62_PAD": 383,
-          "M41_PAD": 495,
           "M14_PAD": 510,
+          "M41_PAD": 495,
           "M25_PAD": 509,
+          "M62_PAD": 383,
           "MC17_FB": 507,
           "MC20_FB": 503,
           "MC33_FB": 479,
@@ -64144,8 +64723,8 @@
           34124
         ],
         "values": {
-          "M16_PAD": 509,
           "M64_PAD": 447,
+          "M16_PAD": 509,
           "M41_PAD": 495,
           "M25_PAD": 507,
           "MC5_FB": 510,
@@ -64169,11 +64748,11 @@
           34133
         ],
         "values": {
-          "M5_PAD": 383,
+          "M19_PAD": 510,
           "M53_PAD": 507,
           "M17_PAD": 447,
+          "M5_PAD": 383,
           "M35_PAD": 495,
-          "M19_PAD": 510,
           "MC25_FB": 479,
           "MC41_FB": 503,
           "MC62_FB": 509,
@@ -64182,307 +64761,308 @@
         }
       }
     },
-    "global": {
-      "config": {
-        "gclr_invert": {
-          "fuses": [
-            34141
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            34142
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            34145
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            34148
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "goe1_invert": {
-          "fuses": [
-            34135
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe2_invert": {
-          "fuses": [
-            34136
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe3_invert": {
-          "fuses": [
-            34137
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe4_invert": {
-          "fuses": [
-            34138
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe5_invert": {
-          "fuses": [
-            34139
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "goe6_invert": {
-          "fuses": [
-            34140
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_mux": {
-          "fuses": [
-            34143,
-            34144
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk2_mux": {
-          "fuses": [
-            34146,
-            34147
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "gclk3_mux": {
-          "fuses": [
-            34149,
-            34150
-          ],
-          "values": {
-            "c1": 3,
-            "c2": 1,
-            "c3": 0
-          }
-        },
-        "power_down_1": {
-          "fuses": [
-            34168
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "power_down_2": {
-          "fuses": [
-            34169
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tdi_pull_up": {
-          "fuses": [
-            34152
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "tms_pull_up": {
-          "fuses": [
-            34151
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "jtag_pin_func": {
-          "fuses": [
-            34167
-          ],
-          "values": {
-            "user": 0,
-            "jtag": 1
-          }
-        },
-        "r_pad_term": {
-          "fuses": [
-            34163,
-            34164
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "c1_pad_term": {
-          "fuses": [
-            34157,
-            34158
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "c2_pad_term": {
-          "fuses": [
-            34159,
-            34160
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "e1_pad_term": {
-          "fuses": [
-            34161,
-            34162
-          ],
-          "values": {
-            "high_z": 0,
-            "pull_up": 2,
-            "pull_down": 1,
-            "bus_keeper": 3
-          }
-        },
-        "r_pad_schmitt_trigger": {
-          "fuses": [
-            34156
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "c1_pad_schmitt_trigger": {
-          "fuses": [
-            34153
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "c2_pad_schmitt_trigger": {
-          "fuses": [
-            34154
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "e1_pad_schmitt_trigger": {
-          "fuses": [
-            34155
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
+    "config": {
+      "gclr_invert": {
+        "fuses": [
+          34141
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
         }
       },
-      "user": [
-        {
-          "fuses": [
-            34174,
-            34175,
-            34176,
-            34177,
-            34178,
-            34179,
-            34180,
-            34181
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
-        },
-        {
-          "fuses": [
-            34182,
-            34183,
-            34184,
-            34185,
-            34186,
-            34187,
-            34188,
-            34189
-          ],
-          "values": {
-            "bit0": 128,
-            "bit1": 64,
-            "bit2": 32,
-            "bit3": 16,
-            "bit4": 8,
-            "bit5": 4,
-            "bit6": 2,
-            "bit7": 1
-          }
+      "gclk1_invert": {
+        "fuses": [
+          34142
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
         }
-      ]
+      },
+      "gclk2_invert": {
+        "fuses": [
+          34145
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "gclk3_invert": {
+        "fuses": [
+          34148
+        ],
+        "values": {
+          "off": 0,
+          "on": 1
+        }
+      },
+      "goe1_invert": {
+        "fuses": [
+          34135
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe2_invert": {
+        "fuses": [
+          34136
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe3_invert": {
+        "fuses": [
+          34137
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe4_invert": {
+        "fuses": [
+          34138
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe5_invert": {
+        "fuses": [
+          34139
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "goe6_invert": {
+        "fuses": [
+          34140
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "gclk1_mux": {
+        "fuses": [
+          34143,
+          34144
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk2_mux": {
+        "fuses": [
+          34146,
+          34147
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "gclk3_mux": {
+        "fuses": [
+          34149,
+          34150
+        ],
+        "values": {
+          "c1": 3,
+          "c2": 1,
+          "c3": 0
+        }
+      },
+      "pd1_pin_func": {
+        "fuses": [
+          34168
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "pd2_pin_func": {
+        "fuses": [
+          34169
+        ],
+        "values": {
+          "user": 1,
+          "pd": 0
+        }
+      },
+      "tdi_pull_up": {
+        "fuses": [
+          34152
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "tms_pull_up": {
+        "fuses": [
+          34151
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "jtag_pin_func": {
+        "fuses": [
+          34167
+        ],
+        "values": {
+          "user": 0,
+          "jtag": 1
+        }
+      },
+      "r_pad_schmitt_trigger": {
+        "fuses": [
+          34156
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "r_pad_term": {
+        "fuses": [
+          34163,
+          34164
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "c1_pad_schmitt_trigger": {
+        "fuses": [
+          34153
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "c1_pad_term": {
+        "fuses": [
+          34157,
+          34158
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "c2_pad_schmitt_trigger": {
+        "fuses": [
+          34154
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "c2_pad_term": {
+        "fuses": [
+          34159,
+          34160
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      },
+      "e1_pad_schmitt_trigger": {
+        "fuses": [
+          34155
+        ],
+        "values": {
+          "off": 1,
+          "on": 0
+        }
+      },
+      "e1_pad_term": {
+        "fuses": [
+          34161,
+          34162
+        ],
+        "values": {
+          "high_z": 0,
+          "pull_up": 2,
+          "pull_down": 1,
+          "bus_keeper": 3
+        }
+      }
+    },
+    "user": [
+      {
+        "fuses": [
+          34174,
+          34175,
+          34176,
+          34177,
+          34178,
+          34179,
+          34180,
+          34181
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      },
+      {
+        "fuses": [
+          34182,
+          34183,
+          34184,
+          34185,
+          34186,
+          34187,
+          34188,
+          34189
+        ],
+        "values": {
+          "bit0": 128,
+          "bit1": 64,
+          "bit2": 32,
+          "bit3": 16,
+          "bit4": 8,
+          "bit5": 4,
+          "bit6": 2,
+          "bit7": 1
+        }
+      }
+    ],
+    "clear": {
+      "pad": "R"
     },
     "clocks": {
       "1": {
@@ -64503,8 +65083,16 @@
         "pad": "C2"
       }
     },
-    "clear": {
-      "pad": "R"
+    "specials": {
+      "PD1": "MC3",
+      "TDI": "MC8",
+      "TMS": "MC32",
+      "PD2": "MC35",
+      "TCK": "MC48",
+      "TDO": "MC56",
+      "GCLK3": "MC64",
+      "VREFA": "MC3",
+      "VREFB": "MC46"
     },
     "pins": {
       "TQFP100": {
