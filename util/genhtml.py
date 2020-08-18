@@ -233,6 +233,16 @@ macrocell_shared_options = {
 
 
 global_options = {
+    "gclr_invert":      "M",
+    "gclk1_invert":     "M",
+    "gclk2_invert":     "M",
+    "gclk3_invert":     "M",
+    "goe1_invert":      "M",
+    "goe2_invert":      "M",
+    "goe3_invert":      "M",
+    "goe4_invert":      "M",
+    "goe5_invert":      "M",
+    "goe6_invert":      "M",
     "bus_keeper":       "IO",
     "power_down_1":     "C",
     "power_down_2":     "C",
@@ -243,9 +253,6 @@ global_options = {
     "tms_pull_up":      "IO",
     "power_reset":      "C",
     "jtag_pin_func":    "M",
-    "gclk1_invert":     "M",
-    "gclk2_invert":     "M",
-    "gclk3_invert":     "M",
 }
 
 

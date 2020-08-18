@@ -2,7 +2,7 @@
 <h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1502BE</a> Global Configuration</h1>
 <i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
 <h2>Device Configuration Bitmap</h2>
-<p>Device uses 8 (known) fuses within range 16750..16790 for global feature and JTAG configuration.</p>
+<p>Device uses 15 (known) fuses within range 16750..16790 for global feature and JTAG configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
 <td align='center' width='16'>0</td>
@@ -41,13 +41,13 @@
 <tr>
 <td align='right' height='18'>16750</td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16750' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16751' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16752' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16753' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16754' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16755' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16756' style='text-decoration:none'>?</abbr></td>
-<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16757' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16751 (CONFIG.goe6_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16751'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16752 (CONFIG.goe5_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16752'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16753 (CONFIG.goe4_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16753'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16754 (CONFIG.goe3_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16754'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16755 (CONFIG.goe2_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16755'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16756 (CONFIG.goe1_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16756'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16757 (CONFIG.gclr_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16757'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='16758 (CONFIG.gclk1_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L16758'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16759' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16760' style='text-decoration:none'>?</abbr></td>
@@ -85,6 +85,56 @@
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='16789' style='text-decoration:none'>?</abbr></td>
 </tr>
 </table>
+<p>Fuse combinations for option "gclr_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16757'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16757</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "gclk1_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16758'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16758</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "gclk2_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16761'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16761</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "gclk3_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16764'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16764</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<p>Fuse combinations for option "goe1_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16756'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16756</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "goe2_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16755'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16755</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "goe3_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16754'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16754</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "goe4_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16753'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16753</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "goe5_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16752'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16752</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "goe6_invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L16751'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16751</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
 <p>Fuse combinations for option "power_down_1":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L16784'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16784</span></div></th></tr>
 <tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
@@ -104,21 +154,6 @@
 <tr><td width='70' height='40'></td><th width='21'><a name='L16767'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16767</span></div></th></tr>
 <tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 <tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "gclk1_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L16758'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16758</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "gclk2_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L16761'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16761</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "gclk3_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L16764'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16764</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "jtag_pin_func":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L16783'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>16783</span></div></th></tr>

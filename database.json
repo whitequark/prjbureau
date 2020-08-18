@@ -9920,6 +9920,105 @@
     },
     "global": {
       "config": {
+        "gclr_invert": {
+          "fuses": [
+            16760
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "gclk1_invert": {
+          "fuses": [
+            16761
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk2_invert": {
+          "fuses": [
+            16764
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk3_invert": {
+          "fuses": [
+            16767
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "goe1_invert": {
+          "fuses": [
+            16759
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe2_invert": {
+          "fuses": [
+            16758
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe3_invert": {
+          "fuses": [
+            16757
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe4_invert": {
+          "fuses": [
+            16756
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe5_invert": {
+          "fuses": [
+            16755
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe6_invert": {
+          "fuses": [
+            16754
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            16751
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
         "power_down_1": {
           "fuses": [
             16752
@@ -9986,42 +10085,6 @@
         "power_reset": {
           "fuses": [
             16775
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            16761
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            16764
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            16767
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16751
           ],
           "values": {
             "off": 1,
@@ -20395,6 +20458,96 @@
     },
     "global": {
       "config": {
+        "gclr_invert": {
+          "fuses": [
+            16757
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "gclk1_invert": {
+          "fuses": [
+            16758
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk2_invert": {
+          "fuses": [
+            16761
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk3_invert": {
+          "fuses": [
+            16764
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "goe1_invert": {
+          "fuses": [
+            16756
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe2_invert": {
+          "fuses": [
+            16755
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe3_invert": {
+          "fuses": [
+            16754
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe4_invert": {
+          "fuses": [
+            16753
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe5_invert": {
+          "fuses": [
+            16752
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe6_invert": {
+          "fuses": [
+            16751
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
         "power_down_1": {
           "fuses": [
             16784
@@ -20429,33 +20582,6 @@
           "values": {
             "off": 1,
             "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            16758
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            16761
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            16764
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
           }
         },
         "jtag_pin_func": {
@@ -41597,6 +41723,105 @@
     },
     "global": {
       "config": {
+        "gclr_invert": {
+          "fuses": [
+            34144
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "gclk1_invert": {
+          "fuses": [
+            34145
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk2_invert": {
+          "fuses": [
+            34148
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk3_invert": {
+          "fuses": [
+            34151
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "goe1_invert": {
+          "fuses": [
+            34138
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe2_invert": {
+          "fuses": [
+            34139
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe3_invert": {
+          "fuses": [
+            34140
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe4_invert": {
+          "fuses": [
+            34141
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe5_invert": {
+          "fuses": [
+            34142
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe6_invert": {
+          "fuses": [
+            34143
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "bus_keeper": {
+          "fuses": [
+            34135
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
         "power_down_1": {
           "fuses": [
             34136
@@ -41663,42 +41888,6 @@
         "power_reset": {
           "fuses": [
             34159
-          ],
-          "values": {
-            "off": 1,
-            "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            34145
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            34148
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            34151
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            34135
           ],
           "values": {
             "off": 1,
@@ -63684,6 +63873,96 @@
     },
     "global": {
       "config": {
+        "gclr_invert": {
+          "fuses": [
+            34141
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "gclk1_invert": {
+          "fuses": [
+            34142
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk2_invert": {
+          "fuses": [
+            34145
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "gclk3_invert": {
+          "fuses": [
+            34148
+          ],
+          "values": {
+            "off": 0,
+            "on": 1
+          }
+        },
+        "goe1_invert": {
+          "fuses": [
+            34135
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe2_invert": {
+          "fuses": [
+            34136
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe3_invert": {
+          "fuses": [
+            34137
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe4_invert": {
+          "fuses": [
+            34138
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe5_invert": {
+          "fuses": [
+            34139
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
+        "goe6_invert": {
+          "fuses": [
+            34140
+          ],
+          "values": {
+            "off": 1,
+            "on": 0
+          }
+        },
         "power_down_1": {
           "fuses": [
             34168
@@ -63718,33 +63997,6 @@
           "values": {
             "off": 1,
             "on": 0
-          }
-        },
-        "gclk1_invert": {
-          "fuses": [
-            34142
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk2_invert": {
-          "fuses": [
-            34145
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "gclk3_invert": {
-          "fuses": [
-            34148
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
           }
         },
         "jtag_pin_func": {

@@ -1,5 +1,3 @@
-from bitarray import bitarray
-
 from util import database, toolchain, bitdiff, progress
 
 
@@ -115,14 +113,3 @@ with database.transact() as db:
                 'jtag': f_jtag_on,
             }),
         })
-
-        for gclk, gclk_pin in (('gclk1', 'C1'), ('gclk2', 'C2'), ('gclk3', 'C3')):
-            f_gclk_pos = run(f"DFF ff(.CLK({gclk_pin}), .D(1'b0), .Q(Q));")
-            f_gclk_neg = run(f"wire Cn; INV in({gclk_pin}, Cn); "
-                             f"DFF ff(.CLK(Cn), .D(1'b0), .Q(Q));")
-            config.update({
-                f"{gclk}_invert": bitdiff.describe(1, {
-                    'off': f_gclk_pos,
-                    'on':  f_gclk_neg,
-                }),
-            })
