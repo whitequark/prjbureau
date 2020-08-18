@@ -255,9 +255,13 @@ global_options = {
     "tdi_pull_up":      "IO",
     "tms_pull_up":      "IO",
     "r_pad_term":       "IO",
+    "r_pad_schmitt_trigger": "IO",
     "c1_pad_term":      "IO",
+    "c1_pad_schmitt_trigger": "IO",
     "c2_pad_term":      "IO",
+    "c2_pad_schmitt_trigger": "IO",
     "e1_pad_term":      "IO",
+    "e1_pad_schmitt_trigger": "IO",
     "power_reset":      "C",
     "jtag_pin_func":    "M",
 }

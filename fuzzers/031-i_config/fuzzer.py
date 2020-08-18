@@ -10,7 +10,15 @@ with database.transact() as db:
         package, pinout = next(iter(device['pins'].items()))
         config = device['global']['config']
 
-        def run(except_pads, **kwargs):
+        def run_used(pad, **kwargs):
+            return toolchain.run(
+                f"module top(input I, output Q); "
+                f"assign Q = I; "
+                f"endmodule",
+                {'I': pinout[pad]},
+                f"{device_name}-{package}", **kwargs)
+
+        def run_unused(except_pads, **kwargs):
             ins  = []
             outs = []
             code = []
@@ -45,12 +53,24 @@ with database.transact() as db:
             ('C2', 'c2_pad'),
             ('E1', 'e1_pad'),
         ):
-            f_highz   = run(pad)
-            f_pullup  = run(pad, strategy={'pull_up_Unused':'on'})
-            f_pulldn  = run(pad, strategy={'unused_To_Ground':'on'})
-            f_pinkeep = run(pad, strategy={'unused_To_PinKeeper':'on'})
+            f_norm    = run_used(pad)
+            f_hyst    = run_used(pad, strategy={'schmitt_trigger':'I'})
+
+            # The fitter contains an atrocious bug that causes it to be unable to distinguish
+            # between termination on pins 38 and 40 (TQFP-44). We work around that by setting
+            # the termination for all unused pins, and making sure exactly one pin is unused.
+            #
+            # Depressing.
+            f_highz   = run_unused(pad)
+            f_pullup  = run_unused(pad, strategy={'pull_up_Unused':'on'})
+            f_pulldn  = run_unused(pad, strategy={'unused_To_Ground':'on'})
+            f_pinkeep = run_unused(pad, strategy={'unused_To_PinKeeper':'on'})
 
             config.update({
+                f"{net_name}_schmitt_trigger": bitdiff.describe(1, {
+                    'off': f_norm,
+                    'on':  f_hyst,
+                }),
                 f"{net_name}_term": bitdiff.describe(2, {
                     'high_z':     f_highz,
                     'pull_up':    f_pullup,
