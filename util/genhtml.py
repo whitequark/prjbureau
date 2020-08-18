@@ -1,5 +1,6 @@
 import re
 import os, os.path
+from collections import defaultdict
 
 from . import root_dir, database
 
@@ -671,6 +672,74 @@ def write_user(f, device_name, device):
         write_mux(f, f"{byte_index}", user_byte, active_low=False, descr="byte")
 
 
+def write_pins(f, device_name, device):
+    write_header(f, device_name, f"Pinout")
+
+    f.write(f"<p>Device {device_name} is available in packages "
+            f"{', '.join(device['pins'])}.</p>")
+
+    columns = [
+        'Macrocell', 'Logic Block', 'Special Function',
+        'Device Pad', *[f"{package} Pin" for package in device['pins']],
+    ]
+    rows_by_pad = defaultdict(lambda: {})
+
+    for macrocell_name, macrocell in device['macrocells'].items():
+        row = rows_by_pad[macrocell['pad']]
+        row['Macrocell'] = f"<a href='mc{macrocell['block']}.html#{macrocell_name}'>" \
+                           f"{macrocell_name}</a>"
+        row['Logic Block'] = f"<a href='mc{macrocell['block']}.html'>{macrocell['block']}</a>"
+        row['Device Pad'] = macrocell['pad']
+
+    for special_name, special_macrocell_name in device['specials'].items():
+        row = rows_by_pad[device['macrocells'][special_macrocell_name]['pad']]
+        if 'Special Function' not in row:
+            row['Special Function'] = f"<b>{special_name}</b>"
+        else:
+            row['Special Function'] += f", <b>{special_name}</b>"
+
+    for pad, special_func in (
+        ('C1', '<b>GCLK1</b>'),
+        ('E1', '<b>OE1</b>'),
+        ('R',  '<b>GCLR</b>'),
+        ('C2', '<b>OE2</b>, <b>GCLK2</b>'),
+    ):
+        rows_by_pad[pad] = {
+            'Macrocell': '—',
+            'Logic Block': '—',
+            'Device Pad': pad,
+            'Special Function': special_func,
+        }
+
+    for package, pinout in device['pins'].items():
+        for pad, row in rows_by_pad.items():
+            row[f"{package} Pin"] = pinout.get(pad, '—')
+
+    for row in rows_by_pad.values():
+        if 'Special Function' not in row: continue
+        row['Special Function'] = re.sub(r"(GCLK\d</b>)", r"\1†", row['Special Function'])
+
+    first_package = next(iter(device['pins']))
+    rows = list(sorted(rows_by_pad.values(),
+                       key=lambda row: natural_sort_key(row[f"{first_package} Pin"])))
+    f.write(f"<table><tr>")
+    for column in columns:
+        f.write(f"<th bgcolor='#ddd' style='color:#333; max-width: 90px'>{column}</th>")
+    f.write(f"</tr>")
+    for row in rows:
+        f.write(f"<tr>")
+        for column in columns:
+            f.write(f"<td align='center' style='border-bottom: 1px solid #ddd'>"
+                    f"{row.get(column, '')}</td>")
+        f.write(f"</tr>")
+    f.write(f"</table>")
+
+    f.write(f"<p>† Any of the three on-chip global clock networks <b>GCLK1</b>, <b>GCLK2</b>, "
+            f"and <b>GCLK3</b> can be driven by any of the three pads with global clock input "
+            f"capability, <b>C1</b>, <b>C2</b>, and <b>{device['specials']['GCLK3']}</b>. "
+            f"The name of the special function merely illustrates the typical application.</p>")
+
+
 docs_dir = os.path.join(root_dir, "docs", "genhtml")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
@@ -715,6 +784,10 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
 
                 write_config(fg, device_name, device)
                 write_user(fg, device_name, device)
+
+            fd.write(f"<li><a href='pins.html'>Pinout</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"pins.html"), "w") as fg:
+                write_pins(fg, device_name, device)
 
             fd.write(f"</ul>\n")
 
