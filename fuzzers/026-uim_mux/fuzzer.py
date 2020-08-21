@@ -97,7 +97,7 @@ with database.transact() as db:
                     else:
                         assert False
                     pt1_fuse_range = range(
-                        *device['pterms'][probe_macrocell_name]['PT1']['fuse_range'])
+                        *device['macrocells'][probe_macrocell_name]['pterm_ranges']['PT1'])
 
                     fuses = run(sorted(net_set), probe_macrocell)
 
@@ -181,7 +181,7 @@ with database.transact() as db:
                 else:
                     assert False
                 pt1_fuse_range = range(
-                    *device['pterms'][probe_macrocell_name]['PT1']['fuse_range'])
+                    *device['macrocells'][probe_macrocell_name]['pterm_ranges']['PT1'])
 
                 f_pos = run(uim_net_set, probe_macrocell, invert=False)
                 f_neg = run(uim_net_set, probe_macrocell, invert=True)

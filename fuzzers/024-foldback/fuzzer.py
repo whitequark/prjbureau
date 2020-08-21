@@ -92,7 +92,8 @@ with database.transact() as db:
                 # The macrocell that gained a foldback now had PT1 enabled, find it.
                 new_pt1s = set()
                 for macrocell_name in block['macrocells']:
-                    pt1_fuse_range = range(*device['pterms'][macrocell_name]['PT1']['fuse_range'])
+                    pt1_fuse_range = \
+                        range(*device['macrocells'][macrocell_name]['pterm_ranges']['PT1'])
                     pt1_zeros = f_curr[pt1_fuse_range.start:pt1_fuse_range.stop].count(0)
                     if pt1_zeros == len(pt1_fuse_range):
                         pass # disabled
@@ -122,7 +123,8 @@ with database.transact() as db:
                 # across macrocells.
                 new_pt4s = set()
                 for macrocell_name in block['macrocells']:
-                    pt4_fuse_range = range(*device['pterms'][macrocell_name]['PT4']['fuse_range'])
+                    pt4_fuse_range = \
+                        range(*device['macrocells'][macrocell_name]['pterm_ranges']['PT4'])
                     f_prev_pt4 = f_prev[pt4_fuse_range.start:pt4_fuse_range.stop]
                     f_curr_pt4 = f_curr[pt4_fuse_range.start:pt4_fuse_range.stop]
                     if f_prev_pt4 != f_curr_pt4:

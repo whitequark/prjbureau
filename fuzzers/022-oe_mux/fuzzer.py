@@ -76,7 +76,7 @@ with database.transact() as db:
             # Choosing pure VCC is a bit annoying (it switches pt5_func and/or pt5_mux depending
             # on how you do it), so choose PT5 and mask out the PT5 fuses instead.
             f_vcc = run(f"wire BY; BIBUF b(Y, CLK1, BY, O);")
-            for pt5_fuse in range(*device['pterms'][macrocell_name]['PT5']['fuse_range']):
+            for pt5_fuse in range(*device['macrocells'][macrocell_name]['pterm_ranges']['PT5']):
                 f_vcc[pt5_fuse] = 0 # don't care
             nodes['vcc_pt5'] = f_vcc
 

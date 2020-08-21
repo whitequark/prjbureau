@@ -129,7 +129,7 @@ class FuseTool:
             self.print("{:14} = {}".format(option_name, value))
 
     def get_pterm(self, pterm_name, pterm, pterm_points):
-        pterm_fuse_range = range(*pterm['fuse_range'])
+        pterm_fuse_range = range(*pterm)
         pterm_fuses = self.fuses[pterm_fuse_range.start:pterm_fuse_range.stop]
         if not pterm_fuses.count(0):
             value = 'VCC'
@@ -169,7 +169,7 @@ class FuseTool:
             macrocell = self.device['macrocells'][macrocell_name]
 
             pterm_points = self.device['blocks'][macrocell['block']]['pterm_points']
-            for pterm_name, pterm in self.device['pterms'][macrocell_name].items():
+            for pterm_name, pterm in macrocell['pterm_ranges'].items():
                 if match_filters_last(filters, ('PT', pterm_name)):
                     self.get_pterm(pterm_name, pterm, pterm_points)
 
@@ -258,7 +258,7 @@ class FuseTool:
         value = value.upper()
         self.print(f"{pterm_name}: {value}")
 
-        pterm_fuse_range = range(*pterm['fuse_range'])
+        pterm_fuse_range = range(*pterm)
         pterm_fuses = self.fuses[pterm_fuse_range.start:pterm_fuse_range.stop]
         if value == 'VCC':
             pterm_fuses.setall(1)
@@ -321,7 +321,7 @@ class FuseTool:
             macrocell = self.device['macrocells'][macrocell_name]
 
             pterm_points = self.device['blocks'][macrocell['block']]['pterm_points']
-            for pterm_name, pterm in self.device['pterms'][macrocell_name].items():
+            for pterm_name, pterm in macrocell['pterm_ranges'].items():
                 if match_filters_last(filters, ('PT', pterm_name)):
                     changed += self.set_pterm(pterm_name, pterm, pterm_points, value)
 

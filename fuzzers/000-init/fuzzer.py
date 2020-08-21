@@ -31,12 +31,10 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
             f"MC{1+mi}": {
                 "block": blocks[mi // 16],
                 "pad": f"M{1+mi}",
-            } for mi in range(len(blocks) * 16)
-        },
-        "pterms": {
-            f"MC{1+mi}": {
-                f"PT{1+pi}": {
-                } for pi in range(5)
+                "pterm_ranges": {
+                    f"PT{1+pi}": None
+                    for pi in range(5)
+                }
             } for mi in range(len(blocks) * 16)
         },
         "uim_muxes": {

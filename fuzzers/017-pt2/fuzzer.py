@@ -45,5 +45,5 @@ with database.transact() as db:
             assert pt_fuses == list(range(min(pt_fuses), max(pt_fuses) + 1)), \
                    f"PT fuses not contiguous"
 
-            device['pterms'][macrocell_name]['PT2']['fuse_range'] = \
+            device['macrocells'][macrocell_name]['pterm_ranges']['PT2'] = \
                 [min(pt_fuses), max(pt_fuses) + 1]

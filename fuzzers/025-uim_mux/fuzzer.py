@@ -59,8 +59,8 @@ with database.transact() as db:
 
         def run_task(object, probe_macrocell, probe_macrocell_name,
                      node_name, xpoint_kind, run_fn):
-            pt1_fuse_range = range(
-                *device['pterms'][probe_macrocell_name]['PT1']['fuse_range'])
+            pt1_fuse_range = \
+                range(*device['macrocells'][probe_macrocell_name]['pterm_ranges']['PT1'])
 
             fuses = run_fn(object, probe_macrocell)
 

@@ -375,9 +375,9 @@ def update_onehot_bitmap(bitmap, option_name, option, sigil, *, active_low=True)
 
 def update_pterm_bitmap(bitmap, pterm_name, pterm, xpoints, *, override=None):
     count = 0
-    if 'fuse_range' not in pterm:
-        return 0
-    fuse_range = range(*pterm['fuse_range'])
+    if pterm is None:
+        return count
+    fuse_range = range(*pterm)
     for fuse in fuse_range:
         fuse_offset = fuse - fuse_range.start
         if override or fuse_offset in xpoints:
@@ -447,7 +447,6 @@ def write_pterms(f, device_name, device, block_name):
     write_header(f, device_name, f"Logic Block {block_name} Product Terms")
 
     blocks = device['blocks']
-    pterms = device['pterms']
     pterms_fuse_range = range(*device['ranges']['pterms'])
 
     xpoints = {}
@@ -459,7 +458,8 @@ def write_pterms(f, device_name, device, block_name):
 
     total_fuse_count = 0
     for macrocell_name in blocks[block_name]['macrocells']:
-        for pterm_name, pterm in pterms[macrocell_name].items():
+        macrocell = device['macrocells'][macrocell_name]
+        for pterm_name, pterm in macrocell['pterm_ranges'].items():
             total_fuse_count += update_pterm_bitmap(bitmap, f"{macrocell_name}.{pterm_name}",
                                                     pterm, xpoints)
 
@@ -474,13 +474,14 @@ def write_pterms(f, device_name, device, block_name):
 
         other_macrocell_names = blocks[other_block_name]['macrocells']
         for other_macrocell_name in other_macrocell_names:
-            for other_pterm_name, other_pterm in pterms[other_macrocell_name].items():
+            other_macrocell = device['macrocells'][other_macrocell_name]
+            for other_pterm_name, other_pterm in other_macrocell['pterm_ranges'].items():
                 update_pterm_bitmap(bitmap, f"{other_macrocell_name}.{other_pterm_name}",
                                     other_pterm, other_xpoints, override='-')
 
     pterm_links = [f"<a href='#{macrocell_name}.{pterm_name}'>{macrocell_name}.{pterm_name}</a>"
                    for macrocell_name in blocks[block_name]['macrocells']
-                   for pterm_name in pterms[macrocell_name]]
+                   for pterm_name in device['macrocells'][macrocell_name]['pterm_ranges']]
     write_section(f, "Product Term Array Configuration Bitmap",
         f"Logic block {block_name} uses {total_fuse_count} (known) fuses within range "
         f"{pterms_fuse_range.start}..{pterms_fuse_range.stop} for product terms "
@@ -511,9 +512,9 @@ def write_pterms(f, device_name, device, block_name):
                  link_fn=lambda name: f"uim{block_name}.html#{name[:-2]}")
 
     for macrocell_name in blocks[block_name]['macrocells']:
-        for pterm_name, pterm in pterms[macrocell_name].items():
-            if 'fuse_range' not in pterm: continue
-            pterm_fuse_range = range(*pterm['fuse_range'])
+        for pterm_name, pterm in device['macrocells'][macrocell_name]['pterm_ranges'].items():
+            if pterm is None: continue
+            pterm_fuse_range = range(*pterm)
             write_section(f, f"<a name='{macrocell_name}.{pterm_name}'></a>"
                              f"Macrocell {macrocell_name} Product Term {pterm_name} Fuses",
                 f"Macrocell {macrocell_name} product term {pterm_name} uses fuses within range "
