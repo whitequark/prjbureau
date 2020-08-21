@@ -194,5 +194,11 @@ with database.transact() as db:
                 assert f_xor.count(1) == 1 and f_xor.index(1) in pt1_fuse_range
                 block['pterm_points'][f"{uim_name}_N"] = f_xor.index(1) - pt1_fuse_range.start
 
+            # Make chipdb deterministic.
+            block['pterm_points'] = {
+                key: value for key, value in sorted(block['pterm_points'].items(),
+                                                    key=lambda kv: kv[1])
+            }
+
             assert len(block['uim_muxes']) == 40
             assert len(block['pterm_points']) == 96

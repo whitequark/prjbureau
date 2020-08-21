@@ -230,3 +230,9 @@ with database.transact() as db:
                 value = erased_value ^ (1 << n_fuse)
                 if value not in mux['values'].values():
                     mux['values']['GND0'] = value
+            # Make chipdb deterministic.
+            mux['values'] = {
+                key: value
+                for key, value in sorted(mux['values'].items(),
+                                         key=lambda kv: erased_value ^ kv[1])
+            }
