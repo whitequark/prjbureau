@@ -28,7 +28,7 @@ macrocell_options = [
     "storage",
     "fb_mux",
     "o_mux",
-    "o_inv",
+    "o_invert",
     "oe_mux",
     "slow_output",
     "open_collector",

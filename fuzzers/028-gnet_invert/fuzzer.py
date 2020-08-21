@@ -102,4 +102,3 @@ with database.transact() as db:
                     'on':  f_goe_neg,
                 }),
             })
-

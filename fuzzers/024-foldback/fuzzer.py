@@ -110,7 +110,7 @@ with database.transact() as db:
                 # ter? Based on hardware testing, pt1_mux routes PT1 to either foldback or sum
                 # term, whichever is selected, and routes 0 to the other net. (This happens before
                 # the inverter.) Note that foldback has a special case chosen by particular values
-                # of o_inv, xor_a_mux, and xor_b_mux.
+                # of o_invert, xor_a_mux, and xor_b_mux.
                 device['macrocells'][new_pt1].update({
                     'pt1_mux':
                         bitdiff.describe(1, {'flb': f_curr, 'sum': f_prev},

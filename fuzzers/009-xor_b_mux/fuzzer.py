@@ -24,7 +24,7 @@ with database.transact() as db:
             f_dff = run("DFF ff(.CLK(CLK), .D(1'b0), .Q(Q));")
             f_tff = run("TFF ff(.CLK(CLK), .T(1'b0), .Q(Q));")
 
-            # The GND choice of XOR B mux is shared with !PT1 and !PT2 choices: if o_inv is off,
+            # The GND choice of XOR B mux is shared with !PT1 and !PT2 choices: if o_invert is off,
             # then it is GND; otherwise: if pt2_mux is xor and xor_a_mux is sum, then it is !PT2;
             # if pt1_mux is flb and xor_a_mux is vcc_pt2, then it is !PT1; otherwise it is GND.
             # Further, the XOR B mux is linked to FLB: if XOR B mux is !PT1, then FLB is always 1,
