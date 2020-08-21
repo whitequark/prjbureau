@@ -11,12 +11,14 @@ with database.transact() as db:
         package, pinout = next(iter(device['pins'].items()))
 
         uim_mux_range = range(*device['ranges']['uim_muxes'])
-        assert len(uim_mux_range) % len(device['uim_muxes']) == 0
-        uim_mux_size  = len(uim_mux_range) // len(device['uim_muxes'])
-        for uim_index, (uim_name, uim_mux) in enumerate(device['uim_muxes'].items()):
-            uim_mux['fuses'] = list(range(uim_mux_range.start + uim_mux_size * uim_index,
-                                          uim_mux_range.start + uim_mux_size * (uim_index + 1)))
-            uim_mux['values'] = {'GND1': (1 << uim_mux_size) - 1}
+        assert len(uim_mux_range) % len(device['switches']) == 0
+        uim_mux_size  = len(uim_mux_range) // len(device['switches'])
+        for uim_index, (switch_name, switch) in enumerate(device['switches'].items()):
+            switch['mux'] = {
+                'fuses': list(range(uim_mux_range.start + uim_mux_size * uim_index,
+                                    uim_mux_range.start + uim_mux_size * (uim_index + 1))),
+                'values': {'GND1': (1 << uim_mux_size) - 1}
+            }
 
         def run_pad(code, object, probe_macrocell):
             return toolchain.run(
@@ -74,17 +76,19 @@ with database.transact() as db:
             uim_zero_index = fuses[uim_mux_range.start:uim_mux_range.stop].index(0)
 
             # Find the UIM mux.
-            for uim_name, uim_mux in device['uim_muxes'].items():
+            for switch_name, switch in device['switches'].items():
+                uim_mux = switch['mux']
                 if uim_mux_range.start + uim_zero_index in uim_mux['fuses']:
                     break
             else:
                 assert False
-            if uim_name not in block['uim_muxes']:
-                block['uim_muxes'].append(uim_name)
-                block['uim_muxes'].sort(key=lambda x: int(x[3:]))
+            if switch_name not in block['switches']:
+                device['switches'][switch_name]['block'] = block_name
+                block['switches'].append(switch_name)
+                block['switches'].sort(key=lambda x: int(x[3:]))
                 for other_block_name, other_block in device['blocks'].items():
                     if other_block_name != block_name:
-                        assert uim_name not in other_block['uim_muxes']
+                        assert switch_name not in other_block['switches']
 
             # Find the value of the UIM mux.
             uim_value = sum(fuses[fuse] << n_fuse
@@ -95,7 +99,7 @@ with database.transact() as db:
                 uim_mux['values'][node_name] = uim_value
 
             # Find the PT cross point.
-            xpoint_name = f"{uim_name}_{xpoint_kind}"
+            xpoint_name = f"{switch_name}_{xpoint_kind}"
             if xpoint_name in block['pterm_points']:
                 assert block['pterm_points'][xpoint_name] == pt1_zero_index
             else:
@@ -104,7 +108,7 @@ with database.transact() as db:
         for block_name, block in device['blocks'].items():
             progress(2)
 
-            block['uim_muxes'].clear()
+            block['switches'].clear()
 
             for macrocell_name, macrocell in device['macrocells'].items():
                 progress(1)
@@ -144,5 +148,6 @@ with database.transact() as db:
                 run_task(node, probe_macrocell, probe_macrocell_name,
                          f"{node['pad']}_PAD", 'N', run_pad_neg)
 
-            progress((sum(len(mux['values']) - 1 for mux in device['uim_muxes'].values()),
+            progress((sum(len(switch['mux']['values']) - 1
+                          for switch in device['switches'].values()),
                       len(uim_mux_range)))

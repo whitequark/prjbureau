@@ -16,7 +16,7 @@ with database.transact() as db:
         blocks = device['blocks']
 
         uim_mux_range = range(*device['ranges']['uim_muxes'])
-        uim_mux_size  = len(uim_mux_range) // len(device['uim_muxes'])
+        uim_mux_size  = len(uim_mux_range) // len(device['switches'])
 
         def run(nets, probe_macrocell, *, invert=False):
             pads = [net[:-4] for net in nets if net.endswith("_PAD")]
@@ -58,7 +58,8 @@ with database.transact() as db:
 
         for block_name, block in device['blocks'].items():
             progress(4)
-            progress((sum(len(mux['values']) - 1 for mux in device['uim_muxes'].values()),
+            progress((sum(len(switch['mux']['values']) - 1
+                          for switch in device['switches'].values()),
                       len(uim_mux_range)))
 
             # We only set up non-inverting xpoints while fuzzing because it is not straightforward
@@ -73,11 +74,12 @@ with database.transact() as db:
             limit = 2
 
             visited = set()
-            while len(block['uim_muxes']) < 40 or not all(neg_uim_nets.values()):
+            while len(block['switches']) < 40 or not all(neg_uim_nets.values()):
                 net_sets = set()
-                block_uim_muxes = {uim_name: device['uim_muxes'][uim_name]
-                                   for uim_name in block['uim_muxes']}
-                for uim_name, uim_mux in block_uim_muxes.items():
+                block_switches = {switch_name: device['switches'][switch_name]
+                                  for switch_name in block['switches']}
+                for switch in block_switches.values():
+                    uim_mux = switch['mux']
                     if len(uim_mux['values']) == uim_mux_size + 1: continue
                     uim_net_set = set(uim_mux['values']) - {'GND1'}
                     net_sets.update(map(frozenset, itertools.combinations(uim_net_set, limit)))
@@ -102,7 +104,8 @@ with database.transact() as db:
                     fuses = run(sorted(net_set), probe_macrocell)
 
                     found_uim_name = found_uim_value = None
-                    for new_uim_name, new_uim_mux in device['uim_muxes'].items():
+                    for new_uim_name, new_switch in device['switches'].items():
+                        new_uim_mux = new_switch['mux']
                         new_uim_value = sum(fuses[fuse] << n_fuse
                                             for n_fuse, fuse in enumerate(new_uim_mux['fuses']))
                         if new_uim_value == new_uim_mux['values']['GND1']: continue
@@ -140,14 +143,15 @@ with database.transact() as db:
                     if found_uim_name is not None:
                         progress(1)
                         assert len(nets) == 1
-                        found_uim_mux = device['uim_muxes'][found_uim_name]
+                        found_uim_mux = device['switches'][found_uim_name]['mux']
                         found_uim_mux['values'][nets.pop()] = found_uim_value
-                        if found_uim_name not in block['uim_muxes']:
-                            block['uim_muxes'].append(found_uim_name)
-                            block['uim_muxes'].sort(key=lambda x: int(x[3:]))
+                        if found_uim_name not in block['switches']:
+                            device['switches'][found_uim_name]['block'] = block_name
+                            block['switches'].append(found_uim_name)
+                            block['switches'].sort(key=lambda x: int(x[3:]))
                             for other_block_name, other_block in device['blocks'].items():
                                 if other_block_name != probe_macrocell['block']:
-                                    assert found_uim_name not in other_block['uim_muxes']
+                                    assert found_uim_name not in other_block['switches']
 
                         pt1_zeros = fuses[pt1_fuse_range.start:pt1_fuse_range.stop].count(0)
                         assert pt1_zeros == 1
@@ -166,7 +170,8 @@ with database.transact() as db:
                     limit += 1
                 else:
                     progress(2)
-                    progress((sum(len(mux['values']) - 1 for mux in device['uim_muxes'].values()),
+                    progress((sum(len(switch['mux']['values']) - 1
+                                  for switch in device['switches'].values()),
                               len(uim_mux_range)))
 
             # Earlier we only set up non-inverting xpoints. Set up inverting ones now.
@@ -200,5 +205,5 @@ with database.transact() as db:
                                                     key=lambda kv: kv[1])
             }
 
-            assert len(block['uim_muxes']) == 40
+            assert len(block['switches']) == 40
             assert len(block['pterm_points']) == 96

@@ -23,7 +23,7 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
         "blocks": {
             bn: {
                 "macrocells": [f"MC{1+16*bi+mi}" for mi in range(16)],
-                "uim_muxes": [],
+                "switches": [],
                 "pterm_points": {},
             } for bi, bn in enumerate(blocks)
         },
@@ -37,8 +37,9 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
                 }
             } for mi in range(len(blocks) * 16)
         },
-        "uim_muxes": {
+        "switches": {
             f"UIM{1+xi}": {
+                "block": None
             } for xi in range(len(blocks) * 40)[::-1 if flip_muxes else 1]
         },
         "goe_muxes": {

@@ -19,7 +19,7 @@ with database.transact() as db:
         blocks = device['blocks']
 
         uim_mux_range = range(*device['ranges']['uim_muxes'])
-        uim_mux_size  = len(uim_mux_range) // len(device['uim_muxes'])
+        uim_mux_size  = len(uim_mux_range) // len(device['switches'])
 
         def run(nets, probe_macrocell):
             pads = [net[:-4] for net in nets if net.endswith("_PAD")]
@@ -59,7 +59,7 @@ with database.transact() as db:
                 },
                 f"{device_name}-{package}")
 
-        uim_muxes = device['uim_muxes']
+        switches = device['switches']
 
         uim_fuses_total = len(uim_mux_range)
         uim_fuses_known = None
@@ -78,18 +78,19 @@ with database.transact() as db:
         visited = set()
         while (uim_fuses_known is None or
                     uim_fuses_known + len(device['blocks']) * gnd_per_block < uim_fuses_total):
-            uim_fuses_known = sum(len(mux['values']) - 1 for mux in device['uim_muxes'].values())
+            uim_fuses_known = sum(len(switch['mux']['values']) - 1
+                                  for switch in device['switches'].values())
             progress(2)
             progress((uim_fuses_known, uim_fuses_total))
 
             all_blocks_failed = True
             for block_name, block in device['blocks'].items():
-                block_uim_muxes = {uim_name: uim_muxes[uim_name]
-                                   for uim_name in block['uim_muxes']}
+                block_uim_muxes = {uim_name: switches[uim_name]['mux']
+                                   for uim_name in block['switches']}
                 block_uim_nets = set(sum((list(net_name
-                                               for net_name in uim_muxes[uim_name]['values']
+                                               for net_name in switches[uim_name]['mux']['values']
                                                if not net_name.startswith('GND'))
-                                          for uim_name in block['uim_muxes']), []))
+                                          for uim_name in block['switches']), []))
 
                 dead_branches = 0
                 dull_reduces = 0
@@ -128,7 +129,7 @@ with database.transact() as db:
                     if found == 1:
                         assert len(nets) == 1, f"expected a single net, not {nets}"
                         found_uim_net = nets.pop()
-                        found_uim_mux = device['uim_muxes'][found_uim_name]
+                        found_uim_mux = device['switches'][found_uim_name]['mux']
                         assert found_uim_net not in found_uim_mux['values']
                         assert found_uim_value not in found_uim_mux['values'].values()
                         found_uim_mux['values'][found_uim_net] = found_uim_value
@@ -190,12 +191,12 @@ with database.transact() as db:
                                 return False
 
                     uim_name  = det_random.choice(list(uims))
-                    net_names = [name for name in uim_muxes[uim_name]['values']
+                    net_names = [name for name in switches[uim_name]['mux']['values']
                                  if name in nets]
                     for net_name in det_random.sample(net_names, len(net_names)):
                         removed_uims = set(uim_name for uim_name in block_uim_muxes
-                                           if net_name in uim_muxes[uim_name]['values'])
-                        removed_nets = set(sum((list(uim_muxes[uim_name]['values'])
+                                           if net_name in switches[uim_name]['mux']['values'])
+                        removed_nets = set(sum((list(switches[uim_name]['mux']['values'])
                                                 for uim_name in removed_uims), []))
                         if search_tree(uims=uims - removed_uims,
                                        nets=nets - removed_nets,
@@ -206,8 +207,8 @@ with database.transact() as db:
                     return False
 
                 uims=set(block_uim_muxes)
-                nets=set(sum((list(name for name in uim_muxes[uim_name]['values']
-                                  if not name.startswith('GND'))
+                nets=set(sum((list(name for name in switches[uim_name]['mux']['values']
+                                   if not name.startswith('GND'))
                               for uim_name in block_uim_muxes), []))
                 if search_tree(uims, nets, extra=extra):
                     all_blocks_failed = False
@@ -216,12 +217,13 @@ with database.transact() as db:
                 progress(3)
                 extra += 1
 
-        for mux_name, mux in device['uim_muxes'].items():
+        for switch_name, switch in device['switches'].items():
+            mux = switch['mux']
             if 'GND0' in mux['values']: continue
             # Some UIM muxes have one fuse which is never used by the fitter. Hardware testing
             # and celestial rituals demonstrate that this fuse drives the PT input network low.
             assert (len(mux['values']) - 1) in (len(mux['fuses']) - 1, len(mux['fuses'])), \
-                   f"UIM mux {mux_name} should have zero or one unused values"
+                   f"UIM mux {switch_name} should have zero or one unused values"
             # Setting the mux to all-ones (erased state) has the exact same result, so call the GND
             # with all-ones "GND1" and the GND with one fuse set to 0 "GND0".
             erased_value = (1 << len(mux['fuses'])) - 1

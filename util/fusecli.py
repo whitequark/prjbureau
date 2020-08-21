@@ -177,17 +177,17 @@ class FuseTool:
             if matched:
                 self.get_macrocell_config(macrocell, subfilters)
 
-    def get_uim_mux(self, uim_mux_name, filters):
-        uim_mux = self.device['uim_muxes'][uim_mux_name]
-        cross_mux_net = extract_fuses(self.fuses, uim_mux, default='(unknown)')
+    def get_switch(self, switch_name, filters):
+        mux = self.device['switches'][switch_name]['mux']
+        cross_mux_net = extract_fuses(self.fuses, mux, default='(unknown)')
         if self.verbose:
             self.print("{}: ({}) {:6} [{:5}..{:5}]".format(
-                uim_mux_name,
-                ''.join(str(self.fuses[n]&1) for n in uim_mux['fuses']),
+                switch_name,
+                ''.join(str(self.fuses[n]&1) for n in mux['fuses']),
                 cross_mux_net,
-                min(uim_mux['fuses']), max(uim_mux['fuses'])))
+                min(mux['fuses']), max(mux['fuses'])))
         else:
-            self.print("{}: {}".format(uim_mux_name, cross_mux_net))
+            self.print("{}: {}".format(switch_name, cross_mux_net))
 
     def get_goe_mux(self, goe_mux_name, filters):
         goe_mux = self.device['goe_muxes'][goe_mux_name]
@@ -225,10 +225,10 @@ class FuseTool:
             if matched:
                 self.get_macrocell(macrocell_name, subfilters)
 
-        for uim_mux_name in self.device['uim_muxes']:
-            matched, subfilters = match_filters(filters, ('UIM', uim_mux_name))
+        for switch_name in self.device['switches']:
+            matched, subfilters = match_filters(filters, ('UIM', switch_name))
             if matched:
-                self.get_uim_mux(uim_mux_name, subfilters)
+                self.get_switch(switch_name, subfilters)
 
         for goe_mux_name in self.device['goe_muxes']:
             matched, subfilters = match_filters(filters, ('GOE', goe_mux_name))
@@ -331,16 +331,16 @@ class FuseTool:
 
         return changed
 
-    def set_uim_mux(self, uim_mux_name, filters, value):
+    def set_uim_mux(self, switch_name, filters, value):
         value = value.upper()
-        self.print(f"{uim_mux_name}: {value}")
+        self.print(f"{switch_name}: {value}")
 
-        uim_mux = self.device['uim_muxes'][uim_mux_name]
-        if value not in uim_mux['values']:
-            raise SystemExit(f"UIM mux {uim_mux_name} cannot select net '{value}'; "
-                             f"choose one of: {', '.join(uim_mux['values'])}")
+        mux = self.device['switches'][switch_name]['mux']
+        if value not in mux['values']:
+            raise SystemExit(f"UIM mux {switch_name} cannot select net '{value}'; "
+                             f"choose one of: {', '.join(mux['values'])}")
 
-        replace_fuses(self.fuses, uim_mux, value)
+        replace_fuses(self.fuses, mux, value)
         return 1
 
     def set_goe_mux(self, goe_mux_name, filters, value):
@@ -389,10 +389,10 @@ class FuseTool:
             if matched:
                 changed += self.set_macrocell(macrocell_name, subfilters, value)
 
-        for uim_mux_name in self.device['uim_muxes']:
-            matched, subfilters = match_filters(filters, ('UIM', uim_mux_name))
+        for switch_name in self.device['switches']:
+            matched, subfilters = match_filters(filters, ('UIM', switch_name))
             if matched:
-                changed += self.set_uim_mux(uim_mux_name, subfilters, value)
+                changed += self.set_uim_mux(switch_name, subfilters, value)
 
         for goe_mux_name in self.device['goe_muxes']:
             matched, subfilters = match_filters(filters, ('GOE', goe_mux_name))
