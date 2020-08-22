@@ -13,7 +13,8 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
         config_range = range(*device['ranges']['config'])
-        config = device['config']
+        gclk_switches = {name: switch for name, switch in device['globals'].items()
+                         if name.startswith('GCLK')}
 
         def run(clocks, **kwargs):
             code = []
@@ -63,9 +64,15 @@ with database.transact() as db:
                         break
                 else:
                     assert False
-                mapping[f"{gclk_mux_net}_mux"] = f"C{pad_n}_PAD"
+                if pad_n in '12':
+                    pad = f"C{pad_n}"
+                elif pad_n == '3':
+                    pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+                else:
+                    assert False
+                mapping[gclk_mux_net] = f"{pad}_PAD"
 
-                gclk_invert_option = device['config'][f"{gclk_mux_net}_invert"]
+                gclk_invert_option = gclk_switches[gclk_mux_net]['invert']
                 for n_fuse, fuse in enumerate(gclk_invert_option['fuses']):
                     assert fuses[fuse] == negedge
                     known_fuses.append(fuse)
@@ -102,8 +109,10 @@ with database.transact() as db:
         # the differences in the GCLK mux.
         results = max(results.values(), key=lambda result: len(result))
 
-        config.update(bitdiff.correlate({
-            'gclk1_mux': 2,
-            'gclk2_mux': 2,
-            'gclk3_mux': 2,
-        }, results))
+        gclk_muxes = bitdiff.correlate({
+            'GCLK1': 2,
+            'GCLK2': 2,
+            'GCLK3': 2,
+        }, results)
+        for gclk_name, gclk_switch in gclk_switches.items():
+            gclk_switch['mux'] = gclk_muxes[gclk_name]

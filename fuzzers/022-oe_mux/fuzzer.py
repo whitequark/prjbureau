@@ -6,10 +6,13 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
+        goe_muxes = {name: switch['mux']
+                     for name, switch in device['globals'].items()
+                     if name.startswith('GOE')}
 
         all_goe_choices = set()
         unique_goe_choices = set()
-        for goe_name, goe_mux in device['goe_muxes'].items():
+        for goe_name, goe_mux in goe_muxes.items():
             for goe_choice in goe_mux['values']:
                 if goe_choice in unique_goe_choices:
                     unique_goe_choices.remove(goe_choice)
@@ -26,7 +29,7 @@ with database.transact() as db:
                 progress(1)
 
             goe_pads = []
-            for goe_name, goe_mux in device['goe_muxes'].items():
+            for goe_name, goe_mux in goe_muxes.items():
                 for goe_choice in goe_mux['values']:
                     if not goe_choice.endswith('_PAD'): continue
                     if goe_choice[:-4] == macrocell['pad']: continue
@@ -37,7 +40,7 @@ with database.transact() as db:
                     progress()
                     print(f"GOE mux {goe_name} is only connected to pad {macrocell['pad']}!")
 
-            if len(goe_pads) < len(device['goe_muxes']):
+            if len(goe_pads) < len(goe_muxes):
                 print(f"Skipping OE mux fuzzing for {macrocell_name} on {device_name}!")
                 continue
 
@@ -60,13 +63,13 @@ with database.transact() as db:
 
             nodes = {}
 
-            for (goe_name, goe_mux), goe_pad in zip(device['goe_muxes'].items(), goe_pads):
+            for (goe_name, goe_mux), goe_pad in zip(goe_muxes.items(), goe_pads):
                 f_goe = run(f"TRI t(Y, {goe_pad}, O);", strategy={"Global_OE": goe_pad})
                 for offset, goe_mux_fuse in enumerate(goe_mux['fuses']):
                     # We know what the GOE mux choice is.
                     assert f_goe[goe_mux_fuse] == (goe_mux['values'][goe_pad] >> offset) & 1
                     f_goe[goe_mux_fuse] = 1 # don't care
-                nodes[goe_name.lower()] = f_goe
+                nodes[goe_name] = f_goe
 
             f_gnd = run(f"wire BY; BIBUF b(Y, 1'b0, BY, O);")
             nodes['gnd'] = f_gnd

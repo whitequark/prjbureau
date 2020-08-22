@@ -42,9 +42,16 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
                 "block": None
             } for xi in range(len(blocks) * 40)[::-1 if flip_muxes else 1]
         },
-        "goe_muxes": {
-            f"GOE{1+xi}": {
-            } for xi in range(6)[::-1 if flip_muxes else 1]
+        "globals": {
+            "GCLR": {},
+            **{
+                f"GCLK{1+xi}": {
+                } for xi in range(3)
+            },
+            **{
+                f"GOE{1+xi}": {
+                } for xi in range(6)[::-1 if flip_muxes else 1]
+            },
         },
         "config": {},
         "user": [],

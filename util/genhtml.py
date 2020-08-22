@@ -88,8 +88,8 @@ def write_bitmap(f, columns, rows, bitmap, fuse_range, *,
     f.write(f"</table>\n")
 
 
-def write_option(f, option_name, option, *, anchor=True, shared_with=()):
-    f.write(f"<p>Fuse combinations for option \"{option_name}\"")
+def write_option(f, option_name, option, *, anchor=True, shared_with=(), descr="option"):
+    f.write(f"<p>Fuse combinations for {descr} \"{option_name}\"")
     if shared_with:
         f.write(f" (shared with ")
         f.write(", ".join(f"\"{shared_option_name}\"" for shared_option_name in shared_with))
@@ -140,28 +140,31 @@ def write_mux(f, mux_name, mux, *, sort_fn=lambda x: x, active_low=True, descr="
     f.write(f"</table>\n")
 
 
-def write_matrix(f, muxes, *, filter_fn=lambda x: True, sort_fn=lambda x: x):
+def write_matrix(f, switches, *, prefix='', filter_fn=lambda x: True, sort_fn=lambda x: x):
     matrix = {}
-    for mux_name, mux in muxes.items():
-        if 'values' not in mux: continue
-        for net_name, value in mux['values'].items():
-            if not filter_fn(mux_name, net_name):
+    for switch_name, switch in switches.items():
+        if 'mux' not in switch: continue
+        if not switch_name.startswith(prefix): continue
+        for net_name, value in switch['mux']['values'].items():
+            if not filter_fn(switch_name, net_name):
                 continue
             if net_name not in matrix:
                 matrix[net_name] = set()
-            matrix[net_name].add(mux_name)
+            matrix[net_name].add(switch_name)
     f.write(f"<table style='font-size:12px'>\n")
     f.write(f"<tr><td width='70' height='40'></td>")
-    for mux_name in sorted(muxes, key=natural_sort_key):
+    for switch_name in sorted(switches, key=natural_sort_key):
+        if not switch_name.startswith(prefix): continue
         f.write(f"<th width='16'>"
                 f"<div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'>"
-                f"<span style='font-size: 11px'>{mux_name}</span>"
+                f"<span style='font-size: 11px'>{switch_name}</span>"
                 f"</div></th>")
     f.write(f"</tr>\n")
-    for net_name, cross_mux_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
+    for net_name, cross_switch_names in sorted(matrix.items(), key=lambda item: sort_fn(item[0])):
         f.write(f"<tr><td align='right' height='18'>{net_name}</td>")
-        for mux_name in sorted(muxes, key=natural_sort_key):
-            if mux_name in cross_mux_names:
+        for switch_name in sorted(switches, key=natural_sort_key):
+            if not switch_name.startswith(prefix): continue
+            if switch_name in cross_switch_names:
                 f.write(f"<td align='center' bgcolor='#faa' style='color:#666'>R</td>")
             else:
                 f.write(f"<td align='center' bgcolor='#ccc' style='color:#666'>-</td>")
@@ -238,27 +241,17 @@ macrocell_shared_options = {
 
 
 global_options = {
-    "gclr_invert":      "M",
-    "gclk1_invert":     "M",
-    "gclk2_invert":     "M",
-    "gclk3_invert":     "M",
-    "goe1_invert":      "M",
-    "goe2_invert":      "M",
-    "goe3_invert":      "M",
-    "goe4_invert":      "M",
-    "goe5_invert":      "M",
-    "goe6_invert":      "M",
-    "gclk1_mux":        "M",
-    "gclk2_mux":        "M",
-    "gclk3_mux":        "M",
-    "bus_keeper":       "IO",
+    "arming_switch":    "A",
+    "power_reset":      "C",
+    "jtag_pin_func":    "M",
+    "tdi_pull_up":      "IO",
+    "tms_pull_up":      "IO",
     "pd1_pin_func":     "C",
     "pd2_pin_func":     "C",
+    "bus_keeper":       "IO",
     "gclk1_itd":        "C",
     "gclk2_itd":        "C",
     "gclk3_itd":        "C",
-    "tdi_pull_up":      "IO",
-    "tms_pull_up":      "IO",
     "r_pad_term":       "IO",
     "r_pad_schmitt_trigger": "IO",
     "c1_pad_term":      "IO",
@@ -267,9 +260,6 @@ global_options = {
     "c2_pad_schmitt_trigger": "IO",
     "e1_pad_term":      "IO",
     "e1_pad_schmitt_trigger": "IO",
-    "power_reset":      "C",
-    "jtag_pin_func":    "M",
-    "arming_switch":    "A",
 }
 
 
@@ -278,37 +268,37 @@ bitmap_layout = {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "switch":    (5,  [(True,  5)]),
-        "device":    (32, [(True, 32), (True,  4)]),
+        "config":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1502BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "switch":    (5,  [(True,  5)]),
-        "device":    (32, [(True, 32), (True,  8)]),
+        "config":    (32, [(True, 32), (True,  8)]),
     },
     "ATF1504AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "switch":    (9,  [(True,  9)]),
-        "device":    (32, [(True, 32), (True,  4)]),
+        "config":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1504BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "switch":    (9,  [(True, 9)]),
-        "device":    (32, [(True, 32), (True,  8)]),
+        "config":    (32, [(True, 32), (True,  8)]),
     },
     "ATF1508AS": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (32, [(False,16), (True, 32), (True, 32)]),
         "switch":    (27, [(True, 27)]),
-        "device":    (32, [(True, 32), (True,  4)]),
+        "config":    (32, [(True, 32), (True,  4)]),
     },
     "ATF1508BE": {
         "pterm":     (40, [(True, 16), (True, 40), (True, 40)]),
         "macrocell": (27, [(True, 27) for n in range(16)] + [(False, 48)]),
         "switch":    (27, [(True, 27)]),
-        "device":    (32, [(True, 32), (True,  8)]),
+        "config":    (32, [(True, 32), (True,  8)]),
     },
 }
 
@@ -384,7 +374,7 @@ def update_pterm_bitmap(bitmap, pterm_name, pterm, xpoints, *, override=None):
 
 
 def write_macrocells(f, device_name, device, block_name):
-    write_header(f, device_name, f"Logic Block {block_name} Macrocells")
+    write_header(f, device_name, f"Block {block_name} Macrocells")
 
     block = device["blocks"][block_name]
     macrocell_fuse_range = range(*device["ranges"]["macrocells"])
@@ -438,7 +428,7 @@ def write_macrocells(f, device_name, device, block_name):
 
 
 def write_pterms(f, device_name, device, block_name):
-    write_header(f, device_name, f"Logic Block {block_name} Product Terms")
+    write_header(f, device_name, f"Block {block_name} Product Terms")
 
     blocks = device['blocks']
     pterms_fuse_range = range(*device['ranges']['pterms'])
@@ -517,7 +507,7 @@ def write_pterms(f, device_name, device, block_name):
 
 
 def write_switches(f, device_name, device, block_name):
-    write_header(f, device_name, f"Logic Block {block_name} Switches")
+    write_header(f, device_name, f"Block {block_name} Switches")
 
     blocks = device['blocks']
     block_switches = {switch_name: device['switches'][switch_name]
@@ -558,8 +548,7 @@ def write_switches(f, device_name, device, block_name):
 
     write_section(f, "Switch Connectivity",
         f"Switches provide the following possible (known) connection points.")
-    write_matrix(f, {name: switch['mux'] for name, switch in block_switches.items()}, # FIXME
-                 filter_fn=filter_fn, sort_fn=sort_fn)
+    write_matrix(f, block_switches, filter_fn=filter_fn, sort_fn=sort_fn)
 
     for switch_name, switch in sorted(block_switches.items(),
                                 key=lambda x: natural_sort_key(x[0])):
@@ -575,23 +564,45 @@ def write_switches(f, device_name, device, block_name):
         write_mux(f, switch_name, mux, sort_fn=sort_fn)
 
 
-def write_goe(f, device_name, device):
-    write_header(f, device_name, f"Global OE Muxes")
+def write_globals(f, device_name, device):
+    write_header(f, device_name, f"Global Switches")
 
-    goe_fuse_range = range(*device['ranges']['goe_muxes'])
+    goe_mux_fuse_range = range(*device['ranges']['goe_muxes'])
+    config_fuse_range = range(*device['ranges']['config'])
 
     bitmap = {}
     total_fuse_count = 0
-    for mux_name, mux in device['goe_muxes'].items():
-        total_fuse_count += update_onehot_bitmap(bitmap, mux_name, mux, 'R')
+    for switch_name, switch in device['globals'].items():
+        if 'mux' in switch and switch_name.startswith('GCLK'):
+            total_fuse_count += update_option_bitmap(bitmap,
+                switch['mux'], 'M', owner=f"{switch_name}.mux")
+        if 'mux' in switch and switch_name.startswith('GOE'):
+            total_fuse_count += update_onehot_bitmap(bitmap,
+                f"{switch_name}.mux", switch['mux'], 'R')
+        if 'invert' in switch:
+            total_fuse_count += update_option_bitmap(bitmap,
+                switch['invert'], 'M', owner=f"{switch_name}.invert")
+    for option_name, option in device['config'].items():
+        update_option_bitmap(bitmap, option, '-', owner=f"CFG.{option_name}")
 
-    mux_links = [f"<a href='#{name}'>{name}</a>"
-                 for name in sorted(device['goe_muxes'], key=natural_sort_key)]
-    write_section(f, "Global OE Mux Configuration Bitmap",
-        f"Device uses {total_fuse_count} (known) fuses within range "
-        f"{goe_fuse_range.start}..{goe_fuse_range.stop} for global OE muxes "
-        f"{', '.join(mux_links)}.")
-    write_bitmap(f, *bitmap_layout[device_name]['switch'], bitmap, goe_fuse_range)
+    def global_sort_key(switch_name):
+        if switch_name.startswith('GCLR'):
+            return (0,)
+        if switch_name.startswith('GCLK'):
+            return (1, int(switch_name[4:]))
+        if switch_name.startswith('GOE'):
+            return (2, int(switch_name[3:]))
+        assert False
+
+    switch_links = [f"<a href='#{name}'>{name}</a>"
+                    for name in sorted(device['globals'], key=global_sort_key)]
+    write_section(f, "Switch Configuration Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within ranges "
+        f"{goe_mux_fuse_range.start}..{goe_mux_fuse_range.stop} and "
+        f"{config_fuse_range.start}..{config_fuse_range.stop} for global switches "
+        f"{', '.join(switch_links)}.")
+    write_bitmap(f, *bitmap_layout[device_name]['switch'], bitmap, goe_mux_fuse_range)
+    write_bitmap(f, *bitmap_layout[device_name]['config'], bitmap, config_fuse_range)
 
     def filter_fn(mux_name, net_name):
         return net_name not in ('GND1', 'GND0')
@@ -603,25 +614,47 @@ def write_goe(f, device_name, device):
             return int(net_name[1:-4])
         return {'GND1':-5,'GND0':-4,'R_PAD':-3,'C1_PAD':-2,'C2_PAD':-1,'E1_PAD':0}[net_name]
 
-    write_section(f, "Global OE Mux Connectivity",
-        f"Global OE muxes provide the following possible (known) connection points.")
-    write_matrix(f, device['goe_muxes'], filter_fn=filter_fn, sort_fn=sort_fn)
+    write_section(f, "Switch Connectivity",
+        f"Global switches provide the following possible (known) connection points.")
+    write_matrix(f, device['globals'], prefix='GCLK', filter_fn=filter_fn, sort_fn=sort_fn)
+    write_matrix(f, device['globals'], prefix='GOE',  filter_fn=filter_fn, sort_fn=sort_fn)
 
-    for mux_name, mux in sorted(device['goe_muxes'].items(),
-                                key=lambda x: natural_sort_key(x[0])):
-        if 'fuses' not in mux:
-            continue
-        bitmap = {}
-        mux_fuse_count = update_onehot_bitmap(bitmap, mux_name, mux, 'R')
-        write_section(f, f"<a name='{mux_name}'></a>Global OE Mux {mux_name} Fuses",
-            f"Global OE mux {mux_name} uses the following {mux_fuse_count} (known) fuses "
+    for switch_name, switch in sorted(device['globals'].items(),
+                                      key=lambda x: global_sort_key(x[0])):
+        switch_bitmap = {}
+        switch_fuse_count = 0
+        if 'mux' in switch and switch_name.startswith('GCLK'):
+            switch_fuse_count += update_option_bitmap(switch_bitmap,
+                switch['mux'], 'M', owner=f"{switch_name}.mux")
+        if 'mux' in switch and switch_name.startswith('GOE'):
+            switch_fuse_count += update_onehot_bitmap(switch_bitmap,
+                f"{switch_name}.mux", switch['mux'], 'R')
+        if 'invert' in switch:
+            switch_fuse_count += update_option_bitmap(switch_bitmap,
+                switch['invert'], 'M', owner=f"{switch_name}.invert")
+        for fuse, (sigil, owners) in bitmap.items():
+            if fuse not in switch_bitmap:
+                switch_bitmap[fuse] = ('-', owners)
+
+        write_section(f, f"<a name='{switch_name}'></a>Switch {switch_name} Fuses",
+            f"Switch {switch_name} uses the following {switch_fuse_count} (known) fuses "
             f"for configuration.")
-        write_bitmap(f, *bitmap_layout[device_name]['switch'], bitmap, goe_fuse_range,
-                     compact=True)
-        write_mux(f, mux_name, mux, sort_fn=sort_fn)
+        if switch_name.startswith('GOE'):
+            write_bitmap(f, *bitmap_layout[device_name]['switch'], switch_bitmap,
+                         goe_mux_fuse_range, compact=True)
+        write_bitmap(f, *bitmap_layout[device_name]['config'], switch_bitmap,
+                     config_fuse_range, compact=True)
+        if 'mux' in switch and switch_name.startswith('GCLK'):
+            write_option(f, switch_name, switch['mux'], descr='mux')
+        if 'mux' in switch and switch_name.startswith('GOE'):
+            write_mux(f, switch_name, switch['mux'], sort_fn=sort_fn)
+        if 'invert' in switch:
+            write_option(f, 'invert', switch['invert'])
 
 
 def write_config(f, device_name, device):
+    write_header(fg, device_name, f"Device Configuration")
+
     fuse_range = range(*device['ranges']['config'])
 
     bitmap = {}
@@ -629,18 +662,30 @@ def write_config(f, device_name, device):
     for option_name, option in device['config'].items():
         total_fuse_count += update_option_bitmap(bitmap, option, global_options[option_name],
                                                  owner=f"CFG.{option_name}")
+    for switch_name, switch in device['globals'].items():
+        if 'mux' in switch and switch_name.startswith('GCLK'):
+            update_option_bitmap(bitmap, switch['mux'], '-', owner=f"{switch_name}.mux")
+        if 'mux' in switch and switch_name.startswith('GOE'):
+            update_onehot_bitmap(bitmap, f"{switch_name}.mux", switch['mux'], '-')
+        if 'invert' in switch:
+            update_option_bitmap(bitmap, switch['invert'], '-', owner=f"{switch_name}.invert")
 
     write_section(f, "Device Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
         f"{fuse_range.start}..{fuse_range.stop} for global feature and JTAG configuration.")
-    write_bitmap(f, *bitmap_layout[device_name]['device'],
+    write_bitmap(f, *bitmap_layout[device_name]['config'],
                  bitmap, fuse_range)
 
-    for option_name, option in device['config'].items():
+    for option_name in global_options:
+        if option_name not in device['config']:
+            continue
+        option = device['config'][option_name]
         write_option(f, option_name, option)
 
 
 def write_user(f, device_name, device):
+    write_header(fg, device_name, f"User Signature")
+
     fuse_range = range(*device['ranges']['user'])
 
     bitmap = {}
@@ -778,29 +823,30 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
 
             for block_name in device["blocks"]:
                 fd.write(f"<li><a href='mc{block_name}.html'>"
-                         f"Logic Block {block_name} Macrocells</a></li>\n")
+                         f"Block {block_name} Macrocells</a></li>\n")
                 with open(os.path.join(dev_docs_dir, f"mc{block_name}.html"), "w") as fb:
                     write_macrocells(fb, device_name, device, block_name)
 
                 fd.write(f"<li><a href='pt{block_name}.html'>"
-                         f"Logic Block {block_name} Product Terms</a></li>\n")
+                         f"Block {block_name} Product Terms</a></li>\n")
                 with open(os.path.join(dev_docs_dir, f"pt{block_name}.html"), "w") as fb:
                     write_pterms(fb, device_name, device, block_name)
 
                 fd.write(f"<li><a href='sw{block_name}.html'>"
-                         f"Logic Block {block_name} Switches</a></li>\n")
+                         f"Block {block_name} Switches</a></li>\n")
                 with open(os.path.join(dev_docs_dir, f"sw{block_name}.html"), "w") as fb:
                     write_switches(fb, device_name, device, block_name)
 
-            fd.write(f"<li><a href='goe.html'>Global OE Muxes</a></li>\n")
-            with open(os.path.join(dev_docs_dir, f"goe.html"), "w") as fg:
-                write_goe(fg, device_name, device)
+            fd.write(f"<li><a href='gsw.html'>Global Switches</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"gsw.html"), "w") as fg:
+                write_globals(fg, device_name, device)
 
-            fd.write(f"<li><a href='cfg.html'>Global Configuration</a></li>\n")
+            fd.write(f"<li><a href='cfg.html'>Device Configuration</a></li>\n")
             with open(os.path.join(dev_docs_dir, f"cfg.html"), "w") as fg:
-                write_header(fg, device_name, f"Global Configuration")
-
                 write_config(fg, device_name, device)
+
+            fd.write(f"<li><a href='usr.html'>User Signature</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"usr.html"), "w") as fg:
                 write_user(fg, device_name, device)
 
             fd.write(f"<li><a href='pins.html'>Pinout</a></li>\n")

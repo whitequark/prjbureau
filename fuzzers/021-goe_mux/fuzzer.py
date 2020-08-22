@@ -10,13 +10,17 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
 
+        goe_names = [name for name in device['globals'] if name.startswith("GOE")]
         goe_mux_range = range(*device['ranges']['goe_muxes'])
-        assert len(goe_mux_range) % len(device['goe_muxes']) == 0
-        goe_mux_size  = len(goe_mux_range) // len(device['goe_muxes'])
-        for goe_index, (goe_name, goe_mux) in enumerate(device['goe_muxes'].items()):
-            goe_mux['fuses'] = list(range(goe_mux_range.start + goe_mux_size * goe_index,
-                                          goe_mux_range.start + goe_mux_size * (goe_index + 1)))
-            goe_mux['values'] = {}
+        assert len(goe_mux_range) % len(goe_names) == 0
+        goe_mux_size  = len(goe_mux_range) // len(goe_names)
+        for goe_index, goe_name in enumerate(goe_names):
+            device['globals'][goe_name]['mux'] = {
+                'fuses': list(range(goe_mux_range.start + goe_mux_size * goe_index,
+                                    goe_mux_range.start + goe_mux_size * (goe_index + 1))),
+                'values': {}
+            }
+        goe_muxes = {name: device['globals'][name]['mux'] for name in goe_names}
 
         def run_pads(pad_names):
             ports = []
@@ -119,7 +123,7 @@ with database.transact() as db:
                 format='tt')
 
         def has_mux_value(node_name, fuses):
-            for mux_name, mux in device['goe_muxes'].items():
+            for mux_name, mux in goe_muxes.items():
                 gnd_value = (1 << len(mux['fuses'])) - 1
                 value = sum(fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(mux['fuses']))
                 if value == gnd_value: continue
@@ -131,7 +135,7 @@ with database.transact() as db:
             return False
 
         def add_mux_value(node_name, fuses, *, reserved=()):
-            for mux_name, mux in device['goe_muxes'].items():
+            for mux_name, mux in goe_muxes.items():
                 if mux_name in reserved:
                     continue
 
@@ -220,7 +224,7 @@ with database.transact() as db:
                 continue
             add_mux_value(f"{macrocell_name}_FB", fuses)
 
-        for mux_name, mux in device['goe_muxes'].items():
+        for mux_name, mux in goe_muxes.items():
             # Each GOE mux has exactly one fuse which is never used by the fitter. Hardware testing
             # and celestial rituals demonstrate that this fuse drives the GOE network low.
             assert len(mux['values']) == len(mux['fuses']) - 1, \

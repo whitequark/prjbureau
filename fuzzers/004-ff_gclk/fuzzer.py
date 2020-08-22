@@ -30,6 +30,9 @@ with database.transact() as db:
 
             # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
             macrocell.update({
-                'gclk_mux':
-                    bitdiff.describe(2, {'gclk2': f_clk2, 'gclk3': f_clk3, 'gclk1': f_clk1})
+                'gclk_mux': bitdiff.describe(2, {
+                    'GCLK2': f_clk2,
+                    'GCLK3': f_clk3,
+                    'GCLK1': f_clk1
+                })
             })

@@ -6,12 +6,16 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config = device['config']
+        gclr_switch = device['globals']['GCLR']
+        gclk_switches = {name: switch for name, switch in device['globals'].items()
+                         if name.startswith('GCLK')}
+        goe_switches = {name: switch for name, switch in device['globals'].items()
+                        if name.startswith('GOE')}
 
         all_goe_choices = set()
         unique_goe_choices = set()
-        for goe_name, goe_mux in device['goe_muxes'].items():
-            for goe_choice in goe_mux['values']:
+        for goe_name, goe_switch in goe_switches.items():
+            for goe_choice in goe_switch['mux']['values']:
                 if goe_choice in unique_goe_choices:
                     unique_goe_choices.remove(goe_choice)
                 elif goe_choice not in all_goe_choices:
@@ -26,8 +30,8 @@ with database.transact() as db:
         })
 
         goe_pads = []
-        for goe_name, goe_mux in device['goe_muxes'].items():
-            for goe_choice in goe_mux['values']:
+        for goe_name, goe_switch in goe_switches.items():
+            for goe_choice in goe_switch['mux']['values']:
                 if not goe_choice.endswith('_PAD'): continue
                 if goe_choice not in unique_goe_choices: continue
                 goe_pads.append(goe_choice)
@@ -35,17 +39,16 @@ with database.transact() as db:
 
         def run(code, **kwargs):
             return toolchain.run(
-                f"module top(input R, C1, C2, C3, E1, "
+                f"module top(input GCLR, GCLK1, GCLK2, GCLK3, "
                 f"           input GOE1, GOE2, GOE3, GOE4, GOE5, GOE6, "
                 f"           output Q); "
                 f"{code} "
                 f"endmodule",
                 {
-                    'R':  pinout[device['clear']['pad']],
-                    'C1': pinout[device['clocks']['1']['pad']],
-                    'C2': pinout[device['clocks']['2']['pad']],
-                    'C3': pinout[device['clocks']['3']['pad']],
-                    'E1': pinout[device['enables']['1']['pad']],
+                    'GCLR':  pinout[device['clear']['pad']],
+                    'GCLK1': pinout[device['clocks']['1']['pad']],
+                    'GCLK2': pinout[device['clocks']['2']['pad']],
+                    'GCLK3': pinout[device['clocks']['3']['pad']],
                     **{
                         f"GOE{1+n}": pinout[pad[:-4]]
                         for n, pad in enumerate(goe_pads)
@@ -54,20 +57,20 @@ with database.transact() as db:
                 },
                 f"{device_name}-{package}", **kwargs)
 
-        f_gclr_pos = run(f"DFFAR ff(.CLK(1'b0), .AR(R), .D(1'b0), .Q(Q));")
-        f_gclr_neg = run(f"wire Rn; INV in(R, Rn); "
-                         f"DFFAR ff(.CLK(1'b0), .AR(Rn), .D(1'b0), .Q(Q));")
-        config.update({
-            'gclr_invert': bitdiff.describe(1, {
+        f_gclr_pos = run(f"DFFAR ff(.CLK(1'b0), .AR(GCLR),  .D(1'b0), .Q(Q));")
+        f_gclr_neg = run(f"wire GCLRn; INV in(GCLR, GCLRn); "
+                         f"DFFAR ff(.CLK(1'b0), .AR(GCLRn), .D(1'b0), .Q(Q));")
+        gclr_switch.update({
+            'invert': bitdiff.describe(1, {
                 'off': f_gclr_pos,
                 'on':  f_gclr_neg,
             }),
         })
 
-        for gclk, gclk_pin in (('gclk1', 'C1'), ('gclk2', 'C2'), ('gclk3', 'C3')):
-            f_gclk_pos = run(f"DFF ff(.CLK({gclk_pin}), .D(1'b0), .Q(Q));")
-            f_gclk_neg = run(f"wire Cn; INV in({gclk_pin}, Cn); "
-                             f"DFF ff(.CLK(Cn), .D(1'b0), .Q(Q));")
+        for gclk_name, gclk_switch in gclk_switches.items():
+            f_gclk_pos = run(f"DFF ff(.CLK({gclk_name}),  .D(1'b0), .Q(Q));")
+            f_gclk_neg = run(f"wire {gclk_name}n; INV in({gclk_name}, {gclk_name}n); "
+                             f"DFF ff(.CLK({gclk_name}n), .D(1'b0), .Q(Q));")
 
             macrocell = device['macrocells']['MC1']
             gclk_mux_option = macrocell['gclk_mux']
@@ -79,25 +82,23 @@ with database.transact() as db:
                     break
             else:
                 assert False
-            assert gclk_mux_net == gclk
+            assert gclk_mux_net == gclk_name
 
-            config.update({
-                f"{gclk}_invert": bitdiff.describe(1, {
+            gclk_switch.update({
+                'invert': bitdiff.describe(1, {
                     'off': f_gclk_pos,
                     'on':  f_gclk_neg,
                 }),
             })
 
-        for index, goe_pad in enumerate(goe_pads):
-            goe_n = index + 1
-
-            f_goe_pos = run(f"TRI t(R, GOE{goe_n}, Q);",
+        for (goe_name, goe_switch), goe_pad in zip(goe_switches.items(), goe_pads):
+            f_goe_pos = run(f"TRI t(GCLR, {goe_name}, Q);",
                             strategy={"Global_OE": goe_pad})
-            f_goe_neg = run(f"wire GOE{goe_n}n; INV in(GOE{goe_n}, GOE{goe_n}n); "
-                            f"TRI t(R, GOE{goe_n}n, Q);",
+            f_goe_neg = run(f"wire {goe_name}n; INV in({goe_name}, {goe_name}n); "
+                            f"TRI t(GCLR, {goe_name}n, Q);",
                             strategy={"Global_OE": goe_pad})
-            config.update({
-                f"goe{goe_n}_invert": bitdiff.describe(1, {
+            goe_switch.update({
+                'invert': bitdiff.describe(1, {
                     'off': f_goe_pos,
                     'on':  f_goe_neg,
                 }),
