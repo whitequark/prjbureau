@@ -1,0 +1,66 @@
+{% extends "!layout.html" %}
+{% block extrabody %}
+    {% if pagename == 'explore' %}
+        <style type="text/css">
+            .wy-nav-content-wrap {
+                height: 100%;
+            }
+            .wy-nav-content {
+                max-width: none;
+                padding: 0;
+            }
+            .wy-nav-content > iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var iframe = $('iframe')[0];
+                function getDatabaseRoot() {
+                    var outerPath = window.location.pathname;
+                    outerPath = outerPath.replace(/explore\.html$/, '');
+                    return outerPath + 'database';
+                }
+                function getFrameLocation() {
+                    var databasePath = getDatabaseRoot();
+                    var innerPath = iframe.contentWindow.location.pathname;
+                    if(innerPath.indexOf(databasePath) == 0)
+                        return innerPath.substr(databasePath.length) +
+                            iframe.contentWindow.location.hash;
+                }
+
+                function updateHashFromLocation() {
+                    if(!(window.location.hash == '' && getFrameLocation() == '/'))
+                        window.location.replace('#' + getFrameLocation());
+                }
+                $(iframe).on('load', function() {
+                    updateHashFromLocation();
+                    $(iframe.contentWindow).on('hashchange', updateHashFromLocation);
+                    // The page might take a long time to load (some of the database pages are
+                    // really huge), and not updating the URL for a long time is aggravating.
+                    $(iframe.contentWindow).on('unload', function() {
+                        setTimeout(updateHashFromLocation, 0);
+                    });
+                });
+
+                function updateLocationFromHash() {
+                    var databasePath = getDatabaseRoot();
+                    var hashPath = window.location.hash.substr(1);
+                    if(getFrameLocation() != hashPath)
+                        iframe.contentWindow.location.replace(databasePath + hashPath);
+                }
+                updateLocationFromHash();
+                $(window).on('hashchange', updateLocationFromHash);
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {% if pagename == 'explore' %}
+        <iframe src="database/index.html"></iframe>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}

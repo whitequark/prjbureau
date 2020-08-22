@@ -1,4 +1,5 @@
 import argparse
+import textwrap
 from bitarray import bitarray
 from contextlib import contextmanager
 
@@ -82,20 +83,20 @@ def replace_fuses(fuses, field, key):
         fuses[fuse] = (value >> n_fuse) & 1
 
 
-def parse_filters(entities, history):
+def parse_filters(selectors, history):
     filters = {}
-    for entity in entities:
-        entity_filter = filters
-        levels = entity.split('.')
+    for selector in selectors:
+        selector_filter = filters
+        levels = selector.split('.')
         new_history = []
         for n_level, level in enumerate(levels):
             if not level and len(history) > n_level:
                 level = history[n_level]
             new_history.append(level)
             level = level.upper()
-            if level not in entity_filter:
-                entity_filter[level] = {}
-            entity_filter = entity_filter[level]
+            if level not in selector_filter:
+                selector_filter[level] = {}
+            selector_filter = selector_filter[level]
         history.clear()
         history.extend(new_history)
     return filters
@@ -525,35 +526,58 @@ class FuseTool:
         return changed
 
 
-def main():
-    parser = argparse.ArgumentParser(description='Examine and modify fuses.')
-    parser.add_argument(
-        '-d', '--device', metavar='DEVICE', choices=db, default='ATF1502AS',
-        help='device (one of: %(choices)s)')
-    parser.add_argument(
-        '-f', '--file', metavar='JED-FILE', type=argparse.FileType('r+'), required=True,
-        help='operate on JESD3-C fuse file JED-FILE')
+def arg_parser():
+    parser = argparse.ArgumentParser(description=textwrap.dedent("""
+    Examine and modify fuses using symbolic names and values.
+
+    The set of fuses to operate on is specified using a set of hierarchical selectors.
+    Each level of the selector can match either a single numbered entity (e.g. ``MC3``, ``PT1``),
+    or all numbered entities on the same level (e.g. ``PT``, ``GOE``).
+
+    If the requested operation is to examine fuses, the names and values of all selected fuses
+    are printed to standard output. If no selector is specified, all fuses are selected.
+
+    If the requested operation is to modify fuses, the values of all selected fuses are changed
+    to the value specified on the command line.
+
+    When modifying product term fuses, multiple choices can be specified as a single
+    comma-separated value. It is possible to modify (rather than replace) product term fuses
+    by prefixing all choices with ``+`` or ``-``. The special value ``VCC`` sets all fuses to 1,
+    and the special value ``GND`` sets all fuses to 0.
+    """))
     parser.add_argument(
         '-v', '--verbose', default=False, action='store_true',
-        help='show fuse numbers and values')
+        help='Show fuse indexes and states next to the symbolic value.')
+    parser.add_argument(
+        '-d', '--device', metavar='DEVICE', choices=db, default='ATF1502AS',
+        help='Select the device to use.')
+    parser.add_argument(
+        'mangle', metavar='MANGLE', type=argparse.FileType('r+'),
+        help='Manipulate fuses in JED file MANGLE.')
     subparsers = parser.add_subparsers(
-        metavar='COMMAND', dest='command', required=True)
+        metavar='COMMAND', dest='command', required=True,
+        help='Operation to perform.')
 
-    get_parser = subparsers.add_parser('get', help='examine fuse states')
+    get_parser = subparsers.add_parser('get', help='Examine fuse states.')
     get_parser.add_argument(
-        'entities', metavar='ENTITY', type=str, nargs='*', default=[],
-        help='examine fuses of ENTITY (e.g.: MC0, MC.PT1, MC1.pt3_mux)')
+        'selectors', metavar='SELECTOR', type=str, nargs='*',
+        help='Print values of fuses that match SELECTOR.')
 
-    set_parser = subparsers.add_parser('set', help='modify fuse states')
+    set_parser = subparsers.add_parser('set', help='Modify fuse states.')
     set_parser.add_argument(
-        'actions', metavar='ENTITY VALUE', type=str, nargs=argparse.REMAINDER,
-        help='modify fuses of ENTITY to be VALUE (e.g.: MC0.PT1 +MC32_FLB)')
+        'actions', metavar='SELECTOR VALUE', type=str, nargs=argparse.REMAINDER,
+        help='Change values of fuses that match SELECTOR to be VALUE.')
 
-    args = parser.parse_args()
+    return parser
+
+
+def main():
+    args = arg_parser().parse_args()
 
     device = db[args.device]
+    device_fuse_count = list(device['ranges'].values())[-1][-1]
 
-    orig_fuses, jed_comment = read_jed(args.file)
+    orig_fuses, jed_comment = read_jed(args.mangle)
     fuses = bitarray(orig_fuses)
     if device_fuse_count != len(fuses):
         raise SystemExit(f"Device has {device_fuse_count} fuses, JED file "
@@ -563,17 +587,17 @@ def main():
     tool = FuseTool(device, fuses, verbose=args.verbose)
 
     if args.command == 'get':
-        tool.get_device(parse_filters(args.entities, history))
+        tool.get_device(parse_filters(args.selectors, history))
 
     if args.command == 'set':
         if len(args.actions) % 2 != 0:
             raise SystemExit(f"Actions must be specified in pairs")
 
         changed = 0
-        for entity, value in zip(args.actions[0::2], args.actions[1::2]):
-            action_changed = tool.set_device(parse_filters((entity,), history), value)
+        for selector, value in zip(args.actions[0::2], args.actions[1::2]):
+            action_changed = tool.set_device(parse_filters((selector,), history), value)
             if action_changed == 0:
-                raise SystemExit(f"Filter '{entity}' does not match anything")
+                raise SystemExit(f"Filter '{selector}' does not match anything")
             changed += action_changed
         changed_fuses = (orig_fuses ^ fuses).count(1)
         print(f"Changed {changed} fields, {changed_fuses} fuses.")
@@ -581,9 +605,9 @@ def main():
         jed_comment += f"Edited: set {' '.join(args.actions)}\n"
 
     if fuses != orig_fuses:
-        args.file.seek(0)
-        args.file.truncate()
-        write_jed(args.file, fuses, comment=jed_comment)
+        args.mangle.seek(0)
+        args.mangle.truncate()
+        write_jed(args.mangle, fuses, comment=jed_comment)
 
 
 if __name__ == '__main__':

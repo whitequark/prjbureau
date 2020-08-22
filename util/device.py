@@ -1,3 +1,5 @@
+# Be careful modifying this file: line ranges from it are included in docs/jtag/as.rst.
+
 import enum
 from bitarray import bitarray
 
@@ -34,8 +36,8 @@ class ATF15xxDevice:
                 return len(svf_cols)
         assert False
 
-    @classmethod
-    def jed_to_svf_coords(cls, jed_index):
+    @staticmethod
+    def jed_to_svf_coords(jed_index):
         raise NotImplementedError
 
     @classmethod
@@ -51,8 +53,8 @@ class ATF15xxDevice:
             svf_bits[svf_row][svf_col] = jed_bit
         return svf_bits
 
-    @classmethod
-    def svf_to_jed_coords(cls, svf_row, svf_col):
+    @staticmethod
+    def svf_to_jed_coords(svf_row, svf_col):
         raise NotImplementedError
 
     @classmethod
@@ -79,8 +81,8 @@ class ATF1502ASDevice(ATF15xxDevice):
         (768,): range(16),
     }
 
-    @classmethod
-    def jed_to_svf_coords(cls, jed_index):
+    @staticmethod
+    def jed_to_svf_coords(jed_index):
         if jed_index in range(    0,  7680):
             return  12 + (jed_index -     0)  % 96, 79 - (jed_index -     0) // 96
         if jed_index in range( 7680, 15360):
@@ -101,8 +103,8 @@ class ATF1502ASDevice(ATF15xxDevice):
             return # reserved
         assert False
 
-    @classmethod
-    def svf_to_jed_coords(cls, svf_row, svf_col):
+    @staticmethod
+    def svf_to_jed_coords(svf_row, svf_col):
         if svf_row in range(  0,  12):
             if svf_col in range(0, 80):
                 return 15360 + (svf_row -   0) * 80 + (79 - svf_col)
@@ -144,8 +146,8 @@ class ATF1504ASDevice(ATF15xxDevice):
         (768,): range(16),
     }
 
-    @classmethod
-    def jed_to_svf_coords(cls, jed_index):
+    @staticmethod
+    def jed_to_svf_coords(jed_index):
         if jed_index in range(    0,   15360):
             return  12 + (jed_index -      0)  % 96,  165 - (jed_index -     0) // 96
         if jed_index in range(15360,   30720):
@@ -164,8 +166,8 @@ class ATF1504ASDevice(ATF15xxDevice):
             return # reserved
         assert False
 
-    @classmethod
-    def svf_to_jed_coords(cls, svf_row, svf_col):
+    @staticmethod
+    def svf_to_jed_coords(svf_row, svf_col):
         if svf_row in range(  0,  12):
             if svf_col in range(6, 166):
                 return 30720 + (svf_row -   0) * 160 + (165 - svf_col)
@@ -207,8 +209,8 @@ class ATF1508ASDevice(ATF15xxDevice):
         (768,): range(16),
     }
 
-    @classmethod
-    def jed_to_svf_coords(cls, jed_index):
+    @staticmethod
+    def jed_to_svf_coords(jed_index):
         if jed_index in range(    0, 30720):
             return  12 + (jed_index -     0)  %  96, 325 - (jed_index -     0) // 96
         if jed_index in range(30720, 61440):
@@ -227,8 +229,8 @@ class ATF1508ASDevice(ATF15xxDevice):
             return # reserved
         assert False
 
-    @classmethod
-    def svf_to_jed_coords(cls, svf_row, svf_col):
+    @staticmethod
+    def svf_to_jed_coords(svf_row, svf_col):
         if svf_row in range(  0,  12):
             if svf_col in range(6, 326):
                 return 61440 + (svf_row -   0) * 320 + (325 - svf_col)

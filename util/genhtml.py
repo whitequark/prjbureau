@@ -17,6 +17,7 @@ complete_devices = [
 
 
 def write_header(f, device_name="", category="", *, index=False):
+    f.write(f"<style type='text/css'>body {{ padding: 1em 1.5em; }}</style>")
     if not (device_name or category):
         f.write(f"<title>Project Bureau</title>\n")
         f.write(f"<h1>Project Bureau</h1>\n")
@@ -862,7 +863,7 @@ def write_pins(f, device_name, device):
 
 
 devices = database.load()
-docs_dir = os.path.join(root_dir, "docs", "database")
+docs_dir = os.path.join(root_dir, "docs", "_build", "database")
 with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
     write_header(fi)
 

@@ -1,4 +1,4 @@
-Unless otherwise noted, this repository is covered by:
+Unless otherwise noted, the files in this repository are covered by:
 
 Copyright (C) 2019-2020 whitequark@whitequark.org
 

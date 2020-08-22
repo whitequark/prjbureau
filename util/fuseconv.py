@@ -1,4 +1,5 @@
 import argparse
+import textwrap
 from bitarray import bitarray
 
 from .jesd3 import JESD3Parser
@@ -158,19 +159,30 @@ class ATFFileType(argparse.FileType):
         return file
 
 
-def main():
-    parser = argparse.ArgumentParser(description='Convert between ATF15xx JED and SVF files.')
+def arg_parser():
+    parser = argparse.ArgumentParser(description=textwrap.dedent("""
+    Convert between ATF15xx JED and SVF files. The type of the file is determined by the extension
+    (``.jed`` or ``.svf``, respectively).
+
+    If an SVF file is provided as an input, it is used to drive the JTAG programming state machine
+    of a simulated device. The state machine is greatly simplified and only functions correctly
+    when driven with vectors that program every non-reserved bit at least once.
+    """))
     parser.add_argument(
         '-d', '--device', metavar='DEVICE',
         choices=('ATF1502AS', 'ATF1504AS', 'ATF1508AS'), default='ATF1502AS',
-        help='device (one of: %(choices)s)')
+        help='Select the device to use.')
     parser.add_argument(
         'input', metavar='INPUT', type=ATFFileType('r'),
-        help='input file')
+        help='Read fuses from file INPUT.')
     parser.add_argument(
         'output', metavar='OUTPUT', type=ATFFileType('w'),
-        help='output file')
-    args = parser.parse_args()
+        help='Write fuses to file OUTPUT.')
+    return parser
+
+
+def main():
+    args = arg_parser().parse_args()
 
     if args.device == 'ATF1502AS':
         device = ATF1502ASDevice
