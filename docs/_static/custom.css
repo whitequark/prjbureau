@@ -1,3 +1,7 @@
 .rst-content table.docutils.narrow td, .rst-content table.docutils.narrow th {
-  padding: 8px 14px;
+  padding: 8px 14px; /* termination options table almost but not quite fits */
+}
+
+.wy-menu-vertical {
+  width: 320px; /* toctree entries in database schema almost but not quite fit */
 }

@@ -3,4 +3,4 @@ Functional outline (WIP)
 
 .. todo::
 
-   This section is not yet written.
+   This document is not yet written.

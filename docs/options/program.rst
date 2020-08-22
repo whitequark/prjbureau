@@ -1,7 +1,7 @@
 Programming options
 ###################
 
-This section describes global device options related to Flash programming.
+This document describes global device options related to Flash programming.
 
 .. _jtag_pin_func:
 

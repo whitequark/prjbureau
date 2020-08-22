@@ -1,7 +1,7 @@
 I/O buffer options
 ##################
 
-This section describes macrocell input/output buffer options and global input buffer options.
+This document describes macrocell input/output buffer options and global input buffer options.
 
 .. _termination:
 
@@ -102,6 +102,6 @@ The following table describes the I/O standards that can be used with different 
    LVCMOS I/O    1.5 V   |o|       |o|        |x|       |x|
    ============= ======= ========= ========== ========= =========
 
-.. [#ttl] Briefly, in TTL and LVTTL, V\ :sub:`IL`/V\ :sub:`IH` = 0.8/2.0 V and V\ :sub:`OL`/V\ :sub:`OH` = 0.4/2.4 V.
-.. [#cmos] Briefly, in CMOS and LVCMOS, V\ :sub:`IL`/V\ :sub:`IH` = 30%/70% Vcc and V\ :sub:`OL`/V\ :sub:`OH` = 20%/80% Vcc.
+.. [#ttl] In TTL and LVTTL, V\ :sub:`IL`/V\ :sub:`IH` = 0.8/2.0 V and V\ :sub:`OL`/V\ :sub:`OH` = 0.4/2.4 V.
+.. [#cmos] In CMOS and LVCMOS, V\ :sub:`IL`/V\ :sub:`IH` = 30%/70% Vcc and V\ :sub:`OL`/V\ :sub:`OH` = 20%/80% Vcc.
 .. [#be] Other than ATF1502BE.
