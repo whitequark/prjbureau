@@ -32,11 +32,11 @@ with database.transact() as db:
                 'xor_a_mux':
                     bitdiff.describe(1, {
                         'sum':     f_dff0,
-                        'vcc_pt2': f_dff1
+                        'VCC_pt2': f_dff1
                     }),
                 'cas_mux':
                     bitdiff.describe(1, {
-                        'gnd':     f_dff0,
+                        'GND':     f_dff0,
                         'sum':     f_dff1
                     })
             })

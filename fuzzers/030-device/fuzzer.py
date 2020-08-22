@@ -24,10 +24,10 @@ with database.transact() as db:
             if device_name.endswith("AS"):
                 set_mc_option(fuses, macrocell_name, 'pt5_func', 'as')
                 set_mc_option(fuses, macrocell_name, 'xor_a_mux', 'sum')
-                set_mc_option(fuses, macrocell_name, 'cas_mux', 'gnd')
+                set_mc_option(fuses, macrocell_name, 'cas_mux', 'GND')
             set_mc_option(fuses, macrocell_name, 'storage', 'latch')
             if device_name.endswith("BE"):
-                set_mc_option(fuses, macrocell_name, 'oe_mux', 'vcc_pt5')
+                set_mc_option(fuses, macrocell_name, 'oe_mux', 'VCC_pt5')
 
         def run(code="wire A, Q; BUF b(A, Q);", **kwargs):
             return toolchain.run(

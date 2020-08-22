@@ -81,8 +81,8 @@ with database.transact() as db:
 
             # There is no way to enable OE with fast inlatch also enabled, so do this ourselves.
             oe_mux_fuses = macrocell['oe_mux']['fuses']
-            oe_mux_gnd = macrocell['oe_mux']['values']['gnd']
-            oe_mux_vcc = macrocell['oe_mux']['values']['vcc_pt5']
+            oe_mux_gnd = macrocell['oe_mux']['values']['GND']
+            oe_mux_vcc = macrocell['oe_mux']['values']['VCC_pt5']
             for offset, oe_mux_fuse in enumerate(oe_mux_fuses):
                 assert f_o_sync_d_fast[oe_mux_fuse] == (oe_mux_gnd >> offset) & 1
                 f_o_sync_d_fast[oe_mux_fuse] = (oe_mux_vcc >> offset) & 1

@@ -72,7 +72,7 @@ with database.transact() as db:
                 nodes[goe_name] = f_goe
 
             f_gnd = run(f"wire BY; BIBUF b(Y, 1'b0, BY, O);")
-            nodes['gnd'] = f_gnd
+            nodes['GND'] = f_gnd
 
             # The VCC choice of OE mux is shared with PT5 choice; if pt5_func is as, or
             # pt5_func is oe but pt5_mux is sum, then it is VCC, otherwise it is PT5.
@@ -81,9 +81,9 @@ with database.transact() as db:
             f_vcc = run(f"wire BY; BIBUF b(Y, CLK1, BY, O);")
             for pt5_fuse in range(*device['macrocells'][macrocell_name]['pterm_ranges']['PT5']):
                 f_vcc[pt5_fuse] = 0 # don't care
-            nodes['vcc_pt5'] = f_vcc
+            nodes['VCC_pt5'] = f_vcc
 
             macrocell.update({
-                "oe_mux":
+                'oe_mux':
                     bitdiff.describe(3, nodes),
             })
