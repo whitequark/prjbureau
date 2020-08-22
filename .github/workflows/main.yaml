@@ -26,3 +26,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: docs/database/
           TARGET_FOLDER: database/
+          CLEAN: true

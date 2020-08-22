@@ -11,6 +11,11 @@ def natural_sort_key(input):
     return [int(tok) if tok.isdigit() else tok.lower() for tok in re.split(r'(\d+)', input)]
 
 
+complete_devices = [
+    "ATF1502AS",
+]
+
+
 def write_header(f, device_name="", category="", *, index=False):
     if not (device_name or category):
         f.write(f"<title>Project Bureau</title>\n")
@@ -22,9 +27,13 @@ def write_header(f, device_name="", category="", *, index=False):
         f.write(f"<title>Project Bureau — {device_name} {category}</title>\n")
         f.write(f"<h1><a href='../index.html'>Project Bureau</a> — "
                 f"<a href='index.html'>{device_name}</a> {category}</h1>\n")
+    if device_name in complete_devices:
+        status = f"The documentation for {device_name} is complete."
+    else:
+        status = f"This is a work in progress."
     f.write(f"<i>Project Bureau aims at documenting the bitstream format of "
-            f"Microchip ATF15xx CPLDs. This is a work in progress. See more "
-            f"in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>\n")
+            f"Microchip ATF15xx CPLDs. {status} See more "
+            f"in the <a href='https://github.com/whitequark/prjbureau'>repository</a>.</i>\n")
 
 
 def write_section(f, title, description):
