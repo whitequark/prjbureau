@@ -134,19 +134,19 @@ with database.transact() as db:
                 run_task(macrocell, probe_macrocell, probe_macrocell_name,
                          f"{macrocell_name}_FB", 'N', run_fb_neg)
 
-            for node in (*device['clocks'].values(), *device['enables'].values(), device['clear']):
+            for pad in ('R', 'C1', 'C2', 'E1'):
                 for probe_macrocell_name, probe_macrocell in device['macrocells'].items():
                     if probe_macrocell['block'] != block_name: continue
                     if probe_macrocell['pad'] not in pinout: continue
-                    if probe_macrocell['pad'] == node['pad']: continue
+                    if probe_macrocell['pad'] == pad: continue
                     break
                 else:
                     assert False
 
-                run_task(node, probe_macrocell, probe_macrocell_name,
-                         f"{node['pad']}_PAD", 'P', run_pad_pos)
-                run_task(node, probe_macrocell, probe_macrocell_name,
-                         f"{node['pad']}_PAD", 'N', run_pad_neg)
+                run_task({'pad': pad}, probe_macrocell, probe_macrocell_name,
+                         f"{pad}_PAD", 'P', run_pad_pos)
+                run_task({'pad': pad}, probe_macrocell, probe_macrocell_name,
+                         f"{pad}_PAD", 'N', run_pad_neg)
 
             progress((sum(len(switch['mux']['values']) - 1
                           for switch in device['switches'].values()),

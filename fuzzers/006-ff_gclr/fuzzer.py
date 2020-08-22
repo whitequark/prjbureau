@@ -11,19 +11,19 @@ with database.transact() as db:
 
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK, GCLR, output O); "
+                    f"module top(input C1, R, output O); "
                     f"wire Q; TRI tri(Q, 1'b0, O); "
                     f"{code} "
                     f"endmodule",
                     {
-                        "CLK": pinout[device["clocks"]["1"]["pad"]],
-                        "GCLR": pinout[device["clear"]["pad"]],
-                        "ff": str(601 + macrocell_idx),
+                        'C1': pinout['C1'],
+                        'R': pinout['R'],
+                        'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}")
 
-            f_dff   = run("DFF   ff(.CLK(CLK), .D(1'b0), .Q(Q));")
-            f_dffar = run("DFFAR ff(.CLK(CLK), .AR(GCLR), .D(1'b0), .Q(Q));")
+            f_dff   = run("DFF   ff(.CLK(C1), .D(1'b0), .Q(Q));")
+            f_dffar = run("DFFAR ff(.CLK(C1), .AR(R), .D(1'b0), .Q(Q));")
 
             # According to the diagram, there is a 3:1 mux driving AR, allowing to choose between
             # GCLR/(GCLR|PT3)/PT3. This is likely implemented as (GCLR&GCLRen)|(PT3&PT3en), where

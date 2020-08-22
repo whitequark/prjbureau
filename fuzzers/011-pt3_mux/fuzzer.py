@@ -11,19 +11,19 @@ with database.transact() as db:
 
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK1, CLK2, OE1, CLR, output O); "
+                    f"module top(input C1, C2, E1, R, output O); "
                     f"wire Q; TRI tri(Q, 1'b0, O); "
                     f"wire Y1, Y2, Y3; "
-                    f"AND2 a1(CLK1, CLK2, Y1); "
-                    f"AND2 a2(CLK2, OE1, Y2); "
-                    f"AND2 a3(OE1, CLR, Y3); "
+                    f"AND2 a1(C1, C2, Y1); "
+                    f"AND2 a2(C2, E1, Y2); "
+                    f"AND2 a3(E1, R, Y3); "
                     f"{code} "
                     f"endmodule",
                     {
-                        'CLK1': pinout[device['clocks']['1']['pad']],
-                        'CLK2': pinout[device['clocks']['2']['pad']],
-                        'OE1': pinout[device['enables']['1']['pad']],
-                        'CLR': pinout[device['clear']['pad']],
+                        'C1': pinout['C1'],
+                        'C2': pinout['C2'],
+                        'E1': pinout['E1'],
+                        'R': pinout['R'],
                         'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}",

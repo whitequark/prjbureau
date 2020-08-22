@@ -13,6 +13,7 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
         config_range = range(*device['ranges']['config'])
+        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
         gclk_switches = {name: switch for name, switch in device['globals'].items()
                          if name.startswith('GCLK')}
 
@@ -33,10 +34,10 @@ with database.transact() as db:
                 f"OR3 o(C1, C2, C3, QC); "
                 f"endmodule",
                 {
-                    'C1': pinout[device['clocks']['1']['pad']],
-                    'C2': pinout[device['clocks']['2']['pad']],
-                    'C3': pinout[device['clocks']['3']['pad']],
-                    'E1': pinout[device['enables']['1']['pad']],
+                    'C1': pinout['C1'],
+                    'C2': pinout['C2'],
+                    'C3': pinout[gclk3_pad],
+                    'E1': pinout['E1'],
                     **{
                         out: pinout[macrocell['pad']]
                         for out, macrocell in zip(outs, device['macrocells'].values())

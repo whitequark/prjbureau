@@ -21,7 +21,7 @@ with database.transact() as db:
                     f"{code} "
                     f"endmodule",
                     {
-                        'CLK': pinout[device['clocks']['1']['pad']],
+                        'CLK': pinout['C1'],
                         'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}", **kwargs)

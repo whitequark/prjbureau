@@ -7,7 +7,7 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
         config = device['config']
-
+        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
         jtag_macrocell_names  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
         pwrdn_macrocell_names = [device['specials'][net] for net in ('PD1', 'PD2')]
 
@@ -35,9 +35,9 @@ with database.transact() as db:
                 f"{code} "
                 f"endmodule",
                 {
-                    'C1': pinout[device['clocks']['1']['pad']],
-                    'C2': pinout[device['clocks']['2']['pad']],
-                    'C3': pinout[device['clocks']['3']['pad']],
+                    'C1': pinout['C1'],
+                    'C2': pinout['C2'],
+                    'C3': pinout[gclk3_pad],
                 },
                 f"{device_name}-{package}", **kwargs)
 

@@ -6,6 +6,8 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
+        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
             progress(1)
 
@@ -16,9 +18,9 @@ with database.transact() as db:
                     f"{code} "
                     f"endmodule",
                     {
-                        'CLK1': pinout[device['clocks']['1']['pad']],
-                        'CLK2': pinout[device['clocks']['2']['pad']],
-                        'CLK3': pinout[device['clocks']['3']['pad']],
+                        'CLK1': pinout['C1'],
+                        'CLK2': pinout['C2'],
+                        'CLK3': pinout[gclk3_pad],
                         'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}")

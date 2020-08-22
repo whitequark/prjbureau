@@ -52,7 +52,7 @@ with database.transact() as db:
                     f"endmodule",
                     {
                         'O': pinout[macrocell['pad']],
-                        'CLK1': pinout[device['clocks']['1']['pad']],
+                        'CLK1': pinout['C1'],
                         **{
                             goe_pad: pinout[goe_pad[:-4]]
                             for goe_pad in goe_pads

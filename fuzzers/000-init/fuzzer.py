@@ -55,16 +55,6 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
         },
         "config": {},
         "user": [],
-        "clear": {"pad": "R"},
-        "clocks": {
-            "1": {"pad": "C1"},
-            "2": {"pad": "C2"},
-            "3": {"pad": specials["GCLK3"].replace("MC", "M")},
-        },
-        "enables": {
-            "1": {"pad": "E1"},
-            "2": {"pad": "C2"},
-        },
         "specials": specials,
         "pins": pins
     }

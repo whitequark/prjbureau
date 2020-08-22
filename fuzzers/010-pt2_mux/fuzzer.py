@@ -16,18 +16,18 @@ with database.transact() as db:
 
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK1, CLK2, OE1, CLR, output Q); "
+                    f"module top(input C1, C2, E1, R, output Q); "
                     f"wire Y1, Y2; "
-                    f"AND2 a1(CLK1, CLK2, Y1); "
-                    f"AND2 a2(OE1, CLR, Y2); "
+                    f"AND2 a1(C1, C2, Y1); "
+                    f"AND2 a2(E1, R, Y2); "
                     f"{code}; "
                     f"endmodule",
                     {
-                        "CLK1": pinout[device["clocks"]["1"]["pad"]],
-                        "CLK2": pinout[device["clocks"]["2"]["pad"]],
-                        "OE1": pinout[device["enables"]["1"]["pad"]],
-                        "CLR": pinout[device["clear"]["pad"]],
-                        "Q": pinout[macrocell["pad"]],
+                        'C1': pinout['C1'],
+                        'C2': pinout['C2'],
+                        'E1': pinout['E1'],
+                        'R': pinout['R'],
+                        'Q': pinout[macrocell["pad"]],
                     },
                     f"{device_name}-{package}",
                     strategy={"xor_synthesis": "on"})

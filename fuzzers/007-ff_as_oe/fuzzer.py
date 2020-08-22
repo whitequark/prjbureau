@@ -15,17 +15,17 @@ with database.transact() as db:
 
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK2, CLR, output Q); {code} endmodule",
+                    f"module top(input C2, R, output Q); {code} endmodule",
                     {
-                        'CLK2': pinout[device['clocks']['2']['pad']],
-                        'CLR': pinout[device['clear']['pad']],
+                        'C2': pinout['C2'],
+                        'R': pinout['R'],
                         'Q': pinout[macrocell['pad']],
                     },
                     f"{device_name}-{package}")
 
-            f_as = run(f"DFFAS x(.CLK(CLK2), .AS(CLR), .D(CLR), .Q(Q));")
-            f_oe = run(f"wire X; DFF x(.CLK(CLK2), .D(CLR), .Q(X)); "
-                       f"BUFTH t(.A(X), .ENA(CLR), .Q(Q));")
+            f_as = run(f"DFFAS x(.CLK(C2), .AS(R), .D(R), .Q(Q));")
+            f_oe = run(f"wire X; DFF x(.CLK(C2), .D(R), .Q(X)); "
+                       f"BUFTH t(.A(X), .ENA(R), .Q(Q));")
 
             # http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-3614-CPLD-ATF15-Overview.pdf
             macrocell.update({

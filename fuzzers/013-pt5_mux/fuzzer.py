@@ -27,14 +27,14 @@ with database.transact() as db:
 
             def run(code):
                 return toolchain.run(
-                    f"module top(input CLK1, CLK2, OE1, CLR, I, output Q); "
+                    f"module top(input C1, C2, E1, R, I, output Q); "
                     f"{code} "
                     f"endmodule",
                     {
-                        'CLK1': pinout[device['clocks']['1']['pad']],
-                        'CLK2': pinout[device['clocks']['2']['pad']],
-                        'OE1': pinout[device['enables']['1']['pad']],
-                        'CLR': pinout[device['clear']['pad']],
+                        'C1': pinout['C1'],
+                        'C2': pinout['C2'],
+                        'E1': pinout['E1'],
+                        'R': pinout['R'],
                         'I': pinout[other_macrocell['pad']],
                         'Q': pinout[macrocell['pad']],
                     },
@@ -44,18 +44,18 @@ with database.transact() as db:
             # Took me a long time to find a netlist this pathological.
             f_sum = run(
                 f"wire Y1, Y2, Y3, Y4, Y5; "
-                f"AND2 a1(CLK1, CLK2, Y1); "
-                f"AND2 a2(I, CLR, Y2); "
-                f"OR2 o1(Y2, OE1, Y3); "
+                f"AND2 a1(C1, C2, Y1); "
+                f"AND2 a2(I, R, Y2); "
+                f"OR2 o1(Y2, E1, Y3); "
                 f"XOR2 x1(Y1, Y3, Y5); "
                 f"DFFAR d(Y1, Y1, Y5, Q); "
             )
             f_as = run(
                 f"wire Y1, Y2, Y3, Y4, Y5; "
-                f"AND2 a1(CLK1, CLK2, Y1); "
-                f"AND2 a2(I, CLR, Y2); "
+                f"AND2 a1(C1, C2, Y1); "
+                f"AND2 a2(I, R, Y2); "
                 f"XOR2 x1(Y1, Y2, Y5); "
-                f"DFFARS d(Y1, Y1, OE1, Y5, Q); "
+                f"DFFARS d(Y1, Y1, E1, Y5, Q); "
             )
 
             # PT5 can be either a part of the sum term, or serve as async set/output enable.

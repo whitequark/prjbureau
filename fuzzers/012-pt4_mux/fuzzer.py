@@ -16,8 +16,8 @@ with database.transact() as db:
                     f"{code} "
                     f"endmodule",
                     {
-                        'CLK2': pinout[device['clocks']['2']['pad']],
-                        'OE1': pinout[device['enables']['1']['pad']],
+                        'CLK2': pinout['C2'],
+                        'OE1': pinout['E1'],
                         'ff': str(601 + macrocell_idx),
                     },
                     f"{device_name}-{package}")

@@ -97,8 +97,8 @@ with database.transact() as db:
             else:
                 assert False
             pins = [
-                f"OEA+:{pinout[device['clocks']['1']['pad']]}",
-                f"OEB+:{pinout[device['clocks']['2']['pad']]}",
+                f"OEA+:{pinout['C1']}",
+                f"OEB+:{pinout['C2']}",
                 f"Y0+:{pinout[device['macrocells'][other1_macrocell_name]['pad']]}",
                 f"Y1+:{pinout[device['macrocells'][other2_macrocell_name]['pad']]}"
             ]
@@ -150,10 +150,9 @@ with database.transact() as db:
 
             assert False, f"all GOE muxes unprogrammed"
 
-        worklist = set()
-        for node_type in ('clocks', 'enables', 'macrocells'):
-            for node_name, node in device[node_type].items():
-                worklist.add(node['pad'])
+        worklist = {'C1', 'C2', 'E1'}
+        for macrocell in device['macrocells'].values():
+            worklist.add(macrocell['pad'])
 
         depth = 0
         pad_muxes = defaultdict(lambda: set())

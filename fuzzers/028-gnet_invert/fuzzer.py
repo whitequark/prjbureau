@@ -6,6 +6,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
+        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
         gclr_switch = device['globals']['GCLR']
         gclk_switches = {name: switch for name, switch in device['globals'].items()
                          if name.startswith('GCLK')}
@@ -22,11 +23,11 @@ with database.transact() as db:
                     unique_goe_choices.add(goe_choice)
                 all_goe_choices.add(goe_choice)
         unique_goe_choices.difference_update({
-            f"{device['clear']['pad']}_PAD",
-            f"{device['clocks']['1']['pad']}_PAD",
-            f"{device['clocks']['2']['pad']}_PAD",
-            f"{device['clocks']['3']['pad']}_PAD",
-            f"{device['enables']['1']['pad']}_PAD",
+            f"R_PAD",
+            f"C1_PAD",
+            f"C2_PAD",
+            f"{gclk3_pad}_PAD",
+            f"E1_PAD",
         })
 
         goe_pads = []
@@ -45,10 +46,10 @@ with database.transact() as db:
                 f"{code} "
                 f"endmodule",
                 {
-                    'GCLR':  pinout[device['clear']['pad']],
-                    'GCLK1': pinout[device['clocks']['1']['pad']],
-                    'GCLK2': pinout[device['clocks']['2']['pad']],
-                    'GCLK3': pinout[device['clocks']['3']['pad']],
+                    'GCLR':  pinout['R'],
+                    'GCLK1': pinout['C1'],
+                    'GCLK2': pinout['C2'],
+                    'GCLK3': pinout[gclk3_pad],
                     **{
                         f"GOE{1+n}": pinout[pad[:-4]]
                         for n, pad in enumerate(goe_pads)
