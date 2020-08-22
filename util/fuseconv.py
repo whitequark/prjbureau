@@ -163,7 +163,8 @@ class ATFFileType(argparse.FileType):
 def main():
     parser = argparse.ArgumentParser(description='Convert between ATF15xx JED and SVF files.')
     parser.add_argument(
-        '-d', '--device', metavar='DEVICE', choices=('ATF1502',), default='ATF1502',
+        '-d', '--device', metavar='DEVICE',
+        choices=('ATF1502AS', 'ATF1504AS', 'ATF1508AS'), default='ATF1502AS',
         help='device (one of: %(choices)s)')
     parser.add_argument(
         'input', metavar='INPUT', type=ATFFileType('r'),
@@ -173,8 +174,12 @@ def main():
         help='output file')
     args = parser.parse_args()
 
-    if args.device == 'ATF1502':
-        device = ATF1502Device
+    if args.device == 'ATF1502AS':
+        device = ATF1502ASDevice
+    elif args.device == 'ATF1504AS':
+        device = ATF1504ASDevice
+    elif args.device == 'ATF1508AS':
+        device = ATF1508ASDevice
     else:
         assert False
 

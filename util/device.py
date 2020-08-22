@@ -3,7 +3,7 @@ from bitarray import bitarray
 
 
 
-__all__ = ['ATF15xxInstr', 'ATF1502Device', 'ATF1504Device', 'ATF1508Device']
+__all__ = ['ATF15xxInstr', 'ATF1502ASDevice', 'ATF1504ASDevice', 'ATF1508ASDevice']
 
 
 class ATF15xxInstr(enum.IntEnum):
@@ -68,7 +68,7 @@ class ATF15xxDevice:
         return jed_bits
 
 
-class ATF1502Device(ATF15xxDevice):
+class ATF1502ASDevice(ATF15xxDevice):
     idcode = 0x0150203f
 
     fuse_count = 16808
@@ -134,7 +134,7 @@ class ATF1502Device(ATF15xxDevice):
         assert False
 
 
-class ATF1504Device(ATF15xxDevice):
+class ATF1504ASDevice(ATF15xxDevice):
     idcode = 0x0150403f
 
     fuse_count = 34192
@@ -198,7 +198,7 @@ class ATF1504Device(ATF15xxDevice):
         assert False
 
 
-class ATF1508Device(ATF15xxDevice):
+class ATF1508ASDevice(ATF15xxDevice):
     idcode = 0x0150803f
 
     fuse_count = 74136
@@ -264,48 +264,48 @@ class ATF1508Device(ATF15xxDevice):
 if __name__ == '__main__':
     with open('atf1502as_svf2jed.csv', 'w') as f:
         f.write('SVF ROW,SVF COL,JED\n')
-        for svf_rows, svf_cols in ATF1502Device.data_width.items():
+        for svf_rows, svf_cols in ATF1502ASDevice.data_width.items():
             for svf_row in svf_rows:
                 for svf_col in svf_cols:
-                    jed_index = ATF1502Device.svf_to_jed_coords(svf_row, svf_col)
+                    jed_index = ATF1502ASDevice.svf_to_jed_coords(svf_row, svf_col)
                     if jed_index is None: jed_index = 0x7fff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
 
     with open('atf1502as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
-        for jed_index in range(ATF1502Device.fuse_count):
-            svf_index = ATF1502Device.jed_to_svf_coords(jed_index)
+        for jed_index in range(ATF1502ASDevice.fuse_count):
+            svf_index = ATF1502ASDevice.jed_to_svf_coords(jed_index)
             if svf_index is None: continue
             f.write('{},{},{}\n'.format(jed_index, *svf_index))
 
     with open('atf1504as_svf2jed.csv', 'w') as f:
         f.write('SVF ROW,SVF COL,JED\n')
-        for svf_rows, svf_cols in ATF1504Device.data_width.items():
+        for svf_rows, svf_cols in ATF1504ASDevice.data_width.items():
             for svf_row in svf_rows:
                 for svf_col in svf_cols:
-                    jed_index = ATF1504Device.svf_to_jed_coords(svf_row, svf_col)
+                    jed_index = ATF1504ASDevice.svf_to_jed_coords(svf_row, svf_col)
                     if jed_index is None: jed_index = 0xffff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
 
     with open('atf1504as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
-        for jed_index in range(ATF1504Device.fuse_count):
-            svf_index = ATF1504Device.jed_to_svf_coords(jed_index)
+        for jed_index in range(ATF1504ASDevice.fuse_count):
+            svf_index = ATF1504ASDevice.jed_to_svf_coords(jed_index)
             if svf_index is None: continue
             f.write('{},{},{}\n'.format(jed_index, *svf_index))
 
     with open('atf1508as_svf2jed.csv', 'w') as f:
         f.write('SVF ROW,SVF COL,JED\n')
-        for svf_rows, svf_cols in ATF1508Device.data_width.items():
+        for svf_rows, svf_cols in ATF1508ASDevice.data_width.items():
             for svf_row in svf_rows:
                 for svf_col in svf_cols:
-                    jed_index = ATF1508Device.svf_to_jed_coords(svf_row, svf_col)
+                    jed_index = ATF1508ASDevice.svf_to_jed_coords(svf_row, svf_col)
                     if jed_index is None: jed_index = 0x1ffff
                     f.write('{},{},{}\n'.format(svf_row, svf_col, jed_index))
 
     with open('atf1508as_jed2svf.csv', 'w') as f:
         f.write('JED,SVF ROW,SVF COL\n')
-        for jed_index in range(ATF1508Device.fuse_count):
-            svf_index = ATF1508Device.jed_to_svf_coords(jed_index)
+        for jed_index in range(ATF1508ASDevice.fuse_count):
+            svf_index = ATF1508ASDevice.jed_to_svf_coords(jed_index)
             if svf_index is None: continue
             f.write('{},{},{}\n'.format(jed_index, *svf_index))
