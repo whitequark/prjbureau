@@ -44,6 +44,23 @@ global_options = [
 ]
 
 
+special_pin_options = [
+    "standby_wakeup",
+    "termination",
+    "schmitt_trigger",
+]
+
+
+config_options = [
+    "arming_switch",
+    "jtag_pin_func",
+    "pd1_pin_func",
+    "pd2_pin_func",
+    "termination",
+    "reset_hysteresis",
+]
+
+
 def extract_fuses(fuses, field, *, default=None):
     value = sum(fuses[fuse] << n_fuse for n_fuse, fuse in enumerate(field['fuses']))
     for key, key_value in field['values'].items():
@@ -221,9 +238,24 @@ class FuseTool:
 
         self.print("{}: {}".format(switch_name, ' '.join(descr)))
 
+    def get_special_pin(self, pin, pin_config, filters):
+        with self.hierarchy(pin):
+            for option_name in special_pin_options:
+                if option_name not in pin_config:
+                    continue
+                if match_filters_last(filters, (option_name,)):
+                    self.get_option(option_name, pin_config[option_name])
+
+    def get_special_pins(self, filters):
+        with self.hierarchy('PIN'):
+            for pin, pin_config in self.device['config']['pins'].items():
+                matched, subfilters = match_filters(filters, (pin,))
+                if matched:
+                    self.get_special_pin(pin, pin_config, subfilters)
+
     def get_config(self, filters):
         with self.hierarchy('CFG'):
-            for config_name in self.device['config']:
+            for config_name in config_options:
                 if match_filters_last(filters, (config_name,)):
                     self.get_option(config_name, self.device['config'][config_name])
 
@@ -256,6 +288,10 @@ class FuseTool:
                 matched, subfilters = match_filters(filters, (prefix, switch_name))
                 if matched:
                     self.get_switch(switch_name, switch, subfilters)
+
+        matched, subfilters = match_filters(filters, ('PIN',))
+        if matched:
+            self.get_special_pins(subfilters)
 
         matched, subfilters = match_filters(filters, ('CFG',))
         if matched:
@@ -389,11 +425,26 @@ class FuseTool:
 
         return changed
 
+    def get_special_pin(self, pin, pin_config, filters):
+        with self.hierarchy(pin):
+            for option_name in special_pin_options:
+                if option_name not in pin_config:
+                    continue
+                if match_filters_last(filters, (option_name,)):
+                    self.get_option(option_name, pin_config[option_name])
+
+    def get_special_pins(self, filters):
+        with self.hierarchy('PIN'):
+            for pin, pin_config in self.device['config']['pins'].items():
+                matched, subfilters = match_filters(filters, (pin,))
+                if matched:
+                    self.get_special_pin(pin, pin_config, subfilters)
+
     def set_config(self, filters, value):
         changed = 0
 
         with self.hierarchy('CFG'):
-            for config_name in self.device['config']:
+            for config_name in config_options:
                 if match_filters_last(filters.get('CFG', filters), (config_name,)):
                     changed += self.set_option(config_name, self.device['config'][config_name],
                                                value)
@@ -415,6 +466,29 @@ class FuseTool:
             self.fuses[fuse] = (value >> n_fuse) & 1
         return 1
 
+    def set_special_pin(self, pin, pin_config, filters, value):
+        changed = 0
+
+        with self.hierarchy(pin):
+            for option_name in special_pin_options:
+                if option_name not in pin_config:
+                    continue
+                if match_filters_last(filters, (option_name,)):
+                    changed += self.set_option(option_name, pin_config[option_name], value)
+
+        return changed
+
+    def set_special_pins(self, filters, value):
+        changed = 0
+
+        with self.hierarchy('PIN'):
+            for pin, pin_config in self.device['config']['pins'].items():
+                matched, subfilters = match_filters(filters, (pin,))
+                if matched:
+                    changed += self.set_special_pin(pin, pin_config, subfilters, value)
+
+        return changed
+
     def set_device(self, filters, value):
         changed = 0
 
@@ -434,6 +508,10 @@ class FuseTool:
                 matched, subfilters = match_filters(filters, (prefix, switch_name))
                 if matched:
                     changed += self.set_switch(switch_name, switch, subfilters, value)
+
+        matched, subfilters = match_filters(filters, ('PIN',))
+        if matched:
+            changed += self.set_special_pins(subfilters, value)
 
         matched, subfilters = match_filters(filters, ('CFG',))
         if matched:

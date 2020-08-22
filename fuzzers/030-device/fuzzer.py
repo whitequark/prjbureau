@@ -6,7 +6,9 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        config = device['config']
+        config     = device['config']
+        pin_config = device['config']['pins']
+
         gclk3_pad  =  device['specials']['CLK3']
         jtag_pads  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
         pwrdn_pads = [device['specials'][net] for net in ('PD1','PD2')]
@@ -64,32 +66,32 @@ with database.transact() as db:
 
         if device_name.endswith("AS"):
             f_gclk_itd_off = run(strategy={'gclk_itd':'off'})
-            for gclk in ('gclk1', 'gclk2', 'gclk3'):
-                f_gclk_itd_gclk_n = run(strategy={'gclk_itd':gclk})
-                config.update({
-                    f"{gclk}_itd": bitdiff.describe(1, {
+            for pin in ('CLK1', 'CLK2', 'CLK3'):
+                f_gclk_itd_gclk_n = run(strategy={'gclk_itd':f"G{pin}"})
+                pin_config[pin] = {
+                    'standby_wakeup': bitdiff.describe(1, {
                         'off': f_gclk_itd_off,
                         'on':  f_gclk_itd_gclk_n,
                     }),
-                })
+                }
 
-        for pin in ('tdi', 'tms'):
+        for pin in ('TMS', 'TDI'):
             f_pullup_off = run(strategy={'JTAG':'on', f"{pin}_pullup":'off'})
             f_pullup_on  = run(strategy={'JTAG':'on', f"{pin}_pullup":'on'})
-            config.update({
-                f"{pin}_termination": bitdiff.describe(1, {
+            pin_config[pin] = {
+                'termination': bitdiff.describe(1, {
                     'high_z':  f_pullup_off,
                     'pull_up': f_pullup_on,
                 }),
-            })
+            }
 
         if device_name.endswith("AS"):
             f_power_reset_off = run(strategy={'power_reset':'off'})
             f_power_reset_on  = run(strategy={'power_reset':'on'})
             config.update({
-                'power_reset': bitdiff.describe(1, {
-                    'off': f_power_reset_off,
-                    'on':  f_power_reset_on,
+                'reset_hysteresis': bitdiff.describe(1, {
+                    'small': f_power_reset_off,
+                    'large': f_power_reset_on,
                 }),
             })
 

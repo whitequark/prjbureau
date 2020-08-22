@@ -9980,6 +9980,63 @@
       }
     },
     "config": {
+      "pins": {
+        "CLK1": {
+          "standby_wakeup": {
+            "fuses": [
+              16770
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "CLK2": {
+          "standby_wakeup": {
+            "fuses": [
+              16771
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "CLK3": {
+          "standby_wakeup": {
+            "fuses": [
+              16772
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "TMS": {
+          "termination": {
+            "fuses": [
+              16773
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "TDI": {
+          "termination": {
+            "fuses": [
+              16774
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        }
+      },
       "termination": {
         "fuses": [
           16751
@@ -10007,58 +10064,13 @@
           "pd": 0
         }
       },
-      "gclk1_itd": {
-        "fuses": [
-          16770
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "gclk2_itd": {
-        "fuses": [
-          16771
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "gclk3_itd": {
-        "fuses": [
-          16772
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "tdi_termination": {
-        "fuses": [
-          16774
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "tms_termination": {
-        "fuses": [
-          16773
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "power_reset": {
+      "reset_hysteresis": {
         "fuses": [
           16775
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "small": 1,
+          "large": 0
         }
       },
       "jtag_pin_func": {
@@ -10126,20 +10138,6 @@
         }
       }
     ],
-    "specials": {
-      "CLR": "R",
-      "CLK1": "C1",
-      "CLK2": "C2",
-      "OE1": "E1",
-      "OE2": "C2",
-      "TDI": "M4",
-      "PD1": "M7",
-      "TMS": "M9",
-      "CLK3": "M17",
-      "TDO": "M20",
-      "TCK": "M25",
-      "PD2": "M31"
-    },
     "pins": {
       "TQFP44": {
         "M1": "42",
@@ -10217,6 +10215,20 @@
         "R": "1",
         "C2": "2"
       }
+    },
+    "specials": {
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "TDI": "M4",
+      "PD1": "M7",
+      "TMS": "M9",
+      "CLK3": "M17",
+      "TDO": "M20",
+      "TCK": "M25",
+      "PD2": "M31"
     }
   },
   "ATF1502BE": {
@@ -20264,6 +20276,122 @@
       }
     },
     "config": {
+      "pins": {
+        "TMS": {
+          "termination": {
+            "fuses": [
+              16767
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "TDI": {
+          "termination": {
+            "fuses": [
+              16768
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "CLK1": {
+          "schmitt_trigger": {
+            "fuses": [
+              16769
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              16773,
+              16774
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "CLK2": {
+          "schmitt_trigger": {
+            "fuses": [
+              16770
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              16775,
+              16776
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "OE1": {
+          "schmitt_trigger": {
+            "fuses": [
+              16771
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              16777,
+              16778
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "CLR": {
+          "schmitt_trigger": {
+            "fuses": [
+              16772
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              16779,
+              16780
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        }
+      },
       "pd1_pin_func": {
         "fuses": [
           16784
@@ -20282,24 +20410,6 @@
           "pd": 0
         }
       },
-      "tdi_termination": {
-        "fuses": [
-          16768
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "tms_termination": {
-        "fuses": [
-          16767
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
       "jtag_pin_func": {
         "fuses": [
           16783
@@ -20307,90 +20417,6 @@
         "values": {
           "user": 0,
           "jtag": 1
-        }
-      },
-      "r_pad_schmitt_trigger": {
-        "fuses": [
-          16772
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "r_pad_termination": {
-        "fuses": [
-          16779,
-          16780
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "c1_pad_schmitt_trigger": {
-        "fuses": [
-          16769
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "c1_pad_termination": {
-        "fuses": [
-          16773,
-          16774
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "c2_pad_schmitt_trigger": {
-        "fuses": [
-          16770
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "c2_pad_termination": {
-        "fuses": [
-          16775,
-          16776
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "e1_pad_schmitt_trigger": {
-        "fuses": [
-          16771
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "e1_pad_termination": {
-        "fuses": [
-          16777,
-          16778
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
         }
       },
       "arming_switch": {
@@ -20449,20 +20475,6 @@
         }
       }
     ],
-    "specials": {
-      "CLR": "R",
-      "CLK1": "C1",
-      "CLK2": "C2",
-      "OE1": "E1",
-      "OE2": "C2",
-      "TDI": "M4",
-      "PD1": "M7",
-      "TMS": "M9",
-      "CLK3": "M17",
-      "TDO": "M20",
-      "TCK": "M25",
-      "PD2": "M31"
-    },
     "pins": {
       "TQFP44": {
         "M1": "42",
@@ -20540,6 +20552,20 @@
         "R": "1",
         "C2": "2"
       }
+    },
+    "specials": {
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "TDI": "M4",
+      "PD1": "M7",
+      "TMS": "M9",
+      "CLK3": "M17",
+      "TDO": "M20",
+      "TCK": "M25",
+      "PD2": "M31"
     }
   },
   "ATF1504AS": {
@@ -41503,6 +41529,63 @@
       }
     },
     "config": {
+      "pins": {
+        "CLK1": {
+          "standby_wakeup": {
+            "fuses": [
+              34154
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "CLK2": {
+          "standby_wakeup": {
+            "fuses": [
+              34155
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "CLK3": {
+          "standby_wakeup": {
+            "fuses": [
+              34156
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          }
+        },
+        "TMS": {
+          "termination": {
+            "fuses": [
+              34157
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "TDI": {
+          "termination": {
+            "fuses": [
+              34158
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        }
+      },
       "termination": {
         "fuses": [
           34135
@@ -41530,58 +41613,13 @@
           "pd": 0
         }
       },
-      "gclk1_itd": {
-        "fuses": [
-          34154
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "gclk2_itd": {
-        "fuses": [
-          34155
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "gclk3_itd": {
-        "fuses": [
-          34156
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "tdi_termination": {
-        "fuses": [
-          34158
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "tms_termination": {
-        "fuses": [
-          34157
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "power_reset": {
+      "reset_hysteresis": {
         "fuses": [
           34159
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "small": 1,
+          "large": 0
         }
       },
       "jtag_pin_func": {
@@ -41649,20 +41687,6 @@
         }
       }
     ],
-    "specials": {
-      "CLR": "R",
-      "CLK1": "C1",
-      "CLK2": "C2",
-      "OE1": "E1",
-      "OE2": "C2",
-      "PD1": "M3",
-      "TDI": "M8",
-      "TMS": "M32",
-      "PD2": "M35",
-      "TCK": "M48",
-      "TDO": "M56",
-      "CLK3": "M64"
-    },
     "pins": {
       "TQFP100": {
         "M1": "14",
@@ -42004,6 +42028,20 @@
         "R": "1",
         "C2": "2"
       }
+    },
+    "specials": {
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "PD1": "M3",
+      "TDI": "M8",
+      "TMS": "M32",
+      "PD2": "M35",
+      "TCK": "M48",
+      "TDO": "M56",
+      "CLK3": "M64"
     }
   },
   "ATF1504BE": {
@@ -63781,6 +63819,122 @@
       }
     },
     "config": {
+      "pins": {
+        "TMS": {
+          "termination": {
+            "fuses": [
+              34151
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "TDI": {
+          "termination": {
+            "fuses": [
+              34152
+            ],
+            "values": {
+              "high_z": 1,
+              "pull_up": 0
+            }
+          }
+        },
+        "CLK1": {
+          "schmitt_trigger": {
+            "fuses": [
+              34153
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              34157,
+              34158
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "CLK2": {
+          "schmitt_trigger": {
+            "fuses": [
+              34154
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              34159,
+              34160
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "OE1": {
+          "schmitt_trigger": {
+            "fuses": [
+              34155
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              34161,
+              34162
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        },
+        "CLR": {
+          "schmitt_trigger": {
+            "fuses": [
+              34156
+            ],
+            "values": {
+              "off": 1,
+              "on": 0
+            }
+          },
+          "termination": {
+            "fuses": [
+              34163,
+              34164
+            ],
+            "values": {
+              "high_z": 0,
+              "pull_up": 2,
+              "pull_down": 1,
+              "bus_keeper": 3
+            }
+          }
+        }
+      },
       "pd1_pin_func": {
         "fuses": [
           34168
@@ -63799,24 +63953,6 @@
           "pd": 0
         }
       },
-      "tdi_termination": {
-        "fuses": [
-          34152
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
-      "tms_termination": {
-        "fuses": [
-          34151
-        ],
-        "values": {
-          "high_z": 1,
-          "pull_up": 0
-        }
-      },
       "jtag_pin_func": {
         "fuses": [
           34167
@@ -63824,90 +63960,6 @@
         "values": {
           "user": 0,
           "jtag": 1
-        }
-      },
-      "r_pad_schmitt_trigger": {
-        "fuses": [
-          34156
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "r_pad_termination": {
-        "fuses": [
-          34163,
-          34164
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "c1_pad_schmitt_trigger": {
-        "fuses": [
-          34153
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "c1_pad_termination": {
-        "fuses": [
-          34157,
-          34158
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "c2_pad_schmitt_trigger": {
-        "fuses": [
-          34154
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "c2_pad_termination": {
-        "fuses": [
-          34159,
-          34160
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
-        }
-      },
-      "e1_pad_schmitt_trigger": {
-        "fuses": [
-          34155
-        ],
-        "values": {
-          "off": 1,
-          "on": 0
-        }
-      },
-      "e1_pad_termination": {
-        "fuses": [
-          34161,
-          34162
-        ],
-        "values": {
-          "high_z": 0,
-          "pull_up": 2,
-          "pull_down": 1,
-          "bus_keeper": 3
         }
       },
       "arming_switch": {
@@ -63966,22 +64018,6 @@
         }
       }
     ],
-    "specials": {
-      "CLR": "R",
-      "CLK1": "C1",
-      "CLK2": "C2",
-      "OE1": "E1",
-      "OE2": "C2",
-      "PD1": "M3",
-      "TDI": "M8",
-      "TMS": "M32",
-      "PD2": "M35",
-      "TCK": "M48",
-      "TDO": "M56",
-      "CLK3": "M64",
-      "VREFA": "M3",
-      "VREFB": "M46"
-    },
     "pins": {
       "TQFP100": {
         "M1": "14",
@@ -64323,6 +64359,22 @@
         "R": "1",
         "C2": "2"
       }
+    },
+    "specials": {
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "PD1": "M3",
+      "TDI": "M8",
+      "TMS": "M32",
+      "PD2": "M35",
+      "TCK": "M48",
+      "TDO": "M56",
+      "CLK3": "M64",
+      "VREFA": "M3",
+      "VREFB": "M46"
     }
   }
 }

@@ -239,26 +239,20 @@ macrocell_shared_options = {
 }
 
 
-global_options = {
-    "arming_switch":    "A",
-    "power_reset":      "C",
-    "jtag_pin_func":    "M",
-    "tdi_termination":  "IO",
-    "tms_termination":  "IO",
-    "pd1_pin_func":     "C",
-    "pd2_pin_func":     "C",
+special_pin_options = {
+    "standby_wakeup":   "C",
     "termination":      "IO",
-    "gclk1_itd":        "C",
-    "gclk2_itd":        "C",
-    "gclk3_itd":        "C",
-    "r_pad_termination": "IO",
-    "r_pad_schmitt_trigger": "IO",
-    "c1_pad_termination": "IO",
-    "c1_pad_schmitt_trigger": "IO",
-    "c2_pad_termination": "IO",
-    "c2_pad_schmitt_trigger": "IO",
-    "e1_pad_termination": "IO",
-    "e1_pad_schmitt_trigger": "IO",
+    "schmitt_trigger":  "IO",
+}
+
+
+config_options = {
+    "arming_switch":    "A",
+    "jtag_pin_func":    "M",
+    "pd1_pin_func":     "M",
+    "pd2_pin_func":     "M",
+    "termination":      "IO",
+    "reset_hysteresis": "C",
 }
 
 
@@ -582,8 +576,17 @@ def write_globals(f, device_name, device):
         if 'invert' in switch:
             total_fuse_count += update_option_bitmap(bitmap,
                 switch['invert'], 'M', owner=f"{switch_name}.invert")
-    for option_name, option in device['config'].items():
+    for option_name in config_options:
+        if option_name not in device['config']:
+            continue
+        option = device['config'][option_name]
         update_option_bitmap(bitmap, option, '-', owner=f"CFG.{option_name}")
+    for pin, pin_config in device['config']['pins'].items():
+        for option_name in special_pin_options:
+            if option_name not in pin_config:
+                continue
+            update_option_bitmap(bitmap, pin_config[option_name], '-',
+                                 owner=f"{pin}.{option_name}")
 
     def global_sort_key(switch_name):
         if switch_name.startswith('GCLR'):
@@ -652,16 +655,29 @@ def write_globals(f, device_name, device):
             write_option(f, 'invert', switch['invert'])
 
 
-def write_config(f, device_name, device):
-    write_header(fg, device_name, f"Device Configuration")
+def write_pin_config(f, device_name, device):
+    write_header(f, device_name, f"Pin Configuration")
 
-    fuse_range = range(*device['ranges']['config'])
+    f.write(f"<p>Most pins are configured through the associated macrocells. "
+            f"This page describes configuration of dedicated inputs and pins configured "
+            f"to have a special function.</p>")
+
+    config_fuse_range = range(*device['ranges']['config'])
+    pin_configs = device['config']['pins']
 
     bitmap = {}
     total_fuse_count = 0
-    for option_name, option in device['config'].items():
-        total_fuse_count += update_option_bitmap(bitmap, option, global_options[option_name],
-                                                 owner=f"CFG.{option_name}")
+    for pin, pin_config in pin_configs.items():
+        for option_name, sigil in special_pin_options.items():
+            if option_name not in pin_config:
+                continue
+            total_fuse_count += update_option_bitmap(bitmap, pin_config[option_name], sigil,
+                                                     owner=f"{pin}.{option_name}")
+    for option_name, sigil in config_options.items():
+        if option_name not in device['config']:
+            continue
+        option = device['config'][option_name]
+        update_option_bitmap(bitmap, option, '-', owner=f"CFG.{option_name}")
     for switch_name, switch in device['globals'].items():
         if 'mux' in switch and switch_name.startswith('GCLK'):
             update_option_bitmap(bitmap, switch['mux'], '-', owner=f"{switch_name}.mux")
@@ -670,13 +686,68 @@ def write_config(f, device_name, device):
         if 'invert' in switch:
             update_option_bitmap(bitmap, switch['invert'], '-', owner=f"{switch_name}.invert")
 
+    pin_links = [f"<a href='#{pin}'>{pin}</a>" for pin in pin_configs]
+    write_section(f, "Switch Configuration Bitmap",
+        f"Device uses {total_fuse_count} (known) fuses within range "
+        f"{config_fuse_range.start}..{config_fuse_range.stop} for configuring pins "
+        f"{', '.join(pin_links)}.")
+    write_bitmap(f, *bitmap_layout[device_name]['config'], bitmap, config_fuse_range)
+
+    for pin, pin_config in pin_configs.items():
+        pin_bitmap = {}
+        pin_fuse_count = 0
+        for option_name, sigil in special_pin_options.items():
+            if option_name not in pin_config:
+                continue
+            pin_fuse_count += update_option_bitmap(pin_bitmap, pin_config[option_name], sigil,
+                                                   owner=f"{pin}.{option_name}")
+        for fuse, (sigil, owners) in bitmap.items():
+            if fuse not in pin_bitmap:
+                pin_bitmap[fuse] = ('-', owners)
+
+        write_section(f, f"<a name='{pin}'></a>Pin {pin} Configuration",
+            f"Pin {pin} uses the following {pin_fuse_count} (known) fuses for configuration.")
+        write_bitmap(f, *bitmap_layout[device_name]['config'], pin_bitmap, config_fuse_range,
+                     compact=True)
+        for option_name in special_pin_options:
+            if option_name not in pin_config:
+                continue
+            write_option(f, option_name, pin_config[option_name])
+
+
+def write_config(f, device_name, device):
+    write_header(f, device_name, f"Device Configuration")
+
+    fuse_range = range(*device['ranges']['config'])
+
+    bitmap = {}
+    total_fuse_count = 0
+    for option_name, sigil in config_options.items():
+        if option_name not in device['config']:
+            continue
+        option = device['config'][option_name]
+        total_fuse_count += update_option_bitmap(bitmap, option, sigil, owner=f"CFG.{option_name}")
+    for switch_name, switch in device['globals'].items():
+        if 'mux' in switch and switch_name.startswith('GCLK'):
+            update_option_bitmap(bitmap, switch['mux'], '-', owner=f"{switch_name}.mux")
+        if 'mux' in switch and switch_name.startswith('GOE'):
+            update_onehot_bitmap(bitmap, f"{switch_name}.mux", switch['mux'], '-')
+        if 'invert' in switch:
+            update_option_bitmap(bitmap, switch['invert'], '-', owner=f"{switch_name}.invert")
+    for pin, pin_config in device['config']['pins'].items():
+        for option_name in special_pin_options:
+            if option_name not in pin_config:
+                continue
+            update_option_bitmap(bitmap, pin_config[option_name], '-',
+                                 owner=f"{pin}.{option_name}")
+
     write_section(f, "Device Configuration Bitmap",
         f"Device uses {total_fuse_count} (known) fuses within range "
         f"{fuse_range.start}..{fuse_range.stop} for global feature and JTAG configuration.")
     write_bitmap(f, *bitmap_layout[device_name]['config'],
                  bitmap, fuse_range)
 
-    for option_name in global_options:
+    for option_name in config_options:
         if option_name not in device['config']:
             continue
         option = device['config'][option_name]
@@ -684,7 +755,7 @@ def write_config(f, device_name, device):
 
 
 def write_user(f, device_name, device):
-    write_header(fg, device_name, f"User Signature")
+    write_header(f, device_name, f"User Signature")
 
     fuse_range = range(*device['ranges']['user'])
 
@@ -776,8 +847,8 @@ def write_pins(f, device_name, device):
     f.write(f"<p>† Any of the three on-chip global clock networks <b>GCLK1</b>, <b>GCLK2</b>, "
             f"and <b>GCLK3</b> can be driven by any of the three pads with global clock input "
             f"capability, <b>C1</b>, <b>C2</b>, and <b>{device['specials']['CLK3']}</b>. "
-            f"The name of the special function <b>CLK1</b>, <b>CLK2</b>, and <b>CLK3</b> merely "
-            f"illustrates the typical application.</p>")
+            f"The special function names <b>CLK1</b>, <b>CLK2</b>, and <b>CLK3</b> merely "
+            f"illustrate the typical application.</p>")
 
 
 devices = database.load()
@@ -835,6 +906,10 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
             with open(os.path.join(dev_docs_dir, f"gsw.html"), "w") as fg:
                 write_globals(fg, device_name, device)
 
+            fd.write(f"<li><a href='pin.html'>Pin Configuration</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"pin.html"), "w") as fg:
+                write_pin_config(fg, device_name, device)
+
             fd.write(f"<li><a href='cfg.html'>Device Configuration</a></li>\n")
             with open(os.path.join(dev_docs_dir, f"cfg.html"), "w") as fg:
                 write_config(fg, device_name, device)
@@ -843,8 +918,8 @@ with open(os.path.join(docs_dir, f"index.html"), "w") as fi:
             with open(os.path.join(dev_docs_dir, f"usr.html"), "w") as fg:
                 write_user(fg, device_name, device)
 
-            fd.write(f"<li><a href='pins.html'>Pinout</a></li>\n")
-            with open(os.path.join(dev_docs_dir, f"pins.html"), "w") as fg:
+            fd.write(f"<li><a href='pad.html'>Pinout</a></li>\n")
+            with open(os.path.join(dev_docs_dir, f"pad.html"), "w") as fg:
                 write_pins(fg, device_name, device)
 
             fd.write(f"</ul>\n")

@@ -53,8 +53,11 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
                 } for xi in range(6)[::-1 if flip_muxes else 1]
             },
         },
-        "config": {},
+        "config": {
+            "pins": {},
+        },
         "user": [],
+        "pins": pins,
         "specials": {
             "CLR":  "R",
             "CLK1": "C1",
@@ -62,8 +65,7 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
             "OE1":  "E1",
             "OE2":  "C2",
             **specials
-        },
-        "pins": pins
+        }
     }
 
 
@@ -71,16 +73,6 @@ def atf1502xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "AB",
-        "specials": {
-            "TDI":  "M4",
-            "PD1":  "M7",
-            "TMS":  "M9",
-            "CLK3": "M17",
-            "TDO":  "M20",
-            "TCK":  "M25",
-            "PD2":  "M31",
-            **specials
-        },
         "pins": {
             "TQFP44": pins(
                 Mn="42 43 44  1  2  3  5  6  7  8 10 11 12 13 14 15 "
@@ -97,6 +89,16 @@ def atf1502xx(*, ranges, specials={}):
                 R ="1",
                 C2="2"),
         },
+        "specials": {
+            "TDI":  "M4",
+            "PD1":  "M7",
+            "TMS":  "M9",
+            "CLK3": "M17",
+            "TDO":  "M20",
+            "TCK":  "M25",
+            "PD2":  "M31",
+            **specials
+        },
         "flip_muxes": True,
     })
 
@@ -105,16 +107,6 @@ def atf1504xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "ABCD",
-        "specials": {
-            "PD1":  "M3",
-            "TDI":  "M8",
-            "TMS":  "M32",
-            "PD2":  "M35",
-            "TCK":  "M48",
-            "TDO":  "M56",
-            "CLK3": "M64",
-            **specials
-        },
         "pins": {
             "TQFP100": pins(
                 Mn=" 14  13  12  10   9   8   6   4 100  99  98  97  96 "
@@ -176,6 +168,16 @@ def atf1504xx(*, ranges, specials={}):
                 E1="44",
                 R ="1",
                 C2="2"),
+        },
+        "specials": {
+            "PD1":  "M3",
+            "TDI":  "M8",
+            "TMS":  "M32",
+            "PD2":  "M35",
+            "TCK":  "M48",
+            "TDO":  "M56",
+            "CLK3": "M64",
+            **specials
         }
     })
 
@@ -184,16 +186,6 @@ def atf1508xx(*, ranges, specials={}):
     return atf15xx(**{
         "ranges": ranges,
         "blocks": "ABCDEFGH",
-        "specials": {
-            "PD1":  "M3",
-            "TDI":  "M32",
-            "TMS":  "M48",
-            "PD2":  "M67",
-            "TCK":  "M96",
-            "TDO":  "M112",
-            "CLK3": "M128",
-            **specials
-        },
         "pins": {
             "PQFP160": pins(
                 Mn="160   0 159 158 153 152   0 151 150   0 149 147 146 145   0 144  21   0  20 "
@@ -243,6 +235,16 @@ def atf1508xx(*, ranges, specials={}):
                 E1="84",
                 R ="1",
                 C2="2"),
+        },
+        "specials": {
+            "PD1":  "M3",
+            "TDI":  "M32",
+            "TMS":  "M48",
+            "PD2":  "M67",
+            "TCK":  "M96",
+            "TDO":  "M112",
+            "CLK3": "M128",
+            **specials
         }
     })
 
