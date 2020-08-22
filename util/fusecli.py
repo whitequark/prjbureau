@@ -53,6 +53,7 @@ special_pin_options = [
 
 config_options = [
     "arming_switch",
+    "read_protection",
     "jtag_pin_func",
     "pd1_pin_func",
     "pd2_pin_func",
