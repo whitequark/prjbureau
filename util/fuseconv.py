@@ -186,6 +186,9 @@ def main():
     jed_bits = svf_bits = None
     if args.input.name.lower().endswith('.jed'):
         jed_bits, comment = read_jed(args.input)
+        if device.fuse_count != len(jed_bits):
+            raise SystemExit(f"Device has {device.fuse_count} fuses, JED file "
+                             f"has {len(jed_bits)}; wrong --device option?")
     elif args.input.name.lower().endswith('.svf'):
         svf_bits, comment = read_svf(args.input)
     else:

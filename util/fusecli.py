@@ -555,6 +555,9 @@ def main():
 
     orig_fuses, jed_comment = read_jed(args.file)
     fuses = bitarray(orig_fuses)
+    if device_fuse_count != len(fuses):
+        raise SystemExit(f"Device has {device_fuse_count} fuses, JED file "
+                         f"has {len(fuses)}; wrong --device option?")
 
     history = []
     tool = FuseTool(device, fuses, verbose=args.verbose)
