@@ -1,6 +1,6 @@
-<title>Project Bureau — ATF1504AS Logic Block D Macrocells</title>
-<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504AS</a> Logic Block D Macrocells</h1>
-<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
+<title>Project Bureau — ATF1504AS Block D Macrocells</title>
+<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504AS</a> Block D Macrocells</h1>
+<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a>.</i>
 <h2>Macrocell Configuration Bitmap</h2>
 <p>Logic block D uses 384 (known) fuses within range 30720..32640 for macrocells <a href='#MC49'>MC49</a>, <a href='#MC50'>MC50</a>, <a href='#MC51'>MC51</a>, <a href='#MC52'>MC52</a>, <a href='#MC53'>MC53</a>, <a href='#MC54'>MC54</a>, <a href='#MC55'>MC55</a>, <a href='#MC56'>MC56</a>, <a href='#MC57'>MC57</a>, <a href='#MC58'>MC58</a>, <a href='#MC59'>MC59</a>, <a href='#MC60'>MC60</a>, <a href='#MC61'>MC61</a>, <a href='#MC62'>MC62</a>, <a href='#MC63'>MC63</a>, <a href='#MC64'>MC64</a>.</p>
 <table style='font-size:12px'>
@@ -2655,8 +2655,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32398'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32398</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31697'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31697</span></div></th></tr>
@@ -2670,9 +2670,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32176'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32176</span></div></th><th width='21'><a name='L32177'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32177</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31759'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31759</span></div></th></tr>
@@ -2687,7 +2687,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31857'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31857</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31918'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31918</span></div></th></tr>
@@ -2696,7 +2696,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31857</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -2731,14 +2731,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32496'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32496</span></div></th><th width='21'><a name='L32497'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32497</span></div></th><th width='21'><a name='L32558'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32558</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32239'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32239</span></div></th></tr>
@@ -3235,8 +3235,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32397'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32397</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31698'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31698</span></div></th></tr>
@@ -3250,9 +3250,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32178'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32178</span></div></th><th width='21'><a name='L32179'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32179</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31756'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31756</span></div></th></tr>
@@ -3267,7 +3267,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31858'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31858</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31917'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31917</span></div></th></tr>
@@ -3276,7 +3276,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31858</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -3311,14 +3311,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32498'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32498</span></div></th><th width='21'><a name='L32499'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32499</span></div></th><th width='21'><a name='L32557'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32557</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32236'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32236</span></div></th></tr>
@@ -3815,8 +3815,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32394'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32394</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31701'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31701</span></div></th></tr>
@@ -3830,9 +3830,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32180'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32180</span></div></th><th width='21'><a name='L32181'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32181</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31755'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31755</span></div></th></tr>
@@ -3847,7 +3847,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31861'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31861</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31914'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31914</span></div></th></tr>
@@ -3856,7 +3856,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31861</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -3891,14 +3891,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32500'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32500</span></div></th><th width='21'><a name='L32501'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32501</span></div></th><th width='21'><a name='L32554'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32554</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32235'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32235</span></div></th></tr>
@@ -4395,8 +4395,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32393'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32393</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31702'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31702</span></div></th></tr>
@@ -4410,9 +4410,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32182'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32182</span></div></th><th width='21'><a name='L32183'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32183</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31752'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31752</span></div></th></tr>
@@ -4427,7 +4427,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31862'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31862</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31913'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31913</span></div></th></tr>
@@ -4436,7 +4436,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31862</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -4471,14 +4471,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32502'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32502</span></div></th><th width='21'><a name='L32503'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32503</span></div></th><th width='21'><a name='L32553'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32553</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32232'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32232</span></div></th></tr>
@@ -4975,8 +4975,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32390'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32390</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31705'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31705</span></div></th></tr>
@@ -4990,9 +4990,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32184'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32184</span></div></th><th width='21'><a name='L32185'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32185</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31751'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31751</span></div></th></tr>
@@ -5007,7 +5007,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31865'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31865</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31910'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31910</span></div></th></tr>
@@ -5016,7 +5016,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31865</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -5051,14 +5051,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32504'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32504</span></div></th><th width='21'><a name='L32505'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32505</span></div></th><th width='21'><a name='L32550'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32550</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32231'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32231</span></div></th></tr>
@@ -5555,8 +5555,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32389'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32389</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31706'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31706</span></div></th></tr>
@@ -5570,9 +5570,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32186'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32186</span></div></th><th width='21'><a name='L32187'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32187</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31748'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31748</span></div></th></tr>
@@ -5587,7 +5587,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31866'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31866</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31909'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31909</span></div></th></tr>
@@ -5596,7 +5596,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31866</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -5631,14 +5631,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32506'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32506</span></div></th><th width='21'><a name='L32507'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32507</span></div></th><th width='21'><a name='L32549'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32549</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32228'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32228</span></div></th></tr>
@@ -6135,8 +6135,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32386'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32386</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31709'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31709</span></div></th></tr>
@@ -6150,9 +6150,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32188'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32188</span></div></th><th width='21'><a name='L32189'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32189</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31747'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31747</span></div></th></tr>
@@ -6167,7 +6167,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31869'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31869</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31906'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31906</span></div></th></tr>
@@ -6176,7 +6176,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31869</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -6211,14 +6211,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32508'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32508</span></div></th><th width='21'><a name='L32509'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32509</span></div></th><th width='21'><a name='L32546'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32546</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32227'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32227</span></div></th></tr>
@@ -6715,8 +6715,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32385'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32385</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31710'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31710</span></div></th></tr>
@@ -6730,9 +6730,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32190'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32190</span></div></th><th width='21'><a name='L32191'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32191</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31744'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31744</span></div></th></tr>
@@ -6747,7 +6747,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31870'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31870</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31905'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31905</span></div></th></tr>
@@ -6756,7 +6756,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31870</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -6791,14 +6791,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32510'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32510</span></div></th><th width='21'><a name='L32511'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32511</span></div></th><th width='21'><a name='L32545'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32545</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32224'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32224</span></div></th></tr>
@@ -7295,8 +7295,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32382'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32382</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31713'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31713</span></div></th></tr>
@@ -7310,9 +7310,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32192'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32192</span></div></th><th width='21'><a name='L32193'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32193</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31743'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31743</span></div></th></tr>
@@ -7327,7 +7327,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31873'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31873</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31902'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31902</span></div></th></tr>
@@ -7336,7 +7336,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31873</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -7371,14 +7371,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32512'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32512</span></div></th><th width='21'><a name='L32513'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32513</span></div></th><th width='21'><a name='L32542'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32542</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32223'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32223</span></div></th></tr>
@@ -7875,8 +7875,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32381'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32381</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31714'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31714</span></div></th></tr>
@@ -7890,9 +7890,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32194'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32194</span></div></th><th width='21'><a name='L32195'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32195</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31740'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31740</span></div></th></tr>
@@ -7907,7 +7907,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31874'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31874</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31901'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31901</span></div></th></tr>
@@ -7916,7 +7916,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31874</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -7951,14 +7951,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32514'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32514</span></div></th><th width='21'><a name='L32515'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32515</span></div></th><th width='21'><a name='L32541'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32541</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32220'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32220</span></div></th></tr>
@@ -8455,8 +8455,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32378'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32378</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31717'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31717</span></div></th></tr>
@@ -8470,9 +8470,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32196'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32196</span></div></th><th width='21'><a name='L32197'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32197</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31739'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31739</span></div></th></tr>
@@ -8487,7 +8487,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31877'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31877</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31898'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31898</span></div></th></tr>
@@ -8496,7 +8496,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31877</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -8531,14 +8531,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32516'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32516</span></div></th><th width='21'><a name='L32517'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32517</span></div></th><th width='21'><a name='L32538'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32538</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32219'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32219</span></div></th></tr>
@@ -9035,8 +9035,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32377'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32377</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31718'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31718</span></div></th></tr>
@@ -9050,9 +9050,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32198'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32198</span></div></th><th width='21'><a name='L32199'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32199</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31736'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31736</span></div></th></tr>
@@ -9067,7 +9067,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31878'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31878</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31897'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31897</span></div></th></tr>
@@ -9076,7 +9076,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31878</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -9111,14 +9111,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32518'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32518</span></div></th><th width='21'><a name='L32519'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32519</span></div></th><th width='21'><a name='L32537'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32537</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32216'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32216</span></div></th></tr>
@@ -9615,8 +9615,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32374'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32374</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31721'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31721</span></div></th></tr>
@@ -9630,9 +9630,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32200'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32200</span></div></th><th width='21'><a name='L32201'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32201</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31735'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31735</span></div></th></tr>
@@ -9647,7 +9647,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31881'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31881</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31894'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31894</span></div></th></tr>
@@ -9656,7 +9656,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31881</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -9691,14 +9691,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32520'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32520</span></div></th><th width='21'><a name='L32521'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32521</span></div></th><th width='21'><a name='L32534'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32534</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32215'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32215</span></div></th></tr>
@@ -10195,8 +10195,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32373'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32373</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31722'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31722</span></div></th></tr>
@@ -10210,9 +10210,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32202'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32202</span></div></th><th width='21'><a name='L32203'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32203</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31732'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31732</span></div></th></tr>
@@ -10227,7 +10227,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31882'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31882</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31893'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31893</span></div></th></tr>
@@ -10236,7 +10236,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31882</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -10271,14 +10271,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32522'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32522</span></div></th><th width='21'><a name='L32523'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32523</span></div></th><th width='21'><a name='L32533'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32533</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32212'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32212</span></div></th></tr>
@@ -10775,8 +10775,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32370'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32370</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31725'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31725</span></div></th></tr>
@@ -10790,9 +10790,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32204'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32204</span></div></th><th width='21'><a name='L32205'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32205</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31731'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31731</span></div></th></tr>
@@ -10807,7 +10807,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31885'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31885</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31890'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31890</span></div></th></tr>
@@ -10816,7 +10816,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31885</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -10851,14 +10851,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32524'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32524</span></div></th><th width='21'><a name='L32525'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32525</span></div></th><th width='21'><a name='L32530'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32530</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32211'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32211</span></div></th></tr>
@@ -11355,8 +11355,8 @@
 </table>
 <p>Fuse combinations for option "gclr_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32369'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32369</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclr</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLR</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt4_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31726'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31726</span></div></th></tr>
@@ -11370,9 +11370,9 @@
 </table>
 <p>Fuse combinations for option "gclk_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32206'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32206</span></div></th><th width='21'><a name='L32207'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32207</span></div></th></tr>
-<tr><td align='right' height='18'>gclk1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>gclk2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>gclk3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GCLK2</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GCLK3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
 <p>Fuse combinations for option "pt5_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31728'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31728</span></div></th></tr>
@@ -11387,7 +11387,7 @@
 <p>Fuse combinations for option "xor_a_mux" (shared with "cas_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31886'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31886</span></div></th></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>VCC_pt2</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "xor_b_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L31889'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31889</span></div></th></tr>
@@ -11396,7 +11396,7 @@
 </table>
 <p>Fuse combinations for option "cas_mux" (shared with "xor_a_mux"):</p><table>
 <tr><td width='70' height='40'></td><th width='21'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>31886</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 <tr><td align='right' height='18'>sum</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "d_mux":</p><table>
@@ -11431,14 +11431,14 @@
 </table>
 <p>Fuse combinations for option "oe_mux":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32526'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32526</span></div></th><th width='21'><a name='L32527'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32527</span></div></th><th width='21'><a name='L32529'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32529</span></div></th></tr>
-<tr><td align='right' height='18'>gnd</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>goe5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>goe6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>vcc_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GND</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE2</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE3</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE4</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>GOE5</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>GOE6</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>VCC_pt5</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "slow_output":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L32208'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>32208</span></div></th></tr>

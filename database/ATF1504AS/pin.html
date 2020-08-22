@@ -1,0 +1,473 @@
+<title>Project Bureau — ATF1504AS Pin Configuration</title>
+<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504AS</a> Pin Configuration</h1>
+<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a>.</i>
+<p>Most pins are configured through the associated macrocells. This page describes configuration of dedicated inputs and pins configured to have a special function.</p><h2>Switch Configuration Bitmap</h2>
+<p>Device uses 5 (known) fuses within range 34134..34170 for configuring pins <a href='#CLK1'>CLK1</a>, <a href='#CLK2'>CLK2</a>, <a href='#CLK3'>CLK3</a>, <a href='#TMS'>TMS</a>, <a href='#TDI'>TDI</a>.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34154'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34155'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34156'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34157'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34158'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34166</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34166 (CFG.read_protection)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34166'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34167 (CFG.jtag_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34167'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34168' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34169' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<h2><a name='CLK1'></a>Pin CLK1 Configuration</h2>
+<p>Pin CLK1 uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34154'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "standby_wakeup":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34154'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34154</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='CLK2'></a>Pin CLK2 Configuration</h2>
+<p>Pin CLK2 uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34155'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "standby_wakeup":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34155'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34155</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='CLK3'></a>Pin CLK3 Configuration</h2>
+<p>Pin CLK3 uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34156'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "standby_wakeup":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34156'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34156</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='TMS'></a>Pin TMS Configuration</h2>
+<p>Pin TMS uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34157'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "termination":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34157'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34157</span></div></th></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='TDI'></a>Pin TDI Configuration</h2>
+<p>Pin TDI uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34158'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "termination":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34158'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34158</span></div></th></tr>
+<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>

@@ -1,8 +1,8 @@
-<title>Project Bureau — ATF1504BE Global Configuration</title>
-<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504BE</a> Global Configuration</h1>
-<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a></i>
+<title>Project Bureau — ATF1504BE Device Configuration</title>
+<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504BE</a> Device Configuration</h1>
+<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a>.</i>
 <h2>Device Configuration Bitmap</h2>
-<p>Device uses 34 (known) fuses within range 34134..34174 for global feature and JTAG configuration.</p>
+<p>Device uses 4 (known) fuses within range 34134..34174 for global feature and JTAG configuration.</p>
 <table style='font-size:12px'>
 <tr><td width='70'></td>
 <td align='center' width='16'>0</td>
@@ -41,117 +41,59 @@
 <tr>
 <td align='right' height='18'>34134</td>
 <td align='center' width='15' bgcolor='#fd0' style='color:#666;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34134'>A</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34135 (CFG.goe1_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34135'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34136 (CFG.goe2_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34136'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34137 (CFG.goe3_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34137'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34138 (CFG.goe4_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34138'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34139 (CFG.goe5_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34139'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34140 (CFG.goe6_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34140'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34141 (CFG.gclr_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34141'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34142 (CFG.gclk1_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34142'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34143 (CFG.gclk1_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34143'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34144 (CFG.gclk1_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34144'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34145 (CFG.gclk2_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34145'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34146 (CFG.gclk2_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34146'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34147 (CFG.gclk2_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34147'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34148 (CFG.gclk3_invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34148'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34149 (CFG.gclk3_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34149'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34150 (CFG.gclk3_mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34150'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34151 (CFG.tms_pull_up)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34151'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34152 (CFG.tdi_pull_up)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34152'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34153 (CFG.c1_pad_schmitt_trigger)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34153'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34154 (CFG.c2_pad_schmitt_trigger)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34154'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34155 (CFG.e1_pad_schmitt_trigger)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34155'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34156 (CFG.r_pad_schmitt_trigger)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34156'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34157 (CFG.c1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34157'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34158 (CFG.c1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34158'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34159 (CFG.c2_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34159'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34160 (CFG.c2_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34160'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34161 (CFG.e1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34161'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34162 (CFG.e1_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34162'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34163 (CFG.r_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34163'>IO</a></abbr></td>
-<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34164 (CFG.r_pad_term)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34164'>IO</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (CLK1.schmitt_trigger)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK2.schmitt_trigger)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (OE1.schmitt_trigger)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLR.schmitt_trigger)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (CLK1.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (CLK1.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CLK2.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34160 (CLK2.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34160'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34161 (OE1.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34161'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34162 (OE1.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34162'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34163 (CLR.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34163'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34164 (CLR.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34164'>-</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
 </tr>
 <tr>
 <td align='right' height='18'>34166</td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34166' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34167 (CFG.jtag_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34167'>M</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34168 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34168'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34169 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34169'>C</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34168 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34168'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34169 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34169'>M</a></abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34170' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34171' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34172' style='text-decoration:none'>?</abbr></td>
 <td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34173' style='text-decoration:none'>?</abbr></td>
 </tr>
 </table>
-<p>Fuse combinations for option "gclr_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34141'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34141</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<p>Fuse combinations for option "arming_switch":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34134'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34134</span></div></th></tr>
+<tr><td align='right' height='18'>safe</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>armed</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
 </table>
-<p>Fuse combinations for option "gclk1_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34142'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34142</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "gclk2_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34145'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34145</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "gclk3_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34148'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34148</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "goe1_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34135'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34135</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "goe2_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34136'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34136</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "goe3_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34137'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34137</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "goe4_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34138'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34138</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "goe5_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34139'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34139</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "goe6_invert":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34140'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34140</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "gclk1_mux":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34143'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34143</span></div></th><th width='21'><a name='L34144'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34144</span></div></th></tr>
-<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>C3_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "gclk2_mux":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34146'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34146</span></div></th><th width='21'><a name='L34147'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34147</span></div></th></tr>
-<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>C3_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "gclk3_mux":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34149'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34149</span></div></th><th width='21'><a name='L34150'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34150</span></div></th></tr>
-<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>C3_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<p>Fuse combinations for option "jtag_pin_func":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34167'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34167</span></div></th></tr>
+<tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 </table>
 <p>Fuse combinations for option "pd1_pin_func":</p><table>
 <tr><td width='70' height='40'></td><th width='21'><a name='L34168'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34168</span></div></th></tr>
@@ -162,217 +104,4 @@
 <tr><td width='70' height='40'></td><th width='21'><a name='L34169'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34169</span></div></th></tr>
 <tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
 <tr><td align='right' height='18'>pd</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "tdi_pull_up":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34152'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34152</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "tms_pull_up":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34151'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34151</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "jtag_pin_func":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34167'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34167</span></div></th></tr>
-<tr><td align='right' height='18'>user</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>jtag</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "r_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34156'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34156</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "r_pad_term":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34163'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34163</span></div></th><th width='21'><a name='L34164'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34164</span></div></th></tr>
-<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "c1_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34153'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34153</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "c1_pad_term":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34157'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34157</span></div></th><th width='21'><a name='L34158'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34158</span></div></th></tr>
-<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "c2_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34154'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34154</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "c2_pad_term":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34159'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34159</span></div></th><th width='21'><a name='L34160'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34160</span></div></th></tr>
-<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "e1_pad_schmitt_trigger":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34155'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34155</span></div></th></tr>
-<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<p>Fuse combinations for option "e1_pad_term":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34161'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34161</span></div></th><th width='21'><a name='L34162'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34162</span></div></th></tr>
-<tr><td align='right' height='18'>bus_keeper</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>high_z</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_down</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-<tr><td align='right' height='18'>pull_up</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-</table>
-<p>Fuse combinations for option "arming_switch":</p><table>
-<tr><td width='70' height='40'></td><th width='21'><a name='L34134'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34134</span></div></th></tr>
-<tr><td align='right' height='18'>safe</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
-<tr><td align='right' height='18'>armed</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
-</table>
-<h2>User Signature Bitmap</h2>
-<p>Device uses 16 (known) fuses within range 34174..34190 for user signature.</p>
-<table style='font-size:12px'>
-<tr><td width='70'></td>
-<td align='center' width='16'>0</td>
-<td align='center' width='16'>1</td>
-<td align='center' width='16'>2</td>
-<td align='center' width='16'>3</td>
-<td align='center' width='16'>4</td>
-<td align='center' width='16'>5</td>
-<td align='center' width='16'>6</td>
-<td align='center' width='16'>7</td>
-<td align='center' width='16'>8</td>
-<td align='center' width='16'>9</td>
-<td align='center' width='16'>10</td>
-<td align='center' width='16'>11</td>
-<td align='center' width='16'>12</td>
-<td align='center' width='16'>13</td>
-<td align='center' width='16'>14</td>
-<td align='center' width='16'>15</td>
-</tr>
-<tr>
-<td align='right' height='18'>34174</td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (USR0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (USR0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (USR0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (USR0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (USR0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (USR0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (USR0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (USR0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (USR1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (USR1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (USR1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (USR1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34186 (USR1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34186'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34187 (USR1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34187'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34188 (USR1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34188'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34189 (USR1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34189'>C</a></abbr></td>
-</tr>
-</table>
-<h2><a name='USR0'></a>User Signature Byte 0 Fuses</h2>
-<p>User signature byte 0 uses the following 8 (known) fuses for configuration.</p>
-<table style='font-size:12px'>
-<tr><td width='70'></td>
-<td align='center' width='16'>0</td>
-<td align='center' width='16'>1</td>
-<td align='center' width='16'>2</td>
-<td align='center' width='16'>3</td>
-<td align='center' width='16'>4</td>
-<td align='center' width='16'>5</td>
-<td align='center' width='16'>6</td>
-<td align='center' width='16'>7</td>
-<td align='center' width='16'>8</td>
-<td align='center' width='16'>9</td>
-<td align='center' width='16'>10</td>
-<td align='center' width='16'>11</td>
-<td align='center' width='16'>12</td>
-<td align='center' width='16'>13</td>
-<td align='center' width='16'>14</td>
-<td align='center' width='16'>15</td>
-</tr>
-<tr>
-<td align='right' height='18'>34174</td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34174 (USR0.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34174'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34175 (USR0.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34175'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34176 (USR0.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34176'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34177 (USR0.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34177'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34178 (USR0.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34178'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34179 (USR0.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34179'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34180 (USR0.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34180'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34181 (USR0.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34181'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34182 (USR1.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34182'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34183 (USR1.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34183'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34184 (USR1.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34184'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34185 (USR1.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34185'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34186 (USR1.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34186'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34187 (USR1.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34187'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34188 (USR1.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34188'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34189 (USR1.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34189'>-</a></abbr></td>
-</tr>
-</table>
-<p>Fuse combinations for byte "0", relative to offset 34174:</p><table style='font-size:12px'>
-<tr><td width='70'></td><th width='16'><a name='L34174'></a><abbr title='34174'>0</abbr></th><th width='16'><a name='L34175'></a><abbr title='34175'>1</abbr></th><th width='16'><a name='L34176'></a><abbr title='34176'>2</abbr></th><th width='16'><a name='L34177'></a><abbr title='34177'>3</abbr></th><th width='16'><a name='L34178'></a><abbr title='34178'>4</abbr></th><th width='16'><a name='L34179'></a><abbr title='34179'>5</abbr></th><th width='16'><a name='L34180'></a><abbr title='34180'>6</abbr></th><th width='16'><a name='L34181'></a><abbr title='34181'>7</abbr></th></tr>
-<tr><td align='right' height='18'>bit0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td></tr>
-<tr><td align='right' height='18'>bit1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit2</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit3</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit4</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit5</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit6</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit7</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-</table>
-<h2><a name='USR1'></a>User Signature Byte 1 Fuses</h2>
-<p>User signature byte 1 uses the following 8 (known) fuses for configuration.</p>
-<table style='font-size:12px'>
-<tr><td width='70'></td>
-<td align='center' width='16'>0</td>
-<td align='center' width='16'>1</td>
-<td align='center' width='16'>2</td>
-<td align='center' width='16'>3</td>
-<td align='center' width='16'>4</td>
-<td align='center' width='16'>5</td>
-<td align='center' width='16'>6</td>
-<td align='center' width='16'>7</td>
-<td align='center' width='16'>8</td>
-<td align='center' width='16'>9</td>
-<td align='center' width='16'>10</td>
-<td align='center' width='16'>11</td>
-<td align='center' width='16'>12</td>
-<td align='center' width='16'>13</td>
-<td align='center' width='16'>14</td>
-<td align='center' width='16'>15</td>
-</tr>
-<tr>
-<td align='right' height='18'>34174</td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34174 (USR0.bit7)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34174'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34175 (USR0.bit6)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34175'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34176 (USR0.bit5)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34176'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34177 (USR0.bit4)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34177'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34178 (USR0.bit3)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34178'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34179 (USR0.bit2)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34179'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34180 (USR0.bit1)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34180'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34181 (USR0.bit0)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34181'>-</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34182 (USR1.bit7)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34182'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34183 (USR1.bit6)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34183'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34184 (USR1.bit5)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34184'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34185 (USR1.bit4)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34185'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34186 (USR1.bit3)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34186'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34187 (USR1.bit2)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34187'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34188 (USR1.bit1)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34188'>C</a></abbr></td>
-<td align='center' width='15' bgcolor='#aaf' style='color:#666;'><abbr title='34189 (USR1.bit0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34189'>C</a></abbr></td>
-</tr>
-</table>
-<p>Fuse combinations for byte "1", relative to offset 34182:</p><table style='font-size:12px'>
-<tr><td width='70'></td><th width='16'><a name='L34182'></a><abbr title='34182'>0</abbr></th><th width='16'><a name='L34183'></a><abbr title='34183'>1</abbr></th><th width='16'><a name='L34184'></a><abbr title='34184'>2</abbr></th><th width='16'><a name='L34185'></a><abbr title='34185'>3</abbr></th><th width='16'><a name='L34186'></a><abbr title='34186'>4</abbr></th><th width='16'><a name='L34187'></a><abbr title='34187'>5</abbr></th><th width='16'><a name='L34188'></a><abbr title='34188'>6</abbr></th><th width='16'><a name='L34189'></a><abbr title='34189'>7</abbr></th></tr>
-<tr><td align='right' height='18'>bit0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td></tr>
-<tr><td align='right' height='18'>bit1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit2</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit3</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit4</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit5</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit6</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
-<tr><td align='right' height='18'>bit7</td><td align='center' bgcolor='#afa' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>0</td></tr>
 </table>

@@ -1,0 +1,1249 @@
+<title>Project Bureau — ATF1504AS Global Switches</title>
+<h1><a href='../index.html'>Project Bureau</a> — <a href='index.html'>ATF1504AS</a> Global Switches</h1>
+<i>Project Bureau aims at documenting the bitstream format of Microchip ATF15xx CPLDs. This is a work in progress. See more in the <a href='https://github.com/whitequark/prjbureau'>repository</a>.</i>
+<h2>Switch Configuration Bitmap</h2>
+<p>Device uses 70 (known) fuses within ranges 34080..34134 and 34134..34170 for global switches <a href='#GCLR'>GCLR</a>, <a href='#GCLK1'>GCLK1</a>, <a href='#GCLK2'>GCLK2</a>, <a href='#GCLK3'>GCLK3</a>, <a href='#GOE1'>GOE1</a>, <a href='#GOE2'>GOE2</a>, <a href='#GOE3'>GOE3</a>, <a href='#GOE4'>GOE4</a>, <a href='#GOE5'>GOE5</a>, <a href='#GOE6'>GOE6</a>.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34080</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34080 (GOE1.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34080'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34081 (GOE1.mux.M51_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34081'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34082 (GOE1.mux.M40_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34082'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34083 (GOE1.mux.MC46_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34083'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34084 (GOE1.mux.M24_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34084'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34085 (GOE1.mux.MC30_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34085'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34086 (GOE1.mux.M3_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34086'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34087 (GOE1.mux.MC11_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34087'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34088 (GOE1.mux.E1_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34088'>R</a></abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34089</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34089 (GOE2.mux.M57_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34089'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34090 (GOE2.mux.MC4_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34090'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34091 (GOE2.mux.M11_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34091'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34092 (GOE2.mux.MC24_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34092'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34093 (GOE2.mux.M30_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34093'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34094 (GOE2.mux.MC40_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34094'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34095 (GOE2.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34095'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34096 (GOE2.mux.MC52_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34096'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34097 (GOE2.mux.C2_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34097'>R</a></abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34098</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34098 (GOE3.mux.M46_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34098'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34099 (GOE3.mux.MC1_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34099'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34100 (GOE3.mux.MC3_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34100'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34101 (GOE3.mux.M11_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34101'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34102 (GOE3.mux.MC21_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34102'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34103 (GOE3.mux.M30_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34103'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34104 (GOE3.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34104'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34105 (GOE3.mux.MC49_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34105'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34106 (GOE3.mux.MC51_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34106'>R</a></abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34107</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34107 (GOE4.mux.M14_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34107'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34108 (GOE4.mux.M25_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34108'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34109 (GOE4.mux.MC17_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34109'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34110 (GOE4.mux.MC20_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34110'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34111 (GOE4.mux.M41_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34111'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34112 (GOE4.mux.MC33_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34112'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34113 (GOE4.mux.MC36_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34113'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34114 (GOE4.mux.M62_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34114'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34115 (GOE4.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34115'>R</a></abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34116</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34116 (GOE5.mux.MC5_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34116'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34117 (GOE5.mux.M16_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34117'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34118 (GOE5.mux.M25_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34118'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34119 (GOE5.mux.MC19_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34119'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34120 (GOE5.mux.M41_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34120'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34121 (GOE5.mux.MC35_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34121'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34122 (GOE5.mux.M64_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34122'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34123 (GOE5.mux.MC53_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34123'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34124 (GOE5.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34124'>R</a></abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34125</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34125 (GOE6.mux.M19_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34125'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34126 (GOE6.mux.MC62_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34126'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34127 (GOE6.mux.M53_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34127'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34128 (GOE6.mux.MC41_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34128'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34129 (GOE6.mux.M35_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34129'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34130 (GOE6.mux.MC25_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34130'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34131 (GOE6.mux.M17_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34131'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34132 (GOE6.mux.M5_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34132'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34133 (GOE6.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34133'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34138'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34139'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34140'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34141'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34142'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34143'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34144'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34145'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34146'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34147'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34148'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34149'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34150'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34151'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34152'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34153'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+<tr>
+<td align='right' height='18'>34166</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34166 (CFG.read_protection)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34166'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34167 (CFG.jtag_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34167'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34168' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34169' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<h2>Switch Connectivity</h2>
+<p>Global switches provide the following possible (known) connection points.</p>
+<table style='font-size:12px'>
+<tr><td width='70' height='40'></td><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GCLK1</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GCLK2</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GCLK3</span></div></th></tr>
+<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70' height='40'></td><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE1</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE2</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE3</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE4</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE5</span></div></th><th width='16'><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>GOE6</span></div></th></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>E1_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC1_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M3_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC3_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC4_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC5_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M5_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC11_FB</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M11_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M14_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M16_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC17_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M17_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC19_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M19_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC20_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC21_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M24_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC24_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M25_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC25_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC30_FB</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M30_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC33_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC35_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M35_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC36_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M40_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC40_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M41_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC41_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>MC46_FB</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M46_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC49_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M51_PAD</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC51_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC52_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC53_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M53_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>M57_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>M62_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+<tr><td align='right' height='18'>MC62_FB</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td><td align='center' bgcolor='#faa' style='color:#666'>R</td><td align='center' bgcolor='#ccc' style='color:#666'>-</td></tr>
+</table>
+<h2><a name='GCLR'></a>Switch GCLR Fuses</h2>
+<p>Switch GCLR uses the following 1 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34144'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34144'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34144</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GCLK1'></a>Switch GCLK1 Fuses</h2>
+<p>Switch GCLK1 uses the following 3 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34145'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34146'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34147'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GCLK1":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34146'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34146</span></div></th><th width='21'><a name='L34147'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34147</span></div></th></tr>
+<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34145'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34145</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<h2><a name='GCLK2'></a>Switch GCLK2 Fuses</h2>
+<p>Switch GCLK2 uses the following 3 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34148'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34149'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34150'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GCLK2":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34149'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34149</span></div></th><th width='21'><a name='L34150'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34150</span></div></th></tr>
+<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34148'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34148</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<h2><a name='GCLK3'></a>Switch GCLK3 Fuses</h2>
+<p>Switch GCLK3 uses the following 3 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34151'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34152'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34153'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GCLK3":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34152'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34152</span></div></th><th width='21'><a name='L34153'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34153</span></div></th></tr>
+<tr><td align='right' height='18'>C1_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#e8e8e8'>1</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#e8e8e8'>0</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34151'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34151</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+</table>
+<h2><a name='GOE1'></a>Switch GOE1 Fuses</h2>
+<p>Switch GOE1 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34080</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34080 (GOE1.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34080'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34081 (GOE1.mux.M51_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34081'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34082 (GOE1.mux.M40_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34082'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34083 (GOE1.mux.MC46_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34083'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34084 (GOE1.mux.M24_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34084'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34085 (GOE1.mux.MC30_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34085'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34086 (GOE1.mux.M3_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34086'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34087 (GOE1.mux.MC11_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34087'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34088 (GOE1.mux.E1_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34088'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34138'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE1", relative to offset 34080:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34080'></a><abbr title='34080'>0</abbr></th><th width='16'><a name='L34081'></a><abbr title='34081'>1</abbr></th><th width='16'><a name='L34082'></a><abbr title='34082'>2</abbr></th><th width='16'><a name='L34083'></a><abbr title='34083'>3</abbr></th><th width='16'><a name='L34084'></a><abbr title='34084'>4</abbr></th><th width='16'><a name='L34085'></a><abbr title='34085'>5</abbr></th><th width='16'><a name='L34086'></a><abbr title='34086'>6</abbr></th><th width='16'><a name='L34087'></a><abbr title='34087'>7</abbr></th><th width='16'><a name='L34088'></a><abbr title='34088'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>E1_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+<tr><td align='right' height='18'>M3_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC11_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M24_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC30_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M40_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC46_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M51_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34138'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34138</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GOE2'></a>Switch GOE2 Fuses</h2>
+<p>Switch GOE2 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34089</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34089 (GOE2.mux.M57_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34089'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34090 (GOE2.mux.MC4_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34090'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34091 (GOE2.mux.M11_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34091'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34092 (GOE2.mux.MC24_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34092'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34093 (GOE2.mux.M30_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34093'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34094 (GOE2.mux.MC40_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34094'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34095 (GOE2.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34095'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34096 (GOE2.mux.MC52_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34096'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34097 (GOE2.mux.C2_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34097'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34139'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE2", relative to offset 34089:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34089'></a><abbr title='34089'>0</abbr></th><th width='16'><a name='L34090'></a><abbr title='34090'>1</abbr></th><th width='16'><a name='L34091'></a><abbr title='34091'>2</abbr></th><th width='16'><a name='L34092'></a><abbr title='34092'>3</abbr></th><th width='16'><a name='L34093'></a><abbr title='34093'>4</abbr></th><th width='16'><a name='L34094'></a><abbr title='34094'>5</abbr></th><th width='16'><a name='L34095'></a><abbr title='34095'>6</abbr></th><th width='16'><a name='L34096'></a><abbr title='34096'>7</abbr></th><th width='16'><a name='L34097'></a><abbr title='34097'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>C2_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+<tr><td align='right' height='18'>MC4_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M11_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC24_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M30_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC40_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC52_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M57_PAD</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34139'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34139</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GOE3'></a>Switch GOE3 Fuses</h2>
+<p>Switch GOE3 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34098</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34098 (GOE3.mux.M46_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34098'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34099 (GOE3.mux.MC1_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34099'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34100 (GOE3.mux.MC3_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34100'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34101 (GOE3.mux.M11_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34101'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34102 (GOE3.mux.MC21_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34102'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34103 (GOE3.mux.M30_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34103'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34104 (GOE3.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34104'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34105 (GOE3.mux.MC49_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34105'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34106 (GOE3.mux.MC51_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34106'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34140'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE3", relative to offset 34098:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34098'></a><abbr title='34098'>0</abbr></th><th width='16'><a name='L34099'></a><abbr title='34099'>1</abbr></th><th width='16'><a name='L34100'></a><abbr title='34100'>2</abbr></th><th width='16'><a name='L34101'></a><abbr title='34101'>3</abbr></th><th width='16'><a name='L34102'></a><abbr title='34102'>4</abbr></th><th width='16'><a name='L34103'></a><abbr title='34103'>5</abbr></th><th width='16'><a name='L34104'></a><abbr title='34104'>6</abbr></th><th width='16'><a name='L34105'></a><abbr title='34105'>7</abbr></th><th width='16'><a name='L34106'></a><abbr title='34106'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC1_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC3_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M11_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC21_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M30_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M46_PAD</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC49_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC51_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34140'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34140</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GOE4'></a>Switch GOE4 Fuses</h2>
+<p>Switch GOE4 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34107</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34107 (GOE4.mux.M14_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34107'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34108 (GOE4.mux.M25_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34108'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34109 (GOE4.mux.MC17_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34109'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34110 (GOE4.mux.MC20_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34110'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34111 (GOE4.mux.M41_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34111'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34112 (GOE4.mux.MC33_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34112'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34113 (GOE4.mux.MC36_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34113'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34114 (GOE4.mux.M62_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34114'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34115 (GOE4.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34115'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34141'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE4", relative to offset 34107:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34107'></a><abbr title='34107'>0</abbr></th><th width='16'><a name='L34108'></a><abbr title='34108'>1</abbr></th><th width='16'><a name='L34109'></a><abbr title='34109'>2</abbr></th><th width='16'><a name='L34110'></a><abbr title='34110'>3</abbr></th><th width='16'><a name='L34111'></a><abbr title='34111'>4</abbr></th><th width='16'><a name='L34112'></a><abbr title='34112'>5</abbr></th><th width='16'><a name='L34113'></a><abbr title='34113'>6</abbr></th><th width='16'><a name='L34114'></a><abbr title='34114'>7</abbr></th><th width='16'><a name='L34115'></a><abbr title='34115'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+<tr><td align='right' height='18'>M14_PAD</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC17_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC20_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M25_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC33_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC36_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M41_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M62_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34141'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34141</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GOE5'></a>Switch GOE5 Fuses</h2>
+<p>Switch GOE5 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34116</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34116 (GOE5.mux.MC5_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34116'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34117 (GOE5.mux.M16_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34117'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34118 (GOE5.mux.M25_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34118'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34119 (GOE5.mux.MC19_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34119'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34120 (GOE5.mux.M41_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34120'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34121 (GOE5.mux.MC35_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34121'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34122 (GOE5.mux.M64_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34122'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34123 (GOE5.mux.MC53_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34123'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34124 (GOE5.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34124'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34142'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34143'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE5", relative to offset 34116:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34116'></a><abbr title='34116'>0</abbr></th><th width='16'><a name='L34117'></a><abbr title='34117'>1</abbr></th><th width='16'><a name='L34118'></a><abbr title='34118'>2</abbr></th><th width='16'><a name='L34119'></a><abbr title='34119'>3</abbr></th><th width='16'><a name='L34120'></a><abbr title='34120'>4</abbr></th><th width='16'><a name='L34121'></a><abbr title='34121'>5</abbr></th><th width='16'><a name='L34122'></a><abbr title='34122'>6</abbr></th><th width='16'><a name='L34123'></a><abbr title='34123'>7</abbr></th><th width='16'><a name='L34124'></a><abbr title='34124'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+<tr><td align='right' height='18'>MC5_FB</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M16_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC19_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M25_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC35_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M41_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC53_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M64_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34142'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34142</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
+<h2><a name='GOE6'></a>Switch GOE6 Fuses</h2>
+<p>Switch GOE6 uses the following 10 (known) fuses for configuration.</p>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+</tr>
+<tr>
+<td align='right' height='18'>34125</td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34125 (GOE6.mux.M19_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34125'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34126 (GOE6.mux.MC62_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34126'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34127 (GOE6.mux.M53_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34127'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34128 (GOE6.mux.MC41_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34128'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34129 (GOE6.mux.M35_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34129'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34130 (GOE6.mux.MC25_FB)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34130'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34131 (GOE6.mux.M17_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34131'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34132 (GOE6.mux.M5_PAD)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34132'>R</a></abbr></td>
+<td align='center' width='15' bgcolor='#faa' style='color:#666;'><abbr title='34133 (GOE6.mux.GND0)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34133'>R</a></abbr></td>
+</tr>
+</table>
+<table style='font-size:12px'>
+<tr><td width='70'></td>
+<td align='center' width='16'>0</td>
+<td align='center' width='16'>1</td>
+<td align='center' width='16'>2</td>
+<td align='center' width='16'>3</td>
+<td align='center' width='16'>4</td>
+<td align='center' width='16'>5</td>
+<td align='center' width='16'>6</td>
+<td align='center' width='16'>7</td>
+<td align='center' width='16'>8</td>
+<td align='center' width='16'>9</td>
+<td align='center' width='16'>10</td>
+<td align='center' width='16'>11</td>
+<td align='center' width='16'>12</td>
+<td align='center' width='16'>13</td>
+<td align='center' width='16'>14</td>
+<td align='center' width='16'>15</td>
+<td align='center' width='16'>16</td>
+<td align='center' width='16'>17</td>
+<td align='center' width='16'>18</td>
+<td align='center' width='16'>19</td>
+<td align='center' width='16'>20</td>
+<td align='center' width='16'>21</td>
+<td align='center' width='16'>22</td>
+<td align='center' width='16'>23</td>
+<td align='center' width='16'>24</td>
+<td align='center' width='16'>25</td>
+<td align='center' width='16'>26</td>
+<td align='center' width='16'>27</td>
+<td align='center' width='16'>28</td>
+<td align='center' width='16'>29</td>
+<td align='center' width='16'>30</td>
+<td align='center' width='16'>31</td>
+</tr>
+<tr>
+<td align='right' height='18'>34134</td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34134 (CFG.arming_switch)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34134'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34135 (CFG.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34135'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34136 (CFG.pd1_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34136'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34137 (CFG.pd2_pin_func)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34137'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34138 (GOE1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34138'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34139 (GOE2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34139'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34140 (GOE3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34140'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34141 (GOE4.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34141'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34142 (GOE5.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34142'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#afa' style='color:#666;'><abbr title='34143 (GOE6.invert)' style='text-decoration:none'><a style='color:#666; text-decoration:none' href='#L34143'>M</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34144 (GCLR.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34144'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34145 (GCLK1.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34145'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34146 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34146'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34147 (GCLK1.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34147'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34148 (GCLK2.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34148'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34149 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34149'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34150 (GCLK2.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34150'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34151 (GCLK3.invert)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34151'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34152 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34152'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34153 (GCLK3.mux)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34153'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34154 (CLK1.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34154'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34155 (CLK2.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34155'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34156 (CLK3.standby_wakeup)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34156'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34157 (TMS.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34157'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34158 (TDI.termination)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34158'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#fff' style='color:#aaa;'><abbr title='34159 (CFG.reset_hysteresis)' style='text-decoration:none'><a style='color:#aaa; text-decoration:none' href='#L34159'>-</a></abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34160' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34161' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34162' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34163' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34164' style='text-decoration:none'>?</abbr></td>
+<td align='center' width='15' bgcolor='#ccc' style='color:#666;'><abbr title='34165' style='text-decoration:none'>?</abbr></td>
+</tr>
+</table>
+<p>Fuse combinations for mux "GOE6", relative to offset 34125:</p><table style='font-size:12px'>
+<tr><td width='70'></td><th width='16'><a name='L34125'></a><abbr title='34125'>0</abbr></th><th width='16'><a name='L34126'></a><abbr title='34126'>1</abbr></th><th width='16'><a name='L34127'></a><abbr title='34127'>2</abbr></th><th width='16'><a name='L34128'></a><abbr title='34128'>3</abbr></th><th width='16'><a name='L34129'></a><abbr title='34129'>4</abbr></th><th width='16'><a name='L34130'></a><abbr title='34130'>5</abbr></th><th width='16'><a name='L34131'></a><abbr title='34131'>6</abbr></th><th width='16'><a name='L34132'></a><abbr title='34132'>7</abbr></th><th width='16'><a name='L34133'></a><abbr title='34133'>8</abbr></th></tr>
+<tr><td align='right' height='18'>GND1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>GND0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td></tr>
+<tr><td align='right' height='18'>M5_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M17_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M19_PAD</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC25_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M35_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC41_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>M53_PAD</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+<tr><td align='right' height='18'>MC62_FB</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#afa' style='color:#666;'>0</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td><td align='center' bgcolor='#ccc' style='color:#666;'>1</td></tr>
+</table>
+<p>Fuse combinations for option "invert":</p><table>
+<tr><td width='70' height='40'></td><th width='21'><a name='L34143'></a><div style='width: 12px; transform: translate(4px, 10px) rotate(315deg);'><span style='font-size: 11px'>34143</span></div></th></tr>
+<tr><td align='right' height='18'>off</td><td align='center' bgcolor='#e8e8e8'>1</td></tr>
+<tr><td align='right' height='18'>on</td><td align='center' bgcolor='#e8e8e8'>0</td></tr>
+</table>
