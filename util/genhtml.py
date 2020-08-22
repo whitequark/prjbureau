@@ -226,9 +226,8 @@ macrocell_options = {
     "oe_mux":           "M",
     "slow_output":      "IO",
     "open_collector":   "IO",
-    "pull_up":          "IO",
+    "termination":      "IO",
     "schmitt_trigger":  "IO",
-    "bus_keeper":       "IO",
     "io_standard":      "IO",
     "low_power":        "C",
 }
@@ -244,21 +243,21 @@ global_options = {
     "arming_switch":    "A",
     "power_reset":      "C",
     "jtag_pin_func":    "M",
-    "tdi_pull_up":      "IO",
-    "tms_pull_up":      "IO",
+    "tdi_termination":  "IO",
+    "tms_termination":  "IO",
     "pd1_pin_func":     "C",
     "pd2_pin_func":     "C",
-    "bus_keeper":       "IO",
+    "termination":      "IO",
     "gclk1_itd":        "C",
     "gclk2_itd":        "C",
     "gclk3_itd":        "C",
-    "r_pad_term":       "IO",
+    "r_pad_termination": "IO",
     "r_pad_schmitt_trigger": "IO",
-    "c1_pad_term":      "IO",
+    "c1_pad_termination": "IO",
     "c1_pad_schmitt_trigger": "IO",
-    "c2_pad_term":      "IO",
+    "c2_pad_termination": "IO",
     "c2_pad_schmitt_trigger": "IO",
-    "e1_pad_term":      "IO",
+    "e1_pad_termination": "IO",
     "e1_pad_schmitt_trigger": "IO",
 }
 
@@ -547,7 +546,8 @@ def write_switches(f, device_name, device, block_name):
         return {'GND1':-5,'GND0':-4,'R_PAD':-3,'C1_PAD':-2,'C2_PAD':-1,'E1_PAD':0}[net_name]
 
     write_section(f, "Switch Connectivity",
-        f"Switches provide the following possible (known) connection points.")
+        f"Switches in logic block {block_name} provide the following possible (known) "
+        f"connection points.")
     write_matrix(f, block_switches, filter_fn=filter_fn, sort_fn=sort_fn)
 
     for switch_name, switch in sorted(block_switches.items(),
@@ -737,25 +737,18 @@ def write_pins(f, device_name, device):
         row['Logic Block'] = f"<a href='mc{macrocell['block']}.html'>{macrocell['block']}</a>"
         row['Device Pad'] = macrocell['pad']
 
-    for special_name, special_macrocell_name in device['specials'].items():
-        row = rows_by_pad[device['macrocells'][special_macrocell_name]['pad']]
+    for pad in ('R', 'C1', 'C2', 'E1'):
+        row = rows_by_pad[pad]
+        row['Macrocell'] = '—'
+        row['Logic Block'] = '—'
+        row['Device Pad'] = pad
+
+    for special_name, special_pad in device['specials'].items():
+        row = rows_by_pad[special_pad]
         if 'Special Function' not in row:
             row['Special Function'] = f"<b>{special_name}</b>"
         else:
             row['Special Function'] += f", <b>{special_name}</b>"
-
-    for pad, special_func in (
-        ('C1', '<b>GCLK1</b>'),
-        ('E1', '<b>OE1</b>'),
-        ('R',  '<b>GCLR</b>'),
-        ('C2', '<b>OE2</b>, <b>GCLK2</b>'),
-    ):
-        rows_by_pad[pad] = {
-            'Macrocell': '—',
-            'Logic Block': '—',
-            'Device Pad': pad,
-            'Special Function': special_func,
-        }
 
     for package, pinout in device['pins'].items():
         for pad, row in rows_by_pad.items():
@@ -763,7 +756,7 @@ def write_pins(f, device_name, device):
 
     for row in rows_by_pad.values():
         if 'Special Function' not in row: continue
-        row['Special Function'] = re.sub(r"(GCLK\d</b>)", r"\1†", row['Special Function'])
+        row['Special Function'] = re.sub(r"(CLK\d</b>)", r"\1†", row['Special Function'])
 
     first_package = next(iter(device['pins']))
     rows = list(sorted(rows_by_pad.values(),
@@ -782,8 +775,9 @@ def write_pins(f, device_name, device):
 
     f.write(f"<p>† Any of the three on-chip global clock networks <b>GCLK1</b>, <b>GCLK2</b>, "
             f"and <b>GCLK3</b> can be driven by any of the three pads with global clock input "
-            f"capability, <b>C1</b>, <b>C2</b>, and <b>{device['specials']['GCLK3']}</b>. "
-            f"The name of the special function merely illustrates the typical application.</p>")
+            f"capability, <b>C1</b>, <b>C2</b>, and <b>{device['specials']['CLK3']}</b>. "
+            f"The name of the special function <b>CLK1</b>, <b>CLK2</b>, and <b>CLK3</b> merely "
+            f"illustrates the typical application.</p>")
 
 
 devices = database.load()

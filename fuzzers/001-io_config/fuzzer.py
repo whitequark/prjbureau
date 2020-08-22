@@ -9,8 +9,8 @@ with database.transact() as db:
         for macrocell_name, macrocell in device['macrocells'].items():
             has_sstl = False
             if device_name.endswith("BE") and device_name != "ATF1502BE":
-                if macrocell_name not in (device['specials']['VREFA'],
-                                          device['specials']['VREFB']):
+                if macrocell['pad'] not in (device['specials']['VREFA'],
+                                            device['specials']['VREFB']):
                     has_sstl = True
 
             if macrocell['pad'] not in pinout:
@@ -52,7 +52,7 @@ with database.transact() as db:
             if device_name.endswith('BE'):
                 f_hyst = run_o(schmitt_trigger='O')
                 f_pu   = run_o(pull_up='O')
-                f_pk   = run_o(pin_keep='O')
+                f_pk   = run_o(pin_keep='O') # overrides pull-up
             if has_sstl:
                 f_ttl  = run_i(voltage_level_A='3.3', voltage_level_B='3.3', SSTL_input='I2')
                 f_sstl = run_i(voltage_level_A='3.3', voltage_level_B='3.3', SSTL_input='I1,I2')
@@ -70,12 +70,13 @@ with database.transact() as db:
                 })
             if device_name.endswith('BE'):
                 macrocell.update({
-                    'pull_up':
-                        bitdiff.describe(1, {'off': f_out, 'on': f_pu}),
+                    'termination': bitdiff.describe(2, {
+                        'high_z': f_out,
+                        'pull_up': f_pu,
+                        'bus_keeper': f_pk,
+                    }),
                     'schmitt_trigger':
                         bitdiff.describe(1, {'off': f_out, 'on': f_hyst}),
-                    'bus_keeper':
-                        bitdiff.describe(1, {'off': f_pu, 'on': f_pk}), # pk implies pu
                 })
             if has_sstl:
                 macrocell.update({

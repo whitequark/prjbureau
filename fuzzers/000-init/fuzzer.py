@@ -55,7 +55,14 @@ def atf15xx(*, ranges, blocks, specials, pins, flip_muxes=False):
         },
         "config": {},
         "user": [],
-        "specials": specials,
+        "specials": {
+            "CLR":  "R",
+            "CLK1": "C1",
+            "CLK2": "C2",
+            "OE1":  "E1",
+            "OE2":  "C2",
+            **specials
+        },
         "pins": pins
     }
 
@@ -65,13 +72,13 @@ def atf1502xx(*, ranges, specials={}):
         "ranges": ranges,
         "blocks": "AB",
         "specials": {
-            "TDI":   "MC4",
-            "PD1":   "MC7",
-            "TMS":   "MC9",
-            "GCLK3": "MC17",
-            "TDO":   "MC20",
-            "TCK":   "MC25",
-            "PD2":   "MC31",
+            "TDI":  "M4",
+            "PD1":  "M7",
+            "TMS":  "M9",
+            "CLK3": "M17",
+            "TDO":  "M20",
+            "TCK":  "M25",
+            "PD2":  "M31",
             **specials
         },
         "pins": {
@@ -99,13 +106,13 @@ def atf1504xx(*, ranges, specials={}):
         "ranges": ranges,
         "blocks": "ABCD",
         "specials": {
-            "PD1":   "MC3",
-            "TDI":   "MC8",
-            "TMS":   "MC32",
-            "PD2":   "MC35",
-            "TCK":   "MC48",
-            "TDO":   "MC56",
-            "GCLK3": "MC64",
+            "PD1":  "M3",
+            "TDI":  "M8",
+            "TMS":  "M32",
+            "PD2":  "M35",
+            "TCK":  "M48",
+            "TDO":  "M56",
+            "CLK3": "M64",
             **specials
         },
         "pins": {
@@ -178,13 +185,13 @@ def atf1508xx(*, ranges, specials={}):
         "ranges": ranges,
         "blocks": "ABCDEFGH",
         "specials": {
-            "PD1":   "MC3",
-            "TDI":   "MC32",
-            "TMS":   "MC48",
-            "PD2":   "MC67",
-            "TCK":   "MC96",
-            "TDO":   "MC112",
-            "GCLK3": "MC128",
+            "PD1":  "M3",
+            "TDI":  "M32",
+            "TMS":  "M48",
+            "PD2":  "M67",
+            "TCK":  "M96",
+            "TDO":  "M112",
+            "CLK3": "M128",
             **specials
         },
         "pins": {
@@ -285,8 +292,8 @@ database.save({
             "reserved":   [34190, 34198],
         },
         "specials": {
-            "VREFA": "MC3",
-            "VREFB": "MC46",
+            "VREFA": "M3",
+            "VREFB": "M46",
         }
     }),
     # "ATF1508AS": atf1508xx(**{
@@ -311,8 +318,8 @@ database.save({
     #         "reserved":   [74138, 74146],
     #     },
     #     "specials": {
-    #         "VREFA": "MC21",
-    #         "VREFB": "MC93",
+    #         "VREFA": "M21",
+    #         "VREFB": "M93",
     #     }
     # }),
 })

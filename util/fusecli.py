@@ -32,12 +32,12 @@ macrocell_options = [
     "oe_mux",
     "slow_output",
     "open_collector",
-    "pull_up",
+    "termination",
     "schmitt_trigger",
-    "bus_keeper",
     "io_standard",
     "low_power",
 ]
+
 
 global_options = [
     "invert",

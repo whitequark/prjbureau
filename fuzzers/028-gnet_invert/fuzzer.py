@@ -6,7 +6,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+        gclk3_pad = device['specials']['CLK3']
         gclr_switch = device['globals']['GCLR']
         gclk_switches = {name: switch for name, switch in device['globals'].items()
                          if name.startswith('GCLK')}

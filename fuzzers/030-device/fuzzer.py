@@ -7,9 +7,9 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
         config = device['config']
-        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
-        jtag_macrocell_names  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
-        pwrdn_macrocell_names = [device['specials'][net] for net in ('PD1', 'PD2')]
+        gclk3_pad  =  device['specials']['CLK3']
+        jtag_pads  = [device['specials'][net] for net in ('TCK','TMS','TDI','TDO')]
+        pwrdn_pads = [device['specials'][net] for net in ('PD1','PD2')]
 
         def set_mc_option(fuses, macrocell_name, option_name, value_name):
             option = device['macrocells'][macrocell_name][option_name]
@@ -45,16 +45,16 @@ with database.transact() as db:
             f_pin_keep_off = run(strategy={'pin_keep':'off'})
             f_pin_keep_on  = run(strategy={'pin_keep':'on'})
             config.update({
-                'bus_keeper': bitdiff.describe(1, {
-                    'off': f_pin_keep_off,
-                    'on':  f_pin_keep_on,
+                'termination': bitdiff.describe(1, {
+                    'high_z':     f_pin_keep_off,
+                    'bus_keeper': f_pin_keep_on,
                 }),
             })
 
         for index, pin in enumerate(('pd1', 'pd2')):
             f_pwrdn_n_off = run(strategy={pin:'off'})
             f_pwrdn_n_on  = run(strategy={pin:'on'})
-            set_mc_input(f_pwrdn_n_on, pwrdn_macrocell_names[index])
+            set_mc_input(f_pwrdn_n_on, f"MC{pwrdn_pads[index][1:]}")
             config.update({
                 f"{pin}_pin_func": bitdiff.describe(1, {
                     'user': f_pwrdn_n_off,
@@ -77,9 +77,9 @@ with database.transact() as db:
             f_pullup_off = run(strategy={'JTAG':'on', f"{pin}_pullup":'off'})
             f_pullup_on  = run(strategy={'JTAG':'on', f"{pin}_pullup":'on'})
             config.update({
-                f"{pin}_pull_up": bitdiff.describe(1, {
-                    'off': f_pullup_off,
-                    'on':  f_pullup_on,
+                f"{pin}_termination": bitdiff.describe(1, {
+                    'high_z':  f_pullup_off,
+                    'pull_up': f_pullup_on,
                 }),
             })
 
@@ -95,8 +95,8 @@ with database.transact() as db:
 
         f_jtag_off = run(strategy={'JTAG':'off'})
         f_jtag_on  = run(strategy={'JTAG':'on'})
-        for jtag_macrocell_name in jtag_macrocell_names:
-            set_mc_input(f_jtag_on, jtag_macrocell_name)
+        for jtag_pad in jtag_pads:
+            set_mc_input(f_jtag_on, f"MC{jtag_pad[1:]}")
         config.update({
             'jtag_pin_func': bitdiff.describe(1, {
                 'user': f_jtag_off,

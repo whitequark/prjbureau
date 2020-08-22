@@ -71,7 +71,7 @@ with database.transact() as db:
                     'off': f_norm,
                     'on':  f_hyst,
                 }),
-                f"{net_name}_term": bitdiff.describe(2, {
+                f"{net_name}_termination": bitdiff.describe(2, {
                     'high_z':     f_highz,
                     'pull_up':    f_pullup,
                     'pull_down':  f_pulldn,

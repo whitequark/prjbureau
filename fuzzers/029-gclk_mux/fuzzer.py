@@ -13,7 +13,7 @@ with database.transact() as db:
 
         package, pinout = next(iter(device['pins'].items()))
         config_range = range(*device['ranges']['config'])
-        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+        gclk3_pad = device['specials']['CLK3']
         gclk_switches = {name: switch for name, switch in device['globals'].items()
                          if name.startswith('GCLK')}
 
@@ -68,7 +68,7 @@ with database.transact() as db:
                 if pad_n in '12':
                     pad = f"C{pad_n}"
                 elif pad_n == '3':
-                    pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+                    pad = device['specials']['CLK3']
                 else:
                     assert False
                 mapping[gclk_mux_net] = f"{pad}_PAD"

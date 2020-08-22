@@ -9980,13 +9980,13 @@
       }
     },
     "config": {
-      "bus_keeper": {
+      "termination": {
         "fuses": [
           16751
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "bus_keeper": 0
         }
       },
       "pd1_pin_func": {
@@ -10034,22 +10034,22 @@
           "on": 0
         }
       },
-      "tdi_pull_up": {
+      "tdi_termination": {
         "fuses": [
           16774
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
-      "tms_pull_up": {
+      "tms_termination": {
         "fuses": [
           16773
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
       "power_reset": {
@@ -10127,13 +10127,18 @@
       }
     ],
     "specials": {
-      "TDI": "MC4",
-      "PD1": "MC7",
-      "TMS": "MC9",
-      "GCLK3": "MC17",
-      "TDO": "MC20",
-      "TCK": "MC25",
-      "PD2": "MC31"
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "TDI": "M4",
+      "PD1": "M7",
+      "TMS": "M9",
+      "CLK3": "M17",
+      "TDO": "M20",
+      "TCK": "M25",
+      "PD2": "M31"
     },
     "pins": {
       "TQFP44": {
@@ -10611,27 +10616,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15765
+            15765,
+            15766
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15769
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15766
           ],
           "values": {
             "off": 0,
@@ -10863,27 +10861,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15738
+            15738,
+            15739
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15742
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15739
           ],
           "values": {
             "off": 0,
@@ -11115,27 +11106,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15711
+            15711,
+            15712
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15715
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15712
           ],
           "values": {
             "off": 0,
@@ -11367,27 +11351,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15684
+            15684,
+            15685
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15688
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15685
           ],
           "values": {
             "off": 0,
@@ -11619,27 +11596,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15657
+            15657,
+            15658
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15661
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15658
           ],
           "values": {
             "off": 0,
@@ -11871,27 +11841,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15630
+            15630,
+            15631
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15634
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15631
           ],
           "values": {
             "off": 0,
@@ -12123,27 +12086,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15603
+            15603,
+            15604
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15607
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15604
           ],
           "values": {
             "off": 0,
@@ -12375,27 +12331,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15576
+            15576,
+            15577
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15580
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15577
           ],
           "values": {
             "off": 0,
@@ -12627,27 +12576,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15549
+            15549,
+            15550
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15553
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15550
           ],
           "values": {
             "off": 0,
@@ -12879,27 +12821,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15522
+            15522,
+            15523
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15526
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15523
           ],
           "values": {
             "off": 0,
@@ -13131,27 +13066,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15495
+            15495,
+            15496
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15499
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15496
           ],
           "values": {
             "off": 0,
@@ -13383,27 +13311,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15468
+            15468,
+            15469
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15472
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15469
           ],
           "values": {
             "off": 0,
@@ -13635,27 +13556,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15441
+            15441,
+            15442
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15445
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15442
           ],
           "values": {
             "off": 0,
@@ -13887,27 +13801,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15414
+            15414,
+            15415
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15418
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15415
           ],
           "values": {
             "off": 0,
@@ -14139,27 +14046,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15387
+            15387,
+            15388
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15391
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15388
           ],
           "values": {
             "off": 0,
@@ -14391,27 +14291,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15360
+            15360,
+            15361
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15364
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15361
           ],
           "values": {
             "off": 0,
@@ -14643,27 +14536,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16245
+            16245,
+            16246
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16249
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16246
           ],
           "values": {
             "off": 0,
@@ -14895,27 +14781,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16218
+            16218,
+            16219
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16222
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16219
           ],
           "values": {
             "off": 0,
@@ -15147,27 +15026,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16191
+            16191,
+            16192
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16195
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16192
           ],
           "values": {
             "off": 0,
@@ -15399,27 +15271,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16164
+            16164,
+            16165
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16168
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16165
           ],
           "values": {
             "off": 0,
@@ -15651,27 +15516,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16137
+            16137,
+            16138
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16141
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16138
           ],
           "values": {
             "off": 0,
@@ -15903,27 +15761,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16110
+            16110,
+            16111
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16114
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16111
           ],
           "values": {
             "off": 0,
@@ -16155,27 +16006,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16083
+            16083,
+            16084
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16087
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16084
           ],
           "values": {
             "off": 0,
@@ -16407,27 +16251,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16056
+            16056,
+            16057
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16060
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16057
           ],
           "values": {
             "off": 0,
@@ -16659,27 +16496,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16029
+            16029,
+            16030
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16033
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16030
           ],
           "values": {
             "off": 0,
@@ -16911,27 +16741,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            16002
+            16002,
+            16003
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             16006
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            16003
           ],
           "values": {
             "off": 0,
@@ -17163,27 +16986,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15975
+            15975,
+            15976
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15979
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15976
           ],
           "values": {
             "off": 0,
@@ -17415,27 +17231,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15948
+            15948,
+            15949
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15952
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15949
           ],
           "values": {
             "off": 0,
@@ -17667,27 +17476,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15921
+            15921,
+            15922
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15925
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15922
           ],
           "values": {
             "off": 0,
@@ -17919,27 +17721,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15894
+            15894,
+            15895
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15898
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15895
           ],
           "values": {
             "off": 0,
@@ -18171,27 +17966,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15867
+            15867,
+            15868
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15871
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15868
           ],
           "values": {
             "off": 0,
@@ -18423,27 +18211,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            15840
+            15840,
+            15841
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             15844
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            15841
           ],
           "values": {
             "off": 0,
@@ -20501,22 +20282,22 @@
           "pd": 0
         }
       },
-      "tdi_pull_up": {
+      "tdi_termination": {
         "fuses": [
           16768
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
-      "tms_pull_up": {
+      "tms_termination": {
         "fuses": [
           16767
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
       "jtag_pin_func": {
@@ -20537,7 +20318,7 @@
           "on": 0
         }
       },
-      "r_pad_term": {
+      "r_pad_termination": {
         "fuses": [
           16779,
           16780
@@ -20558,7 +20339,7 @@
           "on": 0
         }
       },
-      "c1_pad_term": {
+      "c1_pad_termination": {
         "fuses": [
           16773,
           16774
@@ -20579,7 +20360,7 @@
           "on": 0
         }
       },
-      "c2_pad_term": {
+      "c2_pad_termination": {
         "fuses": [
           16775,
           16776
@@ -20600,7 +20381,7 @@
           "on": 0
         }
       },
-      "e1_pad_term": {
+      "e1_pad_termination": {
         "fuses": [
           16777,
           16778
@@ -20669,13 +20450,18 @@
       }
     ],
     "specials": {
-      "TDI": "MC4",
-      "PD1": "MC7",
-      "TMS": "MC9",
-      "GCLK3": "MC17",
-      "TDO": "MC20",
-      "TCK": "MC25",
-      "PD2": "MC31"
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "TDI": "M4",
+      "PD1": "M7",
+      "TMS": "M9",
+      "CLK3": "M17",
+      "TDO": "M20",
+      "TCK": "M25",
+      "PD2": "M31"
     },
     "pins": {
       "TQFP44": {
@@ -41717,13 +41503,13 @@
       }
     },
     "config": {
-      "bus_keeper": {
+      "termination": {
         "fuses": [
           34135
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "bus_keeper": 0
         }
       },
       "pd1_pin_func": {
@@ -41771,22 +41557,22 @@
           "on": 0
         }
       },
-      "tdi_pull_up": {
+      "tdi_termination": {
         "fuses": [
           34158
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
-      "tms_pull_up": {
+      "tms_termination": {
         "fuses": [
           34157
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
       "power_reset": {
@@ -41864,13 +41650,18 @@
       }
     ],
     "specials": {
-      "PD1": "MC3",
-      "TDI": "MC8",
-      "TMS": "MC32",
-      "PD2": "MC35",
-      "TCK": "MC48",
-      "TDO": "MC56",
-      "GCLK3": "MC64"
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "PD1": "M3",
+      "TDI": "M8",
+      "TMS": "M32",
+      "PD2": "M35",
+      "TCK": "M48",
+      "TDO": "M56",
+      "CLK3": "M64"
     },
     "pins": {
       "TQFP100": {
@@ -42932,27 +42723,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32565
+            32565,
+            32566
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32569
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32566
           ],
           "values": {
             "off": 0,
@@ -43195,27 +42979,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32538
+            32538,
+            32539
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32542
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32539
           ],
           "values": {
             "off": 0,
@@ -43458,27 +43235,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32511
+            32511,
+            32512
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32515
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32512
           ],
           "values": {
             "off": 0,
@@ -43712,27 +43482,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32484
+            32484,
+            32485
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32488
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32485
           ],
           "values": {
             "off": 0,
@@ -43975,27 +43738,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32457
+            32457,
+            32458
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32461
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32458
           ],
           "values": {
             "off": 0,
@@ -44238,27 +43994,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32430
+            32430,
+            32431
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32434
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32431
           ],
           "values": {
             "off": 0,
@@ -44501,27 +44250,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32403
+            32403,
+            32404
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32407
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32404
           ],
           "values": {
             "off": 0,
@@ -44764,27 +44506,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32376
+            32376,
+            32377
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32380
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32377
           ],
           "values": {
             "off": 0,
@@ -45027,27 +44762,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32349
+            32349,
+            32350
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32353
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32350
           ],
           "values": {
             "off": 0,
@@ -45290,27 +45018,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32322
+            32322,
+            32323
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32326
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32323
           ],
           "values": {
             "off": 0,
@@ -45553,27 +45274,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32295
+            32295,
+            32296
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32299
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32296
           ],
           "values": {
             "off": 0,
@@ -45816,27 +45530,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32268
+            32268,
+            32269
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32272
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32269
           ],
           "values": {
             "off": 0,
@@ -46079,27 +45786,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32241
+            32241,
+            32242
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32245
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32242
           ],
           "values": {
             "off": 0,
@@ -46342,27 +46042,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32214
+            32214,
+            32215
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32218
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32215
           ],
           "values": {
             "off": 0,
@@ -46605,27 +46298,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32187
+            32187,
+            32188
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32191
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32188
           ],
           "values": {
             "off": 0,
@@ -46868,27 +46554,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32160
+            32160,
+            32161
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32164
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32161
           ],
           "values": {
             "off": 0,
@@ -47131,27 +46810,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31125
+            31125,
+            31126
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31129
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31126
           ],
           "values": {
             "off": 0,
@@ -47394,27 +47066,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31098
+            31098,
+            31099
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31102
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31099
           ],
           "values": {
             "off": 0,
@@ -47657,27 +47322,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31071
+            31071,
+            31072
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31075
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31072
           ],
           "values": {
             "off": 0,
@@ -47920,27 +47578,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31044
+            31044,
+            31045
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31048
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31045
           ],
           "values": {
             "off": 0,
@@ -48183,27 +47834,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31017
+            31017,
+            31018
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31021
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31018
           ],
           "values": {
             "off": 0,
@@ -48446,27 +48090,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30990
+            30990,
+            30991
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30994
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30991
           ],
           "values": {
             "off": 0,
@@ -48709,27 +48346,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30963
+            30963,
+            30964
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30967
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30964
           ],
           "values": {
             "off": 0,
@@ -48972,27 +48602,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30936
+            30936,
+            30937
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30940
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30937
           ],
           "values": {
             "off": 0,
@@ -49235,27 +48858,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30909
+            30909,
+            30910
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30913
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30910
           ],
           "values": {
             "off": 0,
@@ -49498,27 +49114,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30882
+            30882,
+            30883
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30886
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30883
           ],
           "values": {
             "off": 0,
@@ -49761,27 +49370,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30855
+            30855,
+            30856
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30859
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30856
           ],
           "values": {
             "off": 0,
@@ -50024,27 +49626,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30828
+            30828,
+            30829
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30832
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30829
           ],
           "values": {
             "off": 0,
@@ -50287,27 +49882,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30801
+            30801,
+            30802
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30805
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30802
           ],
           "values": {
             "off": 0,
@@ -50550,27 +50138,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30774
+            30774,
+            30775
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30778
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30775
           ],
           "values": {
             "off": 0,
@@ -50813,27 +50394,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30747
+            30747,
+            30748
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30751
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30748
           ],
           "values": {
             "off": 0,
@@ -51076,27 +50650,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            30720
+            30720,
+            30721
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             30724
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            30721
           ],
           "values": {
             "off": 0,
@@ -51339,27 +50906,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31200
+            31200,
+            31201
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31204
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31201
           ],
           "values": {
             "off": 0,
@@ -51602,27 +51162,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31227
+            31227,
+            31228
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31231
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31228
           ],
           "values": {
             "off": 0,
@@ -51865,27 +51418,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31254
+            31254,
+            31255
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31258
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31255
           ],
           "values": {
             "off": 0,
@@ -52128,27 +51674,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31281
+            31281,
+            31282
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31285
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31282
           ],
           "values": {
             "off": 0,
@@ -52391,27 +51930,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31308
+            31308,
+            31309
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31312
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31309
           ],
           "values": {
             "off": 0,
@@ -52654,27 +52186,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31335
+            31335,
+            31336
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31339
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31336
           ],
           "values": {
             "off": 0,
@@ -52917,27 +52442,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31362
+            31362,
+            31363
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31366
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31363
           ],
           "values": {
             "off": 0,
@@ -53180,27 +52698,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31389
+            31389,
+            31390
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31393
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31390
           ],
           "values": {
             "off": 0,
@@ -53443,27 +52954,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31416
+            31416,
+            31417
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31420
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31417
           ],
           "values": {
             "off": 0,
@@ -53706,27 +53210,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31443
+            31443,
+            31444
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31447
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31444
           ],
           "values": {
             "off": 0,
@@ -53969,27 +53466,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31470
+            31470,
+            31471
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31474
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31471
           ],
           "values": {
             "off": 0,
@@ -54232,27 +53722,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31497
+            31497,
+            31498
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31501
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31498
           ],
           "values": {
             "off": 0,
@@ -54495,27 +53978,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31524
+            31524,
+            31525
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31528
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31525
           ],
           "values": {
             "off": 0,
@@ -54758,27 +54234,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31551
+            31551,
+            31552
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31555
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31552
           ],
           "values": {
             "off": 0,
@@ -54968,27 +54437,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31578
+            31578,
+            31579
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31582
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31579
           ],
           "values": {
             "off": 0,
@@ -55231,27 +54693,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31605
+            31605,
+            31606
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31609
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31606
           ],
           "values": {
             "off": 0,
@@ -55494,27 +54949,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31680
+            31680,
+            31681
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31684
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31681
           ],
           "values": {
             "off": 0,
@@ -55757,27 +55205,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31707
+            31707,
+            31708
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31711
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31708
           ],
           "values": {
             "off": 0,
@@ -56020,27 +55461,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31734
+            31734,
+            31735
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31738
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31735
           ],
           "values": {
             "off": 0,
@@ -56283,27 +55717,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31761
+            31761,
+            31762
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31765
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31762
           ],
           "values": {
             "off": 0,
@@ -56546,27 +55973,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31788
+            31788,
+            31789
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31792
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31789
           ],
           "values": {
             "off": 0,
@@ -56809,27 +56229,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31815
+            31815,
+            31816
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31819
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31816
           ],
           "values": {
             "off": 0,
@@ -57072,27 +56485,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31842
+            31842,
+            31843
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31846
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31843
           ],
           "values": {
             "off": 0,
@@ -57335,27 +56741,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31869
+            31869,
+            31870
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31873
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31870
           ],
           "values": {
             "off": 0,
@@ -57598,27 +56997,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31896
+            31896,
+            31897
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31900
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31897
           ],
           "values": {
             "off": 0,
@@ -57861,27 +57253,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31923
+            31923,
+            31924
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31927
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31924
           ],
           "values": {
             "off": 0,
@@ -58124,27 +57509,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31950
+            31950,
+            31951
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31954
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31951
           ],
           "values": {
             "off": 0,
@@ -58387,27 +57765,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            31977
+            31977,
+            31978
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             31981
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            31978
           ],
           "values": {
             "off": 0,
@@ -58650,27 +58021,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32004
+            32004,
+            32005
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32008
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32005
           ],
           "values": {
             "off": 0,
@@ -58913,27 +58277,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32031
+            32031,
+            32032
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32035
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32032
           ],
           "values": {
             "off": 0,
@@ -59176,27 +58533,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32058
+            32058,
+            32059
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32062
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32059
           ],
           "values": {
             "off": 0,
@@ -59439,27 +58789,20 @@
             "on": 1
           }
         },
-        "pull_up": {
+        "termination": {
           "fuses": [
-            32085
+            32085,
+            32086
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "high_z": 0,
+            "pull_up": 1,
+            "bus_keeper": 3
           }
         },
         "schmitt_trigger": {
           "fuses": [
             32089
-          ],
-          "values": {
-            "off": 0,
-            "on": 1
-          }
-        },
-        "bus_keeper": {
-          "fuses": [
-            32086
           ],
           "values": {
             "off": 0,
@@ -64456,22 +63799,22 @@
           "pd": 0
         }
       },
-      "tdi_pull_up": {
+      "tdi_termination": {
         "fuses": [
           34152
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
-      "tms_pull_up": {
+      "tms_termination": {
         "fuses": [
           34151
         ],
         "values": {
-          "off": 1,
-          "on": 0
+          "high_z": 1,
+          "pull_up": 0
         }
       },
       "jtag_pin_func": {
@@ -64492,7 +63835,7 @@
           "on": 0
         }
       },
-      "r_pad_term": {
+      "r_pad_termination": {
         "fuses": [
           34163,
           34164
@@ -64513,7 +63856,7 @@
           "on": 0
         }
       },
-      "c1_pad_term": {
+      "c1_pad_termination": {
         "fuses": [
           34157,
           34158
@@ -64534,7 +63877,7 @@
           "on": 0
         }
       },
-      "c2_pad_term": {
+      "c2_pad_termination": {
         "fuses": [
           34159,
           34160
@@ -64555,7 +63898,7 @@
           "on": 0
         }
       },
-      "e1_pad_term": {
+      "e1_pad_termination": {
         "fuses": [
           34161,
           34162
@@ -64624,15 +63967,20 @@
       }
     ],
     "specials": {
-      "PD1": "MC3",
-      "TDI": "MC8",
-      "TMS": "MC32",
-      "PD2": "MC35",
-      "TCK": "MC48",
-      "TDO": "MC56",
-      "GCLK3": "MC64",
-      "VREFA": "MC3",
-      "VREFB": "MC46"
+      "CLR": "R",
+      "CLK1": "C1",
+      "CLK2": "C2",
+      "OE1": "E1",
+      "OE2": "C2",
+      "PD1": "M3",
+      "TDI": "M8",
+      "TMS": "M32",
+      "PD2": "M35",
+      "TCK": "M48",
+      "TDO": "M56",
+      "CLK3": "M64",
+      "VREFA": "M3",
+      "VREFB": "M46"
     },
     "pins": {
       "TQFP100": {

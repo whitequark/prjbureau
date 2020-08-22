@@ -6,7 +6,7 @@ with database.transact() as db:
         progress(device_name)
 
         package, pinout = next(iter(device['pins'].items()))
-        gclk3_pad = device['macrocells'][device['specials']['GCLK3']]['pad']
+        gclk3_pad = device['specials']['CLK3']
 
         for macrocell_idx, (macrocell_name, macrocell) in enumerate(device['macrocells'].items()):
             progress(1)
