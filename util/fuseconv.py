@@ -122,8 +122,7 @@ def write_svf(file, svf_bits, device, *, comment):
     def emit_program(address, data):
         file.write("// ISC program word\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
-        file.write("SDR {} TDI ({:0{}x});\n".format(device.addr_width,
-            address, (device.addr_width + 3) // 4))
+        file.write("SDR 11 TDI ({:03x});\n".format(address))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))
         file.write("SDR {} TDI ({:x});\n".format(len(data), int(data.to01()[::-1], 2)))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
@@ -132,8 +131,7 @@ def write_svf(file, svf_bits, device, *, comment):
     def emit_verify(address, data):
         file.write("// ISC verify word\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
-        file.write("SDR {} TDI ({:0{}x});\n".format(device.addr_width,
-            address, (device.addr_width + 3) // 4))
+        file.write("SDR 11 TDI ({:03x});\n".format(address))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_READ))
         file.write("RUNTEST IDLE 20E-3 SEC;\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))

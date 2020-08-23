@@ -25,7 +25,6 @@ class ATF15xxDevice:
     idcode = None # int
 
     fuse_count = None # int
-    addr_width = None # int
     data_width = None # dict(range/tuple,range)
 
     @classmethod
@@ -72,7 +71,6 @@ class ATF1502ASDevice(ATF15xxDevice):
     idcode = 0x0150203f
 
     fuse_count = 16808
-    addr_width = 11
     data_width = {
         range(  0, 108): range(86),
         range(128, 229): range(86),
@@ -138,7 +136,6 @@ class ATF1504ASDevice(ATF15xxDevice):
     idcode = 0x0150403f
 
     fuse_count = 34192
-    addr_width = 12
     data_width = {
         range(  0, 108): range(166),
         range(128, 233): range(166),
@@ -202,7 +199,6 @@ class ATF1508ASDevice(ATF15xxDevice):
     idcode = 0x0150803f
 
     fuse_count = 74136
-    addr_width = 13
     data_width = {
         range(  0, 108): range(326),
         range(128, 251): range(326),
@@ -213,9 +209,9 @@ class ATF1508ASDevice(ATF15xxDevice):
 
     @classmethod
     def jed_to_svf_coords(cls, jed_index):
-        if jed_index in range(    0,  30720):
+        if jed_index in range(    0, 30720):
             return  12 + (jed_index -     0)  %  96, 325 - (jed_index -     0) // 96
-        if jed_index in range( 30720, 61440):
+        if jed_index in range(30720, 61440):
             return 128 + (jed_index - 30720)  %  96, 325 - (jed_index - 30720) // 96
         if jed_index in range(61440, 65280):
             return   0 + (jed_index - 61440) // 320, 325 - (jed_index - 61440)  % 320
@@ -260,6 +256,7 @@ class ATF1508ASDevice(ATF15xxDevice):
         if svf_row == 768:
             return 74118 + (15 - svf_col)
         assert False
+
 
 if __name__ == '__main__':
     with open('atf1502as_svf2jed.csv', 'w') as f:
