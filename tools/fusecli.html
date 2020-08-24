@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>-m util.fusecli &mdash; Project Bureau  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="-m util.fuseconv" href="fuseconv.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+  
+    
+
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Project Bureau
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outline.html">Functional outline (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naming.html">Naming conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/logic.html">Macrocell options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/buffer.html">I/O buffer options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/program.html">Programming options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/power.html">Power saving options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">Database explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Command-line tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fuseconv.html">-m util.fuseconv</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">-m util.fusecli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examining-fuses">Examining fuses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-fuses">Modifying fuses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Project Bureau</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+        
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Command-line tools</a> &raquo;</li>
+        
+      <li>-m util.fusecli</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/fusecli.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="m-util-fusecli">
+<h1>-m util.fusecli<a class="headerlink" href="#m-util-fusecli" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="examining-fuses">
+<h3>Examining fuses<a class="headerlink" href="#examining-fuses" title="Permalink to this headline">¶</a></h3>
+<p>To print all known fuses:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed get
+<span class="go">MC1:</span>
+<span class="go">  PT1: GND</span>
+<span class="go">  PT2: GND</span>
+<span class="go">[output trimmed]</span>
+</pre></div>
+</div>
+<p>To print macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed get MC1.PT1
+<span class="go">MC1:</span>
+<span class="go">  PT1: GND</span>
+</pre></div>
+</div>
+<p>To print all product terms of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed get MC1.PT
+<span class="go">MC1:</span>
+<span class="go">  PT1: GND</span>
+<span class="go">  PT2: GND</span>
+<span class="go">  PT3: GND</span>
+<span class="go">  PT4: GND</span>
+<span class="go">  PT5: GND</span>
+</pre></div>
+</div>
+<p>To print option <code class="docutils literal notranslate"><span class="pre">gclk_mux</span></code> of every macrocell:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed get MC.gclk_mux
+<span class="go">MC1:</span>
+<span class="go">  CFG:</span>
+<span class="go">    gclk_mux       = GCLK2</span>
+<span class="go">MC2:</span>
+<span class="go">  CFG:</span>
+<span class="go">    gclk_mux       = GCLK2</span>
+<span class="go">MC3:</span>
+<span class="go">[output trimmed]</span>
+</pre></div>
+</div>
+<p>To print options <code class="docutils literal notranslate"><span class="pre">pt1_mux</span></code> and <code class="docutils literal notranslate"><span class="pre">pt2_mux</span></code> of every macrocell:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed get MC.pt1_mux MC.pt2_mux
+<span class="go">MC1:</span>
+<span class="go">  CFG:</span>
+<span class="go">    pt1_mux        = sum</span>
+<span class="go">    pt2_mux        = sum</span>
+<span class="go">MC2:</span>
+<span class="go">[output trimmed]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modifying-fuses">
+<h3>Modifying fuses<a class="headerlink" href="#modifying-fuses" title="Permalink to this headline">¶</a></h3>
+<p>To change option <code class="docutils literal notranslate"><span class="pre">gclk_mux</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC8</span></code> to be <code class="docutils literal notranslate"><span class="pre">GCLK2</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC8.gclk_mux GCLK2
+<span class="go">MC8:</span>
+<span class="go">  CFG:</span>
+<span class="go">    gclk_mux       = GCLK2</span>
+<span class="go">Changed 1 fields, 2 fuses.</span>
+</pre></div>
+</div>
+<p>To change option <code class="docutils literal notranslate"><span class="pre">low_power</span></code> of every macrocell to be <code class="docutils literal notranslate"><span class="pre">on</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC.low_power on
+<span class="go">MC1:</span>
+<span class="go">  CFG:</span>
+<span class="go">    low_power      = on</span>
+<span class="go">[output trimmed]</span>
+<span class="go">MC32:</span>
+<span class="go">  CFG:</span>
+<span class="go">    low_power      = on</span>
+<span class="go">Changed 32 fields, 32 fuses.</span>
+</pre></div>
+</div>
+<p>To change options <code class="docutils literal notranslate"><span class="pre">pt1_mux</span></code> and <code class="docutils literal notranslate"><span class="pre">pt2_mux</span></code> of every macrocell to be <code class="docutils literal notranslate"><span class="pre">sum</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC.pt1_mux sum MC.pt2_mux sum
+<span class="go">MC1:</span>
+<span class="go">  CFG:</span>
+<span class="go">    pt1_mux        = sum</span>
+<span class="go">[output trimmed]</span>
+<span class="go">MC32:</span>
+<span class="go">  CFG:</span>
+<span class="go">    pt2_mux        = sum</span>
+<span class="go">Changed 64 fields, 0 fuses.</span>
+</pre></div>
+</div>
+<p>To set product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> to <code class="docutils literal notranslate"><span class="pre">UIM2_P</span> <span class="pre">&amp;</span> <span class="pre">UIM4_N</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC1.PT1 UIM2_P,UIM4_N
+<span class="go">MC1:</span>
+<span class="go">  PT1: UIM2_P,UIM4_N</span>
+<span class="go">Changed 1 fields, 94 fuses.</span>
+<span class="gp">$</span> python3 -m util.fusecli design.jed get MC1.PT1
+<span class="go">MC1:</span>
+<span class="go">  PT1: UIM2_P &amp; UIM4_N</span>
+</pre></div>
+</div>
+<p>To remove <code class="docutils literal notranslate"><span class="pre">UIM4_N</span></code> from product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> and add <code class="docutils literal notranslate"><span class="pre">UIM8_P</span></code> instead:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC1.PT1 -UIM4_N,+UIM8_P
+<span class="go">MC1:</span>
+<span class="go">  PT1: -UIM4_N,+UIM8_P</span>
+<span class="go">Changed 1 fields, 2 fuses.</span>
+<span class="gp">$</span> python3 -m util.fusecli design.jed get MC1.PT1
+<span class="go">MC1:</span>
+<span class="go">  PT1: UIM2_P &amp; UIM8_P</span>
+</pre></div>
+</div>
+<p>To clear product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of every macrocell:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m util.fusecli design.jed <span class="nb">set</span> MC.PT1 GND
+<span class="go">MC1:</span>
+<span class="go">  PT1: GND</span>
+<span class="go">[output trimmed]</span>
+<span class="go">MC32:</span>
+<span class="go">  PT1: GND</span>
+<span class="go">Changed 32 fields, 94 fuses.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="fuseconv.html" class="btn btn-neutral float-left" title="-m util.fuseconv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019-2020, whitequark
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+    
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

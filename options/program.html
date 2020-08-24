@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Programming options &mdash; Project Bureau  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Power saving options (WIP)" href="power.html" />
+    <link rel="prev" title="I/O buffer options (WIP)" href="buffer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+  
+    
+
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Project Bureau
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outline.html">Functional outline (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naming.html">Naming conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logic.html">Macrocell options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buffer.html">I/O buffer options (WIP)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programming options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jtag-pin-multiplexing">JTAG pin multiplexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-protection">Read protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arming-switch">Arming switch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Power saving options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explore.html">Database explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Command-line tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Project Bureau</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+        
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Programming options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/options/program.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programming-options">
+<h1>Programming options<a class="headerlink" href="#programming-options" title="Permalink to this headline">¶</a></h1>
+<p>This section describes global device options related to Flash programming.</p>
+<div class="section" id="jtag-pin-multiplexing">
+<span id="o-jtag-pin-func"></span><h2>JTAG pin multiplexing<a class="headerlink" href="#jtag-pin-multiplexing" title="Permalink to this headline">¶</a></h2>
+<p>ATF15xx CPLDs do not have dedicated JTAG pins. Instead, the four JTAG signals, <code class="docutils literal notranslate"><span class="pre">TMS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCK</span></code>, <code class="docutils literal notranslate"><span class="pre">TDI</span></code>, and <code class="docutils literal notranslate"><span class="pre">TDO</span></code>, are multiplexed with normal macrocell I/O signals. Setting the device configuration option <code class="docutils literal notranslate"><span class="pre">jtag_pin_func</span></code> to <code class="docutils literal notranslate"><span class="pre">jtag</span></code> (or erasing the device) selects the JTAG special function, leaving the macrocell buried; setting it to <code class="docutils literal notranslate"><span class="pre">user</span></code> selects the regular function. This option carries two inherent hazards.</p>
+<p>First, the option takes effect immediately once it is programmed. Because of this, the fuse corresponding to this option must be programmed during the very last operation, or the device could never be fully programmed. To verify the device, a fuse map altered to exclude this option must be programmed first, the altered map must be verified, and then the option must be programmed in isolation by taking advantage of the wired-AND nature of the Flash memory.</p>
+<p>Second, the option takes effect immediately after power-up, preventing any further programming of the device by ordinary means. Although not (usefully) documented, this option can be overridden; applying +12 V to the <strong>OE1</strong> pin selects the JTAG special function regardless of the state of the <code class="docutils literal notranslate"><span class="pre">jtag_pin_func</span></code> option. Similarly to the fuse itself, the fuse override is not latched, and is active only while the high voltage is applied. High voltage applied to <strong>OE1</strong> does not serve any purpose beyond overriding the JTAG configuration option.</p>
+</div>
+<div class="section" id="read-protection">
+<span id="o-read-protection"></span><h2>Read protection<a class="headerlink" href="#read-protection" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to prevent the fuses programmed into the device from being read without disabling the JTAG interface by setting the device configuration option <code class="docutils literal notranslate"><span class="pre">read_protection</span></code> to <code class="docutils literal notranslate"><span class="pre">on</span></code>. The user signature fuses can still be read using a dedicated JTAG instruction.</p>
+<p>Similarly to the <a class="reference internal" href="#o-jtag-pin-func"><span class="std std-ref">pin multiplexing option</span></a>, the fuse corresponding to this option must be programmed during the very last operation.</p>
+</div>
+<div class="section" id="arming-switch">
+<span id="o-arming-switch"></span><h2>Arming switch<a class="headerlink" href="#arming-switch" title="Permalink to this headline">¶</a></h2>
+<p>ATF15xx CPLDs include a feature that prevents partially programmed devices from erroneously driving its outputs during in-circuit programming. Setting the device configuration option <code class="docutils literal notranslate"><span class="pre">arming_switch</span></code> to <code class="docutils literal notranslate"><span class="pre">safe</span></code> (or erasing the device) disables all output drivers; setting it to <code class="docutils literal notranslate"><span class="pre">armed</span></code> enables regular operation.</p>
+<p>The fuse corresponding to this option must be programmed after every other fuse, but before the <a class="reference internal" href="#o-jtag-pin-func"><span class="std std-ref">pin multiplexing option</span></a> or the <a class="reference internal" href="#o-read-protection"><span class="std std-ref">read protection option</span></a>, since they are located in different Flash words.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="power.html" class="btn btn-neutral float-right" title="Power saving options (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="buffer.html" class="btn btn-neutral float-left" title="I/O buffer options (WIP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019-2020, whitequark
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+    
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

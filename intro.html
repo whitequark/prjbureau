@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Project Bureau  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functional outline (WIP)" href="outline.html" />
+    <link rel="prev" title="Project Bureau" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+  
+    
+
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Project Bureau
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-devices">Supported devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Functional outline (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naming.html">Naming conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/logic.html">Macrocell options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/buffer.html">I/O buffer options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/program.html">Programming options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/power.html">Power saving options (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Database schema (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explore.html">Database explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jtag/index.html">JTAG programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html">Command-line tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Project Bureau</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+    
+        
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><em>Project Bureau</em> enables a fully open-source flow for <a class="reference external" href="https://microchip.com">Microchip</a> (Atmel) ATF15xx family <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_programmable_logic_device">CPLDs</a> by documenting their fuse maps and programming algorithms.</p>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>In 2020, <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_programmable_logic_device">CPLDs</a> are widely considered obsolete. Why, then, work on a CPLD toolchain? Although in applications relying on reconfigurable logic alone, CPLDs are outclassed by <a class="reference external" href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGAs</a> in every conceivable aspect, they still have advantages in system design: integrated configuration memory, single rail operation, powerful and rugged I/O buffers, and compatibility with 5 V <a class="reference external" href="https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic#Interfacing_considerations">TTL</a> systems. It is the last aspect that has motivated the research resulting in Project Bureau.</p>
+<p>Although 5 V logic (and especially 5 V TTL logic) has essentially disappeared from modern digital design, it did not become irrelevant. For decades, the microelectronics industry produced 5 V circuits, many of which are still in use, while others are of historical importance or pursued by retrocomputing enthusiasts. These circuits often use parallel, bidirectional buses, which are challenging to interface with today’s serial, low pin count, low voltage hardware.</p>
+<p><a class="reference external" href="https://microchip.com">Microchip</a> ATF15xx is the last CPLD family in active production that offers true 5 V operation, i.e. rail-to-rail 5 V outputs, providing maximum compatibility with legacy devices. (While some similar devices are still available, such as <a class="reference external" href="https://www.latticesemi.com/">Lattice</a> <a class="reference external" href="https://www.latticesemi.com/en/Support/MatureAndDiscontinuedDevices/ispMACH4A5">ispMACH4A5</a>, they are being phased out, employ 5 V tolerant I/O buffers rather than true 5 V ones, or both.)</p>
+<p>Although ATF15xx devices are widely available from distributors, they are not accessible: the proprietary vendor toolchain, developed in late 1990s and last updated in mid-2000s, uses an obscure hardware definition language called <a class="reference external" href="https://en.wikipedia.org/wiki/Programmable_Array_Logic#CUPL">CUPL</a>, is Windows-only, requires an expensive programming adapter, and does not properly run on anything newer than Windows XP.</p>
+<p>Wouldn’t it be convenient if this CPLD could be used with modern open-source tools like <a class="reference external" href="https://github.com/YosysHQ/yosys">Yosys</a>? Unfortunately, the vendor does not publish information required to develop a toolchain. Fortunately, it isn’t necessary to rely on the vendor here.</p>
+</div>
+<div class="section" id="supported-devices">
+<h2>Supported devices<a class="headerlink" href="#supported-devices" title="Permalink to this headline">¶</a></h2>
+<p>ATF15xx family devices are currently available in three densities: ATF1502 (32 macrocells), ATF1504 (64 macrocells), and ATF1508 (128 macrocells). Note that <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1500A">ATF1500</a> is an obsolete device that is, confusingly, <strong>not</strong> a part of the ATF15xx family.</p>
+<p>AS-series (<code class="docutils literal notranslate"><span class="pre">AS</span></code>, <code class="docutils literal notranslate"><span class="pre">ASV</span></code> and <code class="docutils literal notranslate"><span class="pre">ASL</span></code> suffixes) devices, such as <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1502AS">ATF1502AS</a>, <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1504ASV">ATF1504ASV</a>, and <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1508ASL">ATF1508ASL</a>, are actively produced and widely available. BE-series (<code class="docutils literal notranslate"><span class="pre">BE</span></code> suffix) devices, such as <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1502BE">ATF1502BE</a>, <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1504BE">ATF1504BE</a>, and <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATF1508BE">ATF1508BE</a>, are produced on demand and are seldom in stock.</p>
+<p>Virtually every aspect of the ATF15xx architecture is well-understood. However, peculiarities of the toolchain result in practical difficulties producing complete fuse map documentation. The following table summarizes the state of the project:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Device(s)</p></th>
+<th class="head"><p>Fuse database</p></th>
+<th class="head"><p>Programming</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>ATF1502AS/ASV/ASL</strong></p></td>
+<td><p><strong>Complete</strong></p></td>
+<td><p><strong>Complete</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>ATF1504AS/ASV/ASL</p></td>
+<td><p>Near-complete</p></td>
+<td><p>Untested</p></td>
+</tr>
+<tr class="row-even"><td><p>ATF1508AS/ASV/ASL</p></td>
+<td><p>Partial</p></td>
+<td><p>Untested</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATF1502BE</p></td>
+<td><p>Near-complete</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>ATF1504BE</p></td>
+<td><p>Near-complete</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATF1508BE</p></td>
+<td><p>Partial</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>There is nothing to install! Aside from this document, the ultimate artefact of Project Bureau is a single <a class="reference external" href="database/database.json.gz">chip database file</a> containing a machine-readable description of every known fuse in every supported device. This file, together with the detailed descriptions from this document, can be used by downstream tooling to produce or manipulate fuse maps. It can also be <a class="reference internal" href="explore.html"><span class="doc">explored</span></a> as hypertext.</p>
+</div>
+<div class="section" id="development">
+<span id="develop"></span><h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>This project provides several <a class="reference internal" href="tools/index.html"><span class="doc">utilities</span></a> for manipulating fuse maps. They require Python 3.6 and the <a class="reference external" href="https://pypi.org/project/bitarray">bitarray</a> PyPI package. These utilities are provided for <em>experimental purposes only</em> and are intentionally not packaged; to use them, add this repository to <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip3 install bitarray
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>../path/to/prjbureau
+</pre></div>
+</div>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>Although I (whitequark) wrote virtually all of the code and documentation in this project, it would not exist if not for many people in the open FPGA community and beyond. I would like to express my gratitude, in no particular order, to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://www.clairexen.net/">Claire Xenia Wolf</a>, for pioneering open FPGA toolchains with <a class="reference external" href="http://www.clifford.at/icestorm/">Project IceStorm</a>, and inspiring me to start working with programmable logic;</p></li>
+<li><p><a class="reference external" href="https://github.com/azonenberg">Andrew Zonenberg</a>, for working on <a class="reference external" href="https://github.com/azonenberg/openfpga/commits/master/src/gp4par">gp4par</a>, one of the first open-source place &amp; route tools, and <a class="reference external" href="https://siliconexposed.blogspot.com/2014/03/getting-my-feet-wet-with-invasive.html">demonstrating</a> clean-room reverse engineering of the interconnect matrix, the most challenging part of a CPLD to document.</p></li>
+<li><p>&#64;interruptinuse, for assistance in fuzzing the interconnect matrix, and supporting my work in general;</p></li>
+<li><p><a class="reference external" href="mailto:moontouched&#37;&#52;&#48;moontouched&#46;me">Maya E<span>&#46;</span></a>, for assistance in validating the interconnect routing and minimizing the macrocell truth table, and contributing the JED↔SVF mapping for ATF1504/ATF1508;</p></li>
+<li><p><a class="reference external" href="http://peterzieba.com/">Peter Zieba</a>, for bringing the capabilities of the ATF15xx family to my attention, <a class="reference external" href="http://www.5vpld.com/">archiving</a> the relevant tools and documentation, and recording high-voltage programming traces;</p></li>
+<li><p><a class="reference external" href="https://ds0.me/">David Shah</a>, for building nextpnr-generic, and revealing that place &amp; route tools don’t have to be opaque and arcane;</p></li>
+<li><p><a class="reference external" href="https://robertou.com/">R. Ou</a>, for working on CPLD synthesis in Yosys, demonstrating a functional CPLD toolchain, and generally ensuring these devices are not forgotten.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Unless otherwise noted, the files in this repository are covered by the <a class="reference external" href="https://opensource.org/licenses/0BSD">0-clause BSD license</a>:</p>
+<blockquote>
+<div><p>Permission to use, copy, modify, and/or distribute this software for
+any purpose with or without fee is hereby granted.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="outline.html" class="btn btn-neutral float-right" title="Functional outline (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Project Bureau" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019-2020, whitequark
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+    
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
