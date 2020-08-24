@@ -97,6 +97,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Command-line tools</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">-m util.fuseconv</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Positional Arguments">Positional Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
@@ -174,6 +176,36 @@
             
   <div class="section" id="m-util-fuseconv">
 <h1>-m util.fuseconv<a class="headerlink" href="#m-util-fuseconv" title="Permalink to this headline">¶</a></h1>
+<p><p>Convert between ATF15xx JED and SVF files. The type of the file is determined by the extension
+(<code class="docutils literal notranslate"><span class="pre">.jed</span></code> or <code class="docutils literal notranslate"><span class="pre">.svf</span></code>, respectively).</p>
+<p>If an SVF file is provided as an input, it is used to drive the JTAG programming state machine
+of a simulated device. The state machine is greatly simplified and only functions correctly
+when driven with vectors that program every non-reserved bit at least once.</p>
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">util</span><span class="o">.</span><span class="n">fuseconv</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">DEVICE</span><span class="p">]</span> <span class="n">INPUT</span> <span class="n">OUTPUT</span>
+</pre></div>
+</div>
+<div class="section" id="Positional Arguments">
+<h2>Positional Arguments<a class="headerlink" href="#Positional Arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd>INPUT</kbd></dt>
+<dd><p>Read fuses from file INPUT.</p>
+</dd>
+<dt><kbd>OUTPUT</kbd></dt>
+<dd><p>Write fuses to file OUTPUT.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="Named Arguments">
+<h2>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd>-d, --device</kbd></dt>
+<dd><p>Possible choices: ATF1502AS, ATF1504AS, ATF1508AS</p>
+<p>Select the device to use.</p>
+<p>Default: “ATF1502AS”</p>
+</dd>
+</dl>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>To prepare a JED file emitted by the fitter for flashing:</p>

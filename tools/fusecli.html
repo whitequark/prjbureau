@@ -97,6 +97,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Command-line tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="fuseconv.html">-m util.fuseconv</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">-m util.fusecli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Positional Arguments">Positional Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sub-commands:">Sub-commands:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set">set</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#examining-fuses">Examining fuses</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#modifying-fuses">Modifying fuses</a></li>
@@ -177,6 +184,81 @@
             
   <div class="section" id="m-util-fusecli">
 <h1>-m util.fusecli<a class="headerlink" href="#m-util-fusecli" title="Permalink to this headline">¶</a></h1>
+<p><p>Examine and modify fuses using symbolic names and values.</p>
+<p>The set of fuses to operate on is specified using a set of hierarchical selectors.
+Each level of the selector can match either a single numbered entity (e.g. <code class="docutils literal notranslate"><span class="pre">MC3</span></code>, <code class="docutils literal notranslate"><span class="pre">PT1</span></code>),
+or all numbered entities on the same level (e.g. <code class="docutils literal notranslate"><span class="pre">PT</span></code>, <code class="docutils literal notranslate"><span class="pre">GOE</span></code>).</p>
+<p>If the requested operation is to examine fuses, the names and values of all selected fuses
+are printed to standard output. If no selector is specified, all fuses are selected.</p>
+<p>If the requested operation is to modify fuses, the values of all selected fuses are changed
+to the value specified on the command line.</p>
+<p>When modifying product term fuses, multiple choices can be specified as a single
+comma-separated value. It is possible to modify (rather than replace) product term fuses
+by prefixing all choices with <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>. The special value <code class="docutils literal notranslate"><span class="pre">VCC</span></code> sets all fuses to 1,
+and the special value <code class="docutils literal notranslate"><span class="pre">GND</span></code> sets all fuses to 0.</p>
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">util</span><span class="o">.</span><span class="n">fusecli</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">DEVICE</span><span class="p">]</span> <span class="n">MANGLE</span> <span class="n">COMMAND</span> <span class="o">...</span>
+</pre></div>
+</div>
+<div class="section" id="Positional Arguments">
+<h2>Positional Arguments<a class="headerlink" href="#Positional Arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd>MANGLE</kbd></dt>
+<dd><p>Manipulate fuses in JED file MANGLE.</p>
+</dd>
+<dt><kbd>COMMAND</kbd></dt>
+<dd><p>Possible choices: get, set</p>
+<p>Operation to perform.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="Named Arguments">
+<h2>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd>-v, --verbose</kbd></dt>
+<dd><p>Show fuse indexes and states next to the symbolic value.</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-d, --device</kbd></dt>
+<dd><p>Possible choices: ATF1502AS, ATF1502BE, ATF1504AS, ATF1504BE</p>
+<p>Select the device to use.</p>
+<p>Default: “ATF1502AS”</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="Sub-commands:">
+<h2>Sub-commands:<a class="headerlink" href="#Sub-commands:" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="get">
+<h3>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<p>Examine fuse states.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">util</span><span class="o">.</span><span class="n">fusecli</span> <span class="n">get</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="n">SELECTOR</span> <span class="p">[</span><span class="n">SELECTOR</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="section" id="Positional Arguments_repeat1">
+<h4>Positional Arguments<a class="headerlink" href="#Positional Arguments_repeat1" title="Permalink to this headline">¶</a></h4>
+<dl class="option-list">
+<dt><kbd>SELECTOR</kbd></dt>
+<dd><p>Print values of fuses that match SELECTOR.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<p>Modify fuse states.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">util</span><span class="o">.</span><span class="n">fusecli</span> <span class="nb">set</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="o">...</span>
+</pre></div>
+</div>
+<div class="section" id="Positional Arguments_repeat2">
+<h4>Positional Arguments<a class="headerlink" href="#Positional Arguments_repeat2" title="Permalink to this headline">¶</a></h4>
+<dl class="option-list">
+<dt><kbd>SELECTOR VALUE</kbd></dt>
+<dd><p>Change values of fuses that match SELECTOR to be VALUE.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="examining-fuses">
