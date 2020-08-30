@@ -58,7 +58,7 @@ The inputs of global switches are driven by the :ref:`input/feedback bus <n-gbus
 
 .. warning::
 
-   Global networks ``GCLR``, ``GCLK1``, ``GOE1``, etc., should not be confused with special pins **CLR**, **CLK1**, **OE1**, etc.! They are distinct device elements that occupy different namespaces.
+   Global networks ``GCLR``, ``GCLK1``, ``GOE1``, etc., should not be confused with special pins :pin:`CLR`, :pin:`CLK1`, :pin:`OE1`, etc.! They are distinct device elements that occupy different namespaces.
 
 .. note::
 
@@ -75,13 +75,13 @@ A *pad name* refers to a particular bonding pad on the die. Every logic pin corr
 
 A *pin name* refers to a particular pin on the package. Except for power pins, every pin is always connected to a pad. Because pin numbering completely changes depending on the package, pin names only appear in the user interface; everywhere else, pad names are used as canonical identifiers.
 
-A *special name* refers to a particular pad by its function. Some special functions are fixed: pad ``R`` always has special name **CLR**, and pad ``C2`` always has special names **CLK2** and **OE2**; most special functions differ between devices.
+A *special name* refers to a particular pad by its function. Some special functions are fixed: pad ``R`` always has special name :pin:`CLR`, and pad ``C2`` always has special names :pin:`CLK2` and :pin:`OE2`; most special functions differ between devices.
 
 .. warning::
 
-   Global networks ``GCLR``, ``GCLK1``, ``GOE1``, etc., should not be confused with special pins **CLR**, **CLK1**, **OE1**, etc.! They are distinct device elements that occupy different namespaces.
+   Global networks ``GCLR``, ``GCLK1``, ``GOE1``, etc., should not be confused with special pins :pin:`CLR`, :pin:`CLK1`, :pin:`OE1`, etc.! They are distinct device elements that occupy different namespaces.
 
-   For example, on ATF1502, the pad ``E1``, which has the special name **OE1**, `cannot be routed <explore.html#/ATF1502AS/gsw.html#GOE1>`__ to the ``GOE1`` network at all.
+   For example, on ATF1502, the pad ``E1``, which has the special name :pin:`OE1`, `cannot be routed <explore.html#/ATF1502AS/gsw.html#GOE1>`__ to the ``GOE1`` network at all.
 
 Most device options are related to a macrocell or a global input, in which case they naturally use pad names to refer to logic pins. A few options (e.g. `TDI <explore.html#/ATF1502AS/pin.html#TDI>`__ and `TMS <explore.html#/ATF1502AS/pin.html#TMS>`__ pullups, as well as one of the global clock inputs) are defined only in terms of special functions, though.
 

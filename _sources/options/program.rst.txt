@@ -12,7 +12,7 @@ ATF15xx CPLDs do not have dedicated JTAG pins. Instead, the four JTAG signals, `
 
 First, the option takes effect immediately once it is programmed. Because of this, the fuse corresponding to this option must be programmed during the very last operation, or the device could never be fully programmed. To verify the device, a fuse map altered to exclude this option must be programmed first, the altered map must be verified, and then the option must be programmed in isolation by taking advantage of the wired-AND nature of the Flash memory.
 
-Second, the option takes effect immediately after power-up, preventing any further programming of the device by ordinary means. Although not (usefully) documented, this option can be overridden; applying +12 V to the **OE1** pin selects the JTAG special function regardless of the state of the ``jtag_pin_func`` option. Similarly to the fuse itself, the fuse override is not latched, and is active only while the high voltage is applied. High voltage applied to **OE1** does not serve any purpose beyond overriding the JTAG configuration option.
+Second, the option takes effect immediately after power-up, preventing any further programming of the device by ordinary means. Although not (usefully) documented, this option can be overridden; applying +12 V to the :pin:`OE1` pin selects the JTAG special function regardless of the state of the :fuse:`jtag_pin_func` option. Similarly to the fuse itself, the fuse override is not latched, and is active only while the high voltage is applied. High voltage applied to :pin:`OE1` does not serve any purpose beyond overriding the JTAG configuration option.
 
 .. _read_protection:
 

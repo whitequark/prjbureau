@@ -18,26 +18,26 @@ On both series, if the :ref:`special function <jtag_pin_func>` of the JTAG pins 
 
 The following table describes the possible termination options:
 
-.. |global-inputs| replace:: **CLR**, **CLK1**, **CLK2**, **OE1**
-.. |jtag-inputs| replace:: **TMS**, **TDI**
+.. |global-inputs| replace:: :pin:`CLR`, :pin:`CLK1`, :pin:`CLK2`, :pin:`OE1`
+.. |jtag-inputs| replace:: :pin:`TMS`, :pin:`TDI`
 
 .. table::
    :widths: auto
    :class: narrow
 
-   ===================== ==== ==== ==== ==== ==== ==== ==== ====
-   Series                     ATF15xxAS           ATF15xxBE
-   --------------------- ------------------- -------------------
-   Pins                  Hi-Z P-Up P-Dn Keep Hi-Z P-Up P-Dn Keep
-   ===================== ==== ==== ==== ==== ==== ==== ==== ====
-   **MCn** (global)      |x|  |o|  |o|  |x|  |-|
-   --------------------- ---- ---- ---- ---- -------------------
-   **MCn** (individual)  |-|                 |x|  |x|  |o|  |x|
-   --------------------- ------------------- ---- ---- ---- ----
-   |global-inputs|       |o|  |o|  |o|  |o|  |x|  |x|  |x|  |x|
-   --------------------- ---- ---- ---- ---- ---- ---- ---- ----
-   |jtag-inputs|\ [#]_   |x|  |x|  |o|  |o|  |x|  |x|  |o|  |o|
-   ===================== ==== ==== ==== ==== ==== ==== ==== ====
+   ======================= ==== ==== ==== ==== ==== ==== ==== ====
+   Series                       ATF15xxAS           ATF15xxBE
+   ----------------------- ------------------- -------------------
+   Pins                    Hi-Z P-Up P-Dn Keep Hi-Z P-Up P-Dn Keep
+   ======================= ==== ==== ==== ==== ==== ==== ==== ====
+   :pin:`MCn` (global)     |x|  |o|  |o|  |x|  |-|
+   ----------------------- ---- ---- ---- ---- -------------------
+   :pin:`MCn` (individual) |-|                 |x|  |x|  |o|  |x|
+   ----------------------- ------------------- ---- ---- ---- ----
+   |global-inputs|         |o|  |o|  |o|  |o|  |x|  |x|  |x|  |x|
+   ----------------------- ---- ---- ---- ---- ---- ---- ---- ----
+   |jtag-inputs|\ [#]_     |x|  |x|  |o|  |o|  |x|  |x|  |o|  |o|
+   ======================= ==== ==== ==== ==== ==== ==== ==== ====
 
 .. [#] Used when the :ref:`special function <jtag_pin_func>` of the pin is selected; otherwise, pin termination is controlled by the macrocell option, if any.
 
@@ -64,7 +64,7 @@ Input hysteresis
 
    This option is present only on BE-series devices.
 
-On ATF15xxBE devices, every macrocell input/output pin and the four global input pins **CLR**, **CLK1**, **CLK2**, **OE1** can be configured with or without :wiki:`hysteresis`. On these devices, setting the configuration options :fuse:`macrocells[].hysteresis <macrocell-hysteresis>` or :fuse:`pins[].hysteresis <special-hysteresis>` to ``on`` selects the :wiki:`Schmitt trigger` input buffer; setting them to ``off`` selects the simple CMOS input buffer.
+On ATF15xxBE devices, every macrocell input/output pin and the four global input pins :pin:`CLR`, :pin:`CLK1`, :pin:`CLK2`, :pin:`OE1` can be configured with or without :wiki:`hysteresis`. On these devices, setting the configuration options :fuse:`macrocells[].hysteresis <macrocell-hysteresis>` or :fuse:`pins[].hysteresis <special-hysteresis>` to ``on`` selects the :wiki:`Schmitt trigger` input buffer; setting them to ``off`` selects the simple CMOS input buffer.
 
 .. _io_standard:
 
@@ -77,7 +77,7 @@ I/O standards
 
 Normally, ATF15xx CPLD inputs and outputs follow TTL/LVTTL\ [#ttl]_ or CMOS/LVCMOS\ [#cmos]_ signaling standards. However, BE-series devices starting with ATF1504BE also support SSTL signaling standards.
 
-On these devices, setting the macrocell configuration option :fuse:`io_standard` to ``sstl`` (or erasing the device) selects the differential input buffer (referenced to the **VREFA** or **VREFB** pins); setting it to ``lvcmos`` selects the single-ended CMOS input buffer. Pins for the first half of the macrocells are referenced to **VREFA**, and for the second half of the macrocells to **VREFB**. If any pin is referenced to **VREFx**, then that **VREFx** pin may only be used for the SSTL reference voltage function.
+On these devices, setting the macrocell configuration option :fuse:`io_standard` to ``sstl`` (or erasing the device) selects the differential input buffer (referenced to the :pin:`VREFA` or :pin:`VREFB` pins); setting it to ``lvcmos`` selects the single-ended CMOS input buffer. Pins for the first half of the macrocells are referenced to :pin:`VREFA`, and for the second half of the macrocells to :pin:`VREFB`. If any pin is referenced to :pin:`VREFx`, then that :pin:`VREFx` pin may only be used for the SSTL reference voltage function.
 
 The following table describes the I/O standards that can be used with different devices and configurations:
 
