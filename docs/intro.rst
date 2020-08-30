@@ -9,12 +9,11 @@ Introduction
 Motivation
 ==========
 
-In 2020, CPLDs_ are widely considered obsolete. Why, then, work on a CPLD toolchain? Although in applications relying on reconfigurable logic alone, CPLDs are outclassed by FPGAs_ in every conceivable aspect, they still have advantages in system design: integrated configuration memory, single rail operation, powerful and rugged I/O buffers, and compatibility with 5 V TTL_ systems. It is the last aspect that has motivated the research resulting in Project Bureau.
+In 2020, CPLDs_ are widely considered obsolete. Why, then, work on a CPLD toolchain? Although in applications relying on reconfigurable logic alone, CPLDs are outclassed by FPGAs_ in every conceivable aspect, they still have advantages in system design: integrated configuration memory, single rail operation, powerful and rugged I/O buffers, and compatibility with 5 V TTL & CMOS systems. It is the last aspect that has motivated the research resulting in Project Bureau.
 
 .. _FPGAs: https://en.wikipedia.org/wiki/Field-programmable_gate_array
-.. _TTL: https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic#Interfacing_considerations
 
-Although 5 V logic (and especially 5 V TTL logic) has essentially disappeared from modern digital design, it did not become irrelevant. For decades, the microelectronics industry produced 5 V circuits, many of which are still in use, while others are of historical importance or pursued by retrocomputing enthusiasts. These circuits often use parallel, bidirectional buses, which are challenging to interface with today's serial, low pin count, low voltage hardware.
+Although 5 V logic has essentially disappeared from modern digital design, it did not become irrelevant. For decades, the microelectronics industry produced 5 V circuits, many of which are still in use, while others are of historical importance or pursued by retrocomputing enthusiasts. These circuits often use parallel, bidirectional buses, which are challenging to interface with today's serial, low pin count, low voltage hardware.
 
 Microchip_ ATF15xx is the last CPLD family in active production that offers true 5 V operation, i.e. rail-to-rail 5 V outputs, providing maximum compatibility with legacy devices. (While some similar devices are still available, such as Lattice_ ispMACH4A5_, they are being phased out, employ 5 V tolerant I/O buffers rather than true 5 V ones, or both.)
 
