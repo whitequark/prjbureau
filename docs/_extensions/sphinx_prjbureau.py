@@ -11,6 +11,7 @@ def setup(app):
         indextemplate='',
         ref_nodeclass=nodes.literal
     )
+    app.add_generic_role('pin', nodes.strong)
 
 
 def fa_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
