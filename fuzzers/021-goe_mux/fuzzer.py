@@ -161,7 +161,7 @@ with database.transact() as db:
             progress(3)
 
             updates = []
-            for pad in worklist:
+            for pad in sorted(worklist):
                 if pad not in pinout:
                     continue
                 progress(2)
@@ -169,9 +169,9 @@ with database.transact() as db:
                 reserved_muxes = []
                 reserved_pads = []
                 if depth > 0:
-                    for _, pad_mux_name in zip(range(depth), pad_muxes[pad]):
+                    for _, pad_mux_name in zip(range(depth), sorted(pad_muxes[pad])):
                         reserved_muxes.append(pad_mux_name)
-                        for other_pad in mux_pads[pad_mux_name]:
+                        for other_pad in sorted(mux_pads[pad_mux_name]):
                             if other_pad == pad or other_pad in reserved_pads:
                                 continue
                             if pad_muxes[other_pad].intersection(pad_muxes[pad]) != {pad_mux_name}:

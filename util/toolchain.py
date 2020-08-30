@@ -111,7 +111,7 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
     cache_key = hashlib.sha1(json.dumps({
         'input': input,
         'format': format,
-        'pins': pins,
+        'pins': None if pins is None else dict(sorted(pins.items())),
         'device': device,
         'strategy': strategy,
         'options': options,

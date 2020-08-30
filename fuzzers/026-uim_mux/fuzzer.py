@@ -87,7 +87,7 @@ with database.transact() as db:
                 if not net_sets: break
 
                 found = False
-                for net_set in net_sets:
+                for net_set in sorted(net_sets, key=lambda nets: "".join(sorted(nets))):
                     visited.add(net_set)
                     nets = set(net_set)
 
@@ -129,7 +129,7 @@ with database.transact() as db:
                                 if (new_uim_name in neg_uim_nets and
                                         new_uim_net.endswith('_FB')):
                                     neg_uim_nets[new_uim_name] = [
-                                        *[net for net in net_set if net != new_uim_net],
+                                        *[net for net in sorted(net_set) if net != new_uim_net],
                                         new_uim_net
                                     ]
 

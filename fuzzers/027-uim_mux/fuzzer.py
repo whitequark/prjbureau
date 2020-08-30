@@ -106,7 +106,7 @@ with database.transact() as db:
                     else:
                         assert False
 
-                    return run(net_set, probe_macrocell)
+                    return run(sorted(net_set), probe_macrocell)
 
                 def find_muxes(net_set, fuses):
                     nets = set(net_set)
@@ -156,7 +156,7 @@ with database.transact() as db:
                     else: # found > 1
                         progress(1)
 
-                        for net_name in det_random.sample(net_set, len(net_set)):
+                        for net_name in det_random.sample(sorted(net_set), len(net_set)):
                             if dull_reduces > 10:
                                 break
 
@@ -174,9 +174,10 @@ with database.transact() as db:
                         return False
 
                     if len(uims) == 0 or len(nets) == 0:
-                        net_set = net_set.union(det_random.sample(block_uim_nets - net_set, extra))
+                        net_set = net_set.union(
+                            det_random.sample(sorted(block_uim_nets - net_set), extra))
                         while len(net_set) > 35:
-                            net_set.pop()
+                            net_set.remove(det_random.sample(sorted(net_set)))
 
                         if net_set in visited:
                             return False
@@ -190,7 +191,7 @@ with database.transact() as db:
                                 dead_branches += 1
                                 return False
 
-                    uim_name  = det_random.choice(list(uims))
+                    uim_name  = det_random.choice(sorted(uims))
                     net_names = [name for name in switches[uim_name]['mux']['values']
                                  if name in nets]
                     for net_name in det_random.sample(net_names, len(net_names)):
@@ -206,10 +207,10 @@ with database.transact() as db:
 
                     return False
 
-                uims=set(block_uim_muxes)
-                nets=set(sum((list(name for name in switches[uim_name]['mux']['values']
-                                   if not name.startswith('GND'))
-                              for uim_name in block_uim_muxes), []))
+                uims = set(block_uim_muxes)
+                nets = set(sum((list(name for name in switches[uim_name]['mux']['values']
+                                     if not name.startswith('GND'))
+                                for uim_name in block_uim_muxes), []))
                 if search_tree(uims, nets, extra=extra):
                     all_blocks_failed = False
 
