@@ -10,7 +10,7 @@ See also :doc:`programming options <../options/program>`.
 JTAG instructions
 =================
 
-AS-family CPLDs have a 10 bit long instruction register, and support the following programming-related JTAG instructions:
+AS-series CPLDs have a 10 bit long instruction register, and support the following programming-related JTAG instructions:
 
 .. table::
    :widths: auto
