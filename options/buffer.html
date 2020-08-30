@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Programming options" href="program.html" />
+    <link rel="next" title="Power control options" href="power.html" />
     <link rel="prev" title="Macrocell options (WIP)" href="logic.html" /> 
 </head>
 
@@ -98,8 +98,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#i-o-standards">I/O standards</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="power.html">Power control options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="program.html">Programming options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="power.html">Power saving options (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">Database explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
@@ -251,17 +251,17 @@
 </div>
 <div class="section" id="input-hysteresis">
 <span id="hysteresis"></span><h2>Input hysteresis<a class="headerlink" href="#input-hysteresis" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option is present only on BE-series devices.</p>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices.</p>
 </div>
 <p>On ATF15xxBE devices, every macrocell input/output pin and the four global input pins <strong>CLR</strong>, <strong>CLK1</strong>, <strong>CLK2</strong>, <strong>OE1</strong> can be configured with or without <a class="reference external" href="https://en.wikipedia.org/wiki/hysteresis">hysteresis</a>. On these devices, setting the configuration options <code class="xref std std-fuse docutils literal notranslate"><span class="pre">macrocells[].hysteresis</span></code> or <code class="xref std std-fuse docutils literal notranslate"><span class="pre">pins[].hysteresis</span></code> to <code class="docutils literal notranslate"><span class="pre">on</span></code> selects the <a class="reference external" href="https://en.wikipedia.org/wiki/Schmitt trigger">Schmitt trigger</a> input buffer; setting them to <code class="docutils literal notranslate"><span class="pre">off</span></code> selects the simple CMOS input buffer.</p>
 </div>
 <div class="section" id="i-o-standards">
 <span id="io-standard"></span><h2>I/O standards<a class="headerlink" href="#i-o-standards" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option is present only on BE-series devices with 64 macrocells or more.</p>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices with 64 macrocells or more.</p>
 </div>
 <p>Normally, ATF15xx CPLD inputs and outputs follow TTL/LVTTL<a class="footnote-reference brackets" href="#ttl" id="id3">2</a> or CMOS/LVCMOS<a class="footnote-reference brackets" href="#cmos" id="id4">3</a> signaling standards. However, BE-series devices starting with ATF1504BE also support SSTL signaling standards.</p>
 <p>On these devices, setting the macrocell configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">io_standard</span></code> to <code class="docutils literal notranslate"><span class="pre">sstl</span></code> (or erasing the device) selects the differential input buffer (referenced to the <strong>VREFA</strong> or <strong>VREFB</strong> pins); setting it to <code class="docutils literal notranslate"><span class="pre">lvcmos</span></code> selects the single-ended CMOS input buffer. Pins for the first half of the macrocells are referenced to <strong>VREFA</strong>, and for the second half of the macrocells to <strong>VREFB</strong>. If any pin is referenced to <strong>VREFx</strong>, then that <strong>VREFx</strong> pin may only be used for the SSTL reference voltage function.</p>
@@ -392,7 +392,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="program.html" class="btn btn-neutral float-right" title="Programming options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="power.html" class="btn btn-neutral float-right" title="Power control options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="logic.html" class="btn btn-neutral float-left" title="Macrocell options (WIP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

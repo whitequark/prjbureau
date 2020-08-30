@@ -9,8 +9,8 @@ Project Bureau
    naming
    options/logic
    options/buffer
-   options/program
    options/power
+   options/program
    schema
    explore
    jtag/index
