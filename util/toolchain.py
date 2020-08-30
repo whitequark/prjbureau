@@ -4,6 +4,7 @@ import hashlib
 import struct
 import pickle
 import json
+from contextlib import contextmanager
 from bitarray import bitarray
 
 from . import root_dir, progress
@@ -128,21 +129,25 @@ def run(input, pins, device, *, strategy={}, options=[], name="work", format="v"
                 return fuses
             else:
                 raise pickle.load(f)
+
     except FileNotFoundError:
+        @contextmanager
+        def write_atomic():
+            with open(os.path.join(cache_dir, cache_key + '.new'), 'wb') as f:
+                yield f
+            os.rename(os.path.join(cache_dir, cache_key + '.new'),
+                      os.path.join(cache_dir, cache_key))
+
         try:
             fuses = run_uncached(input, pins, device, strategy=strategy, options=options,
                                  name=name, format=format)
-            with open(os.path.join(cache_dir, cache_key + '.new'), 'wb') as f:
+            with write_atomic() as f:
                 f.write(struct.pack('i', len(fuses)))
                 fuses.tofile(f)
-            os.rename(os.path.join(cache_dir, cache_key + '.new'),
-                      os.path.join(cache_dir, cache_key))
             return fuses
+
         except (subprocess.CalledProcessError, FitterError) as exn:
-            with open(os.path.join(cache_dir, cache_key + '.new'), 'wb') as f:
+            with write_atomic() as f:
                 f.write(struct.pack('i', 0))
                 pickle.dump(exn, f)
-            os.rename(os.path.join(cache_dir, cache_key + '.new'),
-                      os.path.join(cache_dir, cache_key))
             raise
-
