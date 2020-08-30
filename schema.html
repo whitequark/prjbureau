@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database schema (WIP) &mdash; Project Bureau  documentation</title>
+  <title>Database schema &mdash; Project Bureau  documentation</title>
   
 
   
@@ -93,7 +93,106 @@
 <li class="toctree-l1"><a class="reference internal" href="options/buffer.html">I/O buffer options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="options/power.html">Power control options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="options/program.html">Programming options</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Database schema (WIP)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Database schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-structure">General structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reference-leaf">Reference leaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence-leaf">Sequence leaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-leaf">Mapping leaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-leaf">Range leaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xpoints-leaf">Xpoints leaf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-leaf">Option leaf</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-database">Node <code class="docutils literal notranslate"><span class="pre">database</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-pins">Node <code class="docutils literal notranslate"><span class="pre">device['pins']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-pinout">Mapping <code class="docutils literal notranslate"><span class="pre">pinout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mapping-device-specials">Mapping <code class="docutils literal notranslate"><span class="pre">device['specials']</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-blocks">Node <code class="docutils literal notranslate"><span class="pre">device['blocks']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sequence-block-macrocells">Sequence <code class="docutils literal notranslate"><span class="pre">block['macrocells']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence-block-switches">Sequence <code class="docutils literal notranslate"><span class="pre">block['switches']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xpoints-block-pterm-points">Xpoints <code class="docutils literal notranslate"><span class="pre">block['pterm_points']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-macrocells">Node <code class="docutils literal notranslate"><span class="pre">device['macrocells']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reference-macrocell-block">Reference <code class="docutils literal notranslate"><span class="pre">macrocell['block']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-macrocell-pad">Reference <code class="docutils literal notranslate"><span class="pre">macrocell['pad']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#node-macrocell-pterm-ranges">Node <code class="docutils literal notranslate"><span class="pre">macrocell['pterm_ranges']</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#range-pterm-range">Range <code class="docutils literal notranslate"><span class="pre">pterm_range</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt1-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt1_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt2-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt2_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt3-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt3_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-gclr-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['gclr_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt4-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt4_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt4-func">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt4_func']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-gclk-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['gclk_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt5-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt5_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt5-func">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt5_func']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-xor-a-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_a_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-xor-b-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_b_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-cas-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['cas_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-xor-invert">Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_invert']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-d-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['d_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-dfast-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['dfast_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-storage">Option <code class="docutils literal notranslate"><span class="pre">macrocell['storage']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-reset">Option <code class="docutils literal notranslate"><span class="pre">macrocell['reset']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-fb-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['fb_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-o-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['o_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-oe-mux">Option <code class="docutils literal notranslate"><span class="pre">macrocell['oe_mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-slew-rate">Option <code class="docutils literal notranslate"><span class="pre">macrocell['slew_rate']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-output-driver">Option <code class="docutils literal notranslate"><span class="pre">macrocell['output_driver']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-pt-power">Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt_power']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-low-power">Option <code class="docutils literal notranslate"><span class="pre">macrocell['low_power']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-termination">Option <code class="docutils literal notranslate"><span class="pre">macrocell['termination']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-hysteresis">Option <code class="docutils literal notranslate"><span class="pre">macrocell['hysteresis']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-macrocell-io-standard">Option <code class="docutils literal notranslate"><span class="pre">macrocell['io_standard']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-switches">Node <code class="docutils literal notranslate"><span class="pre">device['switches']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reference-switch-block">Reference <code class="docutils literal notranslate"><span class="pre">switch['block']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-switch-mux">Option <code class="docutils literal notranslate"><span class="pre">switch['mux']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-globals">Node <code class="docutils literal notranslate"><span class="pre">device['globals']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Option <code class="docutils literal notranslate"><span class="pre">switch['mux']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-switch-invert">Option <code class="docutils literal notranslate"><span class="pre">switch['invert']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-config-pins">Node <code class="docutils literal notranslate"><span class="pre">device['config']['pins']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-standby-wakeup">Option <code class="docutils literal notranslate"><span class="pre">config['standby_wakeup']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-termination">Option <code class="docutils literal notranslate"><span class="pre">config['termination']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-hysteresis">Option <code class="docutils literal notranslate"><span class="pre">config['hysteresis']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-config">Node <code class="docutils literal notranslate"><span class="pre">device['config']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-arming-switch">Option <code class="docutils literal notranslate"><span class="pre">config['arming_switch']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-read-protection">Option <code class="docutils literal notranslate"><span class="pre">config['read_protection']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-jtag-pin-func">Option <code class="docutils literal notranslate"><span class="pre">config['jtag_pin_func']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-pd1-pin-func">Option <code class="docutils literal notranslate"><span class="pre">config['pd1_pin_func']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-pd2-pin-func">Option <code class="docutils literal notranslate"><span class="pre">config['pd2_pin_func']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#std-fuse-device-termination">Option <code class="docutils literal notranslate"><span class="pre">config['termination']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-config-reset-hysteresis">Option <code class="docutils literal notranslate"><span class="pre">config['reset_hysteresis']</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-user">Node <code class="docutils literal notranslate"><span class="pre">device['user']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-user-byte">Option <code class="docutils literal notranslate"><span class="pre">user_byte</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#node-device-ranges">Node <code class="docutils literal notranslate"><span class="pre">device['ranges']</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-pterms">Range <code class="docutils literal notranslate"><span class="pre">ranges['pterms']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-macrocells">Range <code class="docutils literal notranslate"><span class="pre">ranges['macrocells']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-uim-muxes">Range <code class="docutils literal notranslate"><span class="pre">ranges['uim_muxes']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-goe-muxes">Range <code class="docutils literal notranslate"><span class="pre">ranges['goe_muxes']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-config">Range <code class="docutils literal notranslate"><span class="pre">ranges['config']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-user">Range <code class="docutils literal notranslate"><span class="pre">ranges['user']</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#range-ranges-reserved">Range <code class="docutils literal notranslate"><span class="pre">ranges['reserved']</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="explore.html">Database explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jtag/index.html">JTAG programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/index.html">Command-line tools</a></li>
@@ -145,7 +244,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Database schema (WIP)</li>
+      <li>Database schema</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,11 +263,397 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="database-schema-wip">
-<h1>Database schema (WIP)<a class="headerlink" href="#database-schema-wip" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>This section is not yet written.</p>
+  <div class="section" id="database-schema">
+<h1>Database schema<a class="headerlink" href="#database-schema" title="Permalink to this headline">¶</a></h1>
+<p>The ATF15xx chip database is the ultimate artefact produced by Project Bureau. Most importantly, it assigns a symbolic name to each known fuse or group of fuses and a symbolic value to each known pattern these fuses can take. Aside from that, it establishes relationships between basic elements: macrocells and logic blocks, macrocells and pins, pads and special functions.</p>
+<p>The canonical form of the chip database distributed by the project is its <a class="reference external" href="database/database.json.gz">JSON serialization</a>. A machine-readable <a class="reference external" href="database/schema.json">JSON schema</a> that describes the chip database structure is also available. The rest of this document contains a human-readable description of the chip database format.</p>
+<div class="section" id="general-structure">
+<h2>General structure<a class="headerlink" href="#general-structure" title="Permalink to this headline">¶</a></h2>
+<p>The chip database contains two kinds of entries: nodes and leaves. A <em>node</em> is a container (object or array) that may include other nodes and leaves. A <em>leaf</em> is an arbitrary data structure describing a feature of the device, e.g. the location of a fuse in a JED file plus its symbolic description. The chip database only uses a small amount of different leaf structures, which are described below.</p>
+<div class="section" id="reference-leaf">
+<span id="leaf-reference"></span><h3>Reference leaf<a class="headerlink" href="#reference-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">&quot;M0&quot;</span></code>.</p>
+<p>The reference leaf links a single node to the node it’s in. It is a string containing the name of the linked node.</p>
+</div>
+<div class="section" id="sequence-leaf">
+<h3>Sequence leaf<a class="headerlink" href="#sequence-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">[&quot;MC1&quot;,</span> <span class="pre">&quot;MC2&quot;]</span></code>.</p>
+<p>The sequence leaf links an ordered set of nodes to the node it’s in. It is an array of <a class="reference internal" href="#leaf-reference"><span class="std std-ref">references</span></a>.</p>
+</div>
+<div class="section" id="mapping-leaf">
+<h3>Mapping leaf<a class="headerlink" href="#mapping-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">{&quot;M1&quot;:</span> <span class="pre">&quot;42&quot;,</span> <span class="pre">&quot;M2&quot;:</span> <span class="pre">&quot;43&quot;}</span></code>.</p>
+<p>The mapping leaf describes a one-to-one correspondence between nodes. It is an object containing <a class="reference internal" href="#leaf-reference"><span class="std std-ref">references</span></a> where the keys are also <a class="reference internal" href="#leaf-reference"><span class="std std-ref">references</span></a>.</p>
+</div>
+<div class="section" id="range-leaf">
+<h3>Range leaf<a class="headerlink" href="#range-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">[100,</span> <span class="pre">200]</span></code>.</p>
+<p>The range leaf describes a contiguous sequence of fuse indexes. It is an array containing two integers: the inclusive lower bound and the exclusive upper bound.</p>
+</div>
+<div class="section" id="xpoints-leaf">
+<h3>Xpoints leaf<a class="headerlink" href="#xpoints-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">{&quot;UIM2_P&quot;:</span> <span class="pre">16,</span> <span class="pre">&quot;UIM2_N&quot;:</span> <span class="pre">17}</span></code>.</p>
+<p>The crosspoints leaf describes a one-to-one correspondence between networks and fuse offsets. It is an object containing integer fuse offsets where the keys are network names. (This leaf is only used once, to describe product term layout.)</p>
+</div>
+<div class="section" id="option-leaf">
+<h3>Option leaf<a class="headerlink" href="#option-leaf" title="Permalink to this headline">¶</a></h3>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">{&quot;fuses&quot;:</span> <span class="pre">[123,</span> <span class="pre">124],</span> <span class="pre">&quot;values&quot;:</span> <span class="pre">{&quot;high_z&quot;:</span> <span class="pre">3,</span> <span class="pre">&quot;pull_up&quot;:</span> <span class="pre">2,</span> <span class="pre">&quot;pull_down&quot;:</span> <span class="pre">0}}</span></code>.</p>
+<p>The option leaf assigns symbolic names to combinations of fuse values, and describes a configurable device feature. It is an object with two keys, <code class="docutils literal notranslate"><span class="pre">fuses</span></code> and <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">fuses</span></code> key is an array of fuse indexes that unambiguously maps fuse combinations to integers–the value of first specified fuse is the least significant bit in the binary notation.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">values</span></code> key is an object containing symbolic names for known fuse combinations. All names point to unique fuse combiantions, though not every possible fuse combination may have a name assigned to it.</p>
+</div>
+</div>
+<div class="section" id="node-database">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">database</span></code><a class="headerlink" href="#node-database" title="Permalink to this headline">¶</a></h2>
+<p>The root node is a map from device names (e.g. <code class="docutils literal notranslate"><span class="pre">ATF1502AS</span></code>) to device specifications. The rest of this page is written in the context of a single device specification.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">device_name,</span> <span class="pre">device</span></code> in <code class="docutils literal notranslate"><span class="pre">database</span></code>:</p>
+</div>
+<div class="section" id="node-device-pins">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['pins']</span></code><a class="headerlink" href="#node-device-pins" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from packages (e.g. <code class="docutils literal notranslate"><span class="pre">TQFP44</span></code>) to pinouts.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">package,</span> <span class="pre">pinout</span></code> in <code class="docutils literal notranslate"><span class="pre">device['pins']</span></code>:</p>
+<div class="section" id="mapping-pinout">
+<h3>Mapping <code class="docutils literal notranslate"><span class="pre">pinout</span></code><a class="headerlink" href="#mapping-pinout" title="Permalink to this headline">¶</a></h3>
+<p>This mapping relates pads (e.g. <code class="docutils literal notranslate"><span class="pre">C2</span></code>, <code class="docutils literal notranslate"><span class="pre">M1</span></code>) to package pins (e.g. <code class="docutils literal notranslate"><span class="pre">40</span></code>, <code class="docutils literal notranslate"><span class="pre">42</span></code>).</p>
+</div>
+</div>
+<div class="section" id="mapping-device-specials">
+<h2>Mapping <code class="docutils literal notranslate"><span class="pre">device['specials']</span></code><a class="headerlink" href="#mapping-device-specials" title="Permalink to this headline">¶</a></h2>
+<p>This mapping relates special functions (e.g. <code class="docutils literal notranslate"><span class="pre">CLK1</span></code>, <code class="docutils literal notranslate"><span class="pre">TMS</span></code>) to pads (e.g. <code class="docutils literal notranslate"><span class="pre">C1</span></code>, <code class="docutils literal notranslate"><span class="pre">M9</span></code>).</p>
+</div>
+<div class="section" id="node-device-blocks">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['blocks']</span></code><a class="headerlink" href="#node-device-blocks" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from block names (e.g. <code class="docutils literal notranslate"><span class="pre">A</span></code>) to block specifications.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">block_name,</span> <span class="pre">block</span></code> in <code class="docutils literal notranslate"><span class="pre">device['blocks']</span></code>:</p>
+<div class="section" id="sequence-block-macrocells">
+<h3>Sequence <code class="docutils literal notranslate"><span class="pre">block['macrocells']</span></code><a class="headerlink" href="#sequence-block-macrocells" title="Permalink to this headline">¶</a></h3>
+<p>This sequence contains the names of macrocells in the logic block.</p>
+</div>
+<div class="section" id="sequence-block-switches">
+<h3>Sequence <code class="docutils literal notranslate"><span class="pre">block['switches']</span></code><a class="headerlink" href="#sequence-block-switches" title="Permalink to this headline">¶</a></h3>
+<p>This sequence contains the names of interconnect switches in the logic block.</p>
+</div>
+<div class="section" id="xpoints-block-pterm-points">
+<h3>Xpoints <code class="docutils literal notranslate"><span class="pre">block['pterm_points']</span></code><a class="headerlink" href="#xpoints-block-pterm-points" title="Permalink to this headline">¶</a></h3>
+<p>This leaf relates block-local networks to product term fuse offsets. All macrocells in this block share an identical layout of product term fuses. To find a fuse that would include a specific network in a product term, add the index of the first fuse in the product term to the offset corresponding to the network in this leaf.</p>
+</div>
+</div>
+<div class="section" id="node-device-macrocells">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['macrocells']</span></code><a class="headerlink" href="#node-device-macrocells" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from macrocell names (e.g. <code class="docutils literal notranslate"><span class="pre">MC1</span></code>) to macrocell specifications.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">macrocell_name,</span> <span class="pre">macrocell</span></code> in <code class="docutils literal notranslate"><span class="pre">device['macrocells']</span></code>:</p>
+<div class="section" id="reference-macrocell-block">
+<h3>Reference <code class="docutils literal notranslate"><span class="pre">macrocell['block']</span></code><a class="headerlink" href="#reference-macrocell-block" title="Permalink to this headline">¶</a></h3>
+<p>This reference links the macrocell to the block that contains the macrocell.</p>
+</div>
+<div class="section" id="reference-macrocell-pad">
+<h3>Reference <code class="docutils literal notranslate"><span class="pre">macrocell['pad']</span></code><a class="headerlink" href="#reference-macrocell-pad" title="Permalink to this headline">¶</a></h3>
+<p>This reference links the macrocell to the name of the pad connected to the macrocell. The pad connected to a macrocell <code class="docutils literal notranslate"><span class="pre">MCx</span></code> is always called <code class="docutils literal notranslate"><span class="pre">Mx</span></code>; this leaf is provided for convenience.</p>
+</div>
+<div class="section" id="node-macrocell-pterm-ranges">
+<h3>Node <code class="docutils literal notranslate"><span class="pre">macrocell['pterm_ranges']</span></code><a class="headerlink" href="#node-macrocell-pterm-ranges" title="Permalink to this headline">¶</a></h3>
+<p>This node is a map from product term names (which are always <code class="docutils literal notranslate"><span class="pre">PT1</span></code>, <code class="docutils literal notranslate"><span class="pre">PT2</span></code>, <code class="docutils literal notranslate"><span class="pre">PT3</span></code>, <code class="docutils literal notranslate"><span class="pre">PT4</span></code>, <code class="docutils literal notranslate"><span class="pre">PT5</span></code>) to product term fuse ranges.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">pterm_name,</span> <span class="pre">pterm_range</span></code> in <code class="docutils literal notranslate"><span class="pre">macrocell['pterm_ranges']</span></code>:</p>
+<div class="section" id="range-pterm-range">
+<h4>Range <code class="docutils literal notranslate"><span class="pre">pterm_range</span></code><a class="headerlink" href="#range-pterm-range" title="Permalink to this headline">¶</a></h4>
+<p>This range contains the product term fuses. The functions of the individual fuses are specified in the block that contains the macrocell.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-pt1-mux">
+<span id="std-fuse-pt1_mux"></span><span id="std:fuse-pt1_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt1_mux']</span></code><a class="headerlink" href="#option-macrocell-pt1-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">PT1</span></code> product term feeds the sum term or the special function (logic foldback node, and in rare cases XOR term).</p>
+</div>
+<div class="section" id="option-macrocell-pt2-mux">
+<span id="std-fuse-pt2_mux"></span><span id="std:fuse-pt2_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt2_mux']</span></code><a class="headerlink" href="#option-macrocell-pt2-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">PT2</span></code> product term feeds the sum term or the special function (XOR term).</p>
+</div>
+<div class="section" id="option-macrocell-pt3-mux">
+<span id="std-fuse-pt3_mux"></span><span id="std:fuse-pt3_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt3_mux']</span></code><a class="headerlink" href="#option-macrocell-pt3-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">PT3</span></code> product term feeds the sum term or the special function (asynchronous reset).</p>
+</div>
+<div class="section" id="option-macrocell-gclr-mux">
+<span id="std-fuse-gclr_mux"></span><span id="std:fuse-gclr_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['gclr_mux']</span></code><a class="headerlink" href="#option-macrocell-gclr-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">GCLR</span></code> global network will reset the storage element of the macrocell.</p>
+</div>
+<div class="section" id="option-macrocell-pt4-mux">
+<span id="std-fuse-pt4_mux"></span><span id="std:fuse-pt4_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt4_mux']</span></code><a class="headerlink" href="#option-macrocell-pt4-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">PT4</span></code> product term feeds the sum term or the special function (clock or clock enable).</p>
+</div>
+<div class="section" id="option-macrocell-pt4-func">
+<span id="std-fuse-pt4_func"></span><span id="std:fuse-pt4_func"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt4_func']</span></code><a class="headerlink" href="#option-macrocell-pt4-func" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether, if it drives a special function, the <code class="docutils literal notranslate"><span class="pre">PT4</span></code> product term clocks the storage element of the macrocell, or enables the storage element driven by a global clock network.</p>
+</div>
+<div class="section" id="option-macrocell-gclk-mux">
+<span id="std-fuse-gclk_mux"></span><span id="std:fuse-gclk_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['gclk_mux']</span></code><a class="headerlink" href="#option-macrocell-gclk-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures which <code class="docutils literal notranslate"><span class="pre">GCLKx</span></code> global network will clock of the storage element of the macrocell when the macrocell is clocked by a global network.</p>
+</div>
+<div class="section" id="option-macrocell-pt5-mux">
+<span id="std-fuse-pt5_mux"></span><span id="std:fuse-pt5_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt5_mux']</span></code><a class="headerlink" href="#option-macrocell-pt5-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the <code class="docutils literal notranslate"><span class="pre">PT5</span></code> product term feeds the sum term or the special function (asynchronous set or output enable).</p>
+</div>
+<div class="section" id="option-macrocell-pt5-func">
+<span id="std-fuse-pt5_func"></span><span id="std:fuse-pt5_func"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt5_func']</span></code><a class="headerlink" href="#option-macrocell-pt5-func" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether, if it drives a special function, the <code class="docutils literal notranslate"><span class="pre">PT5</span></code> product term presets the storage element of the macrocell, or enables the output buffer.</p>
+</div>
+<div class="section" id="option-macrocell-xor-a-mux">
+<span id="std-fuse-xor_a_mux"></span><span id="std:fuse-xor_a_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_a_mux']</span></code><a class="headerlink" href="#option-macrocell-xor-a-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the 1st input of the XOR term is driven by the sum term or the <code class="docutils literal notranslate"><span class="pre">PT2</span></code> product term.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-cas_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">cas_mux</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-xor-b-mux">
+<span id="std-fuse-xor_b_mux"></span><span id="std:fuse-xor_b_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_b_mux']</span></code><a class="headerlink" href="#option-macrocell-xor-b-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the 2nd input of the XOR term is driven by the output of the storage element, the inverse of the <code class="docutils literal notranslate"><span class="pre">PT1</span></code> product term, the inverse of the <code class="docutils literal notranslate"><span class="pre">PT2</span></code> product term, or a constant low.</p>
+</div>
+<div class="section" id="option-macrocell-cas-mux">
+<span id="std-fuse-cas_mux"></span><span id="std:fuse-cas_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['cas_mux']</span></code><a class="headerlink" href="#option-macrocell-cas-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the sum term feeds the XOR term or the cascade output of the macrocell.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-xor_a_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">xor_a_mux</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-xor-invert">
+<span id="std-fuse-xor_invert"></span><span id="std:fuse-xor_invert"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['xor_invert']</span></code><a class="headerlink" href="#option-macrocell-xor-invert" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the output of the XOR term is inverted.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-reset"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">reset</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-d-mux">
+<span id="std-fuse-d_mux"></span><span id="std:fuse-d_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['d_mux']</span></code><a class="headerlink" href="#option-macrocell-d-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the storage element samples the combinatorial function or the fast input.</p>
+</div>
+<div class="section" id="option-macrocell-dfast-mux">
+<span id="std-fuse-dfast_mux"></span><span id="std:fuse-dfast_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['dfast_mux']</span></code><a class="headerlink" href="#option-macrocell-dfast-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the pad or the <code class="docutils literal notranslate"><span class="pre">PT2</span></code> product term is selected as the fast input.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-o_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">o_mux</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-storage">
+<span id="std-fuse-storage"></span><span id="std:fuse-storage"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['storage']</span></code><a class="headerlink" href="#option-macrocell-storage" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the storage element functions as a D-flip-flop or a D-latch. On BE-series devices with 64 macrocells or more, it can also configure the storage element as a T-flip-flop.</p>
+</div>
+<div class="section" id="option-macrocell-reset">
+<span id="std-fuse-reset"></span><span id="std:fuse-reset"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['reset']</span></code><a class="headerlink" href="#option-macrocell-reset" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the power-on reset value of the storage element.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-xor_invert"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">xor_invert</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-fb-mux">
+<span id="std-fuse-fb_mux"></span><span id="std:fuse-fb_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['fb_mux']</span></code><a class="headerlink" href="#option-macrocell-fb-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the feedback signal <code class="docutils literal notranslate"><span class="pre">MCx_FB</span></code> is driven by the combinatorial function or the storage element.</p>
+</div>
+<div class="section" id="option-macrocell-o-mux">
+<span id="std-fuse-o_mux"></span><span id="std:fuse-o_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['o_mux']</span></code><a class="headerlink" href="#option-macrocell-o-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the output buffer is driven by the combinatorial function or the storage element.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option and <a class="reference internal" href="#std-fuse-dfast_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">dfast_mux</span></code></a> cannot be simultaneously set to arbitrary values because they share their fuse.</p>
+</div>
+</div>
+<div class="section" id="option-macrocell-oe-mux">
+<span id="std-fuse-oe_mux"></span><span id="std:fuse-oe_mux"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['oe_mux']</span></code><a class="headerlink" href="#option-macrocell-oe-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures whether the output buffer is enabled by one of the <code class="docutils literal notranslate"><span class="pre">GOEx</span></code> global networks, by the <code class="docutils literal notranslate"><span class="pre">PT5</span></code> product term, or is always disabled.</p>
+</div>
+<div class="section" id="option-macrocell-slew-rate">
+<span id="std-fuse-slew_rate"></span><span id="std:fuse-slew_rate"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['slew_rate']</span></code><a class="headerlink" href="#option-macrocell-slew-rate" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/buffer.html#slew-rate"><span class="std std-ref">slew rate</span></a> of the output buffer of the macrocell.</p>
+</div>
+<div class="section" id="option-macrocell-output-driver">
+<span id="std-fuse-output_driver"></span><span id="std:fuse-output_driver"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['output_driver']</span></code><a class="headerlink" href="#option-macrocell-output-driver" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the output buffer of the macrocell as <a class="reference internal" href="options/buffer.html#output-driver"><span class="std std-ref">push-pull or open-collector</span></a>.</p>
+</div>
+<div class="section" id="option-macrocell-pt-power">
+<span id="std-fuse-pt_power"></span><span id="std:fuse-pt_power"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['pt_power']</span></code><a class="headerlink" href="#option-macrocell-pt-power" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in AS-series devices.</p>
+</div>
+<p>This option configures whether the macrocell’s product terms are <a class="reference internal" href="options/power.html#pt-power"><span class="std std-ref">active or disabled to save power</span></a>.</p>
+</div>
+<div class="section" id="option-macrocell-low-power">
+<span id="std-fuse-low_power"></span><span id="std:fuse-low_power"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['low_power']</span></code><a class="headerlink" href="#option-macrocell-low-power" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in AS-series devices.</p>
+</div>
+<p>This option configures whether the macrocell operates at <a class="reference internal" href="options/power.html#low-power"><span class="std std-ref">reduced power and reduced switching speed</span></a>.</p>
+</div>
+<div class="section" id="option-macrocell-termination">
+<span id="std-fuse-macrocell-termination"></span><span id="std:fuse-macrocell-termination"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['termination']</span></code><a class="headerlink" href="#option-macrocell-termination" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices.</p>
+</div>
+<p>This option configures the <a class="reference internal" href="options/buffer.html#termination"><span class="std std-ref">termination</span></a> of the macrocell pin.</p>
+</div>
+<div class="section" id="option-macrocell-hysteresis">
+<span id="std-fuse-macrocell-hysteresis"></span><span id="std:fuse-macrocell-hysteresis"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['hysteresis']</span></code><a class="headerlink" href="#option-macrocell-hysteresis" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices.</p>
+</div>
+<p>This option configures whether the input buffer of the macrocell has <a class="reference internal" href="options/buffer.html#hysteresis"><span class="std std-ref">hysteresis</span></a>.</p>
+</div>
+<div class="section" id="option-macrocell-io-standard">
+<span id="std-fuse-io_standard"></span><span id="std:fuse-io_standard"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">macrocell['io_standard']</span></code><a class="headerlink" href="#option-macrocell-io-standard" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices with 64 macrocells or more.
+This option is absent on <strong>VREFx</strong> pins.</p>
+</div>
+<p>This option configures whether the input buffer of the macrocell follows the <a class="reference internal" href="options/buffer.html#io-standard"><span class="std std-ref">LVCMOS or SSTL signaling standard</span></a>.</p>
+</div>
+</div>
+<div class="section" id="node-device-switches">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['switches']</span></code><a class="headerlink" href="#node-device-switches" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from switch names (e.g. <code class="docutils literal notranslate"><span class="pre">UIM1</span></code>) to switch specifications.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">switch_name,</span> <span class="pre">switch</span></code> in <code class="docutils literal notranslate"><span class="pre">device['switches']</span></code>:</p>
+<div class="section" id="reference-switch-block">
+<h3>Reference <code class="docutils literal notranslate"><span class="pre">switch['block']</span></code><a class="headerlink" href="#reference-switch-block" title="Permalink to this headline">¶</a></h3>
+<p>This reference links the switch to the block that contains the switch.</p>
+</div>
+<div class="section" id="option-switch-mux">
+<h3>Option <code class="docutils literal notranslate"><span class="pre">switch['mux']</span></code><a class="headerlink" href="#option-switch-mux" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the network selected by the switch.</p>
+</div>
+</div>
+<div class="section" id="node-device-globals">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['globals']</span></code><a class="headerlink" href="#node-device-globals" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from global network names (e.g. <code class="docutils literal notranslate"><span class="pre">GCLR</span></code>, <code class="docutils literal notranslate"><span class="pre">GCLK1</span></code>) to global network specifications.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">switch_name,</span> <span class="pre">switch</span></code> in <code class="docutils literal notranslate"><span class="pre">device['globals']</span></code>:</p>
+<div class="section" id="id1">
+<h3>Option <code class="docutils literal notranslate"><span class="pre">switch['mux']</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option is absent for the <code class="docutils literal notranslate"><span class="pre">GCLR</span></code> global network.</p>
+</div>
+<p>This option configures the network selected by the switch.</p>
+</div>
+<div class="section" id="option-switch-invert">
+<h3>Option <code class="docutils literal notranslate"><span class="pre">switch['invert']</span></code><a class="headerlink" href="#option-switch-invert" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the output buffer of the switch as inverting or non-inverting.</p>
+</div>
+</div>
+<div class="section" id="node-device-config-pins">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['config']['pins']</span></code><a class="headerlink" href="#node-device-config-pins" title="Permalink to this headline">¶</a></h2>
+<p>This node is a map from special pins (e.g. <code class="docutils literal notranslate"><span class="pre">CLR</span></code>, <code class="docutils literal notranslate"><span class="pre">TMS</span></code>) to I/O buffer options.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">special,</span> <span class="pre">config</span></code> in <code class="docutils literal notranslate"><span class="pre">device['config']['pins']</span></code>:</p>
+<div class="section" id="option-config-standby-wakeup">
+<span id="std-fuse-standby_wakeup"></span><span id="std:fuse-standby_wakeup"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['standby_wakeup']</span></code><a class="headerlink" href="#option-config-standby-wakeup" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in AS-series devices for the <code class="docutils literal notranslate"><span class="pre">CLKx</span></code> pins.</p>
+</div>
+<p>This option configures whether transitions on a <code class="docutils literal notranslate"><span class="pre">CLKx</span></code> pin will <a class="reference internal" href="options/power.html#standby-wakeup"><span class="std std-ref">wake up</span></a> the device from a low-power standby mode.</p>
+</div>
+<div class="section" id="option-config-termination">
+<span id="std-fuse-special-termination"></span><span id="std:fuse-special-termination"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['termination']</span></code><a class="headerlink" href="#option-config-termination" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>On AS-series devices, this option is present only for the JTAG <code class="docutils literal notranslate"><span class="pre">TMS</span></code> and <code class="docutils literal notranslate"><span class="pre">TDI</span></code> pins.</p>
+</div>
+<p>This option configures the <a class="reference internal" href="options/buffer.html#termination"><span class="std std-ref">termination</span></a> of the special pin.</p>
+</div>
+<div class="section" id="option-config-hysteresis">
+<span id="std-fuse-special-hysteresis"></span><span id="std:fuse-special-hysteresis"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['hysteresis']</span></code><a class="headerlink" href="#option-config-hysteresis" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in BE-series devices for the <code class="docutils literal notranslate"><span class="pre">CLK1</span></code>, <code class="docutils literal notranslate"><span class="pre">CLK2</span></code>, <code class="docutils literal notranslate"><span class="pre">OE1</span></code>, and <code class="docutils literal notranslate"><span class="pre">CLR</span></code> pins.</p>
+</div>
+<p>This option configures whether the input buffer of the special pin has <a class="reference internal" href="options/buffer.html#hysteresis"><span class="std std-ref">hysteresis</span></a>.</p>
+</div>
+</div>
+<div class="section" id="node-device-config">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['config']</span></code><a class="headerlink" href="#node-device-config" title="Permalink to this headline">¶</a></h2>
+<p>This node enumerates device-wide options.</p>
+<p>Let <code class="docutils literal notranslate"><span class="pre">config</span></code> be <code class="docutils literal notranslate"><span class="pre">device['config']</span></code>:</p>
+<div class="section" id="option-config-arming-switch">
+<span id="std-fuse-arming_switch"></span><span id="std:fuse-arming_switch"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['arming_switch']</span></code><a class="headerlink" href="#option-config-arming-switch" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/program.html#arming-switch"><span class="std std-ref">arming switch</span></a>.</p>
+</div>
+<div class="section" id="option-config-read-protection">
+<span id="std-fuse-read_protection"></span><span id="std:fuse-read_protection"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['read_protection']</span></code><a class="headerlink" href="#option-config-read-protection" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/program.html#read-protection"><span class="std std-ref">read protection</span></a>.</p>
+</div>
+<div class="section" id="option-config-jtag-pin-func">
+<span id="std-fuse-jtag_pin_func"></span><span id="std:fuse-jtag_pin_func"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['jtag_pin_func']</span></code><a class="headerlink" href="#option-config-jtag-pin-func" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/program.html#jtag-pin-func"><span class="std std-ref">special function of JTAG pins</span></a>.</p>
+</div>
+<div class="section" id="option-config-pd1-pin-func">
+<span id="std-fuse-pd1_pin_func"></span><span id="std:fuse-pd1_pin_func"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['pd1_pin_func']</span></code><a class="headerlink" href="#option-config-pd1-pin-func" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/power.html#pd1-pin-func"><span class="std std-ref">special function of the PD1 pin</span></a>.</p>
+</div>
+<div class="section" id="option-config-pd2-pin-func">
+<span id="std-fuse-pd2_pin_func"></span><span id="std:fuse-pd2_pin_func"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['pd2_pin_func']</span></code><a class="headerlink" href="#option-config-pd2-pin-func" title="Permalink to this headline">¶</a></h3>
+<p>This option configures the <a class="reference internal" href="options/power.html#pd2-pin-func"><span class="std std-ref">special function of the PD2 pin</span></a>.</p>
+</div>
+<div class="section" id="std-fuse-device-termination">
+<span id="std:fuse-device-termination"></span><span id="id2"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['termination']</span></code><a class="headerlink" href="#std-fuse-device-termination" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in AS-series devices.</p>
+</div>
+<p>This option configures the <a class="reference internal" href="options/buffer.html#termination"><span class="std std-ref">termination</span></a> of every macrocell pin.</p>
+</div>
+<div class="section" id="option-config-reset-hysteresis">
+<span id="std-fuse-reset_hysteresis"></span><span id="std:fuse-reset_hysteresis"></span><h3>Option <code class="docutils literal notranslate"><span class="pre">config['reset_hysteresis']</span></code><a class="headerlink" href="#option-config-reset-hysteresis" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-portability admonition">
+<p class="admonition-title">Portability</p>
+<p>This option is present only in AS-series devices.</p>
+</div>
+<p>This option configures the <a class="reference internal" href="options/power.html#reset-hysteresis"><span class="std std-ref">behavior of the power-on reset circuitry</span></a> when V<sub>CC</sub> is close to V<sub>RST</sub>.</p>
+</div>
+</div>
+<div class="section" id="node-device-user">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['user']</span></code><a class="headerlink" href="#node-device-user" title="Permalink to this headline">¶</a></h2>
+<p>This node is an array of user signature byte specifications.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">user_byte</span></code> in <code class="docutils literal notranslate"><span class="pre">device['user']</span></code>:</p>
+<div class="section" id="option-user-byte">
+<h3>Option <code class="docutils literal notranslate"><span class="pre">user_byte</span></code><a class="headerlink" href="#option-user-byte" title="Permalink to this headline">¶</a></h3>
+<p>This option provides one byte (out of two) in the “user electronic signature” register accessible via JTAG (<a class="reference internal" href="jtag/as.html#flowas-read-ues"><span class="std std-ref">ATF1502AS</span></a>, <span class="xref std std-ref">ATF1502BE</span>). Unlike with every other option, the values <code class="docutils literal notranslate"><span class="pre">bit0</span></code>..<code class="docutils literal notranslate"><span class="pre">bit7</span></code> form a bit field rather than being mutually exclusive.</p>
+</div>
+</div>
+<div class="section" id="node-device-ranges">
+<h2>Node <code class="docutils literal notranslate"><span class="pre">device['ranges']</span></code><a class="headerlink" href="#node-device-ranges" title="Permalink to this headline">¶</a></h2>
+<p>In ATF15xx fuse maps, fuses are mostly grouped into contiguous ranges based on their function. This node enumerates the known fuse ranges. These ranges are primarily useful to the fuzzing machinery itself.</p>
+<p>Let <code class="docutils literal notranslate"><span class="pre">ranges</span></code> be <code class="docutils literal notranslate"><span class="pre">device['ranges']</span></code>:</p>
+<div class="section" id="range-ranges-pterms">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['pterms']</span></code><a class="headerlink" href="#range-ranges-pterms" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by product term fuses. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-macrocells">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['macrocells']</span></code><a class="headerlink" href="#range-ranges-macrocells" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by macrocell options. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-uim-muxes">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['uim_muxes']</span></code><a class="headerlink" href="#range-ranges-uim-muxes" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by interconnect muxes. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-goe-muxes">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['goe_muxes']</span></code><a class="headerlink" href="#range-ranges-goe-muxes" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by global output enable muxes. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-config">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['config']</span></code><a class="headerlink" href="#range-ranges-config" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by global clock muxes, global network inverters, special function options, pin termination options, and other device-wide configuration options. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-user">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['user']</span></code><a class="headerlink" href="#range-ranges-user" title="Permalink to this headline">¶</a></h3>
+<p>This range is occupied by user signature fuses. It is only useful to the fuzzing machinery itself.</p>
+</div>
+<div class="section" id="range-ranges-reserved">
+<h3>Range <code class="docutils literal notranslate"><span class="pre">ranges['reserved']</span></code><a class="headerlink" href="#range-ranges-reserved" title="Permalink to this headline">¶</a></h3>
+<p>This range is reserved. All fuses in this range must be set to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</div>
 </div>
 </div>
 

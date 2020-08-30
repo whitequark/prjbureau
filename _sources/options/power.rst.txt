@@ -1,7 +1,7 @@
 Power control options
 #####################
 
-This section describes global device options related to power management.
+This document describes global device options related to power management.
 
 .. _pd1_pin_func:
 .. _pd2_pin_func:

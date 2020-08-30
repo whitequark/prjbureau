@@ -100,7 +100,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="program.html">Programming options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">Database explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Command-line tools</a></li>
@@ -173,10 +173,10 @@
             
   <div class="section" id="power-control-options">
 <h1>Power control options<a class="headerlink" href="#power-control-options" title="Permalink to this headline">¶</a></h1>
-<p>This section describes global device options related to power management.</p>
+<p>This document describes global device options related to power management.</p>
 <div class="section" id="pdx-pin-multiplexing">
 <span id="pd2-pin-func"></span><span id="pd1-pin-func"></span><h2>PDx pin multiplexing<a class="headerlink" href="#pdx-pin-multiplexing" title="Permalink to this headline">¶</a></h2>
-<p>ATF15xx CPLDs do not have dedicated power gating pins. Instead, the two power gating signals, <code class="docutils literal notranslate"><span class="pre">PD1</span></code> and <code class="docutils literal notranslate"><span class="pre">PD2</span></code>, are multiplexed with normal macrocell I/O signals. Setting the device configuration options <code class="xref std std-fuse docutils literal notranslate"><span class="pre">pd1_pin_func</span></code> or <code class="xref std std-fuse docutils literal notranslate"><span class="pre">pd2_pin_func</span></code> to <code class="docutils literal notranslate"><span class="pre">pd</span></code> selects the power gating special function, leaving the macrocell buried; setting it to <code class="docutils literal notranslate"><span class="pre">user</span></code> selects the regular function.</p>
+<p>ATF15xx CPLDs do not have dedicated power gating pins. Instead, the two power gating signals, <code class="docutils literal notranslate"><span class="pre">PD1</span></code> and <code class="docutils literal notranslate"><span class="pre">PD2</span></code>, are multiplexed with normal macrocell I/O signals. Setting the device configuration options <a class="reference internal" href="../schema.html#std-fuse-pd1_pin_func"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">pd1_pin_func</span></code></a> or <a class="reference internal" href="../schema.html#std-fuse-pd2_pin_func"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">pd2_pin_func</span></code></a> to <code class="docutils literal notranslate"><span class="pre">pd</span></code> selects the power gating special function, leaving the macrocell buried; setting it to <code class="docutils literal notranslate"><span class="pre">user</span></code> selects the regular function.</p>
 <p>Aside from reducing power consumption, asserting either of the power gating inputs latches and holds all internal and external signals, effectively freezing the device state.</p>
 </div>
 <div class="section" id="input-transition-detection">
@@ -185,7 +185,7 @@
 <p class="admonition-title">Portability</p>
 <p>This option is present only in AS-series devices, and operational only in devices with an L suffix.</p>
 </div>
-<p>ATF15xxAS CPLDs can automatically enter and leave a low-power standby mode, determined by the frequency of transitions on one or more of the <strong>CLKx</strong> pins. In this low-power mode, the device has reduced performance, but otherwise operates normally. Setting the pin configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">pins[CLK1,CLK2,CLK3].standby_wakeup</span></code> to <code class="docutils literal notranslate"><span class="pre">on</span></code> causes the device to leave the standby mode when transitions occur sufficiently often on the corresponding <strong>CLKx</strong> pin; setting it to <code class="docutils literal notranslate"><span class="pre">off</span></code> causes transitions to be ignored on that pin. When running at full power, device performance increases to match the next lowest speed grade.</p>
+<p>ATF15xxAS CPLDs can automatically enter and leave a low-power standby mode, determined by the frequency of transitions on one or more of the <strong>CLKx</strong> pins. In this low-power mode, the device has reduced performance, but otherwise operates normally. Setting the pin configuration option <a class="reference internal" href="../schema.html#std-fuse-standby_wakeup"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">pins[CLK1,CLK2,CLK3].standby_wakeup</span></code></a> to <code class="docutils literal notranslate"><span class="pre">on</span></code> causes the device to leave the standby mode when transitions occur sufficiently often on the corresponding <strong>CLKx</strong> pin; setting it to <code class="docutils literal notranslate"><span class="pre">off</span></code> causes transitions to be ignored on that pin. When running at full power, device performance increases to match the next lowest speed grade.</p>
 </div>
 <div class="section" id="reset-hysteresis">
 <span id="id1"></span><h2>Reset hysteresis<a class="headerlink" href="#reset-hysteresis" title="Permalink to this headline">¶</a></h2>
@@ -193,7 +193,7 @@
 <p class="admonition-title">Portability</p>
 <p>This option is present only in AS-series devices.</p>
 </div>
-<p>ATF15xxAS CPLDs may not reliably initialize the macrocell registers as a part of power-on reset if V<sub>CC</sub> stays too close to the reset level V<sub>RSTH</sub>. Setting the device configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">reset_hysteresis</span></code> to <code class="docutils literal notranslate"><span class="pre">large</span></code> ensures reliable initialization, but requires V<sub>CC</sub> to shut off completely if it falls below V<sub>RSTL</sub>; setting it to <code class="docutils literal notranslate"><span class="pre">small</span></code> reverses the tradeoff.</p>
+<p>ATF15xxAS CPLDs may not reliably initialize the macrocell registers as a part of power-on reset if V<sub>CC</sub> stays too close to the reset level V<sub>RSTH</sub>. Setting the device configuration option <a class="reference internal" href="../schema.html#std-fuse-reset_hysteresis"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">reset_hysteresis</span></code></a> to <code class="docutils literal notranslate"><span class="pre">large</span></code> ensures reliable initialization, but requires V<sub>CC</sub> to shut off completely if it falls below V<sub>RSTL</sub>; setting it to <code class="docutils literal notranslate"><span class="pre">small</span></code> reverses the tradeoff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The values of V<sub>RSTH</sub> and V<sub>RSTL</sub> are not definitively known. For 3.3 V devices, it is likely that V<sub>RSTH</sub>/V<sub>RSTL</sub> are 3.0/2.0 V. For 5 V devices, it is likely that V<sub>RSTH</sub> is 4.0 V.</p>
@@ -205,7 +205,7 @@
 <p class="admonition-title">Portability</p>
 <p>This option is present only in AS-series devices.</p>
 </div>
-<p>ATF15xxAS CPLDs provide a mechanism to reduce power consumed by a macrocell without completely disabling it. Setting the macrocell configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">low_power</span></code> to <code class="docutils literal notranslate"><span class="pre">on</span></code> reduces power by approx. 50% and performance by approx. 80%; setting it to <code class="docutils literal notranslate"><span class="pre">off</span></code> results in nominal power and performance.</p>
+<p>ATF15xxAS CPLDs provide a mechanism to reduce power consumed by a macrocell without completely disabling it. Setting the macrocell configuration option <a class="reference internal" href="../schema.html#std-fuse-low_power"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">low_power</span></code></a> to <code class="docutils literal notranslate"><span class="pre">on</span></code> reduces power by approx. 50% and performance by approx. 80%; setting it to <code class="docutils literal notranslate"><span class="pre">off</span></code> results in nominal power and performance.</p>
 </div>
 <div class="section" id="gating-product-term-power">
 <span id="pt-power"></span><h2>Gating product term power<a class="headerlink" href="#gating-product-term-power" title="Permalink to this headline">¶</a></h2>
@@ -213,7 +213,7 @@
 <p class="admonition-title">Portability</p>
 <p>This option is present only in AS-series devices.</p>
 </div>
-<p>Product terms of ATF15xxAS CPLDs consume significant active power when their inputs are switching, which is especially undesirable for unused macrocells (or macrocells that do not use product terms, e.g. driving an output with a fixed level). Setting the macrocell configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">pt_power</span></code> to <code class="docutils literal notranslate"><span class="pre">off</span></code> disables product term circuits and reduces power consumption; setting it to <code class="docutils literal notranslate"><span class="pre">on</span></code> makes it possible to use product terms to drive the macrocell.</p>
+<p>Product terms of ATF15xxAS CPLDs consume significant active power when their inputs are switching, which is especially undesirable for unused macrocells (or macrocells that do not use product terms, e.g. driving an output with a fixed level). Setting the macrocell configuration option <a class="reference internal" href="../schema.html#std-fuse-pt_power"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">pt_power</span></code></a> to <code class="docutils literal notranslate"><span class="pre">off</span></code> disables product term circuits and reduces power consumption; setting it to <code class="docutils literal notranslate"><span class="pre">on</span></code> makes it possible to use product terms to drive the macrocell.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When product term power is gated, every product term fuse must be set to <code class="docutils literal notranslate"><span class="pre">0</span></code>; then and only then the output of the product term stays low.</p>

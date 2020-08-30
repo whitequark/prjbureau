@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Database schema (WIP)" href="../schema.html" />
+    <link rel="next" title="Database schema" href="../schema.html" />
     <link rel="prev" title="Power control options" href="power.html" /> 
 </head>
 
@@ -98,7 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#arming-switch">Arming switch</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schema.html">Database schema</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../explore.html">Database explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jtag/index.html">JTAG programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Command-line tools</a></li>
@@ -171,21 +171,21 @@
             
   <div class="section" id="programming-options">
 <h1>Programming options<a class="headerlink" href="#programming-options" title="Permalink to this headline">¶</a></h1>
-<p>This section describes global device options related to Flash programming.</p>
+<p>This document describes global device options related to Flash programming.</p>
 <div class="section" id="jtag-pin-multiplexing">
 <span id="jtag-pin-func"></span><h2>JTAG pin multiplexing<a class="headerlink" href="#jtag-pin-multiplexing" title="Permalink to this headline">¶</a></h2>
-<p>ATF15xx CPLDs do not have dedicated JTAG pins. Instead, the four JTAG signals, <code class="docutils literal notranslate"><span class="pre">TMS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCK</span></code>, <code class="docutils literal notranslate"><span class="pre">TDI</span></code>, and <code class="docutils literal notranslate"><span class="pre">TDO</span></code>, are multiplexed with normal macrocell I/O signals. Setting the device configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">jtag_pin_func</span></code> to <code class="docutils literal notranslate"><span class="pre">jtag</span></code> (or erasing the device) selects the JTAG special function, leaving the macrocell buried; setting it to <code class="docutils literal notranslate"><span class="pre">user</span></code> selects the regular function. This option carries two inherent hazards.</p>
+<p>ATF15xx CPLDs do not have dedicated JTAG pins. Instead, the four JTAG signals, <code class="docutils literal notranslate"><span class="pre">TMS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCK</span></code>, <code class="docutils literal notranslate"><span class="pre">TDI</span></code>, and <code class="docutils literal notranslate"><span class="pre">TDO</span></code>, are multiplexed with normal macrocell I/O signals. Setting the device configuration option <a class="reference internal" href="../schema.html#std-fuse-jtag_pin_func"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">jtag_pin_func</span></code></a> to <code class="docutils literal notranslate"><span class="pre">jtag</span></code> (or erasing the device) selects the JTAG special function, leaving the macrocell buried; setting it to <code class="docutils literal notranslate"><span class="pre">user</span></code> selects the regular function. This option carries two inherent hazards.</p>
 <p>First, the option takes effect immediately once it is programmed. Because of this, the fuse corresponding to this option must be programmed during the very last operation, or the device could never be fully programmed. To verify the device, a fuse map altered to exclude this option must be programmed first, the altered map must be verified, and then the option must be programmed in isolation by taking advantage of the wired-AND nature of the Flash memory.</p>
-<p>Second, the option takes effect immediately after power-up, preventing any further programming of the device by ordinary means. Although not (usefully) documented, this option can be overridden; applying +12 V to the <strong>OE1</strong> pin selects the JTAG special function regardless of the state of the <code class="xref std std-fuse docutils literal notranslate"><span class="pre">jtag_pin_func</span></code> option. Similarly to the fuse itself, the fuse override is not latched, and is active only while the high voltage is applied. High voltage applied to <strong>OE1</strong> does not serve any purpose beyond overriding the JTAG configuration option.</p>
+<p>Second, the option takes effect immediately after power-up, preventing any further programming of the device by ordinary means. Although not (usefully) documented, this option can be overridden; applying +12 V to the <strong>OE1</strong> pin selects the JTAG special function regardless of the state of the <a class="reference internal" href="../schema.html#std-fuse-jtag_pin_func"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">jtag_pin_func</span></code></a> option. Similarly to the fuse itself, the fuse override is not latched, and is active only while the high voltage is applied. High voltage applied to <strong>OE1</strong> does not serve any purpose beyond overriding the JTAG configuration option.</p>
 </div>
 <div class="section" id="read-protection">
 <span id="id1"></span><h2>Read protection<a class="headerlink" href="#read-protection" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to prevent the fuses programmed into the device from being read without disabling the JTAG interface by setting the device configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">read_protection</span></code> to <code class="docutils literal notranslate"><span class="pre">on</span></code>. The user signature fuses can still be read using a dedicated JTAG instruction.</p>
+<p>It is possible to prevent the fuses programmed into the device from being read without disabling the JTAG interface by setting the device configuration option <a class="reference internal" href="../schema.html#std-fuse-read_protection"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">read_protection</span></code></a> to <code class="docutils literal notranslate"><span class="pre">on</span></code>. The user signature fuses can still be read using a dedicated JTAG instruction.</p>
 <p>Similarly to the <a class="reference internal" href="#jtag-pin-func"><span class="std std-ref">pin multiplexing option</span></a>, the fuse corresponding to this option must be programmed during the very last operation.</p>
 </div>
 <div class="section" id="arming-switch">
 <span id="id2"></span><h2>Arming switch<a class="headerlink" href="#arming-switch" title="Permalink to this headline">¶</a></h2>
-<p>ATF15xx CPLDs include a feature that prevents partially programmed devices from erroneously driving its outputs during in-circuit programming. Setting the device configuration option <code class="xref std std-fuse docutils literal notranslate"><span class="pre">arming_switch</span></code> to <code class="docutils literal notranslate"><span class="pre">safe</span></code> (or erasing the device) disables all output drivers; setting it to <code class="docutils literal notranslate"><span class="pre">armed</span></code> enables regular operation.</p>
+<p>ATF15xx CPLDs include a feature that prevents partially programmed devices from erroneously driving its outputs during in-circuit programming. Setting the device configuration option <a class="reference internal" href="../schema.html#std-fuse-arming_switch"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">arming_switch</span></code></a> to <code class="docutils literal notranslate"><span class="pre">safe</span></code> (or erasing the device) disables all output drivers; setting it to <code class="docutils literal notranslate"><span class="pre">armed</span></code> enables regular operation.</p>
 <p>The fuse corresponding to this option must be programmed after every other fuse, but before the <a class="reference internal" href="#jtag-pin-func"><span class="std std-ref">pin multiplexing option</span></a> or the <a class="reference internal" href="#read-protection"><span class="std std-ref">read protection option</span></a>, since they are located in different Flash words.</p>
 </div>
 </div>
@@ -198,7 +198,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../schema.html" class="btn btn-neutral float-right" title="Database schema (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../schema.html" class="btn btn-neutral float-right" title="Database schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="power.html" class="btn btn-neutral float-left" title="Power control options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

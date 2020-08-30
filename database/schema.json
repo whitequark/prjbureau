@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://whitequark.github.io/prjbureau/database/schema.json",
+  "definitions": {
+    "fuse": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reference": {
+      "type": "string",
+      "pattern": "^[A-Z0-9_]+$"
+    },
+    "sequence": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/reference"}
+    },
+    "mapping": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Z0-9_]+$": {"$ref": "#/definitions/reference"}
+      },
+      "additionalProperties": false
+    },
+    "range": {
+      "type": "array",
+      "items": [
+        {"$ref": "#/definitions/fuse"},
+        {"$ref": "#/definitions/fuse"}
+      ],
+      "additionalItems": false
+    },
+    "xpoints": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Z0-9_]+$": {"$ref": "#/definitions/fuse"}
+      },
+      "additionalProperties": false
+    },
+    "option": {
+      "type": "object",
+      "properties": {
+        "fuses": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/fuse"},
+          "uniqueItems": true,
+          "additionalItems": false
+        },
+        "values": {
+          "type": "object",
+          "patternProperties": {
+            "^\\w+$": {"type": "integer"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "patternProperties": {
+    "^ATF15\\w+$": {
+      "type": "object",
+      "properties": {
+        "pins": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Z]+\\d+$": {
+              "type": "object",
+              "patternProperties": {
+                "^R|[CEM]\\d+$": {"$ref": "#/definitions/reference"}
+              },
+              "required": ["R", "C1", "C2", "E1"],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "specials": {
+          "type": "object",
+          "patternProperties": {
+            "^CLR|CLK[123]|OE[12]|TD[IO]|TMS|TCK|PD[12]|VREF[AB]$":
+              {"$ref": "#/definitions/reference"}
+          },
+          "required": ["CLR", "CLK1", "CLK2", "CLK3", "OE1", "OE2", "TDI", "TDO", "TMS", "TCK"],
+          "additionalProperties": false
+        },
+        "blocks": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Z]$": {
+              "type": "object",
+              "properties": {
+                "pterm_points": {"$ref": "#/definitions/xpoints"},
+                "macrocells": {"$ref": "#/definitions/sequence"},
+                "switches": {"$ref": "#/definitions/sequence"}
+              },
+              "required": [
+                "macrocells",
+                "pterm_points",
+                "switches"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "macrocells": {
+          "type": "object",
+          "patternProperties": {
+            "^MC[0-9]+$": {
+              "type": "object",
+              "properties": {
+                "block": {"$ref": "#/definitions/reference"},
+                "pad": {"$ref": "#/definitions/reference"},
+                "pterm_ranges": {
+                  "type": "object",
+                  "patternProperties": {
+                    "^PT[1-5]$": {"$ref": "#/definitions/range"}
+                  },
+                  "required": ["PT1", "PT2", "PT3", "PT4", "PT5"],
+                  "additionalProperties": false
+                },
+                "pt1_mux": {"$ref": "#/definitions/option"},
+                "pt2_mux": {"$ref": "#/definitions/option"},
+                "pt3_mux": {"$ref": "#/definitions/option"},
+                "gclr_mux": {"$ref": "#/definitions/option"},
+                "pt4_mux": {"$ref": "#/definitions/option"},
+                "pt4_func": {"$ref": "#/definitions/option"},
+                "gclk_mux": {"$ref": "#/definitions/option"},
+                "pt5_mux": {"$ref": "#/definitions/option"},
+                "pt5_func": {"$ref": "#/definitions/option"},
+                "xor_a_mux": {"$ref": "#/definitions/option"},
+                "xor_b_mux": {"$ref": "#/definitions/option"},
+                "cas_mux": {"$ref": "#/definitions/option"},
+                "xor_invert": {"$ref": "#/definitions/option"},
+                "d_mux": {"$ref": "#/definitions/option"},
+                "dfast_mux": {"$ref": "#/definitions/option"},
+                "storage": {"$ref": "#/definitions/option"},
+                "reset": {"$ref": "#/definitions/option"},
+                "fb_mux": {"$ref": "#/definitions/option"},
+                "o_mux": {"$ref": "#/definitions/option"},
+                "oe_mux": {"$ref": "#/definitions/option"},
+                "slew_rate": {"$ref": "#/definitions/option"},
+                "output_driver": {"$ref": "#/definitions/option"},
+                "pt_power": {"$ref": "#/definitions/option"},
+                "low_power": {"$ref": "#/definitions/option"},
+                "termination": {"$ref": "#/definitions/option"},
+                "hysteresis": {"$ref": "#/definitions/option"},
+                "io_standard": {"$ref": "#/definitions/option"}
+              },
+              "required": [
+                "block",
+                "pad",
+                "pterm_ranges",
+                "pt1_mux",
+                "pt2_mux",
+                "pt3_mux",
+                "gclr_mux",
+                "pt4_mux",
+                "pt4_func",
+                "gclk_mux",
+                "pt5_mux",
+                "pt5_func",
+                "xor_a_mux",
+                "xor_b_mux",
+                "cas_mux",
+                "xor_invert",
+                "d_mux",
+                "dfast_mux",
+                "storage",
+                "reset",
+                "fb_mux",
+                "o_mux",
+                "oe_mux",
+                "slew_rate",
+                "output_driver"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "switches": {
+          "type": "object",
+          "patternProperties": {
+            "^UIM[0-9]+$": {
+              "type": "object",
+              "properties": {
+                "block": {"$ref": "#/definitions/reference"},
+                "mux": {"$ref": "#/definitions/option"}
+              },
+              "required": [
+                "block",
+                "mux"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "globals": {
+          "type": "object",
+          "properties": {
+            "GCLR": {
+              "type": "object",
+              "properties": {
+                "invert": {"$ref": "#/definitions/option"}
+              },
+              "required": [
+                "invert"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "patternProperties": {
+            "^GCLK[123]|GOE[1-6]$": {
+              "type": "object",
+              "properties": {
+                "invert": {"$ref": "#/definitions/option"},
+                "mux": {"$ref": "#/definitions/option"}
+              },
+              "required": [
+                "invert",
+                "mux"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "config": {
+          "type": "object",
+          "properties": {
+            "pins": {
+              "type": "object",
+              "patternProperties": {
+                "^CLR|CLK[123]|TMS|TDI$": {
+                  "type": "object",
+                  "properties": {
+                    "standby_wakeup": {"$ref": "#/definitions/option"},
+                    "termination": {"$ref": "#/definitions/option"},
+                    "hysteresis": {"$ref": "#/definitions/option"}
+                  }
+                }
+              },
+              "required": ["TMS", "TDI"],
+              "additionalProperties": false
+            },
+            "arming_switch": {"$ref": "#/definitions/option"},
+            "read_protection": {"$ref": "#/definitions/option"},
+            "jtag_pin_func": {"$ref": "#/definitions/option"},
+            "pd1_pin_func": {"$ref": "#/definitions/option"},
+            "pd2_pin_func": {"$ref": "#/definitions/option"},
+            "termination": {"$ref": "#/definitions/option"},
+            "reset_hysteresis": {"$ref": "#/definitions/option"}
+          },
+          "required": [
+            "pins",
+            "arming_switch",
+            "read_protection",
+            "jtag_pin_func",
+            "pd1_pin_func",
+            "pd2_pin_func"
+          ],
+          "additionalProperties": false
+        },
+        "user": {
+          "type": "array",
+          "items": [
+            {"$ref": "#/definitions/option"},
+            {"$ref": "#/definitions/option"}
+          ]
+        },
+        "ranges": {
+          "type": "object",
+          "properties": {
+            "pterms": {"$ref": "#/definitions/range"},
+            "macrocells": {"$ref": "#/definitions/range"},
+            "uim_muxes": {"$ref": "#/definitions/range"},
+            "goe_muxes": {"$ref": "#/definitions/range"},
+            "config": {"$ref": "#/definitions/range"},
+            "user": {"$ref": "#/definitions/range"},
+            "reserved": {"$ref": "#/definitions/range"}
+          },
+          "required": [
+            "pterms",
+            "macrocells",
+            "uim_muxes",
+            "goe_muxes",
+            "config",
+            "user",
+            "reserved"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "pins",
+        "specials",
+        "blocks",
+        "macrocells",
+        "switches",
+        "globals",
+        "config",
+        "user",
+        "ranges"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
