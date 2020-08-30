@@ -60,9 +60,9 @@ On ATF15xx CPLDs, every macrocell output buffer features individual slew rate co
 Input hysteresis
 ================
 
-.. note::
+.. admonition:: Portability
 
-   This option is present only on BE-series devices.
+   This option is present only in BE-series devices.
 
 On ATF15xxBE devices, every macrocell input/output pin and the four global input pins :pin:`CLR`, :pin:`CLK1`, :pin:`CLK2`, :pin:`OE1` can be configured with or without :wiki:`hysteresis`. On these devices, setting the configuration options :fuse:`macrocells[].hysteresis <macrocell-hysteresis>` or :fuse:`pins[].hysteresis <special-hysteresis>` to ``on`` selects the :wiki:`Schmitt trigger` input buffer; setting them to ``off`` selects the simple CMOS input buffer.
 
@@ -71,9 +71,9 @@ On ATF15xxBE devices, every macrocell input/output pin and the four global input
 I/O standards
 =============
 
-.. note::
+.. admonition:: Portability
 
-   This option is present only on BE-series devices with 64 macrocells or more.
+   This option is present only in BE-series devices with 64 macrocells or more.
 
 Normally, ATF15xx CPLD inputs and outputs follow TTL/LVTTL\ [#ttl]_ or CMOS/LVCMOS\ [#cmos]_ signaling standards. However, BE-series devices starting with ATF1504BE also support SSTL signaling standards.
 
