@@ -34,9 +34,10 @@ with database.transact() as db:
 
             # According to the datasheet, "At [power on reset], all registers will be initialized,
             # and the state of each output will depend on the polarity of its buffer." Indeed,
-            # the o_invert bit controls the power-up state of the flip-flop as well. Interestingly,
-            # it does not affect AR or AS inputs (AR always resets FF to 0, AS to 1), does not
-            # affect either of the fast FF input paths, and affects output of buried FFs.
+            # the XOR term inversion fuse controls the power-up state of the flip-flop as well.
+            # Interestingly, it does not affect AR or AS inputs (AR always resets FF to 0,
+            # AS to 1), does not affect either of the fast FF input paths, and affects output
+            # of buried FFs.
             #
             # It seems more accurate to say this bit controls reset value and combinatorial term
             # polarity rather than output buffer polarity; it appears to be an inverter placed
@@ -44,6 +45,8 @@ with database.transact() as db:
 
             # https://www.dataman.com/media/datasheet/Atmel/ATF15xxAE_doc2398.pdf
             macrocell.update({
-                'o_invert':
-                    bitdiff.describe(1, {'off': f_p, 'on': f_n})
+                'xor_invert':
+                    bitdiff.describe(1, {'off': f_p, 'on': f_n}),
+                'reset':
+                    bitdiff.describe(1, {'GND': f_p, 'VCC': f_n}),
             })

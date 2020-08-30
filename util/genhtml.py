@@ -227,12 +227,13 @@ macrocell_options = {
     "xor_a_mux":        "M",
     "xor_b_mux":        "M",
     "cas_mux":          "M",
+    "xor_invert":       "M",
     "d_mux":            "M",
     "dfast_mux":        "M",
     "storage":          "FF",
+    "reset":            "M",
     "fb_mux":           "M",
     "o_mux":            "M",
-    "o_invert":         "M",
     "oe_mux":           "M",
     "slew_rate":        "IO",
     "output_driver":    "IO",
@@ -246,6 +247,7 @@ macrocell_options = {
 macrocell_shared_options = {
     "dfast_mux",
     "cas_mux",
+    "reset",
 }
 
 

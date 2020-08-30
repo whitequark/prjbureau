@@ -533,13 +533,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15409
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15409
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -776,13 +785,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15410
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -1019,13 +1037,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15413
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15413
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -1262,13 +1289,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15414
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15414
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -1505,13 +1541,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15417
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15417
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -1748,13 +1793,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15418
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15418
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -1991,13 +2045,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15421
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15421
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -2234,13 +2297,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15422
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15422
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -2477,13 +2549,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15425
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15425
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -2720,13 +2801,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15426
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15426
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -2963,13 +3053,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15429
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15429
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -3206,13 +3305,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15430
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15430
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -3449,13 +3557,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15433
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15433
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -3692,13 +3809,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15434
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15434
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -3935,13 +4061,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15437
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -4178,13 +4313,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15438
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15438
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -4421,13 +4565,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15889
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15889
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -4664,13 +4817,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15890
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -4907,13 +5069,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15893
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15893
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -5150,13 +5321,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15894
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15894
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -5393,13 +5573,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15897
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15897
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -5636,13 +5825,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15898
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15898
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -5879,13 +6077,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15901
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15901
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -6122,13 +6329,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15902
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15902
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -6365,13 +6581,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15905
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15905
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -6608,13 +6833,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15906
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15906
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -6851,13 +7085,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15909
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15909
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -7094,13 +7337,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15910
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15910
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -7337,13 +7589,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15913
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15913
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -7580,13 +7841,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15914
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15914
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -7823,13 +8093,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15917
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -8066,13 +8345,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15918
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15918
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -10776,13 +11064,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15788
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15788
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -11021,13 +11318,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15761
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15761
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -11266,13 +11572,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15734
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15734
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -11511,13 +11826,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15707
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15707
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -11756,13 +12080,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15680
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15680
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -12001,13 +12334,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15653
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15653
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -12246,13 +12588,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15626
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15626
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -12491,13 +12842,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15599
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15599
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -12736,13 +13096,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15572
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15572
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -12981,13 +13350,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15545
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15545
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -13226,13 +13604,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15518
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15518
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -13471,13 +13858,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15491
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15491
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -13716,13 +14112,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15464
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15464
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -13961,13 +14366,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15437
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15437
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -14206,13 +14620,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15410
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15410
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -14451,13 +14874,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15383
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15383
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -14696,13 +15128,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16268
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16268
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -14941,13 +15382,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16241
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16241
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -15186,13 +15636,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16214
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16214
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -15431,13 +15890,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16187
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16187
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -15676,13 +16144,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16160
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16160
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -15921,13 +16398,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16133
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16133
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -16166,13 +16652,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16106
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16106
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -16411,13 +16906,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16079
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16079
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -16656,13 +17160,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16052
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16052
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -16901,13 +17414,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             16025
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            16025
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -17146,13 +17668,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15998
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15998
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -17391,13 +17922,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15971
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15971
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -17636,13 +18176,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15944
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15944
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -17881,13 +18430,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15917
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15917
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -18126,13 +18684,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15890
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15890
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -18371,13 +18938,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             15863
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            15863
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -21431,13 +22007,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30798
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30798
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -21674,13 +22259,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30797
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30797
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -21917,13 +22511,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30794
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30794
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -22160,13 +22763,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30793
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30793
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -22403,13 +23015,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30790
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30790
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -22646,13 +23267,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30789
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30789
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -22889,13 +23519,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30786
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30786
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -23132,13 +23771,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30785
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30785
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -23375,13 +24023,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30782
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30782
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -23618,13 +24275,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30781
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30781
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -23861,13 +24527,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30778
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30778
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -24104,13 +24779,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30777
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30777
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -24347,13 +25031,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30774
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30774
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -24590,13 +25283,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30773
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30773
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -24833,13 +25535,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30770
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30770
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -25076,13 +25787,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30769
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30769
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -25319,13 +26039,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30878
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30878
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -25562,13 +26291,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30877
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30877
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -25805,13 +26543,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30874
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30874
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -26048,13 +26795,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30873
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30873
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -26291,13 +27047,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30870
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30870
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -26534,13 +27299,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30869
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30869
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -26777,13 +27551,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30866
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30866
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -27020,13 +27803,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30865
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30865
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -27263,13 +28055,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30862
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30862
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -27506,13 +28307,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30861
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30861
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -27749,13 +28559,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30858
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30858
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -27992,13 +28811,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30857
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30857
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -28235,13 +29063,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30854
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30854
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -28478,13 +29315,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30853
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30853
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -28721,13 +29567,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30850
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30850
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -28964,13 +29819,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30849
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30849
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -29207,13 +30071,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31838
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31838
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -29450,13 +30323,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31837
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31837
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -29693,13 +30575,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31834
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31834
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -29936,13 +30827,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31833
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31833
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -30179,13 +31079,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31830
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31830
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -30422,13 +31331,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31829
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31829
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -30665,13 +31583,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31826
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31826
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -30908,13 +31835,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31825
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31825
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -31151,13 +32087,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31822
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31822
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -31394,13 +32339,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31821
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31821
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -31637,13 +32591,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31818
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31818
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -31880,13 +32843,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31817
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31817
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -32123,13 +33095,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31814
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31814
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -32366,13 +33347,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31813
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31813
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "pt1_mux": {
@@ -32565,13 +33555,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31810
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31810
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -32808,13 +33807,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31809
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31809
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -33051,13 +34059,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31758
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31758
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -33294,13 +34311,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31757
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31757
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -33537,13 +34563,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31754
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31754
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -33780,13 +34815,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31753
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31753
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -34023,13 +35067,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31750
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31750
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -34266,13 +35319,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31749
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31749
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -34509,13 +35571,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31746
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31746
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -34752,13 +35823,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31745
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31745
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -34995,13 +36075,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31742
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31742
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -35238,13 +36327,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31741
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31741
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -35481,13 +36579,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31738
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31738
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -35724,13 +36831,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31737
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31737
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -35967,13 +37083,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31734
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31734
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -36210,13 +37335,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31733
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31733
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -36453,13 +37587,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31730
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31730
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -36696,13 +37839,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31729
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31729
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -42929,13 +44081,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32588
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32588
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -43185,13 +44346,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32561
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32561
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -43432,13 +44602,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32534
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32534
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -43688,13 +44867,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32507
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32507
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -43944,13 +45132,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32480
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32480
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -44200,13 +45397,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32453
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32453
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -44456,13 +45662,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32426
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32426
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -44712,13 +45927,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32399
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32399
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -44968,13 +46192,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32372
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32372
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -45224,13 +46457,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32345
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32345
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -45480,13 +46722,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32318
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32318
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -45736,13 +46987,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32291
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32291
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -45992,13 +47252,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32264
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32264
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -46248,13 +47517,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32237
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32237
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -46504,13 +47782,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32210
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32210
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -46760,13 +48047,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32183
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32183
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -47016,13 +48312,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31148
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31148
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -47272,13 +48577,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31121
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31121
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -47528,13 +48842,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31094
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31094
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -47784,13 +49107,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31067
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31067
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -48040,13 +49372,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31040
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31040
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -48296,13 +49637,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31013
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31013
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -48552,13 +49902,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30986
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30986
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -48808,13 +50167,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30959
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30959
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -49064,13 +50432,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30932
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30932
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -49320,13 +50697,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30905
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30905
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -49576,13 +50962,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30878
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30878
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -49832,13 +51227,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30851
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30851
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -50088,13 +51492,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30824
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30824
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -50344,13 +51757,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30797
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30797
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -50600,13 +52022,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30770
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30770
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -50856,13 +52287,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             30743
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            30743
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -51112,13 +52552,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31223
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31223
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -51368,13 +52817,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31250
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31250
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -51624,13 +53082,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31277
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31277
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -51880,13 +53347,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31304
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31304
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -52136,13 +53612,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31331
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31331
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -52392,13 +53877,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31358
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31358
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -52648,13 +54142,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31385
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31385
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -52904,13 +54407,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31412
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31412
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -53160,13 +54672,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31439
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31439
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -53416,13 +54937,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31466
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31466
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -53672,13 +55202,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31493
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31493
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -53928,13 +55467,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31520
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31520
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -54184,13 +55732,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31547
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31547
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -54431,13 +55988,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31574
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31574
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "pt1_mux": {
@@ -54643,13 +56209,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31601
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31601
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -54899,13 +56474,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31628
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31628
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -55155,13 +56739,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31703
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31703
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -55411,13 +57004,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31730
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31730
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -55667,13 +57269,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31757
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31757
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -55923,13 +57534,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31784
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31784
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -56179,13 +57799,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31811
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31811
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -56435,13 +58064,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31838
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31838
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -56691,13 +58329,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31865
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31865
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -56947,13 +58594,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31892
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31892
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -57203,13 +58859,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31919
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31919
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -57459,13 +59124,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31946
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31946
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -57715,13 +59389,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             31973
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            31973
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -57971,13 +59654,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32000
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32000
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -58227,13 +59919,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32027
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32027
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -58483,13 +60184,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32054
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32054
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -58739,13 +60449,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32081
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32081
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
@@ -58995,13 +60714,22 @@
             "sync": 0
           }
         },
-        "o_invert": {
+        "xor_invert": {
           "fuses": [
             32108
           ],
           "values": {
             "off": 0,
             "on": 1
+          }
+        },
+        "reset": {
+          "fuses": [
+            32108
+          ],
+          "values": {
+            "GND": 0,
+            "VCC": 1
           }
         },
         "oe_mux": {
