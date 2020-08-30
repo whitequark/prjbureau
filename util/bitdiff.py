@@ -26,7 +26,7 @@ def describe(expected, variants, *, scope=None):
 
     values = {
         key: sum(variant[fuse] << n for n, fuse in enumerate(fuses))
-        for key, variant in variants.items()
+        for key, variant in sorted(variants.items())
     }
     assert len(set(values.values())) == len(values.values()), \
            f"values not unique: {values}"
