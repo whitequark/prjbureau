@@ -378,22 +378,22 @@
             96
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15648
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15567
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -484,7 +484,7 @@
             15489
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -621,22 +621,22 @@
             960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15651
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15564
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -727,7 +727,7 @@
             15490
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -864,22 +864,22 @@
             1056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15652
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15563
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -970,7 +970,7 @@
             15493
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -1107,22 +1107,22 @@
             1920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15655
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15560
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -1213,7 +1213,7 @@
             15494
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -1350,22 +1350,22 @@
             2016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15656
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15559
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -1456,7 +1456,7 @@
             15497
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -1593,22 +1593,22 @@
             2880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15659
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15556
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -1699,7 +1699,7 @@
             15498
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -1836,22 +1836,22 @@
             2976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15660
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15555
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -1942,7 +1942,7 @@
             15501
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -2079,22 +2079,22 @@
             3840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15663
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15552
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -2185,7 +2185,7 @@
             15502
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -2322,22 +2322,22 @@
             3936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15664
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15551
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -2428,7 +2428,7 @@
             15505
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -2565,22 +2565,22 @@
             4800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15667
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15548
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -2671,7 +2671,7 @@
             15506
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -2808,22 +2808,22 @@
             4896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15668
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15547
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -2914,7 +2914,7 @@
             15509
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -3051,22 +3051,22 @@
             5760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15671
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15544
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -3157,7 +3157,7 @@
             15510
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -3294,22 +3294,22 @@
             5856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15672
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15543
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -3400,7 +3400,7 @@
             15513
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -3537,22 +3537,22 @@
             6720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15675
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15540
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -3643,7 +3643,7 @@
             15514
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -3780,22 +3780,22 @@
             6816
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15676
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15539
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -3886,7 +3886,7 @@
             15517
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -4023,22 +4023,22 @@
             7680
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15679
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15536
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -4129,7 +4129,7 @@
             15518
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -4266,22 +4266,22 @@
             7776
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16128
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16047
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -4372,7 +4372,7 @@
             15969
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -4509,22 +4509,22 @@
             8640
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16131
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16044
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -4615,7 +4615,7 @@
             15970
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -4752,22 +4752,22 @@
             8736
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16132
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16043
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -4858,7 +4858,7 @@
             15973
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -4995,22 +4995,22 @@
             9600
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16135
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16040
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -5101,7 +5101,7 @@
             15974
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -5238,22 +5238,22 @@
             9696
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16136
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16039
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -5344,7 +5344,7 @@
             15977
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -5481,22 +5481,22 @@
             10560
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16139
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16036
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -5587,7 +5587,7 @@
             15978
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -5724,22 +5724,22 @@
             10656
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16140
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16035
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -5830,7 +5830,7 @@
             15981
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -5967,22 +5967,22 @@
             11520
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16143
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16032
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -6073,7 +6073,7 @@
             15982
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -6210,22 +6210,22 @@
             11616
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16144
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16031
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -6316,7 +6316,7 @@
             15985
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -6453,22 +6453,22 @@
             12480
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16147
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16028
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -6559,7 +6559,7 @@
             15986
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -6696,22 +6696,22 @@
             12576
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16148
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16027
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -6802,7 +6802,7 @@
             15989
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -6939,22 +6939,22 @@
             13440
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16151
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16024
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -7045,7 +7045,7 @@
             15990
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -7182,22 +7182,22 @@
             13536
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16152
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16023
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -7288,7 +7288,7 @@
             15993
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -7425,22 +7425,22 @@
             14400
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16155
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16020
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -7531,7 +7531,7 @@
             15994
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -7668,22 +7668,22 @@
             14496
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16156
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16019
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -7774,7 +7774,7 @@
             15997
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -7911,22 +7911,22 @@
             15360
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16159
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16016
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -8017,7 +8017,7 @@
             15998
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -10619,22 +10619,22 @@
             96
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15767
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15768
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -10648,7 +10648,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15769
           ],
@@ -10727,7 +10727,7 @@
             15789
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -10864,22 +10864,22 @@
             960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15740
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15741
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -10893,7 +10893,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15742
           ],
@@ -10972,7 +10972,7 @@
             15762
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -11109,22 +11109,22 @@
             1056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15713
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15714
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -11138,7 +11138,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15715
           ],
@@ -11217,7 +11217,7 @@
             15735
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -11354,22 +11354,22 @@
             1920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15686
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15687
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -11383,7 +11383,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15688
           ],
@@ -11462,7 +11462,7 @@
             15708
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -11599,22 +11599,22 @@
             2016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15659
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15660
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -11628,7 +11628,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15661
           ],
@@ -11707,7 +11707,7 @@
             15681
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -11844,22 +11844,22 @@
             2880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15632
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15633
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -11873,7 +11873,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15634
           ],
@@ -11952,7 +11952,7 @@
             15654
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -12089,22 +12089,22 @@
             2976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15605
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15606
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -12118,7 +12118,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15607
           ],
@@ -12197,7 +12197,7 @@
             15627
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -12334,22 +12334,22 @@
             3840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15578
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15579
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -12363,7 +12363,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15580
           ],
@@ -12442,7 +12442,7 @@
             15600
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -12579,22 +12579,22 @@
             3936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15551
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15552
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -12608,7 +12608,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15553
           ],
@@ -12687,7 +12687,7 @@
             15573
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -12824,22 +12824,22 @@
             4800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15524
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15525
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -12853,7 +12853,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15526
           ],
@@ -12932,7 +12932,7 @@
             15546
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -13069,22 +13069,22 @@
             4896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15497
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15498
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -13098,7 +13098,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15499
           ],
@@ -13177,7 +13177,7 @@
             15519
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -13314,22 +13314,22 @@
             5760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15470
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15471
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -13343,7 +13343,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15472
           ],
@@ -13422,7 +13422,7 @@
             15492
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -13559,22 +13559,22 @@
             5856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15443
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15444
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -13588,7 +13588,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15445
           ],
@@ -13667,7 +13667,7 @@
             15465
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -13804,22 +13804,22 @@
             6720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15416
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15417
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -13833,7 +13833,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15418
           ],
@@ -13912,7 +13912,7 @@
             15438
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -14049,22 +14049,22 @@
             6816
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15389
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15390
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -14078,7 +14078,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15391
           ],
@@ -14157,7 +14157,7 @@
             15411
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -14294,22 +14294,22 @@
             7680
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15362
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15363
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -14323,7 +14323,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15364
           ],
@@ -14402,7 +14402,7 @@
             15384
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -14539,22 +14539,22 @@
             7776
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16247
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16248
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -14568,7 +14568,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16249
           ],
@@ -14647,7 +14647,7 @@
             16269
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -14784,22 +14784,22 @@
             8640
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16220
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16221
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -14813,7 +14813,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16222
           ],
@@ -14892,7 +14892,7 @@
             16242
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -15029,22 +15029,22 @@
             8736
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16193
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16194
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -15058,7 +15058,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16195
           ],
@@ -15137,7 +15137,7 @@
             16215
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -15274,22 +15274,22 @@
             9600
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16166
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16167
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -15303,7 +15303,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16168
           ],
@@ -15382,7 +15382,7 @@
             16188
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -15519,22 +15519,22 @@
             9696
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16139
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16140
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -15548,7 +15548,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16141
           ],
@@ -15627,7 +15627,7 @@
             16161
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -15764,22 +15764,22 @@
             10560
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16112
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16113
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -15793,7 +15793,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16114
           ],
@@ -15872,7 +15872,7 @@
             16134
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -16009,22 +16009,22 @@
             10656
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16085
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16086
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -16038,7 +16038,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16087
           ],
@@ -16117,7 +16117,7 @@
             16107
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -16254,22 +16254,22 @@
             11520
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16058
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16059
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -16283,7 +16283,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16060
           ],
@@ -16362,7 +16362,7 @@
             16080
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -16499,22 +16499,22 @@
             11616
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16031
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16032
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -16528,7 +16528,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16033
           ],
@@ -16607,7 +16607,7 @@
             16053
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -16744,22 +16744,22 @@
             12480
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             16004
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             16005
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -16773,7 +16773,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             16006
           ],
@@ -16852,7 +16852,7 @@
             16026
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -16989,22 +16989,22 @@
             12576
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15977
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15978
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -17018,7 +17018,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15979
           ],
@@ -17097,7 +17097,7 @@
             15999
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -17234,22 +17234,22 @@
             13440
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15950
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15951
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -17263,7 +17263,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15952
           ],
@@ -17342,7 +17342,7 @@
             15972
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -17479,22 +17479,22 @@
             13536
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15923
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15924
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -17508,7 +17508,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15925
           ],
@@ -17587,7 +17587,7 @@
             15945
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -17724,22 +17724,22 @@
             14400
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15896
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15897
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -17753,7 +17753,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15898
           ],
@@ -17832,7 +17832,7 @@
             15918
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -17969,22 +17969,22 @@
             14496
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15869
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15870
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -17998,7 +17998,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15871
           ],
@@ -18077,7 +18077,7 @@
             15891
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -18214,22 +18214,22 @@
             15360
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             15842
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             15843
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -18243,7 +18243,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             15844
           ],
@@ -18322,7 +18322,7 @@
             15864
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -20309,7 +20309,7 @@
           }
         },
         "CLK1": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               16769
             ],
@@ -20332,7 +20332,7 @@
           }
         },
         "CLK2": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               16770
             ],
@@ -20355,7 +20355,7 @@
           }
         },
         "OE1": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               16771
             ],
@@ -20378,7 +20378,7 @@
           }
         },
         "CLR": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               16772
             ],
@@ -21276,22 +21276,22 @@
             7680
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31279
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31056
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -21382,7 +21382,7 @@
             30958
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -21519,22 +21519,22 @@
             6816
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31276
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31059
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -21625,7 +21625,7 @@
             30957
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -21762,22 +21762,22 @@
             6720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31275
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31060
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -21868,7 +21868,7 @@
             30954
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -22005,22 +22005,22 @@
             5856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31272
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31063
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -22111,7 +22111,7 @@
             30953
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -22248,22 +22248,22 @@
             5760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31271
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31064
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -22354,7 +22354,7 @@
             30950
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -22491,22 +22491,22 @@
             4896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31268
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31067
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -22597,7 +22597,7 @@
             30949
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -22734,22 +22734,22 @@
             4800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31267
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31068
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -22840,7 +22840,7 @@
             30946
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -22977,22 +22977,22 @@
             3936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31264
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31071
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -23083,7 +23083,7 @@
             30945
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -23220,22 +23220,22 @@
             3840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31263
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31072
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -23326,7 +23326,7 @@
             30942
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -23463,22 +23463,22 @@
             2976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31260
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31075
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -23569,7 +23569,7 @@
             30941
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -23706,22 +23706,22 @@
             2880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31259
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31076
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -23812,7 +23812,7 @@
             30938
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -23949,22 +23949,22 @@
             2016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31256
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31079
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -24055,7 +24055,7 @@
             30937
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -24192,22 +24192,22 @@
             1920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31255
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31080
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -24298,7 +24298,7 @@
             30934
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -24435,22 +24435,22 @@
             1056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31252
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31083
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -24541,7 +24541,7 @@
             30933
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -24678,22 +24678,22 @@
             960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31251
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31084
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -24784,7 +24784,7 @@
             30930
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -24921,22 +24921,22 @@
             96
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31248
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31087
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -25027,7 +25027,7 @@
             30929
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -25164,22 +25164,22 @@
             15360
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31359
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31136
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -25270,7 +25270,7 @@
             31038
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -25407,22 +25407,22 @@
             14496
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31356
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31139
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -25513,7 +25513,7 @@
             31037
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -25650,22 +25650,22 @@
             14400
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31355
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31140
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -25756,7 +25756,7 @@
             31034
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -25893,22 +25893,22 @@
             13536
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31352
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31143
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -25999,7 +25999,7 @@
             31033
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -26136,22 +26136,22 @@
             13440
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31351
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31144
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -26242,7 +26242,7 @@
             31030
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -26379,22 +26379,22 @@
             12576
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31348
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31147
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -26485,7 +26485,7 @@
             31029
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -26622,22 +26622,22 @@
             12480
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31347
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31148
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -26728,7 +26728,7 @@
             31026
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -26865,22 +26865,22 @@
             11616
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31344
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31151
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -26971,7 +26971,7 @@
             31025
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -27108,22 +27108,22 @@
             11520
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31343
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31152
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -27214,7 +27214,7 @@
             31022
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -27351,22 +27351,22 @@
             10656
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31340
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31155
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -27457,7 +27457,7 @@
             31021
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -27594,22 +27594,22 @@
             10560
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31339
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31156
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -27700,7 +27700,7 @@
             31018
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -27837,22 +27837,22 @@
             9696
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31336
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31159
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -27943,7 +27943,7 @@
             31017
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -28080,22 +28080,22 @@
             9600
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31335
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31160
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -28186,7 +28186,7 @@
             31014
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -28323,22 +28323,22 @@
             8736
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31332
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31163
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -28429,7 +28429,7 @@
             31013
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -28566,22 +28566,22 @@
             8640
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31331
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31164
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -28672,7 +28672,7 @@
             31010
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -28809,22 +28809,22 @@
             7776
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31328
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31167
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -28915,7 +28915,7 @@
             31009
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -29052,22 +29052,22 @@
             30720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32319
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32096
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -29158,7 +29158,7 @@
             31998
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -29295,22 +29295,22 @@
             29856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32316
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32099
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -29401,7 +29401,7 @@
             31997
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -29538,22 +29538,22 @@
             29760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32315
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32100
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -29644,7 +29644,7 @@
             31994
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -29781,22 +29781,22 @@
             28896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32312
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32103
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -29887,7 +29887,7 @@
             31993
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -30024,22 +30024,22 @@
             28800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32311
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32104
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -30130,7 +30130,7 @@
             31990
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -30267,22 +30267,22 @@
             27936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32308
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32107
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -30373,7 +30373,7 @@
             31989
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -30510,22 +30510,22 @@
             27840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32307
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32108
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -30616,7 +30616,7 @@
             31986
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -30753,22 +30753,22 @@
             26976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32304
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32111
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -30859,7 +30859,7 @@
             31985
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -30996,22 +30996,22 @@
             26880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32303
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32112
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -31102,7 +31102,7 @@
             31982
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -31239,22 +31239,22 @@
             26016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32300
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32115
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -31345,7 +31345,7 @@
             31981
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -31482,22 +31482,22 @@
             25920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32299
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32116
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -31588,7 +31588,7 @@
             31978
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -31725,22 +31725,22 @@
             25056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32296
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32119
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -31831,7 +31831,7 @@
             31977
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -31968,22 +31968,22 @@
             24960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32295
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32120
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -32074,7 +32074,7 @@
             31974
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -32211,22 +32211,22 @@
             24096
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32292
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32123
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -32317,7 +32317,7 @@
             31973
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -32410,22 +32410,22 @@
             24000
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32291
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32124
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -32516,7 +32516,7 @@
             31970
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -32653,22 +32653,22 @@
             23136
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32288
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32127
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -32759,7 +32759,7 @@
             31969
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -32896,22 +32896,22 @@
             23040
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32239
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32016
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -33002,7 +33002,7 @@
             31918
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -33139,22 +33139,22 @@
             22176
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32236
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32019
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -33245,7 +33245,7 @@
             31917
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -33382,22 +33382,22 @@
             22080
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32235
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32020
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -33488,7 +33488,7 @@
             31914
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -33625,22 +33625,22 @@
             21216
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32232
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32023
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -33731,7 +33731,7 @@
             31913
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -33868,22 +33868,22 @@
             21120
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32231
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32024
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -33974,7 +33974,7 @@
             31910
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -34111,22 +34111,22 @@
             20256
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32228
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32027
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -34217,7 +34217,7 @@
             31909
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -34354,22 +34354,22 @@
             20160
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32227
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32028
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -34460,7 +34460,7 @@
             31906
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -34597,22 +34597,22 @@
             19296
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32224
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32031
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -34703,7 +34703,7 @@
             31905
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -34840,22 +34840,22 @@
             19200
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32223
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32032
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -34946,7 +34946,7 @@
             31902
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -35083,22 +35083,22 @@
             18336
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32220
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32035
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -35189,7 +35189,7 @@
             31901
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -35326,22 +35326,22 @@
             18240
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32219
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32036
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -35432,7 +35432,7 @@
             31898
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -35569,22 +35569,22 @@
             17376
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32216
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32039
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -35675,7 +35675,7 @@
             31897
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -35812,22 +35812,22 @@
             17280
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32215
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32040
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -35918,7 +35918,7 @@
             31894
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -36055,22 +36055,22 @@
             16416
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32212
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32043
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -36161,7 +36161,7 @@
             31893
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -36298,22 +36298,22 @@
             16320
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32211
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32044
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -36404,7 +36404,7 @@
             31890
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -36541,22 +36541,22 @@
             15456
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32208
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32047
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "low_power": {
@@ -36647,7 +36647,7 @@
             31889
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -42761,22 +42761,22 @@
             7680
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32567
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32568
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -42790,7 +42790,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32569
           ],
@@ -42804,7 +42804,7 @@
             32575
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -42880,7 +42880,7 @@
             32589
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -43017,22 +43017,22 @@
             6816
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32540
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32541
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -43046,7 +43046,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32542
           ],
@@ -43060,7 +43060,7 @@
             32548
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -43136,7 +43136,7 @@
             32562
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -43273,22 +43273,22 @@
             6720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32513
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32514
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -43302,7 +43302,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32515
           ],
@@ -43383,7 +43383,7 @@
             32535
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -43520,22 +43520,22 @@
             5856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32486
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32487
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -43549,7 +43549,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32488
           ],
@@ -43563,7 +43563,7 @@
             32494
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -43639,7 +43639,7 @@
             32508
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -43776,22 +43776,22 @@
             5760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32459
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32460
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -43805,7 +43805,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32461
           ],
@@ -43819,7 +43819,7 @@
             32467
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -43895,7 +43895,7 @@
             32481
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -44032,22 +44032,22 @@
             4896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32432
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32433
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -44061,7 +44061,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32434
           ],
@@ -44075,7 +44075,7 @@
             32440
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -44151,7 +44151,7 @@
             32454
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -44288,22 +44288,22 @@
             4800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32405
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32406
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -44317,7 +44317,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32407
           ],
@@ -44331,7 +44331,7 @@
             32413
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -44407,7 +44407,7 @@
             32427
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -44544,22 +44544,22 @@
             3936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32378
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32379
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -44573,7 +44573,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32380
           ],
@@ -44587,7 +44587,7 @@
             32386
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -44663,7 +44663,7 @@
             32400
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -44800,22 +44800,22 @@
             3840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32351
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32352
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -44829,7 +44829,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32353
           ],
@@ -44843,7 +44843,7 @@
             32359
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -44919,7 +44919,7 @@
             32373
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -45056,22 +45056,22 @@
             2976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32324
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32325
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -45085,7 +45085,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32326
           ],
@@ -45099,7 +45099,7 @@
             32332
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -45175,7 +45175,7 @@
             32346
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -45312,22 +45312,22 @@
             2880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32297
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32298
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -45341,7 +45341,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32299
           ],
@@ -45355,7 +45355,7 @@
             32305
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -45431,7 +45431,7 @@
             32319
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -45568,22 +45568,22 @@
             2016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32270
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32271
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -45597,7 +45597,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32272
           ],
@@ -45611,7 +45611,7 @@
             32278
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -45687,7 +45687,7 @@
             32292
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -45824,22 +45824,22 @@
             1920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32243
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32244
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -45853,7 +45853,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32245
           ],
@@ -45867,7 +45867,7 @@
             32251
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -45943,7 +45943,7 @@
             32265
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -46080,22 +46080,22 @@
             1056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32216
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32217
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -46109,7 +46109,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32218
           ],
@@ -46123,7 +46123,7 @@
             32224
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -46199,7 +46199,7 @@
             32238
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -46336,22 +46336,22 @@
             960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32189
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32190
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -46365,7 +46365,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32191
           ],
@@ -46379,7 +46379,7 @@
             32197
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -46455,7 +46455,7 @@
             32211
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -46592,22 +46592,22 @@
             96
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32162
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32163
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -46621,7 +46621,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32164
           ],
@@ -46635,7 +46635,7 @@
             32170
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -46711,7 +46711,7 @@
             32184
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -46848,22 +46848,22 @@
             15360
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31127
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31128
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -46877,7 +46877,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31129
           ],
@@ -46891,7 +46891,7 @@
             31135
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -46967,7 +46967,7 @@
             31149
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -47104,22 +47104,22 @@
             14496
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31100
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31101
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -47133,7 +47133,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31102
           ],
@@ -47147,7 +47147,7 @@
             31108
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -47223,7 +47223,7 @@
             31122
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -47360,22 +47360,22 @@
             14400
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31073
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31074
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -47389,7 +47389,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31075
           ],
@@ -47403,7 +47403,7 @@
             31081
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -47479,7 +47479,7 @@
             31095
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -47616,22 +47616,22 @@
             13536
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31046
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31047
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -47645,7 +47645,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31048
           ],
@@ -47659,7 +47659,7 @@
             31054
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -47735,7 +47735,7 @@
             31068
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -47872,22 +47872,22 @@
             13440
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31019
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31020
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -47901,7 +47901,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31021
           ],
@@ -47915,7 +47915,7 @@
             31027
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -47991,7 +47991,7 @@
             31041
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -48128,22 +48128,22 @@
             12576
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30992
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30993
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -48157,7 +48157,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30994
           ],
@@ -48171,7 +48171,7 @@
             31000
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -48247,7 +48247,7 @@
             31014
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -48384,22 +48384,22 @@
             12480
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30965
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30966
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -48413,7 +48413,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30967
           ],
@@ -48427,7 +48427,7 @@
             30973
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -48503,7 +48503,7 @@
             30987
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -48640,22 +48640,22 @@
             11616
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30938
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30939
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -48669,7 +48669,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30940
           ],
@@ -48683,7 +48683,7 @@
             30946
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -48759,7 +48759,7 @@
             30960
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -48896,22 +48896,22 @@
             11520
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30911
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30912
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -48925,7 +48925,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30913
           ],
@@ -48939,7 +48939,7 @@
             30919
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -49015,7 +49015,7 @@
             30933
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -49152,22 +49152,22 @@
             10656
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30884
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30885
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -49181,7 +49181,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30886
           ],
@@ -49195,7 +49195,7 @@
             30892
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -49271,7 +49271,7 @@
             30906
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -49408,22 +49408,22 @@
             10560
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30857
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30858
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -49437,7 +49437,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30859
           ],
@@ -49451,7 +49451,7 @@
             30865
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -49527,7 +49527,7 @@
             30879
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -49664,22 +49664,22 @@
             9696
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30830
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30831
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -49693,7 +49693,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30832
           ],
@@ -49707,7 +49707,7 @@
             30838
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -49783,7 +49783,7 @@
             30852
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -49920,22 +49920,22 @@
             9600
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30803
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30804
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -49949,7 +49949,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30805
           ],
@@ -49963,7 +49963,7 @@
             30811
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -50039,7 +50039,7 @@
             30825
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -50176,22 +50176,22 @@
             8736
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30776
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30777
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -50205,7 +50205,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30778
           ],
@@ -50219,7 +50219,7 @@
             30784
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -50295,7 +50295,7 @@
             30798
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -50432,22 +50432,22 @@
             8640
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30749
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30750
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -50461,7 +50461,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30751
           ],
@@ -50475,7 +50475,7 @@
             30757
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -50551,7 +50551,7 @@
             30771
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -50688,22 +50688,22 @@
             7776
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             30722
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             30723
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -50717,7 +50717,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             30724
           ],
@@ -50731,7 +50731,7 @@
             30730
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -50807,7 +50807,7 @@
             30744
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -50944,22 +50944,22 @@
             30720
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31202
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31203
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -50973,7 +50973,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31204
           ],
@@ -50987,7 +50987,7 @@
             31210
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -51063,7 +51063,7 @@
             31224
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -51200,22 +51200,22 @@
             29856
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31229
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31230
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -51229,7 +51229,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31231
           ],
@@ -51243,7 +51243,7 @@
             31237
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -51319,7 +51319,7 @@
             31251
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -51456,22 +51456,22 @@
             29760
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31256
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31257
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -51485,7 +51485,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31258
           ],
@@ -51499,7 +51499,7 @@
             31264
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -51575,7 +51575,7 @@
             31278
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -51712,22 +51712,22 @@
             28896
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31283
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31284
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -51741,7 +51741,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31285
           ],
@@ -51755,7 +51755,7 @@
             31291
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -51831,7 +51831,7 @@
             31305
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -51968,22 +51968,22 @@
             28800
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31310
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31311
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -51997,7 +51997,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31312
           ],
@@ -52011,7 +52011,7 @@
             31318
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -52087,7 +52087,7 @@
             31332
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -52224,22 +52224,22 @@
             27936
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31337
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31338
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -52253,7 +52253,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31339
           ],
@@ -52267,7 +52267,7 @@
             31345
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -52343,7 +52343,7 @@
             31359
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -52480,22 +52480,22 @@
             27840
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31364
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31365
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -52509,7 +52509,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31366
           ],
@@ -52523,7 +52523,7 @@
             31372
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -52599,7 +52599,7 @@
             31386
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -52736,22 +52736,22 @@
             26976
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31391
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31392
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -52765,7 +52765,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31393
           ],
@@ -52779,7 +52779,7 @@
             31399
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -52855,7 +52855,7 @@
             31413
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -52992,22 +52992,22 @@
             26880
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31418
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31419
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -53021,7 +53021,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31420
           ],
@@ -53035,7 +53035,7 @@
             31426
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -53111,7 +53111,7 @@
             31440
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -53248,22 +53248,22 @@
             26016
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31445
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31446
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -53277,7 +53277,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31447
           ],
@@ -53291,7 +53291,7 @@
             31453
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -53367,7 +53367,7 @@
             31467
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -53504,22 +53504,22 @@
             25920
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31472
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31473
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -53533,7 +53533,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31474
           ],
@@ -53547,7 +53547,7 @@
             31480
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -53623,7 +53623,7 @@
             31494
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -53760,22 +53760,22 @@
             25056
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31499
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31500
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -53789,7 +53789,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31501
           ],
@@ -53803,7 +53803,7 @@
             31507
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -53879,7 +53879,7 @@
             31521
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -54016,22 +54016,22 @@
             24960
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31526
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31527
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -54045,7 +54045,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31528
           ],
@@ -54059,7 +54059,7 @@
             31534
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -54135,7 +54135,7 @@
             31548
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -54272,22 +54272,22 @@
             24096
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31553
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31554
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -54301,7 +54301,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31555
           ],
@@ -54382,7 +54382,7 @@
             31575
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -54475,22 +54475,22 @@
             24000
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31580
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31581
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -54504,7 +54504,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31582
           ],
@@ -54518,7 +54518,7 @@
             31588
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -54594,7 +54594,7 @@
             31602
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -54731,22 +54731,22 @@
             23136
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31607
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31608
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -54760,7 +54760,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31609
           ],
@@ -54774,7 +54774,7 @@
             31615
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -54850,7 +54850,7 @@
             31629
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -54987,22 +54987,22 @@
             23040
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31682
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31683
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -55016,7 +55016,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31684
           ],
@@ -55030,7 +55030,7 @@
             31690
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -55106,7 +55106,7 @@
             31704
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -55243,22 +55243,22 @@
             22176
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31709
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31710
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -55272,7 +55272,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31711
           ],
@@ -55286,7 +55286,7 @@
             31717
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -55362,7 +55362,7 @@
             31731
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -55499,22 +55499,22 @@
             22080
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31736
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31737
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -55528,7 +55528,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31738
           ],
@@ -55542,7 +55542,7 @@
             31744
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -55618,7 +55618,7 @@
             31758
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -55755,22 +55755,22 @@
             21216
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31763
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31764
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -55784,7 +55784,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31765
           ],
@@ -55798,7 +55798,7 @@
             31771
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -55874,7 +55874,7 @@
             31785
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -56011,22 +56011,22 @@
             21120
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31790
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31791
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -56040,7 +56040,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31792
           ],
@@ -56054,7 +56054,7 @@
             31798
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -56130,7 +56130,7 @@
             31812
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -56267,22 +56267,22 @@
             20256
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31817
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31818
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -56296,7 +56296,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31819
           ],
@@ -56310,7 +56310,7 @@
             31825
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -56386,7 +56386,7 @@
             31839
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -56523,22 +56523,22 @@
             20160
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31844
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31845
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -56552,7 +56552,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31846
           ],
@@ -56566,7 +56566,7 @@
             31852
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -56642,7 +56642,7 @@
             31866
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -56779,22 +56779,22 @@
             19296
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31871
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31872
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -56808,7 +56808,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31873
           ],
@@ -56822,7 +56822,7 @@
             31879
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -56898,7 +56898,7 @@
             31893
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -57035,22 +57035,22 @@
             19200
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31898
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31899
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -57064,7 +57064,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31900
           ],
@@ -57078,7 +57078,7 @@
             31906
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -57154,7 +57154,7 @@
             31920
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -57291,22 +57291,22 @@
             18336
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31925
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31926
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -57320,7 +57320,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31927
           ],
@@ -57334,7 +57334,7 @@
             31933
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -57410,7 +57410,7 @@
             31947
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -57547,22 +57547,22 @@
             18240
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31952
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31953
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -57576,7 +57576,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31954
           ],
@@ -57590,7 +57590,7 @@
             31960
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -57666,7 +57666,7 @@
             31974
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -57803,22 +57803,22 @@
             17376
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             31979
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             31980
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -57832,7 +57832,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             31981
           ],
@@ -57846,7 +57846,7 @@
             31987
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -57922,7 +57922,7 @@
             32001
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -58059,22 +58059,22 @@
             17280
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32006
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32007
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -58088,7 +58088,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32008
           ],
@@ -58102,7 +58102,7 @@
             32014
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -58178,7 +58178,7 @@
             32028
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -58315,22 +58315,22 @@
             16416
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32033
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32034
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -58344,7 +58344,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32035
           ],
@@ -58358,7 +58358,7 @@
             32041
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -58434,7 +58434,7 @@
             32055
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -58571,22 +58571,22 @@
             16320
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32060
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32061
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -58600,7 +58600,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32062
           ],
@@ -58614,7 +58614,7 @@
             32068
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -58690,7 +58690,7 @@
             32082
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -58827,22 +58827,22 @@
             15456
           ]
         },
-        "slow_output": {
+        "slew_rate": {
           "fuses": [
             32087
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "fast": 0,
+            "slow": 1
           }
         },
-        "open_collector": {
+        "output_driver": {
           "fuses": [
             32088
           ],
           "values": {
-            "off": 0,
-            "on": 1
+            "push_pull": 0,
+            "open_drain": 1
           }
         },
         "termination": {
@@ -58856,7 +58856,7 @@
             "bus_keeper": 3
           }
         },
-        "schmitt_trigger": {
+        "hysteresis": {
           "fuses": [
             32089
           ],
@@ -58870,7 +58870,7 @@
             32095
           ],
           "values": {
-            "ttl": 0,
+            "lvcmos": 0,
             "sstl": 1
           }
         },
@@ -58946,7 +58946,7 @@
             32109
           ],
           "values": {
-            "gnd_npt12": 0,
+            "GND_npt12": 0,
             "ff_q": 1
           }
         },
@@ -63861,7 +63861,7 @@
           }
         },
         "CLK1": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               34153
             ],
@@ -63884,7 +63884,7 @@
           }
         },
         "CLK2": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               34154
             ],
@@ -63907,7 +63907,7 @@
           }
         },
         "OE1": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               34155
             ],
@@ -63930,7 +63930,7 @@
           }
         },
         "CLR": {
-          "schmitt_trigger": {
+          "hysteresis": {
             "fuses": [
               34156
             ],

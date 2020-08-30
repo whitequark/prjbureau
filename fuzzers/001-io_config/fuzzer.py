@@ -58,10 +58,10 @@ with database.transact() as db:
                 f_sstl = run_i(voltage_level_A='3.3', voltage_level_B='3.3', SSTL_input='I1,I2')
 
             macrocell.update({
-                'slow_output':
-                    bitdiff.describe(1, {'off': f_fast, 'on': f_out}),
-                'open_collector':
-                    bitdiff.describe(1, {'off': f_out, 'on': f_oc}),
+                'slew_rate':
+                    bitdiff.describe(1, {'fast': f_fast, 'slow': f_out}),
+                'output_driver':
+                    bitdiff.describe(1, {'push_pull': f_out, 'open_drain': f_oc}),
             })
             if device_name.endswith('AS'):
                 macrocell.update({
@@ -75,11 +75,11 @@ with database.transact() as db:
                         'pull_up': f_pu,
                         'bus_keeper': f_pk,
                     }),
-                    'schmitt_trigger':
+                    'hysteresis':
                         bitdiff.describe(1, {'off': f_out, 'on': f_hyst}),
                 })
             if has_sstl:
                 macrocell.update({
                     'io_standard':
-                        bitdiff.describe(1, {'ttl': f_ttl, 'sstl': f_sstl}),
+                        bitdiff.describe(1, {'lvcmos': f_ttl, 'sstl': f_sstl}),
                 })

@@ -63,7 +63,7 @@ with database.transact() as db:
             f_pinkeep = run_unused(pin, strategy={'unused_To_PinKeeper':'on'})
 
             config['pins'][pin] = {
-                'schmitt_trigger': bitdiff.describe(1, {
+                'hysteresis': bitdiff.describe(1, {
                     'off': f_norm,
                     'on':  f_hyst,
                 }),

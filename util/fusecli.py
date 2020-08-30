@@ -31,10 +31,10 @@ macrocell_options = [
     "o_mux",
     "o_invert",
     "oe_mux",
-    "slow_output",
-    "open_collector",
+    "slew_rate",
+    "output_driver",
     "termination",
-    "schmitt_trigger",
+    "hysteresis",
     "io_standard",
     "low_power",
 ]
@@ -48,7 +48,7 @@ global_options = [
 special_pin_options = [
     "standby_wakeup",
     "termination",
-    "schmitt_trigger",
+    "hysteresis",
 ]
 
 

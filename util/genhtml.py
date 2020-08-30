@@ -234,10 +234,10 @@ macrocell_options = {
     "o_mux":            "M",
     "o_invert":         "M",
     "oe_mux":           "M",
-    "slow_output":      "IO",
-    "open_collector":   "IO",
+    "slew_rate":        "IO",
+    "output_driver":    "IO",
     "termination":      "IO",
-    "schmitt_trigger":  "IO",
+    "hysteresis":       "IO",
     "io_standard":      "IO",
     "low_power":        "C",
 }
@@ -252,7 +252,7 @@ macrocell_shared_options = {
 special_pin_options = {
     "standby_wakeup":   "C",
     "termination":      "IO",
-    "schmitt_trigger":  "IO",
+    "hysteresis":       "IO",
 }
 
 
