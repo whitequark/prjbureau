@@ -89,7 +89,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outline.html">Functional outline (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../naming.html">Naming conventions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Macrocell options (WIP)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Macrocell options (WIP)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pt1-pt2-routing-group">PT1/PT2 routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pt3-routing-group">PT3 routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pt4-routing-group">PT4 routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pt5-routing-group">PT5 routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-q-routing-group">D/Q routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fb-routing-group">FB routing group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ff-latch-configuration">FF/latch configuration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="buffer.html">I/O buffer options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="power.html">Power control options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="program.html">Programming options</a></li>
@@ -166,9 +176,76 @@
             
   <div class="section" id="macrocell-options-wip">
 <h1>Macrocell options (WIP)<a class="headerlink" href="#macrocell-options-wip" title="Permalink to this headline">¶</a></h1>
+<p>The design of the ATF15xx macrocell is remarkably complicated; the combination of backwards compatibility, cost optimization, ad-hoc evolution, and pressure to add more routing options has resulted in a circuit that is almost biological in nature. The amount of macrocell edge cases that bring out bugs in the vendor toolchain seems to demonstrate that it is challenging to use even with first-party documentation. Nevertheless, with the right approach, even this macrocell can be painlessly understood.</p>
+<p>The ATF15xx macrocell appears to have been designed by strictly following two rules:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Never route a product term to more than one destination.</p></li>
+<li><p>Never let a fuse combination become redundant.</p></li>
+</ol>
+</div></blockquote>
+<p>Rule (1) requires that, even though a product term may be routed through multiple muxes/decoders, these components (and by extension the fuses that drive them) must act together to prevent the product term from being connected to more than one possible destination at once. E.g. there must be no configuration where <code class="docutils literal notranslate"><span class="pre">PT4</span></code> drives <code class="docutils literal notranslate"><span class="pre">CLK</span></code> and <code class="docutils literal notranslate"><span class="pre">CE</span></code> simultaneously.</p>
+<p>Rule (2) requires that, when any redundancies happen to arise from the layout of the macrocell routing paths, the fuse combinations that encode the redundant configurations must be repurposed for a new capability, without particular regard to orthogonality, and even at the cost of eliminating some rarely needed but otherwise reasonable configurations. E.g. the fuse that controls the fast registered input, <a class="reference internal" href="../schema.html#std-fuse-dfast_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">dfast_mux</span></code></a>, is physically shared with the fuse that controls the output multiplexer, <a class="reference internal" href="../schema.html#std-fuse-o_mux"><code class="xref std std-fuse docutils literal notranslate"><span class="pre">o_mux</span></code></a>.</p>
+<div class="admonition-fun-fact admonition">
+<p class="admonition-title">Fun fact</p>
+<p>Both of these rules are violated in exactly one obscure corner case, specific to each rule.</p>
+</div>
+<p>In reality, these “rules” could well have been a natural consequence of conserving NVM cells and/or routability and not something that was followed explicitly. Regardless, the macrocell design is a lot easier to understand from this perspective.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
-<p>This document is not yet written.</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="pt1-pt2-routing-group">
+<span id="cas-mux"></span><span id="xor-invert"></span><span id="xor-b-mux"></span><span id="xor-a-mux"></span><span id="pt2-mux"></span><span id="pt1-mux"></span><h2>PT1/PT2 routing group<a class="headerlink" href="#pt1-pt2-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="pt3-routing-group">
+<span id="gclr-mux"></span><span id="pt3-mux"></span><h2>PT3 routing group<a class="headerlink" href="#pt3-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="pt4-routing-group">
+<span id="gclk-mux"></span><span id="pt4-func"></span><span id="pt4-mux"></span><h2>PT4 routing group<a class="headerlink" href="#pt4-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="pt5-routing-group">
+<span id="oe-mux"></span><span id="pt5-func"></span><span id="pt5-mux"></span><h2>PT5 routing group<a class="headerlink" href="#pt5-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="d-q-routing-group">
+<span id="o-mux"></span><span id="dfast-mux"></span><span id="d-mux"></span><h2>D/Q routing group<a class="headerlink" href="#d-q-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="fb-routing-group">
+<span id="fb-mux"></span><h2>FB routing group<a class="headerlink" href="#fb-routing-group" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
+</div>
+<div class="section" id="ff-latch-configuration">
+<span id="reset"></span><span id="storage"></span><h2>FF/latch configuration<a class="headerlink" href="#ff-latch-configuration" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">Todo</p>
+<p>write this</p>
+</div>
 </div>
 </div>
 

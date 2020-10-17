@@ -138,178 +138,178 @@ This range contains the product term fuses. The functions of the individual fuse
 Option ``macrocell['pt1_mux']``
 -------------------------------
 
-This option configures whether the ``PT1`` product term feeds the sum term or the special function (logic foldback node, and in rare cases XOR term).
+This option :ref:`configures <pt1_mux>` whether the ``PT1`` product term feeds the sum term or the special function (logic foldback node, and in rare cases XOR term).
 
 .. fuse:: pt2_mux
 
 Option ``macrocell['pt2_mux']``
 -------------------------------
 
-This option configures whether the ``PT2`` product term feeds the sum term or the special function (XOR term).
+This option :ref:`configures <pt2_mux>` whether the ``PT2`` product term feeds the sum term or the special function (XOR term).
 
 .. fuse:: pt3_mux
 
 Option ``macrocell['pt3_mux']``
 -------------------------------
 
-This option configures whether the ``PT3`` product term feeds the sum term or the special function (asynchronous reset).
+This option :ref:`configures <pt3_mux>` whether the ``PT3`` product term feeds the sum term or the special function (asynchronous reset).
 
 .. fuse:: gclr_mux
 
 Option ``macrocell['gclr_mux']``
 --------------------------------
 
-This option configures whether the ``GCLR`` global network will reset the storage element of the macrocell.
+This option :ref:`configures <gclr_mux>` whether the ``GCLR`` global network will reset the storage element of the macrocell.
 
 .. fuse:: pt4_mux
 
 Option ``macrocell['pt4_mux']``
 -------------------------------
 
-This option configures whether the ``PT4`` product term feeds the sum term or the special function (clock or clock enable).
+This option :ref:`configures <pt4_mux>` whether the ``PT4`` product term feeds the sum term or the special function (clock or clock enable).
 
 .. fuse:: pt4_func
 
 Option ``macrocell['pt4_func']``
 --------------------------------
 
-This option configures whether, if it drives a special function, the ``PT4`` product term clocks the storage element of the macrocell, or enables the storage element driven by a global clock network.
+This option :ref:`configures <pt4_func>` whether, if it drives a special function, the ``PT4`` product term clocks the storage element of the macrocell, or enables the storage element driven by a global clock network.
 
 .. fuse:: gclk_mux
 
 Option ``macrocell['gclk_mux']``
 --------------------------------
 
-This option configures which ``GCLKx`` global network will clock of the storage element of the macrocell when the macrocell is clocked by a global network.
+This option :ref:`configures <gclk_mux>` which ``GCLKx`` global network will clock of the storage element of the macrocell when the macrocell is clocked by a global network.
 
 .. fuse:: pt5_mux
 
 Option ``macrocell['pt5_mux']``
 -------------------------------
 
-This option configures whether the ``PT5`` product term feeds the sum term or the special function (asynchronous set or output enable).
+This option :ref:`configures <pt5_mux>` whether the ``PT5`` product term feeds the sum term or the special function (asynchronous set or output enable).
 
 .. fuse:: pt5_func
 
 Option ``macrocell['pt5_func']``
 --------------------------------
 
-This option configures whether, if it drives a special function, the ``PT5`` product term presets the storage element of the macrocell, or enables the output buffer.
+This option :ref:`configures <pt5_func>` whether, if it drives a special function, the ``PT5`` product term presets the storage element of the macrocell, or enables the output buffer.
 
 .. fuse:: xor_a_mux
 
 Option ``macrocell['xor_a_mux']``
 ---------------------------------
 
-This option configures whether the 1st input of the XOR term is driven by the sum term or the ``PT2`` product term.
+This option :ref:`configures <xor_a_mux>` whether the 1st input of the XOR term is driven by the sum term or the ``PT2`` product term.
 
 .. warning::
 
-   This option and :fuse:`cas_mux` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`cas_mux` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: xor_b_mux
 
 Option ``macrocell['xor_b_mux']``
 ---------------------------------
 
-This option configures whether the 2nd input of the XOR term is driven by the output of the storage element, the inverse of the ``PT1`` product term, the inverse of the ``PT2`` product term, or a constant low.
+This option :ref:`configures <xor_b_mux>` whether the 2nd input of the XOR term is driven by the output of the storage element, the inverse of the ``PT1`` product term, the inverse of the ``PT2`` product term, or a constant low.
 
 .. fuse:: cas_mux
 
 Option ``macrocell['cas_mux']``
 -------------------------------
 
-This option configures whether the sum term feeds the XOR term or the cascade output of the macrocell.
+This option :ref:`configures <cas_mux>` whether the sum term feeds the XOR term or the cascade output of the macrocell.
 
 .. warning::
 
-   This option and :fuse:`xor_a_mux` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`xor_a_mux` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: xor_invert
 
 Option ``macrocell['xor_invert']``
 --------------------------------
 
-This option configures whether the output of the XOR term is inverted.
+This option :ref:`configures <xor_invert>` whether the output of the XOR term is inverted.
 
 .. warning::
 
-   This option and :fuse:`reset` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`reset` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: d_mux
 
 Option ``macrocell['d_mux']``
 -----------------------------
 
-This option configures whether the storage element samples the combinatorial function or the fast input.
+This option :ref:`configures <d_mux>` whether the storage element samples the combinatorial function or the fast input.
 
 .. fuse:: dfast_mux
 
 Option ``macrocell['dfast_mux']``
 ---------------------------------
 
-This option configures whether the pad or the ``PT2`` product term is selected as the fast input.
+This option :ref:`configures <dfast_mux>` whether the pad or the ``PT2`` product term is selected as the fast input.
 
 .. warning::
 
-   This option and :fuse:`o_mux` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`o_mux` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: storage
 
 Option ``macrocell['storage']``
 -------------------------------
 
-This option configures whether the storage element functions as a D-flip-flop or a D-latch. On BE-series devices with 64 macrocells or more, it can also configure the storage element as a T-flip-flop.
+This option :ref:`configures <storage>` whether the storage element functions as a D-flip-flop or a D-latch. On BE-series devices with 64 macrocells or more, it can also configure the storage element as a T-flip-flop.
 
 .. fuse:: reset
 
 Option ``macrocell['reset']``
 -------------------------------
 
-This option configures the power-on reset value of the storage element.
+This option :ref:`configures <reset>` the power-on reset value of the storage element.
 
 .. warning::
 
-   This option and :fuse:`xor_invert` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`xor_invert` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: fb_mux
 
 Option ``macrocell['fb_mux']``
 ------------------------------
 
-This option configures whether the feedback signal ``MCx_FB`` is driven by the combinatorial function or the storage element.
+This option :ref:`configures <fb_mux>` whether the feedback signal ``MCx_FB`` is driven by the combinatorial function or the storage element.
 
 .. fuse:: o_mux
 
 Option ``macrocell['o_mux']``
 -----------------------------
 
-This option configures whether the output buffer is driven by the combinatorial function or the storage element.
+This option :ref:`configures <o_mux>` whether the output buffer is driven by the combinatorial function or the storage element.
 
 .. warning::
 
-   This option and :fuse:`dfast_mux` cannot be simultaneously set to arbitrary values because they share their fuse.
+   This option and :fuse:`dfast_mux` cannot be simultaneously set to arbitrary values because they share a fuse.
 
 .. fuse:: oe_mux
 
 Option ``macrocell['oe_mux']``
 ------------------------------
 
-This option configures whether the output buffer is enabled by one of the ``GOEx`` global networks, by the ``PT5`` product term, or is always disabled.
+This option :ref:`configures <oe_mux>` whether the output buffer is enabled by one of the ``GOEx`` global networks, by the ``PT5`` product term, or is always disabled.
 
 .. fuse:: slew_rate
 
 Option ``macrocell['slew_rate']``
 -----------------------------------
 
-This option configures the :ref:`slew rate <slew_rate>` of the output buffer of the macrocell.
+This option :ref:`configures <slew_rate>` the slew rate of the output buffer of the macrocell.
 
 .. fuse:: output_driver
 
 Option ``macrocell['output_driver']``
 --------------------------------------
 
-This option configures the output buffer of the macrocell as :ref:`push-pull or open-collector <output_driver>`.
+This option :ref:`configures <output_driver>` the output buffer of the macrocell as push-pull or open-collector.
 
 .. fuse:: pt_power
 
@@ -320,7 +320,7 @@ Option ``macrocell['pt_power']``
 
    This option is present only in AS-series devices.
 
-This option configures whether the macrocell's product terms are :ref:`active or disabled to save power <pt_power>`.
+This option :ref:`configures <pt_power>` whether the macrocell's product terms are active or disabled to save power.
 
 .. fuse:: low_power
 
@@ -331,7 +331,7 @@ Option ``macrocell['low_power']``
 
    This option is present only in AS-series devices.
 
-This option configures whether the macrocell operates at :ref:`reduced power and reduced switching speed <low_power>`.
+This option :ref:`configures <low_power>` whether the macrocell operates at reduced power and reduced switching speed.
 
 .. fuse:: macrocell-termination
 
@@ -365,7 +365,7 @@ Option ``macrocell['io_standard']``
    This option is present only in BE-series devices with 64 macrocells or more.
    This option is absent on :pin:`VREFx` pins.
 
-This option configures whether the input buffer of the macrocell follows the :ref:`LVCMOS or SSTL signaling standard <io_standard>`.
+This option :ref:`configures <io_standard>` whether the input buffer of the macrocell follows the LVCMOS or SSTL signaling standard.
 
 Node ``device['switches']``
 ===========================
@@ -420,7 +420,7 @@ Option ``config['standby_wakeup']``
 
    This option is present only in AS-series devices for the ``CLKx`` pins.
 
-This option configures whether transitions on a ``CLKx`` pin will :ref:`wake up <standby_wakeup>` the device from a low-power standby mode.
+This option :ref:`configures <standby_wakeup>` whether transitions on a ``CLKx`` pin will wake up the device from a low-power standby mode.
 
 .. fuse:: special-termination
 
@@ -506,7 +506,7 @@ Option ``config['reset_hysteresis']``
 
    This option is present only in AS-series devices.
 
-This option configures the :ref:`behavior of the power-on reset circuitry <reset_hysteresis>` when V\ :sub:`CC` is close to V\ :sub:`RST`.
+This option :ref:`configures <reset_hysteresis>` the behavior of the power-on reset circuitry when V\ :sub:`CC` is close to V\ :sub:`RST`.
 
 Node ``device['user']``
 =======================
