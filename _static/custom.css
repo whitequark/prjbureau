@@ -1,5 +1,5 @@
-.rst-content table.docutils.narrow td, .rst-content table.docutils.narrow th {
-  padding: 8px 14px; /* termination options table almost but not quite fits */
+.rst-content table.docutils td, .rst-content table.docutils th {
+  padding: 8px 10px;
 }
 
 .wy-menu-vertical {
