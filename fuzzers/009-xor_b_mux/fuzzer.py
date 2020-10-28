@@ -33,7 +33,7 @@ with database.transact() as db:
             macrocell.update({
                 'xor_b_mux':
                     bitdiff.describe(1, {
-                        'GND_npt12': f_dff,
-                        'ff_q':      f_tff
+                        'VCC_pt12': f_dff,
+                        'ff_qn':    f_tff
                     })
             })

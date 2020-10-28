@@ -23,7 +23,6 @@ The following table describes the possible termination options:
 
 .. table::
    :widths: auto
-   :class: narrow
 
    ======================= ==== ==== ==== ==== ==== ==== ==== ====
    Series                       ATF15xxAS           ATF15xxBE

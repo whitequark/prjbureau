@@ -977,38 +977,38 @@ This yields the following table:
 
 By manually rewriting it to factor out gates such that the netlist implementing them would be minimal, we arrive at the following table:
 
-    fuzz-0-0-0-0-0.svf: sum = pt1|pt2|pt4   out =  (sum^ 0 )   cas = 0     flb = !0
-    fuzz-0-0-0-0-1.svf: sum = pt1|pt2|pt4   out = !(sum^ 0 )   cas = 0     flb = !0
-    fuzz-0-0-0-1-0.svf: sum = pt1|pt2|pt4   out =  (sum^ffq)   cas = 0     flb = !0
-    fuzz-0-0-0-1-1.svf: sum = pt1|pt2|pt4   out = !(sum^ffq)   cas = 0     flb = !0
-    fuzz-0-0-1-1-0.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ffq)   cas = sum   flb = !0
-    fuzz-0-0-1-1-1.svf: sum = pt1|pt2|pt4   out = !( 1 ^ffq)   cas = sum   flb = !0
-    fuzz-0-0-1-0-0.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ 0 )   cas = sum   flb = !0
-    fuzz-0-0-1-0-1.svf: sum = pt1|pt2|pt4   out = !( 1 ^ 0 )   cas = sum   flb = !0
+    fuzz-0-0-0-0-0.svf: sum = pt1|pt2|pt4   out = !(sum^ 1 )   cas = 0     flb = !0
+    fuzz-0-0-0-0-1.svf: sum = pt1|pt2|pt4   out =  (sum^ 1 )   cas = 0     flb = !0
+    fuzz-0-0-0-1-0.svf: sum = pt1|pt2|pt4   out = !(sum^ffqn)  cas = 0     flb = !0
+    fuzz-0-0-0-1-1.svf: sum = pt1|pt2|pt4   out =  (sum^ffqn)  cas = 0     flb = !0
+    fuzz-0-0-1-1-0.svf: sum = pt1|pt2|pt4   out = !( 1 ^ffqn)  cas = sum   flb = !0
+    fuzz-0-0-1-1-1.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ffqn)  cas = sum   flb = !0
+    fuzz-0-0-1-0-0.svf: sum = pt1|pt2|pt4   out = !( 1 ^ 1 )   cas = sum   flb = !0
+    fuzz-0-0-1-0-1.svf: sum = pt1|pt2|pt4   out =  ( 1 ^ 1 )   cas = sum   flb = !0
 
-    fuzz-0-1-0-0-0.svf: sum = pt1|    pt4   out =  (sum^ 0 )   cas = 0     flb = !0
-    fuzz-0-1-0-0-1.svf: sum = pt1|    pt4   out = !(sum^!pt2)  cas = 0     flb = !0
-    fuzz-0-1-0-1-0.svf: sum = pt1|    pt4   out =  (sum^ffq)   cas = 0     flb = !0
-    fuzz-0-1-0-1-1.svf: sum = pt1|    pt4   out = !(sum^ffq)   cas = 0     flb = !0
-    fuzz-0-1-1-1-0.svf: sum = pt1|    pt4   out =  (pt2^ffq)   cas = sum   flb = !0
-    fuzz-0-1-1-1-1.svf: sum = pt1|    pt4   out = !(pt2^ffq)   cas = sum   flb = !0
-    fuzz-0-1-1-0-0.svf: sum = pt1|    pt4   out =  (pt2^ 0 )   cas = sum   flb = !0
-    fuzz-0-1-1-0-1.svf: sum = pt1|    pt4   out = !(pt2^ 0 )   cas = sum   flb = !0
+    fuzz-0-1-0-0-0.svf: sum = pt1|    pt4   out = !(sum^ 1 )   cas = 0     flb = !0
+    fuzz-0-1-0-0-1.svf: sum = pt1|    pt4   out =  (sum^pt2)   cas = 0     flb = !0
+    fuzz-0-1-0-1-0.svf: sum = pt1|    pt4   out = !(sum^ffqn)  cas = 0     flb = !0
+    fuzz-0-1-0-1-1.svf: sum = pt1|    pt4   out =  (sum^ffqn)  cas = 0     flb = !0
+    fuzz-0-1-1-1-0.svf: sum = pt1|    pt4   out = !(pt2^ffqn)  cas = sum   flb = !0
+    fuzz-0-1-1-1-1.svf: sum = pt1|    pt4   out =  (pt2^ffqn)  cas = sum   flb = !0
+    fuzz-0-1-1-0-0.svf: sum = pt1|    pt4   out = !(pt2^ 1 )   cas = sum   flb = !0
+    fuzz-0-1-1-0-1.svf: sum = pt1|    pt4   out =  (pt2^ 1 )   cas = sum   flb = !0
 
-    fuzz-1-0-0-0-0.svf: sum =     pt2|pt4   out =  (sum^ 0 )   cas = 0     flb = !pt1
-    fuzz-1-0-0-0-1.svf: sum =     pt2|pt4   out = !(sum^ 0 )   cas = 0     flb = !pt1
-    fuzz-1-0-0-1-0.svf: sum =     pt2|pt4   out =  (sum^ffq)   cas = 0     flb = !pt1
-    fuzz-1-0-0-1-1.svf: sum =     pt2|pt4   out = !(sum^ffq)   cas = 0     flb = !pt1
-    fuzz-1-0-1-1-0.svf: sum =     pt2|pt4   out =  ( 1 ^ffq)   cas = sum   flb = !pt1
-    fuzz-1-0-1-1-1.svf: sum =     pt2|pt4   out = !( 1 ^ffq)   cas = sum   flb = !pt1
-    fuzz-1-0-1-0-0.svf: sum =     pt2|pt4   out =  ( 1 ^ 0 )   cas = sum   flb = !pt1
-    fuzz-1-0-1-0-1.svf: sum =     pt2|pt4   out = !( 1 ^!pt1)  cas = sum   flb = !0
+    fuzz-1-0-0-0-0.svf: sum =     pt2|pt4   out = !(sum^ 1 )   cas = 0     flb = !pt1
+    fuzz-1-0-0-0-1.svf: sum =     pt2|pt4   out =  (sum^ 1 )   cas = 0     flb = !pt1
+    fuzz-1-0-0-1-0.svf: sum =     pt2|pt4   out = !(sum^ffqn)  cas = 0     flb = !pt1
+    fuzz-1-0-0-1-1.svf: sum =     pt2|pt4   out =  (sum^ffqn)  cas = 0     flb = !pt1
+    fuzz-1-0-1-1-0.svf: sum =     pt2|pt4   out = !( 1 ^ffqn)  cas = sum   flb = !pt1
+    fuzz-1-0-1-1-1.svf: sum =     pt2|pt4   out =  ( 1 ^ffqn)  cas = sum   flb = !pt1
+    fuzz-1-0-1-0-0.svf: sum =     pt2|pt4   out = !( 1 ^ 1 )   cas = sum   flb = !pt1
+    fuzz-1-0-1-0-1.svf: sum =     pt2|pt4   out =  ( 1 ^pt1)   cas = sum   flb = !0
 
-    fuzz-1-1-0-0-0.svf: sum =         pt4   out =  (sum^ 0 )   cas = 0     flb = !pt1
-    fuzz-1-1-0-0-1.svf: sum =         pt4   out = !(sum^!pt2)  cas = 0     flb = !pt1
-    fuzz-1-1-0-1-0.svf: sum =         pt4   out =  (sum^ffq)   cas = 0     flb = !pt1
-    fuzz-1-1-0-1-1.svf: sum =         pt4   out = !(sum^ffq)   cas = 0     flb = !pt1
-    fuzz-1-1-1-1-0.svf: sum =         pt4   out =  (pt2^ffq)   cas = sum   flb = !pt1
-    fuzz-1-1-1-1-1.svf: sum =         pt4   out = !(pt2^ffq)   cas = sum   flb = !pt1
-    fuzz-1-1-1-0-0.svf: sum =         pt4   out =  (pt2^ 0 )   cas = sum   flb = !pt1
-    fuzz-1-1-1-0-1.svf: sum =         pt4   out = !(pt2^!pt1)  cas = sum   flb = !0
+    fuzz-1-1-0-0-0.svf: sum =         pt4   out = !(sum^ 1 )   cas = 0     flb = !pt1
+    fuzz-1-1-0-0-1.svf: sum =         pt4   out =  (sum^pt2)   cas = 0     flb = !pt1
+    fuzz-1-1-0-1-0.svf: sum =         pt4   out = !(sum^ffqn)  cas = 0     flb = !pt1
+    fuzz-1-1-0-1-1.svf: sum =         pt4   out =  (sum^ffqn)  cas = 0     flb = !pt1
+    fuzz-1-1-1-1-0.svf: sum =         pt4   out = !(pt2^ffqn)  cas = sum   flb = !pt1
+    fuzz-1-1-1-1-1.svf: sum =         pt4   out =  (pt2^ffqn)  cas = sum   flb = !pt1
+    fuzz-1-1-1-0-0.svf: sum =         pt4   out = !(pt2^ 1 )   cas = sum   flb = !pt1
+    fuzz-1-1-1-0-1.svf: sum =         pt4   out =  (pt2^pt1)   cas = sum   flb = !0
