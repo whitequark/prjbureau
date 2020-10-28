@@ -228,7 +228,7 @@ This option :ref:`configures <cas_mux>` whether the sum term feeds the XOR term 
 .. fuse:: xor_invert
 
 Option ``macrocell['xor_invert']``
---------------------------------
+----------------------------------
 
 This option :ref:`configures <xor_invert>` whether the output of the XOR term is inverted.
 
@@ -405,7 +405,7 @@ Option ``switch['invert']``
 This option configures the output buffer of the switch as inverting or non-inverting.
 
 Node ``device['config']['pins']``
-================================
+=================================
 
 This node is a map from special pins (e.g. ``CLR``, ``TMS``) to I/O buffer options.
 
