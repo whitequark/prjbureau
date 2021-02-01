@@ -11,3 +11,4 @@ cache/
 *.svf
 *.bak
 /*.py
+!templates/*.jed
