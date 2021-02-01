@@ -53,23 +53,23 @@ PT1/PT2 routing group
 .. table::
    :widths: auto
 
-   ============== ============ ============ ============= ====== ======== ========= =========
-   Configuration                                          Routing
-   ------------------------------------------------------ -----------------------------------
-   xor_a_mux [1]_ xor_b_mux    cas_mux [1]_ o_invert [2]_ XT.A   XT.B     MC.CASOUT MC.FLB
-   ============== ============ ============ ============= ====== ======== ========= =========
-   ``sum``        ``VCC_pt12`` ``GND``      ``on``        ``st`` ``VCC``  ``GND``   ¬\ ``yf``
-   ``sum``        ``VCC_pt12`` ``GND``      ``off``       ``st`` ``y2``   ``GND``   ¬\ ``yf``
-   ``sum``        ``ff_qn``    ``GND``      ``on``        ``st`` ``ffqn`` ``GND``   ¬\ ``yf``
-   ``sum``        ``ff_qn``    ``GND``      ``off``       ``st`` ``ffqn`` ``GND``   ¬\ ``yf``
-   ``VCC_pt2``    ``ff_qn``    ``sum``      ``on``        ``y2`` ``ffqn`` ``st``    ¬\ ``yf``
-   ``VCC_pt2``    ``ff_qn``    ``sum``      ``off``       ``y2`` ``ffqn`` ``st``    ¬\ ``yf``
-   ``VCC_pt2``    ``VCC_pt12`` ``sum``      ``on``        ``y2`` ``VCC``  ``st``    ¬\ ``yf``
-   ``VCC_pt2``    ``VCC_pt12`` ``sum``      ``off``       ``y2`` ``y1``   ``st``    ``VCC``
-   ============== ============ ============ ============= ====== ======== ========= =========
+   ============== ============ ============ =============== ====== ======== ========= =========
+   Configuration                                            Routing
+   -------------------------------------------------------- -----------------------------------
+   xor_a_mux [1]_ xor_b_mux    cas_mux [1]_ xor_invert [2]_ XT.A   XT.B     MC.CASOUT MC.FLB
+   ============== ============ ============ =============== ====== ======== ========= =========
+   ``sum``        ``VCC_pt12`` ``GND``      ``on``          ``st`` ``VCC``  ``GND``   ¬\ ``yf``
+   ``sum``        ``VCC_pt12`` ``GND``      ``off``         ``st`` ``y2``   ``GND``   ¬\ ``yf``
+   ``sum``        ``ff_qn``    ``GND``      ``on``          ``st`` ``ffqn`` ``GND``   ¬\ ``yf``
+   ``sum``        ``ff_qn``    ``GND``      ``off``         ``st`` ``ffqn`` ``GND``   ¬\ ``yf``
+   ``VCC_pt2``    ``ff_qn``    ``sum``      ``on``          ``y2`` ``ffqn`` ``st``    ¬\ ``yf``
+   ``VCC_pt2``    ``ff_qn``    ``sum``      ``off``         ``y2`` ``ffqn`` ``st``    ¬\ ``yf``
+   ``VCC_pt2``    ``VCC_pt12`` ``sum``      ``on``          ``y2`` ``VCC``  ``st``    ¬\ ``yf``
+   ``VCC_pt2``    ``VCC_pt12`` ``sum``      ``off``         ``y2`` ``y1``   ``st``    ``VCC``
+   ============== ============ ============ =============== ====== ======== ========= =========
 
 .. [1] Options :fuse:`xor_a_mux` and :fuse:`cas_mux` share a fuse.
-.. [2] Options :fuse:`o_invert` and :fuse:`reset` share a fuse.
+.. [2] Options :fuse:`xor_invert` and :fuse:`reset` share a fuse.
 
 .. _pt3_mux:
 .. _gclr_mux:
