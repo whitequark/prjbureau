@@ -7,6 +7,8 @@ sys.path.insert(0, os.path.abspath('.') + '/_extensions')
 project = 'Project Bureau'
 copyright = '2019-2020, whitequark'
 
+master_doc = 'index'
+
 rst_epilog = """
 .. |o| raw:: html
 
