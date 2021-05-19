@@ -3,7 +3,7 @@ Introduction
 
 *Project Bureau* enables a fully open-source flow for Microchip_ (Atmel) ATF15xx family CPLDs_ by documenting their fuse maps and programming algorithms.
 
-You can discuss the project at the IRC channel `#prjbureau at freenode.net <https://webchat.freenode.net/?channels=prjbureau>`_.
+You can discuss the project at the IRC channel `#prjbureau at libera.chat <https://libera.chat>`_.
 
 .. _Microchip: https://microchip.com
 .. _CPLDs: https://en.wikipedia.org/wiki/Complex_programmable_logic_device
