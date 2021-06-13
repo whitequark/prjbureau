@@ -130,20 +130,21 @@ PT5 routing group
 .. table::
    :widths: auto
 
-   ========= ========= ==================== ======= ======= ==================
+   ========= ========== ==================== ======= ======= ==================
    Configuration                            Routing
    ---------------------------------------- ----------------------------------
-   pt5_mux   pt5_func  oe_mux               ST.I5   FF.AS   IO.EN
-   ========= ========= ==================== ======= ======= ==================
-   —         —         ``GND``              —       —       ``GND``
-   —         —         ``GOE1``..\ ``GOE6`` —       —       ``GOE1``..\ ``GOE6``
-   ``as_oe`` ``oe``    ``VCC_pt5``          ``GND`` ``GND`` ``pt5``
-   ``as_oe`` ``as``    —                    ``GND`` ``pt5`` —
-   ``sum``   ``oe``    —                    ``pt5`` ``GND`` —
-   ``sum``   ``as``    —                    ``pt5`` ?       —
-   —         —         ``VCC_pt5``          —       —       ``VCC``
-   ========= ========= ==================== ======= ======= ==================
+   pt5_mux   pt5_func   oe_mux               ST.I5   FF.AS   IO.EN
+   ========= ========== ==================== ======= ======= ==================
+   ``sum``   —          ``GND``              ``pt5`` ``GND`` ``GND``
+   ``sum``   —          ``GOE1``..\ ``GOE6`` ``pt5`` ``GND`` ``GOE1``..\ ``GOE6``
+   ``sum``   ``as``[3]_ ``VCC_pt5``          ``pt5`` ``GND`` ``VCC``
+   ``as_oe`` ``oe``     ``VCC_pt5``          ``GND`` ``GND`` ``pt5``
+   ``as_oe`` ``as``     ``GND``              ``GND`` ``pt5`` ``GND``
+   ``as_oe`` ``as``     ``GOE1``..\ ``GOE6`` ``GND`` ``pt5`` ``GOE1``..\ ``GOE6``
+   ``as_oe`` ``as``     ``VCC_pt5``          ``GND`` ``pt5`` ``VCC``
+   ========= ========== ==================== ======= ======= ==================
 
+.. [3] Although ``PT5`` is not routed to to either ``FF.AS`` or ``IO.EN`` in this configuration, :fuse:`pt5_func` must be set to ``as``.
 
 .. _d_mux:
 .. _dfast_mux:
@@ -160,7 +161,7 @@ D/Q routing group
    ========= ========== ============== ======== =======
    Configuration                       Routing
    ----------------------------------- ----------------
-   d_mux     o_mux [3]_ dfast_mux [3]_ FF.D     IO.A
+   d_mux     o_mux [4]_ dfast_mux [3]_ FF.D     IO.A
    ========= ========== ============== ======== =======
    ``comb``  ``sync``   ``pad``        ``xt``   ``ffq``
    ``fast``  ``sync``   ``pad``        ``ioq``  ``ffq``
@@ -168,7 +169,7 @@ D/Q routing group
    ``fast``  ``comb``   ``pt2``        ``pt2``  ``xt``
    ========= ========== ============== ======== =======
 
-.. [3] Options :fuse:`o_mux` and :fuse:`dfast_mux` share a fuse.
+.. [4] Options :fuse:`o_mux` and :fuse:`dfast_mux` share a fuse.
 
 .. note::
 
