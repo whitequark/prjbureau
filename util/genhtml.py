@@ -496,10 +496,10 @@ def write_pterms(f, device_name, device, block_name):
                  filter_fn=lambda name: name.endswith("_FLB"), sort_fn=natural_sort_key)
     write_points(f, blocks[block_name]['pterm_points'],
                  filter_fn=lambda name: name.endswith("_P"), sort_fn=natural_sort_key,
-                 link_fn=lambda name: f"uim{block_name}.html#{name[:-2]}")
+                 link_fn=lambda name: f"sw{block_name}.html#{name[:-2]}")
     write_points(f, blocks[block_name]['pterm_points'],
                  filter_fn=lambda name: name.endswith("_N"), sort_fn=natural_sort_key,
-                 link_fn=lambda name: f"uim{block_name}.html#{name[:-2]}")
+                 link_fn=lambda name: f"sw{block_name}.html#{name[:-2]}")
 
     for macrocell_name in blocks[block_name]['macrocells']:
         for pterm_name, pterm in device['macrocells'][macrocell_name]['pterm_ranges'].items():
