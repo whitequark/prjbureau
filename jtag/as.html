@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -410,303 +413,163 @@ DR length is determined by the address and the <a class="reference internal" hre
 <div class="section" id="atf1502as">
 <h3>ATF1502AS<a class="headerlink" href="#atf1502as" title="Permalink to this headline">¶</a></h3>
 <p>The following snippet implements the packing (<code class="docutils literal notranslate"><span class="pre">jed_to_svf_coords</span></code>) and unpacking (<code class="docutils literal notranslate"><span class="pre">svf_to_jed_coords</span></code>) permutations for ATF1502AS:</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span>  <span class="mi">7680</span><span class="p">):</span>
-        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">7680</span><span class="p">,</span> <span class="mi">15360</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">7680</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">7680</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15360</span><span class="p">,</span> <span class="mi">16320</span><span class="p">):</span>
-        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span> <span class="o">//</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">80</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16320</span><span class="p">,</span> <span class="mi">16720</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span> <span class="o">//</span> <span class="mi">5</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16720</span><span class="p">,</span> <span class="mi">16750</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">85</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span> <span class="o">//</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">80</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16750</span><span class="p">,</span> <span class="mi">16782</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16750</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16782</span><span class="p">,</span> <span class="mi">16786</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16782</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16786</span><span class="p">,</span> <span class="mi">16802</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16786</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16802</span><span class="p">,</span> <span class="mi">16808</span><span class="p">):</span>
-        <span class="k">return</span> <span class="c1"># reserved</span>
-    <span class="k">assert</span> <span class="kc">False</span>
-
-<span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">15360</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">80</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
-            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
-            <span class="k">return</span>  <span class="mi">7680</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">229</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">16320</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mi">16720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">85</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">16750</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">16782</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">16786</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="kc">False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
+<span class="linenos"> 2</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span>  <span class="mi">7680</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 4</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">7680</span><span class="p">,</span> <span class="mi">15360</span><span class="p">):</span>
+<span class="linenos"> 5</span>        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">7680</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">7680</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 6</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15360</span><span class="p">,</span> <span class="mi">16320</span><span class="p">):</span>
+<span class="linenos"> 7</span>        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span> <span class="o">//</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">80</span>
+<span class="linenos"> 8</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16320</span><span class="p">,</span> <span class="mi">16720</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">79</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span> <span class="o">//</span> <span class="mi">5</span>
+<span class="linenos">10</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16720</span><span class="p">,</span> <span class="mi">16750</span><span class="p">):</span>
+<span class="linenos">11</span>        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">85</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16320</span><span class="p">)</span> <span class="o">//</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">80</span>
+<span class="linenos">12</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16750</span><span class="p">,</span> <span class="mi">16782</span><span class="p">):</span>
+<span class="linenos">13</span>        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16750</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16782</span><span class="p">,</span> <span class="mi">16786</span><span class="p">):</span>
+<span class="linenos">15</span>        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16782</span><span class="p">)</span>
+<span class="linenos">16</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16786</span><span class="p">,</span> <span class="mi">16802</span><span class="p">):</span>
+<span class="linenos">17</span>        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">16786</span><span class="p">)</span>
+<span class="linenos">18</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16802</span><span class="p">,</span> <span class="mi">16808</span><span class="p">):</span>
+<span class="linenos">19</span>        <span class="k">return</span> <span class="c1"># reserved</span>
+<span class="linenos">20</span>    <span class="k">assert</span> <span class="kc">False</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
+<span class="linenos">23</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
+<span class="linenos">24</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
+<span class="linenos">25</span>            <span class="k">return</span> <span class="mi">15360</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">80</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">26</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">27</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">28</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
+<span class="linenos">29</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
+<span class="linenos">30</span>            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">31</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">32</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">33</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
+<span class="linenos">34</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
+<span class="linenos">35</span>            <span class="k">return</span>  <span class="mi">7680</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">36</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">37</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">38</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">229</span><span class="p">):</span>
+<span class="linenos">39</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">):</span>
+<span class="linenos">40</span>            <span class="k">return</span> <span class="mi">16320</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">79</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="linenos">41</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">42</span>            <span class="k">return</span> <span class="mi">16720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">85</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="linenos">43</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
+<span class="linenos">44</span>        <span class="k">return</span> <span class="mi">16750</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">45</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
+<span class="linenos">46</span>        <span class="k">return</span> <span class="mi">16782</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">47</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
+<span class="linenos">48</span>        <span class="k">return</span> <span class="mi">16786</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">49</span>    <span class="k">assert</span> <span class="kc">False</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="atf1504as">
 <h3>ATF1504AS<a class="headerlink" href="#atf1504as" title="Permalink to this headline">¶</a></h3>
 <p>The following snippet implements the packing (<code class="docutils literal notranslate"><span class="pre">jed_to_svf_coords</span></code>) and unpacking (<code class="docutils literal notranslate"><span class="pre">svf_to_jed_coords</span></code>) permutations for ATF1504AS:</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span>   <span class="mi">15360</span><span class="p">):</span>
-        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>      <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15360</span><span class="p">,</span>   <span class="mi">30720</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">15360</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30720</span><span class="p">,</span>   <span class="mi">32640</span><span class="p">):</span>
-        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">30720</span><span class="p">)</span> <span class="o">//</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">160</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32640</span><span class="p">,</span>   <span class="mi">34134</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">32640</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">32640</span><span class="p">)</span> <span class="o">//</span> <span class="mi">9</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34134</span><span class="p">,</span> <span class="mi">34166</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34134</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34166</span><span class="p">,</span> <span class="mi">34170</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34166</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34170</span><span class="p">,</span> <span class="mi">34186</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34170</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34186</span><span class="p">,</span> <span class="mi">34192</span><span class="p">):</span>
-        <span class="k">return</span> <span class="c1"># reserved</span>
-    <span class="k">assert</span> <span class="kc">False</span>
-
-<span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">30720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">160</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
-            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">15360</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">233</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">32640</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">9</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">34134</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">34166</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">34170</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="kc">False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
+<span class="linenos"> 2</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span>   <span class="mi">15360</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>      <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 4</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15360</span><span class="p">,</span>   <span class="mi">30720</span><span class="p">):</span>
+<span class="linenos"> 5</span>        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">15360</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">96</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">15360</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 6</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30720</span><span class="p">,</span>   <span class="mi">32640</span><span class="p">):</span>
+<span class="linenos"> 7</span>        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">30720</span><span class="p">)</span> <span class="o">//</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">160</span>
+<span class="linenos"> 8</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32640</span><span class="p">,</span>   <span class="mi">34134</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>  <span class="mi">32640</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">165</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">32640</span><span class="p">)</span> <span class="o">//</span> <span class="mi">9</span>
+<span class="linenos">10</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34134</span><span class="p">,</span> <span class="mi">34166</span><span class="p">):</span>
+<span class="linenos">11</span>        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34134</span><span class="p">)</span>
+<span class="linenos">12</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34166</span><span class="p">,</span> <span class="mi">34170</span><span class="p">):</span>
+<span class="linenos">13</span>        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34166</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34170</span><span class="p">,</span> <span class="mi">34186</span><span class="p">):</span>
+<span class="linenos">15</span>        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">34170</span><span class="p">)</span>
+<span class="linenos">16</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">34186</span><span class="p">,</span> <span class="mi">34192</span><span class="p">):</span>
+<span class="linenos">17</span>        <span class="k">return</span> <span class="c1"># reserved</span>
+<span class="linenos">18</span>    <span class="k">assert</span> <span class="kc">False</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
+<span class="linenos">22</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
+<span class="linenos">23</span>            <span class="k">return</span> <span class="mi">30720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">160</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">24</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">25</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">26</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
+<span class="linenos">27</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
+<span class="linenos">28</span>            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">29</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">30</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">31</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
+<span class="linenos">32</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
+<span class="linenos">33</span>            <span class="k">return</span> <span class="mi">15360</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">34</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">35</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">36</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">233</span><span class="p">):</span>
+<span class="linenos">37</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">166</span><span class="p">):</span>
+<span class="linenos">38</span>            <span class="k">return</span> <span class="mi">32640</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">165</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">9</span>
+<span class="linenos">39</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">40</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">41</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
+<span class="linenos">42</span>        <span class="k">return</span> <span class="mi">34134</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">43</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
+<span class="linenos">44</span>        <span class="k">return</span> <span class="mi">34166</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">45</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
+<span class="linenos">46</span>        <span class="k">return</span> <span class="mi">34170</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">47</span>    <span class="k">assert</span> <span class="kc">False</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="atf1508as">
 <h3>ATF1508AS<a class="headerlink" href="#atf1508as" title="Permalink to this headline">¶</a></h3>
 <p>The following snippet implements the packing (<code class="docutils literal notranslate"><span class="pre">jed_to_svf_coords</span></code>) and unpacking (<code class="docutils literal notranslate"><span class="pre">svf_to_jed_coords</span></code>) permutations for ATF1508AS:</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span> <span class="mi">30720</span><span class="p">):</span>
-        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">96</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30720</span><span class="p">,</span> <span class="mi">61440</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">96</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">61440</span><span class="p">,</span> <span class="mi">65280</span><span class="p">):</span>
-        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">61440</span><span class="p">)</span> <span class="o">//</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">61440</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">320</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65280</span><span class="p">,</span> <span class="mi">74082</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">65280</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">27</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">65280</span><span class="p">)</span> <span class="o">//</span> <span class="mi">27</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74082</span><span class="p">,</span> <span class="mi">74114</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74082</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74114</span><span class="p">,</span> <span class="mi">74118</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74114</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74118</span><span class="p">,</span> <span class="mi">74134</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74118</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74134</span><span class="p">,</span> <span class="mi">74136</span><span class="p">):</span>
-        <span class="k">return</span> <span class="c1"># reserved</span>
-    <span class="k">assert</span> <span class="kc">False</span>
-
-<span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">61440</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">320</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
-            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">30720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">251</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">65280</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">27</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="c1"># always 1</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">74082</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">74114</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">74118</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="kc">False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">jed_to_svf_coords</span><span class="p">(</span><span class="n">jed_index</span><span class="p">):</span>
+<span class="linenos"> 2</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>    <span class="mi">0</span><span class="p">,</span> <span class="mi">30720</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="k">return</span>  <span class="mi">12</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">96</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span>     <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 4</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30720</span><span class="p">,</span> <span class="mi">61440</span><span class="p">):</span>
+<span class="linenos"> 5</span>        <span class="k">return</span> <span class="mi">128</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">96</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">30720</span><span class="p">)</span> <span class="o">//</span> <span class="mi">96</span>
+<span class="linenos"> 6</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">61440</span><span class="p">,</span> <span class="mi">65280</span><span class="p">):</span>
+<span class="linenos"> 7</span>        <span class="k">return</span>   <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">61440</span><span class="p">)</span> <span class="o">//</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">61440</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">320</span>
+<span class="linenos"> 8</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">65280</span><span class="p">,</span> <span class="mi">74082</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="k">return</span> <span class="mi">224</span> <span class="o">+</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">65280</span><span class="p">)</span>  <span class="o">%</span>  <span class="mi">27</span><span class="p">,</span> <span class="mi">325</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">65280</span><span class="p">)</span> <span class="o">//</span> <span class="mi">27</span>
+<span class="linenos">10</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74082</span><span class="p">,</span> <span class="mi">74114</span><span class="p">):</span>
+<span class="linenos">11</span>        <span class="k">return</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">31</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74082</span><span class="p">)</span>
+<span class="linenos">12</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74114</span><span class="p">,</span> <span class="mi">74118</span><span class="p">):</span>
+<span class="linenos">13</span>        <span class="k">return</span> <span class="mi">512</span><span class="p">,</span>  <span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74114</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74118</span><span class="p">,</span> <span class="mi">74134</span><span class="p">):</span>
+<span class="linenos">15</span>        <span class="k">return</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">15</span> <span class="o">-</span> <span class="p">(</span><span class="n">jed_index</span> <span class="o">-</span> <span class="mi">74118</span><span class="p">)</span>
+<span class="linenos">16</span>    <span class="k">if</span> <span class="n">jed_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">74134</span><span class="p">,</span> <span class="mi">74136</span><span class="p">):</span>
+<span class="linenos">17</span>        <span class="k">return</span> <span class="c1"># reserved</span>
+<span class="linenos">18</span>    <span class="k">assert</span> <span class="kc">False</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">def</span> <span class="nf">svf_to_jed_coords</span><span class="p">(</span><span class="n">svf_row</span><span class="p">,</span> <span class="n">svf_col</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">12</span><span class="p">):</span>
+<span class="linenos">22</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
+<span class="linenos">23</span>            <span class="k">return</span> <span class="mi">61440</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>   <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">320</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">24</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">25</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">26</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">108</span><span class="p">):</span>
+<span class="linenos">27</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
+<span class="linenos">28</span>            <span class="k">return</span>     <span class="mi">0</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span>  <span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">29</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">30</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">31</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">224</span><span class="p">):</span>
+<span class="linenos">32</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
+<span class="linenos">33</span>            <span class="k">return</span> <span class="mi">30720</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">96</span>
+<span class="linenos">34</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">35</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">36</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">251</span><span class="p">):</span>
+<span class="linenos">37</span>        <span class="k">if</span> <span class="n">svf_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">326</span><span class="p">):</span>
+<span class="linenos">38</span>            <span class="k">return</span> <span class="mi">65280</span> <span class="o">+</span> <span class="p">(</span><span class="n">svf_row</span> <span class="o">-</span> <span class="mi">224</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">325</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span> <span class="o">*</span> <span class="mi">27</span>
+<span class="linenos">39</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">40</span>            <span class="k">return</span> <span class="c1"># always 1</span>
+<span class="linenos">41</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
+<span class="linenos">42</span>        <span class="k">return</span> <span class="mi">74082</span> <span class="o">+</span> <span class="p">(</span><span class="mi">31</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">43</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
+<span class="linenos">44</span>        <span class="k">return</span> <span class="mi">74114</span> <span class="o">+</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">45</span>    <span class="k">if</span> <span class="n">svf_row</span> <span class="o">==</span> <span class="mi">768</span><span class="p">:</span>
+<span class="linenos">46</span>        <span class="k">return</span> <span class="mi">74118</span> <span class="o">+</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="n">svf_col</span><span class="p">)</span>
+<span class="linenos">47</span>    <span class="k">assert</span> <span class="kc">False</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
