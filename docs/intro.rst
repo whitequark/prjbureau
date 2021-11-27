@@ -89,7 +89,7 @@ Although I (whitequark) wrote virtually all of the code and documentation in thi
   * I., for assistance in fuzzing the interconnect matrix;
   * Maya E., for assistance in validating the interconnect routing and minimizing the macrocell truth table, and contributing the JED↔SVF mapping for ATF1504/ATF1508;
   * `Peter Zieba <http://peterzieba.com/>`__, for bringing the capabilities of the ATF15xx family to my attention, `archiving <http://www.5vpld.com/>`__ the relevant tools and documentation, and recording high-voltage programming traces;
-  * `David Shah <https://ds0.me/>`__, for building nextpnr-generic, and revealing that place & route tools don't have to be opaque and arcane;
+  * `Myrtle Shah <https://ds0.me/>`__, for building nextpnr-generic, and revealing that place & route tools don't have to be opaque and arcane;
   * `R. Ou <https://robertou.com/>`__, for working on CPLD synthesis in Yosys, demonstrating a functional CPLD toolchain, and generally ensuring these devices are not forgotten.
 
 License
