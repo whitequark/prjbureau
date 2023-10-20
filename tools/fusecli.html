@@ -272,7 +272,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 <div class="section" id="examining-fuses">
 <h3>Examining fuses<a class="headerlink" href="#examining-fuses" title="Permalink to this headline">¶</a></h3>
 <p>To print all known fuses:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed get
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get
 <span class="go">MC1:</span>
 <span class="go">  PT1: GND</span>
 <span class="go">  PT2: GND</span>
@@ -280,13 +280,13 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To print macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed get MC1.PT1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC1.PT1
 <span class="go">MC1:</span>
 <span class="go">  PT1: GND</span>
 </pre></div>
 </div>
 <p>To print all product terms of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed get MC1.PT
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC1.PT
 <span class="go">MC1:</span>
 <span class="go">  PT1: GND</span>
 <span class="go">  PT2: GND</span>
@@ -296,7 +296,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To print option <code class="docutils literal notranslate"><span class="pre">gclk_mux</span></code> of every macrocell:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed get MC.gclk_mux
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC.gclk_mux
 <span class="go">MC1:</span>
 <span class="go">  CFG:</span>
 <span class="go">    gclk_mux       = GCLK2</span>
@@ -308,7 +308,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To print options <code class="docutils literal notranslate"><span class="pre">pt1_mux</span></code> and <code class="docutils literal notranslate"><span class="pre">pt2_mux</span></code> of every macrocell:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed get MC.pt1_mux MC.pt2_mux
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC.pt1_mux<span class="w"> </span>MC.pt2_mux
 <span class="go">MC1:</span>
 <span class="go">  CFG:</span>
 <span class="go">    pt1_mux        = sum</span>
@@ -321,7 +321,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 <div class="section" id="modifying-fuses">
 <h3>Modifying fuses<a class="headerlink" href="#modifying-fuses" title="Permalink to this headline">¶</a></h3>
 <p>To change option <code class="docutils literal notranslate"><span class="pre">gclk_mux</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC8</span></code> to be <code class="docutils literal notranslate"><span class="pre">GCLK2</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC8.gclk_mux GCLK2
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC8.gclk_mux<span class="w"> </span>GCLK2
 <span class="go">MC8:</span>
 <span class="go">  CFG:</span>
 <span class="go">    gclk_mux       = GCLK2</span>
@@ -329,7 +329,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To change option <code class="docutils literal notranslate"><span class="pre">low_power</span></code> of every macrocell to be <code class="docutils literal notranslate"><span class="pre">on</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC.low_power on
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC.low_power<span class="w"> </span>on
 <span class="go">MC1:</span>
 <span class="go">  CFG:</span>
 <span class="go">    low_power      = on</span>
@@ -341,7 +341,7 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To change options <code class="docutils literal notranslate"><span class="pre">pt1_mux</span></code> and <code class="docutils literal notranslate"><span class="pre">pt2_mux</span></code> of every macrocell to be <code class="docutils literal notranslate"><span class="pre">sum</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC.pt1_mux sum MC.pt2_mux sum
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC.pt1_mux<span class="w"> </span>sum<span class="w"> </span>MC.pt2_mux<span class="w"> </span>sum
 <span class="go">MC1:</span>
 <span class="go">  CFG:</span>
 <span class="go">    pt1_mux        = sum</span>
@@ -353,27 +353,27 @@ and the special value <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>To set product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> to <code class="docutils literal notranslate"><span class="pre">UIM2_P</span> <span class="pre">&amp;</span> <span class="pre">UIM4_N</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC1.PT1 UIM2_P,UIM4_N
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC1.PT1<span class="w"> </span>UIM2_P,UIM4_N
 <span class="go">MC1:</span>
 <span class="go">  PT1: UIM2_P,UIM4_N</span>
 <span class="go">Changed 1 fields, 94 fuses.</span>
-<span class="gp">$ </span>python3 -m util.fusecli design.jed get MC1.PT1
+<span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC1.PT1
 <span class="go">MC1:</span>
 <span class="go">  PT1: UIM2_P &amp; UIM4_N</span>
 </pre></div>
 </div>
 <p>To remove <code class="docutils literal notranslate"><span class="pre">UIM4_N</span></code> from product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of macrocell <code class="docutils literal notranslate"><span class="pre">MC1</span></code> and add <code class="docutils literal notranslate"><span class="pre">UIM8_P</span></code> instead:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC1.PT1 -UIM4_N,+UIM8_P
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC1.PT1<span class="w"> </span>-UIM4_N,+UIM8_P
 <span class="go">MC1:</span>
 <span class="go">  PT1: -UIM4_N,+UIM8_P</span>
 <span class="go">Changed 1 fields, 2 fuses.</span>
-<span class="gp">$ </span>python3 -m util.fusecli design.jed get MC1.PT1
+<span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span>get<span class="w"> </span>MC1.PT1
 <span class="go">MC1:</span>
 <span class="go">  PT1: UIM2_P &amp; UIM8_P</span>
 </pre></div>
 </div>
 <p>To clear product term <code class="docutils literal notranslate"><span class="pre">PT1</span></code> of every macrocell:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m util.fusecli design.jed <span class="nb">set</span> MC.PT1 GND
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>util.fusecli<span class="w"> </span>design.jed<span class="w"> </span><span class="nb">set</span><span class="w"> </span>MC.PT1<span class="w"> </span>GND
 <span class="go">MC1:</span>
 <span class="go">  PT1: GND</span>
 <span class="go">[output trimmed]</span>
