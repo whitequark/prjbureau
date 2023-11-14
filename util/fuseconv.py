@@ -125,7 +125,8 @@ def write_svf(file, svf_bits, device, *, comment):
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_ADDRESS))
         file.write("SDR 11 TDI ({:03x});\n".format(address))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))
-        file.write("SDR {} TDI ({:x});\n".format(len(data), int(data.to01()[::-1], 2)))
+        file.write("SDR {} TDI ({:0{}x});\n".format(len(data),
+            int(data.to01()[::-1], 2), len(data) // 4))
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_PROGRAM_ERASE))
         file.write("RUNTEST IDLE 30E-3 SEC;\n")
         emit_unknown()
@@ -136,8 +137,10 @@ def write_svf(file, svf_bits, device, *, comment):
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_READ))
         file.write("RUNTEST IDLE 20E-3 SEC;\n")
         file.write("SIR 10 TDI ({:03x});\n".format(ATF15xxInstr.ISC_DATA | (address >> 8)))
-        file.write("SDR {} TDI ({:x})\n\tTDO ({:x})\n\tMASK ({:x});\n".format(len(data),
-            int(data.to01()[::-1], 2), int(data.to01()[::-1], 2), (1 << len(data)) - 1))
+        file.write("SDR {} TDI ({:0{}x})\n\tTDO ({:0{}x})\n\tMASK ({:0{}x});\n".format(len(data),
+            int(data.to01()[::-1], 2), len(data) // 4,
+            int(data.to01()[::-1], 2), len(data) // 4,
+            (1 << len(data)) - 1, len(data) // 4))
 
     emit_header()
     emit_check_idcode(device.idcode)
