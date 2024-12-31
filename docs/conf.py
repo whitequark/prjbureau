@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.abspath('.') + '/_extensions')
 
 
 project = 'Project Bureau'
-copyright = '2019-2020, whitequark'
+copyright = '2019-2021, Catherine \'whitequark\''
 
 master_doc = 'index'
 
