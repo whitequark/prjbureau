@@ -8,9 +8,9 @@ from .device import *
 
 
 def read_jed(file):
-    parser = JESD3Parser(file.read())
+    parser = JESD3Parser(file.read().encode('ascii'))
     parser.parse()
-    return parser.fuse, parser.design_spec
+    return parser.fuse, parser.design_spec.decode('ascii')
 
 
 def write_jed(file, jed_bits, *, comment):
